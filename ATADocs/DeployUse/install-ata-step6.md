@@ -1,0 +1,73 @@
+---
+# required metadata
+
+title: Instalace ATA | Microsoft Advanced Threat Analytics
+description: V posledním kroku instalace ATA nakonfigurujete podsítě s krátkodobým zapůjčením a uživatele honeytokenu.
+keywords:
+author: rkarlin
+manager: stevenpo
+ms.date: 04/28/2016
+ms.topic: get-started-article
+ms.prod: identity-ata
+ms.service: advanced-threat-analytics
+ms.technology: security
+ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+#ms.devlang:
+ms.reviewer: bennyl
+ms.suite: ems
+#ms.tgt_pltfrm:
+#ms.custom:
+
+---
+
+# Instalace ATA – Krok 6
+
+>[!div class="step-by-step"]
+[« Krok 5](install-ata-step5.md)
+
+## Krok 6: Konfigurace podsítí s krátkodobým zapůjčením a uživatele honeytokenu
+Podsítě s krátkodobým zapůjčením jsou podsítě, ve kterých se přiřazení IP adresy mění velmi rychle – během několika sekund nebo minut. Příkladem jsou IP adresy použité pro připojení VPN a IP adresy pro Wi-Fi. Pokud chcete zadat seznam podsítí s krátkodobým zapůjčením, které se používají ve vaší organizaci, postupujte takto:
+
+1.  Z konzoly ATA na počítači ATA Gateway klikněte na ikonu nastavení a vyberte **Konfigurace**..
+
+    ![Nastavení konfigurace ATA](media/ATA-config-icon.JPG)
+
+2.  V části **Detekce** zadejte pro podsítě s krátkodobým zapůjčením následující údaje. Zadejte podsítě s krátkodobým zapůjčením pomocí formátu zápisu s lomítkem, například `192.168.0.0/24`, a klikněte na symbol plus.
+
+3.  Jako SID účtů honeytokenu zadejte SID pro uživatelský účet, který nebude mít žádnou síťovou aktivitu, a klikněte na symbol plus. Například: `S-1-5-21-72081277-1610778489-2625714895-10511`.
+
+    > [!NOTE]
+    > Pokud chcete najít pro uživatele SID, spusťte následující rutinu Windows PowerShellu: `Get-ADUser UserName`.
+
+4.  Konfigurace vyloučení: Můžete nakonfigurovat IP adresy, které mají být vyloučené z konkrétní podezřelých aktivit. Další informace najdete v tématu [Práce s nastavením detekce ATA](working-with-detection-settings.md).
+
+5.  Klikněte na **Uložit**..
+
+![Uložení změn](media/ATA-VPN-Subnets.JPG)
+
+Blahopřejeme, úspěšně jste nasadili Microsoft Advanced Threat Analytics.
+
+Zkontrolujte časovou osu útoků, abyste viděli zjištěné podezřelé aktivity a našli uživatele nebo počítače a zobrazili jejich profily.
+
+Mějte na paměti, že trvá nejméně tři týdny, než ATA vytvoří profily chování, takže během první tři týdnů neuvidíte žádné aktivity podezřelého chování.
+
+
+>[!div class="step-by-step"]
+[« Krok 5](install-ata-step5.md)
+
+
+## Viz také
+
+- [Podporu získáte na našem fóru!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Konfigurace shromažďování událostí](/advanced-threat-analytics/plan-design/configure-event-collection)
+- [Požadavky ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
+
+
+<!--HONumber=Apr16_HO4-->
+
+

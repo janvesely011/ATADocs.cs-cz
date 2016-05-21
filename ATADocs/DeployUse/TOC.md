@@ -1,0 +1,32 @@
+# [Porozumění a prozkoumávání](/advanced-threat-analytics/understand-explore/what-is-ata)
+# [Plánování a navrhování](/advanced-threat-analytics/plan-design/ata-capacity-planning)
+# [Nasazení a používání](install-ata.md)
+## [Instalace ATA](install-ata.md)
+### [Předinstalační kroky](install-ata-preinstall.md)
+### [Krok 1](install-ata-step1.md)
+### [Krok 2](install-ata-step2.md)
+### [Krok 3](install-ata-step3.md)
+### [Krok 4](install-ata-step4.md)
+### [Krok 5](install-ata-step5.md)
+### [Krok 6](install-ata-step6.md)
+## [Co je nového ve verzi 1.5](whats-new-version-1.5.md)
+## [Migrace na verzi 1.5](ata-update-1.5-migration-guide.md)
+## [Co je nového ve verzi 1.4](whats-new-version-1.4.md)
+## [Změna konfigurace ATA](modifying-ata-configuration.md)
+### [Změna IP adresy ATA Center](modifying-ata-config-centerip.md)
+### [Změna certifikátu ATA Center](modifying-ata-config-centercert.md)
+### [Změna IP adresy konzoly ATA](modifying-ata-config-consoleip.md)
+### [Změna certifikátu IIS](modifying-ata-config-iiscert.md)
+### [Změna hesla řadiče domény](modifying-ata-config-dcpassword.md)
+### [Změna názvu síťového adaptéru pro zachytávání](modifying-ata-config-nicname.md)
+## [Nastavení výstrah ATA](setting-ata-alerts.md)
+## [ATA Health Center](ata-health-center.md)
+## [Podezřelé aktivity ATA](working-with-suspicious-activities.md)
+## [Správa databáze ATA](ata-database-management.md)
+## [Správa telemetrie ATA](manage-telemetry-settings.md)
+# [Řešení problémů](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs)
+
+
+<!--HONumber=Apr16_HO4-->
+
+
