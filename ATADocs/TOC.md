@@ -1,9 +1,9 @@
 # [Porozumění a prozkoumávání](/understand-explore/what-is-ata)
-# [Plánování a navrhování](/plan-design/ata-capacity-planning)
-# [Nasazení a používání](/deploy-use/install-ata)
-# [Řešení problémů](/troubleshoot/troubleshooting-ata-using-logs)
+# [Plánování a navrhování](/plan-design/ata-architecture)
+# [Nasazení a používání](/deploy-use/preinstall-ata)
+# [Řešení problémů](/troubleshoot/troubleshooting-ata-known-errors)
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 
