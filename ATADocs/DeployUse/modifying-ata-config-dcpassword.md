@@ -28,43 +28,40 @@ ms.suite: ems
 # Změna konfigurace ATA – heslo připojení k doméně
 
 >[!div class="step-by-step"]
-[« Certifikát IIS](modifying-ata-config-iiscert.md)
-[Název síťového adaptéru pro zachytávání »](modifying-ata-config-nicname.md)
 
-## Změna hesla připojení k doméně
-Pokud změníte heslo připojení k doméně, ujistěte se, že je zadané heslo správné. Pokud není, služba ATA se na serverech ATA Gateway zastaví.
 
-Pokud máte podezření, že se to stalo, vyhledejte v souboru Microsoft.Tri.Gateway-Errors.log na ATA Gateway následující:
+## « Certifikát IIS
+Změna hesla připojení k doméně Pokud změníte heslo připojení k doméně, ujistěte se, že je zadané heslo správné.
+
+Pokud není, služba ATA Gateway se zastaví.
 `The supplied credential is invalid.`
 
-Když to chcete opravit, podle následujícího postupu aktualizujte na ATA Gateway heslo připojení k doméně:
+Pokud máte podezření, že se to stalo, vyhledejte v souboru Microsoft.Tri.Gateway-Errors.log na ATA Gateway následující:
 
-1.  Na ATA Gateway otevřete konzolu ATA.
+1.  Když to chcete opravit, podle následujícího postupu aktualizujte na ATA Gateway heslo připojení k doméně:
 
-2.  Vyberte na panelu nástrojů možnost nastavení a vyberte **Konfigurace**..
+2.  Na ATA Gateway otevřete konzolu ATA.
 
-    ![Ikona nastavení konfigurace ATA](media/ATA-config-icon.JPG)
+    ![Vyberte na panelu nástrojů možnost nastavení a vyberte **Konfigurace**.](media/ATA-config-icon.JPG)
 
-3.  Vyberte **ATA Gateway**..
+3.  Ikona nastavení konfigurace ATA
 
-    ![Obrázek změny hesla pro ATA Gateway](media/ATA-GW-change-DC-password.JPG)
+    ![Vyberte možnost **Obecné**.](media/ATA-GW-change-DC-password.JPG)
 
-4.  V části **Nastavení připojení k doméně** změňte heslo.
+4.  Obrázek změny hesla pro ATA Gateway
 
-5.  Klikněte na **Uložit**..
+5.  V části **Obecné** změňte heslo.
 
-6.  Po změně hesla ručně zkontrolujte, že je služba ATA Gateway na serverech ATA Gateway spuštěná.
+6.  Klikněte na **Uložit**.
 
->[!div class="step-by-step"]
-[« Certifikát IIS](modifying-ata-config-iiscert.md)
-[Název síťového adaptéru pro zachytávání »](modifying-ata-config-nicname.md)
+>Po změně hesla ručně zkontrolujte, že je služba ATA Gateway na serverech ATA Gateway spuštěná.
 
-## Viz také
-- [Práce s konzolou ATA](/advanced-threat-analytics/understand-explore/working-with-ata-console)
-- [Instalace ATA](install-ata.md)
-- [Podporu získáte na našem fóru!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+## [!div class="step-by-step"]
+- [« Certifikát IIS](working-with-ata-console.md)
+- [Viz také](install-ata.md)
+- [Práce s konzolou ATA](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

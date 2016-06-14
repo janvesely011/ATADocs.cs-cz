@@ -29,7 +29,7 @@ ms.suite: ems
 Advanced Threat Analytics (ATA) shromažďuje anonymních telemetrická data o ATA a odesílá je přes připojení HTTPS na servery Microsoftu.  Tato data Microsoft používá k vylepšení budoucích verzích ATA.
 
 ## Shromažďovaná data
-Shromážděná data zahrnují následující:
+Shromážděná anonymizovaná data zahrnují následující:
 
 -   Čítače výkonu z ATA Center a ATA Gateway
 
@@ -39,7 +39,7 @@ Shromážděná data zahrnují následující:
 
 -   Počet nasazených ATA Gateway
 
--   Následující informace Active Directory:
+-   Následující anonymizované informace služby Active Directory:
 
     -   ID domény pro doménu, jejíž název bude první při abecedním řazení
 
@@ -72,16 +72,15 @@ Shromážděná data zahrnují následující:
 ### Zakázání shromažďování dat
 Chcete-li zastavit shromažďování a odesílání telemetrických dat Microsoftu, proveďte následující kroky:
 
-1.  Přihlaste se ke konzole ATA, klikněte na tlačítko se třemi tečkami v panelu nástrojů a vyberte **O aplikaci**..
+1.  Přihlaste se ke konzole ATA, na panelu nástrojů klikněte na tlačítko se třemi tečkami a vyberte **O aplikaci**.
 
-2.  Zrušte zaškrtnutí políčka **Send us usage information to help improve your customer experience in the future** (Posílat nám informace o použití k vylepšení zkušeností uživatelů v budoucnosti)..
+2.  Zrušte zaškrtnutí políčka **Send us usage information to help improve your customer experience in the future** (Posílat nám informace o použití k vylepšení zkušeností uživatelů v budoucnosti).
 
 ## Viz také
-- [Co je nového ve verzi 1.5](whats-new-version-1.5.md)
-- [Co je nového ve verzi 1.4](whats-new-version-1.4.md)
-- [Podporu získáte na našem fóru!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Co je nového ve verzi 1.6](/advanced-threat-analytics/understand-explore/whats-new-version-1.6)
+- [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

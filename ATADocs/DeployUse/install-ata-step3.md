@@ -28,40 +28,38 @@ ms.suite: ems
 # Instalace ATA – Krok 3
 
 >[!div class="step-by-step"]
-[« Krok 2](install-ata-step2.md)
-[Krok 4 »](install-ata-step4.md)
 
-## Krok 3. Stažení instalačního balíčku ATA Gateway
-Po konfiguraci nastavení připojení k doméně si můžete stáhnout instalační balíček ATA Gateway.
+## « Krok 2 Krok 4 »
+Krok 3. Stažení instalačního balíčku ATA Gateway Po konfiguraci nastavení připojení k doméně si můžete stáhnout instalační balíček ATA Gateway. ATA Gateway se dá nainstalovat na vyhrazený server nebo na řadič domény. 
 
-Stažení instalačního balíčku ATA Gateway:
+Pokud tuto komponentu nainstalujete na řadič domény, nainstaluje se jako ATA Lightweight Gateway.
 
-1.  Na počítači ATA Gateway spusťte prohlížeč a zadejte IP adresu, kterou jste nakonfigurovali v ATA Center pro konzolu ATA. Když se konzola ATA otevře, klikněte na ikonu nastavení a vyberte **Konfigurace**..
+1.  Další informace o ATA Lightweight Gateway najdete v tématu [Architektura ATA](/advanced-threat-analytics/plan-design/ata-architecture).
 
-    ![Nastavení konfigurace ATA Gateway](media/ATA-config-icon.JPG)
+    ![Stažení instalačního balíčku ATA Gateway:](media/ATA-config-icon.JPG)
 
-2.  Na kartě **ATA Gateways** klikněte na **Download ATA Gateway Setup** (Stáhnout instalaci ATA Gateway)..
+2.  V konzole ATA klikněte na ikonu nastavení a vyberte **Konfigurace**.
 
-3.  Uložte balíček místně.
+3.  Nastavení konfigurace ATA Gateway
+4.  Na kartě **ATA Gateways** klikněte na **Download ATA Gateway Setup** (Stáhnout instalaci ATA Gateway). Uložte balíček místně.
 
-Soubor zip obsahuje následující:
+Zkopírujte balíček na vyhrazený server nebo řadič domény, na který instalujete ATA Gateway.
 
--   Instalační program ATA Gateway
+-   Další možností je otevřít konzolu ATA z vyhrazeného serveru nebo řadiče domény a přeskočit tento krok.
 
--   Soubor nastavení konfigurace s požadovanými informacemi pro připojení k ATA Center
-
-
->[!div class="step-by-step"]
-[« Krok 2](install-ata-step2.md)
-[Krok 4 »](install-ata-step4.md)
-
-## Viz také
-
-- [Podporu získáte na našem fóru!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
-- [Konfigurace shromažďování událostí](/advanced-threat-analytics/plan-design/configure-event-collection)
-- [Požadavky ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
+-   Soubor zip obsahuje následující:
 
 
-<!--HONumber=Apr16_HO4-->
+>Instalační program ATA Gateway
+[Soubor nastavení konfigurace s požadovanými informacemi pro připojení k ATA Center](install-ata-step4.md)
+
+## [!div class="step-by-step"]
+
+- [« Krok 2](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Krok 4 »](configure-event-collection.md)
+- [Viz také](/advanced-threat-analytics/plan-design/ata-prerequisites)
+
+
+<!--HONumber=Jun16_HO1-->
 
 

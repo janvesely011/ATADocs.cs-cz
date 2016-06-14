@@ -28,45 +28,40 @@ ms.suite: ems
 # Změna konfigurace ATA – certifikát IIS
 
 >[!div class="step-by-step"]
-[« IP adresa konzoly ATA](modifying-ata-config-consoleip.md)
-[Heslo připojení k doméně »](modifying-ata-config-dcpassword.md)
 
-## Změna certifikátu IIS
-V konzole můžete vybrat a změnit certifikát pro službu ATA Center, ale nejde změnit certifikát používaný službou IIS.
+## « IP adresa konzoly ATA
+Heslo připojení k doméně »
+
+Změna certifikátu IIS
+
+> V konzole můžete vybrat a změnit certifikát pro službu ATA Center, ale nejde změnit certifikát používaný službou IIS.
 
 Pokud ho chcete změnit, postupujte takto:
 
-> [!NOTE]
-> Po úpravě certifikátu IIS byste si měli před instalací nových ATA Gateway stáhnout instalační balíček ATA Gateway.
+1.  Po úpravě certifikátu IIS byste si měli před instalací nových ATA Gateway stáhnout instalační balíček ATA Gateway.
 
-Pokud potřebujete změnit certifikát používaný službou IIS pro ATA Center, proveďte tyto kroky ze serveru ATA Center.
+2.  Pokud potřebujete změnit certifikát používaný službou IIS pro ATA Center, proveďte tyto kroky ze serveru ATA Center.
 
-1.  Nainstalujte nový certifikát na server ATA Center.
+3.  Nainstalujte nový certifikát na server ATA Center.
 
-2.  Otevřete Správce Internetové informační služby (IIS).
+4.  Otevřete Správce Internetové informační služby (IIS).
 
-3.  Rozbalte název serveru a rozbalte **Weby**..
+    ![Rozbalte název serveru a rozbalte **Weby**.](media/ATA-console-change-IP-bindings.jpg)
 
-4.  Vyberte web konzoly Microsoft ATA a v podokně **Akce** klikněte na **Vazby**..
+5.  Vyberte web konzoly Microsoft ATA a v podokně **Akce** klikněte na **Vazby**.
 
-    ![Akce vazby pro konzolu ATA](media/ATA-console-change-IP-bindings.jpg)
+6.  Akce vazby pro konzolu ATA
 
-5.  Vyberte **HTTPS** a klikněte na **Upravit**..
+7.  Vyberte **HTTPS** a klikněte na **Upravit**.
 
-6.  V části **Certifikát SSL** vyberte nový certifikát.
+>V části **Certifikát SSL** vyberte nový certifikát.
 
-7.  Před instalací nové ATA Gateway stáhněte instalační balíček ATA Gateway.
-
->[!div class="step-by-step"]
-[« IP adresa konzoly ATA](modifying-ata-config-consoleip.md)
-[Heslo připojení k doméně »](modifying-ata-config-dcpassword.md)
-
-## Viz také
-- [Práce s konzolou ATA](/advanced-threat-analytics/understand-explore/working-with-ata-console)
-- [Instalace ATA](install-ata.md)
-- [Podporu získáte na našem fóru!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+## Před instalací nové ATA Gateway stáhněte instalační balíček ATA Gateway.
+- [[!div class="step-by-step"]](working-with-ata-console.md)
+- [« IP adresa konzoly ATA](install-ata.md)
+- [Heslo připojení k doméně »](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

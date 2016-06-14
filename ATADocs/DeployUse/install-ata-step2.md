@@ -27,43 +27,44 @@ ms.suite: ems
 
 # Instalace ATA – Krok 2
 
->[!div class="step-by-step"]
-[« Krok 1](install-ata-step1.md)
+>[!div class="step-by-step"] [« Krok 1](install-ata-step1.md)
 [Krok 3 »](install-ata-step3.md)
 
-## Krok 2: Konfigurace nastavení připojení k doméně ATA Gateway
-Nastavení v části nastavení připojení k doméně platí pro všechny komponenty ATA Gateway, které spravuje ATA Center.
+## Krok 2: Konfigurace obecného nastavení ATA Gateway
+Nastavení v části **Obecné** platí pro všechny komponenty ATA Gateway, které spravuje ATA Center.
 
-Chcete-li konfigurovat nastavení připojení k doméně, proveďte na serveru ATA Center následující kroky.
+Pokud chcete konfigurovat obecné nastavení ATA Gateway, postupujte takto:
 
-1.  Otevřete konzolu ATA a přihlaste se. Pokyny najdete v tématu [Práce s konzolou ATA](/advanced-threat-analytics/understand-explore/working-with-ata-console)..
+1.  Otevřete konzolu ATA a přihlaste se. Pokyny najdete v tématu [Práce s konzolou ATA](working-with-ata-console.md).
 
-2.  Při prvním přihlášení do konzoly ATA po instalaci ATA Center budete automaticky přesměrování na konfigurační stránku komponent ATA Gateway. Pokud potřebujete změnit libovolné nastavení později, klikněte na ikonu Nastavení a vyberte **Konfigurace**..
+2.  Klikněte na ikonu Nastavení a vyberte **Konfigurace**.
 
     ![Nastavení konfigurace ATA Gateway](media/ATA-config-icon.JPG)
 
-3.  Na stránce **Brány** klikněte na **Nastavení připojení k doméně**, zadejte následující informace a klikněte na **Uložit**..
+3.  Na kartě **Obecné** v části **ATA Gateways** zadejte následující informace a klikněte na **Uložit**.
 
     |Pole|Komentáře|
     |---------|------------|
-    |**Uživatelské jméno** (povinné)|Zadejte uživatelské jméno jen pro čtení, například: **uživatel1**..|
-    |**Heslo** (povinné)|Zadejte heslo pro uživatele, který je jen pro čtení, například: **Pencil1**. **Poznámka:** Zkontrolujte, že je toto heslo správné. Pokud uložíte chybné heslo, služba ATA se na serverech ATA Gateway zastaví.|
-    |**Doména** (povinné)|Zadejte doménu pro uživatele, který je jen pro čtení, například **contoso.com**. **Poznámka:** Je důležité, abyste zadali plně kvalifikovaný název domény, kde je uživatel umístěn. Pokud je například účet uživatele v doméně corp.contoso.com, musíte zadat `corp.contoso.com`, a ne contoso.com.|
-    ![Obrázek nastavení připojení k doméně ATA](media/ATA-Domain-Connectivity-User.JPG)
+    |**Uživatelské jméno** (povinné)|Zadejte uživatelské jméno jen pro čtení, například **uživatel1**.|
+    |**Heslo** (povinné)|Zadejte heslo pro uživatele, který je jen pro čtení, například **Pencil1**. **Poznámka:** Zkontrolujte, že je toto heslo správné. Pokud uložíte chybné heslo, služba ATA se na serverech ATA Gateway zastaví.|
+    |**Doména** (povinné)|Zadejte doménu pro uživatele, který je jen pro čtení, například **contoso.com**. **Poznámka:** Je důležité, abyste zadali kompletní plně kvalifikovaný název domény, ve které je uživatel umístěný. Pokud je například účet uživatele v doméně corp.contoso.com, musíte zadat `corp.contoso.com`, a ne contoso.com.|
+    |Automaticky aktualizovat všechny komponenty ATA Gateway |Pokud povolíte toto nastavení, ve vydáních příštích verzí se při aktualizaci komponenty ATA Center budou automaticky aktualizovat všechny komponenty ATA Gateway.|
+
+    ![Obrázek nastavení připojení k doméně ATA](media/ata-domain-connectivity-user.jpg)
 
 
->[!div class="step-by-step"]
-[« Krok 1](install-ata-step1.md)
+
+>[!div class="step-by-step"] [« Krok 1](install-ata-step1.md)
 [Krok 3 »](install-ata-step3.md)
 
 
 ## Viz také
 
-- [Podporu získáte na našem fóru!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
-- [Konfigurace shromažďování událostí](/advanced-threat-analytics/plan-design/configure-event-collection)
+- [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Konfigurace shromažďování událostí](configure-event-collection.md)
 - [Požadavky ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

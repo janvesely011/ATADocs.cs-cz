@@ -28,46 +28,44 @@ ms.suite: ems
 # Instalace ATA – Krok 6
 
 >[!div class="step-by-step"]
-[« Krok 5](install-ata-step5.md)
 
-## Krok 6: Konfigurace podsítí s krátkodobým zapůjčením a uživatele honeytokenu
-Podsítě s krátkodobým zapůjčením jsou podsítě, ve kterých se přiřazení IP adresy mění velmi rychle – během několika sekund nebo minut. Příkladem jsou IP adresy použité pro připojení VPN a IP adresy pro Wi-Fi. Pokud chcete zadat seznam podsítí s krátkodobým zapůjčením, které se používají ve vaší organizaci, postupujte takto:
+## « Krok 5 Krok 6:
+Konfigurace podsítí s krátkodobým zapůjčením a uživatele honeytokenu Podsítě s krátkodobým zapůjčením jsou podsítě, ve kterých se přiřazení IP adresy mění velmi rychle – během několika sekund nebo minut. Příkladem jsou IP adresy použité pro připojení VPN a IP adresy pro Wi-Fi.
 
-1.  Z konzoly ATA na počítači ATA Gateway klikněte na ikonu nastavení a vyberte **Konfigurace**..
+1.  Pokud chcete zadat seznam podsítí s krátkodobým zapůjčením, které se používají ve vaší organizaci, postupujte takto:
 
-    ![Nastavení konfigurace ATA](media/ATA-config-icon.JPG)
+    ![Z konzoly ATA na počítači ATA Gateway klikněte na ikonu nastavení a vyberte **Konfigurace**.](media/ATA-config-icon.JPG)
 
-2.  V části **Detekce** zadejte pro podsítě s krátkodobým zapůjčením následující údaje. Zadejte podsítě s krátkodobým zapůjčením pomocí formátu zápisu s lomítkem, například `192.168.0.0/24`, a klikněte na symbol plus.
+2.  Nastavení konfigurace ATA V části **Detekce** zadejte pro podsítě s krátkodobým zapůjčením následující údaje.
 
-3.  Jako SID účtů honeytokenu zadejte SID pro uživatelský účet, který nebude mít žádnou síťovou aktivitu, a klikněte na symbol plus. Například: `S-1-5-21-72081277-1610778489-2625714895-10511`.
+3.  Zadejte podsítě s krátkodobým zapůjčením pomocí formátu zápisu s lomítkem, například `192.168.0.0/24`, a klikněte na symbol plus. Jako SID účtů honeytokenu zadejte SID pro uživatelský účet, který nebude mít žádnou síťovou aktivitu, a klikněte na symbol plus.
 
-    > [!NOTE]
-    > Pokud chcete najít pro uživatele SID, spusťte následující rutinu Windows PowerShellu: `Get-ADUser UserName`.
+    > Například: 
 
-4.  Konfigurace vyloučení: Můžete nakonfigurovat IP adresy, které mají být vyloučené z konkrétní podezřelých aktivit. Další informace najdete v tématu [Práce s nastavením detekce ATA](working-with-detection-settings.md).
+4.  Pokud chcete zjistit SID pro uživatele, najděte ho v konzole ATA a potom klikněte na kartu **Informace o účtu**. Konfigurace vyloučení: Můžete nakonfigurovat IP adresy, které mají být vyloučené z konkrétní podezřelých aktivit.
 
-5.  Klikněte na **Uložit**..
+5.  Další informace najdete v tématu [Práce s nastavením detekce ATA](working-with-detection-settings.md).
 
-![Uložení změn](media/ATA-VPN-Subnets.JPG)
+![Klikněte na **Uložit**.](media/ATA-VPN-Subnets.JPG)
+
+Uložení změn
 
 Blahopřejeme, úspěšně jste nasadili Microsoft Advanced Threat Analytics.
 
-Zkontrolujte časovou osu útoků, abyste viděli zjištěné podezřelé aktivity a našli uživatele nebo počítače a zobrazili jejich profily.
-
-Mějte na paměti, že trvá nejméně tři týdny, než ATA vytvoří profily chování, takže během první tři týdnů neuvidíte žádné aktivity podezřelého chování.
+Zkontrolujte časovou osu útoků, abyste viděli zjištěné podezřelé aktivity a našli uživatele nebo počítače a zobrazili jejich profily. ATA okamžitě spustí vyhledávání podezřelých aktivit.
 
 
->[!div class="step-by-step"]
-[« Krok 5](install-ata-step5.md)
+>Některé aktivity, jako jsou třeba konkrétní typy podezřelého chování, budou dostupné, až ATA bude mít čas vytvořit profily chování (nejméně tři týdny).
 
 
-## Viz také
+## [!div class="step-by-step"]
 
-- [Podporu získáte na našem fóru!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
-- [Konfigurace shromažďování událostí](/advanced-threat-analytics/plan-design/configure-event-collection)
-- [Požadavky ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
+- [« Krok 5](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Viz také](configure-event-collection.md)
+- [Podívejte se na fórum ATA!](/advanced-threat-analytics/plan-design/ata-prerequisites)
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO1-->
 
 

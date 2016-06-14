@@ -39,14 +39,12 @@ Pokud potřebujete aktualizovat nebo změnit konfiguraci po počáteční instal
 
 -   [Změna hesla připojení k doméně](modifying-ata-config-dcpassword.md)
 
--   [Změna názvu síťového adaptéru pro zachytávání](modifying-ata-config-nicname.md)
-
 ## Viz také
-- [Práce s konzolou ATA](/advanced-threat-analytics/understand-explore/working-with-ata-console)
+- [Práce s konzolou ATA](working-with-ata-console.md)
 - [Instalace ATA](install-ata.md)
-- [Podporu získáte na našem fóru!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

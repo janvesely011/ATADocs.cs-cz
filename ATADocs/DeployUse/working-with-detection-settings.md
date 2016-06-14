@@ -44,9 +44,9 @@ Můžete vyloučit IP adresy z následujících detekcí. Pokud zadáte IP adres
 ## Viz také
 - [Práce s podezřelými aktivitami](working-with-suspicious-activities.md)
 - [Změna konfigurace ATA](modifying-ata-configuration.md)
-- [Podporu získáte na našem fóru!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

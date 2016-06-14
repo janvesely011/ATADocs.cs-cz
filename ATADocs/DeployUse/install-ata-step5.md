@@ -27,82 +27,73 @@ ms.suite: ems
 
 # Instalace ATA – Krok 5
 
->[!div class="step-by-step"]
-[« Krok 4](install-ata-step4.md)
+>[!div class="step-by-step"] [« Krok 4](install-ata-step4.md)
 [Krok 6 »](install-ata-step6.md)
 
 
 ## Krok 5. Konfigurace nastavení ATA Gateway
 Po instalaci komponenty ATA Gateway proveďte následující kroky a nakonfigurujte nastavení ATA Gateway.
 
-1.  Z konzole ATA na počítači ATA Gateway klikněte na **Konfigurace** a vyberte stránku **ATA Gateways**.
+1.  V konzole ATA klikněte na **Konfigurace** a vyberte stránku **ATA Gateway**.
 
 2.  Zadejte následující informace.
 
-
-
   - **Popis**: <br>Zadejte popis ATA Gateway (nepovinné).
-  - **Řadiče domény** (povinné): <br>Níže naleznete další informace o seznamu řadičů.<br>Zadejte úplný plně kvalifikovaný název domény řadiči domény a kliknutím na symbol plus ho přidejte do seznamu. Například **dc01.contoso.com**.<br /><br />![Obrázek příkladu plně kvalifikovaného názvu domény](media/ATAGWDomainController.png)<br>Objekty v prvním řadiči domény v seznamu se budou synchronizovat prostřednictvím dotazů protokolu LDAP. V závislosti na velikosti domény to může chvíli trvat.<br>
-  **Poznámka:** <br>Ujistěte se, že první řadič domény **není** jen pro čtení. Řadiče domény jen pro čtení se můžou přidávat až po dokončení počáteční synchronizace.<br>
+  - **Řadiče domény se zrcadlením portů (FQDN)** (povinné pro ATA Gateway, pro ATA Lightweight Gateway nejde nastavit): <br>Zadejte úplný plně kvalifikovaný název domény řadiči domény a kliknutím na symbol plus ho přidejte do seznamu. Například **dc01.contoso.com**.<br /><br />![Obrázek příkladu plně kvalifikovaného názvu domény](media/ATAGWDomainController.png)
 
+Následující informace platí pro servery, které zadáte do seznamu **Řadiče domény**: – Všechny řadiče domény, jejichž provoz ATA Gateway monitoruje přes zrcadlení portů, musí být uvedené v seznamu **Řadiče domény**. Pokud řadič domény není uvedený v seznamu **Řadiče domény**, detekce podezřelých aktivit nemusí fungovat podle očekávání.
+– Nejméně jeden řadič domény v seznamu musí být server globálního katalogu. Tak může ATA překládat objekty počítačů a uživatelů v jiných doménách v doménové struktuře.
 
- - **Síťové adaptéry pro zachytávání** (povinné):<br>Vyberte síťové adaptéry, které jsou připojené k přepínači a které jsou nakonfigurované jako cílový port zrcadlení pro příjem provozu řadiče domény.|Vyberte síťový adaptér pro zachytávání.
-    ![Obrázek konfigurace nastavení brány](media/ATA-Config-GW-Settings.jpg)
+ - **Síťové adaptéry pro zachytávání** (povinné):<br>
+     - Pro ATA Gateway na vyhrazeném serveru vyberte síťové adaptéry, které jsou nakonfigurované jako cílový port zrcadlení. Tyto budou přijímat zrcadlený provoz řadičů domén.
+     - V případě ATA Lightweight Gateway by to měly být všechny síťové adaptéry, které se používají ke komunikaci s ostatními počítači ve vaší organizaci.
 
-3.  Klikněte na **Uložit**..
+![Obrázek konfigurace nastavení brány](media/ATA-Config-GW-Settings.jpg)
 
-    > [!NOTE]
-    > První spuštění služby ATA Gateway bude trvat několik minut, protože sestavuje mezipaměť analyzátorů zachytávání dat ze sítě, které používá ATA Gateway.
+ - **Kandidát na synchronizátora domény**<br>
+Za synchronizaci mezi ATA a doménou Active Directory může být zodpovědná libovolná komponenta ATA Gateway, která je nastavená jako kandidát na synchronizátora domény. V závislosti na velikosti domény může počáteční synchronizace nějakou dobu trvat a je náročná na prostředky. Ve výchozím nastavení jako kandidáti na synchronizátora domény nastavené jenom komponenty ATA Gateway. <br>Doporučuje se zakázat komponentám ATA Gateway vzdálené lokality, aby byly kandidátem na synchronizátora domény.<br>Pokud je řadič domény jen pro čtení, nenastavujte ho jako kandidáta na synchronizátora domény. Další informace najdete v části [Architektura ATA](/advanced-threat-analytics/plan-design/ata-architecture#ata-lightweight-gateway-features).
 
-Následující informace platí pro servery, které zadáte do seznamu **Řadiče domény**.
-
--   První řadič domény v seznamu použije ATA Gateway k synchronizaci objektů v doméně pomocí dotazů protokolu LDAP. V závislosti na velikosti domény to může chvíli trvat.
-
--   Všechny řadiče domény, jejichž provoz ATA Gateway monitoruje přes zrcadlení portů, musí být uvedené v seznamu **Řadiče domény**. Pokud řadič domény není uvedený v seznamu **Řadiče domény**, detekce podezřelých aktivit nemusí fungovat podle očekávání.
-
--   Ujistěte se, že první řadič domény **není** řadičem domény jen pro čtení (RODC).
-
-    Řadiče domény jen pro čtení se můžou přidávat až po dokončení počáteční synchronizace.
-
--   Nejméně jeden řadič domény v seznamu musí být server globálního katalogu. Tak může ATA překládat objekty počítačů a uživatelů v jiných doménách v doménové struktuře.
-
+> [!NOTE] První spuštění služby ATA Gateway bude trvat několik minut, protože sestavuje mezipaměť analyzátorů zachytávání dat ze sítě.<br>
 Změny konfigurace se použijí v ATA Gateway při příští plánované synchronizaci mezi komponentami ATA Gateway a ATA Center.
 
-### Ověření instalace:
+
+
+    
+
+3. Volitelně můžete nastavit [Syslog listener and Windows Event Forwarding Collection](configure-event-collection.md) (Naslouchací proces syslog a kolekce předávání událostí systému Windows). 
+4. Zaškrtněte políčko pro **automatickou aktualizaci ATA Gateway**, aby se ve vydání příštích verzí při aktualizaci komponenty ATA Center automaticky aktualizovala tato komponenta ATA Gateway.
+3.  Klikněte na **Uložit**.
+
+
+## Ověření instalací
 Chcete-li ověřit, že ATA Gateway je úspěšně nasazená, zkontrolujte následující:
 
-1.  Zkontrolujte, že je služba Microsoft Advanced Threat Analytics Gateway spuštěná. Po uložení nastavení ATA Gateway může trvat několik minut, než se služba spustí.
+1.  Zkontrolujte, že je služba **Microsoft Advanced Threat Analytics Gateway** spuštěná. Po uložení nastavení ATA Gateway může trvat několik minut, než se služba spustí.
 
-2.  Pokud se služba nespustí, zkontrolujte soubor Microsoft.Tri.Gateway-Errors.log umístěný v následující výchozí složce, %programfiles%\Microsoft Advanced Threat Analytics\Gateway\Logs, a vyhledejte položky s textem „transfer“ nebo „service start“.
+2.  Pokud se služba nespustí, zkontrolujte soubor Microsoft.Tri.Gateway-Errors.log umístěný v následující výchozí složce, %programfiles%\Microsoft Advanced Threat Analytics\Gateway\Logs.
 
-3.  Zkontrolujte následující čítače výkonu Microsoft ATA Gateway:
-
-    -   **NetworkListener Captured Messages / sec** (Zprávy zachycené komponentou NetworkListener/s): Tento čítač sleduje, kolik zpráv zachytí ATA za sekundu. Hodnota by měla být od několika set k tisícům v závislosti na počtu monitorovaných řadičů domény a na jejich vytížení. Jednociferné nebo dvouciferné hodnoty můžou značit problém s konfigurací zrcadlení portů.
-
-    -   **EntityTransfer Activity Transfers/Sec** (Přenosy aktivit komponenty EntityTransfer/s): Tato hodnota by měla být v rozsahu několik stovek každých několik sekund.
+3.  Pomoc najdete v tématu [Řešení potíží s ATA](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-known-errors).
 
 4.  Pokud se jedná o první nainstalovanou komponentu ATA Gateway, přihlaste se ke konzole ATA za několik minut a otevřete podokno oznámení potáhnutím pravé strany obrazovky. Měli byste vidět seznam **Entities Recently Learned** (Nedávno zjištěné entity) na panelu oznámení na pravé straně konzoly.
 
-5.  Ověření, že je instalace úspěšně dokončená:
-
-    V konzole něco vyhledejte v panelu vyhledávání, například uživatele nebo skupinu ve vaší doméně.
-
-    Otevřete nástroj Sledování výkonu. Ve stromovém zobrazení Výkon klikněte na **Sledování výkonu** a potom klikněte na ikonu se znaménkem plus **Přidat čítač**. Rozbalte položku **Microsoft ATA Gateway** a přejděte dolů k položce **Network Listener Captured Messages per Second** (Zprávy zachycené komponentou NetworkListener/s) a přidejte ji. Zkontrolujte, že v grafu vidíte aktivitu.
+5.  Na ploše klikněte na zástupce **Microsoft Advanced Threat Analytics** a připojte se ke konzole ATA. Přihlaste se pomocí stejných přihlašovacích údajů, které jste použili k instalaci ATA Center.
+6.  V konzole něco vyhledejte v panelu vyhledávání, například uživatele nebo skupinu ve vaší doméně.
+7.  Otevřete nástroj Sledování výkonu. Ve stromovém zobrazení Výkon klikněte na **Sledování výkonu** a potom klikněte na ikonu se znaménkem plus **Přidat čítač**. Rozbalte položku **Microsoft ATA Gateway** a přejděte dolů k položce **Network Listener PEF Captured Messages/Sec** (Zprávy zachycené komponentou PEF NetworkListener/s) a přidejte ji. Zkontrolujte, že v grafu vidíte aktivitu.
 
     ![Obrázek přidání čítačů výkonu](media/ATA-performance-monitoring-add-counters.png)
 
 
->[!div class="step-by-step"]
-[« Krok 4](install-ata-step4.md)
+>[!div class="step-by-step"] [« Krok 4](install-ata-step4.md)
 [Krok 6 »](install-ata-step6.md)
 
 ## Viz také
 
-- [Podporu získáte na našem fóru!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
-- [Konfigurace shromažďování událostí](/advanced-threat-analytics/plan-design/configure-event-collection)
+- [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Konfigurace shromažďování událostí](configure-event-collection.md)
 - [Požadavky ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO1-->
 
 

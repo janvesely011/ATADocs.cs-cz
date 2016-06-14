@@ -29,10 +29,10 @@ ms.suite: ems
 Když potřebujete přesunout, zálohovat nebo obnovit databázi ATA, použijte tyto postupy pro práci s MongoDB.
 
 ## Zálohování databáze ATA
-Viz [příslušná dokumentace pro MongoDB](http://docs.mongodb.org/manual/administration/backup/)..
+Viz [příslušná dokumentace pro MongoDB](http://docs.mongodb.org/manual/administration/backup/).
 
 ## Obnovení databáze ATA
-Viz [příslušná dokumentace pro MongoDB](http://docs.mongodb.org/manual/administration/backup/)..
+Viz [příslušná dokumentace pro MongoDB](http://docs.mongodb.org/manual/administration/backup/).
 
 ## Přesunutí databáze ATA na jinou jednotku
 
@@ -52,20 +52,23 @@ Viz [příslušná dokumentace pro MongoDB](http://docs.mongodb.org/manual/admin
 
 6.  Spusťte službu **MongoDB**.
 
-7.  Otevřete příkazový řádek a spusťte prostředí Mongo spuštěním `mongo.exe ATA` .
+7.  Otevřete příkazový řádek a spusťte prostředí Mongo spuštěním
 
     Standardně je mongo.exe umístěný v adresáři C:\Program Files\Microsoft rozšířené hrozba Analytics\Center\MongoDB\bin.
 
 8.  Spusťte následující příkaz: `db.SystemProfiles.update( {_t: "CenterSystemProfile"} , {$set:{"Configuration.CenterDatabaseClientConfiguration.DataPath" : "<New DB Location>"}}) Instead of <New DB Location>`, kde &lt;nové umístění DB&gt; je nová cesta ke složce.
 
+9.  Aktualizujte HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Advanced Threat Analytics\Center\DatabaseDataPath na novou cestu ke složce.
+
 9. Spusťte službu **Microsoft Advanced Threat Analytics Center**.
 
 ## Viz také
-- [Architektura ATA](/advanced-threat-analytics/understand-explore/ata-architecture)
+- [Architektura ATA](/advanced-threat-analytics/plan-design/ata-architecture)
 - [Požadavky ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
-- [Podporu získáte na našem fóru!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO1-->
 
 

@@ -31,7 +31,6 @@ Zde jsou uvedené kroky potřebné k nasazení, konfiguraci a spuštění ATA.
 
 Chcete-li nakonfigurovat ATA, postupujte takto:
 
--   [Předinstalační kroky](install-ata-preinstall.md)
 
 -   [Krok 1: Stažení a instalace ATA Center](install-ata-step1.md)
 
@@ -48,11 +47,12 @@ Chcete-li nakonfigurovat ATA, postupujte takto:
 
 ## Viz také
 
-- [Podporu získáte na našem fóru!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
-- [Konfigurace shromažďování událostí](/advanced-threat-analytics/plan-design/configure-event-collection)
+- [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Konfigurace shromažďování událostí](configure-event-collection.md)
 - [Požadavky ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO1-->
 
 

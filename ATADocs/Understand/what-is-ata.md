@@ -27,7 +27,7 @@ ms.suite: ems
 
 
 ## Co je ATA?
-Microsoft Advanced Threat Analytics (ATA) je řešení zabezpečení, které pomáhá IT profesionálům chránit jejich organizace před pokročilými cílenými útoky i vnitřními hrozbami. ATA automaticky analyzuje, učí se a identifikuje normální a nenormální chování entit (uživatelů, zařízení a prostředků) a identifikuje různá rizika, například známé nebezpečné útoky nebo problémy se zabezpečením. S použitím znalostí a zkušeností v oblasti bezpečnosti na světové úrovni se tato inovativní technologie zaměřuje na odhalování bezpečnostních hrozeb dřív, než způsobí nějaké škody.
+Microsoft Advanced Threat Analytics (ATA) je špičkové řešení analýz EUBA (User and Entity Behavioral Analytics), které si klade za cíl pomáhat IT specialistům na zabezpečení při ochraně organizací před pokročilými cílenými útoky (APT) i vnitřními hrozbami. ATA pomocí pokročilé technologie machine learningu automaticky analyzuje a rozpoznává běžné a neobvyklé chování entit (uživatelů, zařízení a prostředků) a učí se. Díky tomu pomáhá rozpoznat známé nebezpečné útoky a techniky, problémy zabezpečení a rizika. S použitím znalostí a zkušeností v oblasti bezpečnosti na světové úrovni se tato inovativní technologie zaměřuje na odhalování bezpečnostních hrozeb dřív, než způsobí nějaké škody.
 
 ## Co ATA dělá?
 ATA detekuje:
@@ -36,72 +36,104 @@ ATA detekuje:
 
   - Vnitřní hrozby
 
-  ATA také umožní oddělit signál od šumu a soustředit se tak na to, co je důležité.
+ATA pomáhá rozpoznat skutečně podezřelé aktivity a zaměřit se na to, co je opravdu důležité.
 
-ATA má detekční modul, který využívá strojové učení, hloubkovou kontrolu paketů s kontextem entit, analýzy protokolů a informace ze služby Active Directory (AD) k analýze chování uživatelů a dalších entit.
-Tento detekční modul provádí hloubkovou analýzu síťového provozu a využívá strojové učení k vytvoření mapy normálních aktivit, provozu a používání prostředků ve vaší organizaci. Poté ATA všechno jen tiše sleduje a upozorní vás, když se objeví něco nestandardního. Tohoto výsledku se dosahuje využitím technologie hloubkové kontroly paketů společnosti Microsoft (DPI). Tato technologie umožňuje díky znalosti kontextu jednotlivých entit analyzovat síťový provoz do větší hloubky a poskytuje řešení ATA možnost analyzovat všechny úrovně síťového prostředí. ATA shromažďuje také informace o relevantních událostech ze systémů SIEM a z řadičů domény. 
+Detekční modul ATA využívá machine learning, důkladnou kontrolu paketů na základě kontextu jednotlivých entit, analýzy protokolů a informace ze služby Active Directory (AD) k analýze chování uživatelů a dalších entit.
 
-Po dokončení analýzy vytvoří ATA dynamické a průběžně aktualizované zobrazení všech osob, zařízení a prostředků v organizaci. Pomocí tohoto komplexního obrazu dokáže ATA detekovat známé nebezpečné útoky, například typu pass-the hash, pass-the-ticket a rekognoskace. ATA také vyhledává jakékoli anomálie v chování entit v síti.  
+ATA do hloubky analyzuje síťový provoz ve vaší organizaci a pomocí machine learningu vytváří mapu normálních aktivit, provozu a používání prostředků ve vaší organizaci. Poté ATA všechno jen tiše sleduje a upozorní vás, když se objeví něco nestandardního. To všechno je možné díky technologii hloubkové kontroly paketů společnosti Microsoft (DPI), která díky znalosti kontextu jednotlivých entit umožňuje analyzovat síťový provoz do větší hloubky a poskytuje řešení ATA možnost analyzovat všechny úrovně síťového prostředí.
 
-Jakmile je detekována podezřelá aktivita, ATA vydá výstrahu. Pomocí pokročilých algoritmů pro agregaci a kontextové ověřování současně minimalizuje počet falešně pozitivních výstrah.
+ATA shromažďuje také informace o relevantních událostech ze systémů SIEM a z řadičů domény. Po dokončení analýzy ATA vytvoří dynamické a průběžně aktualizované zobrazení všech osob, zařízení a prostředků v organizaci. Pomocí tohoto komplexního zobrazení dokáže ATA detekovat známé nebezpečné útoky, například typu pass-the hash, pass-the-ticket, rekognoskace a další, a taky hledat abnormality v chování entit ve vaší síti.
+
+Jakmile se detekuje podezřelá aktivita, ATA vydá výstrahu. Pomocí pokročilých algoritmů pro agregaci a kontextové ověřování současně minimalizuje počet falešně pozitivních výstrah.
+
 
 
 ## Jaké hrozby ATA vyhledává?
 
-ATA zajišťuje detekci pro následující fáze pokročilých útoků: rekognoskace, zneužití přihlašovacích údajů, laterální pohyb, zvýšení úrovně oprávnění, dominance v doméně a další. Tyto detekce jsou zaměřené na zjišťování pokročilých útoků a vnitřních hrozeb ještě předtím, než mohou vaši organizaci poškodit.
+ATA zajišťuje detekci pro následující fáze pokročilých útoků: rekognoskace, únik přihlašovacích údajů, laterální pohyb, zvýšení úrovně oprávnění, dominance v doméně a další. Tyto detekce jsou zaměřené na zjišťování pokročilých útoků a vnitřních hrozeb ještě předtím, než mohou ve vaší organizaci způsobit škody.
 
-Detekce v každé fázi hledá několik typů podezřelých aktivit relevantních pro danou fázi. Každá podezřelá aktivita koreluje s různými charakteristikami možných útoků.
-
+Výsledkem detekce v jednotlivých fázích je několik podezřelých aktivit relevantních pro danou fázi. Každá podezřelá aktivita je v korelaci s různými charakteristikami možných útoků.
 
 ### Rekognoskace
-ATA poskytuje několik způsobů detekce rekognoskace. Například podezřelá aktivita **Reconnaissance using account enumeration** (Rekognoskace pomocí zjišťování účtů) upozorní na pokusy útočníků použít protokol Kerberos ke zjištění existence určitých uživatelů, a to i v případě, že se tato aktivita neobjeví v protokolech na řadiči domény.
+ATA poskytuje několik způsobů detekce rekognoskace. Mezi tyto detekce patří:
 
-### Zneužití přihlašovacích údajů
+-   **Rekognoskace pomocí zjišťování účtů**<br>Upozorní na pokusy útočníků použít protokol Kerberos ke zjištění existence určitých uživatelů, a to i v případě, že se tato aktivita neobjeví v protokolech na řadiči domény.
+-   **Výčet síťových relací**<br>
+V rámci fáze rekognoskace se útočníci mohou dotazovat řadiče domény na všechny aktivní relace SMB na serveru, což jim umožní získat přístup ke všem IP adresám a uživatelům, kteří jsou k těmto relacím SMB přidružení. Výčet relací SMB potom útočníci mohou využít k cílení na citlivé účty a následně k laterálnímu pohybu napříč sítí.
+-   **Rekognoskace pomocí DNS**<br>
+Informace DNS v cílové síti jsou pro rekognoskaci často velmi užitečné. Informace DNS obsahují seznam všech serverů a často i všech klientů a mapování na příslušné IP adresy. Zobrazení informací DNS může útočníkům poskytnout podrobný přehled o těchto entitách ve vašem prostředí, což jim umožní zaměřit úsilí na entity, které jsou pro jejich kampaň relevantní.
 
-ATA detekuje zneužití přihlašovacích údajů díky analýze chování využívající strojové učení, jakož rozpoznání známých útoků a technik.  
+### Prozrazené přihlašovací údaje
 
-ATA dokáže rozpoznat podezřelé aktivity, například neobvyklá přihlášení, nestandardní přístup k prostředkům a přístup mimo běžnou pracovní dobu. Kterákoli z těchto podezřelých aktivit může znamenat potenciální zneužití nebo prozrazení přihlašovacích údajů.
+K detekci prozrazených přihlašovacích údajů ATA využívá analýzu chování na základě machine learningu a také rozpoznání známých útoků a technik.
 
+Pomocí analýzy chování a machine learningu ATA dokáže detekovat podezřelé aktivity, jako jsou neobvyklá přihlášení, nestandardní přístup k prostředkům a přístup mimo běžnou pracovní dobu, což by mohlo ukazovat na únik přihlašovacích údajů.
 Pro ochranu proti zneužití přihlašovacích údajů rozpoznává ATA následující známé útoky a techniky:
 
- - **Hrubá síla** – při útoku hrubou silou se útočníci snaží uhodnout přihlašovací údaje uživatelů zkoušením kombinací běžných jmen a hesel. Útočníci často používají složité algoritmy nebo slovníky, aby vyzkoušeli tolik kombinací, kolik jim systém dovolí.
+ - **:** <br>Hrubá síla Při útoku hrubou silou se útočníci snaží uhodnout přihlašovací údaje uživatelů zkoušením kombinací běžných jmen a hesel.
 
-- **Přihlašování k citlivým účtům v otevřeném textu** – pokud se přihlašovací údaje k účtům s vysokými oprávněními odesílají v prostém textu, ATA vám doporučí aktualizovat konfiguraci počítače.
+- **Útočníci často používají složité algoritmy nebo slovníky, aby vyzkoušeli tolik kombinací, kolik jim systém dovolí.**<br>
+Zpřístupnění citlivých účtů v prostém textu
 
-- **Služba přihlašující se k citlivým účtům v otevřeném textu** – pokud služba na počítači přihlašuje k účtu s vysokými oprávněními v prostém textu, ATA vám doporučí aktualizovat konfiguraci služby.
+- **Pokud se přihlašovací údaje k účtům s vysokými oprávněními odešlou v prostém textu, ATA vám doporučí aktualizovat konfiguraci počítače.** <br>
+Služba zpřístupňující účty v prostém textu
 
-- **Podezřelá aktivita v účtu sloužícím jako návnada** – účty ve funkci návnady (Honey Token) jsou fiktivní účty nastavené tak, aby přitahovaly, identifikovaly a sledovaly podezřelé aktivity, které se je pokusí využít. ATA vás upozorní na jakékoli činnosti probíhající pod těmito účty.
+- **Pokud služba na počítači odesílá přihlašovací údaje k několika účtům v prostém textu, ATA vám doporučí aktualizovat konfiguraci této služby.**<br>
+Podezřelé aktivity účtu sloužícího jako návnada (honeytoken) Účty ve funkci návnady (honeytoken) jsou fiktivní účty nastavené tak, aby přitahovaly, identifikovaly a sledovaly podezřelé aktivity, které se je pokusí využít.
+-   **ATA vás upozorní na jakékoli činnosti probíhající pod těmito účty.**<br>
+Neobvyklá implementace protokolu Požadavky na ověření (Kerberos nebo NTLM) se obvykle zpracovávají pomocí normální sady metod a protokolů. K zajištění úspěšného ověření ale stačí, aby požadavek splňoval konkrétní sadu požadavků. Útočníci mohou implementovat tyto protokoly s malými odchylkami od normální implementace v daném prostředí.
+-   **Tyto odchylky mohou signalizovat přítomnost útočníka, který se pokouší využít nebo už úspěšně využívá prozrazené přihlašovací údaje.**<br>
+Škodlivý požadavek na soukromé informace přes Data Protection Data Protection API (DPAPI) je služba ochrany dat založená na heslech. Tuto službu ochrany používají různé aplikace, které ukládají tajné údaje uživatelů, jako jsou hesla k webům a přihlašovací údaje ke sdíleným složkám. Při ztrátě hesla mohou uživatelé dešifrovat chráněná data pomocí obnovovacího klíče, který nezahrnuje jejich heslo.
+-   **V doménovém prostředí útočníci mohou vzdáleně ukrást obnovovací klíč a použít ho k dešifrování chráněných dat ve všech počítačích připojených k doméně.**<br>
+Neobvyklé chování V případě vnitřních hrozeb a pokročilých útoků se často k podvodnému získání přihlašovacích údajů k účtům využívají techniky sociálního inženýrství nebo zcela nové a dosud neznámé metody a techniky.
 
-### Laterální pohyb
-Jako laterální pohyb se označuje situace, kdy uživatelé využívají přihlašovací údaje k určitým prostředkům pro přístup k jiným prostředkům, ke kterým by neměli mít oprávnění. ATA takový laterální pohyb detekuje díky analýze chování využívající strojové učení, jakož i rozpoznáním známých útoků a technik.  
+### Díky tomu, že ATA analyzuje chování entit, detekuje případné abnormality v operacích, které tyto entity provádějí, a upozorňuje na ně, dokáže tyto typy ohrožení detekovat.
+Laterální pohyb
 
-ATA zjišťuje nestandardního přístupy k prostředkům, časy jejich používání a další indikátory, které by mohly pomoci odhalit laterální pohyb. Kromě toho ATA k rozpoznání laterálního pohybu využívá detekci technik, které při laterálním pohybu používají útočníci, například:
-- **Pass-the-ticket** – při útoku tohoto typu útočník získá lístek Kerberos z jednoho počítače a použije ho k získání přístupu k jinému počítači předstíráním entity v síti.
-- **Pass-the-hash** – při tomto typu útočník získá hodnotu hash entity v kontextu protokolu NTLM a použije ji k ověření prostřednictvím NTLM, k předstírání identity dané entity a k přístupu k prostředkům v síti.
-- **Over-pass-the-hash** – tyto útoky spočívají v použití odcizené hodnoty hash NTLM k ověření prostřednictvím protokolu Kerberos, k získání platného lístku TGT Kerberos a následně k ověření jako platného uživatele a k získání přístupu k prostředkům v síti.
+K detekci laterálního pohybu, při němž uživatelé zneužijí přihlašovací údaje k získání přístupu k prostředkům, ke kterým přístup mít nemají, ATA využívá analýzy chování využívající machine learning a také rozpoznání známých škodlivých útoků a technik.
 
-### Zvýšení oprávnění
-Útok metodou zvýšení oprávnění se pokouší o zvýšení stávajících oprávnění, a to i opakovaně, dokud útočník nezíská plnou kontrolu nad prostředím napadeného počítače. ATA detekuje jak úspěšné, tak i neúspěšné pokusy o zvýšení oprávnění. ATA využívá analýzu chování k detekci neobvyklého používání privilegovaných účtů. ATA také detekuje známé nebezpečné útoky a techniky, které se často používají pro zvýšení oprávnění, jako například:
-- **MS14-068 exploit (Forged PAC)** – při útoku typu Forged PAC útočník vloží autorizační data do svého platného lístku TGT ve formě podvržené autorizační hlavičky. S touto technikou útočník získá oprávnění, která mu jeho organizace nepřidělila.
-- Použití dříve odcizených přihlašovacích údajů nebo údajů získaných technikou laterálního pohybu.
+Pomocí analýzy chování a machine learningu ATA dokáže detekovat nestandardní přístup k prostředkům, nestandardní využití zařízení a další indikátory, které by mohly ukazovat na únik přihlašovacích údajů.
 
-### Dominance v doméně
-Dominance v doméně znamená, že se útočníci pokusí (neúspěšně nebo úspěšně) o získání úplné kontroly nad napadeným prostředím. ATA rozpoznává tyto pokusy vyhledáváním známých technik používaných útočníky, které zahrnují:
-- **Malware typu Skeleton key** – při útoku typu skeleton key se do řadiče domény nainstaluje malware, který útočníkům umožňuje ověření jako jakýkoli uživatel, ale oprávněným uživatelům nebrání v normálním přihlašování.
-- **Zlatý lístek** – v tomto případě útočník odcizí přihlašovací údaje KBTGT, tj. zlatý lístek protokolu Kerberos. Tento lístek umožňuje offline vytvoření platného lístku TGT, se kterým je možné získat přístup k prostředkům v síti.
-- **Vzdálené spuštění** – útočníci se mohou pokusit o ovládnutí sítě vzdáleným spouštěním kódu na vašem řadiči domény.
+- **Kromě toho ATA k rozpoznání laterálního pohybu využívá detekci technik, které při laterálním pohybu používají útočníci, například:** <br>
+Pass-the-ticket
+- **Při útoku typu pass-the-ticket útočník získá lístek Kerberos z jednoho počítače a použije ho k získání přístupu k jinému počítači tak, že předstírá identitu některé entity v síti.** <br>
+Pass-the-hash
+- **Při útoku typu pass-the-hash útočník odcizí hodnotu hash NTML entity a použije ji k ověření prostřednictvím NTLM, k předstírání identity dané entity a k přístupu k prostředkům v síti.**<br>
+Over-pass-the-hash
+-   **Útoky over-pass-the-hash spočívají v použití odcizené hodnoty hash NTLM k ověření prostřednictvím protokolu Kerberos a k získání platného lístku TGT Kerberos. Tento lístek se pak použije k ověření uživatele jako platného a k získání přístupu k prostředkům v síti.**<br>
+Neobvyklé chování Laterální pohyb je technika, kterou útočníci často používají k pohybu mezi zařízeními a oblastmi v napadené síti a získání přístupu k privilegovaným přihlašovacím údajům nebo citlivým informacím, které je zajímají.
+
+### ATA dokáže rozpoznat laterální pohyb analýzou chování uživatelů a zařízení a jejich vztahů uvnitř podnikové sítě a detekcí neobvyklých přístupových vzorců, které mohou indikovat laterální pohyb ze strany útočníka.
+Zvýšení oprávnění 
+
+ATA detekuje úspěšné i neúspěšné pokusy o útoky metodou zvýšení oprávnění, kdy se útočník pokouší o zvýšení stávajících oprávnění, a to i opakovaně, dokud nezíská plnou kontrolu nad napadeným prostředím.
+
+- **K detekci zvýšení oprávnění ATA využívá kombinaci analýz chování (detekce neobvyklého chování privilegovaných účtů) a detekci známých nebezpečných útoků a technik, které se často využívají pro zvýšení oprávnění, jako například:**<br>
+Zneužití MS14-068 (Forged PAC) Při útoku typu falešný certifikát PAC útočník vloží do svého platného lístku TGT autorizační data ve formě podvržené autorizační hlavičky. To mu zaručuje další oprávnění, která mu ale organizace neudělila.
+- **V tomto scénáři útočník využívá dříve odcizené přihlašovací údaje nebo údaje získaných technikou laterálního pohybu.**<br>
+Zneužití MS11-013 (Silver PAC) Útoky zneužitím MS11-013 využívají chybu zabezpečení privilegií v protokolu Kerberos, která umožňuje falšování konkrétních aspektů lístků služby Kerberos. Kyberzločinec nebo útočník, který tuto chybu zabezpečení úspěšně zneužil, může získat token se zvýšenými oprávněními na řadiči domény.
+
+### V tomto scénáři útočník využívá dříve odcizené přihlašovací údaje nebo údaje získaných technikou laterálního pohybu.
+Dominance v doméně
+
+- **ATA detekuje úspěšné i neúspěšné pokusy o získání celkové kontroly a dominance v napadaném prostředí. Využívá přitom detekci známých technik, které útočníci využívají. Patří mezi ně:**<br>
+Malware typu Skeleton key
+- **Při útoku typu Skeleton key se do řadiče domény nainstaluje malware, který útočníkům umožňuje, aby se ověřili jako jakýkoli uživatel, ale oprávněným uživatelům nebrání v normálním přihlašování.**<br>
+Zlatý lístek V tomto případě útočník odcizí přihlašovací údaje KBTGT, tj. zlatý lístek protokolu Kerberos.
+- **Tento lístek umožňuje offline vytvoření platného lístku TGT, se kterým je možné získat přístup k prostředkům v síti.**<br>
+Vzdálené spuštění
+-   Útočníci se mohou pokusit o ovládnutí sítě vzdáleným spouštěním kódu na vašem řadiči domény. Požadavky na škodlivou replikaci
+
+## V prostředí Active Directory (AD) dochází k pravidelné replikaci mezi řadiči domény.
+
+-   Útočník může zfalšovat požadavek na replikaci AD (někdy zosobněním řadiče domény). To mu umožní načíst dat uložená ve službě AD, včetně hodnot hash hesel, aniž by musel využívat rušivější techniky, jako je třeba služba Stínová kopie svazku.
+
+-   Co dál?
+
+## Další informace o zapojení řešení ATA do vaší sítě najdete v tématu [Architektura ATA](/advanced-threat-analytics/plan-design/ata-architecture).
+[Pokud chcete začít s nasazením ATA, přečtěte si téma [Instalace ATA](/advanced-threat-analytics/deploy-use/install-ata).](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
 
 
-## Co dál?
-
--   Další informace o zapojení řešení ATA do vaší sítě najdete v tématu [Architektura ATA](ata-architecture.md).
-
--   Zahájení nasazení ATA: [Instalace ATA](/advanced-threat-analytics/deploy-useinstall-ata)
-
-## Viz také
-[Podporu pro řešení ATA získáte na našem fóru!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
-
-
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

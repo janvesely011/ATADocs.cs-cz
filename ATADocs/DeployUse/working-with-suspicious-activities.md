@@ -42,7 +42,7 @@ Každá podezřelá aktivita obsahuje následující informace:
 
 -   Schopnost
 
-    -   Odeslat podezřelou aktivitu jiným lidem ve vaší organizaci e-mailem. To vyžaduje na počítači, ze kterého provádíte procházení, nainstalovaného e-mailového klienta.
+    -   Sdílet podezřelou aktivitu s ostatními lidmi ve vaší organizaci prostřednictvím e-mailu.
 
     -   Exportovat podezřelou aktivitu do Excelu.
 
@@ -61,9 +61,9 @@ Každá podezřelá aktivita obsahuje následující informace:
 ## Filtrování seznamu podezřelých aktivit
 Chcete-li filtrovat seznam podezřelých aktivit:
 
-1.  V podokně **Filtrovat podle** na levé straně obrazovky vyberte jednu z následujících položek: **Vše**, **Otevřeno**, **Vyřešeno**, nebo **Zamítnuto**..
+1.  V podokně **Filtrovat podle** na levé straně obrazovky vyberte jednu z následujících položek: **Vše**, **Otevřeno**, **Vyřešeno**, nebo **Zamítnuto**.
 
-2.  Chcete-li dál filtrovat seznam, vyberte **Vysoká**, **Střední** nebo **Nízká**..
+2.  Chcete-li dál filtrovat seznam, vyberte **Vysoká**, **Střední** nebo **Nízká**.
 
 **Závažnost podezřelé aktivity**
 
@@ -89,7 +89,6 @@ Chcete-li filtrovat seznam podezřelých aktivit:
 
     Používá se ke sledování podezřelých aktivit, které jste identifikovali, prozkoumali a opravili s cílem zmírnit jejich dopad.
 
-    > [!NOTE]
     > ATA může znovu otevřít vyřešenou aktivitu, pokud se stejná aktivita zjistí během krátké doby znovu.
 
 -   **Zamítnuto**
@@ -97,7 +96,7 @@ Chcete-li filtrovat seznam podezřelých aktivit:
     Jedná se o aktivity, které ručně zamítnete. Pokud ATA zjistí podobnou podezřelou aktivitu, vytvoří se nové zjištění.
 
 ## Poskytnutí vstupu k podezřelé aktivitě
-Chcete-li docílit, že se ATA učí o síti s vámi, některé podezřelé aktivity (rekognoskace DNS, Pass-the-Ticket, neobvyklé chování a vzdálené spuštění) vyžadují váš vstup, aby se zlepšila detekce podezřelých aktivit do budoucna.
+Pro zajištění toho, že se ATA bude o vaší síti učit s vámi, některé podezřelé aktivity (rekognoskace DNS, pass-the-ticket, výčet relací SMB, neobvyklé chování a vzdálené spuštění) vyžadují váš vstup, aby se zlepšila detekce podezřelých aktivit do budoucna.
 
 1.  Pro podezřelé aktivity, které vám umožní zadání vstupu, se automaticky otevře dotaz na vstup. Zobrazí se výzva k zodpovězení otázek týkajících se aktivit ve vaší síti a zda se mají považovat za podezřelé. V následujícím příkladu se zobrazí dotaz, jestli je spuštění nástrojů pro vyhledávání z určitého počítače povolené.
 
@@ -107,17 +106,17 @@ Chcete-li docílit, že se ATA učí o síti s vámi, některé podezřelé akti
 
 3.  Pokud ale odpovíte kladně, může být podezřelá aktivita zamítnuta a budoucí aktivity tohoto typu z tohoto počítače nemusí generovat podezřelou aktivitu nebo budou generovat aktivitu, která se automaticky zamítne.
 
-4.  Pokud si nejste jisti, můžete kliknout na **Zrušit**..
+4.  Pokud si nejste jisti, můžete kliknout na **Zrušit**.
 
 ## Změna stavu podezřelé aktivity
-Můžete změnit stav podezřelé aktivity klepnutím na aktuální stav podezřelé aktivity a výběrem jedné z možností **Otevřeno**, **Vyřešeno** nebo **Zamítnuto**..
+Můžete změnit stav podezřelé aktivity klepnutím na aktuální stav podezřelé aktivity a výběrem jedné z možností **Otevřeno**, **Vyřešeno** nebo **Zamítnuto**.
 
 ## Viz také
-- [Podporu získáte na našem fóru!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
 - [Práce s nastavením detekce ATA](working-with-detection-settings.md)
 - [Změna konfigurace ATA](modifying-ata-configuration.md)
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

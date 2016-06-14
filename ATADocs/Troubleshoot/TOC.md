@@ -2,12 +2,12 @@
 # [Plánování a navrhování](/advanced-threat-analytics/plan-design/ata-capacity-planning)
 # [Nasazení a používání](/advanced-threat-analytics/deploy-use/install-ata)
 # [Řešení problémů](troubleshooting-ata-using-logs.md)
+## [Řešení problémů pomocí známých chyb](troubleshooting-ata-known-errors.md)
 ## [Řešení problémů pomocí protokolů](troubleshooting-ata-using-logs.md)
 ## [Řešení problémů pomocí čítačů výkonu](troubleshooting-ata-using-perf-counters.md)
 ## [Řešení problémů pomocí databáze](troubleshooting-ata-using-ata-database.md)
-## [Nejčastější dotazy](ata-technical-faq.md)
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 
