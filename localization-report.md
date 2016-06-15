@@ -7,10 +7,10 @@
 [ Handoff Failed Files ](#handoff-failed-list)| 0
 [ Handoff Success Files ](#handoff-success-list)| 1
 [ Archive Failed Files ](#archive-failed-list)| 0
-[ Archive Success Files ](#archive-success-list)| 1
+[ Archive Success Files ](#archive-success-list)| 0
 [ Handback Failed Files ](#handback-failed-list)| 0
 [ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 1
-[ In Sync Handback Files ](#insync-handback-success-list)| 48
+[ In Sync Handback Files ](#insync-handback-success-list)| 49
 [ Ignored Files ](#ignored-list)| 479
 
 ## <a name='handoff-failed-list'></a> Handoff Failed File List
@@ -23,9 +23,6 @@
 ## <a name='archive-failed-list'></a> Archive Failed File List
 
 ## <a name='archive-success-list'></a> Archive Success File List
- Source File | Status | Details 
- ----------- | ------ | ------- 
- [ATADocs\DeployUse\setting-syslog-email-server-settings.md](https://github.com/Microsoft/ATADocs-pr/blob/f2c8aeb67a0fa6034513d1c5d35c7acec4e8dbf1/ATADocs/DeployUse/setting-syslog-email-server-settings.md) | ArchivedSuccess | [Details](#69407ab44e09c309fd19cac34ca0c89f942c8095121)
 
 ## <a name='handback-failed-list'></a> Handback Failed File List
 
@@ -58,6 +55,7 @@
  [ATADocs\DeployUse\modifying-ata-configuration.md](https://github.com/Microsoft/ATADocs-pr/blob/5407cb4b98860b41b2c6f062cf47504f6d001b23/ATADocs/DeployUse/modifying-ata-configuration.md) | InSyncHandedBackSuccess | [Details](#6040bba509af74f553e038ffd308c784efd97f29117)
  [ATADocs\DeployUse\operate-ata.md](https://github.com/Microsoft/ATADocs-pr/blob/5407cb4b98860b41b2c6f062cf47504f6d001b23/ATADocs/DeployUse/operate-ata.md) | InSyncHandedBackSuccess | [Details](#b30041b411c633308d20b5c833ca17c91deb9a01118)
  [ATADocs\DeployUse\preinstall-ata.md](https://github.com/Microsoft/ATADocs-pr/blob/71c28b976639ffc67638ab2d4df3ef0d862da4b2/ATADocs/DeployUse/preinstall-ata.md) | InSyncHandedBackSuccess | [Details](#e19e295302c19b372fd7e53e63c9651afa379f9f119)
+ [ATADocs\DeployUse\setting-syslog-email-server-settings.md](https://github.com/Microsoft/ATADocs-pr/blob/f2c8aeb67a0fa6034513d1c5d35c7acec4e8dbf1/ATADocs/DeployUse/setting-syslog-email-server-settings.md) | InSyncHandedBackSuccess | [Details](#69407ab44e09c309fd19cac34ca0c89f942c8095121)
  [ATADocs\DeployUse\TOC.md](https://github.com/Microsoft/ATADocs-pr/blob/71c28b976639ffc67638ab2d4df3ef0d862da4b2/ATADocs/DeployUse/TOC.md) | InSyncHandedBackSuccess | [Details](#76dd524dd48e6d79029e308c6c77440b0e4e0b27122)
  [ATADocs\DeployUse\validate-port-mirroring.md](https://github.com/Microsoft/ATADocs-pr/blob/954fa96db02f15965fc9c2f1ef09d50f21d8ca74/ATADocs/DeployUse/validate-port-mirroring.md) | InSyncHandedBackSuccess | [Details](#965032eec59f602c3d012eb596d1ebfdca309433123)
  [ATADocs\DeployUse\working-with-ata-console.md](https://github.com/Microsoft/ATADocs-pr/blob/283d8383a6e7674e3a9fba06f3a8f73dcb038ea2/ATADocs/DeployUse/working-with-ata-console.md) | InSyncHandedBackSuccess | [Details](#ce3f8bd462a560c505b5430ff730782e1f016974124)
@@ -2026,15 +2024,15 @@
 * [Back to Top](#report-top)
 
 ##### <a name='69407ab44e09c309fd19cac34ca0c89f942c8095121'></a> Source: [ATADocs\DeployUse\setting-syslog-email-server-settings.md](https://github.com/Microsoft/ATADocs-pr/blob/f2c8aeb67a0fa6034513d1c5d35c7acec4e8dbf1/ATADocs/DeployUse/setting-syslog-email-server-settings.md)
-* Status: ArchivedSuccess
-* Target File: 
+* Status: InSyncHandedBackSuccess
+* Target File: [ATADocs\DeployUse\setting-syslog-email-server-settings.md](https://github.com/Microsoft/ATADocs-pr.cs-cz/blob/624a9fd0af50b14842be0196166ab964e574dab0/ATADocs/DeployUse/setting-syslog-email-server-settings.md)
 * Handoff File: [setting-syslog-email-server-settings.d464a4d838651c67c76c3a67ff324b8b6e9967e6.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/33ba68beb9ef578ea1a354c447a9552da7ab3924/ol-handoff/Microsoft/ATADocs-pr.cs-cz/master/setting-syslog-email-server-settings.d464a4d838651c67c76c3a67ff324b8b6e9967e6.cs-cz.xlf)
 * Handoff Datetime: 2016-06-02 21:12:17
 * Handoff Reason: Include
 * Archive File: [setting-syslog-email-server-settings.d464a4d838651c67c76c3a67ff324b8b6e9967e6.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/ea8f01f56305a1d451c6c0675eeec03c1e41f38a/ol-handoff/Microsoft/ATADocs-pr.cs-cz/master/archive/setting-syslog-email-server-settings.d464a4d838651c67c76c3a67ff324b8b6e9967e6.cs-cz.xlf)
 * Archive Datetime: 2016-06-09 00:43:41
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
+* Handback File: [setting-syslog-email-server-settings.d464a4d838651c67c76c3a67ff324b8b6e9967e6.cs-cz.xlf](https://github.com/Microsoft/EM.handback/blob/9263ac644191386b9575d7b1ef5625f37ba50fc1/ol-handback/Microsoft/ATADocs-pr.cs-cz/master/setting-syslog-email-server-settings.d464a4d838651c67c76c3a67ff324b8b6e9967e6.cs-cz.xlf)
+* Handback Datetime: 2016-06-15 09:49:56
 * [Back to Top](#report-top)
 
 ##### <a name='76dd524dd48e6d79029e308c6c77440b0e4e0b27122'></a> Source: [ATADocs\DeployUse\TOC.md](https://github.com/Microsoft/ATADocs-pr/blob/71c28b976639ffc67638ab2d4df3ef0d862da4b2/ATADocs/DeployUse/TOC.md)

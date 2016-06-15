@@ -1,6 +1,6 @@
 {
   "LastProcessedCommit": "d18867c1864e16088ee1167bb588e8d4abc7f1bb",
-  "LastTranslatedCommit": "fb63442e1893856fd0885533ec3c736912d00808",
+  "LastTranslatedCommit": "624a9fd0af50b14842be0196166ab964e574dab0",
   "Items": {
     "863b6725f0d6edbfb1469e413cf8ba7ddfe6a048": {
       "FileHash": "863b6725f0d6edbfb1469e413cf8ba7ddfe6a048",
@@ -2773,14 +2773,14 @@
       "HandoffPriority": "",
       "HandoffException": null,
       "HandoffFailureTimes": 0,
-      "TargetFileCommit": null,
-      "TargetFilePath": null,
-      "HandbackFilePath": null,
-      "HandbackFileCommit": null,
-      "HandbackDateTime": "0001-01-01T00:00:00",
+      "TargetFileCommit": "624a9fd0af50b14842be0196166ab964e574dab0",
+      "TargetFilePath": "ATADocs\\DeployUse\\setting-syslog-email-server-settings.md",
+      "HandbackFilePath": "ol-handback\\Microsoft\\ATADocs-pr.cs-cz\\master\\setting-syslog-email-server-settings.d464a4d838651c67c76c3a67ff324b8b6e9967e6.cs-cz.xlf",
+      "HandbackFileCommit": "9263ac644191386b9575d7b1ef5625f37ba50fc1",
+      "HandbackDateTime": "2016-06-15T09:49:56.2484886Z",
       "HandbackException": null,
       "HandbackFailureTimes": 0,
-      "UpdatedDateTime": "0001-01-01T00:00:00",
+      "UpdatedDateTime": "2016-06-15T09:49:56.2484886Z",
       "ArchiveFilePath": "ol-handoff\\Microsoft\\ATADocs-pr.cs-cz\\master\\archive\\setting-syslog-email-server-settings.d464a4d838651c67c76c3a67ff324b8b6e9967e6.cs-cz.xlf",
       "ArchiveFileCommit": "ea8f01f56305a1d451c6c0675eeec03c1e41f38a",
       "ArchiveFileDateTime": "2016-06-09T00:43:41.3031722Z",
