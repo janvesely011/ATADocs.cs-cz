@@ -1,26 +1,11 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 1
+ Total Files | 0
 
 ## File List
- Source File | Status | Details 
- ----------- | ------ | ------- 
- [ATADocs\DeployUse\setting-syslog-email-server-settings.md](https://github.com/Microsoft/ATADocs-pr/blob/f2c8aeb67a0fa6034513d1c5d35c7acec4e8dbf1/ATADocs/DeployUse/setting-syslog-email-server-settings.md) | InSyncHandedBackSuccess | [Details](#69407ab44e09c309fd19cac34ca0c89f942c8095121)
 
 ## Item Details
-##### <a name='69407ab44e09c309fd19cac34ca0c89f942c8095121'></a> Source: [ATADocs\DeployUse\setting-syslog-email-server-settings.md](https://github.com/Microsoft/ATADocs-pr/blob/f2c8aeb67a0fa6034513d1c5d35c7acec4e8dbf1/ATADocs/DeployUse/setting-syslog-email-server-settings.md)
-* Status: InSyncHandedBackSuccess
-* Target File: [ATADocs\DeployUse\setting-syslog-email-server-settings.md](https://github.com/Microsoft/ATADocs-pr.cs-cz/blob/624a9fd0af50b14842be0196166ab964e574dab0/ATADocs/DeployUse/setting-syslog-email-server-settings.md)
-* Handoff File: [setting-syslog-email-server-settings.d464a4d838651c67c76c3a67ff324b8b6e9967e6.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/33ba68beb9ef578ea1a354c447a9552da7ab3924/ol-handoff/Microsoft/ATADocs-pr.cs-cz/master/setting-syslog-email-server-settings.d464a4d838651c67c76c3a67ff324b8b6e9967e6.cs-cz.xlf)
-* Handoff Datetime: 2016-06-02 21:12:17
-* Handoff Reason: Include
-* Archive File: [setting-syslog-email-server-settings.d464a4d838651c67c76c3a67ff324b8b6e9967e6.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/ea8f01f56305a1d451c6c0675eeec03c1e41f38a/ol-handoff/Microsoft/ATADocs-pr.cs-cz/master/archive/setting-syslog-email-server-settings.d464a4d838651c67c76c3a67ff324b8b6e9967e6.cs-cz.xlf)
-* Archive Datetime: 2016-06-09 00:43:41
-* Handback File: [setting-syslog-email-server-settings.d464a4d838651c67c76c3a67ff324b8b6e9967e6.cs-cz.xlf](https://github.com/Microsoft/EM.handback/blob/9263ac644191386b9575d7b1ef5625f37ba50fc1/ol-handback/Microsoft/ATADocs-pr.cs-cz/master/setting-syslog-email-server-settings.d464a4d838651c67c76c3a67ff324b8b6e9967e6.cs-cz.xlf)
-* Handback Datetime: 2016-06-15 09:49:56
-* [Back to Top](#report-top)
-
 
 ## Error Details
 
