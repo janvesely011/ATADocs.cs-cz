@@ -204,22 +204,22 @@ Klikněte pravým tlačítkem a vyberte **Vlastnosti**. Na kartě **Členové** 
     ![wef_4776](media/wef_4776.png)
 
     c. V části **Změnit uživatelský účet či nakonfigurovat rozšířené nastavení** klikněte na **Upřesnit**.
-Nastavte **Protokol** na **HTTP** a **Port** na **5985**<br>
+Nastavte **Protokol** na **HTTP** a **Port** na **5985**.<br>
     ![wef_http](media/wef_http.png)
 
 7.  [Nepovinné] Pokud chcete kratší interval dotazování, nastavte na ATA Gateway prezenční signál odběru na 5 sekund kvůli vyšší rychlosti dotazování.
-    wecutil ss
+    wecutil ss <CollectionName>/cm:custom wecutil ss <CollectionName> /hi:5000
 
-8. /cm:custom
+8. Na stránce konfigurace ATA Gateway povolte **Kolekce předávání událostí systému Windows**.
 
 > [!NOTE]
-wecutil ss
+Pokud povolíte toto nastavení, bude ATA Gateway hledat v protokolu předávaných událostí ty události systému Windows, které byly předány z řadičů domény.
 
-/hi:5000
+Další informace najdete v tématu [Konfigurace počítačů pro předání a shromáždění událostí](https://technet.microsoft.com/en-us/library/cc748890).
 
-## Na stránce konfigurace ATA Gateway povolte **Kolekce předávání událostí systému Windows**.
-- [Pokud povolíte toto nastavení, bude ATA Gateway hledat v protokolu předávaných událostí ty události systému Windows, které byly předány z řadičů domény.](install-ata.md)
-- [Další informace najdete v tématu [Konfigurace počítačů pro předání a shromáždění událostí](https://technet.microsoft.com/en-us/library/cc748890).](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+## Viz také
+- [Instalace ATA](install-ata.md)
+- [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
 
 
 <!--HONumber=Jun16_HO1-->

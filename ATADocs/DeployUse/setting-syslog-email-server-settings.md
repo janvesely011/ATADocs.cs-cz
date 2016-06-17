@@ -26,13 +26,13 @@ ms.suite: ems
 ---
 
 ## Nastavení e-mailového serveru pro ATA
-ATA vás může upozornit, když zjistí podezřelou aktivitu. Aby řešení ATA mohlo odesílat e-mailová oznámení, musíte nejdřív nakonfigurovat **nastavení e-mailového serveru**
+ATA vás může upozornit, když zjistí podezřelou aktivitu. Aby řešení ATA mohlo odesílat e-mailová oznámení, musíte nejdřív nakonfigurovat **nastavení e-mailového serveru**.
 
 1.  Na serveru ATA Center klikněte na ikonu **Správa Microsoft Advanced Threat Analytics** na ploše.
 
 2.  Zadejte uživatelské jméno a heslo a klikněte na **Přihlásit**.
 
-3.  Vyberte na panelu nástrojů možnost nastavení a vyberte **Konfigurace**.
+3.  Na panelu nástrojů vyberte možnost nastavení a vyberte **Konfigurace**.
 
     ![Ikona nastavení konfigurace ATA](media/ATA-config-icon.JPG)
 
@@ -63,7 +63,7 @@ Když ATA zjistí podezřelou aktivitu, může vás upozornit tak, že zašle up
 
 3.  Zadejte uživatelské jméno a heslo a klikněte na **Přihlásit**.
 
-4.  Vyberte na panelu nástrojů možnost nastavení a vyberte **Konfigurace**.
+4.  Na panelu nástrojů vyberte možnost nastavení a vyberte **Konfigurace**.
 
     ![Ikona nastavení konfigurace ATA](media/ATA-config-icon.JPG)
 

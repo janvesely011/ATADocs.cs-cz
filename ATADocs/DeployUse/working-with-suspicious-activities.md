@@ -61,7 +61,7 @@ Každá podezřelá aktivita obsahuje následující informace:
 ## Filtrování seznamu podezřelých aktivit
 Chcete-li filtrovat seznam podezřelých aktivit:
 
-1.  V podokně **Filtrovat podle** na levé straně obrazovky vyberte jednu z následujících položek: **Vše**, **Otevřeno**, **Vyřešeno**, nebo **Zamítnuto**.
+1.  V podokně **Filtrovat podle** na levé straně obrazovky vyberte jednu z následujících položek: **Vše**, **Otevřeno**, **Vyřešeno** nebo **Zamítnuto**.
 
 2.  Chcete-li dál filtrovat seznam, vyberte **Vysoká**, **Střední** nebo **Nízká**.
 
@@ -89,7 +89,7 @@ Chcete-li filtrovat seznam podezřelých aktivit:
 
     Používá se ke sledování podezřelých aktivit, které jste identifikovali, prozkoumali a opravili s cílem zmírnit jejich dopad.
 
-    > ATA může znovu otevřít vyřešenou aktivitu, pokud se stejná aktivita zjistí během krátké doby znovu.
+    > [!NOTE] ATA může znovu otevřít vyřešenou aktivitu, pokud se stejná aktivita zjistí během krátké doby znovu.
 
 -   **Zamítnuto**
 

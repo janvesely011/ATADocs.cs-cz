@@ -29,10 +29,10 @@ ms.suite: ems
 Když potřebujete přesunout, zálohovat nebo obnovit databázi ATA, použijte tyto postupy pro práci s MongoDB.
 
 ## Zálohování databáze ATA
-Viz [příslušná dokumentace pro MongoDB](http://docs.mongodb.org/manual/administration/backup/).
+Viz [příslušná dokumentace k MongoDB](http://docs.mongodb.org/manual/administration/backup/).
 
 ## Obnovení databáze ATA
-Viz [příslušná dokumentace pro MongoDB](http://docs.mongodb.org/manual/administration/backup/).
+Viz [příslušná dokumentace k MongoDB](http://docs.mongodb.org/manual/administration/backup/).
 
 ## Přesunutí databáze ATA na jinou jednotku
 
@@ -52,7 +52,7 @@ Viz [příslušná dokumentace pro MongoDB](http://docs.mongodb.org/manual/admin
 
 6.  Spusťte službu **MongoDB**.
 
-7.  Otevřete příkazový řádek a spusťte prostředí Mongo spuštěním
+7.  Otevřete příkazový řádek a spusťte prostředí Mongo spuštěním `mongo.exe ATA`.
 
     Standardně je mongo.exe umístěný v adresáři C:\Program Files\Microsoft rozšířené hrozba Analytics\Center\MongoDB\bin.
 

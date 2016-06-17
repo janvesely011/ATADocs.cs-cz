@@ -43,7 +43,7 @@ Aktualizace ATA na verzi 1.5 přináší vylepšení v následujících oblastec
 -   Další čítače výkonu pro rozšířené monitorování a řešení potíží
 
 ## Aktualizace ATA na verzi 1.5
-> Pokud ve vašem prostředí neexistuje instalace ATA, stáhněte si úplnou verzi ATA, která zahrnuje verzi 1.5, a použijte standardní postup instalace popsaný v tématu [Instalace ATA](/advanced-threat-analytics/deploy-use/install-ata).
+> [!NOTE] Pokud ve vašem prostředí neexistuje instalace ATA, stáhněte si úplnou verzi ATA, která zahrnuje verzi 1.5, a použijte standardní postup instalace popsaný v tématu [Instalace ATA](/advanced-threat-analytics/deploy-use/install-ata).
 
 Pokud již máte nasazení ATA verze 1.4, tento postup vás provede kroky potřebnými k aktualizaci instalace.
 
@@ -60,7 +60,7 @@ Podle těchto kroků provedete aktualizaci ATA na verzi 1.5:
 
 4.  Aktualizace komponent ATA Gateway
 
-    > Aktualizujte všechny komponenty ATA Gateway, aby se zajistila správná funkce ATA.
+    > [!IMPORTANT] Aktualizujte všechny komponenty ATA Gateway, aby se zajistila správná funkce ATA.
 
 ### Krok 1: Aktualizace ATA Center
 
@@ -104,7 +104,7 @@ Stažení instalačního balíčku ATA Gateway:
 
     ![Ikona nastavení konfigurace](media/ATA-config-icon.JPG)
 
-3.  Na kartě **ATA Gateways** klikněte na **Download ATA Gateway Setup** (Stáhnout instalaci ATA Gateway).
+3.  Na kartě **ATA Gateway** klikněte na **Download ATA Gateway Setup** (Stáhnout instalaci ATA Gateway).
 
 4.  Uložte balíček místně.
 
@@ -118,13 +118,13 @@ Soubor zip obsahuje následující:
 
 1.  Na každém počítači s ATA Gateway extrahujte soubory z balíčku ATA Gateway a spusťte soubor Microsoft ATA Gateway Setup.
 
-    > Tento balíček ATA Gateway lze použít také k instalaci nových komponent ATA Gateway.
+    > [!NOTE] Tento balíček ATA Gateway lze použít také k instalaci nových komponent ATA Gateway.
 
 2.  Předchozí nastavení se zachovají, ale může trvat několik minut, než se služba restartuje.
 
 3.  Tento krok opakujte pro všechny nasazené komponenty ATA Gateway.
 
-> Po úspěšné aktualizaci ATA Gateway zastaralé oznámení pro konkrétní ATA Gateway zmizí.
+> [!NOTE] Po úspěšné aktualizaci ATA Gateway zastaralé oznámení pro konkrétní ATA Gateway zmizí.
 
 To, že jsou všechny komponenty ATA Gateway úspěšně aktualizované, budete vědět, když všechny ATA Gateway ohlásí, že jsou úspěšně synchronizované, a zpráva, že je k dispozici aktualizovaný balíček ATA Gateway, se už nebude zobrazovat.
 

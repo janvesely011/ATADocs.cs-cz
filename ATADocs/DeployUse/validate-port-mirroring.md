@@ -195,7 +195,7 @@ Ukázka spuštění tohoto skriptu:
 ## Ověření zrcadlení portů pomocí Net Mon
 1.  Instalace nástroje [Microsoft Network Monitor 3.4](http://www.microsoft.com/download/details.aspx?id=4865)
 
-    > Neinstalujte na komponentu ATA Gateway Microsoft Message Analyzer nebo jiný software pro zachycení provozu.
+    > [!IMPORTANT] Neinstalujte na komponentu ATA Gateway Microsoft Message Analyzer nebo jiný software pro zachycení provozu.
 
 2.  Otevřete Sledování sítě a vytvořte novou kartu zachycení.
 
@@ -215,7 +215,7 @@ Ukázka spuštění tohoto skriptu:
 
     ![Obrázek spuštění relace zachytávání](media/ATA-Port-Mirroring-Capture-traffic.jpg)
 
-    > Je důležité se ujistit, že vidíte provoz do a z řadičů domény.
+    > [!NOTE] Je důležité se ujistit, že vidíte provoz do a z řadičů domény.
     
 
 5.  Pokud se zobrazí přenos jenom v jednom směru, obraťte se na týmy podpory sítí nebo virtualizace, aby vám pomohly vyřešit potíže s konfigurací zrcadlení portů.

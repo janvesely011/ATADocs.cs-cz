@@ -2,7 +2,7 @@
 # required metadata
 
 title: Nastavení oznámení ATA | Microsoft Advanced Threat Analytics
-description: Popisuje, jak vám má ATA doručovat upozornění (e-mailem nebo předáváním událostí ATA) při zjištění podezřelých aktivit. 
+description: Popisuje, jak nastavit výstrahy ATA, abyste byli při zjištění podezřelých aktivit upozorněni.
 keywords:
 author: rkarlin
 manager: stevenpo

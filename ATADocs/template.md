@@ -171,9 +171,9 @@ Toto je příklad pro: `in-line code`.
 
 ## Blokové citace
 
-> Posledních deset miliónů let už bylo suchých, vláda strašlivých ještěrů dávno skončila. Tady na rovníku, na kontinentě, který jednoho dne bude znám jako Afrika, znovu dosahoval boj o existenci vrcholu zuřivosti, a vítěz stále ještě nebyl zřejmý. V této pusté a vyprahlé krajině zůstávala naděje na život, ba na pouhé přežití, jen tvorům malým nebo rychlým.
+> Posledních deset miliónů let už bylo suchých, vláda strašlivých ještěrů dávno skončila. Tady na rovníku, na kontinentě, který jednoho dne bude známý jako Afrika, znovu dosahoval boj o existenci vrcholu zuřivosti, a vítěz stále ještě nebyl zřejmý. V této pusté a vyprahlé krajině zůstávala naděje na život, ba na pouhé přežití, jen tvorům malým nebo rychlým.
 
-## Obrázky
+## Bitové kopie
 
 ### Statický obrázek
 
@@ -229,7 +229,7 @@ Dostupná jsou tato rozšíření:
 - [zástupný](/rights-management/template.md)
 - [panel](/rights-management/scratch.md)
 
-### Krok za krokem
+### Postup:
 
 >[!div class="step-by-step"] [Předchozí](https://www.example.com)
 [Další](https://www.example.com)

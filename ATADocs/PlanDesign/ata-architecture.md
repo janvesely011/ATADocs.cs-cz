@@ -148,14 +148,14 @@ V následující tabulce je uvedený příklad řadiče domény s dostatečným 
 ||||||
 |-|-|-|-|-|
 |Active Directory (Lsass.exe)|ATA Lightweight Gateway (Microsoft.Tri.Gateway.exe)|Různé (ostatní procesy) |Kvóta pro ATA Lightweight Gateway|Omezení brány|
-|30 %|20 %|10 %|45 %|Ne|
+|30%|20%|10%|45%|Ne|
 
 Pokud Active Directory potřebuje víc výpočetních prostředků, kvóta vyžadovaná komponentou ATA Lightweight Gateway se sníží. V následujícím příkladu ATA Lightweight Gateway potřebuje víc, než je přidělená kvóta, a omezí některý provoz (monitoruje provoz jenom částečně):
 
 ||||||
 |-|-|-|-|-|
 |Active Directory (Lsass.exe)|ATA Lightweight Gateway (Microsoft.Tri.Gateway.exe)|Různé (ostatní procesy) |Kvóta pro ATA Lightweight Gateway|Omezení brány|
-|60 %|15 %|10 %|15 %|Ano|
+|60%|15%|10%|15%|Ano|
 
 
 

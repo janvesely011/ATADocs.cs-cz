@@ -41,7 +41,7 @@ Další informace najdete v dokumentaci dodavatele.
 
 **Encapsulated Remote Switch Port Analyzer (ERSPAN)** – Jedná se o proprietární technologii Cisco pracující na vrstvě 3. ERSPAN umožňuje monitorování provozu přes různé přepínače bez nutnosti kmenových vedení sítě VLAN. ERSPAN používá ke kopírování monitorovaného síťového provozu protokol GRE (Generic Routing Encapsulation). ATA momentálně nemůže přímo přijímat provoz ERSPAN. Aby byla možná spolupráce ATA s provozem ERSPAN, je potřeba jako cíl ERSPAN konfigurovat přepínač nebo směrovač, který bude dekódovat zapouzdřený provoz. Tento přepínač nebo směrovač je pak potřeba konfigurovat tak, aby ho předával ATA Gateway metodou SPAN nebo RSPAN.
 
-> Pokud řadič domény se zrcadlením portů je připojený prostřednictvím linky WAN, zkontrolujte, že linka WAN dokáže zpracovat další zátěž provozu ERSPAN.
+> [!NOTE] Pokud řadič domény se zrcadlením portů je připojený prostřednictvím linky WAN, zkontrolujte, že linka WAN dokáže zpracovat další zátěž provozu ERSPAN.
 
 ## Podporované možnosti zrcadlení portů
 
@@ -55,12 +55,12 @@ Další informace najdete v dokumentaci dodavatele.
 |Fyzické|Fyzický na jiném přepínači|Vyžaduje fyzické přepínače podporující RSPAN nebo ERSPAN&#42;.|
 &#42; ERSPAN se podporuje jenom tehdy, pokud je před tím, než je provoz analyzován pomocí ATA, zrušeno zapouzdření.
 
-> Zkontrolujte, že řadiče domény a komponenty ATA Gateway, ke kterým se připojují, jsou vzájemně časově synchronizované (s tolerancí 5 minut).
+> [!NOTE] Zkontrolujte, že řadiče domény a komponenty ATA Gateway, ke kterým se připojují, jsou vzájemně časově synchronizované (s tolerancí 5 minut).
 
 **Pokud pracujete s virtualizačními clustery:**
 
 -   U každého řadiče domény spuštěného ve virtualizačním clusteru ve virtuálním počítači s ATA Gateway konfigurujte spřažení mezi řadičem domény a ATA Gateway. Tímto způsobem je zajištěno, že pokud se řadič domény přesune do jiného hostitele v clusteru, ATA Gateway ho bude následovat. To funguje dobře, pokud je jen několik řadičů domény.
-> Pokud vaše prostředí podporuje proces V2V (Virtual to Virtual) na různých hostitelích (RSPAN), nemusíte si dělat starosti se spřažením.
+> [!NOTE] Pokud vaše prostředí podporuje proces V2V (Virtual to Virtual) na různých hostitelích (RSPAN), nemusíte si dělat starosti se spřažením.
 > 
 -   Abyste se ujistili, že komponenty ATA Gateway mají správnou velikost, aby mohly samy zpracovávat sledování všech řadičů domény, zkuste tuto možnost: Nainstalujte virtuální počítač na každého hostitele virtualizace a nainstalujte ATA Gateway na každého hostitele. Nakonfigurujte každou ATA Gateway ke sledování všech řadičů domény, které běží v clusteru. Tímto způsobem bude sledován každý hostitel, na kterém běží řadiče domény.
 

@@ -27,39 +27,39 @@ ms.suite: ems
 
 # Změna konfigurace ATA – heslo připojení k doméně
 
->[!div class="step-by-step"]
+>[!div class="step-by-step"] [« Certifikát IIS](modifying-ata-config-iiscert.md)
 
 
-## « Certifikát IIS
-Změna hesla připojení k doméně Pokud změníte heslo připojení k doméně, ujistěte se, že je zadané heslo správné.
-
-Pokud není, služba ATA Gateway se zastaví.
-`The supplied credential is invalid.`
+## Změna hesla připojení k doméně
+Pokud změníte heslo připojení k doméně, ujistěte se, že je zadané heslo správné. Pokud není, služba ATA Gateway se zastaví.
 
 Pokud máte podezření, že se to stalo, vyhledejte v souboru Microsoft.Tri.Gateway-Errors.log na ATA Gateway následující:
+`The supplied credential is invalid.`
 
-1.  Když to chcete opravit, podle následujícího postupu aktualizujte na ATA Gateway heslo připojení k doméně:
+Když to chcete opravit, podle následujícího postupu aktualizujte na ATA Gateway heslo připojení k doméně:
 
-2.  Na ATA Gateway otevřete konzolu ATA.
+1.  Na ATA Gateway otevřete konzolu ATA.
 
-    ![Vyberte na panelu nástrojů možnost nastavení a vyberte **Konfigurace**.](media/ATA-config-icon.JPG)
+2.  Na panelu nástrojů vyberte možnost nastavení a vyberte **Konfigurace**.
 
-3.  Ikona nastavení konfigurace ATA
+    ![Ikona nastavení konfigurace ATA](media/ATA-config-icon.JPG)
 
-    ![Vyberte možnost **Obecné**.](media/ATA-GW-change-DC-password.JPG)
+3.  Vyberte **Obecné**.
 
-4.  Obrázek změny hesla pro ATA Gateway
+    ![Obrázek změny hesla pro ATA Gateway](media/ATA-GW-change-DC-password.JPG)
 
-5.  V části **Obecné** změňte heslo.
+4.  V části **Obecné** změňte heslo.
 
-6.  Klikněte na **Uložit**.
+5.  Klikněte na **Uložit**.
 
->Po změně hesla ručně zkontrolujte, že je služba ATA Gateway na serverech ATA Gateway spuštěná.
+6.  Po změně hesla ručně zkontrolujte, že je služba ATA Gateway na serverech ATA Gateway spuštěná.
 
-## [!div class="step-by-step"]
-- [« Certifikát IIS](working-with-ata-console.md)
-- [Viz také](install-ata.md)
-- [Práce s konzolou ATA](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+>[!div class="step-by-step"] [« Certifikát IIS](modifying-ata-config-iiscert.md)
+
+## Viz také
+- [Práce s konzolou ATA](working-with-ata-console.md)
+- [Instalace ATA](install-ata.md)
+- [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
 
 
 <!--HONumber=Jun16_HO1-->

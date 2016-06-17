@@ -65,7 +65,7 @@ ATA Center využívá tyto protokoly:
 > První tři soubory protokolů mají maximální velikost až 50 MB. Při dosažení této velikosti se otevře nový soubor protokolu a předchozí je přejmenován na &lt;původní název souboru&gt;-Archived-00000 (číslo při každém přejmenování zvětší).
 
 ### Protokoly konzoly ATA
-Protokoly konzoly ATA (protokoly rozhraní API pro správu) jsou umístěné v podsložce s názvem **Logs**. Ve výchozí instalaci ji najdete tady: **C:\Program Files\Microsoft Advanced Threat Analytics\Center\Management\Logs**
+Protokoly konzoly ATA (protokoly rozhraní API pro správu) jsou umístěné v podsložce s názvem **Logs**. Ve výchozí instalaci ji najdete tady: **C:\Program Files\Microsoft Advanced Threat Analytics\Center\Management\Logs**.
 
 Konzola ATA využívá tyto protokoly:
 
