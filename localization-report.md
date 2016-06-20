@@ -3225,14 +3225,14 @@
 
 ##### <a name='54bb8923b2033f36a7682a19fbd45107ca97d432221'></a> Source: [ATADocs\index.md](https://github.com/Microsoft/ATADocs-pr/blob/5cc0a757bf0983eb4026e641f802a111b3d0e0e1/ATADocs/index.md)
 * Status: InSyncHandedBackSuccess
-* Target File: [ATADocs\index.md](https://github.com/Microsoft/ATADocs-pr.cs-cz/blob/fb63442e1893856fd0885533ec3c736912d00808/ATADocs/index.md)
+* Target File: [ATADocs\index.md](https://github.com/Microsoft/ATADocs-pr.cs-cz/blob/664085d850fea573f036704004a9f3cc76774f5f/ATADocs/index.md)
 * Handoff File: [index.cc3e62ac6c9901731450d753a0ecebc990048809.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/33ba68beb9ef578ea1a354c447a9552da7ab3924/ol-handoff/Microsoft/ATADocs-pr.cs-cz/master/index.cc3e62ac6c9901731450d753a0ecebc990048809.cs-cz.xlf)
 * Handoff Datetime: 2016-06-02 21:12:17
 * Handoff Reason: Include
 * Archive File: [index.cc3e62ac6c9901731450d753a0ecebc990048809.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/ea8f01f56305a1d451c6c0675eeec03c1e41f38a/ol-handoff/Microsoft/ATADocs-pr.cs-cz/master/archive/index.cc3e62ac6c9901731450d753a0ecebc990048809.cs-cz.xlf)
 * Archive Datetime: 2016-06-09 00:43:41
-* Handback File: [index.cc3e62ac6c9901731450d753a0ecebc990048809.cs-cz.xlf](https://github.com/Microsoft/EM.handback/blob/58bdeea232acdd5882cac3b49073f48c5ced3174/ol-handback/Microsoft/ATADocs-pr.cs-cz/master/index.cc3e62ac6c9901731450d753a0ecebc990048809.cs-cz.xlf)
-* Handback Datetime: 2016-06-15 09:32:40
+* Handback File: [index.cc3e62ac6c9901731450d753a0ecebc990048809.cs-cz.xlf](https://github.com/Microsoft/EM.handback/blob/e4823693e370e6ca0098870817e8ba8ca32ca412/ol-handback/Microsoft/ATADocs-pr.cs-cz/master/index.cc3e62ac6c9901731450d753a0ecebc990048809.cs-cz.xlf)
+* Handback Datetime: 2016-06-20 16:01:22
 * [Back to Top](#report-top)
 
 ##### <a name='755db60abb7859af5065e2c5ddfbfc6cfb7aeeda222'></a> Source: [ATADocs\md.style](https://github.com/Microsoft/ATADocs-pr/blob/2a8db225e2ded06048ef39500702d9fcf31690e6/ATADocs/md.style)
