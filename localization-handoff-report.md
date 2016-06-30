@@ -1,43 +1,27 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 2
+ Total Files | 1
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [ATADocs\DeployUse\configure-port-mirroring.md](https://github.com/Microsoft/ATADocs-pr/blob/121f54e6d8da8220f1827188039e9a89c038f7ac/ATADocs/DeployUse/configure-port-mirroring.md) | OutofSyncHandedBackSuccess | [Details](#a4befce4003951b18a5e1a9d8bc1addf9e7ea25510)
- [ATADocs\index.md](https://github.com/Microsoft/ATADocs-pr/blob/121f54e6d8da8220f1827188039e9a89c038f7ac/ATADocs/index.md) | OutofSyncHandedBackSuccess | [Details](#91fe130cb37f40efd90d7e8023b93075f76a5ba4221)
+ [ATADocs\PlanDesign\ata-prerequisites.md](https://github.com/Microsoft/ATADocs-pr/blob/1f85b9a0f51bd18edaa91ea208d6e6c7c7de56cc/ATADocs/PlanDesign/ata-prerequisites.md) | OutofSyncHandedBackSuccess | [Details](#da887431d8e63a7ae8ceeb3e7e22011d356e3590225)
 
 ## Item Details
-##### <a name='a4befce4003951b18a5e1a9d8bc1addf9e7ea25510'></a> Source: [ATADocs\DeployUse\configure-port-mirroring.md](https://github.com/Microsoft/ATADocs-pr/blob/121f54e6d8da8220f1827188039e9a89c038f7ac/ATADocs/DeployUse/configure-port-mirroring.md)
+##### <a name='da887431d8e63a7ae8ceeb3e7e22011d356e3590225'></a> Source: [ATADocs\PlanDesign\ata-prerequisites.md](https://github.com/Microsoft/ATADocs-pr/blob/1f85b9a0f51bd18edaa91ea208d6e6c7c7de56cc/ATADocs/PlanDesign/ata-prerequisites.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [configure-port-mirroring.e622298bb90efd1f6be9ed80b0b2c691da7ec043.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/71f33f6f9caf5e69100adb0c14dd9b003ff48c03/ol-handoff/Microsoft/ATADocs-pr.cs-cz/master/configure-port-mirroring.e622298bb90efd1f6be9ed80b0b2c691da7ec043.cs-cz.xlf)
-* Handoff Datetime: 2016-06-29 18:15:16
+* Handoff File: [ata-prerequisites.79e9e750461cccf39f17f01df458a3eb6f3e6c8b.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/3d50c6a96e77f91e3ade99aa1fa725f684936bc5/ol-handoff/Microsoft/ATADocs-pr.cs-cz/master/ata-prerequisites.79e9e750461cccf39f17f01df458a3eb6f3e6c8b.cs-cz.xlf)
+* Handoff Datetime: 2016-06-30 15:11:33
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [ATADocs\DeployUse\configure-port-mirroring.md](https://github.com/Microsoft/ATADocs-pr.cs-cz/blob/114b031d3bc021776c3aac57a69ffb75b682eac9/ATADocs/DeployUse/configure-port-mirroring.md)
-* Current Handback File: [configure-port-mirroring.e622298bb90efd1f6be9ed80b0b2c691da7ec043.cs-cz.xlf](https://github.com/Microsoft/EM.handback/blob/b825f397c2d7aac8bd6d42a819b5f9d2821fa9da/ol-handback/Microsoft/ATADocs-pr.cs-cz/master/configure-port-mirroring.e622298bb90efd1f6be9ed80b0b2c691da7ec043.cs-cz.xlf)
+* Current Target File: [ATADocs\PlanDesign\ata-prerequisites.md](https://github.com/Microsoft/ATADocs-pr.cs-cz/blob/114b031d3bc021776c3aac57a69ffb75b682eac9/ATADocs/PlanDesign/ata-prerequisites.md)
+* Current Handback File: [ata-prerequisites.79e9e750461cccf39f17f01df458a3eb6f3e6c8b.cs-cz.xlf](https://github.com/Microsoft/EM.handback/blob/b825f397c2d7aac8bd6d42a819b5f9d2821fa9da/ol-handback/Microsoft/ATADocs-pr.cs-cz/master/ata-prerequisites.79e9e750461cccf39f17f01df458a3eb6f3e6c8b.cs-cz.xlf)
 * Current Handback Datetime: 2016-06-17 16:13:57
-* [Back to Top](#report-top)
-
-##### <a name='91fe130cb37f40efd90d7e8023b93075f76a5ba4221'></a> Source: [ATADocs\index.md](https://github.com/Microsoft/ATADocs-pr/blob/121f54e6d8da8220f1827188039e9a89c038f7ac/ATADocs/index.md)
-* Status: OutofSyncHandedBackSuccess
-* Target File: 
-* Handoff File: [index.cc3e62ac6c9901731450d753a0ecebc990048809.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/71f33f6f9caf5e69100adb0c14dd9b003ff48c03/ol-handoff/Microsoft/ATADocs-pr.cs-cz/master/index.cc3e62ac6c9901731450d753a0ecebc990048809.cs-cz.xlf)
-* Handoff Datetime: 2016-06-29 18:15:16
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [ATADocs\index.md](https://github.com/Microsoft/ATADocs-pr.cs-cz/blob/4e00250f067aa5df6dc3c433c243822d5c2122a8/ATADocs/index.md)
-* Current Handback File: [index.cc3e62ac6c9901731450d753a0ecebc990048809.cs-cz.xlf](https://github.com/Microsoft/EM.handback/blob/1abe1d7f771d4cfccb0e61afbec33955d2b29729/ol-handback/Microsoft/ATADocs-pr.cs-cz/master/index.cc3e62ac6c9901731450d753a0ecebc990048809.cs-cz.xlf)
-* Current Handback Datetime: 2016-06-24 16:42:01
 * [Back to Top](#report-top)
 
 
