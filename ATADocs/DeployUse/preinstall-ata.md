@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Než nainstalujete ATA – kompletní postup | Microsoft Advanced Threat Analytics
-description: Provede vás kroky, které musíte dokončit před nasazením ATA.
-keywords:
+title: "Než nainstalujete ATA – kompletní postup | Microsoft Advanced Threat Analytics"
+description: "Provede vás kroky, které musíte dokončit před nasazením ATA."
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: 3715b69e-e631-449b-9aed-144d0f9bcee7
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
+ms.openlocfilehash: b4fc459fbab3d63de12efebb125762c18946bbdc
+
 
 ---
 
@@ -37,12 +31,13 @@ Před instalací ATA by se měly dokončit následující kroky:
 
 ## Viz také
 
-- [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 - [Požadavky ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
 
 
 
-<!--HONumber=Jun16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

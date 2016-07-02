@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Bezobslužná instalace ATA | Microsoft Advanced Threat Analytics
-description: Popisuje postup při bezobslužné instalaci ATA.
-keywords:
+title: "Bezobslužná instalace ATA | Microsoft Advanced Threat Analytics"
+description: "Popisuje postup při bezobslužné instalaci ATA."
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: d6e7d7bef97bfc4ffde07959dd9256f0319d685f
+ms.openlocfilehash: 2e51bc9cac43ff90000ca74cccd158e119cc6ec0
+
 
 ---
 
@@ -33,7 +27,8 @@ Microsoft ATA v1.6 vyžaduje instalaci rozhraní Microsoft .NET Framework 4.6.1.
 
 Když instalujete nebo aktualizujete ATA, jako součást nasazení Microsoft ATA se automaticky nainstaluje .Net Framework 4.6.1.
 
-> [!Note] Instalace rozhraní .Net Framework 4.6.1 může vyžadovat restartování serveru. Když instalujete ATA Gateway na řadiče domény, zvažte naplánování časového období údržby pro tyto řadiče.
+> [!Note] 
+> Instalace rozhraní .Net Framework 4.6.1 může vyžadovat restartování serveru. Když instalujete ATA Gateway na řadiče domény, zvažte naplánování časového období údržby pro tyto řadiče.
 Při použití metody bezobslužné instalace ATA je instalační program nakonfigurovaný tak, aby po ukončení instalace (v případě potřeby) automaticky restartoval server. Pokud se chcete restartování serveru v rámci instalace vyhnout, použijte příznak `-NoRestart`. Pokud se při použití příznaku `-NoRestart` bude jako součást instalace vyžadovat restartování, instalační program se pozastaví, než se server restartuje. Pokud chcete sledovat průběh nasazení, monitorujte instalační protokoly ATA, které jsou umístěné ve složce **%AppData%\Local\Temp**.
 
 
@@ -217,10 +212,11 @@ K provedení bezobslužné odinstalace komponenty ATA Gateway použijte následu
 
 ## Viz také
 
-- [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurace shromažďování událostí](configure-event-collection.md)
 - [Požadavky ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
 
-<!--HONumber=Jun16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

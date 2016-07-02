@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Práce s podezřelými aktivitami | Microsoft Advanced Threat Analytics
-description: Popisuje, jak kontrolovat podezřelé aktivity identifikované ATA.
-keywords:
+title: "Práce s podezřelými aktivitami | Microsoft Advanced Threat Analytics"
+description: "Popisuje, jak kontrolovat podezřelé aktivity identifikované ATA."
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: 44d7c899-816c-4f7f-91d3-84a09d291a24
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
+ms.openlocfilehash: 1214560096227e00af36ff7cb1a0a95988a2ad40
+
 
 ---
 
@@ -89,7 +83,8 @@ Chcete-li filtrovat seznam podezřelých aktivit:
 
     Používá se ke sledování podezřelých aktivit, které jste identifikovali, prozkoumali a opravili s cílem zmírnit jejich dopad.
 
-    > [!NOTE] ATA může znovu otevřít vyřešenou aktivitu, pokud se stejná aktivita zjistí během krátké doby znovu.
+    > [!NOTE]
+    > ATA může znovu otevřít vyřešenou aktivitu, pokud se stejná aktivita zjistí během krátké doby znovu.
 
 -   **Zamítnuto**
 
@@ -112,11 +107,12 @@ Pro zajištění toho, že se ATA bude o vaší síti učit s vámi, některé p
 Můžete změnit stav podezřelé aktivity klepnutím na aktuální stav podezřelé aktivity a výběrem jedné z možností **Otevřeno**, **Vyřešeno** nebo **Zamítnuto**.
 
 ## Viz také
-- [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Práce s nastavením detekce ATA](working-with-detection-settings.md)
 - [Změna konfigurace ATA](modifying-ata-configuration.md)
 
 
-<!--HONumber=Jun16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

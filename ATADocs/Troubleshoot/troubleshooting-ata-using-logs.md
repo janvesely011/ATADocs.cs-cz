@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Řešení potíží s ATA pomocí protokolů ATA | Microsoft Advanced Threat Analytics
-description: Popisuje, jak můžete protokoly ATA použít k řešení potíží.
-keywords:
+title: "Řešení potíží s ATA pomocí protokolů ATA | Microsoft Advanced Threat Analytics"
+description: "Popisuje, jak můžete protokoly ATA použít k řešení potíží."
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: b8ad5511-8893-4d1d-81ee-b9a86e378347
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
+ms.openlocfilehash: 4f02b0fba381eb76ad500e198392ec7624a3028a
+
 
 ---
 
@@ -47,7 +41,7 @@ ATA Gateway využívá tyto protokoly:
 > [!NOTE]
 > První tři soubory protokolů mají maximální velikost až 50 MB. Při dosažení této velikosti se otevře nový soubor protokolu a předchozí je přejmenován na &lt;původní název souboru&gt;-Archived-00000 (číslo při každém přejmenování zvětší).
 
-### Protokoly ATA Center
+## Protokoly ATA Center
 Protokoly ATA Center jsou umístěné v podsložce s názvem **Logs**. Ve výchozí instalaci ji najdete tady: **C:\Program Files\Microsoft Advanced Threat Analytics\Center\Logs**.
 
 ATA Center využívá tyto protokoly:
@@ -64,7 +58,7 @@ ATA Center využívá tyto protokoly:
 > [!NOTE]
 > První tři soubory protokolů mají maximální velikost až 50 MB. Při dosažení této velikosti se otevře nový soubor protokolu a předchozí je přejmenován na &lt;původní název souboru&gt;-Archived-00000 (číslo při každém přejmenování zvětší).
 
-### Protokoly konzoly ATA
+## Protokoly konzoly ATA
 Protokoly konzoly ATA (protokoly rozhraní API pro správu) jsou umístěné v podsložce s názvem **Logs**. Ve výchozí instalaci ji najdete tady: **C:\Program Files\Microsoft Advanced Threat Analytics\Center\Management\Logs**.
 
 Konzola ATA využívá tyto protokoly:
@@ -81,7 +75,7 @@ Konzola ATA využívá tyto protokoly:
 > [!NOTE]
 > První dva soubory protokolů mají maximální velikost až 50 MB. Při dosažení této velikosti se otevře nový soubor protokolu a předchozí je přejmenován na &lt;původní název souboru&gt;-Archived-00000 (číslo při každém přejmenování zvětší).
 
-### Protokoly nasazení ATA
+## Protokoly nasazení ATA
 Protokoly nasazení ATA jsou umístěné v adresáři temp uživatele, který příslušný produkt nainstaloval. Ve výchozí instalaci tento adresář najdete tady: **C:\Users\Administrator\AppData\Local\Temp** (nebo v adresáři bezprostředně nadřazeném adresáři %temp%).
 
 Protokoly nasazení komponenty ATA Center:
@@ -103,9 +97,10 @@ Protokoly nasazení ATA Gateway a ATA Lightweight Gateway:
 - [Plánování kapacity ATA](/advanced-threat-analytics/plan-design/ata-capacity-planning)
 - [Konfigurace sběru událostí](/advanced-threat-analytics/deploy-use/configure-event-collection)
 - [Konfigurace předávání událostí systému Windows](/advanced-threat-analytics/deploy-use/configure-event-collection#configuring-windows-event-forwarding)
-- [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
-<!--HONumber=Jun16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

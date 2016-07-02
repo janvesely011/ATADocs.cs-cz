@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Řešení potíží s ATA pomocí databáze ATA | Microsoft Advanced Threat Analytics
-description: Popisuje, jak můžete databázi ATA použít k řešení potíží. 
-keywords:
+title: "Řešení potíží s ATA pomocí databáze ATA | Microsoft Advanced Threat Analytics"
+description: "Popisuje, jak můžete databázi ATA použít k řešení potíží."
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
+ms.openlocfilehash: 7de189008765d24e88a224d027146bf44fb6abbf
+
 
 ---
 
@@ -66,9 +60,10 @@ Je možné obnovit všechna nastavení spuštěním následujícího příkazu:
 - [Plánování kapacity ATA](/advanced-threat-analytics/plan-design/ata-capacity-planning)
 - [Konfigurace sběru událostí](/advanced-threat-analytics/deploy-use/configure-event-collection)
 - [Konfigurace předávání událostí systému Windows](/advanced-threat-analytics/deploy-use/configure-event-collection#configuring-windows-event-forwarding)
-- [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
-<!--HONumber=Jun16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

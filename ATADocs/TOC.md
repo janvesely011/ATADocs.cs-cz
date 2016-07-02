@@ -4,6 +4,6 @@
 # [Řešení problémů](/troubleshoot/troubleshooting-ata-known-errors)
 
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO4-->
 
 
