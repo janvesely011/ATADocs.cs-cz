@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Správa nastavení telemetrie | Microsoft Advanced Threat Analytics
-description: Popisuje data shromážděná ATA a poskytuje postup, jak shromažďování dat vypnout.
-keywords:
+title: "Správa nastavení telemetrie | Microsoft Advanced Threat Analytics"
+description: "Popisuje data shromážděná ATA a poskytuje postup, jak shromažďování dat vypnout."
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: 8c1c7a1b-a3de-4105-9fd0-08a061952172
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
+ms.openlocfilehash: c6b3196f6093b909e8d97f9a9ac230e35807eb72
+
 
 ---
 
@@ -78,9 +72,10 @@ Chcete-li zastavit shromažďování a odesílání telemetrických dat Microsof
 
 ## Viz také
 - [Co je nového ve verzi 1.6](/advanced-threat-analytics/understand-explore/whats-new-version-1.6)
-- [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
-<!--HONumber=Jun16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 
