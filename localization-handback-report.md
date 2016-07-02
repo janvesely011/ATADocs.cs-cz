@@ -1,39 +1,11 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 2
+ Total Files | 0
 
 ## File List
- Source File | Status | Details 
- ----------- | ------ | ------- 
- [ATADocs\DeployUse\manage-telemetry-settings.md](https://github.com/Microsoft/ATADocs-pr/blob/8d1dedaf86031e8585cca23241aead58f7f3db4e/ATADocs/DeployUse/manage-telemetry-settings.md) | InSyncHandedBackSuccess | [Details](#c6b3196f6093b909e8d97f9a9ac230e35807eb7219)
- [ATADocs\Troubleshoot\TOC.md](https://github.com/Microsoft/ATADocs-pr/blob/5407cb4b98860b41b2c6f062cf47504f6d001b23/ATADocs/Troubleshoot/TOC.md) | InSyncHandedBackSuccess | [Details](#ff9ed644ccbfd378d191f8374cd45d30a943db4f417)
 
 ## Item Details
-##### <a name='c6b3196f6093b909e8d97f9a9ac230e35807eb7219'></a> Source: [ATADocs\DeployUse\manage-telemetry-settings.md](https://github.com/Microsoft/ATADocs-pr/blob/8d1dedaf86031e8585cca23241aead58f7f3db4e/ATADocs/DeployUse/manage-telemetry-settings.md)
-* Status: InSyncHandedBackSuccess
-* Target File: [ATADocs\DeployUse\manage-telemetry-settings.md](https://github.com/Microsoft/ATADocs-pr.cs-cz/blob/0e2fc8d786e989131f914d3c4dfa02e657d18d96/ATADocs/DeployUse/manage-telemetry-settings.md)
-* Handoff File: [manage-telemetry-settings.8695a3cab69c52f730f24c0a5aa69539621393a8.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/e4e8dee5dd102078378caf3a53548efbd5fd98ca/ol-handoff/Microsoft/ATADocs-pr.cs-cz/master/manage-telemetry-settings.8695a3cab69c52f730f24c0a5aa69539621393a8.cs-cz.xlf)
-* Handoff Datetime: 2016-06-27 15:47:17
-* Handoff Reason: Include
-* Archive File: [manage-telemetry-settings.8695a3cab69c52f730f24c0a5aa69539621393a8.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/39ae6b9d1e8585c7aadd3e65c7eb4fa20f3b0f9b/ol-handoff/Microsoft/ATADocs-pr.cs-cz/master/archive/manage-telemetry-settings.8695a3cab69c52f730f24c0a5aa69539621393a8.cs-cz.xlf)
-* Archive Datetime: 2016-07-02 01:30:37
-* Handback File: [manage-telemetry-settings.8695a3cab69c52f730f24c0a5aa69539621393a8.cs-cz.xlf](https://github.com/Microsoft/EM.handback/blob/8a7db35a02fe6d9b7e3e60f9d0828395b617005c/ol-handback/Microsoft/ATADocs-pr.cs-cz/master/manage-telemetry-settings.8695a3cab69c52f730f24c0a5aa69539621393a8.cs-cz.xlf)
-* Handback Datetime: 2016-07-02 22:55:31
-* [Back to Top](#report-top)
-
-##### <a name='ff9ed644ccbfd378d191f8374cd45d30a943db4f417'></a> Source: [ATADocs\Troubleshoot\TOC.md](https://github.com/Microsoft/ATADocs-pr/blob/5407cb4b98860b41b2c6f062cf47504f6d001b23/ATADocs/Troubleshoot/TOC.md)
-* Status: InSyncHandedBackSuccess
-* Target File: [ATADocs\Troubleshoot\TOC.md](https://github.com/Microsoft/ATADocs-pr.cs-cz/blob/0e2fc8d786e989131f914d3c4dfa02e657d18d96/ATADocs/Troubleshoot/TOC.md)
-* Handoff File: [TOC.60a4d3a4143fbc945b04636bebe37bf6bc2b2b81.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/39490e9d534e3b77844d226ee74c17c0565e5905/ol-handoff/Microsoft/ATADocs-pr.cs-cz/master/TOC.60a4d3a4143fbc945b04636bebe37bf6bc2b2b81.cs-cz.xlf)
-* Handoff Datetime: 2016-06-27 09:08:29
-* Handoff Reason: Include
-* Archive File: [TOC.60a4d3a4143fbc945b04636bebe37bf6bc2b2b81.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/39ae6b9d1e8585c7aadd3e65c7eb4fa20f3b0f9b/ol-handoff/Microsoft/ATADocs-pr.cs-cz/master/archive/TOC.60a4d3a4143fbc945b04636bebe37bf6bc2b2b81.cs-cz.xlf)
-* Archive Datetime: 2016-07-02 01:30:37
-* Handback File: [TOC.60a4d3a4143fbc945b04636bebe37bf6bc2b2b81.cs-cz.xlf](https://github.com/Microsoft/EM.handback/blob/8a7db35a02fe6d9b7e3e60f9d0828395b617005c/ol-handback/Microsoft/ATADocs-pr.cs-cz/master/TOC.60a4d3a4143fbc945b04636bebe37bf6bc2b2b81.cs-cz.xlf)
-* Handback Datetime: 2016-07-02 22:55:31
-* [Back to Top](#report-top)
-
 
 ## Error Details
 
