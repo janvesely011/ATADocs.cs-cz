@@ -10,8 +10,8 @@
 [ Archive Success Files ](#archive-success-list)| 0
 [ Handback Failed Files ](#handback-failed-list)| 0
 [ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 26
-[ In Sync Handback Files ](#insync-handback-success-list)| 23
-[ Ignored Files ](#ignored-list)| 478
+[ In Sync Handback Files ](#insync-handback-success-list)| 22
+[ Ignored Files ](#ignored-list)| 479
 
 ## <a name='handoff-failed-list'></a> Handoff Failed File List
 
@@ -67,7 +67,6 @@
  [ATADocs\DeployUse\setting-syslog-email-server-settings.md](https://github.com/Microsoft/ATADocs-pr/blob/8d1dedaf86031e8585cca23241aead58f7f3db4e/ATADocs/DeployUse/setting-syslog-email-server-settings.md) | InSyncHandedBackSuccess | [Details](#66194d89c3e937923e576004a3ab4b7177f179c4120)
  [ATADocs\DeployUse\working-with-detection-settings.md](https://github.com/Microsoft/ATADocs-pr/blob/8d1dedaf86031e8585cca23241aead58f7f3db4e/ATADocs/DeployUse/working-with-detection-settings.md) | InSyncHandedBackSuccess | [Details](#3840a5f7abdd496ad245a3f1c2589ad1855fddb5124)
  [ATADocs\DeployUse\working-with-suspicious-activities.md](https://github.com/Microsoft/ATADocs-pr/blob/8d1dedaf86031e8585cca23241aead58f7f3db4e/ATADocs/DeployUse/working-with-suspicious-activities.md) | InSyncHandedBackSuccess | [Details](#1214560096227e00af36ff7cb1a0a95988a2ad40125)
- [ATADocs\index.md](https://github.com/Microsoft/ATADocs-pr/blob/121f54e6d8da8220f1827188039e9a89c038f7ac/ATADocs/index.md) | InSyncHandedBackSuccess | [Details](#91fe130cb37f40efd90d7e8023b93075f76a5ba4220)
  [ATADocs\PlanDesign\ata-architecture.md](https://github.com/Microsoft/ATADocs-pr/blob/8d1dedaf86031e8585cca23241aead58f7f3db4e/ATADocs/PlanDesign/ata-architecture.md) | InSyncHandedBackSuccess | [Details](#2d753060f30cbcc7d16959355b86d64fdaa2ecd8222)
  [ATADocs\PlanDesign\TOC.md](https://github.com/Microsoft/ATADocs-pr/blob/5407cb4b98860b41b2c6f062cf47504f6d001b23/ATADocs/PlanDesign/TOC.md) | InSyncHandedBackSuccess | [Details](#6ab89b98d3c9d4db7b9b84d6b373ab570f13a93e318)
  [ATADocs\TOC.md](https://github.com/Microsoft/ATADocs-pr/blob/5407cb4b98860b41b2c6f062cf47504f6d001b23/ATADocs/TOC.md) | InSyncHandedBackSuccess | [Details](#7d9117a66b44f454b6c9890f257d1ab9b233a235319)
@@ -275,6 +274,7 @@
  [ATADocs\Image\wef_ad-event-log-reader-popup.png](https://github.com/Microsoft/ATADocs-pr/blob/b6c49e34c960d091ccbdf6e9cb4f46e9e39d6c22/ATADocs/Image/wef_ad-event-log-reader-popup.png) | Ignored | [Details](#ae46394f83c94ae0f48d6a7d9a7cd6d18b58adf0216)
  [ATADocs\Image\wef_http.png](https://github.com/Microsoft/ATADocs-pr/blob/b6c49e34c960d091ccbdf6e9cb4f46e9e39d6c22/ATADocs/Image/wef_http.png) | Ignored | [Details](#d4d9ac890b80451972fbe194c30577b0655be0cd218)
  [ATADocs\Image\wef_subscription-prop.png](https://github.com/Microsoft/ATADocs-pr/blob/b6c49e34c960d091ccbdf6e9cb4f46e9e39d6c22/ATADocs/Image/wef_subscription-prop.png) | Ignored | [Details](#9b8562feafa85324c9a6e3e9020450535df920c6219)
+ [ATADocs\index.md](https://github.com/Microsoft/ATADocs-pr/blob/b6c49e34c960d091ccbdf6e9cb4f46e9e39d6c22/ATADocs/index.md) | Ignored | [Details](#ba6b3362da29d3a375fbb4dc56adcd64fa2b44ad220)
  [ATADocs\md.style](https://github.com/Microsoft/ATADocs-pr/blob/b6c49e34c960d091ccbdf6e9cb4f46e9e39d6c22/ATADocs/md.style) | Ignored | [Details](#755db60abb7859af5065e2c5ddfbfc6cfb7aeeda221)
  [ATADocs\PlanDesign\docfx.json](https://github.com/Microsoft/ATADocs-pr/blob/b6c49e34c960d091ccbdf6e9cb4f46e9e39d6c22/ATADocs/PlanDesign/docfx.json) | Ignored | [Details](#64bd46325066fe0042f3d332644c53527f3ff857225)
  [ATADocs\PlanDesign\md.style](https://github.com/Microsoft/ATADocs-pr/blob/b6c49e34c960d091ccbdf6e9cb4f46e9e39d6c22/ATADocs/PlanDesign/md.style) | Ignored | [Details](#755db60abb7859af5065e2c5ddfbfc6cfb7aeeda226)
@@ -3254,16 +3254,16 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='91fe130cb37f40efd90d7e8023b93075f76a5ba4220'></a> Source: [ATADocs\index.md](https://github.com/Microsoft/ATADocs-pr/blob/121f54e6d8da8220f1827188039e9a89c038f7ac/ATADocs/index.md)
-* Status: InSyncHandedBackSuccess
-* Target File: [ATADocs\index.md](https://github.com/Microsoft/ATADocs-pr.cs-cz/blob/6b9e09b7c62415fc4b22cdad60993adb6bf6cdbe/ATADocs/index.md)
-* Handoff File: [index.cc3e62ac6c9901731450d753a0ecebc990048809.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/71f33f6f9caf5e69100adb0c14dd9b003ff48c03/ol-handoff/Microsoft/ATADocs-pr.cs-cz/master/index.cc3e62ac6c9901731450d753a0ecebc990048809.cs-cz.xlf)
-* Handoff Datetime: 2016-06-29 18:15:16
-* Handoff Reason: Include
-* Archive File: [index.cc3e62ac6c9901731450d753a0ecebc990048809.cs-cz.xlf](https://github.com/Microsoft/EM.handoff/blob/39ae6b9d1e8585c7aadd3e65c7eb4fa20f3b0f9b/ol-handoff/Microsoft/ATADocs-pr.cs-cz/master/archive/index.cc3e62ac6c9901731450d753a0ecebc990048809.cs-cz.xlf)
-* Archive Datetime: 2016-07-02 01:30:37
-* Handback File: [index.cc3e62ac6c9901731450d753a0ecebc990048809.cs-cz.xlf](https://github.com/Microsoft/EM.handback/blob/924ce1a8d9f6eaaa8f72480509ebb6cd977a90c4/ol-handback/Microsoft/ATADocs-pr.cs-cz/master/index.cc3e62ac6c9901731450d753a0ecebc990048809.cs-cz.xlf)
-* Handback Datetime: 2016-07-04 07:30:54
+##### <a name='ba6b3362da29d3a375fbb4dc56adcd64fa2b44ad220'></a> Source: [ATADocs\index.md](https://github.com/Microsoft/ATADocs-pr/blob/b6c49e34c960d091ccbdf6e9cb4f46e9e39d6c22/ATADocs/index.md)
+* Status: Ignored
+* Target File: 
+* Handoff File: 
+* Handoff Datetime: 0001-01-01 00:00:00
+* Handoff Reason: Ignored
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
 ##### <a name='755db60abb7859af5065e2c5ddfbfc6cfb7aeeda221'></a> Source: [ATADocs\md.style](https://github.com/Microsoft/ATADocs-pr/blob/b6c49e34c960d091ccbdf6e9cb4f46e9e39d6c22/ATADocs/md.style)
