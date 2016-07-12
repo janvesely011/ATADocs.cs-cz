@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Změna konfigurace ATA – IP adresa ATA Center | Microsoft Advanced Threat Analytics
-description: Popisuje, jak změnit IP adresu, port nebo certifikát pro ATA Center.
-keywords:
+title: "Změna konfigurace ATA – IP adresa ATA Center | Microsoft Advanced Threat Analytics"
+description: "Popisuje, jak změnit IP adresu, port nebo certifikát pro ATA Center."
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,22 +10,19 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: 93b27f15-f7e5-49bb-870a-d81d09dfe9fc
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
+ms.openlocfilehash: 373eb5722a5450bca87cf66933990249286138ab
+
 
 ---
 
 # Změna konfigurace ATA – IP adresa ATA Center
 
->[!div class="step-by-step"] [Certifikát ATA Center »](modifying-ata-config-centercert.md)
+>[!div class="step-by-step"]
+[Certifikát ATA Center »](modifying-ata-config-centercert.md)
 
 Po počátečním nasazení by se změny ATA Center měly dělat opatrně. Pro aktualizaci IP adresy a portu nebo certifikátu použijte následující postupy.
 
@@ -69,19 +64,22 @@ Komponenty ATA Gateway místně ukládají IP adresu pro ATA Center, ke kterému
 
 7.  Po synchronizaci všech ATA Gateway klikněte na **Aktivovat** a aktivujte novou IP adresu.
 
-    > [!NOTE] Pokud jste zadali vlastní IP adresu, nebude možné kliknout na **Aktivovat**, dokud nenainstalujete IP adresu na ATA Center.
+    > [!NOTE]
+    > Pokud jste zadali vlastní IP adresu, nebudete moct kliknout na **Aktivovat**, dokud nenainstalujete IP adresu na ATA Center.
 
 8.  Zajistěte, aby všechny komponenty ATA Gateway mohly po aktivaci změny synchronizovat své konfigurace. V oznamovacím pruhu se zobrazí, kolik komponent ATA Gateway úspěšně synchronizovalo svoji konfiguraci.
 
->[!div class="step-by-step"] [Změna certifikátu ATA Center »](modifying-ata-config-centercert.md)
+>[!div class="step-by-step"]
+[Změna certifikátu ATA Center »](modifying-ata-config-centercert.md)
 
 
 ## Viz také
 - [Práce s konzolou ATA](working-with-ata-console.md)
 - [Instalace ATA](install-ata.md)
-- [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
-<!--HONumber=Jun16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

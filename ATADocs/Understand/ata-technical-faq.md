@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Nejčastější dotazy k ATA | Microsoft Advanced Threat Analytics
-description: Seznam nejčastějších dotazů týkajících se ATA a související odpovědi
-keywords:
+title: "Nejčastější dotazy k ATA | Microsoft Advanced Threat Analytics"
+description: "Seznam nejčastějších dotazů týkajících se ATA a související odpovědi"
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: a7d378ec-68ed-4a7b-a0db-f5e439c3e852
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
+ms.openlocfilehash: bb6bc2bf0d0df3112ecfdb33c8e9d6e41f183145
+
 
 ---
 
@@ -30,7 +24,7 @@ Tento článek obsahuje seznam nejčastějších dotazů týkajících se ATA a 
 
 
 ## Jak se ATA licencuje?
-Informace o licencování najdete v tématu [Jak koupit Advanced Threat Analytics](https://www.microsoft.com/en-us/server-cloud/products/advanced-threat-analytics/Purchasing.aspx).
+Informace o licencování najdete v tématu [Jak koupit Advanced Threat Analytics](https://www.microsoft.com/server-cloud/products/advanced-threat-analytics/Purchasing.aspx).
 
 
 ## Co mám dělat, když se ATA Gateway nespustí?
@@ -54,7 +48,7 @@ Z příkazového řádku v adresáři můžete spustit tento příkaz: **\Progra
 ATA podporuje povolení obrany protokolu Kerberos, která se také označuje jako architektura FAST (Flexible Authentication Secure Tunneling). Výjimkou je detekce typu over-pass-the-hash, která nebude fungovat.
 ## Kolik komponent ATA Gateways budu potřebovat?
 
-Za prvé se doporučuje použít ATA Lightweight Gateway pro všechny řadiče domény, které to umožňují. Potřebné informace najdete v části [Velikosti pro ATA Lightweight Gateway](/advanced-threat-analytics/plan-design/ata-capacity-planning#ATA-Lightweight-Gateway-Sizing). 
+Za prvé se doporučuje použít ATA Lightweight Gateway pro všechny řadiče domény, které to umožňují. Potřebné informace najdete v části [Velikosti pro ATA Lightweight Gateway](/advanced-threat-analytics/plan-design/ata-capacity-planning#ata-lightweight-gateway-sizing). 
 
 Pokud se všechny řadiče domény dají pokrýt komponentami ATA Lightweight Gateway, žádné ATA Gateway nejsou potřeba.
 
@@ -101,7 +95,7 @@ ATA Gateway vyžaduje minimálně dva síťové adaptéry:<br>1. Síťovou kartu
 Se systémy SIEM ATA využívá obousměrnou integraci:
 
 1. Pro případ podezřelých aktivit se v ATA dá nakonfigurovat odesílání výstrahy Syslog na libovolný server SIEM s využitím formátu CEF.
-2. V ATA se dá nakonfigurovat příjem zpráv z [těchto systémů SIEM](/advanced-threat-analytics/deploy-use/configure-event-collection#SIEM-support) pro všechny události systému Windows s ID 4776.
+2. V ATA se dá nakonfigurovat příjem zpráv z [těchto systémů SIEM](/advanced-threat-analytics/deploy-use/configure-event-collection#siem-support) pro všechny události systému Windows s ID 4776.
 
 ## Může ATA monitorovat řadiče domény vizualizované ve vašem řešení IaaS?
 
@@ -143,10 +137,11 @@ Ano, můžete zobrazit celkový stav nasazení a taky konkrétní problémy souv
 - [Plánování kapacity ATA](/advanced-threat-analytics/plan-design/ata-capacity-planning)
 - [Konfigurace sběru událostí](/advanced-threat-analytics/deploy-use/configure-event-collection)
 - [Konfigurace předávání událostí systému Windows](/advanced-threat-analytics/deploy-use/configure-event-collection#Configuring-Windows-Event-Forwarding)
-- [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
 
-<!--HONumber=Jun16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

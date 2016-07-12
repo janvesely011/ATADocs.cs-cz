@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Novinky ATA verze 1.4 | Microsoft Advanced Threat Analytics
-description: Uvádí novinky ATA verze 1.4 spolu se známými problémy.
-keywords:
+description: "Uvádí novinky ATA verze 1.4 spolu se známými problémy."
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: cbea47f9-34c1-42b6-ae9e-6a472b49e1a5
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
+ms.openlocfilehash: 3f7e2b32c43966cbb1adab1f88dd0e197313de65
+
 
 ---
 
@@ -64,7 +58,7 @@ Tyto poznámky k verzi obsahují informace o známých problémech ve verzi 1.4 
 V této verzi existují následující známé problémy.
 
 ### Software pro zachycení dat ze sítě
-Jediný podporovaný software pro zachycení dat ze sítě, který můžete v ATA Gateway instalovat, je [Microsoft Network Monitor 3.4](http://www.microsoft.com/en-us/download/details.aspx?id=4865). Neinstalujte Microsoft Message Analyzer nebo jiný software pro zachycení dat ze sítě. Instalace jiného softwaru způsobí, že ATA Gateway přestane fungovat správně.
+Jediný podporovaný software pro zachycení dat ze sítě, který můžete v ATA Gateway instalovat, je [Microsoft Network Monitor 3.4](http://www.microsoft.com/download/details.aspx?id=4865). Neinstalujte Microsoft Message Analyzer nebo jiný software pro zachycení dat ze sítě. Instalace jiného softwaru způsobí, že ATA Gateway přestane fungovat správně.
 
 ### Instalace ze souboru zip
 Při instalaci ATA Gateway se ujistěte, že jste extrahovali soubory ze souboru zip do místního adresáře a odtud provádíte instalaci. Neinstalujte ATA Gateway přímo ze souboru zip, jinak se instalace nezdaří.
@@ -104,8 +98,9 @@ Neinstalujte na hostiteli virtualizace aktualizaci KB 3047154. Může způsobit,
 
 [Aktualizace ATA na verzi 1.6 – průvodce migrací](ata-update-1.6-migration-guide.md)
 
-[Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+[Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
-<!--HONumber=Jun16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

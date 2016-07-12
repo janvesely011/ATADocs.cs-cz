@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Instalace ATA – Krok 3 | Microsoft Advanced Threat Analytics
-description: Třetí krok instalace ATA vám pomůže stáhnout instalační balíček ATA Gateway.
-keywords:
+title: "Instalace ATA – Krok 3 | Microsoft Advanced Threat Analytics"
+description: "Třetí krok instalace ATA vám pomůže stáhnout instalační balíček ATA Gateway."
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,22 +10,19 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: 7fb024e6-297a-4ad9-b962-481bb75a0ba3
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
+ms.openlocfilehash: 0209d8352704fef6caf059d152d6bde6127d3d55
+
 
 ---
 
 # Instalace ATA – Krok 3
 
->[!div class="step-by-step"] [« Krok 2](install-ata-step2.md)
+>[!div class="step-by-step"]
+[« Krok 2](install-ata-step2.md)
 [Krok 4 »](install-ata-step4.md)
 
 ## Krok 3. Stažení instalačního balíčku ATA Gateway
@@ -51,16 +46,18 @@ Soubor zip obsahuje následující:
 -   Soubor nastavení konfigurace s požadovanými informacemi pro připojení k ATA Center
 
 
->[!div class="step-by-step"] [« Krok 2](install-ata-step2.md)
+>[!div class="step-by-step"]
+[« Krok 2](install-ata-step2.md)
 [Krok 4 »](install-ata-step4.md)
 
 ## Viz také
 
-- [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurace shromažďování událostí](configure-event-collection.md)
 - [Požadavky ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
 
 
-<!--HONumber=Jun16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

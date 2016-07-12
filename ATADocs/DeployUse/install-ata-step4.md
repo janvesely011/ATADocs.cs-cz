@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Instalace ATA – Krok 4 | Microsoft Advanced Threat Analytics
-description: Čtvrtý krok instalace ATA vám pomůže s instalací ATA Gateway.
-keywords:
+title: "Instalace ATA – Krok 4 | Microsoft Advanced Threat Analytics"
+description: "Čtvrtý krok instalace ATA vám pomůže s instalací ATA Gateway."
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,22 +10,19 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: 6bbc50c3-bfa8-41db-a2f9-56eed68ef5d2
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: d6e7d7bef97bfc4ffde07959dd9256f0319d685f
+ms.openlocfilehash: f12e43a6918c0c02bb59e4a093720a805b7dbcfc
+
 
 ---
 
 # Instalace ATA – Krok 4
 
->[!div class="step-by-step"] [« Krok 3](install-ata-step3.md)
+>[!div class="step-by-step"]
+[« Krok 3](install-ata-step3.md)
 [Krok 5 »](install-ata-step5.md)
 
 ## Krok 4. Instalace ATA Gateway
@@ -43,7 +38,8 @@ Před instalací ATA Gateway na vyhrazený server ověřte, že je zrcadlení po
 Na serveru ATA Gateway proveďte tento postup.
 
 1.  Extrahujte soubory ze souboru zip. 
-> [!NOTE] Instalace přímo ze souboru zip selže.
+> [!NOTE] 
+> Instalace přímo ze souboru zip selže.
 
 2.  Z příkazového řádku se zvýšenými oprávněními spusťte soubor **Microsoft ATA Gateway Setup.exe** a postupujte podle pokynů průvodce instalací.
 
@@ -75,17 +71,19 @@ Na serveru ATA Gateway proveďte tento postup.
 5.  Po dokončení instalace pro ATA Gateway kliknutím na **Spustit** otevřete prohlížeč a přihlaste se ke konzole ATA. V případě ATA Lightweight Gateway klikněte na **Dokončit**.
 
 
->[!div class="step-by-step"] [« Krok 3](install-ata-step3.md)
+>[!div class="step-by-step"]
+[« Krok 3](install-ata-step3.md)
 [Krok 5 »](install-ata-step5.md)
 
 ## Viz také
 
-- [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurace shromažďování událostí](configure-event-collection.md)
 - [Požadavky ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
 
 
 
-<!--HONumber=Jun16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Práce s konzolou ATA | Microsoft Advanced Threat Analytics
-description: Popisuje způsob přihlášení ke konzole ATA a její komponenty.
-keywords:
+title: "Práce s konzolou ATA | Microsoft Advanced Threat Analytics"
+description: "Popisuje způsob přihlášení ke konzole ATA a její komponenty."
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: 1bf264d9-9697-44b5-9533-e1c498da4f07
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
+ms.openlocfilehash: 7f9ca7dcb227f5dde1225c55150fd1c737722ce1
+
 
 ---
 
@@ -39,14 +33,15 @@ Pokud chcete, aby uživatel měl přístup ke konzole ATA a nebyl přitom správ
 
     ![Ikona serveru ATA](media/ata-server-icon.png)
 
-    > [!NOTE] Můžete také otevřít prohlížeč z komponenty ATA Center nebo ATA Gateway a vyhledat IP adresu, kterou jste při instalaci komponenty ATA Center nakonfigurovali pro konzolu ATA.    
+>[!NOTE]
+> Můžete také otevřít prohlížeč z komponenty ATA Center nebo ATA Gateway a vyhledat IP adresu, kterou jste při instalaci komponenty ATA Center nakonfigurovali pro konzolu ATA.    
 
 2.  Zadejte uživatelské jméno a heslo a klikněte na **Přihlásit**.
 
 ![Obrázek přihlašovací obrazovky ATA](media/ATA-log-in-screen.jpg)
 
-    > [!NOTE]
-    > You have to log in with a user who is a member of the local administrator group OR of the Microsoft Advanced Threat Analytics Administrators group.
+> [!NOTE]
+> Musíte se přihlásit jako uživatel, který je členem místní skupiny správců NEBO skupiny Microsoft Advanced Threat Analytics Administrators.
 
 ## Konzola ATA
 
@@ -125,9 +120,10 @@ Pokud na libovolném místě konzoly, kde se prezentuje jedna entita, jako je u�
 
 
 ## Viz také
-[Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+[Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
-<!--HONumber=Jun16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

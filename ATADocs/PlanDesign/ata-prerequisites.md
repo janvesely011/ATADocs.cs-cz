@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Požadavky ATA | Microsoft Advanced Threat Analytics
-description: Popisuje požadavky pro úspěšné nasazení ATA ve vašem prostředí.
-keywords:
+title: "Požadavky ATA | Microsoft Advanced Threat Analytics"
+description: "Popisuje požadavky pro úspěšné nasazení ATA ve vašem prostředí."
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,23 +10,20 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 1f85b9a0f51bd18edaa91ea208d6e6c7c7de56cc
+ms.openlocfilehash: da887431d8e63a7ae8ceeb3e7e22011d356e3590
+
 
 ---
 
 # Požadavky ATA
 Tento článek popisuje požadavky pro úspěšné nasazení ATA ve vašem prostředí.
 
->[!NOTE] Informace týkající se plánování prostředků a kapacity najdete v tématu [Plánování kapacity ATA](ata-capacity-planning.md).
+>[!NOTE]
+> Informace týkající se plánování prostředků a kapacity najdete v tématu [Plánování kapacity ATA](ata-capacity-planning.md).
 
 
 Řešení ATA se skládá z těchto komponent: ATA Center, ATA Gateway a/nebo ATA Lightweight Gateway. Další informace o komponentách ATA najdete v tématu [Architektura ATA](ata-architecture.md).
@@ -52,7 +47,8 @@ V této části jsou uvedené informace, které byste měli získat, a účty a 
 
 -   Uživatelský účet a heslo s přístupem pro čtení ke všem objektům v doménách, které se budou monitorovat.
 
-    > [!NOTE] Pokud jste pro různé organizační jednotky (OU) ve vaší doméně nastavili vlastní seznamy ACL, ujistěte se, že vybraný uživatel má pro tyto organizační jednotky oprávnění ke čtení.
+    > [!NOTE]
+    > Pokud jste pro různé organizační jednotky (OU) ve vaší doméně nastavili vlastní seznamy ACL, ujistěte se, že vybraný uživatel má pro tyto organizační jednotky oprávnění ke čtení.
 
 -   Připravte si seznam všech podsítí použitých ve vaší síti pro VPN a Wi-Fi, které v průběhu velmi krátké doby (řádově několika sekund nebo minut) mění přiřazení IP adres mezi zařízeními.  Tyto podsítě s krátkodobým zapůjčením je potřeba určit, aby bylo možné omezit životnost jejich mezipaměti a vyhovět rychlé změně přiřazení mezi zařízeními. Informace o konfiguraci podsítí s krátkodobým zapůjčením najdete v tématu [Instalace ATA](/advanced-threat-analytics/deploy-use/install-ata).
 -   Zkontrolujte, že na počítačích s komponentami ATA Gateway nebo ATA Center není nainstalovaný Message Analyzer nebo Wire Shark.
@@ -68,13 +64,20 @@ V této části je uveden seznam požadavků pro ATA Center.
 ### Obecné
 ATA Center podporuje instalaci na serveru s Windows Serverem 2012 R2. ATA Center se dá nainstalovat na server, který je členem domény nebo pracovní skupiny.
 
+Před instalací služby ATA Center zkontrolujte, že byla nainstalovaná aktualizace [KB2919355](https://support.microsoft.com/kb/2919355/).
+
+Toto ověření můžete provést spuštěním následující rutiny Windows PowerShellu: `[Get-HotFix -Id kb2919355]`.
+
 Instalace komponenty ATA Center jako virtuálního počítače se podporuje. 
 
 Pokud ATA Center spouštíte jako virtuální počítač, před vytvořením nového kontrolního bodu vypněte server. Vyhnete se tak možnému poškození databází.
 ### Specifikace serveru
-Databáze ATA vyžaduje, abyste v systému BIOS **zakázali** neuniformní přístup k paměti (NUMA). Ve vašem systému se NUMA může označovat také jako prokládání uzlů. V takovém případě bude potřeba prokládání uzlů **povolit**, abyste NUMA zakázali. Další informace najdete v dokumentaci k systému BIOS.<br>
+Při práci na fyzickém serveru databáze ATA vyžaduje, abyste v systému BIOS **zakázali** neuniformní přístup k paměti (NUMA). Ve vašem systému se NUMA může označovat také jako prokládání uzlů. V takovém případě bude potřeba prokládání uzlů **povolit**, abyste NUMA zakázali. Další informace najdete v dokumentaci k systému BIOS. Pokud ATA Center běží na virtuálním serveru, není tento text relevantní.<br>
 K zajištění optimálního výkonu nastavte **možnost napájení ** pro ATA Center na hodnotu **Vysoký výkon**.<br>
 Počet řadičů domény, které monitorujete, a zatížení na jednotlivých řadičích určuje potřebnou specifikaci serveru. Další informace najdete v tématu [Plánování kapacity ATA](ata-capacity-planning.md).
+
+>[!NOTE] 
+> Pokud se spustí jako dynamická paměť virtuálního počítače nebo libovolná jiná paměť, funkce rozšiřování rozsahů stránek se nepodporuje.
 
 ### Časová synchronizace
 Server ATA Center, servery ATA Gateway a řadiče domény musí být vzájemně časově synchronizované (s tolerancí 5 minut).
@@ -88,7 +91,8 @@ Měli byste mít:
 
 Komunikace mezi komponentami ATA Center a ATA Gateway je zašifrovaná pomocí SSL na portu 443. Konzola ATA je spuštěná ve službě IIS a zabezpečená pomocí SSL na portu 443. Doporučují se **dvě IP adresy**. Služba ATA Center vytvoří vazbu mezi portem 443 a první IP adresou a služba IIS vytvoří vazbu mezi portem 443 a druhou IP adresou.
 
-> [!NOTE] Může se použít jedna IP adresa se dvěma různými porty, ale doporučuje se použití dvou IP adres.
+> [!NOTE]
+> Může se použít jedna IP adresa se dvěma různými porty, ale doporučuje se použití dvou IP adres.
 
 ### Porty
 Následující tabulka uvádí minimální porty, které musí být otevřené, aby služba ATA Center fungovala správně.
@@ -105,10 +109,11 @@ V této tabulce je IP adresa 1 svázaná se službou ATA Center a IP adresa 2 je
 |**Syslog** (volitelné)|TCP|514|Server syslog|Odchozí|IP adresa 2|
 
 ### Certifikáty
-Zkontrolujte, jestli ATA Center má přístup k distribučnímu bodu CRL. Pokud služby ATA Gateway nemají přístup k internetu, použijte [ruční import seznamu CRL](https://technet.microsoft.com/en-us/library/aa996972%28v=exchg.65%29.aspx) a dbejte na to, abyste nainstalovali všechny distribuční body CRL pro celý řetězec.
+Zkontrolujte, jestli ATA Center má přístup k distribučnímu bodu CRL. Pokud služby ATA Gateway nemají přístup k internetu, použijte [ruční import seznamu CRL](https://technet.microsoft.com/library/aa996972%28v=exchg.65%29.aspx) a dbejte na to, abyste nainstalovali všechny distribuční body CRL pro celý řetězec.
 
 K usnadnění instalace služby ATA Center můžete nainstalovat certifikát podepsaný svým držitelem (self-signed certificate). Po nasazení můžete certifikát podepsaný svým držitelem nahradit certifikátem certifikační autority, který bude používat ATA Gateway.<br>
-> [!NOTE] Poskytovatelem certifikátu musí být zprostředkovatel kryptografických služeb (CPS).
+> [!NOTE]
+> Poskytovatelem certifikátu musí být zprostředkovatel kryptografických služeb (CPS).
 
 
 ATA Center vyžaduje certifikáty pro následující služby:
@@ -117,7 +122,8 @@ ATA Center vyžaduje certifikáty pro následující služby:
 
 -   Služba ATA Center – ověřovací certifikát serveru
 
-> [!NOTE] Pokud budete ke konzole ATA přistupovat z jiných počítačů, zkontrolujte, že tyto počítače důvěřují certifikátu používanému službou IIS, jinak se před ještě zobrazením přihlašovací stránky zobrazí upozornění, že došlo k potížím s certifikátem zabezpečení webu.
+> [!NOTE]
+> Pokud budete ke konzole ATA přistupovat z jiných počítačů, zkontrolujte, že tyto počítače důvěřují certifikátu používanému službou IIS, jinak se před ještě zobrazením přihlašovací stránky zobrazí upozornění, že došlo k potížím s certifikátem zabezpečení webu.
 
 ## Požadavky na ATA Gateway
 V této části je uveden seznam požadavků pro ATA Gateway.
@@ -125,7 +131,7 @@ V této části je uveden seznam požadavků pro ATA Gateway.
 ATA Gateway podporuje instalaci na serveru s Windows Serverem 2012 R2.
 ATA Gateway se dá nainstalovat na server, který je členem domény nebo pracovní skupiny.
 
-Před instalací služby ATA Gateway zkontrolujte, že byla nainstalovaná aktualizace [KB2919355](https://support.microsoft.com/en-us/kb/2919355/).
+Před instalací služby ATA Gateway zkontrolujte, že byla nainstalovaná aktualizace [KB2919355](https://support.microsoft.com/kb/2919355/).
 
 Toto ověření můžete provést spuštěním následující rutiny Windows PowerShellu: `[Get-HotFix -Id kb2919355]`.
 
@@ -135,6 +141,8 @@ Informace o používání virtuálních počítačů se službou ATA Gateway naj
 K zajištění optimálního výkonu nastavte **možnost napájení ** pro ATA Gateway na hodnotu **Vysoký výkon**.<br>
 ATA Gateway může podporovat monitorování několika řadičů domény, v závislosti na objemu síťových přenosů z a do řadičů domény.
 
+>[!NOTE] 
+> Pokud se spustí jako dynamická paměť virtuálního počítače nebo libovolná jiná paměť, funkce rozšiřování rozsahů stránek se nepodporuje.
 
 ### Časová synchronizace
 Server ATA Center, servery ATA Gateway a řadiče domény musí být vzájemně časově synchronizované (s tolerancí 5 minut).
@@ -152,7 +160,8 @@ ATA Gateway vyžaduje nejméně jen adaptér pro správu a jeden adaptér pro za
 
         ![Konfigurace přípony DNS v rozšířeném nastavení protokolu TCP/IP](media/ATA-DNS-Suffix.png)
 
-        > [!NOTE] Pokud je ATA Gateway členem domény, probíhá konfigurace automaticky.
+        > [!NOTE]
+        > Pokud je ATA Gateway členem domény, probíhá konfigurace automaticky.
 
 -   **Adaptér pro zachytávání** se použije pro zachycení přenosu dat z a do řadičů domény.
 
@@ -178,7 +187,8 @@ Následující tabulka uvádí minimální porty, u kterých ATA Gateway vyžadu
 |SSL|TCP|443 nebo podle konfigurace pro službu Center|ATA Center:<br /><br />– IP adresa pro službu Center<br />– IP adresa pro IIS|Odchozí|
 |Syslog (volitelné)|UDP|514|Server SIEM|Příchozí|
 
-> [!NOTE] V rámci procesu překladu, který provádí ATA Gateway, musí být na zařízeních v síti následující porty otevřené pro příjem dat z ATA Gateway.
+> [!NOTE]
+> V rámci procesu překladu, který provádí ATA Gateway, musí být na zařízeních v síti následující porty otevřené pro příjem dat z ATA Gateway.
 >
 > -   NTLM přes RPC
 > -   NetBIOS
@@ -188,24 +198,31 @@ Zkontrolujte, jestli ATA Center má přístup k distribučnímu bodu CRL. Pokud 
 K usnadnění instalace služby ATA Center můžete nainstalovat certifikát podepsaný svým držitelem (self-signed certificate). Po nasazení můžete certifikát podepsaný svým držitelem nahradit certifikátem certifikační autority, který bude používat ATA Gateway.
 
 > [!NOTE]
-Poskytovatelem certifikátu musí být zprostředkovatel kryptografických služeb (CPS).<br>
+> Poskytovatelem certifikátu musí být zprostředkovatel kryptografických služeb (CPS).<br>
 
 V úložišti Počítač služby ATA Gateway v úložišti Místní počítač musí být nainstalovaný certifikát podporující **ověření serveru**. Tento certifikát musí být pro ATA Center důvěryhodný.
 
 ## Požadavky pro ATA Lightweight Gateway
 V této části je uveden seznam požadavků pro ATA Lightweight Gateway.
 ### Obecné
-ATA Lightweight Gateway podporuje instalaci na řadičích domény se systémem Windows Server 2008 R2, Windows Server 2012 nebo Windows Server 2012 R2.
+ATA Lightweight Gateway podporuje instalaci na řadičích domény se systémem Windows Server 2008 R2 SP1, Windows Server 2012 nebo Windows Server 2012 R2.
 
 Řadičem domény může být řadič domény jen pro čtení (RODC).
 
 Řadičem domény nemůže být jádro serveru.
+
+Před instalací ATA Lightweight Gateway na řadiči domény se systémem Windows Server 2012 R2 SP1, potvrďte, že byla nainstalovaná aktualizace [KB2919355](https://support.microsoft.com/kb/2919355/).
+Toto ověření můžete provést spuštěním následující rutiny Windows PowerShellu: `[Get-HotFix -Id kb2919355]`.
 
 ### Specifikace serveru
 
 ATA Lightweight Gateway vyžaduje nejméně 2 jádra a 6 GB paměti RAM nainstalované na řadiči domény.
 K zajištění optimálního výkonu nastavte **možnost napájení ** pro ATA Lightweight Gateway na hodnotu **Vysoký výkon**.
 Komponenta ATA Lightweight Gateway se dá nasadit na řadiče domény s různým zatížením i velikostí, v závislosti na objemu síťového přenosu dat do a z řadiče domény a na počtu prostředků, které jsou na příslušném řadiči domény nainstalované.
+
+>[!NOTE] 
+> Pokud se spustí jako dynamická paměť virtuálního počítače nebo libovolná jiná paměť, funkce rozšiřování rozsahů stránek se nepodporuje.
+
 
 ### Časová synchronizace
 Server ATA Center, servery ATA Lightweight Gateway a řadiče domény musí být vzájemně časově synchronizované (s tolerancí 5 minut).
@@ -224,7 +241,8 @@ Následující tabulka uvádí minimální porty, které ATA Lightweight Gateway
 |SSL|TCP|443 nebo podle konfigurace pro službu Center|ATA Center:<br /><br />– IP adresa pro službu Center<br />– IP adresa pro IIS|Odchozí|
 |Syslog (volitelné)|UDP|514|Server SIEM|Příchozí|
 
-> [!NOTE] V rámci procesu překladu, který provádí ATA Lightweight Gateway, musí být na zařízeních v síti následující porty otevřené pro příjem dat z ATA Lightweight Gateway.
+> [!NOTE]
+> V rámci procesu překladu, který provádí ATA Lightweight Gateway, musí být na zařízeních v síti následující porty otevřené pro příjem dat z ATA Lightweight Gateway.
 >
 > -   NTLM přes RPC
 > -   NetBIOS
@@ -233,7 +251,7 @@ Následující tabulka uvádí minimální porty, které ATA Lightweight Gateway
 Zkontrolujte, jestli ATA Center má přístup k distribučnímu bodu CRL. Pokud komponenty ATA Lightweight Gateway nemají přístup k internetu, použijte ruční import seznamu CRL a dbejte na to, abyste nainstalovali všechny distribuční body CRL pro celý řetězec.
 K usnadnění instalace služby ATA Center můžete nainstalovat certifikát podepsaný svým držitelem (self-signed certificate). Po nasazení můžete certifikát podepsaný svým držitelem nahradit certifikátem certifikační autority, který bude používat ATA Lightweight Gateway.
 > [!NOTE]
-Poskytovatelem certifikátu musí být zprostředkovatel kryptografických služeb (CPS).
+> Poskytovatelem certifikátu musí být zprostředkovatel kryptografických služeb (CPS).
 
 V úložišti Počítač služby ATA Lightweight Gateway v úložišti Místní počítač musí být nainstalovaný certifikát podporující ověření serveru. Tento certifikát musí být pro ATA Center důvěryhodný.
 
@@ -250,10 +268,11 @@ Přístup ke konzole ATA je prostřednictvím prohlížeče. Podporují se tyto:
 
 - [Architektura ATA](ata-architecture.md)
 - [Instalace ATA](/advanced-threat-analytics/deploy-use/install-ata)
-- [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
 
-<!--HONumber=Jun16_HO1-->
+
+<!--HONumber=Jun16_HO5-->
 
 

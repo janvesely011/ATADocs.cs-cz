@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Správa databáze ATA | Microsoft Advanced Threat Analytics
-description: Postupy, které vám pomůžou přesunout, zálohovat a obnovit databázi ATA
-keywords:
+title: "Správa databáze ATA | Microsoft Advanced Threat Analytics"
+description: "Postupy, které vám pomůžou přesunout, zálohovat a obnovit databázi ATA"
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: 1d27dba8-fb30-4cce-a68a-f0b1df02b977
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
+ms.openlocfilehash: 6c0e2abe43da5351568cf8db4e6ffe6fa919d835
+
 
 ---
 
@@ -56,7 +50,10 @@ Viz [příslušná dokumentace k MongoDB](http://docs.mongodb.org/manual/adminis
 
     Standardně je mongo.exe umístěný v adresáři C:\Program Files\Microsoft rozšířené hrozba Analytics\Center\MongoDB\bin.
 
-8.  Spusťte následující příkaz: `db.SystemProfiles.update( {_t: "CenterSystemProfile"} , {$set:{"Configuration.CenterDatabaseClientConfiguration.DataPath" : "<New DB Location>"}}) Instead of <New DB Location>`, kde &lt;nové umístění DB&gt; je nová cesta ke složce.
+8.  Spusťte následující příkaz: `db.SystemProfiles.update( {_t: "CenterSystemProfile"} , {$set:{"Configuration.CenterDatabaseClientConfiguration.DataPath" : "<New DB Location>"}})`
+
+
+    Místo <New DB Location>, kde `&lt;New DB Location&gt;` je nová cesta ke složce.
 
 9.  Aktualizujte HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Advanced Threat Analytics\Center\DatabaseDataPath na novou cestu ke složce.
 
@@ -65,10 +62,12 @@ Viz [příslušná dokumentace k MongoDB](http://docs.mongodb.org/manual/adminis
 ## Viz také
 - [Architektura ATA](/advanced-threat-analytics/plan-design/ata-architecture)
 - [Požadavky ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
-- [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/
+- home?forum=mata)
 
 
 
-<!--HONumber=Jun16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

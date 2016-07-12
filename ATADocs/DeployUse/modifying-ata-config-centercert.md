@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Změna konfigurace ATA – certifikát ATA Center | Microsoft Advanced Threat Analytics
-description: Popisuje dvoufázový postup obnovení nebo nahrazení certifikátu v úložišti místního počítače na serveru ATA Center. 
-keywords:
+title: "Změna konfigurace ATA – certifikát ATA Center | Microsoft Advanced Threat Analytics"
+description: "Popisuje dvoufázový postup obnovení nebo nahrazení certifikátu v úložišti místního počítače na serveru ATA Center."
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,22 +10,19 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: c8855287-de3b-4cdd-be8f-2128f48a6f27
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
+ms.openlocfilehash: 0cfeb67e663489d7264c88aafe04e77fcb63377f
+
 
 ---
 
 # Změna konfigurace ATA – certifikát ATA Center
 
->[!div class="step-by-step"] [« IP adresa serveru ATA Center](modifying-ata-config-centerip.md)
+>[!div class="step-by-step"]
+[« IP adresa serveru ATA Center](modifying-ata-config-centerip.md)
 [IP adresa konzoly ATA »](modifying-ata-config-consoleip.md)
 
 ## Změna certifikátu ATA Center
@@ -64,15 +59,17 @@ Pokud vaše certifikáty vyprší a je třeba je po instalaci nového certifiká
 
 8.  Zajistěte, aby všechny komponenty ATA Gateway mohly po aktivaci změny synchronizovat své konfigurace.
 
->[!div class="step-by-step"] [« IP adresa serveru ATA Center](modifying-ata-config-centerip.md)
+>[!div class="step-by-step"]
+[« IP adresa serveru ATA Center](modifying-ata-config-centerip.md)
 [IP adresa konzoly ATA »](modifying-ata-config-consoleip.md)
 
 ## Viz také
 - [Práce s konzolou ATA](working-with-ata-console.md)
 - [Instalace ATA](install-ata.md)
-- [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
-<!--HONumber=Jun16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Konfigurace shromažďování událostí | Microsoft Advanced Threat Analytics
-description: Popisuje možnosti konfigurace shromažďování událostí v řešení ATA
-keywords:
+title: "Konfigurace shromažďování událostí | Microsoft Advanced Threat Analytics"
+description: "Popisuje možnosti konfigurace shromažďování událostí v řešení ATA"
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: d6e7d7bef97bfc4ffde07959dd9256f0319d685f
+ms.openlocfilehash: 17f30cbe478a868f3b6887bf48d8084934624191
+
 
 ---
 
@@ -176,7 +170,8 @@ Message je původní text události z události Windows.
 
 Nezapomeňte použít oddělit páry klíč=hodnota pomocí \t.
 
->[!NOTE] Použití funkce WinCollect pro shromažďování událostí Windows se nepodporuje.
+>[!NOTE] 
+> Použití funkce WinCollect pro shromažďování událostí Windows se nepodporuje.
 
 ## Konfigurace předávání událostí systému Windows
 Pokud nemáte server SIEM, můžete konfigurovat své řadiče domény, aby předávaly události systému Windows s ID 4776 přímo jedné z vašich komponent ATA Gateway.
@@ -213,15 +208,16 @@ Nastavte **Protokol** na **HTTP** a **Port** na **5985**.<br>
 8. Na stránce konfigurace ATA Gateway povolte **Kolekce předávání událostí systému Windows**.
 
 > [!NOTE]
-Pokud povolíte toto nastavení, bude ATA Gateway hledat v protokolu předávaných událostí ty události systému Windows, které byly předány z řadičů domény.
+> Pokud povolíte toto nastavení, bude ATA Gateway hledat v protokolu předávaných událostí ty události systému Windows, které byly předány z řadičů domény.
 
-Další informace najdete v tématu [Konfigurace počítačů pro předání a shromáždění událostí](https://technet.microsoft.com/en-us/library/cc748890).
+Další informace najdete v tématu [Konfigurace počítačů pro předání a shromáždění událostí](https://technet.microsoft.com/library/cc748890).
 
 ## Viz také
 - [Instalace ATA](install-ata.md)
 - [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
 
 
-<!--HONumber=Jun16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

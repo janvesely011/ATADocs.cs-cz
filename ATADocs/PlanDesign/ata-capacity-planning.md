@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Plánování nasazení ATA | Microsoft Advanced Threat Analytics
-description: Pomůže vám naplánovat nasazení a určit, kolik serverů ATA bude potřeba k podpoře vaší sítě.
-keywords:
+title: "Plánování nasazení ATA | Microsoft Advanced Threat Analytics"
+description: "Pomůže vám naplánovat nasazení a určit, kolik serverů ATA bude potřeba k podpoře vaší sítě."
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: 279d79f2-962c-4c6f-9702-29744a5d50e2
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: d6e7d7bef97bfc4ffde07959dd9256f0319d685f
+ms.openlocfilehash: ff8eb5361d3dfeaa3715d325ed91c0ad422211ed
+
 
 ---
 
@@ -30,6 +24,8 @@ Toto téma vám pomůže určit, kolik serverů ATA bude potřeba k podpoře va�
 
 ## Nastavení velikosti ATA Center
 Pro vypracování analýzy chování uživatelů vyžaduje ATA Center data za nejméně 30 dnů. Požadované místo na disku pro databázi ATA na každý řadič domény je definováno níže. Pokud máte víc řadičů domény, sečtěte požadovaná místa na disku pro jednotlivé řadiče domény, abyste vypočítali celkovou velikost požadovaného místa pro databázi ATA.
+> [!NOTE] 
+> Pokud se spustí jako dynamická paměť virtuálního počítače nebo libovolná jiná paměť, funkce rozšiřování rozsahů stránek se nepodporuje.
 
 |Pakety za sekundu&#42;|Procesor (jádra&#42;&#42;)|Paměť (GB)|Úložiště databáze za den (GB)|Úložiště databáze za měsíc (GB)|IOPS&#42;&#42;&#42;|
 |---------------------------|-------------------------|-------------------|---------------------------------|-----------------------------------|-----------------------------------|
@@ -51,18 +47,38 @@ Pro vypracování analýzy chování uživatelů vyžaduje ATA Center data za ne
 > -  Poměr mezi čtením a zápisem aktivit je přibližně 1:3 při méně než 100 000 paketů za sekundu a 1:6 při více než 100 000 paketů za sekundu.
 
 ## Výběr vhodného typu brány pro vaše nasazení
-Pokud řadiče domény vyhovují tabulce velikostí uvedené níž, doporučuje se používat ATA Lightweight Gateway místo ATA Gateway.
-Většina řadičů domény může a měla by být pokrytá komponentou ATA Lightweight Gateway s výjimkou případů, kdy řadiče domény nevyhovují požadavkům uvedeným v [tabulce velikostí pro ATA Lightweight Gateway](#ata-lightweight-gateway-sizing).
-Dál jsou uvedené příklady situací, kdy by všechny řadiče doméně scénáře měly být pokryté komponentami ATA Lightweight Gateway:
+V nasazení ATA se podporuje libovolná kombinace typů ATA Gateway:
 
--   Pobočky
--   Virtuální řadiče domény od libovolného dodavatele IaaS
+- Jenom komponenty ATA Gateway
+- Jenom komponenty ATA Lightweight Gateway
+- Kombinace obojího
+
+Při určování typu nasazení brány vezměte v úvahu:
+
+|Typ brány|Výhody|Náklady|Topologie nasazení|Použití řadiče domény|
+|----|----|----|----|-----|
+|ATA Gateway|Nasazení mimo IP síť znesnadňuje útočníkům rozpoznání přítomnosti ATA.|Vyšší|Instaluje se ve spojení s řadičem domény (mimo IP síť).|Podporuje až 50 000 paketů za sekundu.|
+|ATA Lightweight Gateway|Nevyžaduje vyhrazený server a konfiguraci zrcadlení portů.|Nižší|Instaluje se na řadiči domény.|Podporuje až 10 000 paketů za sekundu.|
+
+Dál jsou uvedené příklady situací, kdy by řadiče domény měly být pokryté komponentami ATA Lightweight Gateway:
+
+
+- Pobočky
+
+- Virtuální řadiče domény nasazené v cloudu (IaaS)
+
+
+Dál jsou uvedené příklady situací, kdy by řadiče domény měly být pokryté komponentami ATA Gateway:
+
+
+- Datová centra ústředí (řadiče domén s více než 10 000 pakety za sekundu)
 
 
 ## Velikosti pro ATA Lightweight Gateway
-Pokud řadiče domény odpovídají tabulce velikostí uvedené níž, doporučuje se používat ATA Lightweight Gateway místo ATA Gateway.
 
 ATA Lightweight Gateway může podporovat monitorování jednoho řadiče domény na základě objemu síťového provozu, který tento řadič generuje. 
+> [!NOTE] 
+> Pokud se spustí jako dynamická paměť virtuálního počítače nebo libovolná jiná paměť, funkce rozšiřování rozsahů stránek se nepodporuje.
 
 |Pakety za sekundu&#42;|Procesor (jádra&#42;&#42;)|Paměť (GB)&#42;&#42;&#42;|
 |---------------------------|-------------------------|---------------|
@@ -75,16 +91,13 @@ ATA Lightweight Gateway může podporovat monitorování jednoho řadiče domén
 &#42;&#42;Celkový počet jader bez vláken typu Hyper, která má tento řadič domény nainstalovaná.<br>Přestože je hyperthreading pro ATA Lightweight Gateway přijatelný, při plánování kapacity byste měli počítat skutečná jádra, a nikoli jádra s vlákny typu Hyper.
 
 &#42;&#42;&#42;Celkový objem paměti, kterou má tento řadič domény nainstalovanou.
-> [!NOTE]   Pokud řadič domény nemá nezbytný objem prostředků, které ATA Lightweight Gateway vyžaduje, výkon řadiče domény to neovlivní, ale ATA Lightweight Gateway nemusí fungovat podle očekávání.
+> [!NOTE]   
+> Pokud řadič domény nemá nezbytný objem prostředků, které ATA Lightweight Gateway vyžaduje, výkon řadiče domény to neovlivní, ale ATA Lightweight Gateway nemusí fungovat podle očekávání.
 
 
 ## Nastavení velikosti ATA Gateway
 
 Při rozhodování o tom, kolik komponent ATA Gateway nasadíte, zvažte následující:
-
-Pro většinu řadičů domény se dá použít ATA Lightweight Gateway. Při plánování byste měli využít výš uvedenou tabulku velikostí pro ATA Lightweight Gateway.
-
-Pokud se přesto vyžadují komponenty ATA Gateway, na základě následujících informací můžete určit, kolik komponent ATA Gateways bude potřeba:<br>
 
 -   **Doménové struktury a domény služby Active Directory**<br>
     ATA může monitorovat provoz z několika domén z jedné doménové struktury služby Active Directory. Monitorování několika doménových struktur služby Active Directory vyžaduje samostatná nasazení řešení ATA. Jedno nasazení ATA by nemělo být nakonfigurované pro monitorování síťového provozu řadičů domény patřících do různých doménových struktur.
@@ -95,6 +108,9 @@ Aspekty zrcadlení portů můžou vyžadovat, abyste pro datové centrum nebo po
 -   **Kapacita**<br>
     ATA Gateway může podporovat monitorování několika řadičů domény, v závislosti na objemu síťových přenosů monitorovaných řadičů domény. 
 <br>
+
+> [!NOTE] 
+> Dynamická paměť se nepodporuje.
 
 |Pakety za sekundu&#42;|Procesor (jádra&#42;&#42;)|Paměť (GB)|
 |---------------------------|-------------------------|---------------|
@@ -138,7 +154,8 @@ Pokud chcete určit počet paketů za sekundu, proveďte na každém řadiči do
 
 7.  Rozbalte položku **Síťový adaptér**, vyberte **Pakety/s** a vyberte vhodnou instanci. Pokud si nejste jisti, můžete vybrat **&lt;Všechny instance&gt;** a kliknout na **Přidat** a **OK**.
 
-    > [!NOTE] Chcete-li to provést, v příkazovém řádku spusťte příkaz `ipconfig /all`, který zobrazí název adaptéru a konfiguraci.
+    > [!NOTE]
+    > Chcete-li to provést, v příkazovém řádku spusťte příkaz `ipconfig /all`, který zobrazí název adaptéru a konfiguraci.
 
     ![Obrázek přidání čítačů výkonu](media/ATA-traffic-estimation-7.png)
 
@@ -163,9 +180,10 @@ Pokud chcete určit počet paketů za sekundu, proveďte na každém řadiči do
 ## Viz také
 - [Požadavky ATA](ata-prerequisites.md)
 - [Architektura ATA](ata-architecture.md)
-- [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
-<!--HONumber=Jun16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

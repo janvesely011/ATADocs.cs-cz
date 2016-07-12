@@ -19,7 +19,7 @@
 #### [Změna certifikátu ATA Center](modifying-ata-config-centercert.md)
 #### [Změna IP adresy konzoly ATA](modifying-ata-config-consoleip.md)
 #### [Změna certifikátu IIS](modifying-ata-config-iiscert.md)
-#### [Změna hesla řadiče domény](modifying-ata-config-dcpassword.md)
+#### [Změna hesla připojení k doméně](modifying-ata-config-dcpassword.md)
 ### [Práce s konzolou ATA](working-with-ata-console.md)
 ### [Nastavení výstrah ATA](setting-ata-alerts.md)
 ### [Nastavení e-mailového serveru a serveru Syslog](setting-syslog-email-server-settings.md)
@@ -31,6 +31,6 @@
 # [Řešení problémů](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs)
 
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO3-->
 
 

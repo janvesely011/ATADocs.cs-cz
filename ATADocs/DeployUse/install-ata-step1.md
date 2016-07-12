@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Instalace ATA – Krok 1 | Microsoft Advanced Threat Analytics
-description: První krok instalace ATA představuje stažení a instalaci ATA Center na vybraný server.
-keywords:
+title: "Instalace ATA – Krok 1 | Microsoft Advanced Threat Analytics"
+description: "První krok instalace ATA představuje stažení a instalaci ATA Center na vybraný server."
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: d6e7d7bef97bfc4ffde07959dd9256f0319d685f
+ms.openlocfilehash: c89d4d6f6af58bcc822b9599dcda65d0719a7419
+
 
 ---
 
@@ -33,14 +27,15 @@ ms.suite: ems
 
 Tento instalační postup uvádí pokyny pro novou instalaci ATA 1.6. Informace o aktualizaci stávajícího nasazení ATA ze starší verze najdete v [průvodci migrací ATA pro verzi 1.6](/advanced-threat-analytics/understand-explore/ata-update-1.6-migration-guide).
 
-> [!IMPORTANT] Před začátkem instalace nainstalujte na server ATA Center a na servery ATA Gateway aktualizaci KB2934520, jinak instalace ATA tuto aktualizaci nainstaluje a bude vyžadovat restart uprostřed instalace ATA.
+> [!IMPORTANT] 
+> Před začátkem instalace nainstalujte na server ATA Center a na servery ATA Gateway aktualizaci KB2934520, jinak instalace ATA tuto aktualizaci nainstaluje a bude vyžadovat restart uprostřed instalace ATA.
 
 ## Krok 1: Stažení a instalace ATA Center
 Po ověření, že server splňuje požadavky, můžete pokračovat v instalaci ATA Center.
 
 Na serveru ATA Center proveďte tento postup.
 
-1.  Stáhněte si ATA z webu [Microsoft Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx), [TechNet Evaluation Center](http://www.microsoft.com/en-us/evalcenter/) nebo [MSDN](https://msdn.microsoft.com/en-us/subscriptions/downloads).
+1.  Stáhněte si ATA z webu [Microsoft Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx), [TechNet Evaluation Center](http://www.microsoft.com/evalcenter/) nebo [MSDN](https://msdn.microsoft.com/subscriptions/downloads).
 
 2.  K počítači, do kterého instalujete ATA Center, se přihlaste jako uživatel, který je členem místní skupiny Administrators.
 
@@ -94,17 +89,20 @@ Protože se k webu přihlašujete pomocí IP adresy, zobrazí se upozornění so
 
 
 
->[!div class="step-by-step"] [« Předinstalační kroky](preinstall-ata.md)
+>[!div class="step-by-step"]
+[« Předinstalace](preinstall-ata.md)
 [Krok 2 »](install-ata-step2.md)
 
 ## Viz také
 
-- [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
-- [Konfigurace shromažďování událostí](configure-event-collection.md)
+- [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/
+- home?forum=mata)
+- [Konfigurace sběru událostí](configure-event-collection.md)
 - [Požadavky ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
 
 
 
-<!--HONumber=Jun16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

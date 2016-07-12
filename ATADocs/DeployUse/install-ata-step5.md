@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Instalace ATA – Krok 5 | Microsoft Advanced Threat Analytics
-description: Krok 5 instalace ATA vám pomůže nakonfigurovat nastavení pro komponentu ATA Gateway.
-keywords:
+title: "Instalace ATA – Krok 5 | Microsoft Advanced Threat Analytics"
+description: "Krok 5 instalace ATA vám pomůže nakonfigurovat nastavení pro komponentu ATA Gateway."
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,22 +10,19 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: 2a5b6652-2aef-464c-ac17-c7e5f12f920f
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: d6e7d7bef97bfc4ffde07959dd9256f0319d685f
+ms.openlocfilehash: 6400a0eabefac91b418e00eb670b1329fa1b5fb5
+
 
 ---
 
 # Instalace ATA – Krok 5
 
->[!div class="step-by-step"] [« Krok 4](install-ata-step4.md)
+>[!div class="step-by-step"]
+[« Krok 4](install-ata-step4.md)
 [Krok 6 »](install-ata-step6.md)
 
 
@@ -53,8 +48,9 @@ Následující informace platí pro servery, které zadáte do seznamu **Řadič
  - **Kandidát na synchronizátora domény**<br>
 Za synchronizaci mezi ATA a doménou Active Directory může být zodpovědná libovolná komponenta ATA Gateway, která je nastavená jako kandidát na synchronizátora domény. V závislosti na velikosti domény může počáteční synchronizace nějakou dobu trvat a je náročná na prostředky. Ve výchozím nastavení jako kandidáti na synchronizátora domény nastavené jenom komponenty ATA Gateway. <br>Doporučuje se zakázat komponentám ATA Gateway vzdálené lokality, aby byly kandidátem na synchronizátora domény.<br>Pokud je řadič domény jen pro čtení, nenastavujte ho jako kandidáta na synchronizátora domény. Další informace najdete v části [Architektura ATA](/advanced-threat-analytics/plan-design/ata-architecture#ata-lightweight-gateway-features).
 
-> [!NOTE] První spuštění služby ATA Gateway bude trvat několik minut, protože sestavuje mezipaměť analyzátorů zachytávání dat ze sítě.<br>
-Změny konfigurace se použijí v ATA Gateway při příští plánované synchronizaci mezi komponentami ATA Gateway a ATA Center.
+> [!NOTE] 
+> První spuštění služby ATA Gateway bude trvat několik minut, protože sestavuje mezipaměť analyzátorů zachytávání dat ze sítě.<br>
+> Změny konfigurace se použijí v ATA Gateway při příští plánované synchronizaci mezi komponentami ATA Gateway a ATA Center.
 
 
 
@@ -83,17 +79,19 @@ Chcete-li ověřit, že ATA Gateway je úspěšně nasazená, zkontrolujte násl
     ![Obrázek přidání čítačů výkonu](media/ATA-performance-monitoring-add-counters.png)
 
 
->[!div class="step-by-step"] [« Krok 4](install-ata-step4.md)
+>[!div class="step-by-step"]
+[« Krok 4](install-ata-step4.md)
 [Krok 6 »](install-ata-step6.md)
 
 ## Viz také
 
-- [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurace shromažďování událostí](configure-event-collection.md)
 - [Požadavky ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
 
 
 
-<!--HONumber=Jun16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

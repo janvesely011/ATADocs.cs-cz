@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Změna konfigurace ATA – IP adresa konzoly ATA | Microsoft Advanced Threat Analytics
-description: Popisuje, jak změnit IP adresu konzoly ATA, která se používá k vytvoření zástupce konzoly ATA na komponentách ATA Gateway.
-keywords:
+title: "Změna konfigurace ATA – IP adresa konzoly ATA | Microsoft Advanced Threat Analytics"
+description: "Popisuje, jak změnit IP adresu konzoly ATA, která se používá k vytvoření zástupce konzoly ATA na komponentách ATA Gateway."
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,22 +10,19 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: 50118465-df34-4e04-b0cc-48808b6a96b1
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
+ms.openlocfilehash: ee775e66de1a56b5270b0d32c7d5ca33d4d7980c
+
 
 ---
 
 # Změna konfigurace ATA – IP adresa konzoly ATA
 
->[!div class="step-by-step"] [« Certifikát ATA Center ](modifying-ata-config-centercert.md)
+>[!div class="step-by-step"]
+[« Certifikát ATA Center ](modifying-ata-config-centercert.md)
 [Certifikát IIS »](modifying-ata-config-iiscert.md)
 
 ## Změna IP adresy konzoly ATA
@@ -43,7 +38,8 @@ Adresa URL se používá v následujících scénářích:
 
 -   Použití plně kvalifikovaného názvu domény pro adresu URL konzoly ATA umožňuje změnit IP adresu, kterou používá služba IIS pro konzolu ATA bez přerušení výstrah, které byly rozeslány dřív, a bez nutnosti znovu stahovat balíček ATA Gateway. Je potřeba jenom aktualizovat DNS novou IP adresou.
 
-> [!NOTE] Po úpravě adresy URL konzoly ATA byste si měli před instalací nových ATA Gateway stáhnout instalační balíček ATA Gateway.
+> [!NOTE]
+> Po úpravě adresy URL konzoly ATA byste si měli před instalací nových ATA Gateway stáhnout instalační balíček ATA Gateway.
 
 Pokud potřebujete změnit IP adresu používanou službou IIS pro konzolu ATA, proveďte tyto kroky na serveru ATA Center.
 
@@ -75,16 +71,18 @@ Pokud potřebujete změnit IP adresu používanou službou IIS pro konzolu ATA, 
 
 9. Pokud adresa URL konzoly ATA je plně kvalifikovaný název domény, aktualizujte DNS novou IP adresou pro plně kvalifikovaný název domény.
 
->[!div class="step-by-step"] [« Certifikát ATA Center ](modifying-ata-config-centercert.md)
+>[!div class="step-by-step"]
+[« Certifikát ATA Center ](modifying-ata-config-centercert.md)
 [Certifikát IIS »](modifying-ata-config-iiscert.md)
 
 
 ## Viz také
 - [Práce s konzolou ATA](working-with-ata-console.md)
 - [Instalace ATA](install-ata.md)
-- [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
-<!--HONumber=Jun16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

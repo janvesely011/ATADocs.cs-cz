@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Řešení potíží s protokolem chyb ATA | Microsoft Advanced Threat Analytics
-description: Popisuje, jak je v ATA možné řešit běžné chyby. 
-keywords:
+title: "Řešení potíží s protokolem chyb ATA | Microsoft Advanced Threat Analytics"
+description: "Popisuje, jak je v ATA možné řešit běžné chyby."
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
+ms.openlocfilehash: 351541d28e0f30a33d76990f2ac00a4d506f5450
+
 
 ---
 
@@ -50,7 +44,7 @@ Tato část podrobně popisuje možné chyby v nasazení ATA a kroky potřebné 
 ## Chyby nasazení
 |Chyba|Popis|Řešení|
 |-------------|----------|---------|
-|Instalace rozhraní .Net Framework 4.6.1 se nepovedla s chybou 0x800713ec.|Na serveru nejsou nainstalované nezbytné komponenty pro .Net Framework 4.6.1. |Před instalací ATA ověřte, že jsou na serveru nainstalované aktualizace systému Windows [KB2919442](https://www.microsoft.com/en-us/download/details.aspx?id=42135) a [KB2919355](https://support.microsoft.com/en-us/kb/2919355).|
+|Instalace rozhraní .Net Framework 4.6.1 se nepovedla s chybou 0x800713ec.|Na serveru nejsou nainstalované nezbytné komponenty pro .Net Framework 4.6.1. |Před instalací ATA ověřte, že jsou na serveru nainstalované aktualizace systému Windows [KB2919442](https://www.microsoft.com/download/details.aspx?id=42135) a [KB2919355](https://support.microsoft.com/kb/2919355).|
 
 ![Obrázek chyby instalace .NET ATA](media/netinstallerror.png)
 
@@ -60,9 +54,10 @@ Tato část podrobně popisuje možné chyby v nasazení ATA a kroky potřebné 
 - [Plánování kapacity ATA](/advanced-threat-analytics/plan-design/ata-capacity-planning)
 - [Konfigurace sběru událostí](/advanced-threat-analytics/deploy-use/configure-event-collection)
 - [Konfigurace předávání událostí systému Windows](/advanced-threat-analytics/deploy-use/configure-event-collection#ATA_event_WEF)
-- [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
-<!--HONumber=Jun16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Ověření zrcadlení portů | Microsoft Advanced Threat Analytics
-description: Popisuje jak ověřit, že je zrcadlení portů nakonfigurované správně.
-keywords:
+title: "Ověření zrcadlení portů | Microsoft Advanced Threat Analytics"
+description: "Popisuje jak ověřit, že je zrcadlení portů nakonfigurované správně."
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,21 +10,18 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: ebd41719-c91a-4fdd-bcab-2affa2a2cace
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: d6e7d7bef97bfc4ffde07959dd9256f0319d685f
+ms.openlocfilehash: e1ce20c48323e1fca04211c2691f6dfb6fa57fe5
+
 
 ---
 
 # Ověření zrcadlení portů
-> [!NOTE] Tento článek se týká jenom nasazení komponent ATA Gateway, nikoli komponent ATA Lightweight Gateway. Pokud chcete určit, jestli potřebujete ATA Gateway, přečtěte si téma [Volba vhodných bran pro vaše nasazení](/advanced-threat-analytics/plan-design/ata-capacity-planning#Choosing-the-right-gateway-type-for-your-deployment).
+> [!NOTE] 
+> Tento článek se týká jenom nasazení komponent ATA Gateway, nikoli komponent ATA Lightweight Gateway. Pokud chcete určit, jestli potřebujete ATA Gateway, přečtěte si téma [Volba vhodných bran pro vaše nasazení](/advanced-threat-analytics/plan-design/ata-capacity-planning#choosing-the-right-gateway-type-for-your-deployment).
  
 Následující kroky vás provedou procesem ověření, že je zrcadlení portů správně nakonfigurované. Pro správnou funkci ATA potřebuje, aby ATA Gateway mohla sledovat provoz do a z řadiče domény. Hlavní zdroj dat používaný ATA je hloubková kontrola paketů síťového provozu do a z řadičů domény. ATA potřebuje ke sledování síťového provozu správně nakonfigurované zrcadlení portů. Zrcadlení portů kopíruje provoz z jednoho portu (zdrojový port) na jiný port (cílový port).
 
@@ -195,7 +190,8 @@ Ukázka spuštění tohoto skriptu:
 ## Ověření zrcadlení portů pomocí Net Mon
 1.  Instalace nástroje [Microsoft Network Monitor 3.4](http://www.microsoft.com/download/details.aspx?id=4865)
 
-    > [!IMPORTANT] Neinstalujte na komponentu ATA Gateway Microsoft Message Analyzer nebo jiný software pro zachycení provozu.
+    > [!IMPORTANT]
+    > Neinstalujte na komponentu ATA Gateway Microsoft Message Analyzer nebo jiný software pro zachycení provozu.
 
 2.  Otevřete Sledování sítě a vytvořte novou kartu zachycení.
 
@@ -215,7 +211,8 @@ Ukázka spuštění tohoto skriptu:
 
     ![Obrázek spuštění relace zachytávání](media/ATA-Port-Mirroring-Capture-traffic.jpg)
 
-    > [!NOTE] Je důležité se ujistit, že vidíte provoz do a z řadičů domény.
+    > [!NOTE]
+    > Je důležité se ujistit, že vidíte provoz do a z řadičů domény.
     
 
 5.  Pokud se zobrazí přenos jenom v jednom směru, obraťte se na týmy podpory sítí nebo virtualizace, aby vám pomohly vyřešit potíže s konfigurací zrcadlení portů.
@@ -223,9 +220,10 @@ Ukázka spuštění tohoto skriptu:
 ## Viz také
 
 - [Konfigurace zrcadlení portů](configure-port-mirroring.md)
-- [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
-<!--HONumber=Jun16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

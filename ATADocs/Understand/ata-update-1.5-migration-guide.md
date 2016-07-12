@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Průvodce migrací pro aktualizaci ATA na verzi 1.5 | Microsoft Advanced Threat Analytics
+title: "Průvodce migrací pro aktualizaci ATA na verzi 1.5 | Microsoft Advanced Threat Analytics"
 description: Postupy aktualizace ATA na verzi 1.5
-keywords:
+keywords: 
 author: rkarlin
 manager: stevenpo
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: identity-ata
 ms.service: advanced-threat-analytics
 ms.technology: security
 ms.assetid: fb65eb41-b215-4530-93a2-0b8991f4e980
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: bennyl
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
+ms.openlocfilehash: 87293e71e053e2d7a962a5b7362b92e5df677c77
+
 
 ---
 
@@ -43,7 +37,8 @@ Aktualizace ATA na verzi 1.5 přináší vylepšení v následujících oblastec
 -   Další čítače výkonu pro rozšířené monitorování a řešení potíží
 
 ## Aktualizace ATA na verzi 1.5
-> [!NOTE] Pokud ve vašem prostředí neexistuje instalace ATA, stáhněte si úplnou verzi ATA, která zahrnuje verzi 1.5, a použijte standardní postup instalace popsaný v tématu [Instalace ATA](/advanced-threat-analytics/deploy-use/install-ata).
+> [!NOTE]
+> Pokud ve vašem prostředí neexistuje instalace ATA, stáhněte si úplnou verzi ATA, která zahrnuje verzi 1.5, a použijte standardní postup instalace popsaný v tématu [Instalace ATA](/advanced-threat-analytics/deploy-use/install-ata).
 
 Pokud již máte nasazení ATA verze 1.4, tento postup vás provede kroky potřebnými k aktualizaci instalace.
 
@@ -60,7 +55,8 @@ Podle těchto kroků provedete aktualizaci ATA na verzi 1.5:
 
 4.  Aktualizace komponent ATA Gateway
 
-    > [!IMPORTANT] Aktualizujte všechny komponenty ATA Gateway, aby se zajistila správná funkce ATA.
+    > [!IMPORTANT]
+    > Aktualizujte všechny komponenty ATA Gateway, aby se zajistila správná funkce ATA.
 
 ### Krok 1: Aktualizace ATA Center
 
@@ -118,13 +114,15 @@ Soubor zip obsahuje následující:
 
 1.  Na každém počítači s ATA Gateway extrahujte soubory z balíčku ATA Gateway a spusťte soubor Microsoft ATA Gateway Setup.
 
-    > [!NOTE] Tento balíček ATA Gateway lze použít také k instalaci nových komponent ATA Gateway.
+    > [!NOTE]
+    > Tento balíček ATA Gateway lze použít také k instalaci nových komponent ATA Gateway.
 
 2.  Předchozí nastavení se zachovají, ale může trvat několik minut, než se služba restartuje.
 
 3.  Tento krok opakujte pro všechny nasazené komponenty ATA Gateway.
 
-> [!NOTE] Po úspěšné aktualizaci ATA Gateway zastaralé oznámení pro konkrétní ATA Gateway zmizí.
+> [!NOTE]
+> Po úspěšné aktualizaci ATA Gateway zastaralé oznámení pro konkrétní ATA Gateway zmizí.
 
 To, že jsou všechny komponenty ATA Gateway úspěšně aktualizované, budete vědět, když všechny ATA Gateway ohlásí, že jsou úspěšně synchronizované, a zpráva, že je k dispozici aktualizovaný balíček ATA Gateway, se už nebude zobrazovat.
 
@@ -132,9 +130,10 @@ To, že jsou všechny komponenty ATA Gateway úspěšně aktualizované, budete 
 
 ## Viz také
 
-- [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/en-US/home?forum=mata)
+- [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
-<!--HONumber=Jun16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 
