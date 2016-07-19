@@ -1,4 +1,9 @@
-# [Understand and Explore](/understand-explore/what-is-ata)
-# [Plan and Design](/plan-design/ata-architecture)
-# [Deploy and Use](/deploy-use/preinstall-ata)
-# [Troubleshoot](/troubleshoot/troubleshooting-ata-known-errors)
+# [Porozumění a prozkoumávání](/understand-explore/what-is-ata)
+# [Plánování a navrhování](/plan-design/ata-architecture)
+# [Nasazení a používání](/deploy-use/preinstall-ata)
+# [Řešení problémů](/troubleshoot/troubleshooting-ata-known-errors)
+
+
+<!--HONumber=Jun16_HO4-->
+
+

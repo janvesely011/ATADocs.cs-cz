@@ -1,12 +1,17 @@
-# [Understand and Explore](what-is-ata.md)
-## [What is Microsoft Advanced Threat Analytics?](what-is-ata.md)
-## [ATA Release notes](ata-release-notes.md)
-### [What's new in ATA version 1.6](whats-new-version-1.6.md)
-#### [Update to ATA 1.6 - migration guide](ata-update-1.6-migration-guide.md)
-### [What's new in ATA version 1.5](whats-new-version-1.5.md)
-#### [Update to ATA 1.5 - migration guide](ata-update-1.5-migration-guide.md)
-### [What's new in ATA version 1.4](whats-new-version-1.4.md)
-## [Frequently asked questions](ata-technical-faq.md)
-# [Plan and Design](/advanced-threat-analytics/plan-design/ata-capacity-planning)
-# [Deploy and Use](/advanced-threat-analytics/deploy-use/install-ata)
-# [Troubleshoot](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs)
+# [Porozumění a prozkoumávání](what-is-ata.md)
+## [Co je Microsoft Advanced Threat Analytics?](what-is-ata.md)
+## [Poznámky k verzi ATA](ata-release-notes.md)
+### [Novinky ATA verze 1.6](whats-new-version-1.6.md)
+#### [Aktualizace na ATA 1.6 – průvodce migrací](ata-update-1.6-migration-guide.md)
+### [Novinky ATA verze 1.5](whats-new-version-1.5.md)
+#### [Aktualizace na ATA 1.5 – průvodce migrací](ata-update-1.5-migration-guide.md)
+### [Novinky ATA verze 1.4](whats-new-version-1.4.md)
+## [Nejčastější dotazy](ata-technical-faq.md)
+# [Plánování a navrhování](/advanced-threat-analytics/plan-design/ata-capacity-planning)
+# [Nasazení a používání](/advanced-threat-analytics/deploy-use/install-ata)
+# [Řešení problémů](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs)
+
+
+<!--HONumber=Jun16_HO4-->
+
+

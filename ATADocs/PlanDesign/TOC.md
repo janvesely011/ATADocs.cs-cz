@@ -1,7 +1,12 @@
-# [Understand and Explore](/advanced-threat-analytics/understand-explore/what-is-ata)
-# [Plan and Design](ata-capacity-planning.md)
-## [ATA Architecture](ata-architecture.md)
-## [Plan your ATA capacity](ata-capacity-planning.md)
-## [ATA Prerequisites](ata-prerequisites.md)
-# [Deploy and Use](/advanced-threat-analytics/deploy-use/install-ata)
-# [Troubleshoot](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs)
+# [Porozumění a prozkoumávání](/advanced-threat-analytics/understand-explore/what-is-ata)
+# [Plánování a navrhování](ata-capacity-planning.md)
+## [Architektura ATA](ata-architecture.md)
+## [Plánování kapacity ATA](ata-capacity-planning.md)
+## [Požadavky ATA](ata-prerequisites.md)
+# [Nasazení a používání](/advanced-threat-analytics/deploy-use/install-ata)
+# [Řešení problémů](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs)
+
+
+<!--HONumber=Jun16_HO4-->
+
+
