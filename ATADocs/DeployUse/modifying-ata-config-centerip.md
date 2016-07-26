@@ -1,5 +1,5 @@
 ---
-title: "Změna konfigurace ATA – IP adresa ATA Center | Microsoft Advanced Threat Analytics"
+title: "Změna konfigurace ATA – IP adresa ATA Center | Microsoft ATA"
 description: "Popisuje, jak změnit IP adresu, port nebo certifikát pro ATA Center."
 keywords: 
 author: rkarlin
@@ -13,8 +13,8 @@ ms.assetid: 93b27f15-f7e5-49bb-870a-d81d09dfe9fc
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
-ms.openlocfilehash: 373eb5722a5450bca87cf66933990249286138ab
+ms.sourcegitcommit: a5c7163bc7b1989672e587bfb4fa6a65cd4e3751
+ms.openlocfilehash: c5e249f8791eff2a32fe75353e171ded67fae7f9
 
 
 ---
@@ -80,6 +80,6 @@ Komponenty ATA Gateway místně ukládají IP adresu pro ATA Center, ke kterému
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

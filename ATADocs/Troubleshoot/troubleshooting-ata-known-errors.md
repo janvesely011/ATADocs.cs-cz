@@ -1,5 +1,5 @@
 ---
-title: "Řešení potíží s protokolem chyb ATA | Microsoft Advanced Threat Analytics"
+title: "Řešení potíží s protokolem chyb ATA | Microsoft ATA"
 description: "Popisuje, jak je v ATA možné řešit běžné chyby."
 keywords: 
 author: rkarlin
@@ -13,8 +13,8 @@ ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e0745079465aecefd26571eea894d19b82cbc216
-ms.openlocfilehash: c72bca3cb1eef1f3fb59f666c6143cf5c095bde9
+ms.sourcegitcommit: a5c7163bc7b1989672e587bfb4fa6a65cd4e3751
+ms.openlocfilehash: cf2e1ab1fec4906e0bf2df8e0407b1951081e62f
 
 
 ---
@@ -58,6 +58,6 @@ Tato část podrobně popisuje možné chyby v nasazení ATA a kroky potřebné 
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Jul16_HO3-->
 
 
