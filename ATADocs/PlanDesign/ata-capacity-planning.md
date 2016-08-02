@@ -3,26 +3,43 @@ title: "Plánování nasazení ATA | Microsoft ATA"
 description: "Pomůže vám naplánovat nasazení a určit, kolik serverů ATA bude potřeba k podpoře vaší sítě."
 keywords: 
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: get-started-article
-ms.prod: identity-ata
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.prod: 
 ms.assetid: 279d79f2-962c-4c6f-9702-29744a5d50e2
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a5c7163bc7b1989672e587bfb4fa6a65cd4e3751
-ms.openlocfilehash: a43184e0efa1de110f5c287c6079e80e1a9dd3de
+ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
+ms.openlocfilehash: e0174ecac39b2a8cd469ed698853c447a85e4251
 
 
 ---
 
 # Plánování kapacity ATA
-Toto téma vám pomůže určit, kolik serverů ATA bude potřeba k podpoře vaší sítě, kolik komponent ATA Gateway a ATA Lightweight Gateway potřebujete a jako kapacitu serveru vyžadují ATA Center a komponenty ATA Gateway.
+Toto téma vám pomůže určit, kolik serverů ATA bude potřeba k monitorování vaší sítě, kolik komponent ATA Gateway nebo ATA Lightweight Gateway potřebujete a jakou kapacitu serveru vyžadují ATA Center a komponenty ATA Gateway.
 
-## Nastavení velikosti ATA Center
+##Použití nástroje pro změnu velikosti
+Doporučený a nejjednodušší způsob, jak určit kapacitu pro vaše nasazení ATA, je použití [nástroje pro změnu velikosti ATA](http://aka.ms/atasizingtool). Spusťte nástroj pro změnu velikosti ATA a z výsledků v excelovém souboru pomocí následujících polí určete potřebnou kapacitu ATA:
+
+- CPU a paměť pro ATA Center: Porovnejte pole **Busy Packets/sec** (Počet paketů za sekundu při vytížení) v tabulce pro ATA Center v souboru výsledků s polem **PACKETS PER SECOND** (Počet paketů za sekundu) v [tabulce pro ATA Center](#ata-center-sizing).
+
+- Úložiště pro ATA Center: Porovnejte pole **Avg Packets/sec** (Průměrný počet paketů za sekundu) v tabulce pro ATA Center v souboru výsledků s polem **PACKETS PER SECOND** (Počet paketů za sekundu) v [tabulce pro ATA Center](#ata-center-sizing).
+- ATA Gateway: Porovnejte pole **Busy Packets/sec** (Počet paketů za sekundu při vytížení) v tabulce pro ATA Gateway v souboru výsledků s polem **PACKETS PER SECOND** (Počet paketů za sekundu) v [tabulce pro ATA Gateway](#ata-gateway-sizing) nebo v [tabulce pro ATA Lightweight Gateway](#ata-lightweight-gateway-sizing) podle [zvoleného typu brány](#choosing-the-right-gateway-type-for-your-deployment).
+
+
+![Ukázkový nástroj plánování kapacity](media/capacity tool.png)
+
+
+
+Pokud z nějakého důvodu nemůžete použít nástroj pro změnu velikosti ATA, budete muset ručně shromáždit informace z čítače paketů za sekundu ze všech řadičů domény po dobu 24 hodin s velmi malým intervalem sběru hodnot (přibližně 5 sekund). Pak u každého řadiče domény musíte vypočítat denní průměr a průměr za nejvytíženější období (15 minut).
+Následující části uvádějí pokyny, jak shromáždit čítač paketů za sekundu z jednoho řadiče domény.
+
+
+
+### Nastavení velikosti ATA Center
 Pro vypracování analýzy chování uživatelů vyžaduje ATA Center data za nejméně 30 dnů. Požadované místo na disku pro databázi ATA na každý řadič domény je definováno níže. Pokud máte víc řadičů domény, sečtěte požadovaná místa na disku pro jednotlivé řadiče domény, abyste vypočítali celkovou velikost požadovaného místa pro databázi ATA.
 > [!NOTE] 
 > Pokud se spustí jako dynamická paměť virtuálního počítače nebo libovolná jiná paměť, funkce rozšiřování rozsahů stránek se nepodporuje.
@@ -74,7 +91,7 @@ Dál jsou uvedené příklady situací, kdy by řadiče domény měly být pokry
 - Datová centra ústředí (řadiče domén s více než 10 000 pakety za sekundu)
 
 
-## Velikosti pro ATA Lightweight Gateway
+### Velikosti pro ATA Lightweight Gateway
 
 ATA Lightweight Gateway může podporovat monitorování jednoho řadiče domény na základě objemu síťového provozu, který tento řadič generuje. 
 > [!NOTE] 
@@ -95,7 +112,7 @@ ATA Lightweight Gateway může podporovat monitorování jednoho řadiče domén
 > Pokud řadič domény nemá nezbytný objem prostředků, které ATA Lightweight Gateway vyžaduje, výkon řadiče domény to neovlivní, ale ATA Lightweight Gateway nemusí fungovat podle očekávání.
 
 
-## Nastavení velikosti ATA Gateway
+### Nastavení velikosti ATA Gateway
 
 Při rozhodování o tom, kolik komponent ATA Gateway nasadíte, zvažte následující:
 
@@ -184,6 +201,6 @@ Pokud chcete určit počet paketů za sekundu, proveďte na každém řadiči do
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

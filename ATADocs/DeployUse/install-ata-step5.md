@@ -3,18 +3,18 @@ title: "Instalace ATA – Krok 5 | Microsoft ATA"
 description: "Krok 5 instalace ATA vám pomůže nakonfigurovat nastavení pro komponentu ATA Gateway."
 keywords: 
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: get-started-article
-ms.prod: identity-ata
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology: 
 ms.assetid: 2a5b6652-2aef-464c-ac17-c7e5f12f920f
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a5c7163bc7b1989672e587bfb4fa6a65cd4e3751
-ms.openlocfilehash: 3e9f68e9868dc9aaf20fe9d1c4fe2b8bdd685291
+ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
+ms.openlocfilehash: 3580e748d21db73b6fa8384d84e03b9954b823f8
 
 
 ---
@@ -36,10 +36,11 @@ Po instalaci komponenty ATA Gateway proveďte následující kroky a nakonfiguru
   - **Popis**: <br>Zadejte popis ATA Gateway (nepovinné).
   - **Řadiče domény se zrcadlením portů (FQDN)** (povinné pro ATA Gateway, pro ATA Lightweight Gateway nejde nastavit): <br>Zadejte úplný plně kvalifikovaný název domény řadiči domény a kliknutím na symbol plus ho přidejte do seznamu. Například **dc01.contoso.com**.<br /><br />![Obrázek příkladu plně kvalifikovaného názvu domény](media/ATAGWDomainController.png)
 
-Následující informace platí pro servery, které zadáte do seznamu **Řadiče domény**: – Všechny řadiče domény, jejichž provoz ATA Gateway monitoruje přes zrcadlení portů, musí být uvedené v seznamu **Řadiče domény**. Pokud řadič domény není uvedený v seznamu **Řadiče domény**, detekce podezřelých aktivit nemusí fungovat podle očekávání.
-– Nejméně jeden řadič domény v seznamu musí být server globálního katalogu. Tak může ATA překládat objekty počítačů a uživatelů v jiných doménách v doménové struktuře.
+Následující informace platí pro servery, které zadáte do seznamu **Řadiče domény**:
 
- - **Síťové adaptéry pro zachytávání** (povinné):<br>
+- Všechny řadiče domény, jejichž provoz ATA Gateway monitoruje přes zrcadlení portů, musí být uvedené v seznamu **Řadiče domény**. Pokud řadič domény není uvedený v seznamu **Řadiče domény**, detekce podezřelých aktivit nemusí fungovat podle očekávání.
+- Nejméně jeden řadič domény v seznamu musí být server globálního katalogu. Tak může ATA překládat objekty počítačů a uživatelů v jiných doménách v doménové struktuře.
+- **Síťové adaptéry pro zachytávání** (povinné):<br>
      - Pro ATA Gateway na vyhrazeném serveru vyberte síťové adaptéry, které jsou nakonfigurované jako cílový port zrcadlení. Tyto budou přijímat zrcadlený provoz řadičů domén.
      - V případě ATA Lightweight Gateway by to měly být všechny síťové adaptéry, které se používají ke komunikaci s ostatními počítači ve vaší organizaci.
 
@@ -92,6 +93,6 @@ Chcete-li ověřit, že ATA Gateway je úspěšně nasazená, zkontrolujte násl
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 
