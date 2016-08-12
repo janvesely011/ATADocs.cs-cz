@@ -13,8 +13,8 @@ ms.assetid: a7d378ec-68ed-4a7b-a0db-f5e439c3e852
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: aa1e44b4f41282fdee193c6205d22ba08718025b
+ms.sourcegitcommit: 09de79e1f8fee6b27c7ba403df1af4431bd099a9
+ms.openlocfilehash: 51440757c89130f8454e9c2b1abe7182f2b7eb41
 
 
 ---
@@ -24,7 +24,7 @@ Tento článek obsahuje seznam nejčastějších dotazů týkajících se ATA a 
 
 
 ## Jak se ATA licencuje?
-Informace o licencování najdete v tématu [Jak koupit Advanced Threat Analytics](https://www.microsoft.com/server-cloud/products/advanced-threat-analytics/Purchasing.aspx).
+Informace o licencování najdete v tématu [Jak koupit Advanced Threat Analytics.](https://www.microsoft.com/cloud-platform/advanced-threat-analytics-pricing)
 
 
 ## Co mám dělat, když se ATA Gateway nespustí?
@@ -142,6 +142,6 @@ Ano, můžete zobrazit celkový stav nasazení a taky konkrétní problémy souv
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO2-->
 
 
