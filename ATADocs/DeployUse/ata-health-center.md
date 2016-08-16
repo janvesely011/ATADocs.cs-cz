@@ -1,20 +1,20 @@
 ---
-title: ATA Health Center | Microsoft Advanced Threat Analytics
+title: ATA Health Center | Microsoft ATA
 description: "ATA Health Center slouží ke kontrole, jak funguje služba ATA, a upozorňuje na potenciální problémy."
 keywords: 
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod: identity-ata
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology: 
 ms.assetid: d6c783b2-46c5-4211-b21a-d6b17f08d03d
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
-ms.openlocfilehash: b38b96f0b2e6061e97d8b46163a04d2310709491
+ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
+ms.openlocfilehash: 3f357d2b21c453e0057370f3dfbbe45e39f3ba97
 
 
 ---
@@ -41,11 +41,10 @@ Pokud chcete zkontrolovat celkový stav systému, klepněte na ikonu Health Cent
 ## Viz také
 - [Práce s nastavením detekce ATA](working-with-detection-settings.md)
 - [Práce s podezřelými aktivitami](working-with-suspicious-activities.md)
-- [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/
-- home?forum=mata)
+- [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO4-->
 
 

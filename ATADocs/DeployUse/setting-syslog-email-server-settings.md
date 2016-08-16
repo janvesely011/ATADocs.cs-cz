@@ -1,20 +1,20 @@
 ---
-title: "Nastavení oznámení ATA | Microsoft Advanced Threat Analytics"
+title: "Nastavení oznámení ATA | Microsoft ATA"
 description: "Popisuje, jak vám má ATA doručovat upozornění (e-mailem nebo předáváním událostí ATA) při zjištění podezřelých aktivit."
 keywords: 
 author: rkarlin
-manager: stevenpo
+manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: article
-ms.prod: identity-ata
+ms.prod: 
 ms.service: advanced-threat-analytics
-ms.technology: security
+ms.technology: 
 ms.assetid: 14cb7513-5dc8-49cb-b3e0-94f469c443dd
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8d1dedaf86031e8585cca23241aead58f7f3db4e
-ms.openlocfilehash: 66194d89c3e937923e576004a3ab4b7177f179c4
+ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
+ms.openlocfilehash: 10a7f4c003bc974d344129756f30df990dadf13d
 
 
 ---
@@ -78,6 +78,6 @@ Když ATA zjistí podezřelou aktivitu, může vás upozornit tak, že zašle up
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO4-->
 
 
