@@ -4,7 +4,7 @@ description: "Popisuje dvoufázový postup obnovení nebo nahrazení certifikát
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,20 +13,24 @@ ms.assetid: c8855287-de3b-4cdd-be8f-2128f48a6f27
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: 5ae9f13c417459e73d85cce3ebbb0293c3e08f83
+ms.sourcegitcommit: 050f1ef0b39d69b64ede53243a7fa2d33d0e4813
+ms.openlocfilehash: e707d354396f8eeed58c13ee1e9e91df9888e030
 
 
 ---
+
+*Platí pro: Advanced Threat Analytics verze 1.7*
+
+
 
 # Změna konfigurace ATA – certifikát ATA Center
 
 >[!div class="step-by-step"]
 [« IP adresa serveru ATA Center](modifying-ata-config-centerip.md)
-[IP adresa konzoly ATA »](modifying-ata-config-consoleip.md)
+[adresa URL konzoly ATA »](modifying-ata-config-consoleurl.md)
 
 ## Změna certifikátu ATA Center
-Pokud vaše certifikáty vyprší a je třeba je po instalaci nového certifikátu v úložišti místního počítače na server ATA Center obnovit nebo nahradit, nahraďte certifikát pomocí následujícího dvoufázového postupu:
+Pokud se blíží konec platnosti vašeho certifikátu a je třeba ho obnovit nebo nahradit po instalaci nového certifikátu v úložišti místního počítače na server ATA Center, nahraďte certifikát pomocí následujícího dvoufázového postupu:
 
 -   První fáze – Aktualizujte certifikát, který má služba ATA Center používat. V tomto okamžiku je služba ATA Center stále vázaná na původní certifikát. Pokud komponenty ATA Gateway synchronizují své konfigurace, budou mít dva potenciální certifikáty, které budou platné pro vzájemné ověřování. Dokud se komponenta ATA Gateway bude moct připojit pomocí původního certifikátu, nebude zkoušet nový.
 
@@ -35,6 +39,7 @@ Pokud vaše certifikáty vyprší a je třeba je po instalaci nového certifiká
 > [!NOTE]
 > -   Pokud během první fáze byla ATA Gateway offline a nikdy nezískala aktualizovanou konfiguraci, budete muset ručně aktualizovat konfigurační soubor JSON v ATA Gateway.
 > -   Komponenty ATA Gateway musí důvěřovat certifikátu, který používáte.
+> -   Certifikát se používá také pro konzolu ATA, takže by měl odpovídat adrese konzoly ATA, aby se předešlo zobrazování varování v prohlížeči.
 > -   Pokud potřebujete nasadit novou ATA Gateway po aktivaci nového certifikátu, budete muset znovu stáhnout instalační balíček ATA Gateway.
 
 1.  Otevřete konzolu ATA.
@@ -43,7 +48,7 @@ Pokud vaše certifikáty vyprší a je třeba je po instalaci nového certifiká
 
     ![Ikona nastavení konfigurace ATA](media/ATA-config-icon.JPG)
 
-3.  Vyberte **ATA Center**.
+3.  Vyberte možnost **Center**.
 
 4.  V části **Certifikát** vyberte jeden z certifikátů v seznamu.
 
@@ -61,15 +66,15 @@ Pokud vaše certifikáty vyprší a je třeba je po instalaci nového certifiká
 
 >[!div class="step-by-step"]
 [« IP adresa serveru ATA Center](modifying-ata-config-centerip.md)
-[IP adresa konzoly ATA »](modifying-ata-config-consoleip.md)
+[adresa URL konzoly ATA »](modifying-ata-config-consoleurl.md)
 
 ## Viz také
 - [Práce s konzolou ATA](working-with-ata-console.md)
 - [Instalace ATA](install-ata.md)
-- [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+- [Podívejte se na fórum ATA!](https://aka.ms/ata-forum)
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

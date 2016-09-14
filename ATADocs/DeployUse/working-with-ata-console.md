@@ -4,7 +4,7 @@ description: "Popisuje způsob přihlášení ke konzole ATA a její komponenty.
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,19 +13,22 @@ ms.assetid: 1bf264d9-9697-44b5-9533-e1c498da4f07
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: 1eb9397b541eb64cef553f61e8517568d16b0092
+ms.sourcegitcommit: a4ba68547d6746625a44aca5d05790c3ad138f4e
+ms.openlocfilehash: ab9abce7479971c80544476c54cbf0911d1a5822
 
 
 ---
+
+*Platí pro: Advanced Threat Analytics verze 1.7*
+
+
 
 # Práce s konzolou ATA
 
 Konzolu ATA použijte k monitorování a reakci na podezřelé aktivity, které detekuje ATA.
 
 ## Povolení přístupu ke konzole ATA
-Oprávnění pro přihlášení ke konzole ATA a správě nastavení ATA má každý uživatel, který je členem místní skupiny Administrators na serveru ATA Center.
-Pokud chcete, aby uživatel měl přístup ke konzole ATA a nebyl přitom správce, přidejte ho do místní skupiny **Microsoft Advanced Threat Analytics Administrators**.
+Na úspěšně přihlášení ke konzole ATA je nutné se přihlásit jako uživatel, který byl přiřazen správné roli ATA pro přístup ke konzole ATA. Další informace o řízení přístupu na základě rolí (RBAC) v ATA najdete v článku [Práce se skupinami rolí ATA](ata-role-groups.md).
 
 ## Přihlášení ke konzole ATA
 
@@ -38,10 +41,8 @@ Pokud chcete, aby uživatel měl přístup ke konzole ATA a nebyl přitom správ
 
 2.  Zadejte uživatelské jméno a heslo a klikněte na **Přihlásit**.
 
-![Obrázek přihlašovací obrazovky ATA](media/ATA-log-in-screen.jpg)
+![Obrázek přihlašovací obrazovky ATA](media/ATA-log-in-screen.png)
 
-> [!NOTE]
-> Musíte se přihlásit jako uživatel, který je členem místní skupiny správců NEBO skupiny Microsoft Advanced Threat Analytics Administrators.
 
 ## Konzola ATA
 
@@ -54,7 +55,7 @@ Toto jsou klíčové prvky konzoly ATA.
 
 Toto je výchozí cílová stránka, která se vám zobrazí po přihlášení ke konzole ATA. Ve výchozím nastavení jsou všechny otevřené podezřelé aktivity zobrazené na časové ose útoků. Časová osa útoků umožňuje filtrovat a zobrazit všechny podezřelé aktivity nebo jenom otevřené, vyřešené nebo zamítnuté aktivity. Můžete také zjistit závažnost, která se jednotlivým aktivitám přiřadila.
 
-![Obrázek časové osy útoku ATA](media/attack-timeline.png)
+![Obrázek časové osy útoku ATA](media/attack-timeline-1.7.png)
 
 Další informace najdete v tématu [Práce s podezřelými aktivitami](/advanced-threat-analytics/deploy-use/working-with-suspicious-activities).
 
@@ -62,7 +63,7 @@ Další informace najdete v tématu [Práce s podezřelými aktivitami](/advance
 
 Když se detekuje nová podezřelá aktivita, na pravé straně se automaticky otevře oznamovací pruh. Pokud byly od posledního přihlášení zjištěné nové podezřelé aktivity, oznamovací pruh se otevře hned po vašem úspěšném přihlášení. Oznamovací pruh můžete kdykoli vyvolat kliknutím na šipku napravo.
 
-![Obrázek oznamovacího pruhu ATA](media/notification-bar.png)
+![Obrázek oznamovacího pruhu ATA](media/notification-bar-1.7.png)
 
 ### Panel filtrování
 
@@ -78,7 +79,7 @@ Panel hledání najdete v horní nabídce. Umožňuje v ATA vyhledat konkrétní
 
 Health Center zobrazuje výstrahy, pokud v nasazení ATA něco nefunguje tak, jak má.
 
-![Obrázek ATA Health Center](media/health-center.png)
+![Obrázek ATA Health Center](media/ATA-Health-Issue.jpg)
 
 Kdykoli váš systém narazí na problém, jako je třeba chyba připojení nebo odpojení komponenty ATA Gateway, ikona Health Center vás na tuto skutečnost upozorní zobrazením červené tečky. ![Obrázek červené tečky ATA Health Center](media/ATA-Health-Center-Alert-red-dot.png)
 
@@ -124,6 +125,6 @@ Pokud na libovolném místě konzoly, kde se prezentuje jedna entita, jako je u�
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 
