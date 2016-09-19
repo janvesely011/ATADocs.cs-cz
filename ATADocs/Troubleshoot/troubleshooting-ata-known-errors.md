@@ -4,7 +4,7 @@ description: "Popisuje, jak je v ATA možné řešit běžné chyby."
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,15 @@ ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: 6be26fd2d0348557fa7b1c78533eed8a2be1a39f
+ms.sourcegitcommit: 15c1a0d7ae213876c0e3a955eaeea8887281b4e6
+ms.openlocfilehash: b073a1b969f8841c9bbe540722349a5ef70340d4
 
 
 ---
+
+*Platí pro: Advanced Threat Analytics verze 1.7*
+
+
 
 # Řešení potíží s protokolem chyb ATA
 Tato část podrobně popisuje možné chyby v nasazení ATA a kroky potřebné k jejich vyřešení.
@@ -33,10 +37,14 @@ Tato část podrobně popisuje možné chyby v nasazení ATA a kroky potřebné 
 |Microsoft.Tri.Infrastructure.ContractException: Výjimka kontraktu|Komponentě ATA Gateway se nepovedlo synchronizovat konfiguraci z ATA Center.|Dokončete konfiguraci ATA Gateway v ATA Console.|
 |System.Reflection.ReflectionTypeLoadException: Jeden nebo několik požadovaných typů nejde načíst. Pokud chcete získat další informace, načtěte vlastnost LoaderExceptions.|Na ATA Gateway je nainstalovaný Message Analyzer.| Odinstalujte Message Analyzer.|
 |Chyba [Layout] System.OutOfMemoryException: Vyvolala se výjimka typu System.OutOfMemoryException.|ATA Gateway nemá dost paměti.|Zvětšete velikost dostupné paměti na řadiči domény.|
-|Spuštění živého příjemce se nepovedlo ---> Microsoft.Opn.Runtime.Monitoring.MessageSessionException: Poskytovatel události PEFNDIS není připravený.|Modul PEF (Message Analyzer) se nenainstaloval správně.|Se žádostí o alternativní řešení se obraťte na podporu.|
+|Spuštění živého příjemce se nepovedlo ---> Microsoft.Opn.Runtime.Monitoring.MessageSessionException: Poskytovatel události PEFNDIS není připravený.|Modul PEF (Message Analyzer) se nenainstaloval správně.|Pokud používáte Hyper-V, zkuste upgradovat integrační služby Hyper-V, nebo se se žádostí o alternativní řešení obraťte na podporu.|
 |Instalace se nepovedla s chybou: 0x80070652|Ve vašem počítači čekají na dokončení další instalace.|Počkejte na dokončení ostatních instalací a v případě potřeby restartujte počítač.|
+|System.InvalidOperationException: Instance 'Microsoft.Tri.Gateway' v určené kategorii neexistuje.|Pro názvy procesů v bráně ATA byl povolen identifikátor PID|PID v názvech procesů zakážete pomocí [KB281884](https://support.microsoft.com/en-us/kb/281884)|
+|System.InvalidOperationException: Kategorie neexistuje.|Čítače můžou být v registru zakázané|Čítače výkonu znovu sestavíte pomocí [KB2554336](https://support.microsoft.com/en-us/kb/2554336)|
+|System.ApplicationException: Není možné spustit relaci ETW MMA-ETW-Livecapture-a4f595bd-f567-49a7-b963-20fa4e370329|V souboru hostitelů se nachází položka hostitele odkazující na krátký název počítače|Odeberte položku hostitele ze souboru C:\Windows\System32\drivers\etc\HOSTS nebo ji změňte na FQDN.|
 
-## Chyby konzoly ATA
+
+## Chyby služby IIS konzoly ATA (není k dispozici pro ATA v1.7 a novější)
 |Chyba|Popis|Řešení|
 |-------------|----------|---------|
 |Chyba protokolu HTTP 500.19 – vnitřní chyba serveru|Nepovedlo se správně nainstalovat modul IIS URL Rewrite.|Odinstalujte modul IIS URL a nainstalujte ho znovu.<br>[Stáhnout modul IIS URL Rewrite](http://go.microsoft.com/fwlink/?LinkID=615137)|
@@ -58,6 +66,6 @@ Tato část podrobně popisuje možné chyby v nasazení ATA a kroky potřebné 
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

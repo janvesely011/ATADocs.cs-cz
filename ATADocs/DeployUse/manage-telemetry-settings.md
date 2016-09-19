@@ -4,7 +4,7 @@ description: "Popisuje data shromážděná ATA a poskytuje postup, jak shromaž
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,15 @@ ms.assetid: 8c1c7a1b-a3de-4105-9fd0-08a061952172
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: 7e849e9d902873cec7140a14b6f0709d3ef9ddd1
+ms.sourcegitcommit: 3a7e375da4acd5546347310c5965394b2addfe63
+ms.openlocfilehash: 0c6b8589fffe24298d0caf2cf2eb5e7e817e4da2
 
 
 ---
+
+*Platí pro: Advanced Threat Analytics verze 1.7*
+
+
 
 # Správa nastavení telemetrie
 Advanced Threat Analytics (ATA) shromažďuje anonymních telemetrická data o ATA a odesílá je přes připojení HTTPS na servery Microsoftu.  Tato data Microsoft používá k vylepšení budoucích verzích ATA.
@@ -63,6 +67,21 @@ Shromážděná anonymizovaná data zahrnují následující:
 
     -   Zadaný vstup
 
+- Problémy se stavem – pro každý problém se stavem jsou shromažďovány následující anonymizované údaje:
+
+    (Názvy počítačů, uživatelská jména a IP adresy se neshromažďují.)
+
+    -   Typ problému se stavem
+
+    -   ID problému se stavem
+
+    -   Stav
+
+    -   Počáteční a koncový čas
+
+- Adresa URL konzoly ATA – adresy URL při používání konzoly ATA, tzn. navštívené stránky v konzole ATA.
+
+
 ### Zakázání shromažďování dat
 Chcete-li zastavit shromažďování a odesílání telemetrických dat Microsoftu, proveďte následující kroky:
 
@@ -76,6 +95,6 @@ Chcete-li zastavit shromažďování a odesílání telemetrických dat Microsof
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

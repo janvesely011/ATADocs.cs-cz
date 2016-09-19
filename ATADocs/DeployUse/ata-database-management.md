@@ -13,11 +13,15 @@ ms.assetid: 1d27dba8-fb30-4cce-a68a-f0b1df02b977
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: 83222c6d29434d93fa1b5ecd613de30408ccfe59
+ms.sourcegitcommit: 5cd030f3b952d08c6617a6cda121c344a9c36f51
+ms.openlocfilehash: b4e68e9e8dbd94075a34a8e3e8f42d4f534caf50
 
 
 ---
+
+*Platí pro: Advanced Threat Analytics verze 1.7*
+
+
 
 # Správa databáze ATA
 Když potřebujete přesunout, zálohovat nebo obnovit databázi ATA, použijte tyto postupy pro práci s MongoDB.
@@ -46,17 +50,18 @@ Viz [příslušná dokumentace k MongoDB](http://docs.mongodb.org/manual/adminis
 
 6.  Spusťte službu **MongoDB**.
 
-7.  Otevřete příkazový řádek a spusťte prostředí Mongo spuštěním `mongo.exe ATA`.
+7. Spusťte službu **Microsoft Advanced Threat Analytics Center**.
 
-    Standardně je mongo.exe umístěný v adresáři C:\Program Files\Microsoft rozšířené hrozba Analytics\Center\MongoDB\bin.
+## Konfigurační soubor ATA
+Konfigurace ATA je uložená v databázi v kolekci SystemProfile.
+Tato kolekce se zálohuje každou hodinu službou ATA Center do souboru s názvem „SystemProfile_*časové-razítko*.json“. Ukládá se 10 posledních verzí.
+Je umístěný v podsložce s názvem Backup. Ve výchozím umístění instalace ATA se nachází tady: *C:\Program Files\Microsoft Advanced Threat Analytics\Center\Backup\SystemProfile_*časové-razítko*.json*. 
 
-8.  Spusťte následující příkaz: `db.SystemProfiles.update( {_t: "CenterSystemProfile"} , {$set:{"Configuration.CenterDatabaseClientConfiguration.DataPath" : "<New DB Location>"}})`
+**Poznámka:** Doporučujeme, abyste si tento soubor někam zazálohovali, pokud v ATA provádíte velké změny.
 
-   Místo <New DB Location>, kde `&lt;New DB Location&gt;` je nová cesta ke složce.
+Je možné obnovit všechna nastavení spuštěním následujícího příkazu:
 
-9.  Aktualizujte HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Advanced Threat Analytics\Center\DatabaseDataPath na novou cestu ke složce.
-
-9. Spusťte službu **Microsoft Advanced Threat Analytics Center**.
+`mongoimport.exe --db ATA --collection SystemProfile --file "<SystemProfile.json backup file>" --upsert`
 
 ## Viz také
 - [Architektura ATA](/advanced-threat-analytics/plan-design/ata-architecture)
@@ -66,6 +71,6 @@ Viz [příslušná dokumentace k MongoDB](http://docs.mongodb.org/manual/adminis
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

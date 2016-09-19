@@ -4,7 +4,7 @@ description: "Popisuje, jak změnit IP adresu, port nebo certifikát pro ATA Cen
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,15 @@ ms.assetid: 93b27f15-f7e5-49bb-870a-d81d09dfe9fc
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: 4eb552b9f7d42895abf08ec4cd9216b5204c5e0b
+ms.sourcegitcommit: 050f1ef0b39d69b64ede53243a7fa2d33d0e4813
+ms.openlocfilehash: e6d42610d1c785da5b7c7b1cf035d94c2fddff4b
 
 
 ---
+
+*Platí pro: Advanced Threat Analytics verze 1.7*
+
+
 
 # Změna konfigurace ATA – IP adresa ATA Center
 
@@ -46,9 +50,9 @@ Komponenty ATA Gateway místně ukládají IP adresu pro ATA Center, ke kterému
 
     ![Ikona nastavení konfigurace ATA](media/ATA-config-icon.JPG)
 
-3.  Vyberte **Obecné**.
+3.  Vyberte možnost **Center**.
 
-4.  V části **ATA Center Service IP address: port** (IP adresa služby ATA Center: port) vyberte některou z existujících IP adres nebo vyberte **Add custom IP address** (Přidat vlastní IP adresu) a zadejte IP adresu.
+4.  V části **Center Service IP address: port** (IP adresa služby Center: port) vyberte některou z existujících IP adres nebo vyberte **Add custom IP address** (Přidat vlastní IP adresu) a zadejte IP adresu.
 
 5.  Klikněte na **Uložit**.
 
@@ -76,10 +80,10 @@ Komponenty ATA Gateway místně ukládají IP adresu pro ATA Center, ke kterému
 ## Viz také
 - [Práce s konzolou ATA](working-with-ata-console.md)
 - [Instalace ATA](install-ata.md)
-- [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+- [Podívejte se na fórum ATA!](https://aka.ms/ata-forum)
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

@@ -4,7 +4,7 @@ description: "V posledním kroku instalace ATA nakonfigurujete podsítě s krát
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/28/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,36 +13,47 @@ ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: c9712b0ad8d67b1e618cb75b14785f8079020864
+ms.sourcegitcommit: e3b690767e5c6f5561a97a73eccfbf50ddb04148
+ms.openlocfilehash: 57fe1272e95f69ef9d614505bbef0bb6c1d8ccb6
 
 
 ---
+
+*Platí pro: Advanced Threat Analytics verze 1.7*
+
+
 
 # Instalace ATA – Krok 6
 
 >[!div class="step-by-step"]
 [« Krok 5](install-ata-step5.md)
 
-## Krok 6: Konfigurace podsítí s krátkodobým zapůjčením a uživatele honeytokenu
-Podsítě s krátkodobým zapůjčením jsou podsítě, ve kterých se přiřazení IP adresy mění velmi rychle – během několika sekund nebo minut. Příkladem jsou IP adresy použité pro připojení VPN a IP adresy pro Wi-Fi. Pokud chcete zadat seznam podsítí s krátkodobým zapůjčením, které se používají ve vaší organizaci, postupujte takto:
+## Krok 6: Konfigurace vyloučení IP adres a uživatele honeytokenu
+ATA umožňuje vyloučení určitých IP adres a podsítí protokolu IP ze dvou typů detekcí: **DNS Reconnaissance** a **Pass-the-Ticket**. 
 
-1.  Z konzoly ATA na počítači ATA Gateway klikněte na ikonu nastavení a vyberte **Konfigurace**.
+Například při **vyloučení DNS Reconnaissance** se může jednat o kontrolu zabezpečení, která jako mechanismus pro prohledávání používá službu DNS. Vyloučení pomáhá službě ATA takové kontroly ignorovat. Příkladem vyloučení *Pass-the-Ticket* je zařízení NAT.    
+
+ATA také umožňuje konfiguraci uživatele honeytokenu, který slouží jako past pro útočníky – jakákoliv autorizace přidružená k tomuto účtu (obvykle neaktivnímu) spustí výstrahu.
+
+Výše uvedené možnosti nakonfiguruje následovně:
+
+1.  V konzole ATA klikněte na ikonu nastavení a vyberte **Konfigurace**.
 
     ![Nastavení konfigurace ATA](media/ATA-config-icon.JPG)
 
-2.  V části **Detekce** zadejte pro podsítě s krátkodobým zapůjčením následující údaje. Zadejte podsítě s krátkodobým zapůjčením pomocí formátu zápisu s lomítkem, například `192.168.0.0/24`, a klikněte na symbol plus.
+2.  V části **Vyloučení detekcí** zadejte následující pro IP adresy *DNS Reconnaissance* nebo *Pass-the-Ticket* . Použijte například formát CIDR:  `192.168.1.0/24` a klikněte na znaménko *plus*.
 
-3.  Jako SID účtů honeytokenu zadejte SID pro uživatelský účet, který nebude mít žádnou síťovou aktivitu, a klikněte na symbol plus. Příklad: `S-1-5-21-72081277-1610778489-2625714895-10511`.
+    ![Uložení změn](media/ATA-exclusions.png)
+
+3.  V části **Nastavení detekce** zadejte identifikátory SID účtu Honeytoken a klikněte na znaménko plus. Příklad: `S-1-5-21-72081277-1610778489-2625714895-10511`.
+
+    ![Nastavení konfigurace ATA](media/ATA-honeytoken.png)
 
     > [!NOTE]
     > Pokud chcete zjistit SID pro uživatele, najděte ho v konzole ATA a potom klikněte na kartu **Informace o účtu**. 
 
-4.  Konfigurace vyloučení: Můžete nakonfigurovat IP adresy, které mají být vyloučené z konkrétní podezřelých aktivit. Další informace najdete v tématu [Práce s nastavením detekce ATA](working-with-detection-settings.md).
+4.  Klikněte na **Uložit**.
 
-5.  Klikněte na **Uložit**.
-
-![Uložení změn](media/ATA-VPN-Subnets.JPG)
 
 Blahopřejeme, úspěšně jste nasadili Microsoft Advanced Threat Analytics.
 
@@ -64,6 +75,6 @@ ATA okamžitě spustí vyhledávání podezřelých aktivit. Některé aktivity,
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

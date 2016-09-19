@@ -4,7 +4,7 @@ description: "Druhý krok instalace ATA vám pomůže nakonfigurovat nastavení 
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,15 @@ ms.assetid: e1c5ff41-d989-46cb-aa38-5a3938f03c0f
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: 65ec5c86478e9ded096b899d64eb257257095eaf
+ms.sourcegitcommit: 050f1ef0b39d69b64ede53243a7fa2d33d0e4813
+ms.openlocfilehash: fc268bcb2e3d027b09fa3349427934f60783b971
 
 
 ---
+
+*Platí pro: Advanced Threat Analytics verze 1.7*
+
+
 
 # Instalace ATA – Krok 2
 
@@ -25,28 +29,24 @@ ms.openlocfilehash: 65ec5c86478e9ded096b899d64eb257257095eaf
 [« Krok 1](install-ata-step1.md)
 [Krok 3 »](install-ata-step3.md)
 
-## Krok 2: Konfigurace obecného nastavení ATA Gateway
-Nastavení v části **Obecné** platí pro všechny komponenty ATA Gateway, které spravuje ATA Center.
+## Krok 2: Zadejte uživatelské jméno a heslo pro připojení k vaší doménové struktuře Active Directory.
 
-Pokud chcete konfigurovat obecné nastavení ATA Gateway, postupujte takto:
+Při prvním otevření konzoly ATA se objeví následující obrazovka:
 
-1.  Otevřete konzolu ATA a přihlaste se. Pokyny najdete v tématu [Práce s konzolou ATA](working-with-ata-console.md).
+![Uvítání ATA fáze 1](media/ATA_1.7-welcome-provide-username.png)
 
-2.  Klikněte na ikonu Nastavení a vyberte **Konfigurace**.
-
-    ![Nastavení konfigurace ATA Gateway](media/ATA-config-icon.JPG)
-
-3.  Na kartě **Obecné** v části **ATA Gateways** zadejte následující informace a klikněte na **Uložit**.
+1.  Zadejte následující informace a klikněte na **Uložit**.
 
     |Pole|Komentáře|
     |---------|------------|
-    |**Uživatelské jméno** (povinné)|Zadejte uživatelské jméno jen pro čtení, například **uživatel1**.|
-    |**Heslo** (povinné)|Zadejte heslo pro uživatele, který je jen pro čtení, například **Pencil1**. **Poznámka:** Zkontrolujte, že je toto heslo správné. Pokud uložíte chybné heslo, služba ATA se na serverech ATA Gateway zastaví.|
+    |**Uživatelské jméno** (povinné)|Zadejte uživatelské jméno jen pro čtení, například **ATAuser**.|
+    |**Heslo** (povinné)|Zadejte heslo pro uživatele, který je jen pro čtení, například **Pencil1**.|
     |**Doména** (povinné)|Zadejte doménu pro uživatele, který je jen pro čtení, například **contoso.com**. **Poznámka:** Je důležité, abyste zadali kompletní plně kvalifikovaný název domény, ve které je uživatel umístěný. Pokud je například účet uživatele v doméně corp.contoso.com, musíte zadat `corp.contoso.com`, a ne contoso.com.|
     |Automaticky aktualizovat všechny komponenty ATA Gateway |Pokud povolíte toto nastavení, ve vydáních příštích verzí se při aktualizaci komponenty ATA Center budou automaticky aktualizovat všechny komponenty ATA Gateway.|
 
-    ![Obrázek nastavení připojení k doméně ATA](media/ata-domain-connectivity-user.jpg)
+    Po uložení se uvítací zpráva na konzole změní na následující: ![Uvítání ATA fáze 1 dokončeno](media/ATA_1.7-welcome-provide-username-finished.png)
 
+2. Na konzole pokračujte kliknutím na **Stáhnout instalační soubor brány a nainstalovat první bránu**.
 
 
 >[!div class="step-by-step"]
@@ -62,6 +62,6 @@ Pokud chcete konfigurovat obecné nastavení ATA Gateway, postupujte takto:
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

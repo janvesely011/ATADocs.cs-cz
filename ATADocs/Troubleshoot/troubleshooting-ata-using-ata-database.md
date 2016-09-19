@@ -4,7 +4,7 @@ description: "Popisuje, jak můžete databázi ATA použít k řešení potíž�
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,15 @@ ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: c86b6dc880238e262f696e88c54bc1bc7e01a1db
+ms.sourcegitcommit: af0508f82d8cf190dcd3ff058f4c2ff37b4b0595
+ms.openlocfilehash: dfc6c902cb13b1a2bf927cd235806ec32d9fefc3
 
 
 ---
+
+*Platí pro: Advanced Threat Analytics verze 1.7*
+
+
 
 # Řešení potíží s ATA pomocí databáze ATA
 ATA používá jako svou databázi MongoDB.
@@ -45,15 +49,6 @@ Následující příklad uvádí ukázku kódu pomocí syntaxe uvedené výše. 
 `db.UniqueEntity.find({Name: "John Doe"})`<br>Poznamenejte si jeho ID, které je uvedené hodnotou `_id`. Pro náš příklad předpokládejme, že toto ID je `123bdd24-b269-h6e1-9c72-7737as875351`.<br>Potom vyhledejte kolekci s nejbližším datum, které je před hledaným datem, v našem příkladu 20. říjnem 2015.<br>Poté vyhledejte aktivity NTLM účtu uživatele John Doe: 
 
 `db.Ntlms_<closest date>.find({SourceAccountId: "123bdd24-b269-h6e1-9c72-7737as875351"})`
-## Konfigurační soubor ATA
-Konfigurace ATA je uložená v databázi v kolekci SystemProfile.
-Tato kolekce se zálohuje každou hodinu službou ATA Center do souboru s názvem SystemProfile.json. Je umístěný v podsložce s názvem Backup. Ve výchozím umístění instalace ATA se nachází tady: **C:\Program Files\Microsoft Advanced Threat Analytics\Center\Backup\SystemProfile.json**. 
-
-**Poznámka:** Doporučujeme, abyste si tento soubor někam zazálohovali, pokud v ATA provádíte velké změny.
-
-Je možné obnovit všechna nastavení spuštěním následujícího příkazu:
-
-`mongoimport.exe --db ATA --collection SystemProfile --file "<SystemProfile.json backup file>" --upsert`
 
 ## Viz také
 - [Požadavky ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
@@ -64,6 +59,6 @@ Je možné obnovit všechna nastavení spuštěním následujícího příkazu:
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 
