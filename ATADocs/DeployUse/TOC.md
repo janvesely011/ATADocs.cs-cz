@@ -1,10 +1,10 @@
 # [Porozumění a prozkoumávání](/advanced-threat-analytics/understand-explore/what-is-ata)
 # [Plánování a navrhování](/advanced-threat-analytics/plan-design/ata-capacity-planning)
-# [Nasazení a používání](install-ata.md)
+# [Nasazení a používání](preinstall-ata.md)
 ## [Než nainstalujete ATA](preinstall-ata.md)
 ### [Konfigurace zrcadlení portů](configure-port-mirroring.md)
 ### [Ověření zrcadlení portů](validate-port-mirroring.md)
-### [Konfigurace shromažďování událostí](configure-event-collection.md)
+### [Konfigurace sběru událostí](configure-event-collection.md)
 ## [Instalace ATA](install-ata.md)
 ### [Krok 1](install-ata-step1.md)
 ### [Krok 2](install-ata-step2.md)
@@ -17,12 +17,12 @@
 ### [Změna konfigurace ATA](modifying-ata-configuration.md)
 #### [Změna IP adresy ATA Center](modifying-ata-config-centerip.md)
 #### [Změna certifikátu ATA Center](modifying-ata-config-centercert.md)
-#### [Změna IP adresy konzoly ATA](modifying-ata-config-consoleip.md)
-#### [Změna certifikátu IIS](modifying-ata-config-iiscert.md)
+#### [Změna adresy URL konzoly ATA](modifying-ata-config-consoleurl.md)
 #### [Změna hesla připojení k doméně](modifying-ata-config-dcpassword.md)
 ### [Práce s konzolou ATA](working-with-ata-console.md)
-### [Nastavení výstrah ATA](setting-ata-alerts.md)
+### [Skupiny rolí ATA](ata-role-groups.md)
 ### [Nastavení e-mailového serveru a serveru Syslog](setting-syslog-email-server-settings.md)
+### [Nastavení výstrah ATA](setting-ata-alerts.md)
 ### [Práce s nastavením detekce](working-with-detection-settings.md)
 ### [ATA Health Center](ata-health-center.md)
 ### [Práce s podezřelými aktivitami](working-with-suspicious-activities.md)
@@ -31,6 +31,6 @@
 # [Řešení problémů](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs)
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO5-->
 
 

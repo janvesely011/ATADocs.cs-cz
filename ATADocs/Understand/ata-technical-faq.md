@@ -4,7 +4,7 @@ description: "Seznam nejčastějších dotazů týkajících se ATA a souvisejí
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,12 @@ ms.assetid: a7d378ec-68ed-4a7b-a0db-f5e439c3e852
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 09de79e1f8fee6b27c7ba403df1af4431bd099a9
-ms.openlocfilehash: 51440757c89130f8454e9c2b1abe7182f2b7eb41
+ms.sourcegitcommit: b8ad2f343b8397184cd860803f06b0d59c492f5a
+ms.openlocfilehash: 96b3ce171ca07bf44163d49b50377fccd6472a08
 
 
 ---
+*Platí pro: Advanced Threat Analytics verze 1.7*
 
 # Nejčastější dotazy k ATA
 Tento článek obsahuje seznam nejčastějších dotazů týkajících se ATA a poskytuje podrobné informace a odpovědi.
@@ -39,23 +40,26 @@ Pomocí jedné z následujících akcí můžete simulovat podezřelé aktivity 
 To je potřeba spustit vzdáleně nikoli z komponenty ATA Gateway, ale nad monitorovaným řadičem domény.
 
 ## Jak ověřím předávání událostí systému Windows?
-Z příkazového řádku v adresáři můžete spustit tento příkaz: **\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin**:
+Do souboru můžete vložit tento kód a pak jej z příkazového řádku v adresáři: **\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin** můžete spustit následovně:
 
-        mongo ATA --eval "printjson(db.getCollectionNames())" | find /C "NtlmEvents"`
+mongo.exe název souboru ATA
+
+        db.getCollectionNames().forEach(function(collection) {
+        if (collection.substring(0,10)=="NtlmEvent_") {
+                if (db[collection].count() > 0) {
+                                  print ("Found "+db[collection].count()+" NTLM events") 
+                                }
+                }
+        });
+
 ## Funguje ATA při šifrovaném provozu?
-Šifrovaný provoz se nebude analyzovat (příklad: LDAPS, IPSEC ESP).
+ATA se spoléhá na analýzu řady síťových protokolů a událostí shromažďovaných ze systému SIEM nebo prostřednictvím předávání událostí systému Windows, i když se tedy nebude analyzovat šifrovaný provoz (například LDAPS nebo IPSEC ESP) ATA fungovat nepřestane a na většinu detekcí to nebude mít vliv
+
 ## Funguje ATA s obranou protokolu Kerberos?
 ATA podporuje povolení obrany protokolu Kerberos, která se také označuje jako architektura FAST (Flexible Authentication Secure Tunneling). Výjimkou je detekce typu over-pass-the-hash, která nebude fungovat.
 ## Kolik komponent ATA Gateways budu potřebovat?
 
-Za prvé se doporučuje použít ATA Lightweight Gateway pro všechny řadiče domény, které to umožňují. Potřebné informace najdete v části [Velikosti pro ATA Lightweight Gateway](/advanced-threat-analytics/plan-design/ata-capacity-planning#ata-lightweight-gateway-sizing). 
-
-Pokud se všechny řadiče domény dají pokrýt komponentami ATA Lightweight Gateway, žádné ATA Gateway nejsou potřeba.
-
-Pokud máte řadiče domény, které nejde pokrýt komponentami ATA Lightweight Gateway, při rozhodování o tom, kolik komponent ATA Gateway budete potřebovat, vezměte v úvahu tyto aspekty:
-
- - Celkový objem provozu, které vaše řadiče domény produkují, a také síťovou architekturu (kvůli konfiguraci zrcadlení portů). Další informace o způsobu určení, kolik provozu vaše řadiče domény produkují, najdete v tématu [Odhad provozu řadiče domény](/advanced-threat-analytics/plan-design/ata-capacity-planning#Domain-controller-traffic-estimation).
- - To, kolik komponent ATA Gateway budete potřebovat k podpoře všech řadičů domény, určují také provozní omezení pro zrcadlení portů. Může to být například podle přepínačů, podle datových center nebo podle oblastí – každé prostředí má svá specifika. 
+Počet komponent ATA Gateway závisí na rozvržení sítě, objemu paketů a objemu událostí, které konzola ATA zaznamená. Pokud chcete určit přesný počet, přejděte do části [Velikosti pro ATA Lightweight Gateway](/advanced-threat-analytics/plan-design/ata-capacity-planning#ata-lightweight-gateway-sizing). 
 
 ## Jak velké úložiště budu pro ATA potřebovat?
 Pro jeden plný den s průměrem 1000 paketů/s budete potřebovat 0,3 GB úložiště.<br /><br />Další informace o určení velikosti pro ATA Center najdete v tématu [Plánování kapacity ATA](/advanced-threat-analytics/plan-design/ata-capacity-planning).
@@ -79,11 +83,10 @@ Pokud se virtuální řadič domény nedá pokrýt komponentou ATA Lightweight G
 Musí se zálohovat dvě věci:
 
 -   Provoz a události, které ATA ukládá. K jejich zálohování se dá využít libovolná podporovaná procedura zálohování databází. Další informace najdete v tématu [Správa databází ATA](/advanced-threat-analytics/deploy-use/ata-database-management). 
--   Konfigurace ATA, která je uložena v databázi a automaticky se zálohuje každou hodinu. 
-
+-   Konfigurace konzoly ATA. Konfigurace je uložena v databázi a každou hodinu se automaticky zálohuje do složky **Zálohování** v umístění v rámci nasazení ATA Center.  Další informace získáte v části [Správa databáze ATA](https://docs.microsoft.com/en-us/advanced-threat-analytics/deploy-use/ata-database-management).
 ## Co ATA dokáže rozpoznat?
 ATA rozpoznává známé nebezpečné útoky a techniky, problémy zabezpečení a rizika.
-Úplný seznam toho, co ATA detekuje, najdete v tématu [Co je Microsoft Advanced Threat Analytics?](what-is-ata.md).
+Úplný seznam detekcí ATA najdete v tématu [Jaké detekce ATA provádí?](ata-threats.md).
 
 ## Jaký druh úložiště budu pro ATA potřebovat?
 Doporučujeme rychlé úložiště (nikoli disky s 7200 ot./min) s nízkými hodnotami latence (méně než 10 ms). Konfigurace RAID vy měla podporovat velkou zátěž při zápisu (nikoli RAID-5/6 nebo odvozené konfigurace).
@@ -97,7 +100,7 @@ Se systémy SIEM ATA využívá obousměrnou integraci:
 1. Pro případ podezřelých aktivit se v ATA dá nakonfigurovat odesílání výstrahy Syslog na libovolný server SIEM s využitím formátu CEF.
 2. V ATA se dá nakonfigurovat příjem zpráv z [těchto systémů SIEM](/advanced-threat-analytics/deploy-use/configure-event-collection#siem-support) pro všechny události systému Windows s ID 4776.
 
-## Může ATA monitorovat řadiče domény vizualizované ve vašem řešení IaaS?
+## Může ATA monitorovat řadiče domény virtualizované ve vašem řešení IaaS?
 
 Ano, ATA Lightweight Gateway se dá použít k monitorování řadičů domény, které jsou v libovolném řešení IaaS.
 
@@ -126,8 +129,7 @@ Ne. ATA monitoruje všechna zařízení v síti, která zpracovávají požadavk
 Ano. Vzhledem k tomu, že účty počítačů se (stejně jako ostatní entity) dají využít k provádění škodlivých aktivit, ATA monitoruje chování všech účtů počítačů a všechny ostatní entity v příslušném prostředí.
 
 ## Může ATA podporovat několik domén a doménových struktur?
-Ve fázi obecné dostupnosti bude Microsoft Advanced Threat Analytics podporovat několik domén se stejnou hranicí doménové struktury. Doménová struktura samotná je skutečnou „hranicí zabezpečení“, takže poskytnutí vícedoménové podpory umožní našim zákazníkům zajistit 100% pokrytí jejich prostředí pomocí ATA.
-
+Microsoft Advanced Threat Analytics podporuje prostředí s více doménami v rámci stejné doménové struktury. Více doménových struktur vyžaduje nasazení ATA pro každou doménovou strukturu.
 ## Dá se zjistit celkový stav nasazení?
 Ano, můžete zobrazit celkový stav nasazení a taky konkrétní problémy související s konfigurací, možnostmi připojení atd. Když k nim dojde, dostanete upozornění.
 
@@ -142,6 +144,6 @@ Ano, můžete zobrazit celkový stav nasazení a taky konkrétní problémy souv
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Aug16_HO5-->
 
 

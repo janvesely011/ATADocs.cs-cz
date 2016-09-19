@@ -4,7 +4,7 @@ description: "Pomůže vám naplánovat nasazení a určit, kolik serverů ATA b
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: get-started-article
 ms.service: advanced-threat-analytics
 ms.prod: 
@@ -12,11 +12,15 @@ ms.assetid: 279d79f2-962c-4c6f-9702-29744a5d50e2
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: e0174ecac39b2a8cd469ed698853c447a85e4251
+ms.sourcegitcommit: e3b690767e5c6f5561a97a73eccfbf50ddb04148
+ms.openlocfilehash: 09bf48be4c651af6ca1ae66a47f940d504570c8a
 
 
 ---
+
+*Platí pro: Advanced Threat Analytics verze 1.7*
+
+
 
 # Plánování kapacity ATA
 Toto téma vám pomůže určit, kolik serverů ATA bude potřeba k monitorování vaší sítě, kolik komponent ATA Gateway nebo ATA Lightweight Gateway potřebujete a jakou kapacitu serveru vyžadují ATA Center a komponenty ATA Gateway.
@@ -41,8 +45,7 @@ Následující části uvádějí pokyny, jak shromáždit čítač paketů za s
 
 ### Nastavení velikosti ATA Center
 Pro vypracování analýzy chování uživatelů vyžaduje ATA Center data za nejméně 30 dnů. Požadované místo na disku pro databázi ATA na každý řadič domény je definováno níže. Pokud máte víc řadičů domény, sečtěte požadovaná místa na disku pro jednotlivé řadiče domény, abyste vypočítali celkovou velikost požadovaného místa pro databázi ATA.
-> [!NOTE] 
-> Pokud se spustí jako dynamická paměť virtuálního počítače nebo libovolná jiná paměť, funkce rozšiřování rozsahů stránek se nepodporuje.
+ 
 
 |Pakety za sekundu&#42;|Procesor (jádra&#42;&#42;)|Paměť (GB)|Úložiště databáze za den (GB)|Úložiště databáze za měsíc (GB)|IOPS&#42;&#42;&#42;|
 |---------------------------|-------------------------|-------------------|---------------------------------|-----------------------------------|-----------------------------------|
@@ -59,9 +62,13 @@ Pro vypracování analýzy chování uživatelů vyžaduje ATA Center data za ne
 > [!NOTE]
 > -   ATA Center může zpracovávat agregované maximum 400 000 snímků za sekundu (FPS) ze všech monitorovaných řadičů domény.
 > -   Uvedené velikosti úložišť jsou čisté hodnoty, ale vy byste měli vždy počítat s růstem do budoucna a zajisti, aby na disku, kde je umístěná databáze, bylo vždycky aspoň 20 % volného místa.
-> -   Pokud velikost volného místa dosáhne minimální hodnoty buď 20 %, nebo 100 GB, nejstarší kolekce dat se odstraní. To bude pokračovat, dokud nezůstanou buď jen 2 dny dat, nebo 5 % nebo 50 GB volného místa, a v takovém okamžiku se shromažďování dat zastaví.
-> -  Latence úložiště pro čtení a zápisu aktivit musí být menší než 10 ms.
-> -  Poměr mezi čtením a zápisem aktivit je přibližně 1:3 při méně než 100 000 paketů za sekundu a 1:6 při více než 100 000 paketů za sekundu.
+> -   Pokud velikost volného místa dosáhne minimální hodnoty buď 20 %, nebo 100 GB, nejstarší kolekce dat se odstraní. To bude pokračovat, dokud nezůstane jen 5 % nebo 50 GB volného místa. Pak se shromažďování dat zastaví.
+> -   Latence úložiště pro čtení a zápisu aktivit musí být menší než 10 ms.
+> -   Poměr mezi čtením a zápisem aktivit je přibližně 1:3 při méně než 100 000 paketů za sekundu a 1:6 při více než 100 000 paketů za sekundu.
+> -   Pokud se spustí jako dynamická paměť virtuálního počítače nebo libovolná jiná paměť, funkce rozšiřování rozsahů stránek se nepodporuje.
+> -   K zajištění optimálního výkonu nastavte **možnost napájení ** pro ATA Center na hodnotu **Vysoký výkon**.<br>
+> -   Při práci na fyzickém serveru databáze ATA vyžaduje, abyste v systému BIOS **zakázali** neuniformní přístup k paměti (NUMA). Ve vašem systému se NUMA může označovat také jako prokládání uzlů. V takovém případě bude potřeba prokládání uzlů **povolit**, abyste NUMA zakázali. Další informace najdete v dokumentaci k systému BIOS. Pokud ATA Center běží na virtuálním serveru, není tento text relevantní.
+
 
 ## Výběr vhodného typu brány pro vaše nasazení
 V nasazení ATA se podporuje libovolná kombinace typů ATA Gateway:
@@ -94,8 +101,7 @@ Dál jsou uvedené příklady situací, kdy by řadiče domény měly být pokry
 ### Velikosti pro ATA Lightweight Gateway
 
 ATA Lightweight Gateway může podporovat monitorování jednoho řadiče domény na základě objemu síťového provozu, který tento řadič generuje. 
-> [!NOTE] 
-> Pokud se spustí jako dynamická paměť virtuálního počítače nebo libovolná jiná paměť, funkce rozšiřování rozsahů stránek se nepodporuje.
+
 
 |Pakety za sekundu&#42;|Procesor (jádra&#42;&#42;)|Paměť (GB)&#42;&#42;&#42;|
 |---------------------------|-------------------------|---------------|
@@ -108,8 +114,11 @@ ATA Lightweight Gateway může podporovat monitorování jednoho řadiče domén
 &#42;&#42;Celkový počet jader bez vláken typu Hyper, která má tento řadič domény nainstalovaná.<br>Přestože je hyperthreading pro ATA Lightweight Gateway přijatelný, při plánování kapacity byste měli počítat skutečná jádra, a nikoli jádra s vlákny typu Hyper.
 
 &#42;&#42;&#42;Celkový objem paměti, kterou má tento řadič domény nainstalovanou.
+
 > [!NOTE]   
-> Pokud řadič domény nemá nezbytný objem prostředků, které ATA Lightweight Gateway vyžaduje, výkon řadiče domény to neovlivní, ale ATA Lightweight Gateway nemusí fungovat podle očekávání.
+> -   Pokud řadič domény nemá nezbytný objem prostředků, které ATA Lightweight Gateway vyžaduje, výkon řadiče domény to neovlivní, ale ATA Lightweight Gateway nemusí fungovat podle očekávání.
+> -   Pokud se spustí jako dynamická paměť virtuálního počítače nebo libovolná jiná paměť, funkce rozšiřování rozsahů stránek se nepodporuje.
+> -   K zajištění optimálního výkonu nastavte **možnost napájení ** pro ATA Lightweight Gateway na hodnotu **Vysoký výkon**.
 
 
 ### Nastavení velikosti ATA Gateway
@@ -126,8 +135,7 @@ Aspekty zrcadlení portů můžou vyžadovat, abyste pro datové centrum nebo po
     ATA Gateway může podporovat monitorování několika řadičů domény, v závislosti na objemu síťových přenosů monitorovaných řadičů domény. 
 <br>
 
-> [!NOTE] 
-> Dynamická paměť se nepodporuje.
+
 
 |Pakety za sekundu&#42;|Procesor (jádra&#42;&#42;)|Paměť (GB)|
 |---------------------------|-------------------------|---------------|
@@ -142,6 +150,9 @@ Aspekty zrcadlení portů můžou vyžadovat, abyste pro datové centrum nebo po
 
 &#42;&#42;Technologie Hyper-Threading musí být zakázaná.
 
+> [!NOTE] 
+> -   Dynamická paměť se nepodporuje.
+> -   K zajištění optimálního výkonu nastavte **možnost napájení ** pro ATA Gateway na hodnotu **Vysoký výkon**.
 
 
 ## Odhad provozu řadiče domény
@@ -201,6 +212,6 @@ Pokud chcete určit počet paketů za sekundu, proveďte na každém řadiči do
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

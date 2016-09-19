@@ -4,7 +4,7 @@ description: "Poskytuje seznam způsobů, kterými můžete aktualizovat konfigu
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,15 @@ ms.assetid: bcf0f7d3-8027-45c0-8002-19f71fcb30a6
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: 8fb7da294cc7b6f745b45e5c7406bc0a26308881
+ms.sourcegitcommit: 050f1ef0b39d69b64ede53243a7fa2d33d0e4813
+ms.openlocfilehash: b79a5726b40130b28b0b52d42eede69a4dacc8b6
 
 
 ---
+
+*Platí pro: Advanced Threat Analytics verze 1.7*
+
+
 
 # Změna konfigurace ATA
 
@@ -27,19 +31,17 @@ Pokud potřebujete aktualizovat nebo změnit konfiguraci po počáteční instal
 
 -   [Změna certifikátu ATA Center](modifying-ata-config-centercert.md)
 
--   [Změna IP adresy konzoly ATA](modifying-ata-config-consoleip.md)
-
--   [Změna certifikátu IIS](modifying-ata-config-iiscert.md)
+-   [Změna adresy URL konzoly ATA](modifying-ata-config-consoleurl.md)
 
 -   [Změna hesla připojení k doméně](modifying-ata-config-dcpassword.md)
 
 ## Viz také
 - [Práce s konzolou ATA](working-with-ata-console.md)
 - [Instalace ATA](install-ata.md)
-- [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
+- [Podívejte se na fórum ATA!](https://aka.ms/ata-forum)
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

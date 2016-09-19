@@ -4,7 +4,7 @@ description: "Popisuje jak ověřit, že je zrcadlení portů nakonfigurované s
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,15 @@ ms.assetid: ebd41719-c91a-4fdd-bcab-2affa2a2cace
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: d95fd582362fc650dffeb6c4fbf892ba3e367f12
+ms.sourcegitcommit: e3b690767e5c6f5561a97a73eccfbf50ddb04148
+ms.openlocfilehash: 59d50b0d9c5adc78aca260412872076c84db8d57
 
 
 ---
+
+*Platí pro: Advanced Threat Analytics verze 1.7*
+
+
 
 # Ověření zrcadlení portů
 > [!NOTE] 
@@ -27,8 +31,8 @@ Následující kroky vás provedou procesem ověření, že je zrcadlení portů
 
 ## Ověření zrcadlení portů pomocí skriptu prostředí Windows PowerShell
 
-1. Uložte text tohoto skriptu do souboru s názvem ATAdiag.ps1.
-2. Spusťte tento skript z ATA Gateway.
+1. Uložte text tohoto skriptu do souboru s názvem *ATAdiag.ps1*.
+2. Spusťte tento skript na bráně ATA Gateway, kterou chcete ověřit.
 Tento skript generuje přenos dat protokolu ICMP z ATA Gateway do řadiče domény a hledá tento přenos dat na síťové kartě pro zachytávání na řadiči domény.
 Pokud ATA Gateway vidí přenos dat ICMP s cílovou IP adresou, která se shoduje s IP adresou řadiče domény, kterou jste zadali v konzole ATA, považuje zrcadlení portů za nakonfigurované. 
 
@@ -188,7 +192,7 @@ Ukázka spuštění tohoto skriptu:
     
     
 ## Ověření zrcadlení portů pomocí Net Mon
-1.  Instalace nástroje [Microsoft Network Monitor 3.4](http://www.microsoft.com/download/details.aspx?id=4865)
+1.  Nainstalujte [Microsoft Network Monitor 3.4](http://www.microsoft.com/download/details.aspx?id=4865) na ATA Gateway, kterou chcete ověřit.
 
     > [!IMPORTANT]
     > Neinstalujte na komponentu ATA Gateway Microsoft Message Analyzer nebo jiný software pro zachycení provozu.
@@ -224,6 +228,6 @@ Ukázka spuštění tohoto skriptu:
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 
