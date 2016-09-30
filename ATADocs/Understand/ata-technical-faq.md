@@ -13,8 +13,8 @@ ms.assetid: a7d378ec-68ed-4a7b-a0db-f5e439c3e852
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b8ad2f343b8397184cd860803f06b0d59c492f5a
-ms.openlocfilehash: 96b3ce171ca07bf44163d49b50377fccd6472a08
+ms.sourcegitcommit: 7d081a6e14adffc675de203001074c3435cce6b2
+ms.openlocfilehash: 8896df26157f9da903e68ac7a1d21f7f80f95026
 
 
 ---
@@ -83,7 +83,7 @@ Pokud se virtuální řadič domény nedá pokrýt komponentou ATA Lightweight G
 Musí se zálohovat dvě věci:
 
 -   Provoz a události, které ATA ukládá. K jejich zálohování se dá využít libovolná podporovaná procedura zálohování databází. Další informace najdete v tématu [Správa databází ATA](/advanced-threat-analytics/deploy-use/ata-database-management). 
--   Konfigurace konzoly ATA. Konfigurace je uložena v databázi a každou hodinu se automaticky zálohuje do složky **Zálohování** v umístění v rámci nasazení ATA Center.  Další informace získáte v části [Správa databáze ATA](https://docs.microsoft.com/en-us/advanced-threat-analytics/deploy-use/ata-database-management).
+-   Konfigurace konzoly ATA. Konfigurace je uložena v databázi a každou hodinu se automaticky zálohuje do složky **Zálohování** v umístění v rámci nasazení ATA Center.  Další informace získáte v části [Správa databáze ATA](https://docs.microsoft.com/advanced-threat-analytics/deploy-use/ata-database-management).
 ## Co ATA dokáže rozpoznat?
 ATA rozpoznává známé nebezpečné útoky a techniky, problémy zabezpečení a rizika.
 Úplný seznam detekcí ATA najdete v tématu [Jaké detekce ATA provádí?](ata-threats.md).
@@ -144,6 +144,6 @@ Ano, můžete zobrazit celkový stav nasazení a taky konkrétní problémy souv
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Sep16_HO4-->
 
 
