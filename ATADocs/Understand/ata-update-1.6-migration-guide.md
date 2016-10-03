@@ -140,6 +140,6 @@ To, že jsou všechny komponenty ATA Gateway úspěšně aktualizované, budete 
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 
