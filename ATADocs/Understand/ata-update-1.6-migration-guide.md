@@ -13,8 +13,8 @@ ms.assetid: fb65eb41-b215-4530-93a2-0b8991f4e980
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: 87cb9534a45d3a8ca29d6a803ca399a33a3d3ea6
+ms.sourcegitcommit: d3ec5d56444d618efcfc617172e93e0e8e8a1768
+ms.openlocfilehash: 6fd96a8bf2fb1e064cc05858a020cbc2e55746f4
 
 
 ---
@@ -71,23 +71,25 @@ V této verzi se k instalaci nového nasazení ATA a upgradu stávajících nasa
 
 2.  Spusťte instalační soubor Microsoft ATA Center Setup.exe a nainstalujte aktualizaci podle pokynů na obrazovce.
 
-    1.  ATA 1.6 vyžaduje instalaci rozhraní .Net Framework 4.6.1. Pokud rozhraní .Net Framework 4.6.1 ještě není nainstalované, ATA ho nainstaluje jako součást instalace.<br>
-    > [!NOTE]
-    > Instalace rozhraní .Net Framework 4.6.1 může vyžadovat restartování serveru. Instalace ATA bude pokračovat až po restartování serveru.
-5.  Na stránce **Vítejte** vyberte svůj jazyk a klikněte na **Další**.
+    1.  ATA 1.6 vyžaduje instalaci rozhraní .Net Framework 4.6.1. Pokud rozhraní .Net Framework 4.6.1 ještě není nainstalované, ATA ho nainstaluje jako součást instalace.
+    
+        > [!NOTE] 
+            Instalace rozhraní .Net Framework 4.6.1 může vyžadovat restartování serveru. Instalace ATA bude pokračovat až po restartování serveru.
+    
+    2.  Na stránce **Vítejte** vyberte svůj jazyk a klikněte na **Další**.
 
-    6.  Přečtěte si licenční smlouvou s koncovým uživatelem, a pokud s podmínkami souhlasíte, klikněte na **Další**.
+    3.  Přečtěte si licenční smlouvou s koncovým uživatelem, a pokud s podmínkami souhlasíte, klikněte na **Další**.
 
-    7.  Teď je k zajištění aktuálnosti ATA možné použít službu Microsoft Update.  Na stránce služby Microsoft Update zaškrtněte **Při kontrole aktualizací použít službu Microsoft Update (doporučeno)**.
+    4.  Teď je k zajištění aktuálnosti ATA možné použít službu Microsoft Update.  Na stránce služby Microsoft Update zaškrtněte **Při kontrole aktualizací použít službu Microsoft Update (doporučeno)**.
     ![Obrázek zajištění aktuálnosti ATA](media/ata_ms_update.png) Tímto způsobem se upraví nastavení Windows tak, aby povolovala aktualizace pro ostatní produkty Microsoftu (včetně ATA). 
      ![Obrázek automatické aktualizace Windows](media/ata_installupdatesautomatically.png)
 
-    8.  Před zahájením instalace ATA provede kontrolu připravenosti. Prohlédněte si výsledky této kontroly a ověřte, že požadované součásti jsou správně nainstalované a že máte alespoň minimální potřebné místo na disku. 
+    5.  Před zahájením instalace ATA provede kontrolu připravenosti. Prohlédněte si výsledky této kontroly a ověřte, že požadované součásti jsou správně nainstalované a že máte alespoň minimální potřebné místo na disku. 
     ![Obrázek kontroly připravenosti ATA](media/ata_install_readinesschecks.png)
 
-    3.  Klikněte na **Aktualizovat**. Po klepnutí na Aktualizovat bude ATA až do dokončení aktualizace offline.
+    6.  Klikněte na **Aktualizovat**. Po klepnutí na Aktualizovat bude ATA až do dokončení aktualizace offline.
 
-4.  Po aktualizaci ATA Center budou komponenty ATA Gateway hlásit, že jsou nyní zastaralé.
+3.  Po aktualizaci ATA Center budou komponenty ATA Gateway hlásit, že jsou nyní zastaralé.
 
     ![Obrázek zastaralých bran](media/ATA-center-outdated.png)
 
@@ -140,6 +142,6 @@ To, že jsou všechny komponenty ATA Gateway úspěšně aktualizované, budete 
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 
