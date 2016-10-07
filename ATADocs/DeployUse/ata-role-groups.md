@@ -4,7 +4,7 @@ description: "Provede vás prací se skupinami rolí ATA."
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 09/20/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,8 +13,8 @@ ms.assetid: 3715b69e-e631-449b-9aed-144d0f9bcee7
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ba090fdd4f00c001020b1fbedf527e4fd69d3992
-ms.openlocfilehash: 41ae6655f2d69b5b879246eb03462cd7d7b091d7
+ms.sourcegitcommit: d47d9e7be294c68d764710c15c4bb78539e42f62
+ms.openlocfilehash: 869d8f830d5dc70c927f172d77642b0c97bdcd84
 
 
 ---
@@ -29,9 +29,9 @@ ms.openlocfilehash: 41ae6655f2d69b5b879246eb03462cd7d7b091d7
 Skupiny rolí umožňují správu přístupu pro ATA. Pomocí skupin rolí můžete oddělit úlohy v rámci týmu zabezpečení a udělit přístup pouze v takovém rozsahu, který uživatelé potřebují ke své práci. Tento článek vysvětluje správu přístupu a autorizaci rolí ATA a ulehčí vám uvedení skupin rolí v ATA co nejdříve do provozu.
 ## Typy skupin rolí ATA 
 
-ATA zavádí 3 typy skupin rolí: Správci ATA, uživatelé ATA a čtenáři ATA. Následující tabulka popisuje typ přístupu v ATA, který je dostupný pro určitou roli. V závislosti na přiřazené roli budou v ATA k dispozici různé obrazovky a možnosti nabídky, a to následovně:
+ATA zavádí 3 typy skupiny rolí: Správce ATA, Analytik ATA a Vedoucí ATA. Následující tabulka popisuje typ přístupu v ATA, který je dostupný pro určitou roli. V závislosti na přiřazené roli budou v ATA k dispozici různé obrazovky a možnosti nabídky, a to následovně:
 
-|Aktivita |Správci Microsoft Advanced Threat Analytics|Uživatelé Microsoft Advanced Threat Analytics|Čtenáři Microsoft Advanced Threat Analytics|
+|Aktivita |Správce Microsoft Advanced Threat Analytics|Analytik Microsoft Advanced Threat Analytics|Vedoucí Microsoft Advanced Threat Analytics|
 |----|----|----|----|
 |Přihlášení|K dispozici|K dispozici|K dispozici|
 |Poskytnutí vstupu k podezřelým aktivitám|K dispozici|K dispozici|Není k dispozici|
@@ -54,6 +54,6 @@ ATA jako základ pro skupiny rolí používá místní skupiny systému Windows.
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Sep16_HO4-->
 
 
