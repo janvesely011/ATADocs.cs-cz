@@ -74,7 +74,7 @@ V této verzi se k instalaci nového nasazení ATA a upgradu stávajících nasa
     1.  ATA 1.6 vyžaduje instalaci rozhraní .Net Framework 4.6.1. Pokud rozhraní .Net Framework 4.6.1 ještě není nainstalované, ATA ho nainstaluje jako součást instalace.
     
         > [!NOTE] 
-            Instalace rozhraní .Net Framework 4.6.1 může vyžadovat restartování serveru. Instalace ATA bude pokračovat až po restartování serveru.
+        > Instalace rozhraní .Net Framework 4.6.1 může vyžadovat restartování serveru. Instalace ATA bude pokračovat až po restartování serveru.
     
     2.  Na stránce **Vítejte** vyberte svůj jazyk a klikněte na **Další**.
 
