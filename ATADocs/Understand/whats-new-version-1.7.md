@@ -4,7 +4,7 @@ description: "Uvádí novinky ATA verze 1.7 spolu se známými problémy."
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 08/28/2016
+ms.date: 09/20/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,8 +13,8 @@ ms.assetid:
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ae6a3295d2fffabdb8e5f713674379e4af499ac2
-ms.openlocfilehash: af9101260b1a0d5d9da32398f638f76e0c8c40a7
+ms.sourcegitcommit: d47d9e7be294c68d764710c15c4bb78539e42f62
+ms.openlocfilehash: 62f2aadc978547647a1dc3c27ed3453f7ed15828
 
 
 ---
@@ -32,6 +32,8 @@ Aktualizace ATA na verzi 1.7 přináší vylepšení v následujících oblastec
 -   Podpora systému Windows Server 2016 a jádra serveru Windows
 
 -   Vylepšení uživatelského prostředí
+
+-   Menší změny
 
 
 ### Nové a aktualizované detekce
@@ -63,54 +65,19 @@ V této verzi existují následující známé problémy.
 ### Automatické aktualizace brány se nemusí podařit.
 **Příznaky:** V prostředích s pomalým připojením WAN může při aktualizaci ATA Gateway vypršet časový limit pro aktualizaci (100 sekund) a aktualizace se nepodaří.
 V konzole ATA může ATA Gateway po dlouhou dobu zobrazovat stav „Probíhá aktualizace (stahování balíčku)“ a nakonec dojde k chybě.
-
 **Alternativní řešení:** Pokud chcete tento problém vyřešit, stáhněte z konzoly ATA nejnovější balíček ATA Gateway a aktualizujte ATA Gateway ručně.
 
-### Selhání migrace při aktualizaci z ATA 1.6
-Při aktualizaci na ATA 1.7 může proces aktualizace selhat s kódem chyby *0x80070643*:
+ > [!IMPORTANT]
+ Automatické obnovení certifikátu pro certifikáty používané funkcí ATA není podporované. Použití těchto certifikátů po jejich automatickém obnovení může způsobit, že ATA přestane fungovat. 
 
-![Chyba aktualizace na ATA 1.7](media/ata-update-error.png)
-
-Vyhledejte příčinu selhání v protokolu nasazení. Protokol nasazení se nachází v tomto umístění: **%temp%\..\Microsoft Advanced Thread Analytics Center_{date_stamp}_MsiPackage.log**. 
-
-V tabulce níže jsou uvedeny chyby, které je třeba vyhledat, a odpovídající skript Mongo, který slouží k opravě chyby. Postup spuštění skriptu Mongo naleznete v příkladu pod tabulkou:
-
-| Chyba v souboru protokolu nasazení                                                                                                                  | Skript Mongo                                                                                                                                                                         |
-|---|---|
-| System.FormatException: Size {size},is larger than MaxDocumentSize 16777216 <br>Níže v souboru:<br>  Microsoft.Tri.Center.Deployment.Package.Actions.DatabaseActions.MigrateUniqueEntityProfiles(Boolean isPartial)                                                                                        | db.UniqueEntityProfile.find().forEach(function(obj){if(Object.bsonsize(obj) > 12582912) {print(obj._id);print(Object.bsonsize(obj));db.UniqueEntityProfile.remove({_id:obj._id});}}) |
-| System.OutOfMemoryException: Exception of type 'System.OutOfMemoryException' was thrown<br>Níže v souboru:<br>Microsoft.Tri.Center.Deployment.Package.Actions.DatabaseActions.ReduceSuspiciousActivityDetailsRecords(IMongoCollection`1 suspiciousActivityCollection, Int32 deletedDetailRecordMaxCount) | db.SuspiciousActivity.find().forEach(function(obj){if(Object.bsonsize(obj) > 500000),{print(obj._id);print(Object.bsonsize(obj));db.SuspiciousActivity.remove({_id:obj._id});}})     |
-|System.Security.Cryptography.CryptographicException: Bad Length<br>Níže v souboru:<br> Microsoft.Tri.Center.Deployment.Package.Actions.DatabaseActions.MigrateCenterSystemProfile(IMongoCollection`1 systemProfileCollection)| CenterThumbprint=db.SystemProfile.find({_t:"CenterSystemProfile"}).toArray()[0].Configuration.SecretManagerConfiguration.CertificateThumbprint;db.SystemProfile.update({_t:"CenterSystemProfile"},{$set:{"Configuration.ManagementClientConfiguration.ServerCertificateThumbprint":CenterThumbprint}})|
-
-
-Příslušný skript spustíte podle následujícího postupu. 
-
-1.  Z příkazového řádku se zvýšenými oprávněními přejděte do následujícího umístění: **C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin**
-2.  Zadejte – **Mongo.exe ATA**   (*Poznámka*: ATA musí být velkými písmeny.)
-3.  Z výše uvedené tabulky vložte skript, který odpovídá chybě v protokolu nasazení.
-
-![Skript ATA Mongo](media/ATA-mongoDB-script.png)
-
-V tomto okamžiku by mělo být možné upgrade spustit.
-
-### Funkce ATA hlásí velký počet podezřelých aktivit *Rekognoskace pomocí výčtů služeb adresáře*:
+### Prohlížeče nepodporují kódování JIS
+**Příznaky:** Konzola ATA nemusí fungovat dle očekávání v prohlížečích s kódováním JIS. **Řešení:** Změňte kódování prohlížeče na Unicode UTF-8.
  
-Dochází k tomu pravděpodobně v případě, že je ve všech (nebo ve velkém počtu) klientských počítačích v organizaci spuštěn nástroj pro prohledávání sítě. Pokud dochází k tomuto problému:
+## Menší změny
 
-1. V případě, že můžete identifikovat příčinu nebo konkrétní aplikaci spuštěnou v klientských počítačích, pošlete e-mail s informacemi na ATAEval na stránkách Microsoft.com.
-2. Všechny tyto události zavřete pomocí následujícího skriptu mongo (postup spuštění skriptu mongo je popsán výše):
-
-db.SuspiciousActivity.update({_t: "SamrReconnaissanceSuspiciousActivity"}, {$set: {Status: "Dismissed"}}, {multi: true})
-
-### Služba ATA odesílá oznámení o zavřených (zrušených) podezřelých aktivitách:
-Pokud jsou nakonfigurována oznámení, ATA může posílat e-maily, oznámení syslog či protokoly událostí týkající se zavřených podezřelých aktivit.
-Pro tento problém není momentálně k dispozici žádné řešení. 
-
-### Pokud jsou protokoly TLS 1.0 a TLS 1.1 neaktivní, ATA Gateway se nemusí podařit registrovat se do ATA Center:
-Pokud jsou protokoly TLS 1.0 a TLS 1.1 na ATA Gateway (nebo Lightweight Gateway) neaktivní, bráně se nepodaří registrace do ATA Center
-
-### Není podporováno automatické obnovení certifikátu pro certifikáty používané službou ATA
-Pokud používáte automatické obnovení certifikátů, služba ATA může po automatickém obnovení jejího certifikátu přestat fungovat. 
-
+- ATA teď pro konzolu ATA používá OWIN místo IIS.
+- Pokud nefunguje služba ATA Center, nebudete mít přístup ke konzole ATA.
+- Podsítě pro krátkodobé zapůjčení už nejsou potřebné z důvodu změn v ATA NNR.
 
 ## Viz také
 [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
@@ -120,6 +87,6 @@ Pokud používáte automatické obnovení certifikátů, služba ATA může po a
 
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Sep16_HO4-->
 
 

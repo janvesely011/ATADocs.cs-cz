@@ -92,6 +92,6 @@ V této verzi se k instalaci nového nasazení ATA a upgradu stávajících nasa
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO1-->
 
 
