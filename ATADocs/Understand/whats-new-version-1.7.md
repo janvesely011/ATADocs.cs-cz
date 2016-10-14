@@ -13,8 +13,8 @@ ms.assetid:
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d47d9e7be294c68d764710c15c4bb78539e42f62
-ms.openlocfilehash: 62f2aadc978547647a1dc3c27ed3453f7ed15828
+ms.sourcegitcommit: a024cab5e706b32273d563095f5d7e690d6ed055
+ms.openlocfilehash: dec9fc03cdf718627dd72ac0c48f934fe507c7ac
 
 
 ---
@@ -73,6 +73,12 @@ V konzole ATA může ATA Gateway po dlouhou dobu zobrazovat stav „Probíhá ak
 ### Prohlížeče nepodporují kódování JIS
 **Příznaky:** Konzola ATA nemusí fungovat dle očekávání v prohlížečích s kódováním JIS. **Řešení:** Změňte kódování prohlížeče na Unicode UTF-8.
  
+### Přerušené přenosy se zrcadlením portů při použití VMware
+
+Upozornění na přerušené přenosy se zrcadlením portů při použití lehké brány na VMware
+
+Pokud používáte řadiče domény na virtuálních počítačích VMware, můžou se vám zobrazit upozornění na **přerušené síťové přenosy se zrcadlením portů**. Toto může nastat kvůli neshodě v konfiguraci ve VMware. Pokud se chcete těmto upozorněním vyhnout, zkontrolujte, že následující nastavení mají hodnotu 0 nebo jsou zakázaná: TsoEnable, LargeSendOffload, IPv4, TSO Offload. Zvažte také zakázání procesu IPv4 Giant TSO Offload. Další informace najdete v dokumentaci k VMware.
+
 ## Menší změny
 
 - ATA teď pro konzolu ATA používá OWIN místo IIS.
@@ -87,6 +93,6 @@ V konzole ATA může ATA Gateway po dlouhou dobu zobrazovat stav „Probíhá ak
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO2-->
 
 
