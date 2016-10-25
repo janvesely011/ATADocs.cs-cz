@@ -13,8 +13,8 @@ ms.assetid: fb65eb41-b215-4530-93a2-0b8991f4e980
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e3b690767e5c6f5561a97a73eccfbf50ddb04148
-ms.openlocfilehash: 5c20c41c3fe587f18087d64f4f84c1df65072fde
+ms.sourcegitcommit: 3a821bf1479af529fd65e2153f8b722999c83a4f
+ms.openlocfilehash: 444bc4744834219d9db7bc8c209f33c039f90dad
 
 
 ---
@@ -28,6 +28,7 @@ Aktualizace ATA na verzi 1.7 přináší vylepšení v následujících oblastec
   
 
 ## Aktualizace ATA na verzi 1.7
+
 > [!NOTE] 
 > Pokud ve vašem prostředí neexistuje instalace ATA, stáhněte si úplnou verzi ATA, která zahrnuje verzi 1.7, a použijte standardní postup instalace popsaný v tématu [Instalace ATA](/advanced-threat-analytics/deploy-use/install-ata).
 
@@ -81,8 +82,8 @@ V této verzi se k instalaci nového nasazení ATA a upgradu stávajících nasa
 > Aktualizujte všechny komponenty ATA Gateway, aby se zajistila správná funkce ATA.
 > Nakonfigurovaný port naslouchacího procesu Syslog se u všech bran změní na 514.
  
-    > [!NOTE] 
-    > To install new ATA Gateways, go the **Gateways** screen and click **Download Gateway Setup** to get the ATA 1.7 installation package and follow the instructions for new Gateway installation as described in [Step 4. Install the ATA Gateway](/advanced-threat-analytics/deploy-use/install-ata-step4) .
+> [!NOTE] 
+> Pokud chcete nainstalovat nové brány ATA Gateway, přejděte na obrazovku **Brány** a klikněte na **Stáhnout instalační program brány**. Stáhne se instalační balíček pro ATA 1.7. Dále postupujte podle pokynů k instalaci nové brány, jak je popisuje [Krok 4. Instalace ATA Gateway](/advanced-threat-analytics/deploy-use/install-ata-step4).
 
 
 
@@ -92,6 +93,6 @@ V této verzi se k instalaci nového nasazení ATA a upgradu stávajících nasa
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Oct16_HO3-->
 
 
