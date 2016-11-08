@@ -23,13 +23,13 @@ ms.openlocfilehash: be58ce053a2ddb59fa1556027e432c0499f8deb4
 
 
 
-# Instalace ATA – Krok 2
+# <a name="install-ata-step-2"></a>Instalace ATA – Krok 2
 
 >[!div class="step-by-step"]
 [« Krok 1](install-ata-step1.md)
 [Krok 3 »](install-ata-step3.md)
 
-## Krok 2: Zadejte uživatelské jméno a heslo pro připojení k vaší doménové struktuře Active Directory.
+## <a name="step-2-provide-a-username-and-password-to-connect-to-your-active-directory-forest"></a>Krok 2: Zadejte uživatelské jméno a heslo pro připojení k vaší doménové struktuře Active Directory.
 
 Při prvním otevření konzoly ATA se objeví následující obrazovka:
 
@@ -44,7 +44,7 @@ Při prvním otevření konzoly ATA se objeví následující obrazovka:
     |**Doména** (povinné)|Zadejte doménu pro uživatele, který je jen pro čtení, například **contoso.com**. **Poznámka:** Je důležité, abyste zadali kompletní plně kvalifikovaný název domény, ve které je uživatel umístěný. Pokud je například účet uživatele v doméně corp.contoso.com, musíte zadat `corp.contoso.com`, a ne contoso.com.|
     
 
-    Po uložení se uvítací zpráva na konzole změní na následující: ![Uvítání ATA fáze 1 dokončeno](media/ATA_1.7-welcome-provide-username-finished.png)
+    Po uložení se uvítací zpráva v konzole změní na následující: ![Uvítání ATA fáze 1 dokončeno](media/ATA_1.7-welcome-provide-username-finished.png)
 
 2. Na konzole pokračujte kliknutím na **Stáhnout instalační soubor brány a nainstalovat první bránu**.
 
@@ -54,7 +54,7 @@ Při prvním otevření konzoly ATA se objeví následující obrazovka:
 [Krok 3 »](install-ata-step3.md)
 
 
-## Viz také
+## <a name="see-also"></a>Viz také
 
 - [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurace shromažďování událostí](configure-event-collection.md)
@@ -62,6 +62,6 @@ Při prvním otevření konzoly ATA se objeví následující obrazovka:
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Oct16_HO4-->
 
 
