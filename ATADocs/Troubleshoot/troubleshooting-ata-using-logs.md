@@ -13,8 +13,8 @@ ms.assetid: b8ad5511-8893-4d1d-81ee-b9a86e378347
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ee5f60e43f50562e7a7309eafa3b52cf946b0d3b
-ms.openlocfilehash: 493f255ae09b51d27079a186bb802f0f3f9706bc
+ms.sourcegitcommit: c71d5ed1c705de558f1144820703ffe84850679b
+ms.openlocfilehash: f8024edbfad1961db7fa469cc2907c55bb5ec93f
 
 
 ---
@@ -29,7 +29,7 @@ Protokoly ATA poskytují přehled o tom, co jednotlivé komponenty ATA v libovol
 ## Protokoly ATA Gateway
 V této části všechny odkazy na ATA Gateway platí také pro ATA Lightweight Gateway. 
 
-Protokoly ATA Gateway jsou umístěny v podsložce s názvem **Protokoly** v místě, kde je nainstalována služba ATA. Výchozí umístění je následující: Ve výchozí instalaci ji najdete tady: **C:\Program Files\Microsoft Advanced Threat Analytics\Gateway\Logs**.
+Protokoly ATA Gateway jsou umístěné v podsložce s názvem **Protokoly** v místě, kde je služba ATA nainstalovaná. Výchozí umístění je **C:\Program Files\Microsoft Advanced Threat Analytics\**. Ve výchozí instalaci ji najdete tady: **C:\Program Files\Microsoft Advanced Threat Analytics\Gateway\Logs**.
 
 ATA Gateway využívá tyto protokoly:
 
@@ -40,7 +40,7 @@ ATA Gateway využívá tyto protokoly:
 -   **Microsoft.Tri.Gateway-Errors.log** – Tento protokol obsahuje jenom chyby, které zachytila komponenta ATA Gateway. Nejčastěji se využívá k provádění kontroly stavu a zkoumání příčin problémů, které je potřeba časově zařadit.
 
 -   **Microsoft.Tri.Gateway-ExceptionStatistics.log** – V tomto protokolu jsou seskupeny všechny podobné chyby a výjimky a je zjištěn jejich počet.
-    Tento protokol je při každém spuštění služby ATA Gateway prázdný a aktualizuje se každou minutu. Nejčastěji se využívá ke zjištění, jestli v komponentě ATA Gateway dochází k nějakým novým chybám nebo problémům (vzhledem k tomu, že chyby jsou seskupené, jsou přehlednější a je jednodušší zjistit, jestli došlo k nějakým novým problémům).
+    Tento protokol je při každém spuštění služby ATA Gateway prázdný a aktualizuje se každou minutu. Nejčastěji se využívá ke zjištění, jestli v komponentě ATA Gateway dochází k nějakým novým chybám nebo problémům (vzhledem k tomu, že chyby jsou seskupené, jsou přehlednější a je jednodušší zjistit, jestli dochází k nějakým novým problémům).
 -   **Microsoft.Tri.Gateway.Updater.log** – Tento protokol se používá pro aktualizační proces brány, který je zodpovědný za automatickou aktualizaci brány, pokud je tak nakonfigurován. V případě ATA Lightweight Gateway je aktualizační proces také odpovědný za omezení prostředků ATA Lightweight Gateway.
 -   **Microsoft.Tri.Gateway.Updater-ExceptionStatistics.log** – V tomto protokolu jsou seskupeny všechny podobné chyby a výjimky a je zjištěn jejich počet. Tento protokol je při každém spuštění služby ATA Updater prázdný a aktualizuje se každou minutu. Umožňuje zjistit, jestli ve službě ATA Updater nedošlo k novým chybám nebo problémům. Chyby jsou seskupené, jsou přehlednější a je jednodušší zjistit, jestli došlo k chybám nebo problémům nového typu.
 
@@ -72,17 +72,17 @@ Protokoly nasazení ATA jsou umístěné v adresáři temp uživatele, který p�
 
 Protokoly nasazení komponenty ATA Center:
 
--   **Microsoft Advanced Threat Analytics Center_20150601104213.log** – V tomto protokolu jsou uvedené kroky procesu nasazení komponenty ATA Center. Nejčastěji se využívá ke sledování procesu nasazení ATA Center.
+-   **Microsoft Advanced Threat Analytics Center_RRRRMMDDHHMMSS.log** – V tomto protokolu jsou uvedené kroky procesu nasazení komponenty ATA Center. Nejčastěji se využívá ke sledování procesu nasazení ATA Center.
 
--   **Microsoft Advanced Threat Analytics Center_20150601104213_0_MongoDBPackage.log** – V tomto protokolu jsou uvedené kroky procesu nasazení MongoDB v komponentě ATA Center. Nejčastěji se využívá ke sledování procesu nasazení MongoDB.
+-   **Microsoft Advanced Threat Analytics Center_RRRRMMDDHHMMSS_0_MongoDBPackage.log** – V tomto protokolu jsou uvedené kroky procesu nasazení MongoDB v komponentě ATA Center. Nejčastěji se využívá ke sledování procesu nasazení MongoDB.
 
--   **Microsoft Advanced Threat Analytics Center_20150601104213_1_MsiPackage.log** – V tomto protokolu jsou uvedené kroky procesu nasazení binárních souborů ATA Center. Nejčastěji se využívá ke sledování nasazení binárních souborů ATA Center.
+-   **Microsoft Advanced Threat Analytics Center_RRRRMMDDHHMMSS_1_MsiPackage.log** – V tomto protokolu jsou uvedené kroky procesu nasazení binárních souborů ATA Center. Nejčastěji se využívá ke sledování nasazení binárních souborů ATA Center.
 
 Protokoly nasazení ATA Gateway a ATA Lightweight Gateway:
 
--   **Microsoft Advanced Threat Analytics Gateway_20151214014801.log** – V tomto protokolu jsou uvedené kroky procesu nasazení komponenty ATA Gateway. Nejčastěji se využívá ke sledování procesu nasazení ATA Gateway.
+-   **Microsoft Advanced Threat Analytics Gateway_RRRRMMDDHHMMSS.log** – V tomto protokolu jsou uvedené kroky procesu nasazení komponenty ATA Gateway. Nejčastěji se využívá ke sledování procesu nasazení ATA Gateway.
 
--   **Microsoft Advanced Threat Analytics Gateway_20151214014801_001_MsiPackage.log** – V tomto protokolu jsou uvedené kroky procesu nasazení binárních souborů ATA Gateway. Nejčastěji se využívá ke sledování nasazení binárních souborů ATA Gateway.
+-   **Microsoft Advanced Threat Analytics Gateway_RRRRMMDDHHMMSS_001_MsiPackage.log** – V tomto protokolu jsou uvedené kroky procesu nasazení binárních souborů ATA Gateway. Nejčastěji se využívá ke sledování nasazení binárních souborů ATA Gateway.
 
 
 ## Viz také
@@ -94,6 +94,6 @@ Protokoly nasazení ATA Gateway a ATA Lightweight Gateway:
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO4-->
 
 

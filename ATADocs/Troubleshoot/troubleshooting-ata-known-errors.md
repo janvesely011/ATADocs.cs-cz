@@ -4,7 +4,7 @@ description: "Popisuje, jak je v ATA možné řešit běžné chyby."
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 10/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,8 +13,8 @@ ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 15c1a0d7ae213876c0e3a955eaeea8887281b4e6
-ms.openlocfilehash: b073a1b969f8841c9bbe540722349a5ef70340d4
+ms.sourcegitcommit: f334f9c8440e4bb0202579de220f6530d0aabad8
+ms.openlocfilehash: aa16eeb45272ffcf28bbb28ed9a02f30f52b15d0
 
 
 ---
@@ -23,9 +23,9 @@ ms.openlocfilehash: b073a1b969f8841c9bbe540722349a5ef70340d4
 
 
 
-# Řešení potíží s protokolem chyb ATA
+# <a name="troubleshooting-the-ata-error-log"></a>Řešení potíží s protokolem chyb ATA
 Tato část podrobně popisuje možné chyby v nasazení ATA a kroky potřebné k jejich vyřešení.
-## Chyby ATA Gateway
+## <a name="ata-gateway-errors"></a>Chyby ATA Gateway
 |Chyba|Popis|Řešení|
 |-------------|----------|---------|
 |System.DirectoryServices.Protocols.LdapException: Došlo k místní chybě|Nepovedlo se ověřit ATA Gateway na řadiči domény.|1. Ověřte, že záznam DNS řadiče domény je na serveru DNS správně nakonfigurovaný. <br>2. Ověřte, že čas komponenty ATA Gateway je synchronizovaný s časem řadiče domény.|
@@ -44,12 +44,21 @@ Tato část podrobně popisuje možné chyby v nasazení ATA a kroky potřebné 
 |System.ApplicationException: Není možné spustit relaci ETW MMA-ETW-Livecapture-a4f595bd-f567-49a7-b963-20fa4e370329|V souboru hostitelů se nachází položka hostitele odkazující na krátký název počítače|Odeberte položku hostitele ze souboru C:\Windows\System32\drivers\etc\HOSTS nebo ji změňte na FQDN.|
 
 
-## Chyby služby IIS konzoly ATA (není k dispozici pro ATA v1.7 a novější)
+
+## <a name="ata-lightweight-gateway-errors"></a>Chyby komponenty ATA Lightweight Gateway
+
+**Chyba**: Upozornění na přerušené přenosy se zrcadlením portů při použití komponenty Lightweight Gateway u VMware
+
+**Popis**: Pokud používáte řadiče domény na virtuálních počítačích VMware, můžou se vám zobrazit upozornění na **přerušené síťové přenosy se zrcadlením portů**. Toto může nastat kvůli neshodě v konfiguraci ve VMware. 
+**Řešení**: Pokud se chcete těmto upozorněním vyhnout, zkontrolujte, že následující nastavení mají hodnotu 0 nebo jsou zakázaná: TsoEnable, LargeSendOffload, IPv4, TSO Offload. Zvažte také zakázání procesu IPv4 Giant TSO Offload. Další informace najdete v dokumentaci k VMware.
+
+
+## <a name="ata-iis-errors-not-applicable-for-ata-v17-and-above"></a>Chyby služby IIS konzoly ATA (není k dispozici pro ATA v1.7 a novější)
 |Chyba|Popis|Řešení|
 |-------------|----------|---------|
-|Chyba protokolu HTTP 500.19 – vnitřní chyba serveru|Nepovedlo se správně nainstalovat modul IIS URL Rewrite.|Odinstalujte modul IIS URL a nainstalujte ho znovu.<br>[Stáhnout modul IIS URL Rewrite](http://go.microsoft.com/fwlink/?LinkID=615137)|
+|Chyba protokolu HTTP 500.19 – vnitřní chyba serveru|Nepovedlo se správně nainstalovat modul IIS URL Rewrite.|Odinstalujte modul IIS URL a nainstalujte ho znovu.<br>[Stažení modulu IIS URL Rewrite](http://go.microsoft.com/fwlink/?LinkID=615137)|
 
-## Chyby nasazení
+## <a name="deployment-errors"></a>Chyby nasazení
 |Chyba|Popis|Řešení|
 |-------------|----------|---------|
 |Instalace rozhraní .Net Framework 4.6.1 se nepovedla s chybou 0x800713ec.|Na serveru nejsou nainstalované nezbytné komponenty pro .Net Framework 4.6.1. |Před instalací ATA ověřte, že jsou na serveru nainstalované aktualizace systému Windows [KB2919442](https://www.microsoft.com/download/details.aspx?id=42135) a [KB2919355](https://support.microsoft.com/kb/2919355).|
@@ -57,15 +66,15 @@ Tato část podrobně popisuje možné chyby v nasazení ATA a kroky potřebné 
 ![Obrázek chyby instalace .NET ATA](media/netinstallerror.png)
 
 
-## Viz také
+## <a name="see-also"></a>Viz také
 - [Požadavky ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
 - [Plánování kapacity ATA](/advanced-threat-analytics/plan-design/ata-capacity-planning)
-- [Konfigurace sběru událostí](/advanced-threat-analytics/deploy-use/configure-event-collection)
+- [Konfigurace shromažďování událostí](/advanced-threat-analytics/deploy-use/configure-event-collection)
 - [Konfigurace předávání událostí systému Windows](/advanced-threat-analytics/deploy-use/configure-event-collection#configuring-windows-event-forwarding)
 - [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO5-->
 
 
