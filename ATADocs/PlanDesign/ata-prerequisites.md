@@ -13,8 +13,8 @@ ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 050f1ef0b39d69b64ede53243a7fa2d33d0e4813
-ms.openlocfilehash: a3fcf3b2ba7f90f2329d86ab9e8d19619cc7e28f
+ms.sourcegitcommit: c71d5ed1c705de558f1144820703ffe84850679b
+ms.openlocfilehash: a6fe3a8f042ca7f35180e99e5bc3ffd14f0ea6d8
 
 
 ---
@@ -117,7 +117,7 @@ V této tabulce je IP adresa 1 svázaná se součástí ATA Center a IP adresa 2
 ### Certifikáty
 Zkontrolujte, jestli ATA Center má přístup k distribučnímu bodu CRL. Pokud služby ATA Gateway nemají přístup k internetu, použijte [ruční import seznamu CRL](https://technet.microsoft.com/library/aa996972%28v=exchg.65%29.aspx) a dbejte na to, abyste nainstalovali všechny distribuční body CRL pro celý řetězec.
 
-K usnadnění instalace služby ATA Center můžete nainstalovat certifikát podepsaný svým držitelem (self-signed certificate). Po nasazení můžete certifikát podepsaný svým držitelem nahradit certifikátem certifikační autority, který bude používat ATA Gateway.<br>
+K usnadnění instalace ATA můžete během instalace nainstalovat certifikáty podepsané jejich držiteli. Po nasazení můžete certifikát podepsaný svým držitelem nahradit certifikátem certifikační autority, který bude používat ATA Gateway.<br>
 > [!NOTE]
 > Poskytovatelem certifikátu musí být zprostředkovatel kryptografických služeb (CPS).
 
@@ -201,7 +201,7 @@ Následující tabulka uvádí minimální porty, u kterých ATA Gateway vyžadu
 
 ### Certifikáty
 Zkontrolujte, jestli ATA Center má přístup k distribučnímu bodu CRL. Pokud komponenty ATA Gateway nemají přístup k internetu, použijte ruční import seznamu CRL a dbejte na to, abyste nainstalovali všechny distribuční body CRL pro celý řetězec.<br>
-K usnadnění instalace služby ATA Center můžete nainstalovat certifikát podepsaný svým držitelem (self-signed certificate). Po nasazení můžete certifikát podepsaný svým držitelem nahradit certifikátem certifikační autority, který bude používat ATA Gateway.
+K usnadnění instalace ATA můžete během instalace nainstalovat certifikáty podepsané jejich držiteli. Po nasazení můžete certifikát podepsaný svým držitelem nahradit certifikátem certifikační autority, který bude používat ATA Gateway.
 
 > [!NOTE]
 > Poskytovatelem certifikátu musí být zprostředkovatel kryptografických služeb (CPS).<br>
@@ -254,7 +254,7 @@ Následující tabulka uvádí minimální porty, které ATA Lightweight Gateway
 
 ### Certifikáty
 Zkontrolujte, jestli ATA Center má přístup k distribučnímu bodu CRL. Pokud komponenty ATA Lightweight Gateway nemají přístup k internetu, použijte ruční import seznamu CRL a dbejte na to, abyste nainstalovali všechny distribuční body CRL pro celý řetězec.
-K usnadnění instalace služby ATA Center můžete nainstalovat certifikát podepsaný svým držitelem (self-signed certificate). Po nasazení můžete certifikát podepsaný svým držitelem nahradit certifikátem certifikační autority, který bude používat ATA Lightweight Gateway.
+K usnadnění instalace ATA můžete během instalace nainstalovat certifikáty podepsané jejich držiteli. Po nasazení můžete certifikát podepsaný svým držitelem nahradit certifikátem certifikační autority, který bude používat ATA Lightweight Gateway.
 > [!NOTE]
 > Poskytovatelem certifikátu musí být zprostředkovatel kryptografických služeb (CPS).
 
@@ -281,6 +281,6 @@ Přístup ke konzole ATA je prostřednictvím prohlížeče. Podporují se tyto:
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO4-->
 
 
