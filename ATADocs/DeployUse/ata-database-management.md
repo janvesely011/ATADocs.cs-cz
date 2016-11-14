@@ -4,7 +4,7 @@ description: "Postupy, které vám pomůžou přesunout, zálohovat a obnovit da
 keywords: 
 author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 10/31/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,8 +13,8 @@ ms.assetid: 1d27dba8-fb30-4cce-a68a-f0b1df02b977
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 5cd030f3b952d08c6617a6cda121c344a9c36f51
-ms.openlocfilehash: b4e68e9e8dbd94075a34a8e3e8f42d4f534caf50
+ms.sourcegitcommit: f334f9c8440e4bb0202579de220f6530d0aabad8
+ms.openlocfilehash: e295e0a0a8b5adbd40ddeb7e389ff82c7482c6d9
 
 
 ---
@@ -23,16 +23,16 @@ ms.openlocfilehash: b4e68e9e8dbd94075a34a8e3e8f42d4f534caf50
 
 
 
-# Správa databáze ATA
+# <a name="ata-database-management"></a>Správa databáze ATA
 Když potřebujete přesunout, zálohovat nebo obnovit databázi ATA, použijte tyto postupy pro práci s MongoDB.
 
-## Zálohování databáze ATA
+## <a name="backing-up-the-ata-database"></a>Zálohování databáze ATA
 Viz [příslušná dokumentace k MongoDB](http://docs.mongodb.org/manual/administration/backup/).
 
-## Obnovení databáze ATA
+## <a name="restoring-the-ata-database"></a>Obnovení databáze ATA
 Viz [příslušná dokumentace k MongoDB](http://docs.mongodb.org/manual/administration/backup/).
 
-## Přesunutí databáze ATA na jinou jednotku
+## <a name="moving-the-ata-database-to-another-drive"></a>Přesunutí databáze ATA na jinou jednotku
 
 1.  Zastavte službu **Microsoft Advanced Threat Analytics Center**.
 
@@ -52,18 +52,7 @@ Viz [příslušná dokumentace k MongoDB](http://docs.mongodb.org/manual/adminis
 
 7. Spusťte službu **Microsoft Advanced Threat Analytics Center**.
 
-## Konfigurační soubor ATA
-Konfigurace ATA je uložená v databázi v kolekci SystemProfile.
-Tato kolekce se zálohuje každou hodinu službou ATA Center do souboru s názvem „SystemProfile_*časové-razítko*.json“. Ukládá se 10 posledních verzí.
-Je umístěný v podsložce s názvem Backup. Ve výchozím umístění instalace ATA se nachází tady: *C:\Program Files\Microsoft Advanced Threat Analytics\Center\Backup\SystemProfile_*časové-razítko*.json*. 
-
-**Poznámka:** Doporučujeme, abyste si tento soubor někam zazálohovali, pokud v ATA provádíte velké změny.
-
-Je možné obnovit všechna nastavení spuštěním následujícího příkazu:
-
-`mongoimport.exe --db ATA --collection SystemProfile --file "<SystemProfile.json backup file>" --upsert`
-
-## Viz také
+## <a name="see-also"></a>Viz také
 - [Architektura ATA](/advanced-threat-analytics/plan-design/ata-architecture)
 - [Požadavky ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
 - [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
@@ -71,6 +60,6 @@ Je možné obnovit všechna nastavení spuštěním následujícího příkazu:
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO5-->
 
 

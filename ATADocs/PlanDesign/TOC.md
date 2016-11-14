@@ -3,10 +3,11 @@
 ## [Architektura ATA](ata-architecture.md)
 ## [Plánování kapacity ATA](ata-capacity-planning.md)
 ## [Požadavky ATA](ata-prerequisites.md)
-# [Nasazení a používání](/advanced-threat-analytics/deploy-use/preinstall-ata)
-# [Řešení problémů](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs)
+# [Nasazení](/advanced-threat-analytics/deploy-use/preinstall-ata)
+# [Použití](/advanced-threat-analytics/deploy-use/operate-ata)
+# [Řešení problémů](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-known-errors)
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO5-->
 
 
