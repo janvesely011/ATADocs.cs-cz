@@ -1,20 +1,21 @@
 ---
-title: "Nastavení oznámení ATA | Microsoft ATA"
+title: "E-mailová nastavení | Dokumenty Microsoftu"
 description: "Popisuje, jak vám má ATA doručovat upozornění (e-mailem nebo předáváním událostí ATA) při zjištění podezřelých aktivit."
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 08/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
 ms.technology: 
-ms.assetid: 14cb7513-5dc8-49cb-b3e0-94f469c443dd
+ms.assetid: bff20bf7-8b53-49da-81e5-b818a1c3b24e
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a4ba68547d6746625a44aca5d05790c3ad138f4e
-ms.openlocfilehash: 9a8461da7ff8b0f939a11f85e5e8dc21d191cc52
+ms.sourcegitcommit: fca7f1b2b8260cad6e0ce32aad1c9e1b53fc0ad5
+ms.openlocfilehash: d967cbf2674c5f561e63f66b64640ac08daad6c0
 
 
 ---
@@ -23,7 +24,7 @@ ms.openlocfilehash: 9a8461da7ff8b0f939a11f85e5e8dc21d191cc52
 
 
 
-## Nastavení e-mailového serveru pro ATA
+## <a name="provide-ata-with-up-your-email-server-settings"></a>Nastavení e-mailového serveru pro ATA
 ATA vás může upozornit, když zjistí podezřelou aktivitu. Aby řešení ATA mohlo odesílat e-mailová oznámení, musíte nejdřív nakonfigurovat **nastavení e-mailového serveru**.
 
 1.  Na serveru ATA Center klikněte na ikonu **Správa Microsoft Advanced Threat Analytics** na ploše.
@@ -44,7 +45,7 @@ ATA vás může upozornit, když zjistí podezřelou aktivitu. Aby řešení ATA
     |Odesilatel (povinné)|Zadejte e-mailovou adresu odesilatele e-mailu.|Například:<br />ATA@contoso.com|
     ![Obrázek nastavení e-mailového serveru ATA](media/ATA-email-server-1.7.png)
 
-## Nastavení serveru Syslog pro ATA
+## <a name="provide-ata-with-your-syslog-server-settings"></a>Nastavení serveru Syslog pro ATA
 Když ATA zjistí podezřelou aktivitu, může vás upozornit tak, že zašle upozornění na váš server Syslog. Pokud povolíte upozornění pro Syslog, můžete pro ně nastavit následující parametry.
 
 1.  Před konfigurací upozornění pro Syslog zjistěte ve spolupráci s vaším správcem systému SIEM následující informace:
@@ -77,11 +78,11 @@ Když ATA zjistí podezřelou aktivitu, může vás upozornit tak, že zašle up
 
 
 
-## Viz také
+## <a name="see-also"></a>Viz také
 [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO3-->
 
 
