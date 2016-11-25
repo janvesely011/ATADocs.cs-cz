@@ -1,20 +1,21 @@
 ---
-title: Novinky ATA verze 1.7 | Microsoft ATA
+title: Novinky ATA verze 1.7 | Dokumentace Microsoftu
 description: "Uvádí novinky ATA verze 1.7 spolu se známými problémy."
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 10/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
 ms.technology: 
-ms.assetid: 
+ms.assetid: be9ee613-4eb3-40f1-8973-e7f0a707ff57
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f334f9c8440e4bb0202579de220f6530d0aabad8
-ms.openlocfilehash: 03a5e6a5398ffcc43e712bd4a3c2f872cd91c0b4
+ms.sourcegitcommit: fca7f1b2b8260cad6e0ce32aad1c9e1b53fc0ad5
+ms.openlocfilehash: 8032e373567ce500c7741480d56d232f34b05446
 
 
 ---
@@ -75,9 +76,15 @@ V konzole ATA může ATA Gateway po dlouhou dobu zobrazovat stav „Probíhá ak
  
 ### <a name="dropped-port-mirror-traffic-when-using-vmware"></a>Přerušené přenosy se zrcadlením portů při použití VMware
 
-Upozornění na přerušené přenosy se zrcadlením portů při použití lehké brány na VMware
+Upozornění na přerušené přenosy se zrcadlením portů při použití brány Lightweight Gateway na VMwaru
 
-Pokud používáte řadiče domény na virtuálních počítačích VMware, můžou se vám zobrazit upozornění na **přerušené síťové přenosy se zrcadlením portů**. Toto může nastat kvůli neshodě v konfiguraci ve VMware. Pokud se chcete těmto upozorněním vyhnout, zkontrolujte, že následující nastavení mají hodnotu 0 nebo jsou zakázaná: TsoEnable, LargeSendOffload, IPv4, TSO Offload. Zvažte také zakázání procesu IPv4 Giant TSO Offload. Další informace najdete v dokumentaci k VMware.
+Pokud používáte řadiče domény na virtuálních počítačích VMware, můžou se vám zobrazit upozornění na **přerušené síťové přenosy se zrcadlením portů**. Toto může nastat kvůli neshodě v konfiguraci ve VMware. Pokud se chcete těmto upozorněním vyhnout, zkontrolujte, že následující nastavení mají hodnotu 0 nebo jsou na virtuálním počítači zakázaná:  
+
+- TsoEnable
+- LargeSendOffload(IPv4)
+- IPv4 TSO Offload
+
+Zvažte také zakázání procesu IPv4 Giant TSO Offload. Další informace najdete v dokumentaci k VMware.
 
 ### <a name="automatic-gateway-update-fail-when-updating-to-17-update-1"></a>Chyba automatické aktualizace brány při aktualizaci na verzi 1.7 (aktualizace 1)
 
@@ -110,6 +117,6 @@ Pokud chcete tento problém vyřešit, přejděte na příkazovém řádku se zv
 
 
 
-<!--HONumber=Oct16_HO5-->
+<!--HONumber=Nov16_HO3-->
 
 
