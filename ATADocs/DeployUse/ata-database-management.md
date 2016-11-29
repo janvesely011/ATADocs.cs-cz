@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/31/2016
+ms.date: 11/29/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -36,7 +36,6 @@ Viz [příslušná dokumentace k MongoDB](http://docs.mongodb.org/manual/adminis
 ## <a name="moving-the-ata-database-to-another-drive"></a>Přesunutí databáze ATA na jinou jednotku
 
 1.  Zastavte službu **Microsoft Advanced Threat Analytics Center**.
-
 > [!Important] 
 > Zajistěte, aby se před přechodem k dalšímu kroku služba ATA Center zastavila.
 
