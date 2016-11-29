@@ -1,25 +1,26 @@
 ---
-title: "Průvodce migrací pro aktualizaci ATA na verzi 1.7 | Microsoft ATA"
+title: "Průvodce migrací pro aktualizaci ATA na verzi 1.7 | Dokumentace Microsoftu"
 description: Postupy aktualizace ATA na verzi 1.7
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 08/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
 ms.technology: 
-ms.assetid: fb65eb41-b215-4530-93a2-0b8991f4e980
+ms.assetid: 8eefcd45-7a4b-4074-ac5b-1ffc48e6654a
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 3a821bf1479af529fd65e2153f8b722999c83a4f
-ms.openlocfilehash: 444bc4744834219d9db7bc8c209f33c039f90dad
+ms.sourcegitcommit: fca7f1b2b8260cad6e0ce32aad1c9e1b53fc0ad5
+ms.openlocfilehash: 4fa8b77aeffff327672396e9819215cc536af918
 
 
 ---
 
-# Průvodce migrací pro aktualizaci ATA na verzi 1.7
+# <a name="ata-update-to-17-migration-guide"></a>Průvodce migrací pro aktualizaci ATA na verzi 1.7
 Aktualizace ATA na verzi 1.7 přináší vylepšení v následujících oblastech:
 
 -   Nové detekce
@@ -27,7 +28,7 @@ Aktualizace ATA na verzi 1.7 přináší vylepšení v následujících oblastec
 -   Vylepšení stávajících detekcí
   
 
-## Aktualizace ATA na verzi 1.7
+## <a name="updating-ata-to-version-17"></a>Aktualizace ATA na verzi 1.7
 
 > [!NOTE] 
 > Pokud ve vašem prostředí neexistuje instalace ATA, stáhněte si úplnou verzi ATA, která zahrnuje verzi 1.7, a použijte standardní postup instalace popsaný v tématu [Instalace ATA](/advanced-threat-analytics/deploy-use/install-ata).
@@ -49,7 +50,7 @@ V této verzi se k instalaci nového nasazení ATA a upgradu stávajících nasa
     > [!IMPORTANT]
     > Aktualizujte všechny komponenty ATA Gateway, aby se zajistila správná funkce ATA.
 
-### Krok 1: Aktualizace ATA Center
+### <a name="step-1-update-the-ata-center"></a>Krok 1: Aktualizace ATA Center
 
 1.  Zazálohujte svou databázi: (volitelné)
 
@@ -72,7 +73,7 @@ V této verzi se k instalaci nového nasazení ATA a upgradu stávajících nasa
     -  Klikněte na **Aktualizovat**. Po klepnutí na Aktualizovat bude ATA až do dokončení aktualizace offline.
 
 4.  Po úspěšném dokončení aktualizace ATA Center klikněte na tlačítko **Spustit** a na konzole ATA pro komponenty ATA Gateway otevřete obrazovku **Aktualizace**.
-    ![Obrazovka Úspěšná aktualizace](media/migration center success.png)
+    ![Obrazovka úspěšné aktualizace](media/migration center success.png)
 
 5.  Na obrazovce **Aktualizace** se ATA Gateway teď aktualizují (pokud jste již nastavili automatické aktualizace). V opačném případě klikněte na tlačítko **Aktualizovat** vedle každé ATA Gateway.
   ![Obrázek aktualizace bran](media/migration update gw.png)
@@ -87,12 +88,12 @@ V této verzi se k instalaci nového nasazení ATA a upgradu stávajících nasa
 
 
 
-## Viz také
+## <a name="see-also"></a>Viz také
 
 - [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO3-->
 
 

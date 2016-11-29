@@ -1,8 +1,9 @@
 ---
-title: "Řešení potíží s protokolem chyb ATA | Microsoft ATA"
+title: "Řešení potíží s protokolem chyb ATA | Dokumentace Microsoftu"
 description: "Popisuje, jak je v ATA možné řešit běžné chyby."
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 10/25/2016
 ms.topic: article
@@ -13,8 +14,8 @@ ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f334f9c8440e4bb0202579de220f6530d0aabad8
-ms.openlocfilehash: aa16eeb45272ffcf28bbb28ed9a02f30f52b15d0
+ms.sourcegitcommit: 3ba53b7b1c34359f00da9fc9717496cfc7d4271d
+ms.openlocfilehash: 8687263977c7bfdf12581a200bba3a60633fca4d
 
 
 ---
@@ -42,6 +43,7 @@ Tato část podrobně popisuje možné chyby v nasazení ATA a kroky potřebné 
 |System.InvalidOperationException: Instance 'Microsoft.Tri.Gateway' v určené kategorii neexistuje.|Pro názvy procesů v bráně ATA byl povolen identifikátor PID|PID v názvech procesů zakážete pomocí [KB281884](https://support.microsoft.com/en-us/kb/281884)|
 |System.InvalidOperationException: Kategorie neexistuje.|Čítače můžou být v registru zakázané|Čítače výkonu znovu sestavíte pomocí [KB2554336](https://support.microsoft.com/en-us/kb/2554336)|
 |System.ApplicationException: Není možné spustit relaci ETW MMA-ETW-Livecapture-a4f595bd-f567-49a7-b963-20fa4e370329|V souboru hostitelů se nachází položka hostitele odkazující na krátký název počítače|Odeberte položku hostitele ze souboru C:\Windows\System32\drivers\etc\HOSTS nebo ji změňte na FQDN.|
+|System.IO.IOException: Ověření se nezdařilo, protože vzdálená strana uzavřela přenosový stream.|TLS 1.0 je zakázaná na bráně ATA Gateway, ale rozhraní .NET je nastavené na použití protokolu TLS 1.2.|Použijte jednu z následujících možností: </br> Povolení protokolu TLS 1.0 na bráně ATA Gateway </br>Protokol TLS 1.2 na rozhraní .NET povolíte nastavením klíčů registru tak, aby používaly výchozí nastavení operačního systému pro LLS a TLS, a to takto: `[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001` </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"`|
 
 
 
@@ -75,6 +77,6 @@ Tato část podrobně popisuje možné chyby v nasazení ATA a kroky potřebné 
 
 
 
-<!--HONumber=Oct16_HO5-->
+<!--HONumber=Nov16_HO4-->
 
 

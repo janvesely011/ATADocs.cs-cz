@@ -1,28 +1,29 @@
 ---
-title: Novinky ATA verze 1.6 | Microsoft ATA
+title: Novinky ATA verze 1.6 | Dokumentace Microsoftu
 description: "Uvádí novinky ATA verze 1.6 spolu se známými problémy."
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
 ms.technology: 
-ms.assetid: a0d64aff-ca9e-4300-b3f8-eb3c8b8ae045
+ms.assetid: 27b139e5-12b9-4953-8f53-eb58e8ce0038
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f13750f9cdff98aadcd59346bfbbb73c2f3a26f0
-ms.openlocfilehash: 0f801b4d5f2ab9a103b2ca292c75f26040699dd0
+ms.sourcegitcommit: fca7f1b2b8260cad6e0ce32aad1c9e1b53fc0ad5
+ms.openlocfilehash: 2cf155b0a54d12e78b5cac5be1ac077786e8cd07
 
 
 ---
 
-# Novinky ATA verze 1.6
+# <a name="whats-new-in-ata-version-16"></a>Novinky ATA verze 1.6
 Tyto poznámky k verzi obsahují informace o známých problémech v této verzi Advanced Threat Analytics.
 
-## Co je nového v aktualizaci ATA 1.6?
+## <a name="whats-new-in-the-ata-16-update"></a>Co je nového v aktualizaci ATA 1.6?
 Aktualizace ATA na verzi 1.6 přináší vylepšení v následujících oblastech:
 
 -   Nové detekce
@@ -39,7 +40,7 @@ Aktualizace ATA na verzi 1.6 přináší vylepšení v následujících oblastec
 
 -   Podpora IBM QRadar
 
-### Nové detekce
+### <a name="new-detections"></a>Nové detekce
 
 
 - **Škodlivý požadavek na soukromé informace přes Data Protection** Data Protection API (DPAPI) je služba ochrany dat založená na heslech. Tuto službu ochrany používají různé aplikace, které ukládají tajné údaje uživatelů, jako jsou hesla k webům a přihlašovací údaje ke sdíleným složkám. Při ztrátě hesla mohou uživatelé dešifrovat chráněná data pomocí obnovovacího klíče, který nezahrnuje jejich heslo. V doménovém prostředí útočníci mohou vzdáleně ukrást obnovovací klíč a použít ho k dešifrování chráněných dat ve všech počítačích připojených k doméně.
@@ -57,31 +58,31 @@ Aktualizace ATA na verzi 1.6 přináší vylepšení v následujících oblastec
 - **Neobvyklá implementace protokolu**Požadavky na ověření (Kerberos nebo NTLM) se obvykle zpracovávají pomocí standardní sady metod a protokolů. K zajištění úspěšného ověření ale stačí, aby požadavek splňoval konkrétní sadu požadavků. Útočníci mohou implementovat tyto protokoly s malými odchylkami od standardní implementace v daném prostředí. Tyto odchylky mohou signalizovat přítomnost útočníka, který se pokouší realizovat útoky typu pass-the-hash, útoky hrubou silou a další.
 
 
-### Vylepšení stávajících detekcí
+### <a name="improvements-to-existing-detections"></a>Vylepšení stávajících detekcí
 ATA 1.6 zahrnuje vylepšenou detekční logiku, která omezuje falešně pozitivní i falešně negativní scénáře pro již existující detekce, jako je zlatý lístek, honeytoken, útok hrubou silou nebo vzdálené spuštění.
 
-### ATA Lightweight Gateway
+### <a name="the-ata-lightweight-gateway"></a>ATA Lightweight Gateway
 Tato verze ATA zavádí nové možnosti nasazení pro ATA Gateway, které umožňují instalovat tuto komponentu přímo na řadič domény. Tato možnost nasazení odebere méně důležité funkce ATA Gateway a na základě prostředků dostupných na řadiči domény zavede dynamickou správu prostředků, která zajistí, že stávající operace řadiče domény nebudou ovlivněny. ATA Lightweight Gateway snižuje náklady na nasazení ATA. Současně usnadňuje nasazení v pobočkách, které mají omezenou kapacitu hardwarových prostředků nebo nemohou nastavit podporu pro zrcadlení portů.
 Další informace o ATA Lightweight Gateway najdete v tématu [Architektura ATA](/advanced-threat-analytics/plan-design/ata-architecture#ata-gateway-and-ata-lightweight-gateway).
 
 Další informace o aspektech nasazení a volbě vhodného typu brány najdete v tématu [Plánování kapacity ATA](/advanced-threat-analytics/plan-design/ata-capacity-planning#choosing-the-right-gateway-type-for-your-deployment).
 
 
-### Automatické aktualizace
+### <a name="automatic-updates"></a>Automatické aktualizace
 Počínaje verzí 1.6 je možné ATA Center aktualizovat pomocí služby Microsoft Update. Komponenty ATA Gateway se teď navíc dají automaticky aktualizovat pomocí standardních kanálů pro komunikaci s komponentou ATA Center.
-### Vylepšený výkon komponenty ATA Center
+### <a name="improved-ata-center-performance"></a>Vylepšený výkon komponenty ATA Center
 Nižší databázové zatížení a efektivnější způsob spouštění detekcí v této verzi umožňuje monitorovat pomocí jedné komponenty ATA Center mnohem víc řadičů domén.
 
-### Menší požadavky na úložiště
+### <a name="lower-storage-requirements"></a>Menší požadavky na úložiště
 ATA 1.6 potřebuje ke spuštění databáze ATA výrazně menší prostor úložiště. V současnosti vyžaduje jenom 20 % prostoru úložiště v porovnání s předchozími verzemi.
 
-### Podpora IBM QRadar
+### <a name="support-for-ibm-qradar"></a>Podpora IBM QRadar
 ATA nyní může přijímat události z řešení QRadar SIEM společnosti IBM (kromě už dříve podporovaných řešení SIEM).
 
-## Známé problémy
+## <a name="known-issues"></a>Známé problémy
 V této verzi existují následující známé problémy.
 
-### Nerozpoznání nových cest u ručně přesunutých databází
+### <a name="failure-to-recognize-new-path-in-manually-moved-databases"></a>Nerozpoznání nových cest u ručně přesunutých databází
 
 V nasazeních ATA, ve kterých je cesta k databázi ručně přesunutá, se pro aktualizaci nepoužije nová cesta k databázi. Může to způsobit následující problémy:
 
@@ -94,10 +95,10 @@ V nasazeních ATA, ve kterých je cesta k databázi ručně přesunutá, se pro 
     >[!Important]
 Před aktualizací ATA na verzi 1.6 aktualizujte následující klíč registru a použijte správnou cestu k databázi:  `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Advanced Threat Analytics\Center\DatabaseDataPath`
 
-### Selhání migrace při aktualizaci z ATA 1.5
+### <a name="migration-failure-when-updating-from-ata-15"></a>Selhání migrace při aktualizaci z ATA 1.5
 Při aktualizaci na ATA 1.6 může proces aktualizace selhat s následujícím kódem chyby:
 
-![Chyba aktualizace ATA na 1.6](http://i.imgur.com/QrLSApr.png) Pokud se zobrazí tato chyba, zkontrolujte protokol nasazení v adresáři **C:\Users\<User>\AppData\Local\Temp** a hledejte následující výjimku:
+![Chyba aktualizace ATA na 1.6](http://i.imgur.com/QrLSApr.png) Pokud se zobrazí tato chybová zpráva, zkontrolujte protokol nasazení v adresáři **C:\Users\<User>\AppData\Local\Temp** a hledejte následující výjimku:
 
     System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> MongoDB.Driver.MongoWriteException: A write operation resulted in an error. E11000 duplicate key error index: ATA.UniqueEntityProfile.$_id_ dup key: { : "<guid>" } ---> MongoDB.Driver.MongoBulkWriteException`1: A bulk write operation resulted in one or more errors.  E11000 duplicate key error index: ATA.UniqueEntityProfile.$_id_ dup key: { : " <guid> " }
 
@@ -130,22 +131,22 @@ Pokud se zobrazí některá z těchto chyb, spusťte následující alternativn�
 Toto volání by mělo vrátit WriteResult({ "nRemoved" : XX }), kde XX je počet podezřelých aktivit, které se odstranily. Pokud je toto číslo větší než 0, ukončete příkazový řádek a pokračujte v procesu aktualizace.
 
 
-### Net Framework 4.6.1 vyžaduje restartování serveru
+### <a name="net-framework-461-requires-restarting-the-server"></a>Net Framework 4.6.1 vyžaduje restartování serveru
 
 V některých případech může instalace rozhraní .Net Framework 4.6.1 vyžadovat restartování serveru. Upozorňujeme, že po kliknutí na tlačítko OK v dialogovém okně **Microsoft Advanced Threat Analytics Center – instalace** se server restartuje automaticky. To je důležité hlavně při instalaci ATA Lightweight Gateway na řadiči domény, protože před instalací můžete chtít naplánovat časové období údržby.
     ![Restartování rozhraní .Net Framework](media/ata-net-framework-restart.png)
 
-### Historické síťové aktivity se už nemigrují
+### <a name="historical-network-activities-no-longer-migrated"></a>Historické síťové aktivity se už nemigrují
 Tato verze ATA poskytuje vylepšený detekční modul, který zajišťuje přesnější detekci a omezuje řadu falešně pozitivních scénářů, hlavně pro útoky typu pass-the-hash.
 Nový a vylepšený detekční modul využívá vloženou detekční technologii, která umožňuje detekci bez přístupu k historickým síťovým aktivitám. To výrazně zvyšuje výkon komponenty ATA Center. A také to znamená, že během procesu aktualizace už není potřeba migrovat historické síťové aktivity.
 ATA při aktualizaci vyexportuje tato data do složky `<Center Installation Path>\Migration` jako soubor JSON pro případ, že byste je v budoucnu potřebovali.
 
-## Viz také
+## <a name="see-also"></a>Viz také
 [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 [Aktualizace ATA na verzi 1.6 – průvodce migrací](ata-update-1.6-migration-guide.md)
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Nov16_HO3-->
 
 
