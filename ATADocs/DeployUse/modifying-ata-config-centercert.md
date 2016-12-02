@@ -1,10 +1,11 @@
 ---
-title: "Změna konfigurace ATA – certifikát ATA Center | Microsoft ATA"
+title: "Změna konfigurace ATA – certifikát ATA Center | Dokumentace Microsoftu"
 description: "Popisuje dvoufázový postup obnovení nebo nahrazení certifikátu v úložišti místního počítače na serveru ATA Center."
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 11/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,8 +14,8 @@ ms.assetid: c8855287-de3b-4cdd-be8f-2128f48a6f27
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 050f1ef0b39d69b64ede53243a7fa2d33d0e4813
-ms.openlocfilehash: e707d354396f8eeed58c13ee1e9e91df9888e030
+ms.sourcegitcommit: bc7af91a925928183d179391f15d3a24cda2b576
+ms.openlocfilehash: 534b5f476e580919b11327ddbf9a35edad130515
 
 
 ---
@@ -23,13 +24,13 @@ ms.openlocfilehash: e707d354396f8eeed58c13ee1e9e91df9888e030
 
 
 
-# Změna konfigurace ATA – certifikát ATA Center
+# <a name="change-ata-configuration---ata-center-certificate"></a>Změna konfigurace ATA – certifikát ATA Center
 
 >[!div class="step-by-step"]
 [« IP adresa serveru ATA Center](modifying-ata-config-centerip.md)
 [adresa URL konzoly ATA »](modifying-ata-config-consoleurl.md)
 
-## Změna certifikátu ATA Center
+## <a name="change-the-ata-center-certificate"></a>Změna certifikátu ATA Center
 Pokud se blíží konec platnosti vašeho certifikátu a je třeba ho obnovit nebo nahradit po instalaci nového certifikátu v úložišti místního počítače na server ATA Center, nahraďte certifikát pomocí následujícího dvoufázového postupu:
 
 -   První fáze – Aktualizujte certifikát, který má služba ATA Center používat. V tomto okamžiku je služba ATA Center stále vázaná na původní certifikát. Pokud komponenty ATA Gateway synchronizují své konfigurace, budou mít dva potenciální certifikáty, které budou platné pro vzájemné ověřování. Dokud se komponenta ATA Gateway bude moct připojit pomocí původního certifikátu, nebude zkoušet nový.
@@ -68,13 +69,12 @@ Pokud se blíží konec platnosti vašeho certifikátu a je třeba ho obnovit ne
 [« IP adresa serveru ATA Center](modifying-ata-config-centerip.md)
 [adresa URL konzoly ATA »](modifying-ata-config-consoleurl.md)
 
-## Viz také
+## <a name="see-also"></a>Viz také
 - [Práce s konzolou ATA](working-with-ata-console.md)
-- [Instalace ATA](install-ata.md)
 - [Podívejte se na fórum ATA!](https://aka.ms/ata-forum)
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO5-->
 
 
