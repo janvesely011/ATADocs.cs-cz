@@ -1,10 +1,11 @@
 ---
-title: "Změna konfigurace ATA – IP adresa ATA Center | Microsoft ATA"
+title: "Změna konfigurace ATA – IP adresa ATA Center | Dokumentace Microsoftu"
 description: "Popisuje, jak změnit IP adresu, port nebo certifikát pro ATA Center."
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 11/29/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,8 +14,8 @@ ms.assetid: 93b27f15-f7e5-49bb-870a-d81d09dfe9fc
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 050f1ef0b39d69b64ede53243a7fa2d33d0e4813
-ms.openlocfilehash: e6d42610d1c785da5b7c7b1cf035d94c2fddff4b
+ms.sourcegitcommit: bc7af91a925928183d179391f15d3a24cda2b576
+ms.openlocfilehash: d0fed03deb5f50747383a398dfb2eca74ad0cdf0
 
 
 ---
@@ -23,14 +24,14 @@ ms.openlocfilehash: e6d42610d1c785da5b7c7b1cf035d94c2fddff4b
 
 
 
-# Změna konfigurace ATA – IP adresa ATA Center
+# <a name="change-ata-configuration---ata-center-ip-address"></a>Změna konfigurace ATA – IP adresa ATA Center
 
 >[!div class="step-by-step"]
 [Certifikát ATA Center »](modifying-ata-config-centercert.md)
 
 Po počátečním nasazení by se změny ATA Center měly dělat opatrně. Pro aktualizaci IP adresy a portu nebo certifikátu použijte následující postupy.
 
-## Změna IP adresy používané serverem ATA Center
+## <a name="change-the-ip-address-used-by-the-ata-center-server"></a>Změna IP adresy používané serverem ATA Center
 Pokud potřebujete změnit IP adresu a port nebo certifikát pro ATA Center, zvažte následující.
 
 Komponenty ATA Gateway místně ukládají IP adresu pro ATA Center, ke kterému se potřebují připojit. V pravidelných intervalech se připojují k ATA Center a stahují změny konfigurace. Změna způsobu připojení komponent ATA Gateway k ATA Center se provádí ve dvou fázích.
@@ -77,13 +78,12 @@ Komponenty ATA Gateway místně ukládají IP adresu pro ATA Center, ke kterému
 [Změna certifikátu ATA Center »](modifying-ata-config-centercert.md)
 
 
-## Viz také
+## <a name="see-also"></a>Viz také
 - [Práce s konzolou ATA](working-with-ata-console.md)
-- [Instalace ATA](install-ata.md)
 - [Podívejte se na fórum ATA!](https://aka.ms/ata-forum)
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO5-->
 
 

@@ -1,10 +1,11 @@
 ---
-title: "Práce s konzolou ATA | Microsoft ATA"
+title: "Práce s konzolou ATA | Dokumentace Microsoftu"
 description: "Popisuje způsob přihlášení ke konzole ATA a její komponenty."
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 11/29/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,8 +14,8 @@ ms.assetid: 1bf264d9-9697-44b5-9533-e1c498da4f07
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a4ba68547d6746625a44aca5d05790c3ad138f4e
-ms.openlocfilehash: ab9abce7479971c80544476c54cbf0911d1a5822
+ms.sourcegitcommit: 7dc860fe31da1374a4466f8e56e55e6520bc10dc
+ms.openlocfilehash: c315b3b307628b31b42a6d393513b86ce88e8aa1
 
 
 ---
@@ -23,14 +24,14 @@ ms.openlocfilehash: ab9abce7479971c80544476c54cbf0911d1a5822
 
 
 
-# Práce s konzolou ATA
+# <a name="working-with-the-ata-console"></a>Práce s konzolou ATA
 
 Konzolu ATA použijte k monitorování a reakci na podezřelé aktivity, které detekuje ATA.
 
-## Povolení přístupu ke konzole ATA
+## <a name="enabling-access-to-the-ata-console"></a>Povolení přístupu ke konzole ATA
 Na úspěšně přihlášení ke konzole ATA je nutné se přihlásit jako uživatel, který byl přiřazen správné roli ATA pro přístup ke konzole ATA. Další informace o řízení přístupu na základě rolí (RBAC) v ATA najdete v článku [Práce se skupinami rolí ATA](ata-role-groups.md).
 
-## Přihlášení ke konzole ATA
+## <a name="logging-into-the-ata-console"></a>Přihlášení ke konzole ATA
 
 1. Na serveru ATA Center klikněte na ikonu **konzoly Microsoft ATA** na ploše nebo otevřete prohlížeč a vyhledejte konzolu ATA.
 
@@ -44,14 +45,14 @@ Na úspěšně přihlášení ke konzole ATA je nutné se přihlásit jako uživ
 ![Obrázek přihlašovací obrazovky ATA](media/ATA-log-in-screen.png)
 
 
-## Konzola ATA
+## <a name="the-ata-console"></a>Konzola ATA
 
 Konzola ATA poskytuje rychlé zobrazení všech podezřelých aktivit v chronologickém pořadí. Umožňuje přejít k podrobnostem libovolné aktivity a provádět akce založené na těchto aktivitách. Konzola také zobrazuje výstrahy a oznámení, které upozorňují na problémy se sítí ATA na nové aktivity, které se považují za podezřelé.
 
 Toto jsou klíčové prvky konzoly ATA.
 
 
-### Časová osa útoků
+### <a name="attack-time-line"></a>Časová osa útoků
 
 Toto je výchozí cílová stránka, která se vám zobrazí po přihlášení ke konzole ATA. Ve výchozím nastavení jsou všechny otevřené podezřelé aktivity zobrazené na časové ose útoků. Časová osa útoků umožňuje filtrovat a zobrazit všechny podezřelé aktivity nebo jenom otevřené, vyřešené nebo zamítnuté aktivity. Můžete také zjistit závažnost, která se jednotlivým aktivitám přiřadila.
 
@@ -59,23 +60,23 @@ Toto je výchozí cílová stránka, která se vám zobrazí po přihlášení k
 
 Další informace najdete v tématu [Práce s podezřelými aktivitami](/advanced-threat-analytics/deploy-use/working-with-suspicious-activities).
 
-### Oznamovací pruh
+### <a name="notification-bar"></a>Oznamovací pruh
 
 Když se detekuje nová podezřelá aktivita, na pravé straně se automaticky otevře oznamovací pruh. Pokud byly od posledního přihlášení zjištěné nové podezřelé aktivity, oznamovací pruh se otevře hned po vašem úspěšném přihlášení. Oznamovací pruh můžete kdykoli vyvolat kliknutím na šipku napravo.
 
 ![Obrázek oznamovacího pruhu ATA](media/notification-bar-1.7.png)
 
-### Panel filtrování
+### <a name="filtering-panel"></a>Panel filtrování
 
 Na základě stavu a závažnosti umožňuje filtrovat, které podezřelé aktivity se zobrazí na časové ose útoků nebo na kartě podezřelých aktivit profilu entity.
 
-### Panel hledání
+### <a name="search-bar"></a>Panel hledání
 
 Panel hledání najdete v horní nabídce. Umožňuje v ATA vyhledat konkrétního uživatele, počítač nebo skupiny. Pokud si ho chcete vyzkoušet, stačí začít psát.
 
 ![Obrázek hledání na konzole ATA](media/ATA-console-search.png)
 
-### Health Center
+### <a name="health-center"></a>Health Center
 
 Health Center zobrazuje výstrahy, pokud v nasazení ATA něco nefunguje tak, jak má.
 
@@ -85,7 +86,7 @@ Kdykoli váš systém narazí na problém, jako je třeba chyba připojení nebo
 
 Výstrahy komponenty Health Center se dají vyřešit nebo zamítnout a na základě závažnosti jsou zařazené do kategorií Vysoká, Střední nebo Nízká. Pokud vyřešíte výstrahu, kterou služba ATA detekuje jako stále aktivní, automaticky se přesune do seznamu otevřených výstrah. Pokud systém zjistí, že pro výstrahu už není důvod (situace byla vyřešena), automaticky ji přesune do seznamu vyřešených výstrah.
 
-### Profily uživatelů a počítačů
+### <a name="user-and-computer-profiles"></a>Profily uživatelů a počítačů
 
 ATA vytvoří profil pro každého uživatele a každý počítač v síti. V profilu uživatele ATA zobrazuje obecné informace, jako jsou členství ve skupinách, poslední přihlášení a prostředky s posledním přístupem.
 
@@ -102,7 +103,7 @@ Profil, který ATA nemůže úplně vyřešit, se označí ikonou napůl vyplně
 
 ![Obrázek nevyřešeného profilu ATA](media/ATA-Unresolved-Profile.jpg)
 
-### Miniprofil
+### <a name="mini-profile"></a>Miniprofil
 
 Pokud na libovolném místě konzoly, kde se prezentuje jedna entita, jako je uživatel nebo počítač, najedete myší na entitu, automaticky se otevře miniprofil, ve kterém se zobrazí následující informace (pokud jsou dostupné):
 
@@ -120,11 +121,11 @@ Pokud na libovolném místě konzoly, kde se prezentuje jedna entita, jako je u�
 
 
 
-## Viz také
+## <a name="see-also"></a>Viz také
 [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO5-->
 
 
