@@ -1,10 +1,11 @@
 ---
-title: "Konfigurace zrcadlení portů | Microsoft ATA"
+title: "Konfigurace zrcadlení portů | Dokumentace Microsoftu"
 description: "Popisuje možnosti zrcadlení portů a způsob jejich konfigurace pro ATA."
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/28/2016
+ms.date: 11/28/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,8 +14,8 @@ ms.assetid: cdaddca3-e26e-4137-b553-8ed3f389c460
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e3b690767e5c6f5561a97a73eccfbf50ddb04148
-ms.openlocfilehash: d7f15f08a64a9d884a560f4f3429568cf33bdd34
+ms.sourcegitcommit: bc7af91a925928183d179391f15d3a24cda2b576
+ms.openlocfilehash: 9312287da04f393282857005b68799f82e0bdfa5
 
 
 ---
@@ -23,7 +24,7 @@ ms.openlocfilehash: d7f15f08a64a9d884a560f4f3429568cf33bdd34
 
 
 
-# Konfigurace zrcadlení portů
+# <a name="configure-port-mirroring"></a>Konfigurace zrcadlení portů
 > [!NOTE] 
 > Tento článek se týká jenom nasazení komponent ATA Gateway, nikoli komponent ATA Lightweight Gateway. Pokud chcete určit, jestli potřebujete ATA Gateway, přečtěte si téma [Volba vhodných bran pro vaše nasazení](/advanced-threat-analytics/plan-design/ata-capacity-planning#choosing-the-right-gateway-type-for-your-deployment).
  
@@ -43,7 +44,7 @@ Další informace najdete v dokumentaci dodavatele.
 > [!NOTE]
 > Pokud řadič domény se zrcadlením portů je připojený prostřednictvím linky WAN, zkontrolujte, že linka WAN dokáže zpracovat další zátěž provozu ERSPAN.
 
-## Podporované možnosti zrcadlení portů
+## <a name="supported-port-mirroring-options"></a>Podporované možnosti zrcadlení portů
 
 |ATA Gateway|Řadič domény|Pravidla|
 |---------------|---------------------|------------------|
@@ -68,13 +69,12 @@ Další informace najdete v dokumentaci dodavatele.
 
 Po dokončení konfigurace zrcadlení portů a před instalací ATA Gateway ověřte, že zrcadlení portů funguje.
 
-## Viz také
+## <a name="see-also"></a>Viz také
 - [Ověření zrcadlení portů](validate-port-mirroring.md)
-- [Instalace ATA](install-ata.md)
 - [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO5-->
 
 

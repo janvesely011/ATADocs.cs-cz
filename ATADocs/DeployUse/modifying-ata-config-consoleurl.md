@@ -3,8 +3,9 @@ title: "Změna konfigurace ATA – IP adresa konzoly ATA | Microsoft Advanced Th
 description: "Popisuje, jak změnit IP adresu konzoly ATA, která se používá k vytvoření zástupce konzoly ATA na komponentách ATA Gateway."
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: stevenpo
-ms.date: 08/24/2016
+ms.date: 11/29/2016
 ms.topic: article
 ms.prod: identity-ata
 ms.service: advanced-threat-analytics
@@ -13,8 +14,8 @@ ms.assetid: 50118465-df34-4e04-b0cc-48808b6a96b1
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 050f1ef0b39d69b64ede53243a7fa2d33d0e4813
-ms.openlocfilehash: b3d11a87f1909c1fd964fa990e5d36a91691a844
+ms.sourcegitcommit: bc7af91a925928183d179391f15d3a24cda2b576
+ms.openlocfilehash: 8f816c8eda0a1b11a42314a18b1c8c39ac6a7ba8
 
 
 ---
@@ -23,13 +24,13 @@ ms.openlocfilehash: b3d11a87f1909c1fd964fa990e5d36a91691a844
 
 
 
-# Změna konfigurace ATA – adresa URL konzoly ATA
+# <a name="change-ata-configuration---ata-console-url"></a>Změna konfigurace ATA – adresa URL konzoly ATA
 
 >[!div class="step-by-step"]
 [« Certifikát ATA Center](modifying-ata-config-centercert.md)
 [Heslo připojení k doméně »](modifying-ata-config-dcpassword.md)
 
-## Změna adresy URL konzoly ATA
+## <a name="change-the-ata-console-url"></a>Změna adresy URL konzoly ATA
 Ve výchozím nastavení adresa URL konzoly ATA je IP adresa, vybraná pro konzolu ATA při instalaci ATA Center.
 
 Adresa URL se používá v následujících scénářích:
@@ -60,6 +61,9 @@ Pokud potřebujete změnit adresu URL pro konzolu ATA, proveďte tyto kroky na s
 5.  V části **Adresa URL konzoly** podle potřeby upravte adresu URL:
 
     ![Adresa URL konzoly ATA](media/ATA-chge-center-URL.png)
+> [!NOTE]
+> Na konci adresy URL nesmí být znak lomítka (/).
+
 6.  Klikněte na **Uložit**.
 
 >[!div class="step-by-step"]
@@ -67,13 +71,12 @@ Pokud potřebujete změnit adresu URL pro konzolu ATA, proveďte tyto kroky na s
 [Heslo připojení k doméně »](modifying-ata-config-dcpassword.md)
 
 
-## Viz také
+## <a name="see-also"></a>Viz také
 - [Práce s konzolou ATA](working-with-ata-console.md)
-- [Instalace ATA](install-ata.md)
 - [Podívejte se na fórum ATA!](https://aka.ms/ata-forum)
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Nov16_HO5-->
 
 
