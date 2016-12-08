@@ -1,8 +1,9 @@
 ---
-title: "Řešení potíží s ATA pomocí čítačů výkonu | Microsoft ATA"
+title: "Řešení potíží s ATA pomocí čítačů výkonu | Dokumentace Microsoftu"
 description: "Popisuje, jak se čítače výkonu dají použít k řešení potíží s ATA."
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 09/20/2016
 ms.topic: article
@@ -13,8 +14,8 @@ ms.assetid: df162a62-f273-4465-9887-94271f5000d2
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d47d9e7be294c68d764710c15c4bb78539e42f62
-ms.openlocfilehash: e1ff02f8d78eacc5c4fccdc1cc973d8a07f9c6ca
+ms.sourcegitcommit: 2e7e6d5b731723449ce275f810343b1e8957f6d0
+ms.openlocfilehash: a9ee5fd9a57d484e4bfe06f42766f895063ad727
 
 
 ---
@@ -23,7 +24,7 @@ ms.openlocfilehash: e1ff02f8d78eacc5c4fccdc1cc973d8a07f9c6ca
 
 
 
-# Řešení potíží s ATA pomocí čítačů výkonu
+# <a name="troubleshooting-ata-using-the-performance-counters"></a>Řešení potíží s ATA pomocí čítačů výkonu
 Čítače výkonu ATA poskytují přehled o tom, jak dobře jednotlivé komponenty ATA fungují. Komponenty ATA zpracovávají data sekvenčně. To znamená, že případný problém může na některém místě řetězce komponent způsobit částečné zhoršení provozu. Pokud chcete problém vyřešit, musíte zjistit, která komponenta selhává, a pak problém vyřešit na samém začátku řetězce. Data uvedená v čítačích výkonu vám pomůžou pochopit, jak jednotlivé komponenty fungují.
 Pokud chcete lépe pochopit tok interních komponent ATA, přečtěte si článek [Architektura ATA](/advanced-threat-analytics/plan-design/ata-architecture).
 
@@ -36,7 +37,7 @@ Pokud chcete lépe pochopit tok interních komponent ATA, přečtěte si článe
 3.  To samé se děje s dalšími komponentami až ke komponentě NetworkListener, která omezí síťový provoz, když už nebude moct přesměrovávat entity.
 
 
-## Čítače výkonu ATA Gateway
+## <a name="ata-gateway-performance-counters"></a>Čítače výkonu ATA Gateway
 
 V této části všechny odkazy na ATA Gateway platí také pro ATA Lightweight Gateway.
 
@@ -47,7 +48,7 @@ Tady je seznam hlavních čítačů výkonu komponenty ATA Gateway, kterým je p
 
 |Čítač|Popis|Prahová hodnota|Odstraňování potíží|
 |-----------|---------------|-------------|-------------------|
-|Microsoft ATA Gateway\NetworkListener PEF Parser Messages\Sec (Zprávy analyzované komponentou Microsoft ATA Gateway\PEF NetworkListener/s)|Objem provozu, který ATA Gateway zpracovává za sekundu|Žádná prahová hodnota|Pomáhá zjistit objem provozu, který ATA Gateway analyzuje.|
+|Microsoft ATA Gateway\NetworkListener PEF Parsed Messages\Sec (Zprávy analyzované komponentou Microsoft ATA Gateway\PEF NetworkListener/s)|Objem provozu, který ATA Gateway zpracovává za sekundu|Žádná prahová hodnota|Pomáhá zjistit objem provozu, který ATA Gateway analyzuje.|
 |NetworkListener PEF Dropped Events/Sec (Události vynechané komponentou PEF NetworkListener/s)|Objem provozu, který ATA Gateway vynechává za sekundu|Tato hodnota by měla být stále nulová (výjimečná krátká zhoršení jsou přijatelná).|Zkontrolujte, jestli některá komponenta nedosáhla své maximální velikosti a neblokuje předchozí komponenty až ke komponentě NetworkListener. Další informace najdete v části **Proces komponent ATA** uvedené výš.<br /><br />Zkontrolujte, jestli nejsou potíže s procesorem nebo pamětí.|
 |Microsoft ATA Gateway\NetworkListener ETW Dropped Events\Sec (Microsoft ATA Gateway\Události vynechané komponentou ETW NetworkListener/s)|Objem provozu, který ATA Gateway vynechává za sekundu|Tato hodnota by měla být stále nulová (výjimečná krátká zhoršení jsou přijatelná).|Zkontrolujte, jestli některá komponenta nedosáhla své maximální velikosti a neblokuje předchozí komponenty až ke komponentě NetworkListener. Další informace najdete v části **Proces komponent ATA** uvedené výš.<br /><br />Zkontrolujte, jestli nejsou potíže s procesorem nebo pamětí.|
 |Microsoft ATA Gateway\NetworkActivityTranslator Message Data # Block Size (Microsoft ATA Gateway\Velikost bloku dat zpráv komponenty NetworkActivityTranslator)|Objem provozu zařazený do fronty pro překlad na síťové aktivity (NA)|Hodnota by měla být menší než maximum-1 (výchozí maximum je 100000).|Zkontrolujte, jestli některá komponenta nedosáhla své maximální velikosti a neblokuje předchozí komponenty až ke komponentě NetworkListener. Další informace najdete v části **Proces komponent ATA** uvedené výš.<br /><br />Zkontrolujte, jestli nejsou potíže s procesorem nebo pamětí.|
@@ -59,11 +60,11 @@ Tady je seznam hlavních čítačů výkonu komponenty ATA Gateway, kterým je p
 > -   Hodnoty čítačů jsou v milisekundách.
 > -   Někdy je vhodnější monitorovat všechny čítače pomocí typu grafu Sestava (příklad: monitorování všech čítačů v reálném čase).
 
-## Čítače výkonu ATA Lightweight Gateway
+## <a name="ata-lightweight-gateway-performance-counters"></a>Čítače výkonu ATA Lightweight Gateway
 Čítače výkonu můžete použít ke správě kvóty v Lightweight Gateway, abyste se ujistili, že ATA nespotřebovává příliš mnoho prostředků z řadičů domény, ve kterých není nainstalovaná.
-Pokud chcete změřit omezení prostředků, které ATA na Lightweight Gateway vynucuje, přidejte následující čítače:
+Pokud chcete změřit omezení prostředků, které ATA na Lightweight Gateway vynucuje, přidejte tyto čítače.
 
-Otevřete „Sledování výkonu“ a přidejte všechny čítače pro ATA Lightweight Gateway. Názvy objektů čítače výkonu jsou: Microsoft ATA Gateway a Microsoft ATA Gateway Updater.
+Stačí otevřít Sledování výkonu a přidat všechny čítače pro ATA Lightweight Gateway. Názvy objektů čítače výkonu jsou: Microsoft ATA Gateway a Microsoft ATA Gateway Updater.
 
 
 |Čítač|Popis|Prahová hodnota|Odstraňování potíží|
@@ -84,7 +85,7 @@ Pokud chcete zobrazit skutečnou spotřebou, podívejte se na následující č�
 |Process(Microsoft.Tri.Gateway)\Soukromé bajty|Velikost potvrzené paměti (v bajtech), kterou proces Lightweight Gateway skutečně spotřebovává.|Žádná prahová hodnota. | Porovnejte výsledky tohoto čítače s limitem Max. velikost potvrzené paměti GatewayUpdaterResourceManager. Pokud si všimnete, že proces v určitém časovém intervalu často dosahuje maximálního limitu (proces dosáhne limitu a potom začne zahazovat provoz), znamená to, bude třeba vyhradit další prostředky pro Lightweight Gateway.| 
 |Process(Microsoft.Tri.Gateway)\Pracovní sada|Velikost fyzické paměti (v bajtech), kterou proces Lightweight Gateway skutečně spotřebovává.|Žádná prahová hodnota. |Porovnejte výsledky tohoto čítače s limitem Max. velikost potvrzené paměti GatewayUpdaterResourceManager. Pokud si všimnete, že proces v určitém časovém intervalu často dosahuje maximálního limitu (proces dosáhne limitu a potom začne zahazovat provoz), znamená to, bude třeba vyhradit další prostředky pro Lightweight Gateway.|
 
-## Čítače výkonu ATA Center
+## <a name="ata-center-performance-counters"></a>Čítače výkonu ATA Center
 Přidáním čítačů výkonu ATA Center můžete sledovat výkon softwaru ATA Center v reálném čase.
 
 Stačí otevřít Sledování výkonu a přidat všechny čítače pro ATA Center. Název příslušného objektu čítače výkonu je Microsoft ATA Center.
@@ -96,14 +97,14 @@ Tady je seznam hlavních čítačů výkonu komponenty ATA Center, kterým je po
 |Velikost bloku dávky entit Microsoft ATA Center\EntityReceiver|Počet dávek entit, které komponenta ATA Center zařadila do fronty|Hodnota by měla být menší než maximum-1 (výchozí maximum je 10000).|Zkontrolujte, jestli některá komponenta nedosáhla své maximální velikosti a neblokuje předchozí komponenty až ke komponentě NetworkListener.  Další informace najdete v části **Proces komponent ATA** uvedené výš.<br /><br />Zkontrolujte, jestli nejsou potíže s procesorem nebo pamětí.|
 |Velikost bloku síťových aktivit Microsoft ATA Center\NetworkActivityProcessor|Počet síťových aktivit (NA) zařazených do fronty pro zpracování|Hodnota by měla být menší než maximum-1 (výchozí maximum je 50000).|Zkontrolujte, jestli některá komponenta nedosáhla své maximální velikosti a neblokuje předchozí komponenty až ke komponentě NetworkListener. Další informace najdete v části **Proces komponent ATA** uvedené výš.<br /><br />Zkontrolujte, jestli nejsou potíže s procesorem nebo pamětí.|
 |Velikost bloku síťových aktivit Microsoft ATA Center\EntityProfiler|Počet síťových aktivit (NA) zařazených do fronty pro profilování|Hodnota by měla být menší než maximum-1 (výchozí maximum je 10000).|Zkontrolujte, jestli některá komponenta nedosáhla své maximální velikosti a neblokuje předchozí komponenty až ke komponentě NetworkListener. Další informace najdete v části **Proces komponent ATA** uvedené výš.<br /><br />Zkontrolujte, jestli nejsou potíže s procesorem nebo pamětí.|
-|Microsoft ATA Center\CenterDatabase &#42; velikost bloku|Počet síťových aktivit konkrétního typu zařazených do fronty pro zápis do databáze|Hodnota by měla být menší než maximum-1 (výchozí maximum je 50000).|Zkontrolujte, jestli některá komponenta nedosáhla své maximální velikosti a neblokuje předchozí komponenty až ke komponentě NetworkListener. Další informace najdete v části **Proces komponent ATA** uvedené výš.<br /><br />Zkontrolujte, jestli nejsou potíže s procesorem nebo pamětí.|
+|Microsoft ATA Center\Database &#42; velikost bloku|Počet síťových aktivit konkrétního typu zařazených do fronty pro zápis do databáze|Hodnota by měla být menší než maximum-1 (výchozí maximum je 50000).|Zkontrolujte, jestli některá komponenta nedosáhla své maximální velikosti a neblokuje předchozí komponenty až ke komponentě NetworkListener. Další informace najdete v části **Proces komponent ATA** uvedené výš.<br /><br />Zkontrolujte, jestli nejsou potíže s procesorem nebo pamětí.|
 
 
 > [!NOTE]
 > -   Hodnoty čítačů jsou v milisekundách.
 > -   Někdy je vhodnější monitorovat všechny čítače pomocí typu grafu Sestava (příklad: monitorování všech čítačů v reálném čase).
 
-## Čítače operačního systému
+## <a name="operating-system-counters"></a>Čítače operačního systému
 Následuje seznam hlavních čítačů operačního systému, kterým je potřeba věnovat pozornost:
 
 |Čítač|Popis|Prahová hodnota|Odstraňování potíží|
@@ -119,15 +120,15 @@ Následuje seznam hlavních čítačů operačního systému, kterým je potřeb
 |\Logický disk&#42;\Zápisy na disk/s|Rychlost provádění operací zápisu na disk|Žádná prahová hodnota|Čítače využití disku (mohou pomoci při řešení potíží s latencí úložiště)|
 |\Logický disk(&#42;)\Bajty zápisu na disk/s|Počet bajtů, které se za sekundu zapíší na disk|Žádná prahová hodnota|Čítače využití disku mohou pomoci při řešení potíží s latencí úložiště.|
 
-## Viz také
+## <a name="see-also"></a>Viz také
 - [Požadavky ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
 - [Plánování kapacity ATA](/advanced-threat-analytics/plan-design/ata-capacity-planning)
-- [Konfigurace sběru událostí](/advanced-threat-analytics/deploy-use/configure-event-collection)
+- [Konfigurace shromažďování událostí](/advanced-threat-analytics/deploy-use/configure-event-collection)
 - [Konfigurace předávání událostí systému Windows](/advanced-threat-analytics/deploy-use/configure-event-collection#configuring-windows-event-forwarding)
 - [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Dec16_HO1-->
 
 
