@@ -1,8 +1,9 @@
 ---
-title: "Bezobslužná instalace ATA | Microsoft ATA"
+title: "Bezobslužná instalace ATA | Dokumentace Microsoftu"
 description: "Popisuje postup při bezobslužné instalaci ATA."
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: get-started-article
@@ -13,8 +14,8 @@ ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d0681cfa4ae763da9c88c8dec9b77a75494a5c9f
-ms.openlocfilehash: 7b9ba09d3757979c0b845f796a846e7e83b505af
+ms.sourcegitcommit: b7f9dac8c00f213ee0cefc9ff93f2c9ca40cd28b
+ms.openlocfilehash: 7d7eeaf450a38a23c5c3a4d6d192a773f4cd036c
 
 
 ---
@@ -23,9 +24,9 @@ ms.openlocfilehash: 7b9ba09d3757979c0b845f796a846e7e83b505af
 
 
 
-# Bezobslužná instalace ATA
+# <a name="ata-silent-installation"></a>Bezobslužná instalace ATA
 Tento článek poskytuje podrobné pokyny k bezobslužné instalaci ATA.
-## Požadavky
+## <a name="prerequisites"></a>Požadavky
 
 Microsoft ATA v1.7 vyžaduje instalaci rozhraní Microsoft .NET Framework 4.6.1. 
 
@@ -36,7 +37,7 @@ Když instalujete nebo aktualizujete ATA, jako součást nasazení Microsoft ATA
 Při použití metody bezobslužné instalace ATA je instalační program nakonfigurovaný tak, aby po ukončení instalace (v případě potřeby) automaticky restartoval server. Pokud se chcete restartování serveru v rámci instalace vyhnout, použijte příznak `-NoRestart`. Pokud se při použití příznaku `-NoRestart` bude jako součást instalace vyžadovat restartování, instalační program se pozastaví, než se server restartuje. Pokud chcete sledovat průběh nasazení, monitorujte instalační protokoly ATA, které jsou umístěné ve složce **%AppData%\Local\Temp**.
 
 
-## Instalace ATA Center
+## <a name="install-the-ata-center"></a>Instalace ATA Center
 
 K instalaci komponenty ACA Center použijte následující příkaz:
 
@@ -77,7 +78,7 @@ Instalace komponenty ATA Center s výchozími instalačními cestami, dvěma IP 
     “Microsoft ATA Center Setup.exe” /quiet --LicenseAccepted NetFrameworkCommandLineArguments ="/q" CenterIpAddress=192.168.0.10 CenterPort=443 CenterCertificateThumbprint= ‎"1E2079739F624148ABDF502BF9C799FCB8C7212F”
     ConsoleIpAddress=192.168.0.11  ConsoleCertificateThumbprint=”G9530253C976BFA9342FD1A716C0EC94207BFD5A”
 
-## Aktualizace ATA Center
+## <a name="update-the-ata-center"></a>Aktualizace ATA Center
 
 K aktualizaci komponenty ACA Center použijte následující příkaz:
 
@@ -102,7 +103,7 @@ Při aktualizaci instalační program automaticky rozpozná, že služba ATA už
 
         “Microsoft ATA Center Setup.exe” /quiet NetFrameworkCommandLineArguments="/q"
 
-## Bezobslužná odinstalace komponenty ATA Center
+## <a name="uninstall-the-ata-center-silently"></a>Bezobslužná odinstalace komponenty ATA Center
 
 K provedení bezobslužné odinstalace komponenty ATA Center použijte následující příkaz:**Syntaxe**:
 
@@ -129,7 +130,7 @@ K provedení bezobslužné odinstalace komponenty ATA Center použijte následuj
 
     “Microsoft ATA Center Setup.exe” /quiet /uninstall --DeleteExistingDatabaseData
 
-## Bezobslužná instalace ATA Gateway
+## <a name="ata-gateway-silent-installation"></a>Bezobslužná instalace ATA Gateway
 K bezobslužné instalaci komponenty ACA Gateway použijte následující příkaz:
 
 **Syntaxe**:
@@ -146,15 +147,14 @@ K bezobslužné instalaci komponenty ACA Gateway použijte následující přík
 |NoRestart|/norestart|Ne|Potlačí všechny pokusy o restartování. Ve výchozím nastavení uživatelské rozhraní před restartováním zobrazí výzvu.|
 |Nápověda|/help|Ne|Poskytuje nápovědu a stručnou referenční příručku. Zobrazí správné použití instalačních příkazů včetně seznamu všech možností a jejich chování.|
 |NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Ano|Určuje parametry pro instalaci rozhraní .Net Framework. K vynucení bezobslužné instalace rozhraní .Net Framework musí být nastavené.|
-|LicenseAccepted|--LicenseAccepted|Ano|Udává, že licence byla přečtena a schválena. U bezobslužné instalace musí být nastavené.|
 
 **Parametry instalace**:
 
 |Název|Syntaxe|Povinné pro bezobslužnou instalaci?|Popis|
 |-------------|----------|---------|---------|
 |GatewayCertificateThumbprint|GatewayCertificateThumbprint=”<CertThumbprint >”|Ne|Nastaví kryptografický otisk certifikátu pro službu ATA Center. Tento certifikát slouží k zabezpečení komunikace mezi komponentami ATA Center a ATA Gateway. Pokud není nastavený, instalace vytvoří certifikát podepsaný svým držitelem (self-signed certificate).|
-|ConsoleAccountName|ConsoleAccountName=”<AccountName>”|Ano|Nastaví název uživatelského účtu (uzivatel@domena.com), který se použije k registraci komponenty ATA Gateway ve službě ATA Center.|
-|ConsoleAccountPassword|ConsoleAccountPassword=”<AccountPassword>”|Ano|Nastaví heslo pro uživatelský účet (uzivatel@domena.com), který se použije k registraci komponenty ATA Gateway ve službě ATA Center.|
+|ConsoleAccountName|ConsoleAccountName=”<AccountName>”|Ano|Nastaví název uživatelského účtu (user@domain.com), který se použije k registraci komponenty ATA Gateway ve službě ATA Center.|
+|ConsoleAccountPassword|ConsoleAccountPassword=”<AccountPassword>”|Ano|Nastaví heslo uživatelského účtu (user@domain.com), který se použije k registraci komponenty ATA Gateway ve službě ATA Center.|
 
 **Příklady**: Bezobslužná instalace komponenty ATA Gateway a její registrace ve službě ATA Center pomocí zadaných přihlašovacích údajů:
 
@@ -162,7 +162,7 @@ K bezobslužné instalaci komponenty ACA Gateway použijte následující přík
     ConsoleAccountName=”user@contoso.com” ConsoleAccountPassword=“userpwd”
     
 
-## Aktualizace ATA Gateway
+## <a name="update-the-ata-gateway"></a>Aktualizace ATA Gateway
 
 K bezobslužné aktualizaci komponenty ACA Gateway použijte následující příkaz:
 
@@ -185,7 +185,7 @@ K bezobslužné aktualizaci komponenty ACA Gateway použijte následující př�
 
         Microsoft ATA Gateway Setup.exe /quiet NetFrameworkCommandLineArguments="/q"
 
-## Bezobslužná odinstalace komponenty ATA Gateway
+## <a name="uninstall-the-ata-gateway-silently"></a>Bezobslužná odinstalace komponenty ATA Gateway
 
 K provedení bezobslužné odinstalace komponenty ATA Gateway použijte následující příkaz: **Syntaxe**:
 
@@ -214,13 +214,13 @@ K provedení bezobslužné odinstalace komponenty ATA Gateway použijte následu
 
 
 
-## Viz také
+## <a name="see-also"></a>Viz také
 
 - [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurace shromažďování událostí](configure-event-collection.md)
 - [Požadavky ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Dec16_HO1-->
 
 
