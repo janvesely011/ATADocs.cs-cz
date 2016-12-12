@@ -5,14 +5,13 @@
 ### [Konfigurace zrcadlení portů](configure-port-mirroring.md)
 ### [Ověření zrcadlení portů](validate-port-mirroring.md)
 ### [Konfigurace shromažďování událostí](configure-event-collection.md)
-## [Instalace ATA](install-ata.md)
-### [Krok 1](install-ata-step1.md)
-### [Krok 2](install-ata-step2.md)
-### [Krok 3](install-ata-step3.md)
-### [Krok 4](install-ata-step4.md)
-### [Krok 5](install-ata-step5.md)
-### [Krok 6](install-ata-step6.md)
-### [Bezobslužná instalace](ata-silent-installation.md)
+## [Instalace ATA – krok 1](install-ata-step1.md)
+## [Instalace ATA – krok 2](install-ata-step2.md)
+## [Instalace ATA – krok 3](install-ata-step3.md)
+## [Instalace ATA – krok 4](install-ata-step4.md)
+## [Instalace ATA – krok 5](install-ata-step5.md)
+## [Instalace ATA – krok 6](install-ata-step6.md)
+## [Bezobslužná instalace](ata-silent-installation.md)
 # [Použití](modifying-ata-config-centerip.md)
 ## [Změna IP adresy ATA Center](modifying-ata-config-centerip.md)
 ## [Změna certifikátu ATA Center](modifying-ata-config-centercert.md)
@@ -21,16 +20,16 @@
 ## [Práce s konzolou ATA](working-with-ata-console.md)
 ## [Skupiny rolí ATA](ata-role-groups.md)
 ## [Nastavení e-mailového serveru a serveru Syslog](setting-syslog-email-server-settings.md)
-## [Nastavení výstrah ATA](setting-ata-alerts.md)
+## [Nastavení oznámení ATA](setting-ata-alerts.md)
 ## [Práce s nastavením detekce](working-with-detection-settings.md)
 ## [ATA Health Center](ata-health-center.md)
 ## [Práce s podezřelými aktivitami](working-with-suspicious-activities.md)
 ## [Správa databáze ATA](ata-database-management.md)
-## [Konfigurační soubor ATA](ata-configuration-file.md)
+## [Export/import konfigurace ATA](ata-configuration-file.md)
 ## [Správa telemetrie ATA](manage-telemetry-settings.md)
 # [Řešení problémů](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-known-errors)
 
 
-<!--HONumber=Oct16_HO5-->
+<!--HONumber=Nov16_HO5-->
 
 
