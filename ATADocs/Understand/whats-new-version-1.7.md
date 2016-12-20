@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/25/2016
+ms.date: 12/08/2016
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -14,8 +14,8 @@ ms.assetid: be9ee613-4eb3-40f1-8973-e7f0a707ff57
 ms.reviewer: 
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: fca7f1b2b8260cad6e0ce32aad1c9e1b53fc0ad5
-ms.openlocfilehash: 8032e373567ce500c7741480d56d232f34b05446
+ms.sourcegitcommit: 00ddddfd927ed1ba4c52d4774085da04ce359bde
+ms.openlocfilehash: 1c8d7983c5fd86ae3ef2c906eba3f0781cffb99b
 
 
 ---
@@ -30,14 +30,14 @@ Aktualizace ATA na verzi 1.7 přináší vylepšení v následujících oblastec
 
 -   Řízení přístupu na základě role
 
--   Podpora systému Windows Server 2016 a jádra serveru Windows
+-   Podpora Windows Serveru 2016 a jádra Windows Serveru 2016
 
 -   Vylepšení uživatelského prostředí
 
 -   Menší změny
 
 
-### <a name="new-updated-detections"></a>Nové a aktualizované detekce
+### <a name="new--updated-detections"></a>Nové a aktualizované detekce
 
 
 - **Rekognoskace pomocí výčtu adresářových služeb** V rámci fáze rekognoskace útočníci pomocí různých metod shromažďují informace o entitách v síti. Výčet adresářových služeb pomocí protokolu SAM-R útočníkům umožňuje získat seznam uživatelů a skupin v doméně a pochopit vztahy mezi různými entitami. 
@@ -55,7 +55,7 @@ Aktualizace ATA na verzi 1.7 přináší vylepšení v následujících oblastec
 
 - **Řízení přístupu na základě role** Možnost řízení přístupu na základě role (RBAC). ATA 1.7 obsahuje tři role: Správce ATA, Analytik ATA a Vedení ATA.
 
-- **Podpora systému Windows Server 2016 a jádra serveru Windows** ATA 1.7 podporuje nasazení součástí Lightweight Gateways v řadičích domény, které používají jádro serveru pro systém Windows Server 2012 a jádro serveru pro systém Windows Server 2012 R2. Kromě toho tato verze podporuje Windows Server 2016 pro součásti ATA Center i ATA Gateway.
+- **Podpora Windows Serveru 2016 a jádra Windows Serveru** ATA 1.7 podporuje nasazení součástí Lightweight Gateway v řadičích domény, na kterých běží Windows Server 2008 R2 SP1 (kromě jádra serveru), Windows Server 2012, Windows Server 2012 R2, Windows Server 2016 (včetně jádra, ale ne Nano). Kromě toho tato verze podporuje Windows Server 2016 pro součásti ATA Center i ATA Gateway.
 
 ### <a name="user-experience"></a>Činnost koncového uživatele
 - **Prostředí konfigurace** V této verzi bylo prostředí konfigurace ATA přepracováno, aby bylo uživatelsky vstřícnější a lépe podporovalo prostředí s několika ATA Gateway. Tato verze také zavádí stránku aktualizace ATA Gateway pro jednodušší, lepší správu automatických aktualizací pro různé brány.
@@ -102,6 +102,12 @@ Pokud chcete tento problém vyřešit, přejděte na příkazovém řádku se zv
 
 3. db.SystemProfile.update({_t:"ServiceSystemProfile"},{$set:{"Configuration.ManagementClientConfiguration.ServerCertificateThumbprint":CenterThumbprint}}, {multi: true})
 
+### <a name="export-suspicious-activity-details-to-excel-may-fail"></a>Export podrobností o podezřelých aktivitách do Excelu se nemusí podařit
+Při pokusu o export podrobností o podezřelých aktivitách do souboru Excelu se nemusí tato operace podařit a může se zobrazit tato chybová zpráva: *Chyba [BsonClassMapSerializer`1] System.FormatException: Při deserializaci vlastnosti Activity třídy Microsoft.Tri.Common.Data.NetworkActivities.SuspiciousActivityActivitydošlo k chybě: Prvek 'ResourceIdentifier' neodpovídá žádnému poli nebo vlastnosti třídy Microsoft.Tri.Common.Data.EventActivities.NtlmEvent. ---> System.FormatException: Prvek 'ResourceIdentifier' neodpovídá žádnému poli nebo vlastnosti třídy Microsoft.Tri.Common.Data.EventActivities.NtlmEvent.*
+
+Pokud chcete tento problém vyřešit, otevřete příkazový řádek se zvýšenými oprávněními, přejděte do složky: **%ProgramFiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin** a spusťte:
+1.  **Mongo.exe ATA** (ATA musí být velkými písmeny)
+2.  **db.SuspiciousActivityActivity.update({ "Activity._t": "NtlmEvent" },{$unset: {"Activity.ResourceIdentifier": ""}}, {multi: true});**
 
 ## <a name="minor-changes"></a>Menší změny
 
@@ -117,6 +123,6 @@ Pokud chcete tento problém vyřešit, přejděte na příkazovém řádku se zv
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

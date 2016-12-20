@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 12/14/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -14,8 +14,8 @@ ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 85e285c5d88e5916e0bf0eb7dd327cb4cb45b4cb
-ms.openlocfilehash: 56f397c373e0b6827aab084e21c804a135049a27
+ms.sourcegitcommit: 67b430fbed97bd08e5f538043c783e70ed2ab956
+ms.openlocfilehash: 60ec036a8c22fb34c673653a6378437ab14f9853
 
 
 ---
@@ -142,6 +142,9 @@ Toto ověření můžete provést spuštěním následující rutiny Windows Pow
 
 Informace o používání virtuálních počítačů se službou ATA Gateway najdete v tématu [Konfigurace zrcadlení portů](/advanced-threat-analytics/deploy-use/configure-port-mirroring).
 
+> [!NOTE]
+> Vyžaduje se minimálně 5 GB volného místa, doporučuje se 10 GB. Zahrnuje to prostor potřebný pro binární soubory ATA, [protokoly ATA](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs) a [protokoly výkonu](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-perf-counters).
+
 ### <a name="server-specifications"></a>Specifikace serveru
 K zajištění optimálního výkonu nastavte **možnost napájení ** pro ATA Gateway na hodnotu **Vysoký výkon**.<br>
 ATA Gateway může podporovat monitorování několika řadičů domény, v závislosti na objemu síťových přenosů z a do řadičů domény.
@@ -212,12 +215,15 @@ V úložišti Počítač služby ATA Gateway v úložišti Místní počítač m
 ## <a name="ata-lightweight-gateway-requirements"></a>Požadavky pro ATA Lightweight Gateway
 V této části je uveden seznam požadavků pro ATA Lightweight Gateway.
 ### <a name="general"></a>Obecné
-ATA Lightweight Gateway podporuje instalaci na řadičích domény se systémem Windows Server 2008 R2 SP1, Windows Server 2012, Windows Server 2012 R2 nebo Windows Server 2016 (včetně jádra, ale ne Nano).
+ATA Lightweight Gateway podporuje instalaci na řadičích domény se systémem Windows Server 2008 R2 SP1 (kromě jádra serveru), Windows Server 2012, Windows Server 2012 R2 nebo Windows Server 2016 (včetně jádra, ale ne Nano).
 
 Řadičem domény může být řadič domény jen pro čtení (RODC).
 
 Před instalací ATA Lightweight Gateway na řadiči domény se systémem Windows Server 2012 R2 SP1, potvrďte, že byla nainstalovaná aktualizace [KB2919355](https://support.microsoft.com/kb/2919355/).
 Toto ověření můžete provést spuštěním následující rutiny Windows PowerShellu: `[Get-HotFix -Id kb2919355]`.
+
+> [!NOTE]
+> Vyžaduje se minimálně 5 GB volného místa, doporučuje se 10 GB. Zahrnuje to prostor potřebný pro binární soubory ATA, [protokoly ATA](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs.md) a [protokoly výkonu](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-perf-counters.md).
 
 ### <a name="server-specifications"></a>Specifikace serveru
 
@@ -282,6 +288,6 @@ Přístup ke konzole ATA je prostřednictvím prohlížeče. Podporují se tyto:
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 
