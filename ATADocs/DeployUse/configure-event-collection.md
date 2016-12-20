@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/28/2016
+ms.date: 12/08/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -14,8 +14,8 @@ ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bc7af91a925928183d179391f15d3a24cda2b576
-ms.openlocfilehash: 2932fd80fd3a5ff6830f8629df824591e3fc47c3
+ms.sourcegitcommit: d16364cd4113534c3101ebfa7750c0d0b837856d
+ms.openlocfilehash: 9ac9478512f2e5f6d15dd9b5cba9970a51ffa4da
 
 
 ---
@@ -28,13 +28,14 @@ ms.openlocfilehash: 2932fd80fd3a5ff6830f8629df824591e3fc47c3
 K vylepšení možností detekce ATA vyžaduje událost systému Windows s ID 4776. Ten může být přeposílán komponentě ATA Gateway jedním ze dvou způsobů, buď konfigurací ATA Gateway tak, aby naslouchala událostem SIEM, nebo [nastavením předávání událostí systému Windows](#configuring-windows-event-forwarding).
 
 ## <a name="event-collection"></a>Shromažďování událostí
-Kromě shromažďování a analýzy síťových přenosů z a do řadičů domény může ATA využít událost 4776 systému Windows k dalšímu vylepšení detekce útoků Pass-the-Hash. Tyto události může přijímat buď od vašeho systému SIEM, nebo nastavením předávání událostí systému Windows z vašeho řadiče domény. Shromážděné události poskytují řešení ATA další informace, které není možné zjistit z monitorování provozu na řadiči domény.
+Kromě shromažďování a analýzy síťových přenosů z a do řadičů domény může ATA využít událost 4776 systému Windows k dalšímu vylepšení detekce útoků Pass-the-Hash. Tyto události může přijímat buď od svého systému SIEM, nebo tak, že si nastavíte předávání událostí systému Windows ze svého řadiče domény. Shromážděné události poskytují řešení ATA další informace, které není možné zjistit z monitorování provozu na řadiči domény.
 
 ### <a name="siemsyslog"></a>SIEM/Syslog
 Aby řešení ATA mohlo využívat data ze serveru Syslog, je třeba provést následující:
 
 -   Nakonfigurujte servery ATA Gateway, aby naslouchaly událostem, které jsou předávány ze serveru SIEM/Syslog, a přijímaly je.
-
+> [!NOTE]
+> ATA naslouchá jenom na IPv4, ne na IPv6. 
 -   Nakonfigurujte server SIEM/Syslog, aby předával určité události komponentě ATA Gateway.
 
 > [!IMPORTANT]
@@ -287,6 +288,6 @@ Další informace najdete v tématu [Konfigurace počítačů pro předání a s
 
 
 
-<!--HONumber=Nov16_HO5-->
+<!--HONumber=Dec16_HO2-->
 
 
