@@ -1,8 +1,9 @@
 ---
-title: "Instalace ATA – Krok 1 | Microsoft ATA"
+title: "Instalace ATA – krok 1 | Dokumentace Microsoftu"
 description: "První krok instalace ATA představuje stažení a instalaci ATA Center na vybraný server."
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 10/25/2016
 ms.topic: get-started-article
@@ -13,8 +14,8 @@ ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c71d5ed1c705de558f1144820703ffe84850679b
-ms.openlocfilehash: cf7ae4eccdf70e4e8661ac55ec15fff00bc9c62e
+ms.sourcegitcommit: 85e285c5d88e5916e0bf0eb7dd327cb4cb45b4cb
+ms.openlocfilehash: c946aa6cfde5bcb72ce8c6efba626c31c2413893
 
 
 ---
@@ -23,7 +24,7 @@ ms.openlocfilehash: cf7ae4eccdf70e4e8661ac55ec15fff00bc9c62e
 
 
 
-# Instalace ATA – Krok 1
+# <a name="install-ata---step-1"></a>Instalace ATA – krok 1
 
 >[!div class="step-by-step"]
 [Krok 2 »](install-ata-step2.md)
@@ -33,7 +34,7 @@ Tento instalační postup uvádí pokyny pro novou instalaci ATA 1.7. Informace 
 > [!IMPORTANT] 
 > Pokud používáte Windows 2012 R2, můžete před začátkem instalace nainstalovat na server ATA Center a na servery ATA Gateway aktualizaci KB2934520, jinak instalace ATA tuto aktualizaci nainstaluje a bude vyžadovat restart uprostřed instalace ATA.
 
-## Krok 1: Stažení a instalace ATA Center
+## <a name="step-1-download-and-install-the-ata-center"></a>Krok 1: Stažení a instalace ATA Center
 Po ověření, že server splňuje požadavky, můžete pokračovat v instalaci ATA Center.
 
 Na serveru ATA Center proveďte tento postup.
@@ -85,7 +86,7 @@ Na serveru ATA Center proveďte tento postup.
 Nyní automaticky přejdete na stránku nastavení **Obecné**, abyste pokračovali v konfiguraci a nasazení komponent ATA Gateway.
 Protože se k webu přihlašujete pomocí IP adresy, zobrazí se upozornění související s certifikátem. To je normální a měli byste kliknout na **Pokračovat na tento web**.
 
-### Ověření instalace
+### <a name="validate-installation"></a>Ověření instalace
 
 1.  Zkontrolujte, že je služba **Microsoft Advanced Threat Analytics Center** spuštěná.
 2.  Na ploše klikněte na zástupce **Microsoft Advanced Threat Analytics** a připojte se ke konzole ATA. Přihlaste se pomocí stejných přihlašovacích údajů, které jste použili k instalaci ATA Center.
@@ -96,7 +97,7 @@ Protože se k webu přihlašujete pomocí IP adresy, zobrazí se upozornění so
 [« Předinstalace](preinstall-ata.md)
 [Krok 2 »](install-ata-step2.md)
 
-## Viz také
+## <a name="see-also"></a>Viz také
 
 - [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurace shromažďování událostí](configure-event-collection.md)
@@ -105,6 +106,6 @@ Protože se k webu přihlašujete pomocí IP adresy, zobrazí se upozornění so
 
 
 
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Jan17_HO1-->
 
 
