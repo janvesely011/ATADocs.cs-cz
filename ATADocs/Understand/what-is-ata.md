@@ -23,7 +23,7 @@ ms.openlocfilehash: 70d66bccfda484722afa63a7f85dc8f85013f54f
 *Platí pro: Advanced Threat Analytics verze 1.7*
 
 
-## <a name="what-is-advanced-threat-analytics"></a>Co je Advanced Threat Analytics?
+# <a name="what-is-advanced-threat-analytics"></a>Co je Advanced Threat Analytics?
 Řešení ATA (Advanced Threat Analytics) je místní platforma, která chrání podnik před různými typy pokročilých cílových útoků z kyberprostoru a před vnitřními hrozbami.
 
 ## <a name="how-ata-works"></a>Popis fungování řešení ATA
