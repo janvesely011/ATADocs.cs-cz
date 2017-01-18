@@ -1,8 +1,9 @@
 ---
-title: "Konfigurační soubor ATA | Microsoft ATA"
-description: "Zálohování konfigurace ATA"
+title: Export a import konfigurace ATA | Dokumentace Microsoftu
+description: Postup exportu a importu konfigurace ATA
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 10/31/2016
 ms.topic: article
@@ -13,8 +14,8 @@ ms.assetid: 1d27dba8-fb30-4cce-a68a-f0b1df02b977
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f334f9c8440e4bb0202579de220f6530d0aabad8
-ms.openlocfilehash: 542bdf983e26fa98c036de55860b482d0b1d734d
+ms.sourcegitcommit: 85e285c5d88e5916e0bf0eb7dd327cb4cb45b4cb
+ms.openlocfilehash: f0307ae2e8f222e7c58db234b0fb393072ac7444
 
 
 ---
@@ -23,7 +24,7 @@ ms.openlocfilehash: 542bdf983e26fa98c036de55860b482d0b1d734d
 
 
 
-# <a name="ata-configuration-file"></a>Konfigurační soubor ATA
+# <a name="export-and-import-the-ata-configuration"></a>Export a import konfigurace ATA
 Konfigurace ATA je uložená v databázi v kolekci SystemProfile.
 Tato kolekce se zálohuje každou hodinu službou ATA Center do souboru s názvem „SystemProfile_*časové-razítko*.json“. Ukládá se 10 posledních verzí.
 Je umístěný v podsložce s názvem Backup. Ve výchozím umístění instalace ATA se nachází tady: *C:\Program Files\Microsoft Advanced Threat Analytics\Center\Backup\SystemProfile_*časové-razítko*.json*. 
@@ -42,6 +43,6 @@ Je možné obnovit všechna nastavení spuštěním následujícího příkazu:
 
 
 
-<!--HONumber=Oct16_HO5-->
+<!--HONumber=Jan17_HO1-->
 
 

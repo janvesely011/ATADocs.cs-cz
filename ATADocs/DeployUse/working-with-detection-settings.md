@@ -1,8 +1,9 @@
 ---
-title: "Práce s nastavením detekce ATA | Microsoft ATA"
+title: "Práce s nastavením detekce ATA | Dokumentace Microsoftu"
 description: "Popisuje, jak nakonfigurovat seznam IP adres a podsítí, které mají neobvyklé okolnosti a který by měly být zpracovávané jinak než ostatní entity v síti."
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
 ms.date: 08/24/2016
 ms.topic: article
@@ -13,8 +14,8 @@ ms.assetid: f4f2ae30-4849-4a4f-8f6d-bfe99a32c746
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 28b6211599395317eb6336c37fd3461b8f5635f6
-ms.openlocfilehash: 09248cdd5f8a66a164a5cd275f2765107f5c706d
+ms.sourcegitcommit: 85e285c5d88e5916e0bf0eb7dd327cb4cb45b4cb
+ms.openlocfilehash: 93f2a72c9623674c73b3ee83ecf12be8e0766365
 
 
 ---
@@ -23,10 +24,10 @@ ms.openlocfilehash: 09248cdd5f8a66a164a5cd275f2765107f5c706d
 
 
 
-# Práce s nastavením detekce ATA
+# <a name="working-with-ata-detection-settings"></a>Práce s nastavením detekce ATA
 Konfigurační stránka **Detekce** umožňuje nastavit seznam IP adres a podsítí, které mají neobvyklé okolnosti a který by měly být zpracovávané trochu jinak než ostatní entity v síti.
 
-## Nastavení detekce
+## <a name="setting-up-detection"></a>Nastavení detekce
 V části **Detekce** můžete definovat následující položky:
 
 -   **SID účtů honeytokenu** – Jedná se o uživatelský účet, který by neměl mít žádnou síťovou aktivitu. Tento účet se nakonfiguruje jako uživatel honeytokenu ATA. Pokud se někdo pokusí použít tento uživatelský účet, ATA vytvoří podezřelou aktivitu jako indikaci škodlivé aktivity. Ke konfiguraci uživatele honeytokenu budete potřebovat SID účtu uživatele, nikoli jeho uživatelské jméno.
@@ -47,13 +48,13 @@ V části **Detekce** můžete definovat následující položky:
 ![Vyloučení nastavení detekce ATA](media/ata-detection-settings-exclusions-1.7.png)
 
 
-## Viz také
+## <a name="see-also"></a>Viz také
 - [Práce s podezřelými aktivitami](working-with-suspicious-activities.md)
 - [Změna konfigurace ATA](modifying-ata-configuration.md)
 - [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Jan17_HO1-->
 
 
