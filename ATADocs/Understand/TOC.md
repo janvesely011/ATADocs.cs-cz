@@ -1,7 +1,7 @@
-# [Porozumění a prozkoumávání](what-is-ata.md)
+# Porozumění a prozkoumávání
 ## [Co je Microsoft Advanced Threat Analytics?](what-is-ata.md)
 ## [Jaké hrozby ATA detekuje?](ata-threats.md)
-## [Poznámky k verzi ATA](ata-release-notes.md)
+## Poznámky k verzi ATA
 ### [Novinky ATA verze 1.7](whats-new-version-1.7.md)
 #### [Aktualizace na ATA 1.7 – průvodce migrací](ata-update-1.7-migration-guide.md)
 ### [Novinky ATA verze 1.6](whats-new-version-1.6.md)
@@ -10,12 +10,46 @@
 #### [Aktualizace na ATA 1.5 – průvodce migrací](ata-update-1.5-migration-guide.md)
 ### [Novinky ATA verze 1.4](whats-new-version-1.4.md)
 ## [Nejčastější dotazy](ata-technical-faq.md)
-# [Plánování a navrhování](/advanced-threat-analytics/plan-design/ata-architecture)
-# [Nasazení](/advanced-threat-analytics/deploy-use/preinstall-ata)
-# [Použití](/advanced-threat-analytics/deploy-use/operate-ata)
-# [Řešení problémů](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-known-errors)
+# Plánování a navrhování
+## [Architektura ATA](/advanced-threat-analytics/plan-design/ata-architecture)
+## [Plánování kapacity ATA](/advanced-threat-analytics/plan-design/ata-capacity-planning)
+## [Požadavky ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
+# Nasazení
+## Předinstalační kroky
+### [1. Konfigurace zrcadlení portů](/advanced-threat-analytics/deploy-use/configure-port-mirroring)
+### [2. Ověření zrcadlení portů](/advanced-threat-analytics/deploy-use/validate-port-mirroring)
+### [3. Konfigurace shromažďování událostí](/advanced-threat-analytics/deploy-use/configure-event-collection)
+## Instalace ATA
+### [Krok 1](/advanced-threat-analytics/deploy-use/install-ata-step1)
+### [Krok 2](/advanced-threat-analytics/deploy-use/install-ata-step2)
+### [Krok 3](/advanced-threat-analytics/deploy-use/install-ata-step3)
+### [Krok 4](/advanced-threat-analytics/deploy-use/install-ata-step4)
+### [Krok 5](/advanced-threat-analytics/deploy-use/install-ata-step5)
+### [Krok 6](/advanced-threat-analytics/deploy-use/install-ata-step6)
+### [Bezobslužná instalace](/advanced-threat-analytics/deploy-use/ata-silent-installation)
+# K nasazení nastavení VPN pro uživatele a zařízení ve vaší organizaci použijte
+## [Změna IP adresy ATA Center](/advanced-threat-analytics/deploy-use/modifying-ata-config-centerip)
+## [Změna certifikátu ATA Center](/advanced-threat-analytics/deploy-use/modifying-ata-config-centercert)
+## [Změna adresy URL konzoly ATA](/advanced-threat-analytics/deploy-use/modifying-ata-config-consoleurl)
+## [Změna hesla připojení k doméně](/advanced-threat-analytics/deploy-use/modifying-ata-config-dcpassword)
+## [Práce s konzolou ATA](/advanced-threat-analytics/deploy-use/working-with-ata-console)
+## [Skupiny rolí ATA](/advanced-threat-analytics/deploy-use/ata-role-groups)
+## [Nastavení e-mailového serveru a serveru Syslog](/advanced-threat-analytics/deploy-use/setting-syslog-email-server-settings)
+## [Nastavení oznámení ATA](/advanced-threat-analytics/deploy-use/setting-ata-alerts)
+## [Práce s nastavením detekce](/advanced-threat-analytics/deploy-use/working-with-detection-settings)
+## [ATA Health Center](/advanced-threat-analytics/deploy-use/ata-health-center)
+## [Práce s podezřelými aktivitami](/advanced-threat-analytics/deploy-use/working-with-suspicious-activities)
+## [Správa databáze ATA](/advanced-threat-analytics/deploy-use/ata-database-management)
+## [Export/import konfigurace ATA](/advanced-threat-analytics/deploy-use/ata-configuration-file)
+## [Správa telemetrie ATA](/advanced-threat-analytics/deploy-use/manage-telemetry-settings)
+# Řešení problémů
+## [Řešení problémů pomocí známých chyb](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-known-errors)
+## [Řešení problémů pomocí protokolů](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs)
+## [Řešení problémů pomocí čítačů výkonu](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-perf-counters)
+## [Řešení problémů pomocí databáze](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-ata-database)
 
 
-<!--HONumber=Oct16_HO5-->
+
+<!--HONumber=Jan17_HO2-->
 
 
