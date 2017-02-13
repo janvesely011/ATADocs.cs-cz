@@ -20,14 +20,14 @@
 ### [2. Ověření zrcadlení portů](/advanced-threat-analytics/deploy-use/validate-port-mirroring)
 ### [3. Konfigurace shromažďování událostí](/advanced-threat-analytics/deploy-use/configure-event-collection)
 ## Instalace ATA
-### [Krok 1](/advanced-threat-analytics/deploy-use/install-ata-step1)
-### [Krok 2](/advanced-threat-analytics/deploy-use/install-ata-step2)
-### [Krok 3](/advanced-threat-analytics/deploy-use/install-ata-step3)
-### [Krok 4](/advanced-threat-analytics/deploy-use/install-ata-step4)
-### [Krok 5](/advanced-threat-analytics/deploy-use/install-ata-step5)
-### [Krok 6](/advanced-threat-analytics/deploy-use/install-ata-step6)
+### [Krok 1: Stažení a instalace](/advanced-threat-analytics/deploy-use/install-ata-step1)
+### [Krok 2: Připojení k AD](/advanced-threat-analytics/deploy-use/install-ata-step2)
+### [Krok 3: Stažení balíčku GW](/advanced-threat-analytics/deploy-use/install-ata-step3)
+### [Krok 4: Instalace GW](/advanced-threat-analytics/deploy-use/install-ata-step4)
+### [Krok 5: Konfigurace GW](/advanced-threat-analytics/deploy-use/install-ata-step5)
+### [Krok 6: Vyloučení a honeytoken](/advanced-threat-analytics/deploy-use/install-ata-step6)
 ### [Bezobslužná instalace](/advanced-threat-analytics/deploy-use/ata-silent-installation)
-# K nasazení nastavení VPN pro uživatele a zařízení ve vaší organizaci použijte
+# Použití
 ## [Změna IP adresy ATA Center](/advanced-threat-analytics/deploy-use/modifying-ata-config-centerip)
 ## [Změna certifikátu ATA Center](/advanced-threat-analytics/deploy-use/modifying-ata-config-centercert)
 ## [Změna adresy URL konzoly ATA](/advanced-threat-analytics/deploy-use/modifying-ata-config-consoleurl)
@@ -50,6 +50,6 @@
 
 
 
-<!--HONumber=Jan17_HO2-->
+<!--HONumber=Feb17_HO1-->
 
 
