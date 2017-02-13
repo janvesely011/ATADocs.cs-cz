@@ -20,14 +20,14 @@
 ### [2. Ověření zrcadlení portů](validate-port-mirroring.md)
 ### [3. Konfigurace shromažďování událostí](configure-event-collection.md)
 ## Instalace ATA
-### [Krok 1](install-ata-step1.md)
-### [Krok 2](install-ata-step2.md)
-### [Krok 3](install-ata-step3.md)
-### [Krok 4](install-ata-step4.md)
-### [Krok 5](install-ata-step5.md)
-### [Krok 6](install-ata-step6.md)
+### [Krok 1: Stažení a instalace](/advanced-threat-analytics/deploy-use/install-ata-step1.md)
+### [Krok 2: Připojení k AD](/advanced-threat-analytics/deploy-use/install-ata-step2.md)
+### [Krok 3: Stažení balíčku GW](/advanced-threat-analytics/deploy-use/install-ata-step3.md)
+### [Krok 4: Instalace GW](/advanced-threat-analytics/deploy-use/install-ata-step4.md)
+### [Krok 5: Konfigurace GW](/advanced-threat-analytics/deploy-use/install-ata-step5.md)
+### [Krok 6: Vyloučení a honeytoken](/advanced-threat-analytics/deploy-use/install-ata-step6.md)
 ### [Bezobslužná instalace](ata-silent-installation.md)
-# K nasazení nastavení VPN pro uživatele a zařízení ve vaší organizaci použijte
+# Použití
 ## [Změna IP adresy ATA Center](modifying-ata-config-centerip.md)
 ## [Změna certifikátu ATA Center](modifying-ata-config-centercert.md)
 ## [Změna adresy URL konzoly ATA](modifying-ata-config-consoleurl.md)
@@ -49,6 +49,6 @@
 ## [Řešení problémů pomocí databáze](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-ata-database)
 
 
-<!--HONumber=Jan17_HO2-->
+<!--HONumber=Feb17_HO1-->
 
 
