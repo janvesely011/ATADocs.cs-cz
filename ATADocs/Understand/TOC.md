@@ -47,9 +47,9 @@
 ## [Řešení problémů pomocí protokolů](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs)
 ## [Řešení problémů pomocí čítačů výkonu](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-perf-counters)
 ## [Řešení problémů pomocí databáze](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-ata-database)
+## [Obnovení po havárii](/advanced-threat-analytics/troubleshoot/disaster-recovery)
 
 
-
-<!--HONumber=Feb17_HO1-->
+<!--HONumber=Feb17_HO2-->
 
 
