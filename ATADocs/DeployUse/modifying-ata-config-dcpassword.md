@@ -1,11 +1,11 @@
 ---
-title: "Změna konfigurace ATA – heslo připojení k doméně | Dokumentace Microsoftu"
+title: "Změna konfigurace Advanced Threat Analytics – heslo připojení k doméně | Dokumentace Microsoftu"
 description: "Popisuje způsob změny hesla připojení k doméně na ATA Gateway."
 keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/29/2016
+ms.date: 1/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -14,8 +14,8 @@ ms.assetid: 4a25561b-a5ed-44aa-9b72-366976b3c72a
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bc7af91a925928183d179391f15d3a24cda2b576
-ms.openlocfilehash: a6dbdb0d53a0a7f6903ec858bb44054c624ae226
+ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
+ms.openlocfilehash: fce61880e1d47ac006ca919992d1766e5ef8eca3
 
 
 ---
@@ -64,6 +64,6 @@ Když to chcete opravit, podle následujícího postupu aktualizujte na ATA Cent
 
 
 
-<!--HONumber=Nov16_HO5-->
+<!--HONumber=Feb17_HO1-->
 
 
