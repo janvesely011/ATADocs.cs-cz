@@ -20,12 +20,12 @@
 ### [2. Ověření zrcadlení portů](validate-port-mirroring.md)
 ### [3. Konfigurace shromažďování událostí](configure-event-collection.md)
 ## Instalace ATA
-### [Krok 1: Stažení a instalace](/advanced-threat-analytics/deploy-use/install-ata-step1.md)
-### [Krok 2: Připojení k AD](/advanced-threat-analytics/deploy-use/install-ata-step2.md)
-### [Krok 3: Stažení balíčku GW](/advanced-threat-analytics/deploy-use/install-ata-step3.md)
-### [Krok 4: Instalace GW](/advanced-threat-analytics/deploy-use/install-ata-step4.md)
-### [Krok 5: Konfigurace GW](/advanced-threat-analytics/deploy-use/install-ata-step5.md)
-### [Krok 6: Vyloučení a honeytoken](/advanced-threat-analytics/deploy-use/install-ata-step6.md)
+### [Krok 1: Stažení a instalace](install-ata-step1.md)
+### [Krok 2: Připojení k AD](install-ata-step2.md)
+### [Krok 3: Stažení balíčku GW](install-ata-step3.md)
+### [Krok 4: Instalace GW](install-ata-step4.md)
+### [Krok 5: Konfigurace GW](install-ata-step5.md)
+### [Krok 6: Vyloučení a honeytoken](install-ata-step6.md)
 ### [Bezobslužná instalace](ata-silent-installation.md)
 # Použití
 ## [Změna IP adresy ATA Center](modifying-ata-config-centerip.md)
@@ -49,6 +49,6 @@
 ## [Řešení problémů pomocí databáze](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-ata-database)
 ## [Obnovení po havárii](/advanced-threat-analytics/troubleshoot/disaster-recovery)
 
-<!--HONumber=Feb17_HO2-->
+<!--HONumber=Feb17_HO4-->
 
 
