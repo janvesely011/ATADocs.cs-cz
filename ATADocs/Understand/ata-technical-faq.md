@@ -1,11 +1,11 @@
 ---
-title: "Nejčastější dotazy k ATA| Dokumentace Microsoftu"
+title: "Nejčastější dotazy k Advanced Threat Analytics | Dokumentace Microsoftu"
 description: "Seznam nejčastějších dotazů týkajících se ATA a související odpovědi"
 keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 02/7/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -14,8 +14,8 @@ ms.assetid: a7d378ec-68ed-4a7b-a0db-f5e439c3e852
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 85e285c5d88e5916e0bf0eb7dd327cb4cb45b4cb
-ms.openlocfilehash: f806437df3a2c581631e924798a367e5e48be6f8
+ms.sourcegitcommit: bdb830bb7d8ecb6e04bb9c62b40904300fc1b404
+ms.openlocfilehash: 715d6987a74d2d6222acd6747f3cf425a6a901da
 
 
 ---
@@ -27,6 +27,7 @@ Tento článek obsahuje seznam nejčastějších dotazů týkajících se ATA a 
 
 ## <a name="what-should-i-do-if-the-ata-gateway-wont-start"></a>Co mám dělat, když se ATA Gateway nespustí?
 Podívejte se na poslední chybu v aktuálním protokolu chyb (ve složce Logs tam, je software ATA nainstalovaný).
+
 ## <a name="how-can-i-test-ata"></a>Jak se dá ATA otestovat?
 Pomocí jedné z následujících akcí můžete simulovat podezřelé aktivity a provést tak kompletní test:
 
@@ -54,6 +55,7 @@ ATA se spoléhá na analýzu řady síťových protokolů a událostí shromaž�
 
 ## <a name="does-ata-work-with-kerberos-armoring"></a>Funguje ATA s obranou protokolu Kerberos?
 ATA podporuje povolení obrany protokolu Kerberos, která se také označuje jako architektura FAST (Flexible Authentication Secure Tunneling). Výjimkou je detekce typu over-pass-the-hash, která nebude fungovat.
+
 ## <a name="how-many-ata-gateways-do-i-need"></a>Kolik komponent ATA Gateways budu potřebovat?
 
 Počet komponent ATA Gateway závisí na rozvržení sítě, objemu paketů a objemu událostí, které konzola ATA zaznamená. Pokud chcete určit přesný počet, přejděte do části [Velikosti pro ATA Lightweight Gateway](/advanced-threat-analytics/plan-design/ata-capacity-planning#ata-lightweight-gateway-sizing). 
@@ -81,7 +83,11 @@ Musí se zálohovat dvě věci:
 
 -   Provoz a události, které ATA ukládá. K jejich zálohování se dá využít libovolná podporovaná procedura zálohování databází. Další informace najdete v tématu [Správa databází ATA](/advanced-threat-analytics/deploy-use/ata-database-management). 
 -   Konfigurace konzoly ATA. Konfigurace je uložena v databázi a každou hodinu se automaticky zálohuje do složky **Zálohování** v umístění v rámci nasazení ATA Center.  Další informace získáte v části [Správa databáze ATA](https://docs.microsoft.com/advanced-threat-analytics/deploy-use/ata-database-management).
+
+
+
 ## <a name="what-can-ata-detect"></a>Co ATA dokáže rozpoznat?
+
 ATA rozpoznává známé nebezpečné útoky a techniky, problémy zabezpečení a rizika.
 Úplný seznam detekcí ATA najdete v tématu [Jaké detekce ATA provádí?](ata-threats.md).
 
@@ -98,7 +104,6 @@ Se systémy SIEM ATA využívá obousměrnou integraci:
 2. V ATA se dá nakonfigurovat příjem zpráv z [těchto systémů SIEM](/advanced-threat-analytics/deploy-use/configure-event-collection#siem-support) pro všechny události systému Windows s ID 4776.
 
 ## <a name="can-ata-monitor-domain-controllers-virtualized-on-your-iaas-solution"></a>Může ATA monitorovat řadiče domény virtualizované ve vašem řešení IaaS?
-
 Ano, ATA Lightweight Gateway se dá použít k monitorování řadičů domény, které jsou v libovolném řešení IaaS.
 
 ## <a name="is-this-an-on-premises-or-in-cloud-offering"></a>Jedná se o místní nebo cloudovou nabídku?
@@ -127,6 +132,7 @@ Ano. Vzhledem k tomu, že účty počítačů se (stejně jako ostatní entity) 
 
 ## <a name="can-ata-support-multi-domain-and-multi-forest"></a>Může ATA podporovat několik domén a doménových struktur?
 Microsoft Advanced Threat Analytics podporuje prostředí s více doménami v rámci stejné doménové struktury. Více doménových struktur vyžaduje nasazení ATA pro každou doménovou strukturu.
+
 ## <a name="can-you-see-the-overall-health-of-the-deployment"></a>Dá se zjistit celkový stav nasazení?
 Ano, můžete zobrazit celkový stav nasazení a taky konkrétní problémy související s konfigurací, možnostmi připojení atd. Když k nim dojde, dostanete upozornění.
 
@@ -141,6 +147,6 @@ Ano, můžete zobrazit celkový stav nasazení a taky konkrétní problémy souv
 
 
 
-<!--HONumber=Jan17_HO1-->
+<!--HONumber=Feb17_HO1-->
 
 

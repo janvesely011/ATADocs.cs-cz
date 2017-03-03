@@ -1,11 +1,11 @@
 ---
-title: "Bezobslužná instalace ATA | Dokumentace Microsoftu"
+title: "Bezobslužná instalace Advanced Threat Analytics | Dokumentace Microsoftu"
 description: "Popisuje postup při bezobslužné instalaci ATA."
 keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 02/19/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -14,8 +14,9 @@ ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b7f9dac8c00f213ee0cefc9ff93f2c9ca40cd28b
-ms.openlocfilehash: 7d7eeaf450a38a23c5c3a4d6d192a773f4cd036c
+ms.sourcegitcommit: 9d26567a0a9a00d4cb1a9421a4ef2e30a52c11a8
+ms.openlocfilehash: 9e550cf8fe795cb679fbcfe10ef40d2ede7875b4
+ms.lasthandoff: 02/21/2017
 
 
 ---
@@ -43,8 +44,8 @@ K instalaci komponenty ACA Center použijte následující příkaz:
 
 **Syntaxe**:
 
-    “Microsoft ATA Center Setup.exe” [/quiet] [/NoRestart] [/Help] [--LicenseAccepted] [NetFrameworkCommandLineArguments=”/q”] [InstallationPath=“<InstallPath>”] [DatabaseDataPath= “<DBPath>”] [CenterIpAddress=<CenterIPAddress>] [CenterPort=<CenterPort>] [CenterCertificateThumbprint=“<CertThumbprint>”] 
-    [ConsoleIpAddress=<ConsoleIPAddress>] [ConsoleCertificateThumbprint=”<CertThumbprint >”]
+    "Microsoft ATA Center Setup.exe" [/quiet] [/NoRestart] [/Help] [--LicenseAccepted] [NetFrameworkCommandLineArguments="/q"] [InstallationPath="<InstallPath>"] [DatabaseDataPath= "<DBPath>"] [CenterIpAddress=<CenterIPAddress>] [CenterPort=<CenterPort>] [CenterCertificateThumbprint="<CertThumbprint>"] 
+    [ConsoleIpAddress=<ConsoleIPAddress>] [ConsoleCertificateThumbprint="<CertThumbprint >"]
     
 **Možnosti instalace**:
 
@@ -70,13 +71,13 @@ K instalaci komponenty ACA Center použijte následující příkaz:
 
 **Příklady**: Instalace komponenty ATA Center s výchozími instalačními cestami a jednou IP adresou:
 
-    “Microsoft ATA Center Setup.exe” /quiet --LicenseAccepted NetFrameworkCommandLineArguments="/q" CenterIpAddress=192.168.0.10
+    "Microsoft ATA Center Setup.exe" /quiet --LicenseAccepted NetFrameworkCommandLineArguments="/q" CenterIpAddress=192.168.0.10
     CenterPort=444 ConsoleIpAddress=192.168.0.10
 
 Instalace komponenty ATA Center s výchozími instalačními cestami, dvěma IP adresami a uživatelsky definovanými kryptografickými otisky certifikátu:
 
-    “Microsoft ATA Center Setup.exe” /quiet --LicenseAccepted NetFrameworkCommandLineArguments ="/q" CenterIpAddress=192.168.0.10 CenterPort=443 CenterCertificateThumbprint= ‎"1E2079739F624148ABDF502BF9C799FCB8C7212F”
-    ConsoleIpAddress=192.168.0.11  ConsoleCertificateThumbprint=”G9530253C976BFA9342FD1A716C0EC94207BFD5A”
+    "Microsoft ATA Center Setup.exe" /quiet --LicenseAccepted NetFrameworkCommandLineArguments ="/q" CenterIpAddress=192.168.0.10 CenterPort=443 CenterCertificateThumbprint= ‎"1E2079739F624148ABDF502BF9C799FCB8C7212F"
+    ConsoleIpAddress=192.168.0.11  ConsoleCertificateThumbprint="G9530253C976BFA9342FD1A716C0EC94207BFD5A"
 
 ## <a name="update-the-ata-center"></a>Aktualizace ATA Center
 
@@ -84,7 +85,7 @@ K aktualizaci komponenty ACA Center použijte následující příkaz:
 
 **Syntaxe**:
 
-    Microsoft ATA Center Setup.exe” [/quiet] [-NoRestart] /Help] [NetFrameworkCommandLineArguments=”/q”]
+    "Microsoft ATA Center Setup.exe" [/quiet] [-NoRestart] /Help] [NetFrameworkCommandLineArguments="/q"]
 
 
 **Možnosti instalace**:
@@ -101,7 +102,7 @@ Při aktualizaci instalační program automaticky rozpozná, že služba ATA už
 
 **Příklady**: Bezobslužná aktualizace komponenty ATA Center: V rozsáhlých prostředích může dokončení aktualizace komponenty ATA Center nějakou dobu trvat. Průběh aktualizace můžete sledovat prostřednictvím protokolů ATA.
 
-        “Microsoft ATA Center Setup.exe” /quiet NetFrameworkCommandLineArguments="/q"
+        "Microsoft ATA Center Setup.exe" /quiet NetFrameworkCommandLineArguments="/q"
 
 ## <a name="uninstall-the-ata-center-silently"></a>Bezobslužná odinstalace komponenty ATA Center
 
@@ -128,7 +129,7 @@ K provedení bezobslužné odinstalace komponenty ATA Center použijte následuj
 **Příklady**: Bezobslužná odinstalace komponenty ATA Center ze serveru s odebráním všech stávajících databázových dat:
 
 
-    “Microsoft ATA Center Setup.exe” /quiet /uninstall --DeleteExistingDatabaseData
+    "Microsoft ATA Center Setup.exe" /quiet /uninstall --DeleteExistingDatabaseData
 
 ## <a name="ata-gateway-silent-installation"></a>Bezobslužná instalace ATA Gateway
 K bezobslužné instalaci komponenty ACA Gateway použijte následující příkaz:
@@ -136,8 +137,8 @@ K bezobslužné instalaci komponenty ACA Gateway použijte následující přík
 **Syntaxe**:
 
     Microsoft ATA Gateway Setup.exe [/quiet] [/NoRestart] [/Help] [NetFrameworkCommandLineArguments ="/q"] 
-    [GatewayCertificateThumbprint=”<CertThumbprint >”] [ConsoleAccountName=”<AccountName>”] 
-    [ConsoleAccountPassword=”<AccountPassword>”]
+    [GatewayCertificateThumbprint="<CertThumbprint >"] [ConsoleAccountName="<AccountName>"] 
+    [ConsoleAccountPassword="<AccountPassword>"]
 
 **Možnosti instalace**:
 
@@ -152,14 +153,14 @@ K bezobslužné instalaci komponenty ACA Gateway použijte následující přík
 
 |Název|Syntaxe|Povinné pro bezobslužnou instalaci?|Popis|
 |-------------|----------|---------|---------|
-|GatewayCertificateThumbprint|GatewayCertificateThumbprint=”<CertThumbprint >”|Ne|Nastaví kryptografický otisk certifikátu pro službu ATA Center. Tento certifikát slouží k zabezpečení komunikace mezi komponentami ATA Center a ATA Gateway. Pokud není nastavený, instalace vytvoří certifikát podepsaný svým držitelem (self-signed certificate).|
-|ConsoleAccountName|ConsoleAccountName=”<AccountName>”|Ano|Nastaví název uživatelského účtu (user@domain.com), který se použije k registraci komponenty ATA Gateway ve službě ATA Center.|
-|ConsoleAccountPassword|ConsoleAccountPassword=”<AccountPassword>”|Ano|Nastaví heslo uživatelského účtu (user@domain.com), který se použije k registraci komponenty ATA Gateway ve službě ATA Center.|
+|GatewayCertificateThumbprint|GatewayCertificateThumbprint="<CertThumbprint >"|Ne|Nastaví kryptografický otisk certifikátu pro službu ATA Center. Tento certifikát slouží k zabezpečení komunikace mezi komponentami ATA Center a ATA Gateway. Pokud není nastavený, instalace vytvoří certifikát podepsaný svým držitelem (self-signed certificate).|
+|ConsoleAccountName|ConsoleAccountName="<AccountName>"|Ano|Nastaví název uživatelského účtu (user@domain.com), který se použije k registraci komponenty ATA Gateway ve službě ATA Center.|
+|ConsoleAccountPassword|ConsoleAccountPassword="<AccountPassword>"|Ano|Nastaví heslo uživatelského účtu (user@domain.com), který se použije k registraci komponenty ATA Gateway ve službě ATA Center.|
 
 **Příklady**: Bezobslužná instalace komponenty ATA Gateway a její registrace ve službě ATA Center pomocí zadaných přihlašovacích údajů:
 
-    “Microsoft ATA Gateway Setup.exe” /quiet NetFrameworkCommandLineArguments="/q" 
-    ConsoleAccountName=”user@contoso.com” ConsoleAccountPassword=“userpwd”
+    "Microsoft ATA Gateway Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" 
+    ConsoleAccountName="user@contoso.com" ConsoleAccountPassword="userpwd"
     
 
 ## <a name="update-the-ata-gateway"></a>Aktualizace ATA Gateway
@@ -219,8 +220,3 @@ K provedení bezobslužné odinstalace komponenty ATA Gateway použijte následu
 - [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurace shromažďování událostí](configure-event-collection.md)
 - [Požadavky ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
-
-
-<!--HONumber=Dec16_HO1-->
-
-

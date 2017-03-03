@@ -1,201 +1,145 @@
 ---
-asset_id: c4a97980-6e19-4d10-bf69-f0b338266efa
-layout: HubPage
-title: Dokumentace k Advanced Threat Analytics
-description: "Dokumentace k Advanced Threat Analytics, službě zabezpečení Microsoftu"
-keywords: Dokumentace k Advanced Threat Analytics, dokumentace ATA
-author: msmbaldwin
-manager: mbaldwin
-ms.date: 04/28/2016
-ms.topic: hubpage
-ms.prod: 
-ms.service: advanced-threat-analytics
-ms.technology: 
-ms.suite: ems
-ms.assetid: c4a97980-6e19-4d10-bf69-f0b338266efa
+layout: LandingPage
+description: "Naučte se používat Advanced Threat Analytics."
 translationtype: Human Translation
-ms.sourcegitcommit: 1dda7ed8bb461a15ae2cc9d379822ed4a96245ff
-ms.openlocfilehash: 6eeae28243bc000ad9424e655cfde75b10abe03a
-
+ms.sourcegitcommit: c4e5418a8b5f7093792f52f1553307039f38ff5f
+ms.openlocfilehash: 1fe4d6e06150cc1425c92165445fd087544b8904
 
 ---
-# <a name="microsoft-advanced-threat-analytics-documentation"></a>Dokumentace k Microsoft Advanced Threat Analytics
-<article id="main">
-    <section id="hero-content">
-      <h1>Dokumentace k Microsoft Advanced Threat Analytics</h1>
-      <h2>Zjistěte, jak nasadit a spravovat Microsoft Advanced Threat Analytics (ATA), místní produkt, který pomáhá IT profesionálům chránit jejich organizace před pokročilými cílenými útoky.</h2>
-      <h3>Ještě ATA neznáte? <a href="http://go.microsoft.com/fwlink/?LinkId=816859" target="_blank">Navštivte naše stránky produktu&rarr;</a></h3>
-    </section>
-    <aside class="alert section-border">
-      <p>Jste připravení začít?</p>
-      <ol class="action-list">
-        <li><a href="https://www.microsoft.com/evalcenter/evaluate-microsoft-advanced-threat-analytics" target="_blank" class="button-bordered button-translucent">Vyzkoušet</a></li>
-      </ol>
-    </aside>
-    <section id="featured" class="container">
-      <h2 class="section-heading"><span class="icon icon-warning"></span> Vybraný obsah</h2>
-      <div class="features row">
-        <ul class="column column-half">
-          <li><mark><b>NOVINKA</b></mark> <a href="/advanced-threat-analytics/understand-explore/whats-new-version-1.7">Vydání ATA verze 1.7</a></li>
-          <li><a href="/advanced-threat-analytics/understand-explore/what-is-ata">Co je Advanced Threat Analytics?</a></li>
-          <li><a href="/advanced-threat-analytics/understand-explore/ata-technical-faq">Nejčastější dotazy</a></li>
-        </ul>
-        <ul class="column column-half">
-          <li><a href="/advanced-threat-analytics/plan-design/ata-architecture">Architektura ATA</a></li>
-          <li><a href="/advanced-threat-analytics/plan-design/ata-capacity-planning">Plánování kapacity ATA</a></li>        </ul>
-      </div>
-    </section>
-    <div id="journeys">
-      <section class="container">
-        <ul class="journeys-list">
-          <li class="journey-step">
-            <header class="journey-step-header row">
-              <a href="/advanced-threat-analytics/understand-explore/what-is-ata">
-                <div class="title column-third">
-                  <span class="step-number">1</span>
-                  <p>Porozumění a prozkoumávání</p>
+# <a name="advanced-threat-analytics-documentation"></a>Dokumentace k Advanced Threat Analytics
+
+Kontrolujte a pomozte zabezpečit e-maily, dokumenty a citlivá data, která sdílíte mimo prostory vaší společnosti. Díky funkcím, jako je třeba snadná klasifikace nebo předdefinované popisky a oprávnění, pomáhá Azure Information Protection zdokonalit ochranu dat – bez ohledu na to, kde jsou uložená nebo s kým jsou sdílená.
+
+<ul class="panelContent cardsFTitle">
+    <li>
+        <a href="/advanced-threat-analytics/understand-explore/whats-new-version-1.7">
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="/media/common/i_whats-new.svg" alt="" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Co je nového</h3>
+                    </div>
                 </div>
-                <p class="description column-two-thirds">Seznamte se se základními koncepty, funkcemi a možnostmi služby Microsoft Advanced Threat Analytics.
-                </p>
-              </a>
-            </header>
-            <section class="journey-step-elements content">
-              <ul class="row">
-                <li class="column-third">
-                  <a href="/advanced-threat-analytics/understand-explore/what-is-ata">
-                    <h3>Co je ATA?</h3>
-                    <p>Zjistěte, jak ATA pomáhá IT odborníkům na zabezpečení chránit podniky před pokročilými cílenými útoky.</p>
-                  </a>
-                </li>
-                <li class="column-third">
-                  <a href="/advanced-threat-analytics/understand-explore/ata-technical-faq">
-                    <h3>Nejčastější dotazy</h3>
-                    <p>Získejte odpovědi na všechny svoje technické dotazy týkající se ATA.</p>
-                  </a>
-                </li>
-                <li class="column-third">
-                  <a href="/advanced-threat-analytics/understand-explore/ata-release-notes">
-                    <h3>Poznámky k verzi ATA</h3>
-                    <p>Prohlédněte si seznam toho, co se aktualizovalo v posledních verzích, a také známé problémy a průvodce migrací.</p>
-                  </a>
-                </li>
-              </ul>
-            </section>
-          </li>
-          <li class="journey-step">
-            <header class="journey-step-header row">
-              <a href="/advanced-threat-analytics/plan-design/ata-architecture">
-                <div class="title column-third">
-                  <span class="step-number">2</span>
-                  <p>Plánování a návrh</p>
+            </div>
+        </div>
+        </a>
+    </li>
+    <li>
+        <a href="/advanced-threat-analytics/understand-explore/what-is-ata">
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="/media/common/i_learn-about.svg" alt="" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Další informace o Advanced Threat Analytics</h3>
+                    </div>
                 </div>
-                <p class="description column-two-thirds">Naplánujte a navrhněte ATA.
-                </p>
-              </a>
-            </header>
-            <section class="journey-step-elements content">
-              <ul class="row">
-                <li class="column-third">
-                  <a href="/advanced-threat-analytics/plan-design/ata-architecture">
-                    <h3>Architektura ATA</h3>
-                    <p>Zjistěte, jak by měla vypadat architektura s podporou ATA.</p>
-                  </a>
-                </li>
-                <li class="column-third">
-                  <a href="/advanced-threat-analytics/plan-design/ata-capacity-planning">
-                    <h3>Plánování kapacity</h3>
-                    <p>Určete, kolik serverů ATA bude potřeba k podpoře vaší sítě.</p>
-                  </a>
-                </li>
-                <li class="column-third">
-                  <a href="/advanced-threat-analytics/plan-design/ata-prerequisites">
-                    <h3>Požadavky ATA</h3>
-                    <p>Naplánujte požadavky pro úspěšné nasazení ATA ve vašem prostředí.</p>
-                  </a>
-                </li>
-              </ul>
-            </section>
-          </li>
-          <li class="journey-step">
-            <header class="journey-step-header row">
-              <a href="/advanced-threat-analytics/deploy-use/preinstall-ata">
-                <div class="title column-third">
-                  <span class="step-number">3</span>
-                  <p>Nasazení a používání</p>
+            </div>
+        </div>
+        </a>
+    </li>
+    <li>
+        <a href="/advanced-threat-analytics/understand-explore/ata-technical-faq"> 
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="/media/common/i_support.svg" alt="" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Nejčastější dotazy</h3>
+                    </div>
                 </div>
-                <p class="description column-two-thirds">Nasaďte řešení ATA a začněte ho používat.
-                </p>
-              </a>
-            </header>
-            <section class="journey-step-elements content">
-              <ul class="row">
-                <li class="column-third">
-                  <a href="/advanced-threat-analytics/deploy-use/preinstall-ata">
-                    <h3>Než nainstalujete ATA</h3>
-                    <p>Před instalací ATA proveďte tyto kroky.</p>
-                  </a>
-                </li>
-                <li class="column-third">
-                  <a href="/advanced-threat-analytics/deploy-use/install-ata-step1">
-                    <h3>Instalace ATA</h3>
-                    <p>Postupujte podle podrobného popisu kroků v instalační příručce.</p>
-                  </a>
-                </li>
-                <li class="column-third">
-                  <a href="/advanced-threat-analytics/deploy-use/operate-ata">
-                    <h3>Provoz ATA</h3>
-                    <p>Změňte konfiguraci ATA a využijte ATA ke každodennímu monitorování.</p>
-                  </a>
-                </li>
-            </section>
-          </li>
-          <li class="journey-step">
-            <header class="journey-step-header row">
-              <a href="/advanced-threat-analytics/troubleshoot/troubleshooting-ata-known-errors">
-                <div class="title column-third">
-                  <span class="step-number">4</span>
-                  <p>Řešení problémů</p>
+            </div>
+        </div>
+        </a>
+    </li>
+    <li>
+        <a href="/advanced-threat-analytics/plan-design/ata-architecture"> 
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="/media/common/i_architecture.svg" alt="" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Architektura Advanced Threat Analytics</h3>
+                    </div>
                 </div>
-                <p class="description column-two-thirds">Vyřešte problémy s ATA.
-                </p>
-              </a>
-            </header>
-            <section class="journey-step-elements content">
-              <ul class="row">
-                <li class="column-third">
-                  <a href="/advanced-threat-analytics/troubleshoot/troubleshooting-ata-known-errors">
-                    <h3>Řešení známých chyb ATA</h3>
-                    <p>Prohlédněte si kroky pro nápravu známých chyb ATA.</p>
-                  </a>
-                </li>
-                <li class="column-third">
-                  <a href="/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs">
-                    <h3>Použití protokolů k odstranění potíží</h3>
-                    <p>Získejte přehled o tom, co jednotlivé komponenty ATA v libovolném časovém okamžiku dělají.</p>
-                  </a>
-                </li>
-                <li class="column-third">
-                  <a href="/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-perf-counters">
-                    <h3>Použití čítačů výkonu k odstranění potíží</h3>
-                    <p>Získejte představu, jak dobře jednotlivé komponenty ATA fungují.</p>
-                  </a>
-                </li>
-              </ul>
-            </section>
-          </li>
-        </ul>
-      </section>
-    </div>
-    <aside class="alert alert-social">
-      <p>Přečtěte si nejnovější zprávy o ATA</p>
-      <ol class="action-list">
-        <li><a href="http://blogs.technet.com/b/ata/" target="_blank" class="button-bordered button-translucent">oficiální blog Microsoftu pro ATA</a></li>
-      </ol>
-    </aside>
-</article>
+            </div>
+        </div>
+        </a>
+    </li>
+    <li>
+        <a href="/advanced-threat-analytics/plan-design/ata-capacity-planning"> 
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="/media/common/i_tasks.svg" alt="" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Plánování kapacity Advanced Threat Analytics</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </a>
+    </li>
+    <li>
+        <a href="https://blogs.technet.microsoft.com/enterprisemobility/author/microsoft-advanced-threat-analytics-team/"> 
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="/media/common/i_blog.svg" alt="" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Blog o Advanced Threat Analytics</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </a>
+    </li>
+</ul>
+
+---
+
+<h3>Vyzkoušet</h3>
+<ul class="panelContent cardsW">
+    <li>
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardText">
+                        <p><a href="https://go.microsoft.com/fwlink/?linkid=836487">Zkušební verze</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>  
+</ul>
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Feb17_HO2-->
 
 
