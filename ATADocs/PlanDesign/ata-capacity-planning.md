@@ -1,11 +1,11 @@
 ---
-title: "Plánování nasazení ATA | Dokumentace Microsoftu"
+title: "Plánování nasazení Advanced Threat Analytics | Dokumentace Microsoftu"
 description: "Pomůže vám naplánovat nasazení a určit, kolik serverů ATA bude potřeba k podpoře vaší sítě."
 keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/6/2016
+ms.date: 1/23/2017
 ms.topic: get-started-article
 ms.service: advanced-threat-analytics
 ms.prod: 
@@ -13,8 +13,8 @@ ms.assetid: 279d79f2-962c-4c6f-9702-29744a5d50e2
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 56eff27ffdd988d5cc9e67352859ddfedebb2144
-ms.openlocfilehash: 93ec7373a166529332d7c4809c756ab3ba240868
+ms.sourcegitcommit: 0bacaaaa543d74e9575811d64b4cd41ac0fdb140
+ms.openlocfilehash: 2cdf7e00b575ee759a54fb99fb97cbfcee5a43de
 
 
 ---
@@ -54,13 +54,13 @@ Pro vypracování analýzy chování uživatelů vyžaduje ATA Center data za ne
 |10 000|4|48|3|90|200 (300)
 |40 000|8|64|12|360|500 (1 000)
 |100 000|12|96|30|900|1 000 (1 500)
-|400 000|40|128|120|1 800|2 000 (2 500)
+|400 000|40|128|120|3&600;|4&000; (5&000;)
 
 &#42;To zahrnuje fyzická jádra, ne jádra typu Hyper.
 
 &#42;&#42;Průměrné počty (počty ve špičce)
 > [!NOTE]
-> -   ATA Center může zpracovávat agregované maximum 400 000 snímků za sekundu (FPS) ze všech monitorovaných řadičů domény.
+> -   ATA Center může zpracovávat agregované maximum 400 000 snímků za sekundu (FPS) ze všech monitorovaných řadičů domény. V některých prostředích může stejné ATA Center zpracovávat celkový provoz, který je vyšší než 400 000. Pokud potřebujete s takovými prostředími pomoct, pište na adresu askcesec@microsoft.com.
 > -   Uvedené velikosti úložišť jsou čisté hodnoty, ale vy byste měli vždy počítat s růstem do budoucna a zajisti, aby na disku, kde je umístěná databáze, bylo vždycky aspoň 20 % volného místa.
 > -   Pokud velikost volného místa dosáhne minimální hodnoty buď 20 %, nebo 100 GB, nejstarší kolekce dat se odstraní. To bude pokračovat, dokud nezůstane jen 5 % nebo 50 GB volného místa. Pak se shromažďování dat zastaví.
 > -   Latence úložiště pro čtení a zápisu aktivit musí být menší než 10 ms.
@@ -115,7 +115,7 @@ ATA Lightweight Gateway může podporovat monitorování jednoho řadiče domén
 
 &#42;&#42;&#42;Celkový objem paměti, kterou má tento řadič domény nainstalovanou.
 
-> [!NOTE]   
+> [!NOTE]    
 > -   Pokud řadič domény nemá nezbytný objem prostředků, které ATA Lightweight Gateway vyžaduje, výkon řadiče domény to neovlivní, ale ATA Lightweight Gateway nemusí fungovat podle očekávání.
 > -   Pokud se spustí jako dynamická paměť virtuálního počítače nebo libovolná jiná paměť, funkce rozšiřování rozsahů stránek se nepodporuje.
 > -   K zajištění optimálního výkonu nastavte **možnost napájení ** pro ATA Lightweight Gateway na hodnotu **Vysoký výkon**.
@@ -126,13 +126,13 @@ ATA Lightweight Gateway může podporovat monitorování jednoho řadiče domén
 
 Při rozhodování o tom, kolik komponent ATA Gateway nasadíte, zvažte následující:
 
--   **Doménové struktury a domény služby Active Directory**<br>
+-    **Doménové struktury a domény služby Active Directory**<br>
     ATA může monitorovat provoz z několika domén z jedné doménové struktury služby Active Directory. Monitorování několika doménových struktur služby Active Directory vyžaduje samostatná nasazení řešení ATA. Jedno nasazení ATA by nemělo být nakonfigurované pro monitorování síťového provozu řadičů domény patřících do různých doménových struktur.
 
--   **Zrcadlení portů**<br>
+-    **Zrcadlení portů**<br>
 Aspekty zrcadlení portů můžou vyžadovat, abyste pro datové centrum nebo pobočku nasadili několik komponent ATA Gateway.
 
--   **Kapacita**<br>
+-    **Kapacita**<br>
     ATA Gateway může podporovat monitorování několika řadičů domény, v závislosti na objemu síťových přenosů monitorovaných řadičů domény. 
 <br>
 
@@ -214,6 +214,6 @@ Pokud chcete určit počet paketů za sekundu, proveďte na každém řadiči do
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Feb17_HO2-->
 
 

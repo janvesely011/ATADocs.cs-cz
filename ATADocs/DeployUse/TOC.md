@@ -1,18 +1,33 @@
-# [Porozumění a prozkoumávání](/advanced-threat-analytics/understand-explore/what-is-ata)
-# [Plánování a navrhování](/advanced-threat-analytics/plan-design/ata-architecture)
-# [Nasazení](preinstall-ata.md)
-## [Než ATA nainstalujete](preinstall-ata.md)
-### [Konfigurace zrcadlení portů](configure-port-mirroring.md)
-### [Ověření zrcadlení portů](validate-port-mirroring.md)
-### [Konfigurace shromažďování událostí](configure-event-collection.md)
-## [Instalace ATA – krok 1](install-ata-step1.md)
-## [Instalace ATA – krok 2](install-ata-step2.md)
-## [Instalace ATA – krok 3](install-ata-step3.md)
-## [Instalace ATA – krok 4](install-ata-step4.md)
-## [Instalace ATA – krok 5](install-ata-step5.md)
-## [Instalace ATA – krok 6](install-ata-step6.md)
-## [Bezobslužná instalace](ata-silent-installation.md)
-# [Použití](modifying-ata-config-centerip.md)
+# Porozumění a prozkoumávání
+## [Co je Microsoft Advanced Threat Analytics?](/advanced-threat-analytics/understand-explore/what-is-ata)
+## [Jaké hrozby ATA detekuje?](/advanced-threat-analytics/understand-explore/ata-threats)
+## Poznámky k verzi ATA
+### [Novinky ATA verze 1.7](/advanced-threat-analytics/understand-explore/whats-new-version-1.7)
+#### [Aktualizace na ATA 1.7 – průvodce migrací](/advanced-threat-analytics/understand-explore/ata-update-1.7-migration-guide)
+### [Novinky ATA verze 1.6](/advanced-threat-analytics/understand-explore/whats-new-version-1.6)
+#### [Aktualizace na ATA 1.6 – průvodce migrací](/advanced-threat-analytics/understand-explore/ata-update-1.6-migration-guide)
+### [Novinky ATA verze 1.5](/advanced-threat-analytics/understand-explore/whats-new-version-1.5)
+#### [Aktualizace na ATA 1.5 – průvodce migrací](/advanced-threat-analytics/understand-explore/ata-update-1.5-migration-guide)
+### [Novinky ATA verze 1.4](/advanced-threat-analytics/understand-explore/whats-new-version-1.4)
+## [Nejčastější dotazy](/advanced-threat-analytics/understand-explore/ata-technical-faq)
+# Plánování a navrhování
+## [Architektura ATA](/advanced-threat-analytics/plan-design/ata-architecture)
+## [Plánování kapacity ATA](/advanced-threat-analytics/plan-design/ata-capacity-planning)
+## [Požadavky ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
+# Nasazení
+## Předinstalační kroky
+### [1. Konfigurace zrcadlení portů](configure-port-mirroring.md)
+### [2. Ověření zrcadlení portů](validate-port-mirroring.md)
+### [3. Konfigurace shromažďování událostí](configure-event-collection.md)
+## Instalace ATA
+### [Krok 1: Stažení a instalace](install-ata-step1.md)
+### [Krok 2: Připojení k AD](install-ata-step2.md)
+### [Krok 3: Stažení balíčku GW](install-ata-step3.md)
+### [Krok 4: Instalace GW](install-ata-step4.md)
+### [Krok 5: Konfigurace GW](install-ata-step5.md)
+### [Krok 6: Vyloučení a honeytoken](install-ata-step6.md)
+### [Bezobslužná instalace](ata-silent-installation.md)
+# Použití
 ## [Změna IP adresy ATA Center](modifying-ata-config-centerip.md)
 ## [Změna certifikátu ATA Center](modifying-ata-config-centercert.md)
 ## [Změna adresy URL konzoly ATA](modifying-ata-config-consoleurl.md)
@@ -27,9 +42,13 @@
 ## [Správa databáze ATA](ata-database-management.md)
 ## [Export/import konfigurace ATA](ata-configuration-file.md)
 ## [Správa telemetrie ATA](manage-telemetry-settings.md)
-# [Řešení problémů](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-known-errors)
+# Řešení problémů
+## [Řešení problémů pomocí známých chyb](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-known-errors)
+## [Řešení problémů pomocí protokolů](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs)
+## [Řešení problémů pomocí čítačů výkonu](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-perf-counters)
+## [Řešení problémů pomocí databáze](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-ata-database)
+## [Obnovení po havárii](/advanced-threat-analytics/troubleshoot/disaster-recovery)
 
-
-<!--HONumber=Nov16_HO5-->
+<!--HONumber=Feb17_HO4-->
 
 

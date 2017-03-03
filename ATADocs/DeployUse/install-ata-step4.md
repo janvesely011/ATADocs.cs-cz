@@ -1,10 +1,11 @@
 ---
-title: "Instalace ATA – Krok 4 | Microsoft ATA"
+title: "Instalace Advanced Threat Analytics – krok 4 | Dokumentace Microsoftu"
 description: "Čtvrtý krok instalace ATA vám pomůže s instalací ATA Gateway."
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 01/23/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,8 +14,8 @@ ms.assetid: 6bbc50c3-bfa8-41db-a2f9-56eed68ef5d2
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 54e5105e78b6db9f33488135601381af5503aa4a
-ms.openlocfilehash: 305c939ebda636617ece6e41f0554af0e948c3ec
+ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
+ms.openlocfilehash: 9b5891f4e864dcd7bfa8c5cc5ba6d9977806e033
 
 
 ---
@@ -23,13 +24,13 @@ ms.openlocfilehash: 305c939ebda636617ece6e41f0554af0e948c3ec
 
 
 
-# Instalace ATA – Krok 4
+# <a name="install-ata---step-4"></a>Instalace ATA – krok 4
 
 >[!div class="step-by-step"]
 [« Krok 3](install-ata-step3.md)
 [Krok 5 »](install-ata-step5.md)
 
-## Krok 4. Instalace ATA Gateway
+## <a name="step-4-install-the-ata-gateway"></a>Krok 4. Instalace ATA Gateway
 
 Před instalací ATA Gateway na vyhrazený server ověřte, že je zrcadlení portů správně nakonfigurované a že ATA Gateway vidí provoz do a z řadičů domény. Další informace najdete v tématu [Ověření zrcadlení portů](validate-port-mirroring.md).
 
@@ -89,7 +90,7 @@ Na serveru ATA Gateway proveďte tento postup.
 [« Krok 3](install-ata-step3.md)
 [Krok 5 »](install-ata-step5.md)
 
-## Viz také
+## <a name="see-also"></a>Viz také
 
 - [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurace shromažďování událostí](configure-event-collection.md)
@@ -98,6 +99,6 @@ Na serveru ATA Gateway proveďte tento postup.
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Feb17_HO1-->
 
 

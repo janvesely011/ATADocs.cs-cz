@@ -1,10 +1,11 @@
 ---
-title: "Ověření zrcadlení portů | Microsoft ATA"
+title: "Ověření zrcadlení portů v Advanced Threat Analytics | Dokumentace Microsoftu"
 description: "Popisuje jak ověřit, že je zrcadlení portů nakonfigurované správně."
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 01/23/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,8 +14,8 @@ ms.assetid: ebd41719-c91a-4fdd-bcab-2affa2a2cace
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e3b690767e5c6f5561a97a73eccfbf50ddb04148
-ms.openlocfilehash: 59d50b0d9c5adc78aca260412872076c84db8d57
+ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
+ms.openlocfilehash: 47d24324288351c460be330d71bfdd41cd456fc0
 
 
 ---
@@ -23,13 +24,13 @@ ms.openlocfilehash: 59d50b0d9c5adc78aca260412872076c84db8d57
 
 
 
-# Ověření zrcadlení portů
+# <a name="validate-port-mirroring"></a>Ověření zrcadlení portů
 > [!NOTE] 
 > Tento článek se týká jenom nasazení komponent ATA Gateway, nikoli komponent ATA Lightweight Gateway. Pokud chcete určit, jestli potřebujete ATA Gateway, přečtěte si téma [Volba vhodných bran pro vaše nasazení](/advanced-threat-analytics/plan-design/ata-capacity-planning#choosing-the-right-gateway-type-for-your-deployment).
  
 Následující kroky vás provedou procesem ověření, že je zrcadlení portů správně nakonfigurované. Pro správnou funkci ATA potřebuje, aby ATA Gateway mohla sledovat provoz do a z řadiče domény. Hlavní zdroj dat používaný ATA je hloubková kontrola paketů síťového provozu do a z řadičů domény. ATA potřebuje ke sledování síťového provozu správně nakonfigurované zrcadlení portů. Zrcadlení portů kopíruje provoz z jednoho portu (zdrojový port) na jiný port (cílový port).
 
-## Ověření zrcadlení portů pomocí skriptu prostředí Windows PowerShell
+## <a name="validate-port-mirroring-using-a-windows-powershell-script"></a>Ověření zrcadlení portů pomocí skriptu prostředí Windows PowerShell
 
 1. Uložte text tohoto skriptu do souboru s názvem *ATAdiag.ps1*.
 2. Spusťte tento skript na bráně ATA Gateway, kterou chcete ověřit.
@@ -191,7 +192,7 @@ Ukázka spuštění tohoto skriptu:
     [void][System.Console]::ReadKey($true)
     
     
-## Ověření zrcadlení portů pomocí Net Mon
+## <a name="validate-port-mirroring-using-net-mon"></a>Ověření zrcadlení portů pomocí Net Mon
 1.  Nainstalujte [Microsoft Network Monitor 3.4](http://www.microsoft.com/download/details.aspx?id=4865) na ATA Gateway, kterou chcete ověřit.
 
     > [!IMPORTANT]
@@ -221,13 +222,13 @@ Ukázka spuštění tohoto skriptu:
 
 5.  Pokud se zobrazí přenos jenom v jednom směru, obraťte se na týmy podpory sítí nebo virtualizace, aby vám pomohly vyřešit potíže s konfigurací zrcadlení portů.
 
-## Viz také
+## <a name="see-also"></a>Viz také
 
 - [Konfigurace zrcadlení portů](configure-port-mirroring.md)
 - [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Feb17_HO1-->
 
 

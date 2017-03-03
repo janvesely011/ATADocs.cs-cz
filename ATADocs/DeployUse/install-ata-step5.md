@@ -1,10 +1,11 @@
 ---
-title: "Instalace ATA – Krok 5 | Microsoft ATA"
-description: "Krok 5 instalace ATA vám pomůže nakonfigurovat nastavení pro komponentu ATA Gateway."
+title: "Instalace Advanced Threat Analytics – krok 5 | Dokumentace Microsoftu"
+description: "Krok&5; instalace ATA vám pomůže nakonfigurovat nastavení pro komponentu ATA Gateway."
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 01/23/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,8 +14,8 @@ ms.assetid: 2a5b6652-2aef-464c-ac17-c7e5f12f920f
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 39eadb9143740741fa592f983f03def5367ada46
-ms.openlocfilehash: 14b04a771f0c18170f0c80d388ab012574d40bee
+ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
+ms.openlocfilehash: 5856a5e658ed18cbf82d25247f8c39e48ccd2185
 
 
 ---
@@ -23,14 +24,14 @@ ms.openlocfilehash: 14b04a771f0c18170f0c80d388ab012574d40bee
 
 
 
-# Instalace ATA – Krok 5
+# <a name="install-ata---step-5"></a>Instalace ATA – krok 5
 
 >[!div class="step-by-step"]
 [« Krok 4](install-ata-step4.md)
 [Krok 6 »](install-ata-step6.md)
 
 
-## Krok 5. Konfigurace nastavení ATA Gateway
+## <a name="step-5-configure-the-ata-gateway-settings"></a>Krok 5. Konfigurace nastavení ATA Gateway
 Po instalaci komponenty ATA Gateway proveďte následující kroky a nakonfigurujte nastavení ATA Gateway.
 
 1.  V konzole ATA přejděte do sekce **Konfigurace** a v části **Systém** vyberte možnost **Gateway**.
@@ -67,7 +68,7 @@ Po instalaci komponenty ATA Gateway proveďte následující kroky a nakonfiguru
 3. Klikněte na **Uložit**.
 
 
-## Ověření instalací
+## <a name="validate-installations"></a>Ověření instalací
 Chcete-li ověřit, že ATA Gateway je úspěšně nasazená, zkontrolujte následující:
 
 1.  Zkontrolujte, že je služba **Microsoft Advanced Threat Analytics Gateway** spuštěná. Po uložení nastavení ATA Gateway může trvat několik minut, než se služba spustí.
@@ -87,7 +88,7 @@ Chcete-li ověřit, že ATA Gateway je úspěšně nasazená, zkontrolujte násl
 [« Krok 4](install-ata-step4.md)
 [Krok 6 »](install-ata-step6.md)
 
-## Viz také
+## <a name="see-also"></a>Viz také
 
 - [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurace shromažďování událostí](configure-event-collection.md)
@@ -96,6 +97,6 @@ Chcete-li ověřit, že ATA Gateway je úspěšně nasazená, zkontrolujte násl
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Feb17_HO1-->
 
 

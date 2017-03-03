@@ -1,10 +1,11 @@
 ---
-title: Instalace ATA | Microsoft ATA
+title: "Instalace Advanced Threat Analytics – krok 6 | Dokumentace Microsoftu"
 description: "V posledním kroku instalace ATA nakonfigurujete uživatele honeytokenu."
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
-ms.date: 09/20/2016
+ms.date: 01/23/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,8 +14,8 @@ ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d47d9e7be294c68d764710c15c4bb78539e42f62
-ms.openlocfilehash: 9ee2f36d8f0b7eae061873e8735139ccc4da00d1
+ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
+ms.openlocfilehash: b5954bd6f0cd9ef8c8b0b958a92840e905189d71
 
 
 ---
@@ -23,13 +24,13 @@ ms.openlocfilehash: 9ee2f36d8f0b7eae061873e8735139ccc4da00d1
 
 
 
-# Instalace ATA – Krok 6
+# <a name="install-ata---step-6"></a>Instalace ATA – krok 6
 
 >[!div class="step-by-step"]
 [« Krok 5](install-ata-step5.md)
 
-## Krok 6: Konfigurace vyloučení IP adres a uživatele honeytokenu
-ATA umožňuje vyloučení určitých IP adres a podsítí protokolu IP ze dvou typů detekcí: **DNS Reconnaissance** a **Pass-the-Ticket**. 
+## <a name="step-6-configure--ip-address-exclusions-and-honeytoken-user"></a>Krok 6: Konfigurace vyloučení IP adres a uživatele honeytokenu
+ATA umožňuje vyloučení určitých IP adres ze dvou typů detekcí: **DNS Reconnaissance** a **Pass-the-Ticket**. 
 
 Například při **vyloučení DNS Reconnaissance** se může jednat o kontrolu zabezpečení, která jako mechanismus pro prohledávání používá službu DNS. Vyloučení pomáhá službě ATA takové kontroly ignorovat. Příkladem vyloučení *Pass-the-Ticket* je zařízení NAT.    
 
@@ -41,7 +42,7 @@ Výše uvedené možnosti nakonfiguruje následovně:
 
     ![Nastavení konfigurace ATA](media/ATA-config-icon.JPG)
 
-2.  V části **Vyloučení detekcí** zadejte následující pro IP adresy *DNS Reconnaissance* nebo *Pass-the-Ticket* . Použijte například formát CIDR:  `192.168.1.0/24` a klikněte na znaménko *plus*.
+2.  V části **Vyloučení detekcí** zadejte IP adresu pro *DNS Reconnaissance* nebo *Pass-the-Ticket* a klikněte na znaménko *plus*.
 
     ![Uložení změn](media/ATA-exclusions.png)
 
@@ -66,7 +67,7 @@ ATA okamžitě spustí vyhledávání podezřelých aktivit. Některé aktivity,
 [« Krok 5](install-ata-step5.md)
 
 
-## Viz také
+## <a name="see-also"></a>Viz také
 
 - [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurace shromažďování událostí](configure-event-collection.md)
@@ -75,6 +76,6 @@ ATA okamžitě spustí vyhledávání podezřelých aktivit. Některé aktivity,
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Feb17_HO1-->
 
 

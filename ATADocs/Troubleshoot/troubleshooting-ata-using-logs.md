@@ -1,10 +1,11 @@
 ---
-title: "Řešení potíží s ATA pomocí protokolů ATA | Microsoft ATA"
+title: "Řešení potíží s Advanced Threat Analytics pomocí protokolů | Dokumentace Microsoftu"
 description: "Popisuje, jak můžete protokoly ATA použít k řešení potíží."
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,8 +14,8 @@ ms.assetid: b8ad5511-8893-4d1d-81ee-b9a86e378347
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c71d5ed1c705de558f1144820703ffe84850679b
-ms.openlocfilehash: f8024edbfad1961db7fa469cc2907c55bb5ec93f
+ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
+ms.openlocfilehash: 58df6ec3473118d0e11a5128eabd8feaa29f9fd2
 
 
 ---
@@ -23,10 +24,10 @@ ms.openlocfilehash: f8024edbfad1961db7fa469cc2907c55bb5ec93f
 
 
 
-# Řešení potíží s ATA pomocí protokolů ATA
+# <a name="troubleshooting-ata-using-the-ata-logs"></a>Řešení potíží s ATA pomocí protokolů ATA
 Protokoly ATA poskytují přehled o tom, co jednotlivé komponenty ATA v libovolném časovém okamžiku dělají.
 
-## Protokoly ATA Gateway
+## <a name="ata-gateway-logs"></a>Protokoly ATA Gateway
 V této části všechny odkazy na ATA Gateway platí také pro ATA Lightweight Gateway. 
 
 Protokoly ATA Gateway jsou umístěné v podsložce s názvem **Protokoly** v místě, kde je služba ATA nainstalovaná. Výchozí umístění je **C:\Program Files\Microsoft Advanced Threat Analytics\**. Ve výchozí instalaci ji najdete tady: **C:\Program Files\Microsoft Advanced Threat Analytics\Gateway\Logs**.
@@ -47,7 +48,7 @@ ATA Gateway využívá tyto protokoly:
 > [!NOTE]
 > První tři soubory protokolů mají maximální velikost až 50 MB. Při dosažení této velikosti se otevře nový soubor protokolu a předchozí je přejmenován na &lt;původní název souboru&gt;-Archived-00000 (číslo při každém přejmenování zvětší). Pokud již existuje více než 10 souborů stejného typu, budou nejstarší z nich ve výchozím nastavení odstraněny.
 
-## Protokoly ATA Center
+## <a name="ata-center-logs"></a>Protokoly ATA Center
 Protokoly ATA Center jsou umístěné v podsložce s názvem **Logs**. Ve výchozí instalaci ji najdete tady: **C:\Program Files\Microsoft Advanced Threat Analytics\Center\Logs**.
 > [!Note]
 > Protokoly konzoly ATA, které se dříve ukládaly v protokolech služby IIS, se teď nachází v protokolech služby ATA Center.
@@ -67,7 +68,7 @@ ATA Center využívá tyto protokoly:
 > První tři soubory protokolů mají maximální velikost až 50 MB. Při dosažení této velikosti se otevře nový soubor protokolu a předchozí je přejmenován na &lt;původní název souboru&gt;-Archived-00000 (číslo při každém přejmenování zvětší). Pokud již existuje více než 10 souborů stejného typu, budou nejstarší z nich ve výchozím nastavení odstraněny.
 
 
-## Protokoly nasazení ATA
+## <a name="ata-deployment-logs"></a>Protokoly nasazení ATA
 Protokoly nasazení ATA jsou umístěné v adresáři temp uživatele, který příslušný produkt nainstaloval. Ve výchozí instalaci tento adresář najdete tady: **C:\Users\Administrator\AppData\Local\Temp** (nebo v adresáři bezprostředně nadřazeném adresáři %temp%).
 
 Protokoly nasazení komponenty ATA Center:
@@ -85,15 +86,15 @@ Protokoly nasazení ATA Gateway a ATA Lightweight Gateway:
 -   **Microsoft Advanced Threat Analytics Gateway_RRRRMMDDHHMMSS_001_MsiPackage.log** – V tomto protokolu jsou uvedené kroky procesu nasazení binárních souborů ATA Gateway. Nejčastěji se využívá ke sledování nasazení binárních souborů ATA Gateway.
 
 
-## Viz také
+## <a name="see-also"></a>Viz také
 - [Požadavky ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
 - [Plánování kapacity ATA](/advanced-threat-analytics/plan-design/ata-capacity-planning)
-- [Konfigurace sběru událostí](/advanced-threat-analytics/deploy-use/configure-event-collection)
+- [Konfigurace shromažďování událostí](/advanced-threat-analytics/deploy-use/configure-event-collection)
 - [Konfigurace předávání událostí systému Windows](/advanced-threat-analytics/deploy-use/configure-event-collection#configuring-windows-event-forwarding)
 - [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
 
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Feb17_HO1-->
 
 

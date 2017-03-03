@@ -1,10 +1,11 @@
 ---
-title: Co je Microsoft Advanced Threat Analytics (ATA)? | Microsoft ATA
+title: Co je Microsoft Advanced Threat Analytics (ATA)? | Dokumentace Microsoftu
 description: "Popisuje řešení Microsoft Advanced Threat Analytics (ATA) a jaké druhy podezřelých aktivit může zjistit."
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
-ms.date: 09/28/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,8 +14,8 @@ ms.assetid: 283e7b4e-996a-4491-b7f6-ff06e73790d2
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 3768cd103fc2a938d2d39fe34179d74587abc118
-ms.openlocfilehash: 0bc2bcc42b2b59cf297b4af86f0c38aafebc379f
+ms.sourcegitcommit: 22d08a20291b1651a36247e9ffbeff8c881aefc5
+ms.openlocfilehash: 0941d7695f51eb5662626e02b5fc8a9997dea975
 
 
 ---
@@ -22,10 +23,10 @@ ms.openlocfilehash: 0bc2bcc42b2b59cf297b4af86f0c38aafebc379f
 *Platí pro: Advanced Threat Analytics verze 1.7*
 
 
-## Co je Advanced Threat Analytics?
+# <a name="what-is-advanced-threat-analytics"></a>Co je Advanced Threat Analytics?
 Řešení ATA (Advanced Threat Analytics) je místní platforma, která chrání podnik před různými typy pokročilých cílových útoků z kyberprostoru a před vnitřními hrozbami.
 
-## Popis fungování řešení ATA
+## <a name="how-ata-works"></a>Popis fungování řešení ATA
 ATA přebírá informace z různých zdrojů dat, z protokolů a událostí v síti a zkoumá chování uživatelů a entit v organizaci. Potom na základě toho vytváří profily jejich chování.
 ATA může přijímat události a protokoly z následujících zdrojů:
 
@@ -39,7 +40,7 @@ Kromě toho ATA využívá analytický modul vlastní sítě k zachycení a anal
 
 Další informace o architektuře ATA najdete v článku [Architektura ATA](/advanced-threat-analytics/plan-design/ata-architecture).
 
-## Co ATA dělá?
+## <a name="what-does-ata-do"></a>Co ATA dělá?
 
 Technologie ATA detekuje různé podezřelé aktivity a zaměřuje se na několik fází v řetězci internetového útoku, včetně následujícího:
 
@@ -90,17 +91,17 @@ Podezřelé aktivity tohoto typu můžete zobrazit na řídicím panelu ATA. V n
   ![ukázková obrazovka ATA s porušeným vztahem důvěryhodnosti](media/sample screen broken trust.png)
 
 
-## Co dál?
+## <a name="whats-next"></a>Co dál?
 
 -   Další informace o zapojení řešení ATA do vaší sítě najdete v tématu [Architektura ATA](/advanced-threat-analytics/plan-design/ata-architecture).
 
--   Pokud chcete začít s nasazením ATA, přečtěte si téma [Instalace ATA](/advanced-threat-analytics/deploy-use/install-ata).
+-   Pokud chcete začít s nasazením ATA, přečtěte si téma [Instalace ATA](/advanced-threat-analytics/deploy-use/install-ata-step1).
 
-## Viz také
+## <a name="see-also"></a>Viz také
 [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Feb17_HO1-->
 
 

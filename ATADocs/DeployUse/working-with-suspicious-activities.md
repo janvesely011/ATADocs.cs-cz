@@ -1,10 +1,11 @@
 ---
-title: "Práce s podezřelými aktivitami | Microsoft ATA"
+title: "Práce s podezřelými aktivitami v Advanced Threat Analytics | Dokumentace Microsoftu"
 description: "Popisuje, jak kontrolovat podezřelé aktivity identifikované ATA."
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,8 +14,8 @@ ms.assetid: 44d7c899-816c-4f7f-91d3-84a09d291a24
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 050f1ef0b39d69b64ede53243a7fa2d33d0e4813
-ms.openlocfilehash: 30fbeb0682bd4b253d7a6eb52b8b31e487b363cb
+ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
+ms.openlocfilehash: c94f61853aa45d45600cbcc0ba0a5a64adc6fd3f
 
 
 ---
@@ -23,10 +24,10 @@ ms.openlocfilehash: 30fbeb0682bd4b253d7a6eb52b8b31e487b363cb
 
 
 
-# Práce s podezřelými aktivitami
+# <a name="working-with-suspicious-activities"></a>Práce s podezřelými aktivitami
 Toto téma vysvětluje základy pro práci s Advanced Threat Analytics.
 
-## Kontrola podezřelých na časové ose útoku
+## <a name="review-suspicious-activities-on-the-attack-time-line"></a>Kontrola podezřelých na časové ose útoku
 Po přihlášení ke konzole ATA se vám automaticky otevře **Suspicious Activities Time Line** (Časová osa podezřelých aktivit). Podezřelé aktivity jsou uvedené v chronologickém pořadí s nejnovějšími podezřelými aktivita na vrcholu časové osy.
 Každá podezřelá aktivita obsahuje následující informace:
 
@@ -56,7 +57,7 @@ Každá podezřelá aktivita obsahuje následující informace:
 
 ![Obrázek časové osy podezřelých aktivit ATA](media/ATA-Suspicious-Activity-Timeline.JPG)
 
-## Filtrování seznamu podezřelých aktivit
+## <a name="filter-suspicious-activities-list"></a>Filtrování seznamu podezřelých aktivit
 Chcete-li filtrovat seznam podezřelých aktivit:
 
 1.  V podokně **Filtrovat podle** na levé straně obrazovky vyberte jednu z následujících položek: **Vše**, **Otevřeno**, **Vyřešeno** nebo **Zamítnuto**.
@@ -79,7 +80,7 @@ Chcete-li filtrovat seznam podezřelých aktivit:
 
 **Stav podezřelé aktivity**
 
--   **Otevřenost**
+-   **Otevřeno**
 
     V tomto seznamu se zobrazí všechny nové podezřelé aktivity.
 
@@ -94,7 +95,7 @@ Chcete-li filtrovat seznam podezřelých aktivit:
 
     Jedná se o aktivity, které ručně zamítnete. Pokud ATA zjistí podobnou podezřelou aktivitu, vytvoří se nové zjištění.
 
-## Poskytnutí vstupu k podezřelé aktivitě
+## <a name="provide-input-on-a-suspicious-activity"></a>Poskytnutí vstupu k podezřelé aktivitě
 Pro zajištění toho, že se ATA bude o vaší síti učit s vámi, některé podezřelé aktivity (rekognoskace DNS, pass-the-ticket, výčet relací SMB, neobvyklé chování a vzdálené spuštění) vyžadují váš vstup, aby se zlepšila detekce podezřelých aktivit do budoucna.
 
 1.  Pro podezřelé aktivity, které vám umožní zadání vstupu, se automaticky otevře dotaz na vstup. Zobrazí se výzva k zodpovězení otázek týkajících se aktivit ve vaší síti a zda se mají považovat za podezřelé. V následujícím příkladu se zobrazí dotaz, jestli je spuštění nástrojů pro vyhledávání z určitého počítače povolené.
@@ -107,16 +108,16 @@ Pro zajištění toho, že se ATA bude o vaší síti učit s vámi, některé p
 
 4.  Pokud si nejste jisti, můžete kliknout na **Zrušit**.
 
-## Změna stavu podezřelé aktivity
+## <a name="change-the-status-of-a-suspicious-activity"></a>Změna stavu podezřelé aktivity
 Můžete změnit stav podezřelé aktivity klepnutím na aktuální stav podezřelé aktivity a výběrem jedné z možností **Otevřeno**, **Vyřešeno** nebo **Zamítnuto**.
 
-## Viz také
+## <a name="see-also"></a>Viz také
 - [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Práce s nastavením detekce ATA](working-with-detection-settings.md)
 - [Změna konfigurace ATA](modifying-ata-configuration.md)
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Feb17_HO1-->
 
 

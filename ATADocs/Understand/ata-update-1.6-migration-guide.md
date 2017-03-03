@@ -1,11 +1,11 @@
 ---
-title: "Průvodce migrací pro aktualizaci ATA na verzi 1.6 | Dokumentace Microsoftu"
+title: "Průvodce migrací pro aktualizaci Advanced Threat Analytics na verzi 1.6 | Dokumentace Microsoftu"
 description: Postupy aktualizace ATA na verzi 1.6
 keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -14,8 +14,8 @@ ms.assetid: 0756ef64-3aef-4a69-8981-24fa8f285c6a
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: fca7f1b2b8260cad6e0ce32aad1c9e1b53fc0ad5
-ms.openlocfilehash: e361c1b659210934b9fcd70c7c438a47030eeeba
+ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
+ms.openlocfilehash: b1668f6d1d0c2107fc7116fb486d9e822552c852
 
 
 ---
@@ -143,6 +143,6 @@ To, že jsou všechny komponenty ATA Gateway úspěšně aktualizované, budete 
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Feb17_HO1-->
 
 

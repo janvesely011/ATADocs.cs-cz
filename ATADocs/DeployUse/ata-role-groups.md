@@ -1,11 +1,11 @@
 ---
-title: "Práce se skupinami rolí – kompletní | Dokumentace Microsoftu"
+title: "Skupiny rolí Advanced Threat Analytics pro správu přístupu | Dokumentace Microsoftu"
 description: "Provede vás prací se skupinami rolí ATA."
 keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/23/2016
+ms.date: 2/7/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -14,8 +14,8 @@ ms.assetid: 3715b69e-e631-449b-9aed-144d0f9bcee7
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 3ba53b7b1c34359f00da9fc9717496cfc7d4271d
-ms.openlocfilehash: b49906802bf0cae86178cbdcc34e4178691d39e4
+ms.sourcegitcommit: 88ca89f2311bf4e73b3d0b57db3e4377e99fd8b2
+ms.openlocfilehash: 7919c9658f2e05b448e3a773bd5ab4c6cb96625f
 
 
 ---
@@ -28,6 +28,10 @@ ms.openlocfilehash: b49906802bf0cae86178cbdcc34e4178691d39e4
 # <a name="ata-role-groups"></a>Skupiny rolí ATA
 
 Skupiny rolí umožňují správu přístupu pro ATA. Pomocí skupin rolí můžete oddělit úlohy v rámci týmu zabezpečení a udělit přístup pouze v takovém rozsahu, který uživatelé potřebují ke své práci. Tento článek vysvětluje správu přístupu a autorizaci rolí ATA a ulehčí vám uvedení skupin rolí v ATA co nejdříve do provozu.
+
+> [!NOTE]
+> Každý místní správce v komponentě ATA Center je automaticky správcem Microsoft Advanced Threat Analytics.
+
 ## <a name="types-of-ata-role-groups"></a>Typy skupin rolí ATA 
 
 ATA zavádí 3 typy skupin rolí: Správci ATA, uživatelé ATA a čtenáři ATA. Následující tabulka popisuje typ přístupu v ATA, který je dostupný pro určitou roli. V závislosti na přiřazené roli budou v ATA k dispozici různé obrazovky a možnosti nabídky, a to následovně:
@@ -48,13 +52,13 @@ ATA zavádí 3 typy skupin rolí: Správci ATA, uživatelé ATA a čtenáři ATA
 
 Když se uživatelé pokusí získat přístup na stránku, která pro jejich skupinu rolí není k dispozici, budou přesměrováni na stránku ATA pro neoprávněné uživatele. 
 
-## <a name="add-remove-users---ata-role-groups"></a>Přidávání a odebírání uživatelů – skupiny rolí ATA 
+## <a name="add--remove-users---ata-role-groups"></a>Přidávání a odebírání uživatelů – skupiny rolí ATA 
 
 ATA jako základ pro skupiny rolí používá místní skupiny systému Windows. Když chcete přidat nebo odebrat uživatele, použijte konzolu MCC **Místní uživatelé a skupiny** (Lusrmgr.msc). V počítači připojeném k doméně je možné přidávat účty domény i místní účty. 
 
 
 
 
-<!--HONumber=Nov16_HO4-->
+<!--HONumber=Feb17_HO1-->
 
 

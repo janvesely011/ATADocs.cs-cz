@@ -1,10 +1,11 @@
 ---
-title: "Instalace ATA – Krok 2 | Microsoft ATA"
+title: "Instalace Advanced Threat Analytics – krok 2 | Dokumentace Microsoftu"
 description: "Druhý krok instalace ATA vám pomůže nakonfigurovat nastavení připojení k doméně na serveru ATA Center."
 keywords: 
 author: rkarlin
+ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 01/23/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,8 +14,8 @@ ms.assetid: e1c5ff41-d989-46cb-aa38-5a3938f03c0f
 ms.reviewer: bennyl
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f334f9c8440e4bb0202579de220f6530d0aabad8
-ms.openlocfilehash: 3f78d0dd6b1e3f419c7e72e0449f77e7d2b3167d
+ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
+ms.openlocfilehash: 23ea3185e0d3556f524d8131a715a6057988f04c
 
 
 ---
@@ -23,7 +24,7 @@ ms.openlocfilehash: 3f78d0dd6b1e3f419c7e72e0449f77e7d2b3167d
 
 
 
-# <a name="install-ata-step-2"></a>Instalace ATA – Krok 2
+# <a name="install-ata---step-2"></a>Instalace ATA – krok 2
 
 >[!div class="step-by-step"]
 [« Krok 1](install-ata-step1.md)
@@ -63,6 +64,6 @@ Při prvním otevření konzoly ATA se objeví následující obrazovka:
 
 
 
-<!--HONumber=Oct16_HO5-->
+<!--HONumber=Feb17_HO1-->
 
 
