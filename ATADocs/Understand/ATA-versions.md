@@ -12,20 +12,17 @@ ms.technology:
 ms.assetid: a8afbd91-c888-4dfc-94ab-72e38745163e
 ms.reviewer: bennyl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
-ms.openlocfilehash: cae588383a7ea64a8e907e64cd2d7d15223feae3
-
-
+ms.openlocfilehash: 21c7486061b6945d557a42d3964b70637829f4b0
+ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
+translationtype: HT
 ---
-
 # <a name="support-for-microsoft-advanced-threat-analytics-ata-versions"></a>Podpora pro verze Microsoft Advanced Threat Analytics (ATA)
 
 Microsoft má v plánu vydávat aktualizace pro ATA párkrát za rok s tím, že každá verze aktualizace bude podporována po dobu dvanácti (12) měsíců od data jejího vydání s obecnou dostupností. Technická podpora bude poskytována po celých dvanáct (12) měsíců. Naše struktura podpory je teď ale dynamická – rozvíjí se do dvou různých fází údržby, které závisejí na dostupnosti nejnovější verze.
 
--   Fáze údržby Důležité aktualizace a aktualizace zabezpečení: Pokud provozujete nejnovější verzi ATA, obdržíte aktualizace zabezpečení i důležité aktualizace.
+-    Fáze údržby Důležité aktualizace a aktualizace zabezpečení: Pokud provozujete nejnovější verzi ATA, obdržíte aktualizace zabezpečení i důležité aktualizace.
 
--   Fáze údržby Aktualizace zabezpečení (pouze): Po vydání nové verze ATA se podpora starších verzí omezí po zbytek&12;měsíčního životního cyklu podpory jenom na aktualizace zabezpečení (ukazuje to níže uvedený příklad podpory údržby verzí).
+-    Fáze údržby Aktualizace zabezpečení (pouze): Po vydání nové verze ATA se podpora starších verzí omezí po zbytek&12;měsíčního životního cyklu podpory jenom na aktualizace zabezpečení (ukazuje to níže uvedený příklad podpory údržby verzí).
  
 ![Příklad podpory údržby verzí](media/versions.png)
 
@@ -50,9 +47,3 @@ Microsoft má v plánu vydávat aktualizace pro ATA párkrát za rok s tím, že
 
 ## <a name="see-also"></a>Viz také
 [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
-
-
-
-<!--HONumber=Feb17_HO1-->
-
-
