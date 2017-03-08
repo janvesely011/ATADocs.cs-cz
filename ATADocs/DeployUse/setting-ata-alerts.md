@@ -13,13 +13,10 @@ ms.technology:
 ms.assetid: 14cb7513-5dc8-49cb-b3e0-94f469c443dd
 ms.reviewer: bennyl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
-ms.openlocfilehash: 782c066e6a7ef8a5da9e2b8ceb16742da6f52506
-
-
+ms.openlocfilehash: 06aa85cededdc3647aadaaca7d594ce3bbbb0723
+ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
+translationtype: HT
 ---
-
 *Platí pro: Advanced Threat Analytics verze 1.7*
 
 
@@ -40,7 +37,7 @@ Pokud chcete dostávat e-mailová oznámení, nastavte následující:
 
 2. V části **Oznámení** vyberte **Nastavení**.
 3. Pod položkou **Příjemci e-mailu** zadejte příjemce, kteří obdrží tato e-mailová oznámení.
->   [!NOTE]
+>    [!NOTE]
 >   E-mailové výstrahy pro podezřelé aktivity se odesílají jenom při vytvoření podezřelé aktivity.
 
 4. V části **Upozornit když** pomocí přepínačů vyberte, jaká oznámení se mají posílat:
@@ -77,9 +74,3 @@ Pokud chcete dostávat oznámení Syslog, nastavte následující:
 
 ## <a name="see-also"></a>Viz také
 [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
-
-
-
-<!--HONumber=Feb17_HO1-->
-
-
