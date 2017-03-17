@@ -5,15 +5,15 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 1/23/2017
+ms.date: 3/5/2017
 ms.topic: get-started-article
 ms.service: advanced-threat-analytics
 ms.prod: 
 ms.assetid: 279d79f2-962c-4c6f-9702-29744a5d50e2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 4e0a6dd325c172ba4eb3b68fe4d4aab96f20684b
-ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
+ms.openlocfilehash: ce017adf26e30a5fde3c89a30c33f87d71716a4c
+ms.sourcegitcommit: 998e8aed5835b228e907aab78845723a02521741
 translationtype: HT
 ---
 *Platí pro: Advanced Threat Analytics verze 1.7*
@@ -22,6 +22,9 @@ translationtype: HT
 
 # <a name="ata-capacity-planning"></a>Plánování kapacity ATA
 Toto téma vám pomůže určit, kolik serverů ATA bude potřeba k monitorování vaší sítě, kolik komponent ATA Gateway nebo ATA Lightweight Gateway potřebujete a jakou kapacitu serveru vyžadují ATA Center a komponenty ATA Gateway.
+
+> [!NOTE] 
+> ATA Center se dá nasadit na libovolného dodavatele IaaS, pokud jsou splněné požadavky na výkon popsané v tomto článku.
 
 ##<a name="using-the-sizing-tool"></a>Použití nástroje pro změnu velikosti
 Doporučený a nejjednodušší způsob, jak určit kapacitu pro vaše nasazení ATA, je použití [nástroje pro změnu velikosti ATA](http://aka.ms/atasizingtool). Spusťte nástroj pro změnu velikosti ATA a z výsledků v excelovém souboru pomocí následujících polí určete potřebnou kapacitu ATA:
@@ -60,6 +63,7 @@ Pro vypracování analýzy chování uživatelů vyžaduje ATA Center data za ne
 > -   ATA Center může zpracovávat agregované maximum 400 000 snímků za sekundu (FPS) ze všech monitorovaných řadičů domény. V některých prostředích může stejné ATA Center zpracovávat celkový provoz, který je vyšší než 400 000. Pokud potřebujete s takovými prostředími pomoct, pište na adresu askcesec@microsoft.com.
 > -   Uvedené velikosti úložišť jsou čisté hodnoty, ale vy byste měli vždy počítat s růstem do budoucna a zajisti, aby na disku, kde je umístěná databáze, bylo vždycky aspoň 20 % volného místa.
 > -   Pokud velikost volného místa dosáhne minimální hodnoty buď 20 %, nebo 100 GB, nejstarší kolekce dat se odstraní. To bude pokračovat, dokud nezůstane jen 5 % nebo 50 GB volného místa. Pak se shromažďování dat zastaví.
+> - ATA Center je možné nasadit na libovolného dodavatele IaaS, pokud jsou splněné požadavky na výkon popsané v tomto článku.
 > -   Latence úložiště pro čtení a zápisu aktivit musí být menší než 10 ms.
 > -   Poměr mezi čtením a zápisem aktivit je přibližně 1:3 při méně než 100 000 paketů za sekundu a 1:6 při více než 100 000 paketů za sekundu.
 > -   Pokud se spustí jako dynamická paměť virtuálního počítače nebo libovolná jiná paměť, funkce rozšiřování rozsahů stránek se nepodporuje.
