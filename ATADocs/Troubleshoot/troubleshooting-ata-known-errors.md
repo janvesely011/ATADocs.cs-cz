@@ -1,28 +1,32 @@
---
-# <a name="required-metadata"></a>požadovaná metadata
-
-title: Řešení potíží s protokolem chyb Advanced Threat Analytics | Dokumentace Microsoftu description: Popisuje, jak je v ATA možné řešit běžné chyby keywords: author: rkarlin ms.author: rkarlin manager: mbaldwin ms.date: 3/14/2017 ms.topic: article ms.prod: ms.service: advanced-threat-analytics ms.technology: ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
-
-# <a name="optional-metadata"></a>volitelná metadata
-
-#<a name="robots"></a>ROBOTS:
-#<a name="audience"></a>audience:
-#<a name="msdevlang"></a>ms.devlang:
-ms.reviewer: arzinger
-
-ms.suite: ems
-#<a name="mstgtpltfrm"></a>ms.tgt_pltfrm:
-#<a name="mscustom"></a>ms.custom:
-
 ---
-
+title: "Řešení potíží s protokolem chyb Advanced Threat Analytics | Dokumentace Microsoftu"
+description: "Popisuje, jak je v ATA možné řešit běžné chyby."
+keywords: 
+author: rkarlin
+ms.author: rkarlin
+manager: mbaldwin
+ms.date: 3/14/2017
+ms.topic: article
+ms.prod: 
+ms.service: advanced-threat-analytics
+ms.technology: 
+ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
+ms.reviewer: arzinger
+ms.suite: ems
+ms.openlocfilehash: 0c72b14a042e473c0cd59811db63ecafc4ec02d4
+ms.sourcegitcommit: f18c0841d85e54eca940c8cbf226938b3c2bc80f
+translationtype: HT
+---
 *Platí pro: Advanced Threat Analytics verze 1.7*
 
 
 
 # <a name="troubleshooting-the-ata-error-log"></a>Řešení potíží s protokolem chyb ATA
+
 Tato část podrobně popisuje možné chyby v nasazení ATA a kroky potřebné k jejich vyřešení.
+
 ## <a name="ata-gateway-errors"></a>Chyby ATA Gateway
+
 |Chyba|Popis|Řešení|
 |-------------|----------|---------|
 |System.DirectoryServices.Protocols.LdapException: Došlo k místní chybě|Nepovedlo se ověřit ATA Gateway na řadiči domény.|1. Ověřte, že záznam DNS řadiče domény je na serveru DNS správně nakonfigurovaný. <br>2. Ověřte, že čas komponenty ATA Gateway je synchronizovaný s časem řadiče domény.|
