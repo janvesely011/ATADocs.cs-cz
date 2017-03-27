@@ -67,7 +67,7 @@ Pro vypracování analýzy chování uživatelů vyžaduje ATA Center data za ne
 > -   Latence úložiště pro čtení a zápisu aktivit musí být menší než 10 ms.
 > -   Poměr mezi čtením a zápisem aktivit je přibližně 1:3 při méně než 100 000 paketů za sekundu a 1:6 při více než 100 000 paketů za sekundu.
 > -   Pokud se spustí jako dynamická paměť virtuálního počítače nebo libovolná jiná paměť, funkce rozšiřování rozsahů stránek se nepodporuje.
-> -   K zajištění optimálního výkonu nastavte **možnost napájení ** pro ATA Center na hodnotu **Vysoký výkon**.<br>
+> -   K zajištění optimálního výkonu nastavte **možnost napájení** pro ATA Center na hodnotu **Vysoký výkon**.<br>
 > -   Při práci na fyzickém serveru databáze ATA vyžaduje, abyste v systému BIOS **zakázali** neuniformní přístup k paměti (NUMA). Ve vašem systému se NUMA může označovat také jako prokládání uzlů. V takovém případě bude potřeba prokládání uzlů **povolit**, abyste NUMA zakázali. Další informace najdete v dokumentaci k systému BIOS. Pokud ATA Center běží na virtuálním serveru, není tento text relevantní.
 
 
@@ -119,7 +119,7 @@ ATA Lightweight Gateway může podporovat monitorování jednoho řadiče domén
 > [!NOTE]    
 > -   Pokud řadič domény nemá nezbytný objem prostředků, které ATA Lightweight Gateway vyžaduje, výkon řadiče domény to neovlivní, ale ATA Lightweight Gateway nemusí fungovat podle očekávání.
 > -   Pokud se spustí jako dynamická paměť virtuálního počítače nebo libovolná jiná paměť, funkce rozšiřování rozsahů stránek se nepodporuje.
-> -   K zajištění optimálního výkonu nastavte **možnost napájení ** pro ATA Lightweight Gateway na hodnotu **Vysoký výkon**.
+> -   K zajištění optimálního výkonu nastavte **možnost napájení** pro ATA Lightweight Gateway na hodnotu **Vysoký výkon**.
 > -   Vyžaduje se minimálně 5 GB volného místa, doporučuje se 10 GB. Zahrnuje to prostor potřebný pro binární soubory ATA, [protokoly ATA](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs) a [protokoly výkonu](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-perf-counters).
 
 
@@ -154,7 +154,7 @@ Aspekty zrcadlení portů můžou vyžadovat, abyste pro datové centrum nebo po
 
 > [!NOTE] 
 > -   Dynamická paměť se nepodporuje.
-> -   K zajištění optimálního výkonu nastavte **možnost napájení ** pro ATA Gateway na hodnotu **Vysoký výkon**.
+> -   K zajištění optimálního výkonu nastavte **možnost napájení** pro ATA Gateway na hodnotu **Vysoký výkon**.
 > -   Vyžaduje se minimálně 5 GB volného místa, doporučuje se 10 GB. Zahrnuje to prostor potřebný pro binární soubory ATA, [protokoly ATA](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs) a [protokoly výkonu](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-perf-counters).
 
 
