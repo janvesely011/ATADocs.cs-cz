@@ -27,7 +27,7 @@ Protokoly ATA poskytují přehled o tom, co jednotlivé komponenty ATA v libovol
 ## <a name="ata-gateway-logs"></a>Protokoly ATA Gateway
 V této části všechny odkazy na ATA Gateway platí také pro ATA Lightweight Gateway. 
 
-Protokoly ATA Gateway jsou umístěné v podsložce s názvem **Protokoly** v místě, kde je služba ATA nainstalovaná. Výchozí umístění je **C:\Program Files\Microsoft Advanced Threat Analytics\**. Ve výchozí instalaci ji najdete tady: **C:\Program Files\Microsoft Advanced Threat Analytics\Gateway\Logs**.
+Protokoly ATA Gateway jsou umístěné v podsložce s názvem **Protokoly** v místě, kde je služba ATA nainstalovaná. Výchozí umístění je **C:\Program Files\Microsoft Advanced Threat Analytics\**. Ve výchozí instalaci ji najdete tady:**C:\Program Files\Microsoft Advanced Threat Analytics\Gateway\Logs**.
 
 ATA Gateway využívá tyto protokoly:
 
