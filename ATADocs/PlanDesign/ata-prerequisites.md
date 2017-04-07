@@ -13,13 +13,10 @@ ms.technology:
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: f61bbb895e4a2f239f91328f8d8b2b5260452cc2
-ms.openlocfilehash: 764d20fd113b8d40d359a8976c175e889f554dba
-
-
+ms.openlocfilehash: ebc02319374079ebb09bb6480ebef7f871bc9beb
+ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
+translationtype: HT
 ---
-
 *Platí pro: Advanced Threat Analytics verze 1.7*
 
 
@@ -82,7 +79,7 @@ Instalace komponenty ATA Center jako virtuálního počítače se podporuje.
 Pokud ATA Center spouštíte jako virtuální počítač, před vytvořením nového kontrolního bodu vypněte server. Vyhnete se tak možnému poškození databází.
 ### <a name="server-specifications"></a>Specifikace serveru
 Při práci na fyzickém serveru databáze ATA vyžaduje, abyste v systému BIOS **zakázali** neuniformní přístup k paměti (NUMA). Ve vašem systému se NUMA může označovat také jako prokládání uzlů. V takovém případě bude potřeba prokládání uzlů **povolit**, abyste NUMA zakázali. Další informace najdete v dokumentaci k systému BIOS. Pokud ATA Center běží na virtuálním serveru, není tento text relevantní.<br>
-K zajištění optimálního výkonu nastavte **možnost napájení ** pro ATA Center na hodnotu **Vysoký výkon**.<br>
+K zajištění optimálního výkonu nastavte **možnost napájení** pro ATA Center na hodnotu **Vysoký výkon**.<br>
 Počet řadičů domény, které monitorujete, a zatížení na jednotlivých řadičích určuje potřebnou specifikaci serveru. Další informace najdete v tématu [Plánování kapacity ATA](ata-capacity-planning.md).
 
 
@@ -146,7 +143,7 @@ Informace o používání virtuálních počítačů se službou ATA Gateway naj
 > Vyžaduje se minimálně 5 GB volného místa, doporučuje se 10 GB. Zahrnuje to prostor potřebný pro binární soubory ATA, [protokoly ATA](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs) a [protokoly výkonu](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-perf-counters).
 
 ### <a name="server-specifications"></a>Specifikace serveru
-K zajištění optimálního výkonu nastavte **možnost napájení ** pro ATA Gateway na hodnotu **Vysoký výkon**.<br>
+K zajištění optimálního výkonu nastavte **možnost napájení** pro ATA Gateway na hodnotu **Vysoký výkon**.<br>
 ATA Gateway může podporovat monitorování několika řadičů domény, v závislosti na objemu síťových přenosů z a do řadičů domény.
 
 >[!NOTE] 
@@ -233,7 +230,7 @@ Pokud se instalace provádí pro Windows Server 2012 R2 Server Core, musí být 
 ### <a name="server-specifications"></a>Specifikace serveru
 
 ATA Lightweight Gateway vyžaduje nejméně 2 jádra a 6 GB paměti RAM nainstalované na řadiči domény.
-K zajištění optimálního výkonu nastavte **možnost napájení ** pro ATA Lightweight Gateway na hodnotu **Vysoký výkon**.
+K zajištění optimálního výkonu nastavte **možnost napájení** pro ATA Lightweight Gateway na hodnotu **Vysoký výkon**.
 Komponenta ATA Lightweight Gateway se dá nasadit na řadiče domény s různým zatížením i velikostí, v závislosti na objemu síťového přenosu dat do a z řadiče domény a na počtu prostředků, které jsou na příslušném řadiči domény nainstalované.
 
 >[!NOTE] 
@@ -288,11 +285,5 @@ Přístup ke konzole ATA je prostřednictvím prohlížeče. Podporují se tyto:
 - [Architektura ATA](ata-architecture.md)
 - [Instalace ATA](/advanced-threat-analytics/deploy-use/install-ata)
 - [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
-
-
-
-
-
-<!--HONumber=Feb17_HO3-->
 
 

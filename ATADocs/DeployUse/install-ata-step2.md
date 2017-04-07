@@ -13,13 +13,10 @@ ms.technology:
 ms.assetid: e1c5ff41-d989-46cb-aa38-5a3938f03c0f
 ms.reviewer: bennyl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
-ms.openlocfilehash: 23ea3185e0d3556f524d8131a715a6057988f04c
-
-
+ms.openlocfilehash: fea114b062a7861ac284b4bf746fff68c5c1bd52
+ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
+translationtype: HT
 ---
-
 *Platí pro: Advanced Threat Analytics verze 1.7*
 
 
@@ -44,7 +41,7 @@ Při prvním otevření konzoly ATA se objeví následující obrazovka:
     |**Heslo** (povinné)|Zadejte heslo pro uživatele, který je jen pro čtení, například **Pencil1**.|
     |**Doména** (povinné)|Zadejte doménu pro uživatele, který je jen pro čtení, například **contoso.com**. **Poznámka:** Je důležité, abyste zadali kompletní plně kvalifikovaný název domény, ve které je uživatel umístěný. Pokud je například účet uživatele v doméně corp.contoso.com, musíte zadat `corp.contoso.com`, a ne contoso.com.|
 
-2. Volitelně můžete kliknout na **Testovat připojení**, čímž otestujete připojení k doméně a ověříte, že zadané přihlašovací údaje poskytují přístup. Bude to fungovat jenom v případě, že je komponenta ATA Center připojená k doméně.   
+2. Volitelně můžete kliknout na **Testovat připojení**, čímž otestujete připojení k doméně a ověříte, že zadané přihlašovací údaje poskytují přístup. Bude to fungovat jenom v případě, že je komponenta ATA Center připojená k doméně.     
 
     Po uložení se uvítací zpráva v konzole změní na následující: ![Uvítání ATA fáze 1 dokončeno](media/ATA_1.7-welcome-provide-username-finished.png)
 
@@ -61,9 +58,3 @@ Při prvním otevření konzoly ATA se objeví následující obrazovka:
 - [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurace shromažďování událostí](configure-event-collection.md)
 - [Požadavky ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
-
-
-
-<!--HONumber=Feb17_HO1-->
-
-

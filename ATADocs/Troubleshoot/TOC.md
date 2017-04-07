@@ -48,7 +48,3 @@
 ## [Řešení problémů pomocí čítačů výkonu](troubleshooting-ata-using-perf-counters.md)
 ## [Řešení problémů pomocí databáze](troubleshooting-ata-using-ata-database.md)
 ## [Obnovení po havárii](/advanced-threat-analytics/troubleshoot/disaster-recovery.md)
-
-<!--HONumber=Feb17_HO2-->
-
-
