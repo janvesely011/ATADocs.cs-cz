@@ -13,13 +13,10 @@ ms.technology:
 ms.assetid: df162a62-f273-4465-9887-94271f5000d2
 ms.reviewer: bennyl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
-ms.openlocfilehash: a909388cfcd35af45ccd4eac35f81e55938db086
-
-
+ms.openlocfilehash: 5c4662cd2d83135227cf86e339d5e30f9713f022
+ms.sourcegitcommit: 998e8aed5835b228e907aab78845723a02521741
+translationtype: HT
 ---
-
 *Platí pro: Advanced Threat Analytics verze 1.7*
 
 
@@ -35,6 +32,16 @@ Pokud chcete lépe pochopit tok interních komponent ATA, přečtěte si článe
 2.  Tímto způsobem se začne zvětšovat **vlastní** velikost předchozí komponenty, až zablokuje odesílání dalších entit z komponenty před ní.
 
 3.  To samé se děje s dalšími komponentami až ke komponentě NetworkListener, která omezí síťový provoz, když už nebude moct přesměrovávat entity.
+
+
+## <a name="retrieving-performance-monitor-files-for-troubleshooting"></a>Načítání souborů sledování výkonu kvůli řešení problémů
+
+Pokud chcete načíst soubory sledování výkonu (BLG) z různých komponent ATA, postupujte takto:
+1.  Otevřete Perfmon.
+2.  Zastavte sadu kolekcí dat s názvem Microsoft ATA Gateway nebo Microsoft ATA Center.
+3.  Přejděte do složky sady kolekcí dat (ve výchozím nastavení je to složka C:\Program Files\Microsoft Advanced Threat Analytics\Gateway\Logs\DataCollectorSets nebo C:\Program Files\Microsoft Advanced Threat Analytics\Center\Logs\DataCollectorSets.
+4.  Zkopírujte naposledy změněný soubor BLG.
+5.  Restartujte sadu kolekcí dat s názvem Microsoft ATA Gateway nebo Microsoft ATA Center.
 
 
 ## <a name="ata-gateway-performance-counters"></a>Čítače výkonu ATA Gateway
@@ -126,9 +133,3 @@ Následuje seznam hlavních čítačů operačního systému, kterým je potřeb
 - [Konfigurace shromažďování událostí](/advanced-threat-analytics/deploy-use/configure-event-collection)
 - [Konfigurace předávání událostí systému Windows](/advanced-threat-analytics/deploy-use/configure-event-collection#configuring-windows-event-forwarding)
 - [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
-
-
-
-<!--HONumber=Feb17_HO1-->
-
-

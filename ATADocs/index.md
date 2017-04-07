@@ -1,14 +1,13 @@
 ---
 layout: LandingPage
 description: "Naučte se používat Advanced Threat Analytics."
-translationtype: Human Translation
-ms.sourcegitcommit: c4e5418a8b5f7093792f52f1553307039f38ff5f
-ms.openlocfilehash: 1fe4d6e06150cc1425c92165445fd087544b8904
-
+ms.openlocfilehash: ddf06db756bd991c49200ba35b6a515832ccc3cb
+ms.sourcegitcommit: 9b128d6946e32b00f595e00902b9ff95f18141ff
+translationtype: HT
 ---
 # <a name="advanced-threat-analytics-documentation"></a>Dokumentace k Advanced Threat Analytics
 
-Kontrolujte a pomozte zabezpečit e-maily, dokumenty a citlivá data, která sdílíte mimo prostory vaší společnosti. Díky funkcím, jako je třeba snadná klasifikace nebo předdefinované popisky a oprávnění, pomáhá Azure Information Protection zdokonalit ochranu dat – bez ohledu na to, kde jsou uložená nebo s kým jsou sdílená.
+Advanced Threat Analytics (ATA) je místní platforma, která pomáhá chránit váš podnik před různými typy pokročilých cílených kybernetických útoků a útoků hrozících zevnitř. K tomu využívá informace z různých zdrojů dat ve vaší síti, které jí umožní zjišťovat chování uživatelů a dalších entit v organizaci a vytvářet o nich profil chování, a také speciální síťový parsovací modul ATA umožňující zachycovat a analyzovat síťový přenos více protokolů.
 
 <ul class="panelContent cardsFTitle">
     <li>
@@ -131,15 +130,10 @@ Kontrolujte a pomozte zabezpečit e-maily, dokumenty a citlivá data, která sd�
                 <div class="card">
                     <div class="cardText">
                         <p><a href="https://go.microsoft.com/fwlink/?linkid=836487">Zkušební verze</a></p>
+                        <p><a href="https://docs.microsoft.com/enterprise-mobility-security/solutions/ata-attack-simulation-playbook">Zobrazení playbooku simulace útoku ATA</a></p>
                     </div>
                 </div>
             </div>
         </div>
     </li>  
 </ul>
-
-
-
-<!--HONumber=Feb17_HO2-->
-
-

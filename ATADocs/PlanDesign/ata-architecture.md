@@ -13,13 +13,10 @@ ms.technology:
 ms.assetid: 892b16d2-58a6-49f9-8693-1e5f69d8299c
 ms.reviewer: bennyl
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: b28cb3a0da844b7c460c03726222bc775a9e47da
-ms.openlocfilehash: 2c4ae574b3ce7346ba05abb357c23cfdab6482a4
-
-
+ms.openlocfilehash: 489d85e7e8250dffe8d40225b31ed308a9a79969
+ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
+translationtype: HT
 ---
-
 *Platí pro: Advanced Threat Analytics verze 1.7*
 
 
@@ -52,11 +49,11 @@ Nasazení ATA se může skládat z jedné komponenty ATA Center připojené ke v
 ## <a name="deployment-options"></a>Možnosti nasazení
 ATA můžete nasadit s využitím následující kombinace bran:
 
--   **Jenom komponenty ATA Gateway** <br>
+-    **Jenom komponenty ATA Gateway** <br>
 Pokud nasazení ATA obsahuje jenom komponenty ATA Gateway (a žádné komponenty ATA Lightweight Gateway), musí být všechny řadiče domény nakonfigurované tak, aby povolovaly zrcadlení portů na ATA Gateway, nebo musí být nastavené síťové odposlouchávání.
--   **Jenom komponenty ATA Lightweight Gateway**<br>
+-    **Jenom komponenty ATA Lightweight Gateway**<br>
 Pokud nasazení ATA obsahuje jenom komponenty ATA Lightweight Gateway, jsou nasazené na každém řadiči domény a nejsou potřeba žádné další servery ani konfigurace zrcadlení portů.
--   **Komponenty ATA Gateway i ATA Lightweight**<br>
+-    **Komponenty ATA Gateway i ATA Lightweight**<br>
 Pokud nasazení ATA obsahuje komponenty ATA Gateway i ATA Lightweight Gateway, komponenta ATA Lightweight Gateway je nainstalovaná na některých řadičích domény (třeba na všech řadičích domény na pobočkách), zatímco ostatní řadiče domény jsou monitorované prostřednictvím komponent ATA Gateway (třeba větší řadiče domén ve vašich hlavních datových centrech).
 
 Ve všech třech scénářích všechny brány odesílají data do ATA Center.
@@ -130,7 +127,7 @@ Komponenta ATA Gateway přijímá síťový provoz a události systému Windows 
 
 Následující funkce pracují různě v závislosti na tom, jestli používáte ATA Gateway nebo ATA Lightweight Gateway.
 
--   **Kandidát na synchronizátora domény**<br>
+-    **Kandidát na synchronizátora domény**<br>
 Brána synchronizátora domény zodpovídá za proaktivní synchronizaci všech entity z konkrétní domény služby Active Directory (je obdobou mechanismu, který samotné domény využívají k replikaci). Ze seznamu kandidátů se náhodně vybere jedna brána, která bude sloužit jako synchronizátor domény. <br><br>
 Pokud je synchronizátor více než 30 minut offline, vybere se jiný kandidát. Pokud pro konkrétní doménu není dostupný žádný synchronizátor domény, ATA nemůže proaktivně synchronizovat entity a jejich změny, bude ale reaktivně načítat nové entity, když se v monitorovaném provozu detekují. 
 <br>Pokud není dostupný žádný synchronizátor domény a hledáte entitu, se kterou nesouvisí žádný provoz, nezobrazí se žádné výsledky hledání.<br><br>
@@ -138,7 +135,7 @@ Ve výchozím nastavení jsou kandidátem na synchronizátora všechny komponent
 Protože komponenty ATA Lightweight Gateway se nejčastěji nasazují na pobočkách a malých řadičích domén, nejsou ve výchozím nastavení mezi kandidáty na synchronizátora zařazené.
 
 
--   **Omezení prostředků**<br>
+-    **Omezení prostředků**<br>
 ATA Lightweight Gateway zahrnuje monitorovací komponentu, která vyhodnotí dostupnou paměťovou a výpočetní kapacitu na řadiči domény, na kterém je spuštěná. Tento monitorovací proces se spouští každých 10 sekund a dynamicky aktualizuje kvóty využití procesoru a paměti v procesu ATA Lightweight Gateway. Cílem je zajistit, aby v libovolném časovém okamžiku měl řadič domény alespoň 15 % volných výpočetních a paměťových prostředků.<br><br>
 Tento proces vždycky uvolní prostředky bez ohledu na to, co se na řadiči domény děje, aby se zajistilo jeho základní fungování.<br><br>
 Pokud následkem toho komponentě ATA Lightweight Gateway dojdou prostředky, provoz se monitoruje jenom částečně a na stavové stránce se zobrazí monitorovací výstraha typu Omezení síťového provozu se zrcadlením portů.
@@ -183,10 +180,4 @@ Pro zlepšení detekce útoků typu pass-the-hash, útoků hrubou silou a účt�
 - [Konfigurace shromažďování událostí](/advanced-threat-analytics/deploy-use/configure-event-collection)
 - [Konfigurace předávání událostí systému Windows](/advanced-threat-analytics/deploy-use/configure-event-collection#configuring-windows-event-forwarding)
 - [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
-
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 
