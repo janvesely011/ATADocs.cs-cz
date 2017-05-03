@@ -54,7 +54,7 @@ Pro vypracování analýzy chování uživatelů vyžaduje ATA Center data za ne
 |10 000|4|48|3|90|200 (300)
 |40 000|8|64|12|360|500 (1 000)
 |100 000|12|96|30|900|1 000 (1 500)
-|400 000|40|128|120|3&600;|4&000; (5&000;)
+|400 000|40|128|120|3 600|4 000 (5 000)
 
 &#42;To zahrnuje fyzická jádra, ne jádra typu Hyper.
 

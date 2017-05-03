@@ -42,7 +42,7 @@ Pokud již máte nasazení ATA verze 1.4, tento postup vás provede kroky potře
 
 Podle těchto kroků provedete aktualizaci ATA na verzi 1.5:
 
-1.  ATA verze&1;.5 si můžete stáhnout z webu VLSC nebo MSDN.
+1.  ATA verze 1.5 si můžete stáhnout z webu VLSC nebo MSDN.
       > [!NOTE]
          K provedení aktualizace na verzi 1.5 můžete také použít úplnou verzi ATA.
 
