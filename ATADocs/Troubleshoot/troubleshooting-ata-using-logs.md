@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 01/23/2017
+ms.date: 04/30/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,9 +13,10 @@ ms.technology:
 ms.assetid: b8ad5511-8893-4d1d-81ee-b9a86e378347
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 5bde3ff8abbdace3c56bb86b8889b53320470b00
-ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
-translationtype: HT
+ms.openlocfilehash: 4a5b48f490a13cfb990f49b864462b556e36c3ce
+ms.sourcegitcommit: cb2a4df6805d41bf030d3439ef87281fc6acc98f
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
 ---
 *Platí pro: Advanced Threat Analytics verze 1.7*
 
@@ -27,7 +28,7 @@ Protokoly ATA poskytují přehled o tom, co jednotlivé komponenty ATA v libovol
 ## <a name="ata-gateway-logs"></a>Protokoly ATA Gateway
 V této části všechny odkazy na ATA Gateway platí také pro ATA Lightweight Gateway. 
 
-Protokoly ATA Gateway jsou umístěné v podsložce s názvem **Protokoly** v místě, kde je služba ATA nainstalovaná. Výchozí umístění je **C:\Program Files\Microsoft Advanced Threat Analytics\**. Ve výchozí instalaci ji najdete tady:**C:\Program Files\Microsoft Advanced Threat Analytics\Gateway\Logs**.
+Protokoly ATA Gateway jsou umístěné v podsložce s názvem **Protokoly** v místě, kde je služba ATA nainstalovaná. Výchozí umístění je **C:\Program Files\Microsoft Advanced Threat Analytics\**. Ve výchozí instalaci ji najdete tady: **C:\Program Files\Microsoft Advanced Threat Analytics\Gateway\Logs**.
 
 ATA Gateway využívá tyto protokoly:
 
@@ -81,6 +82,10 @@ Protokoly nasazení ATA Gateway a ATA Lightweight Gateway:
 -   **Microsoft Advanced Threat Analytics Gateway_RRRRMMDDHHMMSS.log** – V tomto protokolu jsou uvedené kroky procesu nasazení komponenty ATA Gateway. Nejčastěji se využívá ke sledování procesu nasazení ATA Gateway.
 
 -   **Microsoft Advanced Threat Analytics Gateway_RRRRMMDDHHMMSS_001_MsiPackage.log** – V tomto protokolu jsou uvedené kroky procesu nasazení binárních souborů ATA Gateway. Nejčastěji se využívá ke sledování nasazení binárních souborů ATA Gateway.
+
+
+> [!NOTE] 
+> Kromě zde uvedených protokolů nasazení jsou k dispozici další protokoly, které začínají řetězcem Microsoft Advanced Threat Analytics. V nich můžete najít další informace k procesu nasazení.
 
 
 ## <a name="see-also"></a>Viz také
