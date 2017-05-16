@@ -42,6 +42,7 @@
 ## [Správa databáze ATA](ata-database-management.md)
 ## [Export/import konfigurace ATA](ata-configuration-file.md)
 ## [Správa telemetrie ATA](manage-telemetry-settings.md)
+## [Prošetření útoků v podobě zfalšovaných certifikátů PAC](use-case-forged-pac.md)
 # Řešení problémů
 ## [Řešení problémů pomocí známých chyb](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-known-errors)
 ## [Řešení problémů pomocí protokolů](/advanced-threat-analytics/troubleshoot/troubleshooting-ata-using-logs)
