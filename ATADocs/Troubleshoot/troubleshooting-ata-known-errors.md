@@ -13,9 +13,11 @@ ms.technology:
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 0c72b14a042e473c0cd59811db63ecafc4ec02d4
-ms.sourcegitcommit: f18c0841d85e54eca940c8cbf226938b3c2bc80f
-translationtype: HT
+ms.openlocfilehash: a87fed6bf8ce69ea3391e729c57217d1cff8ffc2
+ms.sourcegitcommit: a1595b51c95235eede3d3b34a02f24bedd5dfc5a
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 05/14/2017
 ---
 *Platí pro: Advanced Threat Analytics verze 1.7*
 
@@ -43,7 +45,7 @@ Tato část podrobně popisuje možné chyby v nasazení ATA a kroky potřebné 
 |System.InvalidOperationException: Instance 'Microsoft.Tri.Gateway' v určené kategorii neexistuje.|Pro názvy procesů v bráně ATA byl povolen identifikátor PID|PID v názvech procesů zakážete pomocí [KB281884](https://support.microsoft.com/en-us/kb/281884)|
 |System.InvalidOperationException: Kategorie neexistuje.|Čítače můžou být v registru zakázané|Čítače výkonu znovu sestavíte pomocí [KB2554336](https://support.microsoft.com/en-us/kb/2554336)|
 |System.ApplicationException: Není možné spustit relaci ETW MMA-ETW-Livecapture-a4f595bd-f567-49a7-b963-20fa4e370329|V souboru hostitelů se nachází položka hostitele odkazující na krátký název počítače|Odeberte položku hostitele ze souboru C:\Windows\System32\drivers\etc\HOSTS nebo ji změňte na FQDN.|
-|System.IO.IOException: Ověření se nezdařilo, protože vzdálená strana uzavřela přenosový stream.|TLS 1.0 je zakázaná na bráně ATA Gateway, ale rozhraní .NET je nastavené na použití protokolu TLS 1.2.|Použijte jednu z následujících možností: </br> Povolení protokolu TLS 1.0 na bráně ATA Gateway </br>Protokol TLS 1.2 na rozhraní .NET povolíte nastavením klíčů registru tak, aby používaly výchozí nastavení operačního systému pro LLS a TLS, a to takto: `[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001` </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"`|
+|System.IO.IOException: Ověření se nezdařilo, protože vzdálená strana uzavřela přenosový stream.|TLS 1.0 je zakázaná na bráně ATA Gateway, ale rozhraní .NET je nastavené na použití protokolu TLS 1.2.|Použijte jednu z následujících možností: </br> Povolení protokolu TLS 1.0 na bráně ATA Gateway </br>Protokol TLS 1.2 na rozhraní .NET povolíte nastavením klíčů registru tak, aby používaly výchozí nastavení operačního systému pro LLS a TLS, a to takto: `[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001` </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`|
 
 
 
