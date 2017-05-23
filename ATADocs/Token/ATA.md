@@ -1,1 +1,0 @@
-Rozšířená analýza hrozeb
