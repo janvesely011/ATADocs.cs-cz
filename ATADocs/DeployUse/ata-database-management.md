@@ -1,59 +1,8 @@
 ---
-title: "Správa databáze Advanced Threat Analytics | Dokumentace Microsoftu"
-description: "Postupy, které vám pomůžou přesunout, zálohovat a obnovit databázi ATA"
-keywords: 
-author: rkarlin
-ms.author: rkarlin
-manager: mbaldwin
-ms.date: 1/23/2017
-ms.topic: article
-ms.prod: 
-ms.service: advanced-threat-analytics
-ms.technology: 
-ms.assetid: 05e49e23-6e0a-4ec0-9a63-a2093173c8a1
-ms.reviewer: bennyl
-ms.suite: ems
-ms.openlocfilehash: e5bb1fa702d58b725b7052e5848741d4d24f279e
-ms.sourcegitcommit: 49e892a82275efa5146998764e850959f20d3216
-translationtype: HT
+redirect_url: /advanced-threat-analytics/ata-database-management
+ms.openlocfilehash: 42f51139d7d75c0f55a1838ff0401002728cec98
+ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 06/30/2017
 ---
-*Platí pro: Advanced Threat Analytics verze 1.7*
-
-
-
-# <a name="ata-database-management"></a>Správa databáze ATA
-Když potřebujete přesunout, zálohovat nebo obnovit databázi ATA, použijte tyto postupy pro práci s MongoDB.
-
-## <a name="backing-up-the-ata-database"></a>Zálohování databáze ATA
-Viz [příslušná dokumentace k MongoDB](http://docs.mongodb.org/manual/administration/backup/).
-
-## <a name="restoring-the-ata-database"></a>Obnovení databáze ATA
-Viz [příslušná dokumentace k MongoDB](http://docs.mongodb.org/manual/administration/backup/).
-
-## <a name="moving-the-ata-database-to-another-drive"></a>Přesunutí databáze ATA na jinou jednotku
-
-1.  Zastavte službu **Microsoft Advanced Threat Analytics Center**.
-> [!Important] 
-> Zajistěte, aby se před přechodem k dalšímu kroku služba ATA Center zastavila.
-
-2.  Zastavte službu **MongoDB**.
-
-3.  Otevřete konfigurační soubor Mongo, standardně C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\mongod.cfg.
-
-    Vyhledání parametru `storage: dbPath`
-
-4.  Přesuňte složku uvedenou v parametru `dbPath` do nového umístění.
-
-5.  Změňte parametr `dbPath` v konfiguračním souboru mongo na novou cestu ke složce a uložte a zavřete soubor.
-
-    ![Úprava konfigurační image MongoDB](media/ATA-mongoDB-moveDB.png)
-
-6.  Spusťte službu **MongoDB**.
-
-7. Spusťte službu **Microsoft Advanced Threat Analytics Center**.
-
-## <a name="see-also"></a>Viz také
-- [Architektura ATA](/advanced-threat-analytics/plan-design/ata-architecture)
-- [Požadavky ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
-- [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
-
