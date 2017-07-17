@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 1d186a96-ef70-4787-aa64-c03d1db94ce0
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 436b96f679836060cfaf40f6be3b92cf96dc0e04
-ms.sourcegitcommit: 4118dd4bd98994ec8a7ea170b09aa301a4be2c8a
-ms.translationtype: HT
+ms.openlocfilehash: f85d52420c55e2f1119ad14eb1a6c957fbc50be6
+ms.sourcegitcommit: be6bdfa24a9b25a3375a4768d513b93900b3a498
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2017
+ms.lasthandoff: 07/11/2017
 ---
 *Platí pro: Advanced Threat Analytics verze 1.8*
 
@@ -55,7 +55,7 @@ ATA zobrazí název zdrojového počítače a další podrobnosti o skutečném 
 Při prošetřování rekognoskace pomocí DNS musíte nejprve určit příčinu těchto dotazů. Mohou spadat do jedné z následujících kategorií: 
 -   Pravdivě pozitivní – ve vaší síti je útočník nebo škodlivý malware. Může se jednat o útočníka, který prolomil hranici sítě, nebo o útok zevnitř.
 -   Neškodné pravdivě pozitivní – může se jednat o upozornění aktivované testováním průniku, činností zásahového týmu, kontrolou zabezpečení, firewallem nové generace nebo správci IT provádějícími schválené aktivity.
--   Falešně pozitivní – upozornění se mohou zobrazovat kvůli chybné konfiguraci, například pokud je mezi komponentou ATA Gateway a serverem DNS zablokovaný port 53 (nebo kvůli jinému síťovému problému).
+-   Falešně pozitivní – upozornění se mohou zobrazovat kvůli chybné konfiguraci, například pokud je mezi komponentou ATA Gateway a serverem DNS zablokovaný port UDP 53 (nebo kvůli jinému síťovému problému).
 
 Následující graf vám pomůže určit kroky, které byste při prošetřování měli učinit:
 
@@ -63,10 +63,10 @@ Následující graf vám pomůže určit kroky, které byste při prošetřován
  
 1.  První krok spočívá v identifikaci počítače, ze kterého upozornění pochází, jak je znázorněno níže:
  
-    ![Zobrazení podezřelé aktivity rekognoskace DNS v ATA](./media/dns-recon-2.png)
+    ![Zobrazení podezřelé aktivity rekognoskace DNS v ATA](./media/dns-recon.png)
 2.  Zjistěte, o jaký počítač se jedná. Je to pracovní stanice, server, pracovní stanice správce, stanice pro testování průniku apod.?
 3.  Pokud je tento počítač serverem DNS a má opravdu právo požadovat sekundární kopii zóny, je tato aktivita falešně pozitivní. Pokud najdete falešně pozitivní aktivitu, použijte možnost **Vyloučit**, abyste od tohoto počítače už nedostali toto konkrétní upozornění.
-4. Ověřte, že je mezi komponentou ATA Gateway a serverem DNS otevřený port 53.
+4. Ověřte, že je mezi komponentou ATA Gateway a serverem DNS otevřený port UDP 53.
 4.  Pokud se počítač používá ke správcovským činnostem nebo testování průniku, jedná se o neškodnou pravdivě pozitivní událost a dotyčný počítač lze také nakonfigurovat jako výjimku.
 5.  Pokud se nepoužívá k testování průniku, zjistěte, jestli v počítači neběží kontrola zabezpečení nebo firewall nové generace, které mohou vydávat žádosti DNS typu AXFR.
 6.  Pokud nejsou splněna žádná z těchto kritérií, může být tento počítač napadený a je potřeba ho kompletně prošetřit. 
