@@ -23,14 +23,12 @@ ms.lasthandoff: 07/10/2017
 
 
 
-# Instalace ATA – krok 7
-<a id="install-ata---step-7" class="xliff"></a>
+# <a name="install-ata---step-7"></a>Instalace ATA – krok 7
 
 >[!div class="step-by-step"]
 [« Krok 6](install-ata-step6.md)
 
-## Krok 7: Konfigurace vyloučení IP adres a uživatele honeytokenu
-<a id="step-7-configure-ip-address-exclusions-and-honeytoken-user" class="xliff"></a>
+## <a name="step-7-configure-ip-address-exclusions-and-honeytoken-user"></a>Krok 7: Konfigurace vyloučení IP adres a uživatele honeytokenu
 ATA umožňuje vyloučit z řady detekcí konkrétní IP adresy nebo uživatele. 
 
 Například při **vyloučení DNS Reconnaissance** se může jednat o kontrolu zabezpečení, která jako mechanismus pro prohledávání používá službu DNS. Vyloučení pomáhá službě ATA takové kontroly ignorovat. Příkladem vyloučení *Pass-the-Ticket* je zařízení NAT.    
@@ -73,8 +71,7 @@ Pokud chcete zkontrolovat, jestli je ATA v provozu a odchytává průniky do va�
 [« Krok 6](install-ata-step6.md)
 
 
-## Viz také
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Viz také
 
 - [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurace shromažďování událostí](configure-event-collection.md)
