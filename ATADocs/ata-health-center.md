@@ -22,21 +22,17 @@ ms.lasthandoff: 07/10/2017
 *Platí pro: Advanced Threat Analytics verze 1.8*
 
 
-# Práce se stavem a událostmi systému ATA
-<a id="working-with-ata-system-health-and-events" class="xliff"></a>
+# <a name="working-with-ata-system-health-and-events"></a>Práce se stavem a událostmi systému ATA
 
-## ATA Health Center
-<a id="ata-health-center" class="xliff"></a>
+## <a name="ata-health-center"></a>ATA Health Center
 ATA Health Center umožňuje sledovat, jak funguje služba ATA, a upozorňuje na problémy.
 
-## Práce s ATA Health Center
-<a id="working-with-the-ata-health-center" class="xliff"></a>
+## <a name="working-with-the-ata-health-center"></a>Práce s ATA Health Center
 ATA Health Center vás upozorní na problém zobrazením výstrahy (červené tečky) nad ikonou Health Center v řádku nabídek.
 
 ![Panel nástrojů s červenou tečkou ATA Health Center](media/ATA-Health-Center-Alert-red-dot.png)
 
-### Správa stavu ATA
-<a id="managing-ata-health" class="xliff"></a>
+### <a name="managing-ata-health"></a>Správa stavu ATA
 Pokud chcete zkontrolovat celkový stav systému, klepněte na ikonu Health Center v řádku nabídek. ![Ikona ATA Health Center](media/ATA-red-dot.png)
 
 -   Všechny otevřené výstrahy můžete spravovat jejich nastavením na **Vyřešeno** nebo **Zamítnuto**. Ve výstraze klikněte na **Otevřete** a přejděte dolů buď na **Vyřešeno** nebo **Zamítnuto**.
@@ -52,8 +48,7 @@ Pokud chcete zkontrolovat celkový stav systému, klepněte na ikonu Health Cent
 
 
 
-## Viz také
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Viz také
 
 - [Práce s podezřelými aktivitami](working-with-suspicious-activities.md)
 - [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

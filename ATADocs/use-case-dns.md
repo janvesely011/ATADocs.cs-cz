@@ -21,13 +21,11 @@ ms.lasthandoff: 07/11/2017
 ---
 *Platí pro: Advanced Threat Analytics verze 1.8*
 
-# Prošetření rekognoskace pomocí DNS
-<a id="investigating-reconnaissance-using-dns" class="xliff"></a>
+# <a name="investigating-reconnaissance-using-dns"></a>Prošetření rekognoskace pomocí DNS
 
 Pokud ATA ve vaší síti detekuje **rekognoskaci pomocí DNS** a zobrazí upozornění, pomůže vám tento článek toto upozornění prošetřit a zjistit, jak tento problém napravit.
 
-## Co je rekognoskace pomocí DNS?
-<a id="what-is-reconnaissance-using-dns" class="xliff"></a>
+## <a name="what-is-reconnaissance-using-dns"></a>Co je rekognoskace pomocí DNS?
 
 Upozornění na **rekognoskaci pomocí DNS** označuje, že nějaký neobvyklý hostitel pomocí podezřelých dotazů DNS (Domain Name System) provádí rekognoskaci vaší interní sítě.
 
@@ -35,13 +33,11 @@ DNS (Domain Name System) je služba implementovaná jako hierarchická distribuo
 Pro nežádoucí osobu obsahuje DNS cenné informace sloužící ke zmapování interní sítě včetně seznamu všech serverů a často také klientů přiřazených k příslušným IP adresám. Tyto informace jsou cenné také kvůli tomu, že obsahují názvy hostitelů, které jsou v daném síťovém prostředí často popisné. Při získání těchto informací tak může nežádoucí osoba během kampaně lépe zaměřit své úsilí na relevantní entity. Funkce pro zjišťování hostitelů pomocí rekognoskace DNS poskytují nástroje typu [Nmap](https://nmap.org/), [Fierce](https://github.com/mschwager/fierce) a předinstalované nástroje jako [Nslookup](https://technet.microsoft.com/library/cc725991(v=ws.11).aspx).
 Detekce rekognoskace pomocí dotazů DNS od některého interního hostitele je příčinou znepokojení a svědčí o možnosti napadení existujícího hostitele, rozsáhlejším napadení sítě nebo možném útoku zevnitř.
 
-## Typy dotazů DNS
-<a id="dns-query-types" class="xliff"></a>
+## <a name="dns-query-types"></a>Typy dotazů DNS
 
 Protokol DNS obsahuje několik typů dotazů. ATA detekuje žádosti AXFR (přenos) a při jejich existenci vytvoří upozornění. Tento typ dotazu by měl pocházet jen od serverů DNS.
 
-## Zjištění útoku
-<a id="discovering-the-attack" class="xliff"></a>
+## <a name="discovering-the-attack"></a>Zjištění útoku
 
 Když se útočník pokusí provést rekognoskaci pomocí DNS, ATA ji detekuje a označí střední závažností.
 
@@ -49,8 +45,7 @@ Když se útočník pokusí provést rekognoskaci pomocí DNS, ATA ji detekuje a
  
 ATA zobrazí název zdrojového počítače a další podrobnosti o skutečném dotazu DNS, který byl proveden. Od stejného hostitele může například pocházet několik pokusů.
 
-## Prošetření
-<a id="investigating" class="xliff"></a>
+## <a name="investigating"></a>Prošetření
 
 Při prošetřování rekognoskace pomocí DNS musíte nejprve určit příčinu těchto dotazů. Mohou spadat do jedné z následujících kategorií: 
 -   Pravdivě pozitivní – ve vaší síti je útočník nebo škodlivý malware. Může se jednat o útočníka, který prolomil hranici sítě, nebo o útok zevnitř.
@@ -75,8 +70,7 @@ Následující graf vám pomůže určit kroky, které byste při prošetřován
     2.  Proveďte analýzu založenou na hostiteli. 
     3.  Pokud tato aktivita nepochází od podezřelého uživatele, mělo by se forenzní analýzou počítače zjistit, jestli není napadený malwarem.
 
-## Následné prošetření
-<a id="post-investigation" class="xliff"></a>
+## <a name="post-investigation"></a>Následné prošetření
 
 Mezi malware použitý k napadení hostitele mohou patřit trojské koně instalující zadní vrátka. Při zjištění úspěšného laterálního pohybu od napadeného hostitele by se nápravné akce měly rozšířit také na tyto hostitele, a to včetně změny všech hesel a přihlašovacích údajů na tomto hostiteli a všech hostitelích zahrnutých do laterálního pohybu. 
 
@@ -84,14 +78,12 @@ Pokud po nápravných krocích nelze potvrdit, že je postižený hostitel čist
 
 Microsoft doporučuje využívat profesionální tým Incident Response & Recovery, který můžete kontaktovat prostřednictvím svého týmu účtu Microsoft, aby vám pomohl zjistit, jestli útočník ve vaší síti nenasadil vytrvalé metody.
 
-## Zmírnění dopadů
-<a id="mitigation" class="xliff"></a>
+## <a name="mitigation"></a>Zmírnění dopadů
 
 Interní server DNS lze proti rekognoskaci pomocí DNS zabezpečit zakázáním nebo omezením přenosů zóny jen na konkrétní IP adresy. Další informace o omezení přenosů zóny najdete v článku [Omezení přenosů zóny](https://technet.microsoft.com/library/ee649273(v=ws.10).aspx) pro Windows Server na Technetu. Omezené přenosy zóny lze dále uzamknout [zabezpečením přenosů zóny protokolem IPsec](https://technet.microsoft.com/library/ee649192(v=ws.10).aspx). Úprava přenosů zóny je jedním z úkolů na kontrolním seznamu, pomocí kterého byste měli své [servery DNS zabezpečit proti interním a externím útokům](https://technet.microsoft.com/library/cc770432(v=ws.11).aspx).
 
 
 
-## Viz také
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Viz také
 - [Práce s podezřelými aktivitami](working-with-suspicious-activities.md)
 - [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

@@ -19,8 +19,7 @@ ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 07/10/2017
 ---
-# Aktualizace ATA na verzi 1.8
-<a id="updating-ata-to-version-18" class="xliff"></a>
+# <a name="updating-ata-to-version-18"></a>Aktualizace ATA na verzi 1.8
 
 > [!NOTE] 
 > Pokud ve vašem prostředí neexistuje instalace ATA, stáhněte si úplnou verzi ATA, která zahrnuje verzi 1.8, a použijte standardní postup instalace popsaný v tématu [Instalace ATA](install-ata-step1.md).
@@ -42,8 +41,7 @@ V migrační verzi lze soubor použít pouze k aktualizaci z verze ATA 1.7. Ve v
     > [!IMPORTANT]
     > Aktualizujte všechny komponenty ATA Gateway, aby se zajistila správná funkce ATA.
 
-### Krok 1: Aktualizace ATA Center
-<a id="step-1-update-the-ata-center" class="xliff"></a>
+### <a name="step-1-update-the-ata-center"></a>Krok 1: Aktualizace ATA Center
 
 1.  Zazálohujte svou databázi: (volitelné)
 
@@ -84,7 +82,6 @@ V migrační verzi lze soubor použít pouze k aktualizaci z verze ATA 1.7. Ve v
 > Pokud chcete nainstalovat nové komponenty ATA Gateway, přejděte na obrazovku **Brány** a klikněte na **Stáhnout instalační program brány**. Stáhne se instalační balíček ATA 1.8 Gateway. Dále postupujte podle pokynů k instalaci nové brány, jak je popisuje [Krok 4: Instalace ATA Gateway](install-ata-step4.md).
 
 
-## Viz také
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Viz také
 
 - [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
