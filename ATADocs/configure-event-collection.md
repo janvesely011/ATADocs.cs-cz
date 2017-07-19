@@ -15,7 +15,7 @@ ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 6469f602d2da833e96bba72003aad3fe2b67eb48
 ms.sourcegitcommit: fa50f37b134d7579d7c310852dff60e5f1996eaa
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 07/03/2017
 ---
@@ -23,16 +23,14 @@ ms.lasthandoff: 07/03/2017
 
 
 
-# Konfigurace předávání událostí systému Windows
-<a id="configuring-windows-event-forwarding" class="xliff"></a>
+# <a name="configuring-windows-event-forwarding"></a>Konfigurace předávání událostí systému Windows
 
 Kvůli vylepšení detekčních schopností potřebuje ATA následující události Windows: 4776, 4732, 4733, 4728, 4729, 4756, 4757. Tyto události buď může automaticky číst ATA Lightweight Gateway, nebo mohou být jedním ze dvou způsobů předávány komponentě ATA Gateway (v případě, že komponenta ATA Lightweight Gateway není nasazená), a to konfigurací komponenty ATA Gateway pro naslouchání událostem SIEM, nebo [konfigurací předávání událostí Windows](#configuring-windows-event-forwarding).
 
 > [!NOTE]
 > U ATA verze 1.8 a vyšších se u komponent ATA Lightweight Gateway shromažďování událostí už nemusí konfigurovat. ATA Lightweight Gateway teď dokáže číst události místně bez nutnosti konfigurace předávání událostí.
 
-### Konfigurace WEF pro ATA Gateway se zrcadlením portů
-<a id="wef-configuration-for-ata-gateways-with-port-mirroring" class="xliff"></a>
+### <a name="wef-configuration-for-ata-gateways-with-port-mirroring"></a>Konfigurace WEF pro ATA Gateway se zrcadlením portů
 
 Po nakonfigurování zrcadlení portů z řadičů domény do ATA Gateway postupujte podle níže uvedených pokynů a nakonfigurujte předávání událostí systému Windows pomocí konfigurace Spuštěno zdrojem. Je to jedna z možných konfigurací pro předávání událostí systému Windows. 
 
@@ -96,7 +94,6 @@ Mějte na paměti, že po přidání **Síťové služby** do skupiny **Event Lo
 
 Další informace najdete v tématu [Konfigurace počítačů pro předání a shromáždění událostí](https://technet.microsoft.com/library/cc748890).
 
-## Viz také
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Viz také
 - [Instalace ATA](install-ata-step1.md)
 - [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

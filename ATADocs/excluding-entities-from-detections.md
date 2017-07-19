@@ -23,8 +23,7 @@ ms.lasthandoff: 07/11/2017
 
 
 
-# Vyloučení entit z detekce
-<a id="excluding-entities-from-detections" class="xliff"></a>
+# <a name="excluding-entities-from-detections"></a>Vyloučení entit z detekce
 Toto téma vysvětluje, jak vyloučit u entit spouštění výstrah, aby bylo možné minimalizovat počty neškodných pravdivě pozitivních aktivit a současně zachytit aktivity pravdivě pozitivní. Aby služba ATA zbytečně neupozorňovala na aktivity určitých uživatelů, které můžou být součástí vaší běžné podnikové činnosti, můžete určité entity potlačit – nebo vyloučit – abyste na jejich aktivity nedostávali upozornění.
 
 Pokud máte například kontrolu zabezpečení, která provádí rekognoskaci DNS, nebo správce, který spouští na dálku skripty na řadiči domény – a jedná se o schválené aktivity, které se provádí jako součást běžného provozu IT ve vaší organizaci.
@@ -58,7 +57,6 @@ Když máte možnost vyloučit IP adresu nebo počítač, můžete vyloučit jed
 > Konfigurační stránky můžou upravovat jenom správci ATA.
 
 
-## Viz také
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Viz také
 - [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Změna konfigurace ATA](modifying-ata-center-configuration.md)

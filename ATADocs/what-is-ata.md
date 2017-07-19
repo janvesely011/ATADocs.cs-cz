@@ -15,19 +15,17 @@ ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: c338441b37c41b810023ecf5c5ae348651f5ad64
 ms.sourcegitcommit: fa50f37b134d7579d7c310852dff60e5f1996eaa
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 07/03/2017
 ---
 *Platí pro: Advanced Threat Analytics verze 1.8*
 
 
-# Co je Advanced Threat Analytics?
-<a id="what-is-advanced-threat-analytics" class="xliff"></a>
+# <a name="what-is-advanced-threat-analytics"></a>Co je Advanced Threat Analytics?
 Řešení ATA (Advanced Threat Analytics) je místní platforma, která chrání podnik před různými typy pokročilých cílových útoků z kyberprostoru a před vnitřními hrozbami.
 
-## Popis fungování řešení ATA
-<a id="how-ata-works" class="xliff"></a>
+## <a name="how-ata-works"></a>Popis fungování řešení ATA
 
 ATA využívá proprietární modul pro parsování sítě k zachycení a parsování síťového provozu přes různé protokoly (například Kerberos, DNS, RPC, NTLM a další) za účelem ověřování, autorizaci a shromažďování informací. ATA tyto informace shromažďuje prostřednictvím:
 
@@ -44,8 +42,7 @@ ATA může přijímat události a protokoly z následujících zdrojů:
 
 Další informace o architektuře ATA najdete v článku [Architektura ATA](ata-architecture.md).
 
-## Co ATA dělá?
-<a id="what-does-ata-do" class="xliff"></a>
+## <a name="what-does-ata-do"></a>Co ATA dělá?
 
 Technologie ATA detekuje různé podezřelé aktivity a zaměřuje se na několik fází v řetězci internetového útoku, včetně následujícího:
 
@@ -97,21 +94,18 @@ Podezřelé aktivity tohoto typu můžete zobrazit na řídicím panelu ATA. V n
   ![ukázková obrazovka ATA s porušeným vztahem důvěryhodnosti](media/broken-trust-sa.png)
 
 
-## Známé problémy
-<a id="known-issues" class="xliff"></a>
+## <a name="known-issues"></a>Známé problémy
 
 - Pokud aktualizujete na ATA 1.7 a hned potom na ATA 1.8, aniž nejprve aktualizujete komponenty ATA Gateway, nebudete moct migrovat na ATA 1.8. Před aktualizací komponenty ATA Center na verzi 1.8 je nezbytné nejprve aktualizovat všechny brány na verzi 1.7.1 nebo 1.7.2.
 
 - Pokud vyberete možnost provedení úplné migrace, může to v závislosti na velikosti databáze trvat velmi dlouho. Při výběru možností migrace se zobrazuje odhadovaný čas. Než se rozhodnete, kterou možnost vyberete, věnujte prosím tomuto údaji pozornost. 
 
 
-## Co dál?
-<a id="whats-next" class="xliff"></a>
+## <a name="whats-next"></a>Co dál?
 
 -   Další informace o zapojení řešení ATA do vaší sítě najdete v tématu [Architektura ATA](ata-architecture.md).
 
 -   Pokud chcete začít s nasazením ATA, přečtěte si téma [Instalace ATA](install-ata-step1.md).
 
-## Viz také
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Viz také
 [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

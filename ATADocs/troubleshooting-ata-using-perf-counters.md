@@ -15,7 +15,7 @@ ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: ae72f7a25f0c57dadd02049fe3a570a0da7b84fd
 ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 06/30/2017
 ---
@@ -23,8 +23,7 @@ ms.lasthandoff: 06/30/2017
 
 
 
-# Řešení potíží s ATA pomocí čítačů výkonu
-<a id="troubleshooting-ata-using-the-performance-counters" class="xliff"></a>
+# <a name="troubleshooting-ata-using-the-performance-counters"></a>Řešení potíží s ATA pomocí čítačů výkonu
 Čítače výkonu ATA poskytují přehled o tom, jak dobře jednotlivé komponenty ATA fungují. Komponenty ATA zpracovávají data sekvenčně. To znamená, že případný problém může na některém místě řetězce komponent způsobit částečné zhoršení provozu. Pokud chcete problém vyřešit, musíte zjistit, která komponenta selhává, a pak problém vyřešit na samém začátku řetězce. Data uvedená v čítačích výkonu vám pomůžou pochopit, jak jednotlivé komponenty fungují.
 Pokud chcete lépe pochopit tok interních komponent ATA, přečtěte si článek [Architektura ATA](ata-architecture.md).
 
@@ -37,8 +36,7 @@ Pokud chcete lépe pochopit tok interních komponent ATA, přečtěte si článe
 3.  To samé se děje s dalšími komponentami až ke komponentě NetworkListener, která omezí síťový provoz, když už nebude moct přesměrovávat entity.
 
 
-## Načítání souborů sledování výkonu kvůli řešení problémů
-<a id="retrieving-performance-monitor-files-for-troubleshooting" class="xliff"></a>
+## <a name="retrieving-performance-monitor-files-for-troubleshooting"></a>Načítání souborů sledování výkonu kvůli řešení problémů
 
 Pokud chcete načíst soubory sledování výkonu (BLG) z různých komponent ATA, postupujte takto:
 1.  Otevřete Perfmon.
@@ -48,8 +46,7 @@ Pokud chcete načíst soubory sledování výkonu (BLG) z různých komponent A
 5.  Restartujte sadu kolekcí dat s názvem Microsoft ATA Gateway nebo Microsoft ATA Center.
 
 
-## Čítače výkonu ATA Gateway
-<a id="ata-gateway-performance-counters" class="xliff"></a>
+## <a name="ata-gateway-performance-counters"></a>Čítače výkonu ATA Gateway
 
 V této části všechny odkazy na ATA Gateway platí také pro ATA Lightweight Gateway.
 
@@ -72,8 +69,7 @@ Tady je seznam hlavních čítačů výkonu komponenty ATA Gateway, kterým je p
 > -   Hodnoty čítačů jsou v milisekundách.
 > -   Někdy je vhodnější monitorovat všechny čítače pomocí typu grafu Sestava (příklad: monitorování všech čítačů v reálném čase).
 
-## Čítače výkonu ATA Lightweight Gateway
-<a id="ata-lightweight-gateway-performance-counters" class="xliff"></a>
+## <a name="ata-lightweight-gateway-performance-counters"></a>Čítače výkonu ATA Lightweight Gateway
 Čítače výkonu můžete použít ke správě kvóty v Lightweight Gateway, abyste se ujistili, že ATA nespotřebovává příliš mnoho prostředků z řadičů domény, ve kterých není nainstalovaná.
 Pokud chcete změřit omezení prostředků, které ATA na Lightweight Gateway vynucuje, přidejte tyto čítače.
 
@@ -98,8 +94,7 @@ Pokud chcete zobrazit skutečnou spotřebou, podívejte se na následující č�
 |Process(Microsoft.Tri.Gateway)\Soukromé bajty|Velikost potvrzené paměti (v bajtech), kterou proces Lightweight Gateway skutečně spotřebovává.|Žádná prahová hodnota. | Porovnejte výsledky tohoto čítače s limitem Max. velikost potvrzené paměti GatewayUpdaterResourceManager. Pokud si všimnete, že proces v určitém časovém intervalu často dosahuje maximálního limitu (proces dosáhne limitu a potom začne zahazovat provoz), znamená to, bude třeba vyhradit další prostředky pro Lightweight Gateway.| 
 |Process(Microsoft.Tri.Gateway)\Pracovní sada|Velikost fyzické paměti (v bajtech), kterou proces Lightweight Gateway skutečně spotřebovává.|Žádná prahová hodnota. |Porovnejte výsledky tohoto čítače s limitem Max. velikost potvrzené paměti GatewayUpdaterResourceManager. Pokud si všimnete, že proces v určitém časovém intervalu často dosahuje maximálního limitu (proces dosáhne limitu a potom začne zahazovat provoz), znamená to, bude třeba vyhradit další prostředky pro Lightweight Gateway.|
 
-## Čítače výkonu ATA Center
-<a id="ata-center-performance-counters" class="xliff"></a>
+## <a name="ata-center-performance-counters"></a>Čítače výkonu ATA Center
 Přidáním čítačů výkonu ATA Center můžete sledovat výkon softwaru ATA Center v reálném čase.
 
 Stačí otevřít Sledování výkonu a přidat všechny čítače pro ATA Center. Název příslušného objektu čítače výkonu je Microsoft ATA Center.
@@ -118,8 +113,7 @@ Tady je seznam hlavních čítačů výkonu komponenty ATA Center, kterým je po
 > -   Hodnoty čítačů jsou v milisekundách.
 > -   Někdy je vhodnější monitorovat všechny čítače pomocí typu grafu Sestava (příklad: monitorování všech čítačů v reálném čase).
 
-## Čítače operačního systému
-<a id="operating-system-counters" class="xliff"></a>
+## <a name="operating-system-counters"></a>Čítače operačního systému
 Následuje seznam hlavních čítačů operačního systému, kterým je potřeba věnovat pozornost:
 
 |Čítač|Popis|Prahová hodnota|Odstraňování potíží|
@@ -135,8 +129,7 @@ Následuje seznam hlavních čítačů operačního systému, kterým je potřeb
 |\Logický disk&#42;\Zápisy na disk/s|Rychlost provádění operací zápisu na disk|Žádná prahová hodnota|Čítače využití disku (mohou pomoci při řešení potíží s latencí úložiště)|
 |\Logický disk(&#42;)\Bajty zápisu na disk/s|Počet bajtů, které se za sekundu zapíší na disk|Žádná prahová hodnota|Čítače využití disku mohou pomoci při řešení potíží s latencí úložiště.|
 
-## Viz také
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Viz také
 - [Požadavky ATA](ata-prerequisites.md)
 - [Plánování kapacity ATA](ata-capacity-planning.md)
 - [Konfigurace shromažďování událostí](configure-event-collection.md)

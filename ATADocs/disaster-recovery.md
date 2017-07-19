@@ -15,7 +15,7 @@ ms.reviewer: arzinger
 ms.suite: ems
 ms.openlocfilehash: ce06038a3c3f2e5a6f2a5d57ad814ab8393c0b0c
 ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 06/30/2017
 ---
@@ -23,15 +23,13 @@ ms.lasthandoff: 06/30/2017
 
 
 
-# Zotavení po havárii ATA
-<a id="ata-disaster-recovery" class="xliff"></a>
+# <a name="ata-disaster-recovery"></a>Zotavení po havárii ATA
 Tento článek popisuje postup rychlého zotavení komponenty ATA Center a obnovení funkcí ATA v případě, kdy přijdete o funkce ATA Center, ale komponenty ATA Gateways dále fungují. 
 
 >[!NOTE]
 > Popsaný postup neobnoví dříve detekované podezřelé aktivity, ale vrátí komponentě ATA Center plnou funkčnost. Také dojde k restartování období učení potřebného pro některé detekce chování, ale většina detekcí nabízených ATA je po zotavení komponenty ATA Center funkční. 
 
-## Zazálohování konfigurace ATA Center
-<a id="back-up-your-ata-center-configuration" class="xliff"></a>
+## <a name="back-up-your-ata-center-configuration"></a>Zazálohování konfigurace ATA Center
 
 1. Konfigurace ATA Center se každou hodinu zálohuje do souboru. Vyhledejte nejnovější záložní kopii konfigurace ATA Center a uložte ji na oddělený počítač. Úplné vysvětlení postupu vyhledání těchto souborů najdete v části [Export a import konfigurace ATA](/advanced-threat-analytics/deploy-use/ata-configuration-file). 
 2. Vyexportujte certifikát ATA Center.
@@ -44,8 +42,7 @@ Tento článek popisuje postup rychlého zotavení komponenty ATA Center a obnov
   > [!NOTE] 
   > Pokud privátní klíč exportovat nejde, musíte vytvořit nový certifikát a nasadit ho do ATA podle postupu uvedeného v části [Změna certifikátu ATA Center](/advanced-threat-analytics/deploy-use/modifying-ata-config-centercert). Pak ho vyexportujte. 
 
-## Obnovení vašeho ATA Center
-<a id="recover-your-ata-center" class="xliff"></a>
+## <a name="recover-your-ata-center"></a>Obnovení vašeho ATA Center
 
 1. Pomocí stejné IP adresy a názvu, jaké měl předchozí počítač ATA Center, vytvořte nový počítač s Windows Serverem.
 4. Na nový server naimportujte certifikát, který jste zazálohovali výše.
@@ -66,8 +63,7 @@ Tento článek popisuje postup rychlého zotavení komponenty ATA Center a obnov
 
 
 
-## Viz také
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Viz také
 - [Požadavky ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
 - [Plánování kapacity ATA](/advanced-threat-analytics/plan-design/ata-capacity-planning)
 - [Konfigurace shromažďování událostí](/advanced-threat-analytics/deploy-use/configure-event-collection)

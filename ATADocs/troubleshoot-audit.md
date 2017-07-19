@@ -15,14 +15,13 @@ ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 54f17bc4775868e380586822456330dfc2d45c29
 ms.sourcegitcommit: 53b56220fa761671442da273364bdb3d21269c9e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 07/05/2017
 ---
 *Platí pro: Advanced Threat Analytics verze 1.8*
 
-# Práce s protokoly auditu ATA
-<a id="working-with-ata-audit-logs" class="xliff"></a>
+# <a name="working-with-ata-audit-logs"></a>Práce s protokoly auditu ATA
 
 Protokoly auditu ATA se uchovávají v protokolu událostí Windows v oblasti **Protokoly aplikací a služeb** > **Microsoft ATA** na počítačích s komponentami ATA Center a ATA Gateway.
 
@@ -40,7 +39,6 @@ Protokol auditu pro ATA Gateway obsahuje:
 *Protokol auditu změn konfigurace bude obsahovat jak předchozí, tak novou konfiguraci.
 
 
-## Viz také
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Viz také
 - [Práce s podezřelými aktivitami](working-with-suspicious-activities.md)
 - [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

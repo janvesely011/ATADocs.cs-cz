@@ -15,7 +15,7 @@ ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 234c759db2b766b2a4ad9b26ae31a8f6825d957f
 ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 06/30/2017
 ---
@@ -23,8 +23,7 @@ ms.lasthandoff: 06/30/2017
 
 
 
-# Konfigurace zrcadlení portů
-<a id="configure-port-mirroring" class="xliff"></a>
+# <a name="configure-port-mirroring"></a>Konfigurace zrcadlení portů
 > [!NOTE] 
 > Tento článek se týká jenom nasazení komponent ATA Gateway, nikoli komponent ATA Lightweight Gateway. Pokud chcete určit, jestli potřebujete ATA Gateway, přečtěte si téma [Volba vhodných bran pro vaše nasazení](ata-capacity-planning.md#choosing-the-right-gateway-type-for-your-deployment).
  
@@ -45,8 +44,7 @@ Další informace najdete v dokumentaci dodavatele.
 > Pokud řadič domény se zrcadlením portů je připojený prostřednictvím linky WAN, zkontrolujte, že linka WAN dokáže zpracovat další zátěž provozu ERSPAN.
 > ATA podporuje sledování provozu, jen pokud přenosy přicházejí na kartu NIC a řadič domény stejným způsobem. ATA sledování provozu nepodporuje, pokud se přenosy rozdělují a směřují na různé porty.
 
-## Podporované možnosti zrcadlení portů
-<a id="supported-port-mirroring-options" class="xliff"></a>
+## <a name="supported-port-mirroring-options"></a>Podporované možnosti zrcadlení portů
 
 |ATA Gateway|Řadič domény|Pravidla|
 |---------------|---------------------|------------------|
@@ -71,7 +69,6 @@ Další informace najdete v dokumentaci dodavatele.
 
 Po dokončení konfigurace zrcadlení portů a před instalací ATA Gateway ověřte, že zrcadlení portů funguje.
 
-## Viz také
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Viz také
 - [Ověření zrcadlení portů](validate-port-mirroring.md)
 - [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

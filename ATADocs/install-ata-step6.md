@@ -15,7 +15,7 @@ ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: ffab11a99ae62c1c0b37c43ee212d87508f886b8
 ms.sourcegitcommit: 53b56220fa761671442da273364bdb3d21269c9e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 07/05/2017
 ---
@@ -23,16 +23,13 @@ ms.lasthandoff: 07/05/2017
 
 
 
-# Instalace ATA – krok 6
-<a id="install-ata---step-6" class="xliff"></a>
+# <a name="install-ata---step-6"></a>Instalace ATA – krok 6
 
 >[!div class="step-by-step"]
 [« Krok 5](install-ata-step5.md)
 
-## Krok 6: Konfigurace shromažďování událostí a sítě VPN
-<a id="step-6-configure-event-collection-and-vpn" class="xliff"></a>
-### Konfigurace shromažďování událostí
-<a id="configure-event-collection" class="xliff"></a>
+## <a name="step-6-configure-event-collection-and-vpn"></a>Krok 6: Konfigurace shromažďování událostí a sítě VPN
+### <a name="configure-event-collection"></a>Konfigurace shromažďování událostí
 Kvůli vylepšení detekčních schopností potřebuje ATA následující události Windows: 4776, 4732, 4733, 4728, 4729, 4756, 4757. Tyto události buď může automaticky číst ATA Lightweight Gateway, nebo mohou být jedním ze dvou způsobů předávány komponentě ATA Gateway (v případě, že komponenta ATA Lightweight Gateway není nasazená), a to konfigurací komponenty ATA Gateway pro naslouchání událostem SIEM, nebo [konfigurací předávání událostí Windows](#configuring-windows-event-forwarding).
 
 > [!NOTE]
@@ -40,8 +37,7 @@ Kvůli vylepšení detekčních schopností potřebuje ATA následující událo
 
 Kromě shromažďování a analýzy síťového provozu na řadičích domény dokáže ATA dál vylepšit detekce pomocí událostí Windows. Využívá událost 4776 protokolu NTLM, která vylepšuje různé detekce, a události 4732, 4733, 4728, 4729, 4756 a 4757, které vylepšují detekci úprav citlivých skupin. Tyto události může přijímat buď od svého systému SIEM, nebo tak, že si nastavíte předávání událostí systému Windows ze svého řadiče domény. Shromážděné události poskytují řešení ATA další informace, které není možné zjistit z monitorování provozu na řadiči domény.
 
-#### SIEM/Syslog
-<a id="siemsyslog" class="xliff"></a>
+#### <a name="siemsyslog"></a>SIEM/Syslog
 Aby řešení ATA mohlo využívat data ze serveru Syslog, je třeba provést následující:
 
 -   Nakonfigurujte servery ATA Gateway, aby naslouchaly událostem, které jsou předávány ze serveru SIEM/Syslog, a přijímaly je.
@@ -58,8 +54,7 @@ Informace o konfiguraci předávání určitých událostí na jiný server najd
 > [!NOTE]
 >Pokud nepoužíváte server SIEM/Syslog, můžete nakonfigurovat své řadiče domény Windows pro předávání událostí systému Windows s ID 4776, aby se mohly pomocí ATA shromažďovat a analyzovat. Události systému Windows s ID 4776 poskytují data týkající se ověřování NTLM.
 
-#### Konfigurace komponenty ATA Gateway pro naslouchání událostem SIEM
-<a id="configuring-the-ata-gateway-to-listen-for-siem-events" class="xliff"></a>
+#### <a name="configuring-the-ata-gateway-to-listen-for-siem-events"></a>Konfigurace komponenty ATA Gateway pro naslouchání událostem SIEM
 
 1.  V okně Konfigurace ATA klikněte v oblasti **Zdroje dat** na **SIEM**, zapněte **Syslog** a klikněte na **Uložit**.
 
@@ -69,8 +64,7 @@ Informace o konfiguraci předávání určitých událostí na jiný server najd
 
 ATA podporuje události SIEM v následujících formátech:  
 
-#### RSA Security Analytics
-<a id="rsa-security-analytics" class="xliff"></a>
+#### <a name="rsa-security-analytics"></a>RSA Security Analytics
 &lt;Hlavička Syslog&gt;RsaSA\n2015-May-19 09:07:09\n4776\nMicrosoft-Windows-Security-Auditing\nSecurity\XXXXX.subDomain.domain.org.il\nYYYYY$\nMMMMM \n0x0
 
 -   Hlavička Syslog je nepovinná.
@@ -99,8 +93,7 @@ ATA podporuje události SIEM v následujících formátech:
 
 -   Pořadí je důležité a nic jiného by ve zprávě nemělo být zahrnuto.
 
-#### HP Arcsight
-<a id="hp-arcsight" class="xliff"></a>
+#### <a name="hp-arcsight"></a>HP Arcsight
 CEF:0|Microsoft|Microsoft Windows||Microsoft-Windows-Security-Auditing:4776|Řadič domény se pokusil ověřit pověření účtu.|Low| externalId=4776 cat=Security rt=1426218619000 shost=KKKKKK dhost=YYYYYY.subDomain.domain.com duser=XXXXXX cs2=Security cs3=Microsoft-Windows-Security-Auditing cs4=0x0 cs3Label=EventSource cs4Label=Reason or Error Code
 
 -   Musí být v souladu s definicí protokolu.
@@ -131,8 +124,7 @@ CEF:0|Microsoft|Microsoft Windows||Microsoft-Windows-Security-Auditing:4776|Řad
 
     -   Reason or Error Code = Kód výsledku NTLM
 
-#### Splunk
-<a id="splunk" class="xliff"></a>
+#### <a name="splunk"></a>Splunk
 &lt;Hlavička Syslog&gt;\r\nEventCode=4776\r\nLogfile=Security\r\nSourceName=Microsoft-Windows-Security-Auditing\r\nTimeGenerated=20150310132717.784882-000\r\ComputerName=YYYYY\r\nMessage=
 
 Počítač se pokusil o ověření přihlašovacích údajů pro účet.
@@ -169,8 +161,7 @@ Kód chyby:         0x0
 
 -   Pořadí není pro dvojice klíč=hodnota důležité.
 
-#### QRadar
-<a id="qradar" class="xliff"></a>
+#### <a name="qradar"></a>QRadar
 QRadar umožňuje shromažďování událostí prostřednictvím agenta. Pokud se data shromažďují pomocí agenta, formát času se shromažďuje bez údajů o milisekundách. Protože ale ATA údaje o milisekundách vyžaduje, je nutné v QRadaru nastavit shromažďování událostí Windows bez agenta. Další informace najdete v tématu [http://www-01.ibm.com/support/docview.wss?uid=swg21700170](http://www-01.ibm.com/support/docview.wss?uid=swg21700170 "QRadar: Agentless Windows Events Collection using the MSRPC Protocol") (QRadar: Shromažďování událostí Windows bez agenta pomocí protokolu MSRPC).
 
     <13>Feb 11 00:00:00 %IPADDRESS% AgentDevice=WindowsLog AgentLogFile=Security Source=Microsoft-Windows-Security-Auditing Computer=%FQDN% User= Domain= EventID=4776 EventIDCode=4776 EventType=8 EventCategory=14336 RecordNumber=1961417 TimeGenerated=1456144380009 TimeWritten=1456144380009 Message=The computer attempted to validate the credentials for an account. Authentication Package: MICROSOFT_AUTHENTICATION_PACKAGE_V1_0 Logon Account: Administrator Source Workstation: HOSTNAME Error Code: 0x0
@@ -193,8 +184,7 @@ Nezapomeňte použít oddělit páry klíč=hodnota pomocí \t.
 > Použití funkce WinCollect pro shromažďování událostí Windows se nepodporuje.
 
 
-### Konfigurace sítě VPN
-<a id="configuring-vpn" class="xliff"></a>
+### <a name="configuring-vpn"></a>Konfigurace sítě VPN
 
 ATA shromažďuje data sítě VPN, která pomáhají při profilaci lokalit, ze kterých se počítače připojují k síti.
 
@@ -216,8 +206,7 @@ Informace o získání sdíleného tajného kódu najdete v dokumentaci k síti 
 [Krok 7 »](install-ata-step7.md)
 
 
-## Viz také
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Viz také
 
 - [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurace shromažďování událostí](configure-event-collection.md)

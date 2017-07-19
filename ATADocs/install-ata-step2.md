@@ -15,7 +15,7 @@ ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: aa5e752fa10644165cb70d2cd8c08a1145261edb
 ms.sourcegitcommit: fa50f37b134d7579d7c310852dff60e5f1996eaa
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 07/03/2017
 ---
@@ -23,15 +23,13 @@ ms.lasthandoff: 07/03/2017
 
 
 
-# Instalace ATA – krok 2
-<a id="install-ata---step-2" class="xliff"></a>
+# <a name="install-ata---step-2"></a>Instalace ATA – krok 2
 
 >[!div class="step-by-step"]
 [« Krok 1](install-ata-step1.md)
 [Krok 3 »](install-ata-step3.md)
 
-## Krok 2: Zadejte uživatelské jméno a heslo pro připojení k vaší doménové struktuře Active Directory.
-<a id="step-2-provide-a-username-and-password-to-connect-to-your-active-directory-forest" class="xliff"></a>
+## <a name="step-2-provide-a-username-and-password-to-connect-to-your-active-directory-forest"></a>Krok 2: Zadejte uživatelské jméno a heslo pro připojení k vaší doménové struktuře Active Directory.
 
 Při prvním otevření konzoly ATA se objeví následující obrazovka:
 
@@ -57,8 +55,7 @@ Při prvním otevření konzoly ATA se objeví následující obrazovka:
 [Krok 3 »](install-ata-step3.md)
 
 
-## Viz také
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Viz také
 
 - [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurace shromažďování událostí](configure-event-collection.md)

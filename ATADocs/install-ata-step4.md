@@ -15,7 +15,7 @@ ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 2713f6939c8756d0ecb438e866e6649f13d3c490
 ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 06/30/2017
 ---
@@ -23,15 +23,13 @@ ms.lasthandoff: 06/30/2017
 
 
 
-# Instalace ATA – krok 4
-<a id="install-ata---step-4" class="xliff"></a>
+# <a name="install-ata---step-4"></a>Instalace ATA – krok 4
 
 >[!div class="step-by-step"]
 [« Krok 3](install-ata-step3.md)
 [Krok 5 »](install-ata-step5.md)
 
-## Krok 4. Instalace ATA Gateway
-<a id="step-4-install-the-ata-gateway" class="xliff"></a>
+## <a name="step-4-install-the-ata-gateway"></a>Krok 4. Instalace ATA Gateway
 
 Před instalací ATA Gateway na vyhrazený server ověřte, že je zrcadlení portů správně nakonfigurované a že ATA Gateway vidí provoz do a z řadičů domény. Další informace najdete v tématu [Ověření zrcadlení portů](validate-port-mirroring.md).
 
@@ -90,8 +88,7 @@ Na serveru ATA Gateway proveďte tento postup.
 [« Krok 3](install-ata-step3.md)
 [Krok 5 »](install-ata-step5.md)
 
-## Viz také
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Viz také
 
 - [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurace shromažďování událostí](configure-event-collection.md)

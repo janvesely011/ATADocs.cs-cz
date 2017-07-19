@@ -15,7 +15,7 @@ ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: a04378838fab20c43df159ef3259530b8a599ed4
 ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 06/30/2017
 ---
@@ -23,8 +23,7 @@ ms.lasthandoff: 06/30/2017
 
 
 
-# Export a import konfigurace ATA
-<a id="export-and-import-the-ata-configuration" class="xliff"></a>
+# <a name="export-and-import-the-ata-configuration"></a>Export a import konfigurace ATA
 Konfigurace ATA je uložená v databázi v kolekci SystemProfile.
 Tato kolekce se zálohuje každou hodinu službou ATA Center do souboru s názvem „SystemProfile_*časové-razítko*.json“. Ukládá se 10 posledních verzí.
 Je umístěný v podsložce s názvem Backup. Ve výchozím umístění instalace ATA se nachází tady: *C:\Program Files\Microsoft Advanced Threat Analytics\Center\Backup\SystemProfile_*časové-razítko*.json*. 
@@ -35,8 +34,7 @@ Je možné obnovit všechna nastavení spuštěním následujícího příkazu:
 
 `mongoimport.exe --db ATA --collection SystemProfile --file "<SystemProfile.json backup file>" --upsert`
 
-## Viz také
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Viz také
 - [Architektura ATA](ata-architecture.md)
 - [Požadavky ATA](ata-prerequisites.md)
 - [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

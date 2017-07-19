@@ -15,7 +15,7 @@ ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 68c169ffd0f42bd8b030dc12f4711cbde2718a99
 ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 06/30/2017
 ---
@@ -23,15 +23,13 @@ ms.lasthandoff: 06/30/2017
 
 
 
-# Instalace ATA – krok 3
-<a id="install-ata---step-3" class="xliff"></a>
+# <a name="install-ata---step-3"></a>Instalace ATA – krok 3
 
 >[!div class="step-by-step"]
 [« Krok 2](install-ata-step2.md)
 [Krok 4 »](install-ata-step4.md)
 
-## Krok 3. Stažení instalačního balíčku ATA Gateway
-<a id="step-3-download-the-ata-gateway-setup-package" class="xliff"></a>
+## <a name="step-3-download-the-ata-gateway-setup-package"></a>Krok 3. Stažení instalačního balíčku ATA Gateway
 Po konfiguraci nastavení připojení k doméně si můžete stáhnout instalační balíček ATA Gateway. ATA Gateway se dá nainstalovat na vyhrazený server nebo na řadič domény. Pokud tuto komponentu nainstalujete na řadič domény, nainstaluje se jako ATA Lightweight Gateway. Další informace o ATA Lightweight Gateway najdete v tématu [Architektura ATA](ata-architecture.md). 
 
 V seznamu postupu klikněte na možnost stažení instalace komponenty Gateway v horní části stránky a přejděte tak na stránku s komponentami Gateway:
@@ -57,8 +55,7 @@ Soubor zip obsahuje následující:
 [« Krok 2](install-ata-step2.md)
 [Krok 4 »](install-ata-step4.md)
 
-## Viz také
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Viz také
 
 - [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurace shromažďování událostí](configure-event-collection.md)

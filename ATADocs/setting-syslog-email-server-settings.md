@@ -15,7 +15,7 @@ ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 47d1125856631ecedcbc7779bf0529741c3da61f
 ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 06/30/2017
 ---
@@ -23,8 +23,7 @@ ms.lasthandoff: 06/30/2017
 
 
 
-# Nastavení e-mailového serveru pro ATA
-<a id="provide-ata-with-your-email-server-settings" class="xliff"></a>
+# <a name="provide-ata-with-your-email-server-settings"></a>Nastavení e-mailového serveru pro ATA
 ATA vás může upozornit, když zjistí podezřelou aktivitu. Aby řešení ATA mohlo odesílat e-mailová oznámení, musíte nejdřív nakonfigurovat **nastavení e-mailového serveru**.
 
 1.  Na serveru ATA Center klikněte na ikonu **Správa Microsoft Advanced Threat Analytics** na ploše.
@@ -45,8 +44,7 @@ ATA vás může upozornit, když zjistí podezřelou aktivitu. Aby řešení ATA
     |Odesilatel (povinné)|Zadejte e-mailovou adresu odesilatele e-mailu.|Například:<br />ATA@contoso.com|
     ![Obrázek nastavení e-mailového serveru ATA](media/ata-email-server.png)
 
-## Nastavení serveru Syslog pro ATA
-<a id="provide-ata-with-your-syslog-server-settings" class="xliff"></a>
+## <a name="provide-ata-with-your-syslog-server-settings"></a>Nastavení serveru Syslog pro ATA
 Když ATA zjistí podezřelou aktivitu, může vás upozornit tak, že zašle upozornění na váš server Syslog. Pokud povolíte upozornění pro Syslog, můžete pro ně nastavit následující parametry.
 
 1.  Před konfigurací upozornění pro Syslog zjistěte ve spolupráci s vaším správcem systému SIEM následující informace:
@@ -79,6 +77,5 @@ Když ATA zjistí podezřelou aktivitu, může vás upozornit tak, že zašle up
 
 
 
-## Viz také
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Viz také
 [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

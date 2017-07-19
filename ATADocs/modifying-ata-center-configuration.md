@@ -15,7 +15,7 @@ ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 1e9fa2d104c52087746e7c03fea27e3cb596adf0
 ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 06/30/2017
 ---
@@ -23,14 +23,12 @@ ms.lasthandoff: 06/30/2017
 
 
 
-# Změna konfigurace ATA Center
-<a id="modifying-the-ata-center-configuration" class="xliff"></a>
+# <a name="modifying-the-ata-center-configuration"></a>Změna konfigurace ATA Center
 
 
 Po počátečním nasazení by se změny ATA Center měly dělat opatrně. K aktualizaci IP adresy a portu, adresy URL konzoly a certifikátu použijte následující postupy.
 
-## Změna IP adresy u ATA Center
-<a id="the-ata-center-ip-address" class="xliff"></a>
+## <a name="the-ata-center-ip-address"></a>Změna IP adresy u ATA Center
 
 Komponenty ATA Gateway místně ukládají IP adresu pro ATA Center, ke kterému se potřebují připojit. V pravidelných intervalech se připojují k ATA Center a stahují změny konfigurace. Změna způsobu připojení komponent ATA Gateway k ATA Center se provádí ve dvou fázích.
 
@@ -43,8 +41,7 @@ Komponenty ATA Gateway místně ukládají IP adresu pro ATA Center, ke kterému
 > -   Pokud je nová IP adresa nainstalovaná na serveru ATA Center, můžete ji při provádění změny vybrat ze seznamu IP adres. Nicméně pokud z nějakého důvodu nemůžete nainstalovat IP adresu na server ATA Center, můžete vybrat vlastní IP adresu a přidat ji ručně. Nebudete moct aktivovat novou IP adresu, dokud není IP adresa nainstalovaná na serveru.
 > -   Pokud potřebujete nasadit novou ATA Gateway po aktivaci nové IP adresy, budete muset znovu stáhnout instalační balíček ATA Gateway.
 
-## Adresa URL konzoly
-<a id="the-console-url" class="xliff"></a>
+## <a name="the-console-url"></a>Adresa URL konzoly
 
 Adresa URL se používá v následujících scénářích:
 
@@ -59,8 +56,7 @@ Adresa URL se používá v následujících scénářích:
 > [!NOTE]
 > Po úpravě adresy URL konzoly ATA byste si měli před instalací nových ATA Gateway stáhnout instalační balíček ATA Gateway.
 
-## Certifikát ATA Center
-<a id="the-ata-center-certificate" class="xliff"></a>
+## <a name="the-ata-center-certificate"></a>Certifikát ATA Center
 Pokud se blíží konec platnosti vašeho certifikátu a je třeba ho obnovit nebo nahradit po instalaci nového certifikátu v úložišti místního počítače na server ATA Center, nahraďte certifikát pomocí následujícího dvoufázového postupu:
 
 -   První fáze – Aktualizujte certifikát, který má služba ATA Center používat. V tomto okamžiku je služba ATA Center stále vázaná na původní certifikát. Pokud komponenty ATA Gateway synchronizují své konfigurace, budou mít dva potenciální certifikáty, které budou platné pro vzájemné ověřování. Dokud se komponenta ATA Gateway bude moct připojit pomocí původního certifikátu, nebude zkoušet nový.
@@ -73,8 +69,7 @@ Pokud se blíží konec platnosti vašeho certifikátu a je třeba ho obnovit ne
 > -   Certifikát se používá také pro konzolu ATA, takže by měl odpovídat adrese konzoly ATA, aby se předešlo zobrazování varování v prohlížeči.
 > -   Pokud potřebujete nasadit novou ATA Gateway po aktivaci nového certifikátu, budete muset znovu stáhnout instalační balíček ATA Gateway.
 
-## Změna konfigurace u ATA Center
-<a id="changing-the-ata-center-configuration" class="xliff"></a>
+## <a name="changing-the-ata-center-configuration"></a>Změna konfigurace u ATA Center
 
 1.  Otevřete konzolu ATA.
 
@@ -106,7 +101,6 @@ Pokud se blíží konec platnosti vašeho certifikátu a je třeba ho obnovit ne
 
 
 
-## Viz také
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Viz také
 - [Práce s konzolou ATA](working-with-ata-console.md)
 - [Podívejte se na fórum ATA!](https://aka.ms/ata-forum)

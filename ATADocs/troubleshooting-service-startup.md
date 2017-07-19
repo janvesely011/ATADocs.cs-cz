@@ -15,7 +15,7 @@ ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 1291281273188a21b61b29f06a5220eee589767c
 ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 06/30/2017
 ---
@@ -23,8 +23,7 @@ ms.lasthandoff: 06/30/2017
 
 
 
-# Řešení potíží se spuštěním služby ATA Center
-<a id="troubleshooting-ata-center-service-startup" class="xliff"></a>
+# <a name="troubleshooting-ata-center-service-startup"></a>Řešení potíží se spuštěním služby ATA Center
 
 Pokud se ATA Center nespustí, postupujte podle následujících pokynů k řešení potíží:
 
@@ -37,8 +36,7 @@ Pokud se dá spustit, je platforma pravděpodobně v pořádku, v opačném př�
 
 
 
-## Viz také
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Viz také
 - [Požadavky ATA](ata-prerequisites.md)
 - [Plánování kapacity ATA](ata-capacity-planning.md)
 - [Konfigurace shromažďování událostí](configure-event-collection.md)
