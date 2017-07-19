@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 7/2/2017
+ms.date: 7/16/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,14 +13,13 @@ ms.technology:
 ms.assetid: 9592d413-df0e-4cec-8e03-be1ae00ba5dc
 ms.reviewer: 
 ms.suite: ems
-ms.openlocfilehash: 6850c5e8e264a9610e377a9ab4aadca338971ee1
-ms.sourcegitcommit: be6bdfa24a9b25a3375a4768d513b93900b3a498
+ms.openlocfilehash: 63dd37548dbf4e150f32880543c3bf421bf3fe71
+ms.sourcegitcommit: 3cd268cf353ff8bc3d0b8f9a8c10a34353d1fcf1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2017
+ms.lasthandoff: 07/16/2017
 ---
-# Novinky ATA verze 1.8
-<a id="whats-new-in-ata-version-18" class="xliff"></a>
+# <a name="whats-new-in-ata-version-18"></a>Novinky ATA verze 1.8
 
 Nejnovější aktualizovanou verzi ATA je možné [stáhnout z webu Download Center](https://www.microsoft.com/download/details.aspx?id=55536) nebo si můžete plnou verzi stáhnout z webu [Eval center](http://www.microsoft.com/evalcenter/evaluate-microsoft-advanced-threat-analytics).
 
@@ -28,8 +27,7 @@ Tato zpráva k vydání verze obsahuje informace o aktualizacích, nových funkc
 
 
 
-## Nové a aktualizované detekce
-<a id="new--updated-detections" class="xliff"></a>
+## <a name="new--updated-detections"></a>Nové a aktualizované detekce
 
 - Neobvyklá implementace protokolu byla vylepšena tak, aby byla schopna odhalit malware WannaCry.
 
@@ -48,8 +46,7 @@ Tato zpráva k vydání verze obsahuje informace o aktualizacích, nových funkc
     - Neobvyklá implementace protokolu
     - Porušení vztahu důvěryhodnosti
 
-## Vylepšené posouzení podezřelých aktivit
-<a id="improved-triage-of-suspicious-activities" class="xliff"></a>
+## <a name="improved-triage-of-suspicious-activities"></a>Vylepšené posouzení podezřelých aktivit
 
 -   NOVINKA! Během posuzování podezřelých událostí umožňuje ATA 1.8 provést následující akce: 
     - **Vyloučit entity** z vyvolávání budoucích podezřelých aktivit a zabránit tak upozorněním při detekci neškodných pravdivě pozitivních událostí (například správce spouštějící vzdálený kód nebo detekování kontrol zabezpečení).
@@ -57,32 +54,32 @@ Tato zpráva k vydání verze obsahuje informace o aktualizacích, nových funkc
     - **Odstranit podezřelé aktivity** z časové osy útoků.
 -   Reakce na upozornění na podezřelou aktivitu je teď mnohem efektivnější. Časová osa podezřelých aktivit byla přepracována. Ve verzi ATA 1.8 uvidíte na jedné obrazovce mnohem více podezřelých aktivit a lepších informací pro účely posouzení a prošetření. 
 
-## Nové sestavy, které pomáhají s prošetřením
-<a id="new-reports-to-help-you-investigate" class="xliff"></a> 
+## <a name="new-reports-to-help-you-investigate"></a>Nové sestavy, které pomáhají s prošetřením 
 -   NOVINKA! Byla přidána **souhrnná sestava**, ve které vidíte veškerá sumarizovaná data z ATA včetně podezřelých aktivit, problémů se stavem a dalších údajů. Můžete dokonce definovat přizpůsobenou sestavu, která se pravidelně automaticky generuje.
 -   NOVINKA! Byla přidána **sestava citlivých skupin**, která umožňuje zjistit všechny změny provedené v citlivých skupinách za určité období.
 
 
-## Vylepšení infrastruktury
-<a id="infrastructure-improvements" class="xliff"></a>
+## <a name="infrastructure-improvements"></a>Vylepšení infrastruktury
 
 -   Byl zvýšen výkon komponenty ATA Center. Ve verzi ATA 1.8 dokáže ATA Center zpracovat přes 1 milión paketů za sekundu.
 -   ATA Lightweight Gateway teď dokáže číst události místně bez nutnosti konfigurace předávání událostí.
 -   Teď můžete zvlášť nakonfigurovat e-mail pro monitorovací upozornění a podezřelé aktivity.
 
-## Vylepšení zabezpečení
-<a id="security-improvements" class="xliff"></a>
+## <a name="security-improvements"></a>Vylepšení zabezpečení
 
 -   NOVINKA! **Jednotné přihlašování při správě ATA**. ATA podporuje jednotné přihlašování integrované s ověřováním Windows – pokud jste už přihlášení ke svému počítači, použije ATA tento token pro přihlášení ke konzole ATA. K přihlášení můžete použít také čipovou kartu. Skripty pro tichou instalaci komponent ATA Gateway a ATA Lightweight Gateway teď používají kontext přihlášeného uživatele bez nutnosti zadávání přihlašovacích údajů.
 -   Oprávnění Local System byla z procesu ATA Gateway odebrána, takže ke spuštění procesu ATA Gateway teď můžete použít virtuální účty (dostupné jen u samostatných komponent ATA Gateway), účty spravované služby a skupinové účty spravované služby.   
 -   Byly přidány protokoly auditování komponent ATA Center a ATA Gateway a všechny akce jsou teď protokolované v protokolu událostí Windows.
 -   Komponenta ATA Center byla doplněna o podporu certifikátů KSP.
 
+## <a name="additional-changes"></a>Další změny
+
+- Z podezřelých aktivit byla odebrána možnost přidávat poznámky.
+- Z časové osy podezřelých aktivit byla odebrána doporučení pro jejich zmírnění.
 
 
 
-## Viz také
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Viz také
 [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 
 [Aktualizace ATA na verzi 1.8 – průvodce migrací](ata-update-1.8-migration-guide.md)
