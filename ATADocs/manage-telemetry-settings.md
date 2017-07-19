@@ -15,7 +15,7 @@ ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: b0e94ca7d817d6d5735921fefd7c9f4cf2cbd866
 ms.sourcegitcommit: fa50f37b134d7579d7c310852dff60e5f1996eaa
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 07/03/2017
 ---
@@ -23,12 +23,10 @@ ms.lasthandoff: 07/03/2017
 
 
 
-# Správa nastavení telemetrie
-<a id="manage-telemetry-settings" class="xliff"></a>
+# <a name="manage-telemetry-settings"></a>Správa nastavení telemetrie
 Advanced Threat Analytics (ATA) shromažďuje anonymních telemetrická data o ATA a odesílá je přes připojení HTTPS na servery Microsoftu.  Tato data Microsoft používá k vylepšení budoucích verzích ATA.
 
-## Shromažďovaná data
-<a id="data-collected" class="xliff"></a>
+## <a name="data-collected"></a>Shromažďovaná data
 Shromážděná anonymizovaná data zahrnují následující:
 
 -   Čítače výkonu z ATA Center a ATA Gateway
@@ -84,15 +82,13 @@ Shromážděná anonymizovaná data zahrnují následující:
 - Adresa URL konzoly ATA – adresy URL při používání konzoly ATA, tzn. navštívené stránky v konzole ATA.
 
 
-### Zakázání shromažďování dat
-<a id="disable-data-collection" class="xliff"></a>
+### <a name="disable-data-collection"></a>Zakázání shromažďování dat
 Chcete-li zastavit shromažďování a odesílání telemetrických dat Microsoftu, proveďte následující kroky:
 
 1.  Přihlaste se ke konzole ATA, na panelu nástrojů klikněte na tlačítko se třemi tečkami a vyberte **O aplikaci**.
 
 2.  Zrušte zaškrtnutí políčka **Send us usage information to help improve your customer experience in the future** (Posílat nám informace o použití k vylepšení zkušeností uživatelů v budoucnosti).
 
-## Viz také
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Viz také
 - [Řešení problémů s ATA pomocí protokolu událostí](troubleshooting-ata-using-logs.md)
 - [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

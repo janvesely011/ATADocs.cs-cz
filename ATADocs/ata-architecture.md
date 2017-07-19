@@ -15,7 +15,7 @@ ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 4d95e5b13d06ea0963b7cac129be4eb1458e5d4c
 ms.sourcegitcommit: 53b56220fa761671442da273364bdb3d21269c9e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 07/05/2017
 ---
@@ -24,8 +24,7 @@ ms.lasthandoff: 07/05/2017
 
 
 
-# Architektura ATA
-<a id="ata-architecture" class="xliff"></a>
+# <a name="ata-architecture"></a>Architektura ATA
 Architektura Microsoft Advanced Threat Analytics je znázorněna v tomto obrázku:
 
 ![Diagram topologie architektury ATA](media/ATA-architecture-topology.jpg)
@@ -36,8 +35,7 @@ Tato část popisuje tok zaznamenávání událostí a síťových operací a za
 
 ![Diagram toku dat v architektuře ATA](media/ATA-traffic-flow.jpg)
 
-## Komponenty ATA
-<a id="ata-components" class="xliff"></a>
+## <a name="ata-components"></a>Komponenty ATA
 Součástí ATA jsou následující komponenty:
 
 -   **ATA Center** <br>
@@ -50,8 +48,7 @@ ATA Lightweight Gateway se instaluje přímo na řadiče domény a monitoruje je
 Nasazení ATA se může skládat z jediné komponenty ATA Center připojené ke všem komponentám ATA Gateway, všem komponentám ATA Lightweight Gateway nebo ke kombinaci komponent ATA Gateway a ATA Lightweight Gateway.
 
 
-## Možnosti nasazení
-<a id="deployment-options" class="xliff"></a>
+## <a name="deployment-options"></a>Možnosti nasazení
 ATA můžete nasadit s využitím následující kombinace bran:
 
 -   **Jenom komponenty ATA Gateway** <br>
@@ -66,8 +63,7 @@ Ve všech těchto scénářích odesílají všechny brány data do ATA Center.
 
 
 
-## ATA Center
-<a id="ata-center" class="xliff"></a>
+## <a name="ata-center"></a>ATA Center
 **ATA Center** zajišťuje následující funkce:
 
 -   Spravuje konfiguraci komponent ATA Gateway a ATA Lightweight Gateway.
@@ -101,11 +97,9 @@ Při úvahách o tom, kolik komponent ATA Center nasadit ve vaší síti, zvažt
 
 -    Ve velmi rozsáhlých nasazeních služby Active Directory nemusí být jedna komponenta ATA Center schopná zpracovat veškerý síťový provoz na všech řadičích domény. V takovém případě se vyžaduje několik komponent ATA Center. Počet komponent ATA Center závisí na [plánování kapacity ATA](ata-capacity-planning.md).
 
-## ATA Gateway a ATA Lightweight Gateway
-<a id="ata-gateway-and-ata-lightweight-gateway" class="xliff"></a>
+## <a name="ata-gateway-and-ata-lightweight-gateway"></a>ATA Gateway a ATA Lightweight Gateway
 
-### Základní funkce brány
-<a id="gateway-core-functionality" class="xliff"></a>
+### <a name="gateway-core-functionality"></a>Základní funkce brány
 **ATA Gateway** a **ATA Lightweight Gateway** mají stejné základní funkce:
 
 -   Zachytávají a prošetřují síťový provoz na řadiči domény. Jedná se o provoz komponent ATA Gateway zrcadlený na portech a místní provoz řadiče domény na komponentách ATA Lightweight Gateway. 
@@ -131,8 +125,7 @@ Komponenta ATA Gateway přijímá síťový provoz a události systému Windows 
 |Entity Resolver|Komponenta Entity Resolver přebírá analyzovaná data (ze síťového provozu a z událostí) a přiřazuje jim data o účtech a identitách ze služby Active Directory. Výsledky jsou přiřazeny IP adresám nalezeným v analyzovaných datech. Entity Resolver efektivně kontroluje hlavičky paketů a umožňuje analýzou ověřovacích paketů získat názvy počítačů, vlastnosti a identity. Entity Resolver kombinuje analyzované ověřovací pakety s daty ve skutečných paketech.|
 |Entity Sender|Entity Sender odesílá parsovaná a spárovaná data do ATA Center.|
 
-## Funkce komponenty ATA Lightweight Gateway
-<a id="ata-lightweight-gateway-features" class="xliff"></a>
+## <a name="ata-lightweight-gateway-features"></a>Funkce komponenty ATA Lightweight Gateway
 
 Následující funkce pracují různě v závislosti na tom, jestli používáte ATA Gateway nebo ATA Lightweight Gateway.
 
@@ -167,12 +160,10 @@ Pokud Active Directory potřebuje víc výpočetních prostředků, kvóta vyža
 
 
 
-## Komponenty vaší sítě
-<a id="your-network-components" class="xliff"></a>
+## <a name="your-network-components"></a>Komponenty vaší sítě
 Před použitím řešení ATA zkontrolujte následující skutečnosti:
 
-### Zrcadlení portů
-<a id="port-mirroring" class="xliff"></a>
+### <a name="port-mirroring"></a>Zrcadlení portů
 Pokud používáte komponenty ATA Gateway, musíte nastavit zrcadlení portů pro řadiče domény, které se budou monitorovat, a pomocí fyzických nebo virtuálních přepínačů nastavit ATA Gateway jako cíl. Další možností je použít síťové odposlouchávání. Pokud se monitorují jenom některé řadiče domény (ale ne všechny), ATA bude fungovat, ale detekce budou méně účinné.
 
 Při zrcadlení portů sice řadič domény zrcadlí veškerý síťový provoz na komponentu ATA Gateway, ale jen velmi malá část tohoto objemu je pak v komprimovaném tvaru odeslána komponentě ATA Center k analýze.
@@ -180,16 +171,14 @@ Při zrcadlení portů sice řadič domény zrcadlí veškerý síťový provoz 
 Řadiče domény a komponenty ATA Gateway můžou být fyzické i virtuální. Další informace najdete v tématu [Konfigurace zrcadlení portů](configure-port-mirroring.md).
 
 
-### Události
-<a id="events" class="xliff"></a>
+### <a name="events"></a>Události
 Kvůli vylepšení detekce předání hodnoty hash (Pass-the-Hash), hrubé síly, úpravy citlivých skupin a honeytokenů potřebuje ATA následující události Windows: 4776, 4732, 4733, 4728, 4729, 4756, 4757. Tyto události buď může automaticky číst ATA Lightweight Gateway, nebo mohou být jedním ze dvou způsobů předávány komponentě ATA Gateway (v případě, že komponenta ATA Lightweight Gateway není nasazená), a to konfigurací komponenty ATA Gateway pro naslouchání událostem SIEM, nebo [konfigurací předávání událostí Windows](#configuring-windows-event-forwarding).
 
 -   Konfigurace komponenty ATA Gateway pro naslouchání událostem SIEM <br>Nakonfigurujte SIEM pro předávání určitých událostí systému Windows bráně ATA Gateway. ATA podporuje několik poskytovatelů SIEM. Další informace najdete v tématu [Konfigurace sběru událostí](configure-event-collection.md).
 
 -   Konfigurace předávání událostí systému Windows<br>Jiným způsobem, jak může ATA získávat události, je konfigurace řadičů domén tak, aby komponentě ATA Gateway předávaly události Windows 4776, 4732, 4733, 4728, 4729, 4756 a 4757. To je obzvláště užitečné, pokud nemáte server SIEM nebo pokud ATA váš server SIEM v současnosti nepodporuje. Další informace o předávání událostí systému Windows v ATA najdete v tématu [Konfigurace předávání událostí systému Windows](configure-event-collection.md#configuring-windows-event-forwarding). Tyto informace platí jen pro fyzické komponenty ATA Gateway, nikoli pro ATA Lightweight Gateway.
 
-## Viz také
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Viz také
 - [Požadavky ATA](ata-prerequisites.md)
 - [Plánování kapacity ATA](ata-capacity-planning.md)
 - [Konfigurace shromažďování událostí](configure-event-collection.md)

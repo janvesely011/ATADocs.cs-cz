@@ -15,14 +15,13 @@ ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 630bb2b74dafcf9ab9b3469c2afbf8abc59c2dbf
 ms.sourcegitcommit: fa50f37b134d7579d7c310852dff60e5f1996eaa
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 07/03/2017
 ---
 *Platí pro: Advanced Threat Analytics verze 1.8*
 
-# Jaké hrozby ATA vyhledává?
-<a id="what-threats-does-ata-look-for" class="xliff"></a>
+# <a name="what-threats-does-ata-look-for"></a>Jaké hrozby ATA vyhledává?
 
 ATA zajišťuje detekci pro následující fáze pokročilých útoků: rekognoskace, únik přihlašovacích údajů, laterální pohyb, zvýšení úrovně oprávnění, dominance v doméně a další. Tyto detekce jsou zaměřené na zjišťování pokročilých útoků a vnitřních hrozeb ještě předtím, než mohou ve vaší organizaci způsobit škody.
 Výsledkem detekce v jednotlivých fázích je několik podezřelých aktivit relevantních pro danou fázi. Každá podezřelá aktivita je v korelaci s různými charakteristikami možných útoků.
@@ -31,8 +30,7 @@ Na následujícím obrázku jsou zvýrazněné fáze v řetězci úkonů útočn
 ![Zaměření řešení ATA na postranní aktivity v řetězci úkonů útočníka](media/attack-kill-chain-small.jpg)
 
 
-### Rekognoskace
-<a id="reconnaissance" class="xliff"></a>
+### <a name="reconnaissance"></a>Rekognoskace
 
 ATA poskytuje několik způsobů detekce rekognoskace. Mezi tyto detekce patří:
 
@@ -45,8 +43,7 @@ ATA poskytuje několik způsobů detekce rekognoskace. Mezi tyto detekce patří
 -   **Rekognoskace pomocí výčtu adresářových služeb**<br></br>Detekce rekognoskace entit (uživatelů, skupin atd.) prováděná pomocí protokolu SAM-remote ke spouštění dotazů vůči řadičům domény. Tato metoda rekognoskace převládá v mnoha typech malwaru, které můžeme vidět ve scénářích skutečných útoků. 
 
 
-### Prozrazené přihlašovací údaje
-<a id="compromised-credentials" class="xliff"></a>
+### <a name="compromised-credentials"></a>Prozrazené přihlašovací údaje
 
 K detekci prozrazených přihlašovacích údajů ATA využívá analýzu chování na základě machine learningu a také rozpoznání známých útoků a technik.
 Pomocí analýzy chování a machine learningu ATA dokáže detekovat podezřelé aktivity, jako jsou neobvyklá přihlášení, nestandardní přístup k prostředkům a přístup mimo běžnou pracovní dobu, což by mohlo ukazovat na únik přihlašovacích údajů. Pro ochranu proti zneužití přihlašovacích údajů rozpoznává ATA následující známé útoky a techniky:
@@ -67,8 +64,7 @@ Pomocí analýzy chování a machine learningu ATA dokáže detekovat podezřel�
 
 -   **Neobvyklé chování**<br></br>V případě vnitřních hrozeb a pokročilých útoků se často k podvodnému získání přihlašovacích údajů k účtům využívají techniky sociálního inženýrství nebo zcela nové a dosud neznámé metody a techniky. Díky tomu, že ATA analyzuje chování entit, detekuje případné abnormality v operacích, které tyto entity provádějí, a upozorňuje na ně, dokáže tyto typy ohrožení detekovat.
 
-### Laterální pohyb
-<a id="lateral-movement" class="xliff"></a>
+### <a name="lateral-movement"></a>Laterální pohyb
 
 K detekci laterálního pohybu, při němž uživatelé zneužijí přihlašovací údaje k získání přístupu k prostředkům, ke kterým přístup mít nemají, ATA využívá analýzy chování využívající machine learning a také rozpoznání známých škodlivých útoků a technik.
 Pomocí analýzy chování a machine learningu ATA dokáže detekovat nestandardní přístup k prostředkům, nestandardní využití zařízení a další indikátory, které by mohly ukazovat na únik přihlašovacích údajů.
@@ -82,8 +78,7 @@ Kromě toho ATA k rozpoznání laterálního pohybu využívá detekci technik, 
 
 -   **Neobvyklé chování**<br></br>Laterální pohyb je technika, kterou útočníci často používají k pohybu mezi zařízeními a oblastmi v napadené síti a získání přístupu k privilegovaným přihlašovacím údajům nebo citlivým informacím, které je zajímají. ATA dokáže rozpoznat laterální pohyb analýzou chování uživatelů a zařízení a jejich vztahů uvnitř podnikové sítě a detekcí neobvyklých přístupových vzorců, které mohou indikovat laterální pohyb ze strany útočníka.
 
-### Zvýšení oprávnění
-<a id="privilege-escalation" class="xliff"></a>
+### <a name="privilege-escalation"></a>Zvýšení oprávnění
 
 ATA detekuje úspěšné i neúspěšné pokusy o útoky metodou zvýšení oprávnění, kdy se útočník pokouší o zvýšení stávajících oprávnění, a to i opakovaně, dokud nezíská plnou kontrolu nad napadeným prostředím.
 K detekci zvýšení oprávnění ATA využívá kombinaci analýz chování (detekce neobvyklého chování privilegovaných účtů) a detekci známých nebezpečných útoků a technik, které se často využívají pro zvýšení oprávnění, jako například:
@@ -94,8 +89,7 @@ K detekci zvýšení oprávnění ATA využívá kombinaci analýz chování (de
 
 -   **Neobvyklá úprava citlivých skupin**  <br></br>Jako součást fáze eskalace oprávnění upravují útočníci skupiny s vysokými oprávněními, aby získali přístup k citlivým prostředkům. ATA teď detekuje, pokud dojde u skupiny se zvýšenými oprávněními k neobvyklé změně.
 
-### Dominance v doméně
-<a id="domain-dominance" class="xliff"></a>
+### <a name="domain-dominance"></a>Dominance v doméně
 
 ATA detekuje úspěšné i neúspěšné pokusy o získání celkové kontroly a dominance v napadaném prostředí. Využívá přitom detekci známých technik, které útočníci využívají. Patří mezi ně:
 
@@ -110,13 +104,11 @@ ATA detekuje úspěšné i neúspěšné pokusy o získání celkové kontroly a
 -   **Škodlivé žádosti o replikaci** <br></br>V prostředí Active Directory (AD) dochází k pravidelné replikaci mezi řadiči domény. Útočník může zfalšovat požadavek na replikaci AD (někdy zosobněním řadiče domény). To mu umožní načíst dat uložená ve službě AD, včetně hodnot hash hesel, aniž by musel využívat rušivější techniky, jako je třeba služba Stínová kopie svazku.
 
 
-## Co dál?
-<a id="whats-next" class="xliff"></a>
+## <a name="whats-next"></a>Co dál?
 
 -   Další informace o zapojení řešení ATA do vaší sítě najdete v tématu [Architektura ATA](ata-architecture.md).
 
 -   Pokud chcete začít s nasazením ATA, přečtěte si téma [Instalace ATA](install-ata-step1.md).
 
-## Viz také
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Viz také
 [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

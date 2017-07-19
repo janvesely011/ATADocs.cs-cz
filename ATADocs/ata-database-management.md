@@ -15,7 +15,7 @@ ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 4fe667574ea011c032bacd8f5bce4b07c2c46602
 ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 06/30/2017
 ---
@@ -23,20 +23,16 @@ ms.lasthandoff: 06/30/2017
 
 
 
-# Správa databáze ATA
-<a id="ata-database-management" class="xliff"></a>
+# <a name="ata-database-management"></a>Správa databáze ATA
 Když potřebujete přesunout, zálohovat nebo obnovit databázi ATA, použijte tyto postupy pro práci s MongoDB.
 
-## Zálohování databáze ATA
-<a id="backing-up-the-ata-database" class="xliff"></a>
+## <a name="backing-up-the-ata-database"></a>Zálohování databáze ATA
 Viz [příslušná dokumentace k MongoDB](http://docs.mongodb.org/manual/administration/backup/).
 
-## Obnovení databáze ATA
-<a id="restoring-the-ata-database" class="xliff"></a>
+## <a name="restoring-the-ata-database"></a>Obnovení databáze ATA
 Viz [příslušná dokumentace k MongoDB](http://docs.mongodb.org/manual/administration/backup/).
 
-## Přesunutí databáze ATA na jinou jednotku
-<a id="moving-the-ata-database-to-another-drive" class="xliff"></a>
+## <a name="moving-the-ata-database-to-another-drive"></a>Přesunutí databáze ATA na jinou jednotku
 
 1.  Zastavte službu **Microsoft Advanced Threat Analytics Center**.
 > [!Important] 
@@ -58,8 +54,7 @@ Viz [příslušná dokumentace k MongoDB](http://docs.mongodb.org/manual/adminis
 
 7. Spusťte službu **Microsoft Advanced Threat Analytics Center**.
 
-## Viz také
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Viz také
 - [Architektura ATA](ata-architecture.md)
 - [Požadavky ATA](ata-prerequisites.md)
 - [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

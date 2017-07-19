@@ -14,14 +14,13 @@ ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: f1092e1cf6c991785dbf8bad3b197b68a21c0833
 ms.sourcegitcommit: fa50f37b134d7579d7c310852dff60e5f1996eaa
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 07/03/2017
 ---
 *Platí pro: Advanced Threat Analytics verze 1.8*
 
-# Podpora pro verze Microsoft Advanced Threat Analytics (ATA)
-<a id="support-for-microsoft-advanced-threat-analytics-ata-versions" class="xliff"></a>
+# <a name="support-for-microsoft-advanced-threat-analytics-ata-versions"></a>Podpora pro verze Microsoft Advanced Threat Analytics (ATA)
 
 Microsoft má v plánu vydávat aktualizace ATA párkrát za rok s tím, že každá verze aktualizace bude podporována po dobu 12 měsíců od data jejího vydání s obecnou dostupností. Technická podpora bude poskytována po celých 12 měsíců. Naše struktura podpory je teď ale dynamická – rozvíjí se do dvou různých fází údržby, které závisejí na dostupnosti nejnovější verze.
 
@@ -34,8 +33,7 @@ Microsoft má v plánu vydávat aktualizace ATA párkrát za rok s tím, že ka�
 > [!Note]
 > Nejnovější verze ATA je vždy ve fázi údržby Důležité aktualizace a aktualizace zabezpečení. Znamená to, že pokud narazíte na chybu kódu, která si zasluhuje důležitou aktualizaci, a chcete obdržet opravu, musíte mít nainstalovanou nejnovější verzi Current Branch. Všechny ostatní podporované verze dávají oprávnění pouze k získání aktualizací zabezpečení. Veškerá podpora verze, jejíž platnost vypršela, skončí po uplynutí 12měsíčního životního cyklu. V tu chvíli musí zákazníci provést aktualizaci na podporovanou verzi.
 
-## Historie verzí
-<a id="version-history" class="xliff"></a>
+## <a name="version-history"></a>Historie verzí
 
 |VERZE|ČÍSLO BUILDU|DATUM DOSTUPNOSTI| DATUM UKONČENÍ PODPORY|
 |----|----|----|----|
@@ -51,6 +49,5 @@ Microsoft má v plánu vydávat aktualizace ATA párkrát za rok s tím, že ka�
 
 
 
-## Viz také
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Viz také
 [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

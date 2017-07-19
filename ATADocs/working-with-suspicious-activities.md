@@ -23,12 +23,10 @@ ms.lasthandoff: 07/10/2017
 
 
 
-# Práce s podezřelými aktivitami
-<a id="working-with-suspicious-activities" class="xliff"></a>
+# <a name="working-with-suspicious-activities"></a>Práce s podezřelými aktivitami
 Toto téma vysvětluje základy pro práci s Advanced Threat Analytics.
 
-## Kontrola podezřelých na časové ose útoku
-<a id="review-suspicious-activities-on-the-attack-time-line" class="xliff"></a>
+## <a name="review-suspicious-activities-on-the-attack-time-line"></a>Kontrola podezřelých na časové ose útoku
 Po přihlášení ke konzole ATA se vám automaticky otevře **Suspicious Activities Time Line** (Časová osa podezřelých aktivit). Podezřelé aktivity jsou uvedené v chronologickém pořadí s nejnovějšími podezřelými aktivita na vrcholu časové osy.
 Každá podezřelá aktivita obsahuje následující informace:
 
@@ -58,8 +56,7 @@ Každá podezřelá aktivita obsahuje následující informace:
 
 ![Obrázek časové osy podezřelých aktivit ATA](media/ATA-Suspicious-Activity-Timeline.JPG)
 
-## Filtrování seznamu podezřelých aktivit
-<a id="filter-suspicious-activities-list" class="xliff"></a>
+## <a name="filter-suspicious-activities-list"></a>Filtrování seznamu podezřelých aktivit
 Chcete-li filtrovat seznam podezřelých aktivit:
 
 1.  V podokně **Filtrovat podle** na levé straně obrazovky vyberte jednu z následujících položek: **Vše**, **Otevřeno**, **Vyřešeno** nebo **Zamítnuto**.
@@ -83,8 +80,7 @@ Chcete-li filtrovat seznam podezřelých aktivit:
 
 
 
-## Opravy podezřelých aktivit
-<a id="remediating-suspicious-activities" class="xliff"></a>
+## <a name="remediating-suspicious-activities"></a>Opravy podezřelých aktivit
 Stav podezřelé aktivity můžete změnit tak, že klepnete na aktuální stav podezřelé aktivity a vyberete jednu z možností **Open** (Otevřeno), **Suppressed** (Potlačeno), **Closed** (Uzavřeno) nebo **Deleted** (Odstraněno).
 Uděláte to tak, že kliknete na tři tečky v pravém horním rohu konkrétní podezřelé aktivity a zobrazíte seznam dostupných akcí.
 
@@ -108,7 +104,6 @@ Uděláte to tak, že kliknete na tři tečky v pravém horním rohu konkrétní
 > Konfigurační stránky můžou upravovat jenom správci ATA.
 
 
-## Viz také
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Viz také
 - [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Změna konfigurace ATA](modifying-ata-center-configuration.md)

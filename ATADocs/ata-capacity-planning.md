@@ -22,15 +22,13 @@ ms.lasthandoff: 07/11/2017
 
 
 
-# Plánování kapacity ATA
-<a id="ata-capacity-planning" class="xliff"></a>
+# <a name="ata-capacity-planning"></a>Plánování kapacity ATA
 Toto téma vám pomůže určit, kolik serverů ATA potřebujete k monitorování sítě. S jeho pomocí také zjistíte, kolik potřebujete komponent ATA Gateway a/nebo ATA Lightweight Gateway, a kapacitu serveru pro ATA Center a komponenty ATA Gateway.
 
 > [!NOTE] 
 > ATA Center se dá nasadit na libovolného dodavatele IaaS, pokud jsou splněné požadavky na výkon popsané v tomto článku.
 
-##Použití nástroje pro změnu velikosti
-<a id="using-the-sizing-tool" class="xliff"></a>
+##<a name="using-the-sizing-tool"></a>Použití nástroje pro změnu velikosti
 Doporučený a nejjednodušší způsob, jak určit kapacitu pro vaše nasazení ATA, je použití [nástroje pro změnu velikosti ATA](http://aka.ms/atasizingtool). Spusťte nástroj pro změnu velikosti ATA a z výsledků v excelovém souboru pomocí následujících polí určete potřebnou kapacitu ATA:
 
 - Procesor a paměť pro ATA Center: Porovnejte pole **Busy Packets/sec** (Počet paketů za sekundu při vytížení) v souboru výsledků s tabulkou pro ATA Center s polem **PACKETS PER SECOND** (Počet paketů za sekundu) v [tabulce pro ATA Center](#ata-center-sizing).
@@ -48,8 +46,7 @@ Následující části uvádějí pokyny, jak shromáždit čítač paketů za s
 
 
 
-### Nastavení velikosti ATA Center
-<a id="ata-center-sizing" class="xliff"></a>
+### <a name="ata-center-sizing"></a>Nastavení velikosti ATA Center
 Pro vypracování analýzy chování uživatelů vyžaduje ATA Center data za nejméně 30 dnů.
  
 
@@ -77,8 +74,7 @@ Pro vypracování analýzy chování uživatelů vyžaduje ATA Center data za ne
 > -   Při práci na fyzickém serveru databáze ATA vyžaduje, abyste v systému BIOS **zakázali** neuniformní přístup k paměti (NUMA). Ve vašem systému se NUMA může označovat také jako prokládání uzlů. V takovém případě bude potřeba prokládání uzlů **povolit**, abyste NUMA zakázali. Další informace najdete v dokumentaci k systému BIOS. Tento postup není relevantní, pokud ATA Center běží na virtuálním serveru.
 
 
-## Výběr vhodného typu brány pro vaše nasazení
-<a id="choosing-the-right-gateway-type-for-your-deployment" class="xliff"></a>
+## <a name="choosing-the-right-gateway-type-for-your-deployment"></a>Výběr vhodného typu brány pro vaše nasazení
 V nasazení ATA se podporuje libovolná kombinace typů ATA Gateway:
 
 - Jen komponenty ATA Gateway
@@ -106,8 +102,7 @@ Dál jsou uvedené příklady situací, kdy by řadiče domény měly být pokry
 - Datová centra ústředí (řadiče domén s více než 10 000 pakety za sekundu)
 
 
-### Velikosti pro ATA Lightweight Gateway
-<a id="ata-lightweight-gateway-sizing" class="xliff"></a>
+### <a name="ata-lightweight-gateway-sizing"></a>Velikosti pro ATA Lightweight Gateway
 
 ATA Lightweight Gateway může podporovat monitorování jednoho řadiče domény na základě objemu síťového provozu, který tento řadič generuje. 
 
@@ -131,8 +126,7 @@ ATA Lightweight Gateway může podporovat monitorování jednoho řadiče domén
 > -   Vyžaduje se minimálně 5 GB místa, ale doporučuje se 10 GB včetně místa potřebného pro binární soubory ATA, [protokoly ATA](troubleshooting-ata-using-logs.md) a [protokoly výkonu](troubleshooting-ata-using-perf-counters.md).
 
 
-### Nastavení velikosti ATA Gateway
-<a id="ata-gateway-sizing" class="xliff"></a>
+### <a name="ata-gateway-sizing"></a>Nastavení velikosti ATA Gateway
 
 Při rozhodování o tom, kolik komponent ATA Gateway nasadíte, zvažte následující problémy.
 
@@ -167,8 +161,7 @@ Aspekty zrcadlení portů můžou vyžadovat, abyste pro datové centrum nebo po
 > -   Vyžaduje se minimálně 5 GB místa, ale doporučuje se 10 GB včetně místa potřebného pro binární soubory ATA, [protokoly ATA](troubleshooting-ata-using-logs.md) a [protokoly výkonu](troubleshooting-ata-using-perf-counters.md).
 
 
-## Odhad provozu řadiče domény
-<a id="domain-controller-traffic-estimation" class="xliff"></a>
+## <a name="domain-controller-traffic-estimation"></a>Odhad provozu řadiče domény
 Existují různé nástroje, které můžete použít ke zjištění průměrného počtu paketů za sekundu vašich řadičů domény. Pokud nemáte žádné nástroje, které sledují tento čítač, můžete k získání požadovaných informací použít nástroj Sledování výkonu.
 
 Pokud chcete určit počet paketů za sekundu, proveďte na každém řadiči domény následující postup:
@@ -218,8 +211,7 @@ Pokud chcete určit počet paketů za sekundu, proveďte na každém řadiči do
 
     ![Obrázek čítače Pakety/s](media/ATA-traffic-estimation-14.png)
 
-## Viz také
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Viz také
 - [Požadavky ATA](ata-prerequisites.md)
 - [Architektura ATA](ata-architecture.md)
 - [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

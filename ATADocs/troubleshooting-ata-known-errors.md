@@ -15,7 +15,7 @@ ms.reviewer: arzinger
 ms.suite: ems
 ms.openlocfilehash: 0ded0dd064f0327f6e52f15081e2b9dce14f982b
 ms.sourcegitcommit: fa50f37b134d7579d7c310852dff60e5f1996eaa
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 07/03/2017
 ---
@@ -23,13 +23,11 @@ ms.lasthandoff: 07/03/2017
 
 
 
-# Řešení známých problémů ATA
-<a id="troubleshooting-ata-known-issues" class="xliff"></a>
+# <a name="troubleshooting-ata-known-issues"></a>Řešení známých problémů ATA
 
 Tato část podrobně popisuje možné chyby v nasazení ATA a kroky potřebné k jejich vyřešení.
 
-## Chyby komponent ATA Gateway a Lightweight Gateway
-<a id="ata-gateway-and-lightweight-gateway-errors" class="xliff"></a>
+## <a name="ata-gateway-and-lightweight-gateway-errors"></a>Chyby komponent ATA Gateway a Lightweight Gateway
 
 |Chyba|Popis|Řešení|
 |-------------|----------|---------|
@@ -52,8 +50,7 @@ Tato část podrobně popisuje možné chyby v nasazení ATA a kroky potřebné 
 |Upozornění na přerušené přenosy se zrcadlením portů při použití Lightweight Gateway na VMwaru|Pokud používáte řadiče domény na virtuálních počítačích VMware, můžou se zobrazit upozornění na **přerušené síťové přenosy se zrcadlením portů**. Toto může nastat kvůli neshodě v konfiguraci ve VMware. |Pokud se chcete těmto upozorněním vyhnout, zkontrolujte, že následující nastavení mají hodnotu 0 nebo jsou zakázaná: TsoEnable, LargeSendOffload, IPv4, TSO Offload. Zvažte také zakázání procesu IPv4 Giant TSO Offload. Další informace najdete v dokumentaci k VMware.|
 
 
-## Chyby nasazení
-<a id="deployment-errors" class="xliff"></a>
+## <a name="deployment-errors"></a>Chyby nasazení
 |Chyba|Popis|Řešení|
 |-------------|----------|---------|
 |Instalace rozhraní .Net Framework 4.6.1 se nepovedla s chybou 0x800713ec.|Na serveru nejsou nainstalované nezbytné komponenty pro .Net Framework 4.6.1. |Před instalací ATA ověřte, že jsou na serveru nainstalované aktualizace systému Windows [KB2919442](https://www.microsoft.com/download/details.aspx?id=42135) a [KB2919355](https://support.microsoft.com/kb/2919355).|
@@ -65,8 +62,7 @@ Tato část podrobně popisuje možné chyby v nasazení ATA a kroky potřebné 
 
 
 
-## Viz také
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Viz také
 - [Požadavky ATA](ata-prerequisites.md)
 - [Plánování kapacity ATA](ata-capacity-planning.md)
 - [Konfigurace shromažďování událostí](configure-event-collection.md)

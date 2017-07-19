@@ -15,15 +15,14 @@ ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 97fa1522ca43cf92416ac845b8886f2905e9981b
 ms.sourcegitcommit: fa50f37b134d7579d7c310852dff60e5f1996eaa
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 07/03/2017
 ---
 *Platí pro: Advanced Threat Analytics verze 1.8*
 
 
-# Instalace ATA – krok 1
-<a id="install-ata---step-1" class="xliff"></a>
+# <a name="install-ata---step-1"></a>Instalace ATA – krok 1
 
 >[!div class="step-by-step"]
 [Krok 2 »](install-ata-step2.md)
@@ -33,8 +32,7 @@ Tento postup instalace obsahuje pokyny pro novou instalaci ATA 1.8. Informace o 
 > [!IMPORTANT] 
 > Pokud používáte Windows 2012 R2, můžete před začátkem instalace nainstalovat na server ATA Center a na servery ATA Gateway aktualizaci KB2934520, jinak instalace ATA tuto aktualizaci nainstaluje a bude vyžadovat restart uprostřed instalace ATA.
 
-## Krok 1: Stažení a instalace ATA Center
-<a id="step-1-download-and-install-the-ata-center" class="xliff"></a>
+## <a name="step-1-download-and-install-the-ata-center"></a>Krok 1: Stažení a instalace ATA Center
 Po ověření, že server splňuje požadavky, můžete pokračovat v instalaci ATA Center.
     
 > [!NOTE]
@@ -88,8 +86,7 @@ Na serveru ATA Center proveďte tento postup.
 Nyní automaticky přejdete na stránku nastavení **Obecné**, abyste pokračovali v konfiguraci a nasazení komponent ATA Gateway.
 Protože se k webu přihlašujete pomocí IP adresy, zobrazí se upozornění související s certifikátem. To je normální a měli byste kliknout na **Pokračovat na tento web**.
 
-### Ověření instalace
-<a id="validate-installation" class="xliff"></a>
+### <a name="validate-installation"></a>Ověření instalace
 
 1.  Zkontrolujte, že je služba **Microsoft Advanced Threat Analytics Center** spuštěná.
 2.  Na ploše klikněte na zástupce **Microsoft Advanced Threat Analytics** a připojte se ke konzole ATA. Přihlaste se pomocí stejných přihlašovacích údajů, které jste použili k instalaci ATA Center.
@@ -100,8 +97,7 @@ Protože se k webu přihlašujete pomocí IP adresy, zobrazí se upozornění so
 [« Předinstalace](configure-port-mirroring.md)
 [Krok 2 »](install-ata-step2.md)
 
-## Viz také
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Viz také
 
 - [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurace shromažďování událostí](configure-event-collection.md)

@@ -15,15 +15,14 @@ ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 4f29dfcc8b18ff755f6c0dcdaa08eaa807b08072
 ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 06/30/2017
 ---
 *Platí pro: Advanced Threat Analytics verze 1.8*
 
 
-# Sestavy ATA
-<a id="ata-reports" class="xliff"></a>
+# <a name="ata-reports"></a>Sestavy ATA
 
 Část pro sestavy ATA v konzole umožňuje generovat sestavy, které poskytují informace o stavu systému obsahující informace o stavu i podezřelých aktivitách zjištěných ve vašem prostředí.
 
@@ -55,8 +54,7 @@ Nastavení naplánované sestavy:
 > Naplánované sestavy jsou doručovány e-mailem a je možné je posílat, jenom pokud jste už nakonfigurovali e-mailový server v části **Configuration** (Konfigurace). V části Notifications and Reports (Oznámení a sestavy) pak vyberte **Mail server** (Poštovní server).
 
 
-## Viz také
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Viz také
 - [Požadavky ATA](ata-prerequisites.md)
 - [Plánování kapacity ATA](ata-capacity-planning.md)
 - [Konfigurace shromažďování událostí](configure-event-collection.md)

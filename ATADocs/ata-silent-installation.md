@@ -15,7 +15,7 @@ ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 5b46d53d4e72ebe32b6e1f57960694194b71b31c
 ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 06/30/2017
 ---
@@ -23,11 +23,9 @@ ms.lasthandoff: 06/30/2017
 
 
 
-# Bezobslužná instalace ATA
-<a id="ata-silent-installation" class="xliff"></a>
+# <a name="ata-silent-installation"></a>Bezobslužná instalace ATA
 Tento článek poskytuje podrobné pokyny k bezobslužné instalaci ATA.
-## Požadavky
-<a id="prerequisites" class="xliff"></a>
+## <a name="prerequisites"></a>Požadavky
 
 ATA verze 1.8 vyžaduje instalaci rozhraní Microsoft .NET Framework 4.6.1. 
 
@@ -40,8 +38,7 @@ Při použití metody bezobslužné instalace ATA je instalační program nakonf
 Pokud chcete sledovat průběh nasazení, monitorujte instalační protokoly ATA, které jsou umístěné ve složce **%AppData%\Local\Temp**.
 
 
-## Instalace ATA Center
-<a id="install-the-ata-center" class="xliff"></a>
+## <a name="install-the-ata-center"></a>Instalace ATA Center
 
 K instalaci komponenty ACA Center použijte následující příkaz:
 
@@ -81,8 +78,7 @@ Instalace komponenty ATA Center s výchozími instalačními cestami, dvěma IP 
     "Microsoft ATA Center Setup.exe" /quiet --LicenseAccepted NetFrameworkCommandLineArguments ="/q" CenterIpAddress=192.168.0.10 CenterPort=443 CenterCertificateThumbprint= ‎"1E2079739F624148ABDF502BF9C799FCB8C7212F"
     ConsoleIpAddress=192.168.0.11  ConsoleCertificateThumbprint="G9530253C976BFA9342FD1A716C0EC94207BFD5A"
 
-## Aktualizace ATA Center
-<a id="update-the-ata-center" class="xliff"></a>
+## <a name="update-the-ata-center"></a>Aktualizace ATA Center
 
 K aktualizaci komponenty ACA Center použijte následující příkaz:
 
@@ -106,8 +102,7 @@ Při aktualizaci instalační program automaticky rozpozná, že služba ATA už
 
         "Microsoft ATA Center Setup.exe" /quiet NetFrameworkCommandLineArguments="/q"
 
-## Bezobslužná odinstalace komponenty ATA Center
-<a id="uninstall-the-ata-center-silently" class="xliff"></a>
+## <a name="uninstall-the-ata-center-silently"></a>Bezobslužná odinstalace komponenty ATA Center
 
 K provedení bezobslužné odinstalace komponenty ATA Center použijte následující příkaz:**Syntaxe**:
 
@@ -133,8 +128,7 @@ K provedení bezobslužné odinstalace komponenty ATA Center použijte následuj
 
     "Microsoft ATA Center Setup.exe" /quiet /uninstall --DeleteExistingDatabaseData
 
-## Bezobslužná instalace ATA Gateway
-<a id="ata-gateway-silent-installation" class="xliff"></a>
+## <a name="ata-gateway-silent-installation"></a>Bezobslužná instalace ATA Gateway
 K bezobslužné instalaci komponenty ACA Gateway použijte následující příkaz:
 
 **Syntaxe**:
@@ -169,8 +163,7 @@ K bezobslužné instalaci komponenty ACA Gateway použijte následující přík
     ConsoleAccountName="user@contoso.com" ConsoleAccountPassword="userpwd"
     
 
-## Aktualizace ATA Gateway
-<a id="update-the-ata-gateway" class="xliff"></a>
+## <a name="update-the-ata-gateway"></a>Aktualizace ATA Gateway
 
 K bezobslužné aktualizaci komponenty ACA Gateway použijte následující příkaz:
 
@@ -192,8 +185,7 @@ K bezobslužné aktualizaci komponenty ACA Gateway použijte následující př�
 
         Microsoft ATA Gateway Setup.exe /quiet NetFrameworkCommandLineArguments="/q"
 
-## Bezobslužná odinstalace komponenty ATA Gateway
-<a id="uninstall-the-ata-gateway-silently" class="xliff"></a>
+## <a name="uninstall-the-ata-gateway-silently"></a>Bezobslužná odinstalace komponenty ATA Gateway
 
 K provedení bezobslužné odinstalace komponenty ATA Gateway použijte následující příkaz: **Syntaxe**:
 
@@ -221,8 +213,7 @@ K provedení bezobslužné odinstalace komponenty ATA Gateway použijte následu
 
 
 
-## Viz také
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Viz také
 
 - [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurace shromažďování událostí](configure-event-collection.md)

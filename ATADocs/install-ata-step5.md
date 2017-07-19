@@ -15,7 +15,7 @@ ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 6952a239eb5f11cdfefc9ce201f9a765e61de8e8
 ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 06/30/2017
 ---
@@ -23,16 +23,14 @@ ms.lasthandoff: 06/30/2017
 
 
 
-# Instalace ATA – krok 5
-<a id="install-ata---step-5" class="xliff"></a>
+# <a name="install-ata---step-5"></a>Instalace ATA – krok 5
 
 >[!div class="step-by-step"]
 [« Krok 4](install-ata-step4.md)
 [Krok 6 »](install-ata-step6.md)
 
 
-## Krok 5. Konfigurace nastavení ATA Gateway
-<a id="step-5-configure-the-ata-gateway-settings" class="xliff"></a>
+## <a name="step-5-configure-the-ata-gateway-settings"></a>Krok 5. Konfigurace nastavení ATA Gateway
 Po instalaci komponenty ATA Gateway proveďte následující kroky a nakonfigurujte nastavení ATA Gateway.
 
 1.  V konzole ATA přejděte do sekce **Konfigurace** a v části **Systém** vyberte možnost **Gateway**.
@@ -70,8 +68,7 @@ Po instalaci komponenty ATA Gateway proveďte následující kroky a nakonfiguru
 5. Klikněte na **Uložit**.
 
 
-## Ověření instalací
-<a id="validate-installations" class="xliff"></a>
+## <a name="validate-installations"></a>Ověření instalací
 Chcete-li ověřit, že ATA Gateway je úspěšně nasazená, zkontrolujte následující:
 
 1.  Zkontrolujte, že je služba **Microsoft Advanced Threat Analytics Gateway** spuštěná. Po uložení nastavení ATA Gateway může trvat několik minut, než se služba spustí.
@@ -91,8 +88,7 @@ Chcete-li ověřit, že ATA Gateway je úspěšně nasazená, zkontrolujte násl
 [« Krok 4](install-ata-step4.md)
 [Krok 6 »](install-ata-step6.md)
 
-## Viz také
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Viz také
 
 - [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurace shromažďování událostí](configure-event-collection.md)

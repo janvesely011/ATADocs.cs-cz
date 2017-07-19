@@ -15,7 +15,7 @@ ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 19eee0466269bbc2255d3a83e2f8c073057ba356
 ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 06/30/2017
 ---
@@ -23,13 +23,11 @@ ms.lasthandoff: 06/30/2017
 
 
 
-# Změna konfigurace ATA – heslo připojení k doméně
-<a id="change-ata-configuration---domain-connectivity-password" class="xliff"></a>
+# <a name="change-ata-configuration---domain-connectivity-password"></a>Změna konfigurace ATA – heslo připojení k doméně
 
 
 
-## Změna hesla připojení k doméně
-<a id="change-the-domain-connectivity-password" class="xliff"></a>
+## <a name="change-the-domain-connectivity-password"></a>Změna hesla připojení k doméně
 Pokud změníte heslo připojení k doméně, ujistěte se, že je zadané heslo správné. Pokud není, služba ATA Gateway se zastaví.
 
 Pokud máte podezření, že se to stalo, vyhledejte v souboru Microsoft.Tri.Gateway-Errors.log na ATA Gateway toto: `The supplied credential is invalid.`
@@ -56,7 +54,6 @@ Když to chcete opravit, podle následujícího postupu aktualizujte na ATA Cent
 
 
 
-## Viz také
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Viz také
 - [Práce s konzolou ATA](working-with-ata-console.md)
 - [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
