@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 377a3c81-5c1d-486f-8942-85249aacf560
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 112ee57f79b20b4e42b15c6fdc4566bbdcebe29f
-ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
+ms.openlocfilehash: 174918812562b9bfe892fcde90d92e208b26ffc3
+ms.sourcegitcommit: 42ce07e3207da10e8dd7585af0e34b51983c4998
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/25/2017
 ---
 *Platí pro: Advanced Threat Analytics verze 1.8*
 
@@ -34,6 +34,7 @@ Výchozí a nejzákladnější možnost pro dotazování databáze je použití 
 
 2.  Spusťte `mongo.exe ATA`. Ujistěte se, že jste text ATA zadali velkými písmeny.
 
+> [!div class="mx-tableFixed"]
 |Postupy|Syntaxe|Poznámky|
 |-------------|----------|---------|
 |Kontrola kolekcí v databázi|`show collections`|Užitečné jako koncový test ke zjištění, že se provoz zapisuje do databáze a že ATA přijímá událost 4776.|
