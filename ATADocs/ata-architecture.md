@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 892b16d2-58a6-49f9-8693-1e5f69d8299c
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 4d95e5b13d06ea0963b7cac129be4eb1458e5d4c
-ms.sourcegitcommit: 53b56220fa761671442da273364bdb3d21269c9e
+ms.openlocfilehash: 5410f706e84517eb964e991deeb21001a09d0cef
+ms.sourcegitcommit: 42ce07e3207da10e8dd7585af0e34b51983c4998
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2017
+ms.lasthandoff: 07/25/2017
 ---
 *Platí pro: Advanced Threat Analytics verze 1.8*
 
@@ -146,6 +146,7 @@ Pokud následkem toho komponentě ATA Lightweight Gateway dojdou prostředky, pr
 
 V následující tabulce je uvedený příklad řadiče domény s dostatečným objemem dostupných výpočetních prostředků pro povolení vyšší kvóty, než je aktuálně potřeba, takže se monitoruje veškerý provoz:
 
+> [!div class="mx-tableFixed"]
 ||||||
 |-|-|-|-|-|
 |Active Directory (Lsass.exe)|ATA Lightweight Gateway (Microsoft.Tri.Gateway.exe)|Různé (ostatní procesy) |Kvóta pro ATA Lightweight Gateway|Omezení brány|
@@ -153,6 +154,7 @@ V následující tabulce je uvedený příklad řadiče domény s dostatečným 
 
 Pokud Active Directory potřebuje víc výpočetních prostředků, kvóta vyžadovaná komponentou ATA Lightweight Gateway se sníží. V následujícím příkladu ATA Lightweight Gateway potřebuje víc, než je přidělená kvóta, a omezí některý provoz (monitoruje provoz jenom částečně):
 
+> [!div class="mx-tableFixed"]
 ||||||
 |-|-|-|-|-|
 |Active Directory (Lsass.exe)|ATA Lightweight Gateway (Microsoft.Tri.Gateway.exe)|Různé (ostatní procesy) |Kvóta pro ATA Lightweight Gateway|Omezení brány|

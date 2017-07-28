@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 06/28/2017
+ms.date: 07/20/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 5b46d53d4e72ebe32b6e1f57960694194b71b31c
-ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
+ms.openlocfilehash: 7e130da2b5a177658e176a428101c11d02bc2a3f
+ms.sourcegitcommit: 42ce07e3207da10e8dd7585af0e34b51983c4998
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/25/2017
 ---
 *Platí pro: Advanced Threat Analytics verze 1.8*
 
@@ -49,6 +49,7 @@ K instalaci komponenty ACA Center použijte následující příkaz:
     
 **Možnosti instalace**:
 
+> [!div class="mx-tableFixed"]
 |Název|Syntaxe|Povinné pro bezobslužnou instalaci?|Popis|
 |-------------|----------|---------|---------|
 |Quiet|/quiet|Ano|Spustí instalační program, který nezobrazuje žádné uživatelské rozhraní ani výzvy.|
@@ -58,6 +59,7 @@ K instalaci komponenty ACA Center použijte následující příkaz:
 
 **Parametry instalace**:
 
+> [!div class="mx-tableFixed"]
 |Název|Syntaxe|Povinné pro bezobslužnou instalaci?|Popis|
 |-------------|----------|---------|---------|
 |InstallationPath|InstallationPath="<InstallPath>"|Ne|Nastavuje cestu pro instalaci binárních souborů ATA. Výchozí cesta: C:\Program Files\Microsoft Advanced Threat Analytics\Center|
@@ -89,6 +91,7 @@ K aktualizaci komponenty ACA Center použijte následující příkaz:
 
 **Možnosti instalace**:
 
+> [!div class="mx-tableFixed"]
 |Název|Syntaxe|Povinné pro bezobslužnou instalaci?|Popis|
 |-------------|----------|---------|---------|
 |Quiet|/quiet|Ano|Spustí instalační program, který nezobrazuje žádné uživatelské rozhraní ani výzvy.|
@@ -111,6 +114,7 @@ K provedení bezobslužné odinstalace komponenty ATA Center použijte následuj
 
 **Možnosti instalace**:
 
+> [!div class="mx-tableFixed"]
 |Název|Syntaxe|Povinné pro bezobslužnou odinstalaci?|Popis|
 |-------------|----------|---------|---------|
 |Quiet|/quiet|Ano|Spustí odinstalační program, který nezobrazuje žádné uživatelské rozhraní ani výzvy.|
@@ -119,6 +123,7 @@ K provedení bezobslužné odinstalace komponenty ATA Center použijte následuj
 
 **Parametry instalace**:
 
+> [!div class="mx-tableFixed"]
 |Název|Syntaxe|Povinné pro bezobslužnou odinstalaci?|Popis|
 |-------------|----------|---------|---------|
 |DeleteExistingDatabaseData|DeleteExistingDatabaseData|Ne|Odstraní všechny soubory ve stávající databázi.|
@@ -134,7 +139,7 @@ K bezobslužné instalaci komponenty ACA Gateway použijte následující přík
 **Syntaxe**:
 
     Microsoft ATA Gateway Setup.exe [/quiet] [/Help] [NetFrameworkCommandLineArguments ="/q"] 
-    [GatewayCertificateThumbprint="<CertThumbprint >"] [ConsoleAccountName="<AccountName>"] 
+    [ConsoleAccountName="<AccountName>"] 
     [ConsoleAccountPassword="<AccountPassword>"]
 
 > [!NOTE]
@@ -143,6 +148,7 @@ K bezobslužné instalaci komponenty ACA Gateway použijte následující přík
 
 **Možnosti instalace**:
 
+> [!div class="mx-tableFixed"]
 |Název|Syntaxe|Povinné pro bezobslužnou instalaci?|Popis|
 |-------------|----------|---------|---------|
 |Quiet|/quiet|Ano|Spustí instalační program, který nezobrazuje žádné uživatelské rozhraní ani výzvy.|
@@ -151,9 +157,9 @@ K bezobslužné instalaci komponenty ACA Gateway použijte následující přík
 
 **Parametry instalace**:
 
+> [!div class="mx-tableFixed"]
 |Název|Syntaxe|Povinné pro bezobslužnou instalaci?|Popis|
 |-------------|----------|---------|---------|
-|GatewayCertificateThumbprint|GatewayCertificateThumbprint="<CertThumbprint >"|Ne|Nastaví kryptografický otisk certifikátu pro službu ATA Center. Tento certifikát slouží k zabezpečení komunikace mezi komponentami ATA Center a ATA Gateway. Pokud není nastavený, instalace vytvoří certifikát podepsaný svým držitelem (self-signed certificate).|
 |ConsoleAccountName|ConsoleAccountName="<AccountName>"|Ano|Nastaví název uživatelského účtu (user@domain.com), který se použije k registraci komponenty ATA Gateway ve službě ATA Center.|
 |ConsoleAccountPassword|ConsoleAccountPassword="<AccountPassword>"|Ano|Nastaví heslo uživatelského účtu (user@domain.com), který se použije k registraci komponenty ATA Gateway ve službě ATA Center.|
 
@@ -174,6 +180,7 @@ K bezobslužné aktualizaci komponenty ACA Gateway použijte následující př�
 
 **Možnosti instalace**:
 
+> [!div class="mx-tableFixed"]
 |Název|Syntaxe|Povinné pro bezobslužnou instalaci?|Popis|
 |-------------|----------|---------|---------|
 |Quiet|/quiet|Ano|Spustí instalační program, který nezobrazuje žádné uživatelské rozhraní ani výzvy.|
@@ -193,6 +200,7 @@ K provedení bezobslužné odinstalace komponenty ATA Gateway použijte následu
     
 **Možnosti instalace**:
 
+> [!div class="mx-tableFixed"]
 |Název|Syntaxe|Povinné pro bezobslužnou odinstalaci?|Popis|
 |-------------|----------|---------|---------|
 |Quiet|/quiet|Ano|Spustí odinstalační program, který nezobrazuje žádné uživatelské rozhraní ani výzvy.|
