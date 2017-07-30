@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 1bf264d9-9697-44b5-9533-e1c498da4f07
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 3d687087dd9e1ae7f7642f9fdd7d89420f3bec27
-ms.sourcegitcommit: fa50f37b134d7579d7c310852dff60e5f1996eaa
+ms.openlocfilehash: 7067477066a2341fa15b2b0d283b2d7721239d5e
+ms.sourcegitcommit: 42ce07e3207da10e8dd7585af0e34b51983c4998
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 07/25/2017
 ---
 *Platí pro: Advanced Threat Analytics verze 1.8*
 
@@ -34,19 +34,22 @@ Na úspěšně přihlášení ke konzole ATA je nutné se přihlásit jako uživ
 
 ## <a name="logging-into-the-ata-console"></a>Přihlášení ke konzole ATA
 
+>[!NOTE]
+ > Od verze ATA 1.8 se proces přihlašování ke konzole ATA provádí pomocí jednotného přihlašování.
+
 1. Na serveru ATA Center klikněte na ikonu **konzoly Microsoft ATA** na ploše nebo otevřete prohlížeč a vyhledejte konzolu ATA.
 
     ![Ikona serveru ATA](media/ata-server-icon.png)
 
->[!NOTE]
-> Můžete také otevřít prohlížeč z komponenty ATA Center nebo ATA Gateway a vyhledat IP adresu, kterou jste při instalaci komponenty ATA Center nakonfigurovali pro konzolu ATA.    
+ >[!NOTE]
+ > Můžete také otevřít prohlížeč z komponenty ATA Center nebo ATA Gateway a vyhledat IP adresu, kterou jste při instalaci komponenty ATA Center nakonfigurovali pro konzolu ATA.    
 
 2.  Pokud jsou počítač, na kterém je nainstalovaná komponenta ATA Center, a počítač, ze kterého se snažíte získat přístup ke konzole ATA, připojené k doméně, podporuje ATA jednotné přihlašování integrované s ověřováním Windows, takže pokud už jste přihlášení k počítači, použije ATA tento token pro přihlášení ke konzole ATA. K přihlášení můžete použít také čipovou kartu. Oprávnění, která máte v ATA, budou odpovídat vaší [roli správce](ata-role-groups.md).
 
-> [!NOTE]
-> K počítači, ze kterého chcete získat přístup ke konzole ATA, se přihlaste pomocí uživatelského jména a hesla správce ATA. Alternativně můžete spustit prohlížeč jako jiný uživatel nebo se odhlásit z Windows a přihlásit se jako uživatel s rolí správce ATA. Pokud chcete, aby vás konzola ATA vyzvala k zadání přihlašovacích údajů, použijte pro přístup ke konzole IP adresu.
+ > [!NOTE]
+ > K počítači, ze kterého chcete získat přístup ke konzole ATA, se přihlaste pomocí uživatelského jména a hesla správce ATA. Alternativně můžete spustit prohlížeč jako jiný uživatel nebo se odhlásit z Windows a přihlásit se jako uživatel s rolí správce ATA. Pokud chcete, aby vás konzola ATA vyzvala k zadání přihlašovacích údajů, použijte pro přístup ke konzole IP adresu.
 
-Pokud chcete použít jednotné přihlašování, zajistěte, aby byl web konzoly ATA definovaný v prohlížeči jako místní intranetový server. K přístupu pak můžete použít krátký název nebo locahost.
+3. Pokud chcete použít jednotné přihlašování, zajistěte, aby byl web konzoly ATA definovaný v prohlížeči jako místní intranetový server. K přístupu pak můžete použít krátký název nebo locahost.
 
 > [!NOTE]
 > Kromě protokolování všech podezřelých aktivit a upozornění na stav se každá změna konfigurace, kterou uděláte v konzole ATA, audituje v protokolu událostí Windows na počítači s komponentou ATA Center, a to v oblasti **Protokoly aplikací a služeb** > **Microsoft ATA**. Stejně tak se audituje každé přihlášení ke konzole ATA.<br></br>  Do protokolu událostí Windows na počítači s komponentou ATA Gateway se protokoluje také konfigurace, která tuto komponentu ovlivňuje. 
@@ -113,7 +116,7 @@ Profil, který ATA nemůže úplně vyřešit, se označí ikonou napůl vyplně
 
 ### <a name="sensitive-groups"></a>Citlivé skupiny
 
-Následující seznam skupin považuje ATA za **citlivé**. Jedná se o skupiny, které budou označeny příznakem, že mají oprávnění ke správě, a vyvolají upozornění odpovídající citlivým účtům:
+Následující seznam skupin považuje ATA za **citlivé**. Za citlivou se považuje každá entita, která je členem těchto skupin:
 
 - Enterprise Read Only Domain Controllers 
 - Domain Admins 

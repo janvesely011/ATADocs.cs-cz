@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 7/3/2017
+ms.date: 7/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 0ded0dd064f0327f6e52f15081e2b9dce14f982b
-ms.sourcegitcommit: fa50f37b134d7579d7c310852dff60e5f1996eaa
+ms.openlocfilehash: 28b3bca7e84213b0f41bd8e2de61c006592819d5
+ms.sourcegitcommit: 42ce07e3207da10e8dd7585af0e34b51983c4998
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 07/25/2017
 ---
 *Platí pro: Advanced Threat Analytics verze 1.8*
 
@@ -29,6 +29,7 @@ Tato část podrobně popisuje možné chyby v nasazení ATA a kroky potřebné 
 
 ## <a name="ata-gateway-and-lightweight-gateway-errors"></a>Chyby komponent ATA Gateway a Lightweight Gateway
 
+> [!div class="mx-tableFixed"]
 |Chyba|Popis|Řešení|
 |-------------|----------|---------|
 |System.DirectoryServices.Protocols.LdapException: Došlo k místní chybě|Nepovedlo se ověřit ATA Gateway na řadiči domény.|1. Ověřte, že záznam DNS řadiče domény je na serveru DNS správně nakonfigurovaný. <br>2. Ověřte, že čas komponenty ATA Gateway je synchronizovaný s časem řadiče domény.|
@@ -42,20 +43,28 @@ Tato část podrobně popisuje možné chyby v nasazení ATA a kroky potřebné 
 |Chyba [Layout] System.OutOfMemoryException: Vyvolala se výjimka typu System.OutOfMemoryException.|ATA Gateway nemá dost paměti.|Zvětšete velikost dostupné paměti na řadiči domény.|
 |Spuštění živého příjemce se nepovedlo ---> Microsoft.Opn.Runtime.Monitoring.MessageSessionException: Poskytovatel události PEFNDIS není připravený.|Modul PEF (Message Analyzer) se nenainstaloval správně.|Pokud používáte Hyper-V, zkuste upgradovat integrační služby Hyper-V, nebo se se žádostí o alternativní řešení obraťte na podporu.|
 |Instalace se nepovedla s chybou: 0x80070652|Ve vašem počítači čekají na dokončení další instalace.|Počkejte na dokončení ostatních instalací a v případě potřeby restartujte počítač.|
-|System.InvalidOperationException: Instance 'Microsoft.Tri.Gateway' v určené kategorii neexistuje.|Pro názvy procesů v bráně ATA byl povolen identifikátor PID|PID v názvech procesů zakážete pomocí [KB281884](https://support.microsoft.com/en-us/kb/281884)|
-|System.InvalidOperationException: Kategorie neexistuje.|Čítače můžou být v registru zakázané|Čítače výkonu znovu sestavíte pomocí [KB2554336](https://support.microsoft.com/en-us/kb/2554336)|
+|System.InvalidOperationException: Instance 'Microsoft.Tri.Gateway' v určené kategorii neexistuje.|Pro názvy procesů v bráně ATA byl povolen identifikátor PID|PID v názvech procesů zakážete pomocí [KB281884](https://support.microsoft.com/kb/281884)|
+|System.InvalidOperationException: Kategorie neexistuje.|Čítače můžou být v registru zakázané|Čítače výkonu znovu sestavíte pomocí [KB2554336](https://support.microsoft.com/kb/2554336)|
 |System.ApplicationException: Není možné spustit relaci ETW MMA-ETW-Livecapture-a4f595bd-f567-49a7-b963-20fa4e370329|V souboru hostitelů se nachází položka hostitele odkazující na krátký název počítače|Odeberte položku hostitele ze souboru C:\Windows\System32\drivers\etc\HOSTS nebo ji změňte na FQDN.|
 |System.IO.IOException: Ověření se nezdařilo, protože vzdálená strana uzavřela přenosový stream.|TLS 1.0 je zakázaná na bráně ATA Gateway, ale rozhraní .NET je nastavené na použití protokolu TLS 1.2.|Použijte jednu z následujících možností: </br> Povolení protokolu TLS 1.0 na bráně ATA Gateway </br>Protokol TLS 1.2 na rozhraní .NET povolíte nastavením klíčů registru tak, aby používaly výchozí nastavení operačního systému pro LLS a TLS, a to takto: `[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001` </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`|
 |System.TypeLoadException: Nebylo možné načíst typ Microsoft.Opn.Runtime.Values.BinaryValueBufferManager ze sestavení Microsoft.Opn.Runtime, Verze=4.0.0.0, Jazyková verze=neutrální, PublicKeyToken=31bf3856ad364e35|Komponentě ATA Gateway se nepodařilo načíst požadované parsovací soubory.|Zkontrolujte, jestli je nainstalovaný Microsoft Message Analyzer. Instalace nástroje Message Analyzer společně s komponentami ATA Gateway / Lightweight Gateway není podporovaná. Odinstalujte Message Analyzer a restartujte službu Gateway.|
 |Upozornění na přerušené přenosy se zrcadlením portů při použití Lightweight Gateway na VMwaru|Pokud používáte řadiče domény na virtuálních počítačích VMware, můžou se zobrazit upozornění na **přerušené síťové přenosy se zrcadlením portů**. Toto může nastat kvůli neshodě v konfiguraci ve VMware. |Pokud se chcete těmto upozorněním vyhnout, zkontrolujte, že následující nastavení mají hodnotu 0 nebo jsou zakázaná: TsoEnable, LargeSendOffload, IPv4, TSO Offload. Zvažte také zakázání procesu IPv4 Giant TSO Offload. Další informace najdete v dokumentaci k VMware.|
-
+|System.Net.WebException: Vzdálený server vrátil chybu: (407) Vyžadováno ověřování proxy serveru|Komunikaci mezi ATA Gateway a ATA Center ruší proxy server.|Vypněte proxy server na počítači s ATA Gateway. <br></br>Nastavení proxy serveru můžou záviset na konkrétním účtu.|
+|System.IO.DirectoryNotFoundException: Systém nemůže nalézt zadanou cestu. (Výjimka na základě hodnoty HRESULT: 0x80070003)|Jednu nebo více služeb potřebných pro provoz ATA se nepodařilo spustit.|Spusťte tyto služby: <br></br>Výstrahy a protokolování výkonu, Plánovač úloh.|
 
 ## <a name="deployment-errors"></a>Chyby nasazení
+> [!div class="mx-tableFixed"]
 |Chyba|Popis|Řešení|
 |-------------|----------|---------|
 |Instalace rozhraní .Net Framework 4.6.1 se nepovedla s chybou 0x800713ec.|Na serveru nejsou nainstalované nezbytné komponenty pro .Net Framework 4.6.1. |Před instalací ATA ověřte, že jsou na serveru nainstalované aktualizace systému Windows [KB2919442](https://www.microsoft.com/download/details.aspx?id=42135) a [KB2919355](https://support.microsoft.com/kb/2919355).|
 |System.Threading.Tasks.TaskCanceledException: Úloha byla zrušena.|Procesu nasazení vypršel časový limit, protože komponenta ATA Center nebyla dosažitelná.|1.    Zkontrolujte síťové připojení komponenty ATA Center tím, že na ni přejdete pomocí její IP adresy. <br></br>2.    Zkontrolujte konfiguraci proxy serveru nebo firewallu.|
-|System.Net.Http.HttpRequestException: Při odesílání žádosti došlo k chybě. ---> System.Net.WebException: Vzdálený server vrátil chybu: (407) Je vyžadováno ověřování serverem proxy.|Procesu nasazení vypršel časový limit, protože kvůli chybné konfiguraci proxy serveru nebyla komponenta ATA Center dosažitelná.|Před nasazením zakažte konfiguraci proxy serveru a pak ji znovu povolte. Alternativně můžete v proxy serveru nakonfigurovat výjimku.|
+|System.Net.Http.HttpRequestException: Při odesílání žádosti došlo k chybě. ---> System.Net.WebException: Vzdálený server vrátil chybu: (407) Vyžadováno ověřování proxy serveru|Procesu nasazení vypršel časový limit, protože kvůli chybné konfiguraci proxy serveru nebyla komponenta ATA Center dosažitelná.|Před nasazením zakažte konfiguraci proxy serveru a pak ji znovu povolte. Alternativně můžete v proxy serveru nakonfigurovat výjimku.|
+
+## <a name="ata-gateway-and-lightweight-gateway-issues"></a>Problémy související s ATA Gateway a Lightweight Gateway
+
+> [!div class="mx-tableFixed"]
+|Problém|Popis|Řešení|
+|-------------|----------|---------|
 |Z řadiče domény se nepřijímá žádný provoz, jsou ale pozorována monitorovací upozornění|    Z řadiče domény nebyl pomocí zrcadlení portů přes ATA Gateway přijat žádný provoz|U síťové karty pro zachytávání na ATA Gateway zakažte v oblasti **Upřesnit nastavení** tyto funkce:<br></br>Slučování příjmových segmentů (IPv4)<br></br>Slučování příjmových segmentů (IPv6)|
 
 
