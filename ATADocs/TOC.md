@@ -1,7 +1,7 @@
 # Porozumění a prozkoumávání
 ## [Co je Microsoft Advanced Threat Analytics?](what-is-ata.md)
 ## [Jaké hrozby ATA detekuje?](ata-threats.md)
-## Poznámky k verzi ATA
+## Co je nového v ATA?
 ### [Novinky ATA verze 1.8](whats-new-version-1.8.md)
 #### [Aktualizace na ATA 1.8 – průvodce migrací](ata-update-1.8-migration-guide.md)
 ### [Novinky ATA verze 1.7](whats-new-version-1.7.md)
@@ -28,19 +28,19 @@
 ### [Krok 4: Instalace ATA Gateway](install-ata-step4.md)
 ### [Krok 5: Konfigurace ATA Gateway](install-ata-step5.md)
 ### [Krok 6: Shromažďování událostí a síť VPN](install-ata-step6.md)
-### [Krok 6: Vyloučení a honeytoken](install-ata-step6.md)
+### [Krok 7 vyloučení a Honeytokenu](install-ata-step7.md)
 ### [Bezobslužná instalace](ata-silent-installation.md)
-# Použití
-## [Změna konfigurace ATA Center](modifying-ata-center-configuration.md)
-## [Změna hesla připojení k doméně](modifying-ata-config-dcpassword.md)
+# Použijte
 ## [Práce s konzolou ATA](working-with-ata-console.md)
-## [Skupiny rolí ATA](ata-role-groups.md)
-## [Nastavení e-mailového serveru a serveru Syslog](setting-syslog-email-server-settings.md)
+## [Práce s podezřelými aktivitami](working-with-suspicious-activities.md)
+###[Vyloučení entity z detekce](excluding-entities-from-detections.md)
 ## [Nastavení oznámení ATA](setting-ata-alerts.md)
-## [Práce s nastavením detekce](working-with-detection-settings.md)
 ## [Sestavy ATA](reports.md)
 ## [ATA Health Center](ata-health-center.md)
-## [Práce s podezřelými aktivitami](working-with-suspicious-activities.md)
+## [Skupiny rolí ATA](ata-role-groups.md)
+## [Změna konfigurace ATA Center](modifying-ata-center-configuration.md)
+## [Změna hesla připojení k doméně](modifying-ata-config-dcpassword.md)
+## [Nastavení e-mailového serveru a serveru Syslog](setting-syslog-email-server-settings.md)
 ## [Správa databáze ATA](ata-database-management.md)
 ## [Export/import konfigurace ATA](ata-configuration-file.md)
 ## [Správa telemetrie ATA](manage-telemetry-settings.md)
