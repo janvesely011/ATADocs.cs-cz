@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 7/2/2017
+ms.date: 8/2/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 14b0d68ce797eeaa99c9e067f7f8caacee1a7b74
-ms.sourcegitcommit: 3cd268cf353ff8bc3d0b8f9a8c10a34353d1fcf1
+ms.openlocfilehash: 0a9d92e5851f1cf64c5e4b4e1ee57d7ee4562d96
+ms.sourcegitcommit: 7bc04eb4d004608764b3ded1febf32bc4ed020be
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/16/2017
+ms.lasthandoff: 08/02/2017
 ---
 *Platí pro: Advanced Threat Analytics verze 1.8*
 
@@ -30,7 +30,7 @@ Tento článek popisuje požadavky pro úspěšné nasazení ATA ve vašem prost
 > Informace týkající se plánování prostředků a kapacity najdete v tématu [Plánování kapacity ATA](ata-capacity-planning.md).
 
 
-Řešení ATA se skládá z těchto komponent: ATA Center, ATA Gateway a/nebo ATA Lightweight Gateway. Další informace o komponentách ATA najdete v tématu [Architektura ATA](ata-architecture.md).
+ATA se skládá z komponenty ATA Center, ATA Gateway nebo ATA Lightweight Gateway. Další informace o komponentách ATA najdete v tématu [Architektura ATA](ata-architecture.md).
 
 Systém ATA funguje na hranici doménové struktury ve službě Active Directory a podporuje funkční úroveň doménové struktury (FFL) v systémech Windows 2003 a novějších.
 
@@ -51,12 +51,12 @@ Systém ATA funguje na hranici doménové struktury ve službě Active Directory
 V této části jsou uvedené informace, které byste měli získat, a účty a síťové entity, které byste měli mít před zahájením instalace ATA.
 
 
--   Uživatelský účet a heslo s přístupem pro čtení ke všem objektům v doménách, které se budou monitorovat.
+-   Uživatelský účet a heslo s přístupem pro čtení pro všechny objekty v monitorovaném domén.
 
     > [!NOTE]
     > Pokud jste pro různé organizační jednotky (OU) ve vaší doméně nastavili vlastní seznamy ACL, ujistěte se, že vybraný uživatel má pro tyto organizační jednotky oprávnění ke čtení.
 
--   Neinstalujte na ATA Gateway ani Lightweight Gateway nástroj Microsoftu Message Analyzer. Ovladač nástroje Message Analyzer koliduje s ovladači komponent ATA Gateway a Lightweight Gateway. Pokud na komponentě ATA Gateway spustíte Wireshark a následně zastavíte jeho zachytávání, budete muset restartovat službu Microsoft Advanced Threat Analytics Gateway. Když to neuděláte, nebude brána zachytávat žádný provoz. Wireshark běžící na komponentě ATA Lightweight Gateway nijak nenarušuje její činnost.
+-   Neinstalujte Microsoft Message Analyzer na ATA Gateway nebo Lightweight Gateway. Ovladač nástroje Message Analyzer koliduje s ovladači komponent ATA Gateway a Lightweight Gateway. Pokud na komponentě ATA Gateway spustíte Wireshark a následně zastavíte jeho zachytávání, budete muset restartovat službu Microsoft Advanced Threat Analytics Gateway. Pokud ne, brána zastaví zachycení provozu. Wireshark běžící na komponentě ATA Lightweight Gateway nijak nenarušuje její činnost.
 
 -    Doporučené: Uživatel by měl mít ke kontejneru odstraněných objektů oprávnění jen pro čtení. Díky tomu dokáže ATA detekovat hromadné odstranění objektů v doméně. Informace o konfiguraci oprávnění jen pro čtení pro kontejner odstraněných objektů najdete v části **Změna oprávnění pro kontejner odstraněných objektů** v tématu [Zobrazení nebo nastavení oprávnění pro objekt adresáře](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx).
 
@@ -94,7 +94,7 @@ Server ATA Center, servery ATA Gateway a řadiče domény musí být vzájemně 
 Měli byste mít:
 -   Alespoň jeden síťový adaptér (pokud používáte fyzický server v prostředí sítě VLAN, doporučujeme použít dva síťové adaptéry)
 
--   IP adresa pro komunikaci mezi komponentami ATA Center a ATA Gateway, která je zašifrovaná pomocí SSL na portu 443. 
+-   IP adresa pro komunikaci mezi komponentami ATA Center a ATA Gateway, která je zašifrovaná pomocí SSL na portu 443. (Služba ATA se váže k všechny IP adresy, které ATA Center má na portu 443.)
 
 ### <a name="ports"></a>Porty
 Následující tabulka uvádí minimální porty, které musí být otevřené, aby služba ATA Center fungovala správně.
@@ -114,19 +114,23 @@ Následující tabulka uvádí minimální porty, které musí být otevřené, 
 |**Přihlašování k síti** (volitelné při připojení k doméně)|TCP a UDP|445|Řadiče domény|Odchozí|
 |**Čas Windows** (volitelné při připojení k doméně)|UDP|123|Řadiče domény|Odchozí|
 
+> [!NOTE]
+> LDAP je potřeba otestovat přihlašovacích údajů mezi komponenty ATA Gateway a řadiče domény. Varlatech provést z ATA Center na řadič domény k testování platnosti tyto přihlašovací údaje, po kterých ATA Gateway využívá LDAP jako součást normální komunikace.
+
+
 ### <a name="certificates"></a>Certifikáty
 Zkontrolujte, jestli ATA Center má přístup k distribučnímu bodu CRL. Pokud služby ATA Gateway nemají přístup k internetu, použijte [ruční import seznamu CRL](https://technet.microsoft.com/library/aa996972%28v=exchg.65%29.aspx) a dbejte na to, abyste nainstalovali všechny distribuční body CRL pro celý řetězec.
 
 K usnadnění instalace ATA můžete během instalace nainstalovat certifikáty podepsané jejich držiteli. Po nasazení můžete certifikát podepsaný svým držitelem nahradit certifikátem certifikační autority, který bude používat ATA Gateway.<br>
-> [!NOTE]
-> Jako typ zprostředkovatele certifikátu můžete použít zprostředkovatele kryptografických služeb (CSP) nebo zprostředkovatele úložiště klíčů (KSP).
 
-
-> Použití automatického obnovení certifikátu není podporované.
+> [!WARNING]
+> - Proces obnovení existujícího certifikátu není podporována. Jediný způsob, jak obnovit certifikát, je vytvoření nového certifikátu a konfiguraci ATA na použití nového certifikátu.
 
 
 > [!NOTE]
-> Pokud budete ke konzole ATA přistupovat z jiných počítačů, zkontrolujte, že tyto počítače důvěřují certifikátu používanému konzolou ATA, jinak se před ještě zobrazením přihlašovací stránky zobrazí upozornění, že došlo k potížím s certifikátem zabezpečení webu.
+> - Jako typ zprostředkovatele certifikátu můžete použít zprostředkovatele kryptografických služeb (CSP) nebo zprostředkovatele úložiště klíčů (KSP).
+> - Certifikát ATA Center by neměl být renewe. Než jeho platnost vyprší, je správný způsob obnovte si ho vytvořit nový certifikát a vyberte nový certifikát. 
+> - Pokud budete ke konzole ATA přistupovat z jiných počítačů, zkontrolujte, že tyto počítače důvěřují certifikátu používanému konzolou ATA, jinak se před ještě zobrazením přihlašovací stránky zobrazí upozornění, že došlo k potížím s certifikátem zabezpečení webu.
 
 ## <a name="ata-gateway-requirements"></a>Požadavky na ATA Gateway
 V této části je uveden seznam požadavků pro ATA Gateway.
