@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 7/23/2017
+ms.date: 7/30/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 28b3bca7e84213b0f41bd8e2de61c006592819d5
-ms.sourcegitcommit: 42ce07e3207da10e8dd7585af0e34b51983c4998
+ms.openlocfilehash: 734455b06514cadb232916b8db76e47b8bf3e67a
+ms.sourcegitcommit: e7f83eb636db00333fe3965324a10a2ef5e2beba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/25/2017
+ms.lasthandoff: 07/30/2017
 ---
 *Platí pro: Advanced Threat Analytics verze 1.8*
 
@@ -51,6 +51,7 @@ Tato část podrobně popisuje možné chyby v nasazení ATA a kroky potřebné 
 |Upozornění na přerušené přenosy se zrcadlením portů při použití Lightweight Gateway na VMwaru|Pokud používáte řadiče domény na virtuálních počítačích VMware, můžou se zobrazit upozornění na **přerušené síťové přenosy se zrcadlením portů**. Toto může nastat kvůli neshodě v konfiguraci ve VMware. |Pokud se chcete těmto upozorněním vyhnout, zkontrolujte, že následující nastavení mají hodnotu 0 nebo jsou zakázaná: TsoEnable, LargeSendOffload, IPv4, TSO Offload. Zvažte také zakázání procesu IPv4 Giant TSO Offload. Další informace najdete v dokumentaci k VMware.|
 |System.Net.WebException: Vzdálený server vrátil chybu: (407) Vyžadováno ověřování proxy serveru|Komunikaci mezi ATA Gateway a ATA Center ruší proxy server.|Vypněte proxy server na počítači s ATA Gateway. <br></br>Nastavení proxy serveru můžou záviset na konkrétním účtu.|
 |System.IO.DirectoryNotFoundException: Systém nemůže nalézt zadanou cestu. (Výjimka na základě hodnoty HRESULT: 0x80070003)|Jednu nebo více služeb potřebných pro provoz ATA se nepodařilo spustit.|Spusťte tyto služby: <br></br>Výstrahy a protokolování výkonu, Plánovač úloh.|
+|System.Net.WebException: Vzdálený server vrátil chybu: (403) zakázán|ATA Gateway nebo Lightweight Gateway může bylo zakázáno z navazování připojení HTTP, protože komponenty ATA Center není důvěryhodný.|Přidejte název pro rozhraní NetBIOS a plně kvalifikovaný název domény pro ATA Center do seznamu důvěryhodných webů a vymažte mezipaměť na Interne Explorer (nebo na název komponenty ATA Center jako zadaný v konfiguraci, pokud je nakonfigurované se liší od pro rozhraní NetBIOS nebo plně kvalifikovaný název domény).|
 
 ## <a name="deployment-errors"></a>Chyby nasazení
 > [!div class="mx-tableFixed"]

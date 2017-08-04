@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 07/3/2017
+ms.date: 08/2/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: a7d378ec-68ed-4a7b-a0db-f5e439c3e852
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 5beabd2617f55ecbcc717338dc40d9f597cc25d4
-ms.sourcegitcommit: fa50f37b134d7579d7c310852dff60e5f1996eaa
+ms.openlocfilehash: 05853aecf8f8aa075d66c5a755cf89ffd7727739
+ms.sourcegitcommit: 7bc04eb4d004608764b3ded1febf32bc4ed020be
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/02/2017
 ---
 *Platí pro: Advanced Threat Analytics verze 1.8*
 
@@ -73,7 +73,7 @@ mongo.exe název souboru ATA
         });
 
 ## <a name="does-ata-work-with-encrypted-traffic"></a>Funguje ATA při šifrovaném provozu?
-ATA spoléhá na analýzu různých síťových protokolů a událostí shromažďovaných ze serveru SIEM nebo prostřednictvím předávání událostí Windows. Přestože se šifrovaný provoz (například LDAPS nebo IPSEC ESP) nebude analyzovat, bude ATA pořád fungovat a na většinu detekcí to nebude mít vliv.
+ATA využívá analýzu více síťových protokolů, jakož i událostí shromážděných ze systému SIEM nebo pomocí předávání událostí systému Windows tak, že i když nebude šifrované přenosy budou i nadále fungovat analyzovaných (například LDAPS a protokolu IPSEC) ATA a většina detekce nebude mít vliv.
 
 ## <a name="does-ata-work-with-kerberos-armoring"></a>Funguje ATA s obranou protokolu Kerberos?
 ATA podporuje povolení obrany protokolu Kerberos, která se také označuje jako architektura FAST (Flexible Authentication Secure Tunneling). Výjimkou je detekce typu over-pass-the-hash, která nebude fungovat.

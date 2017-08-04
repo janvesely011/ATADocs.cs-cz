@@ -5,18 +5,18 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 7/9/2017
+ms.date: 7/25/2017
 ms.topic: get-started-article
 ms.service: advanced-threat-analytics
 ms.prod: 
 ms.assetid: 279d79f2-962c-4c6f-9702-29744a5d50e2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: af88c02c6e2e5f679aca75b17a288c72ab300069
-ms.sourcegitcommit: be6bdfa24a9b25a3375a4768d513b93900b3a498
+ms.openlocfilehash: 54dd8bab3381fc221c75c53191ef052fc83b61ec
+ms.sourcegitcommit: e7f83eb636db00333fe3965324a10a2ef5e2beba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2017
+ms.lasthandoff: 07/30/2017
 ---
 *Platí pro: Advanced Threat Analytics verze 1.8*
 
@@ -65,7 +65,7 @@ Pro vypracování analýzy chování uživatelů vyžaduje ATA Center data za ne
 > [!NOTE]
 > -   ATA Center dokáže zpracovat agregované maximum 1 milion paketů za sekundu ze všech monitorovaných řadičů domény. V některých prostředích může stejné ATA Center zpracovávat celkový provoz, který je vyšší než 400 000. Pokud potřebujete s takovými prostředími pomoct, obraťte se na adresu askcesec@microsoft.com.
 > -   Zde předepsané velikosti úložiště představují čisté hodnoty. Vždy byste měli zohlednit budoucí nárůst a zajistit, aby na disku, kde se nachází databáze, bylo alespoň 20 % volného místa.
-> -   Pokud velikost volného místa dosáhne minimální hodnoty buď 20 %, nebo 100 GB, nejstarší kolekce dat se odstraní. Odstraňování pokračuje, dokud nezůstane 5 % nebo 50 GB volného místa, kdy shromažďování dat přestane fungovat.
+> -   Pokud velikost volného místa dosáhne minimální hodnoty buď 20 % nebo 200 GB, nejstarší kolekce dat se odstraní. Odstraňování pokračuje, dokud nezůstane 5 % nebo 50 GB volného místa, kdy shromažďování dat přestane fungovat.
 > - ATA Center je možné nasadit na libovolného dodavatele IaaS, pokud jsou splněné požadavky na výkon popsané v tomto článku.
 > -   Latence úložiště pro čtení a zápisu aktivit musí být menší než 10 ms.
 > -   Poměr mezi čtením a zápisem aktivit je přibližně 1:3 při méně než 100 000 paketů za sekundu a 1:6 při více než 100 000 paketů za sekundu.
