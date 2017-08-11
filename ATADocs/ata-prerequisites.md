@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 8/2/2017
+ms.date: 8/6/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 0a9d92e5851f1cf64c5e4b4e1ee57d7ee4562d96
-ms.sourcegitcommit: 7bc04eb4d004608764b3ded1febf32bc4ed020be
+ms.openlocfilehash: bd3ddca6f233499441bf82a0cdb5a79078df0bf5
+ms.sourcegitcommit: 28f5d0f39149955c0d1059e13db289d13be9b642
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/07/2017
 ---
 *Platí pro: Advanced Threat Analytics verze 1.8*
 
@@ -115,8 +115,7 @@ Následující tabulka uvádí minimální porty, které musí být otevřené, 
 |**Čas Windows** (volitelné při připojení k doméně)|UDP|123|Řadiče domény|Odchozí|
 
 > [!NOTE]
-> LDAP je potřeba otestovat přihlašovacích údajů mezi komponenty ATA Gateway a řadiče domény. Varlatech provést z ATA Center na řadič domény k testování platnosti tyto přihlašovací údaje, po kterých ATA Gateway využívá LDAP jako součást normální komunikace.
-
+> LDAP je potřeba otestovat pověření pro použití mezi komponenty ATA Gateway a řadiče domény. Test se provádí z ATA Center na řadič domény k testování platnosti tyto přihlašovací údaje, po kterých ATA Gateway využívá LDAP jako součást procesu jeho normální řešení.
 
 ### <a name="certificates"></a>Certifikáty
 Zkontrolujte, jestli ATA Center má přístup k distribučnímu bodu CRL. Pokud služby ATA Gateway nemají přístup k internetu, použijte [ruční import seznamu CRL](https://technet.microsoft.com/library/aa996972%28v=exchg.65%29.aspx) a dbejte na to, abyste nainstalovali všechny distribuční body CRL pro celý řetězec.
