@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: bd3ddca6f233499441bf82a0cdb5a79078df0bf5
-ms.sourcegitcommit: 28f5d0f39149955c0d1059e13db289d13be9b642
+ms.openlocfilehash: dfcdffb3458124cade644cc06a4c359458eb26fe
+ms.sourcegitcommit: 8b622fa5457cf1a540504899c8c98e860b946e01
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 08/14/2017
 ---
 *Platí pro: Advanced Threat Analytics verze 1.8*
 
@@ -118,9 +118,12 @@ Následující tabulka uvádí minimální porty, které musí být otevřené, 
 > LDAP je potřeba otestovat pověření pro použití mezi komponenty ATA Gateway a řadiče domény. Test se provádí z ATA Center na řadič domény k testování platnosti tyto přihlašovací údaje, po kterých ATA Gateway využívá LDAP jako součást procesu jeho normální řešení.
 
 ### <a name="certificates"></a>Certifikáty
-Zkontrolujte, jestli ATA Center má přístup k distribučnímu bodu CRL. Pokud služby ATA Gateway nemají přístup k internetu, použijte [ruční import seznamu CRL](https://technet.microsoft.com/library/aa996972%28v=exchg.65%29.aspx) a dbejte na to, abyste nainstalovali všechny distribuční body CRL pro celý řetězec.
 
-K usnadnění instalace ATA můžete během instalace nainstalovat certifikáty podepsané jejich držiteli. Po nasazení můžete certifikát podepsaný svým držitelem nahradit certifikátem certifikační autority, který bude používat ATA Gateway.<br>
+K usnadnění instalace ATA můžete během instalace nainstalovat certifikáty podepsané jejich držiteli. Po nasazení, měli byste nahradit podepsaný certifikát od interní certifikační autority, který se má použít pro ATA Center.
+
+
+Zajistěte, aby ATA Center a ATA Gateway mají přístup k seznamu odvolaných certifikátů distribučnímu bodu. Pokud nemají přístup k Internetu, postupujte podle [postup pro ruční import seznamu CRL](https://technet.microsoft.com/library/aa996972%28v=exchg.65%29.aspx), dbejte nainstalovat všechny CRL distribuční body pro celý řetězec.
+
 
 > [!WARNING]
 > - Proces obnovení existujícího certifikátu není podporována. Jediný způsob, jak obnovit certifikát, je vytvoření nového certifikátu a konfiguraci ATA na použití nového certifikátu.
@@ -128,8 +131,8 @@ K usnadnění instalace ATA můžete během instalace nainstalovat certifikáty 
 
 > [!NOTE]
 > - Jako typ zprostředkovatele certifikátu můžete použít zprostředkovatele kryptografických služeb (CSP) nebo zprostředkovatele úložiště klíčů (KSP).
-> - Certifikát ATA Center by neměl být renewe. Než jeho platnost vyprší, je správný způsob obnovte si ho vytvořit nový certifikát a vyberte nový certifikát. 
 > - Pokud budete ke konzole ATA přistupovat z jiných počítačů, zkontrolujte, že tyto počítače důvěřují certifikátu používanému konzolou ATA, jinak se před ještě zobrazením přihlašovací stránky zobrazí upozornění, že došlo k potížím s certifikátem zabezpečení webu.
+> - Od verze ATA verze 1.8 komponenty ATA Gateway a Lightweight Gateway spravujete vlastní certifikáty a potřebovat zásahu správce spravovat.
 
 ## <a name="ata-gateway-requirements"></a>Požadavky na ATA Gateway
 V této části je uveden seznam požadavků pro ATA Gateway.
