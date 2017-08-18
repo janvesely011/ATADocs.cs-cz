@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 8/2/2017
+ms.date: 8/14/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 93b27f15-f7e5-49bb-870a-d81d09dfe9fc
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: e9fa0b9162aabdaa9a42c532cf69af37decf3e05
-ms.sourcegitcommit: 7bc04eb4d004608764b3ded1febf32bc4ed020be
+ms.openlocfilehash: bfd86dadbc773b349f28a6327ec2e177da74be8d
+ms.sourcegitcommit: 8b622fa5457cf1a540504899c8c98e860b946e01
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/14/2017
 ---
 *Platí pro: Advanced Threat Analytics verze 1.8*
 
@@ -68,7 +68,7 @@ Adresa URL se používá v následujících scénářích:
 
 Nahraďte certifikát pomocí tohoto postupu:
 
-1. Předtím, než vyprší platnost aktuálního certifikátu, vytvořte nový certifikát a ujistěte se, že je nainstalovaná na serveru ATA Center. 
+1. Předtím, než vyprší platnost aktuálního certifikátu, vytvořte nový certifikát a ujistěte se, že je nainstalovaná na serveru ATA Center. <br></br>Doporučujeme vybrat si certifikát od interní certifikační autority, ale je také možné vytvořit nový certifikát podepsaný svým držitelem. Další informace najdete v části [New-SelfSignedCertificate](https://technet.microsoft.com/itpro/powershell/windows/pkiclient/new-selfsignedcertificate).
 
 2. V nastavení ATA pod **Center**, vyberte tento nově vytvořený certifikát. V tomto okamžiku je služba ATA Center stále vázaná na původní certifikát. 
 
