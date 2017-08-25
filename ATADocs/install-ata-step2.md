@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 07/2/2017
+ms.date: 08/20/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: e1c5ff41-d989-46cb-aa38-5a3938f03c0f
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: aa5e752fa10644165cb70d2cd8c08a1145261edb
-ms.sourcegitcommit: fa50f37b134d7579d7c310852dff60e5f1996eaa
+ms.openlocfilehash: 3bad455834956eefe634687a70ac6d9a0d97449c
+ms.sourcegitcommit: 129bee06ff89b72d21b64f9aa0d1a29f66bf9153
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/20/2017
 ---
 *Platí pro: Advanced Threat Analytics verze 1.8*
 
@@ -56,7 +56,13 @@ Při prvním otevření konzoly ATA se objeví následující obrazovka:
 
 
 ## <a name="see-also"></a>Viz také
+## <a name="related-videos"></a>Související videa
+- [Výběr správné typu ATA Gateway](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
+
+## <a name="see-also"></a>Viz také
+- [Průvodce nasazením ATA POC](http://aka.ms/atapoc)
+- [Nástroje pro změnu velikosti ATA](http://aka.ms/atasizingtool)
 - [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurace shromažďování událostí](configure-event-collection.md)
 - [Požadavky ATA](ata-prerequisites.md)

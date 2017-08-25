@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 8/6/2017
+ms.date: 8/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 675543c11e07bcc243131e2350cfb33bfe8e7e39
-ms.sourcegitcommit: 28f5d0f39149955c0d1059e13db289d13be9b642
+ms.openlocfilehash: 89d1472b18f20d9702fcd7dfd47fa4b22858ab83
+ms.sourcegitcommit: 37fdfb6a21d1b81f5a4b4c1351112bdf727a633f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 08/20/2017
 ---
 *Platí pro: Advanced Threat Analytics verze 1.8*
 
@@ -53,7 +53,9 @@ Tato část podrobně popisuje možné chyby v nasazení ATA a kroky potřebné 
 |System.Net.WebException: Vzdálený server vrátil chybu: (407) Vyžadováno ověřování proxy serveru|Komunikaci mezi ATA Gateway a ATA Center ruší proxy server.|Vypněte proxy server na počítači s ATA Gateway. <br></br>Nastavení proxy serveru můžou záviset na konkrétním účtu.|
 |System.IO.DirectoryNotFoundException: Systém nemůže nalézt zadanou cestu. (Výjimka na základě hodnoty HRESULT: 0x80070003)|Jednu nebo více služeb potřebných pro provoz ATA se nepodařilo spustit.|Spusťte tyto služby: <br></br>Výstrahy a protokolování výkonu, Plánovač úloh.|
 |System.Net.WebException: Vzdálený server vrátil chybu: (403) zakázán|ATA Gateway nebo Lightweight Gateway může bylo zakázáno z navazování připojení HTTP, protože komponenty ATA Center není důvěryhodný.|Přidejte název pro rozhraní NetBIOS a plně kvalifikovaný název domény pro ATA Center do seznamu důvěryhodných webů a vymažte mezipaměť na Interne Explorer (nebo na název komponenty ATA Center jako zadaný v konfiguraci, pokud je nakonfigurované se liší od pro rozhraní NetBIOS nebo plně kvalifikovaný název domény).|
+|System.Net.Http.HttpRequestException: PostAsync se nezdařilo [requestTypeName = StopNetEventSessionRequest]|ATA Gateway nebo ATA Lightweight Gateway nelze zastavit a spustit relaci trasování událostí pro Windows, která shromažďuje síťový provoz z důvodu problému rozhraní WMI|Postupujte podle pokynů v [rozhraní WMI: znovu sestavit úložiště služby WMI](https://blogs.technet.microsoft.com/askperf/2009/04/13/wmi-rebuilding-the-wmi-repository/) vyřešit problém, rozhraní WMI|
 
+ 
 ## <a name="deployment-errors"></a>Chyby nasazení
 > [!div class="mx-tableFixed"]
 |Chyba|Popis|Řešení|
