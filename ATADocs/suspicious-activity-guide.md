@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 1fe5fd6f-1b79-4a25-8051-2f94ff6c71c1
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 8c93f4485998bbb1b2b440f01fed8d96ad4e2842
-ms.sourcegitcommit: 7bc04eb4d004608764b3ded1febf32bc4ed020be
+ms.openlocfilehash: f9f9fee8ad8d75d3510c86890201dd719e074b8c
+ms.sourcegitcommit: 129bee06ff89b72d21b64f9aa0d1a29f66bf9153
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/20/2017
 ---
 *Platí pro: Advanced Threat Analytics verze 1.8*
 
@@ -204,7 +204,13 @@ irectory služby rekognoskace je technika používaných útočníky k namapová
 |------|----|------|----------|
 | ATA zobrazí toto upozornění při odstranění více než 5 % všech účtů. To vyžaduje oprávnění ke čtení kontejneru odstraněných položek. | Zjistěte, proč bylo náhle odstraněno 5 % všech účtů. | Odeberte oprávnění uživatelům, kteří mohou odstraňovat účty ve službě Active Directory. Podrobnosti najdete v článku [Zobrazení nebo nastavení oprávnění u objektu adresáře](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx). | Nízká |
 
+## <a name="related-videos"></a>Související videa
+- [Připojení k zabezpečení komunitě](https://channel9.msdn.com/Shows/Microsoft-Security/Join-the-Security-Community)
+
+
 ## <a name="see-also"></a>Viz také
+- [Playbook podezřelé aktivity ATA](http://aka.ms/ataplaybook)
+- [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Práce s podezřelými aktivitami](working-with-suspicious-activities.md)
 - [Prošetření útoků v podobě zfalšovaných certifikátů PAC](use-case-forged-pac.md)
 - [Řešení známých chyb ATA](troubleshooting-ata-known-errors.md)

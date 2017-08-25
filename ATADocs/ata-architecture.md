@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 07/5/2017
+ms.date: 08/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 892b16d2-58a6-49f9-8693-1e5f69d8299c
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 5410f706e84517eb964e991deeb21001a09d0cef
-ms.sourcegitcommit: 42ce07e3207da10e8dd7585af0e34b51983c4998
+ms.openlocfilehash: 250c68f0efc7064f7ec4a4578342c935d04e815b
+ms.sourcegitcommit: 129bee06ff89b72d21b64f9aa0d1a29f66bf9153
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/25/2017
+ms.lasthandoff: 08/20/2017
 ---
 *Platí pro: Advanced Threat Analytics verze 1.8*
 
@@ -180,8 +180,13 @@ Kvůli vylepšení detekce předání hodnoty hash (Pass-the-Hash), hrubé síly
 
 -   Konfigurace předávání událostí systému Windows<br>Jiným způsobem, jak může ATA získávat události, je konfigurace řadičů domén tak, aby komponentě ATA Gateway předávaly události Windows 4776, 4732, 4733, 4728, 4729, 4756 a 4757. To je obzvláště užitečné, pokud nemáte server SIEM nebo pokud ATA váš server SIEM v současnosti nepodporuje. Další informace o předávání událostí systému Windows v ATA najdete v tématu [Konfigurace předávání událostí systému Windows](configure-event-collection.md#configuring-windows-event-forwarding). Tyto informace platí jen pro fyzické komponenty ATA Gateway, nikoli pro ATA Lightweight Gateway.
 
+## <a name="related-videos"></a>Související videa
+- [Výběr správné typu ATA Gateway](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
+
+
 ## <a name="see-also"></a>Viz také
 - [Požadavky ATA](ata-prerequisites.md)
+- [Nástroje pro změnu velikosti ATA](http://aka.ms/atasizingtool)
 - [Plánování kapacity ATA](ata-capacity-planning.md)
 - [Konfigurace shromažďování událostí](configure-event-collection.md)
 - [Konfigurace předávání událostí systému Windows](configure-event-collection.md#configuring-windows-event-forwarding)
