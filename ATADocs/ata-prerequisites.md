@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 313ee78070ab991d3d1b30441be8a4cee990eace
-ms.sourcegitcommit: 129bee06ff89b72d21b64f9aa0d1a29f66bf9153
+ms.openlocfilehash: f9c2df3c454e2098277f4c475dc1d69378a90987
+ms.sourcegitcommit: 46dd0e695f16a0dd23bbfa140eba15ea6a34d7af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2017
+ms.lasthandoff: 08/28/2017
 ---
 *Platí pro: Advanced Threat Analytics verze 1.8*
 
@@ -58,9 +58,9 @@ V této části jsou uvedené informace, které byste měli získat, a účty a 
 
 -   Neinstalujte Microsoft Message Analyzer na ATA Gateway nebo Lightweight Gateway. Ovladač nástroje Message Analyzer koliduje s ovladači komponent ATA Gateway a Lightweight Gateway. Pokud na komponentě ATA Gateway spustíte Wireshark a následně zastavíte jeho zachytávání, budete muset restartovat službu Microsoft Advanced Threat Analytics Gateway. Pokud ne, brána zastaví zachycení provozu. Wireshark běžící na komponentě ATA Lightweight Gateway nijak nenarušuje její činnost.
 
--    Doporučené: Uživatel by měl mít ke kontejneru odstraněných objektů oprávnění jen pro čtení. Díky tomu dokáže ATA detekovat hromadné odstranění objektů v doméně. Informace o konfiguraci oprávnění jen pro čtení pro kontejner odstraněných objektů najdete v části **Změna oprávnění pro kontejner odstraněných objektů** v tématu [Zobrazení nebo nastavení oprávnění pro objekt adresáře](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx).
+-    Doporučujeme: Uživatel by měl mít oprávnění jen pro čtení v kontejneru odstraněné objekty. To umožňuje ATA detekovat hromadné odstranění objektů v doméně. Informace o konfiguraci oprávnění jen pro čtení pro kontejner odstraněných objektů najdete v tématu **Změna oprávnění pro kontejner odstraněných objektů** tématu [zobrazení nebo nastavení oprávnění pro objekt adresáře](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) tématu.
 
--   Volitelné: Uživatelský účet uživatele, který nemá žádné síťové aktivity. Tento účet se nakonfiguruje jako uživatel honeytokenu ATA. Ke konfiguraci uživatele honeytokenu budete potřebovat SID účtu uživatele, nikoli jeho uživatelské jméno. Další informace najdete v tématu [Práce s nastavením detekce ATA](https://docs.microsoft.com/en-us/advanced-threat-analytics/deploy-use/working-with-detection-settings).
+-   Volitelné: Uživatelský účet uživatele, který nemá žádné síťové aktivity. Tento účet je nakonfigurovaný jako uživatel Honeytokenu ATA. Ke konfiguraci uživatele Honeytokenu potřebovat SID účtu uživatele, nikoli jeho uživatelské jméno. Další informace najdete v tématu [práce s nastavením detekce ATA](https://docs.microsoft.com/en-us/advanced-threat-analytics/deploy-use/working-with-detection-settings) tématu.
 
 -   Volitelné: Kromě shromažďování a analýzy síťového provozu na řadičích domén může ATA pomocí událostí Windows 4776, 4732, 4733, 4728, 4729, 4756 a 4757 dál vylepšit detekce předání hodnoty hash, hrubé síly a úpravy citlivých skupin a honeytokenů. Tyto události mohou být přijímány ze služby SIEM nebo nastavením předávání událostí Windows z řadiče domény. Shromážděné události poskytují řešení ATA další informace, které není možné zjistit z monitorování provozu na řadiči domény.
 
