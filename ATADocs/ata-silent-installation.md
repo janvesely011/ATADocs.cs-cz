@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 07/20/2017
+ms.date: 08/29/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,18 +13,18 @@ ms.technology:
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 7e130da2b5a177658e176a428101c11d02bc2a3f
-ms.sourcegitcommit: 42ce07e3207da10e8dd7585af0e34b51983c4998
+ms.openlocfilehash: c38db312ea877b63580d745153aa58ea34a160a6
+ms.sourcegitcommit: 9ce330726e5de8c05eae6a20d3e6c1d8bef3cd0e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/25/2017
+ms.lasthandoff: 08/29/2017
 ---
 *Platí pro: Advanced Threat Analytics verze 1.8*
 
 
-
 # <a name="ata-silent-installation"></a>Bezobslužná instalace ATA
 Tento článek poskytuje podrobné pokyny k bezobslužné instalaci ATA.
+
 ## <a name="prerequisites"></a>Požadavky
 
 ATA verze 1.8 vyžaduje instalaci rozhraní Microsoft .NET Framework 4.6.1. 
@@ -134,6 +134,11 @@ K provedení bezobslužné odinstalace komponenty ATA Center použijte následuj
     "Microsoft ATA Center Setup.exe" /quiet /uninstall --DeleteExistingDatabaseData
 
 ## <a name="ata-gateway-silent-installation"></a>Bezobslužná instalace ATA Gateway
+
+> [!NOTE]
+> Při bezobslužné nasazení ATA Lightweight Gateway přes System Center Configuration Manager nebo jiné systémy nasazení softwaru, se doporučuje vytvořit dva balíčky pro nasazení:</br>-Net Framework 4.6.1 včetně restartování řadiče domény</br>-ATA Gateway. </br>Balíček ATA Gateway, aby závislé na nasazení .net Framework – nasazení balíčku. </br>Získat [rozhraní .net Framework 4.6.1 offline nasazení balíčku](https://www.microsoft.com/download/details.aspx?id=49982). 
+
+
 K bezobslužné instalaci komponenty ACA Gateway použijte následující příkaz:
 
 **Syntaxe**:

@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/20/2017
+ms.date: 08/28/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 44d7c899-816c-4f7f-91d3-84a09d291a24
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: fcee6f1887e6842d1ccdfd2863620af8a5a8279f
-ms.sourcegitcommit: 129bee06ff89b72d21b64f9aa0d1a29f66bf9153
+ms.openlocfilehash: 62ce117423a189a1c2ce00b862f323db6ed328cb
+ms.sourcegitcommit: 46dd0e695f16a0dd23bbfa140eba15ea6a34d7af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2017
+ms.lasthandoff: 08/28/2017
 ---
 *Platí pro: Advanced Threat Analytics verze 1.8*
 
@@ -59,7 +59,7 @@ Každá podezřelá aktivita obsahuje následující informace:
 ## <a name="filter-suspicious-activities-list"></a>Filtrování seznamu podezřelých aktivit
 Chcete-li filtrovat seznam podezřelých aktivit:
 
-1.  V podokně **Filtrovat podle** na levé straně obrazovky vyberte jednu z následujících položek: **Vše**, **Otevřeno**, **Vyřešeno** nebo **Zamítnuto**.
+1.  V **filtrovat podle** na levé straně obrazovky vyberte jednu z následujících: **všechny**, **otevřete**, **uzavřeno**, nebo  **Potlačené**.
 
 2.  Chcete-li dál filtrovat seznam, vyberte **Vysoká**, **Střední** nebo **Nízká**.
 
@@ -93,7 +93,7 @@ Uděláte to tak, že kliknete na tři tečky v pravém horním rohu konkrétní
 -   **Closed** (Uzavřeno): Slouží ke sledování podezřelých aktivit, které jste identifikovali, prozkoumali a opravili s cílem zmírnit jejich dopad.
 
     > [!NOTE]
-    > ATA může znovu otevřít vyřešenou aktivitu, pokud se stejná aktivita zjistí během krátké doby znovu.
+    > ATA může znovu otevřít uzavřenou aktivitu, pokud se stejná aktivita zjistí během krátké doby znovu.
 
 -   **Suppressed** (Potlačeno): Potlačení aktivity znamená, že ji chcete prozatím ignorovat a upozornění chcete zobrazit, jenom pokud se bude jednat o novou instanci. Znamená to, že pokud se vyskytne podobná výstraha, služba ATA ji neotevře. Pokud se ale výstraha na 7 dní zastaví a pak se znovu objeví, budete znovu upozorněni.
 

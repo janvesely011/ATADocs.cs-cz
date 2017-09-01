@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 7/2/2017
+ms.date: 8/28/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 1bf264d9-9697-44b5-9533-e1c498da4f07
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 7067477066a2341fa15b2b0d283b2d7721239d5e
-ms.sourcegitcommit: 42ce07e3207da10e8dd7585af0e34b51983c4998
+ms.openlocfilehash: 793273aeea3c78b54d4dc189acaff9bdf8ae58f9
+ms.sourcegitcommit: 46dd0e695f16a0dd23bbfa140eba15ea6a34d7af
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/25/2017
+ms.lasthandoff: 08/28/2017
 ---
 *Platí pro: Advanced Threat Analytics verze 1.8*
 
@@ -65,7 +65,7 @@ Toto jsou klíčové prvky konzoly ATA.
 
 ### <a name="attack-time-line"></a>Časová osa útoků
 
-Toto je výchozí cílová stránka, která se vám zobrazí po přihlášení ke konzole ATA. Ve výchozím nastavení jsou všechny otevřené podezřelé aktivity zobrazené na časové ose útoků. Časová osa útoků umožňuje filtrovat a zobrazit všechny podezřelé aktivity nebo jenom otevřené, vyřešené nebo zamítnuté aktivity. Můžete také zjistit závažnost, která se jednotlivým aktivitám přiřadila.
+Toto je výchozí cílová stránka, která se vám zobrazí po přihlášení ke konzole ATA. Ve výchozím nastavení jsou všechny otevřené podezřelé aktivity zobrazené na časové ose útoků. Můžete filtrovat a zobrazit všechny časové ose útoků otevřít, Suppressed nebo zamítnuté podezřelé aktivity. Můžete také zjistit závažnost, která se jednotlivým aktivitám přiřadila.
 
 ![Obrázek časové osy útoku ATA](media/ATA-Suspicious-Activity-Timeline.jpg)
 
@@ -94,8 +94,6 @@ Health Center zobrazuje výstrahy, pokud v nasazení ATA něco nefunguje tak, ja
 ![Obrázek ATA Health Center](media/ATA-Health-Issue.jpg)
 
 Kdykoli váš systém narazí na problém, jako je třeba chyba připojení nebo odpojení komponenty ATA Gateway, ikona Health Center vás na tuto skutečnost upozorní zobrazením červené tečky. ![Obrázek červené tečky ATA Health Center](media/ATA-Health-Center-Alert-red-dot.png)
-
-Výstrahy komponenty Health Center se dají vyřešit nebo zamítnout a na základě závažnosti jsou zařazené do kategorií Vysoká, Střední nebo Nízká. Pokud vyřešíte výstrahu, kterou služba ATA detekuje jako stále aktivní, automaticky se přesune do seznamu otevřených výstrah. Pokud systém zjistí, že pro výstrahu už není důvod (situace byla vyřešena), automaticky ji přesune do seznamu vyřešených výstrah.
 
 ### <a name="user-and-computer-profiles"></a>Profily uživatelů a počítačů
 
