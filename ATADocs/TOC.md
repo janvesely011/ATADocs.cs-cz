@@ -1,7 +1,7 @@
 # Porozumění a prozkoumávání
 ## [Co je Microsoft Advanced Threat Analytics?](what-is-ata.md)
 ## [Jaké hrozby ATA detekuje?](ata-threats.md)
-## Co je nového v ATA?
+## Novinky ATA
 ### [Novinky ATA verze 1.8](whats-new-version-1.8.md)
 #### [Aktualizace na ATA 1.8 – průvodce migrací](ata-update-1.8-migration-guide.md)
 ### [Novinky ATA verze 1.7](whats-new-version-1.7.md)
@@ -16,24 +16,24 @@
 ## [Architektura ATA](ata-architecture.md)
 ## [Plánování kapacity ATA](ata-capacity-planning.md)
 ## [Požadavky ATA](ata-prerequisites.md)
+## [Doporučená cesta upgradu](upgrade-path.md)
 # Nasazení
-## Předinstalační kroky
+## [1 Stažení a instalace centra](install-ata-step1.md)
+## [2 Připojení k AD](install-ata-step2.md)
+## [3 Stažení balíčku ATA Gateway](install-ata-step3.md)
+## [4 Instalace ATA Gateway](install-ata-step4.md)
+## [5 Konfigurace ATA Gateway](install-ata-step5.md)
+## [6 Shromažďování událostí a síť VPN](install-ata-step6.md)
+## [7 Vyloučení a honeytoken](install-ata-step7.md)
+## [Bezobslužná instalace](ata-silent-installation.md)
+## ATA Gateway – další kroky
 ### [1. Konfigurace zrcadlení portů](configure-port-mirroring.md)
 ### [2. Ověření zrcadlení portů](validate-port-mirroring.md)
 ### [3. Konfigurace předávání událostí systému Windows](configure-event-collection.md)
-## Instalace ATA
-### [Krok 1: Stažení a instalace](install-ata-step1.md)
-### [Krok 2: Připojení k AD](install-ata-step2.md)
-### [Krok 3: Stažení instalačního balíčku ATA Gateway](install-ata-step3.md)
-### [Krok 4: Instalace ATA Gateway](install-ata-step4.md)
-### [Krok 5: Konfigurace ATA Gateway](install-ata-step5.md)
-### [Krok 6: Shromažďování událostí a síť VPN](install-ata-step6.md)
-### [Krok 7 vyloučení a Honeytokenu](install-ata-step7.md)
-### [Bezobslužná instalace](ata-silent-installation.md)
 # Použijte
 ## [Práce s konzolou ATA](working-with-ata-console.md)
 ## [Práce s podezřelými aktivitami](working-with-suspicious-activities.md)
-###[Vyloučení entity z detekce](excluding-entities-from-detections.md)
+###[Vyloučení entit z detekce](excluding-entities-from-detections.md)
 ## [Nastavení oznámení ATA](setting-ata-alerts.md)
 ## [Sestavy ATA](reports.md)
 ## [ATA Health Center](ata-health-center.md)
