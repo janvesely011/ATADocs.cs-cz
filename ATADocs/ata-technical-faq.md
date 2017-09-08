@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/15/2017
+ms.date: 09/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: a7d378ec-68ed-4a7b-a0db-f5e439c3e852
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 90a4c656d42d02c89cbb31b0e46c33fe495e19aa
-ms.sourcegitcommit: 9c7f173efb076ef9a8664d50b2333a10ddaf7401
+ms.openlocfilehash: f0cef288b36bb070d632c78d773c769f7862ff19
+ms.sourcegitcommit: 654500928025e3cb127e095c17cc1d6444defd3a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2017
+ms.lasthandoff: 09/03/2017
 ---
 *Platí pro: Advanced Threat Analytics verze 1.8*
 
@@ -45,19 +45,11 @@ To je potřeba spustit vzdáleně nikoli z komponenty ATA Gateway, ale nad monit
 
 ## <a name="which-ata-build-corresponds-to-each-version"></a>Které sestavení ATA odpovídá jednotlivým verzím?
 
-|Verze|Číslo sestavení|
-|----|----|
-|1.6|1.6.4103|
-|1.6 Update 1|1.6.4317|
-|1.7|1.7.5402| 
-|1.7 Update 1|1.7.5647|
-|1.7 Update 2|1.7.5757|
-|1.8|1.8.6645|
-|1.8 update 1|1.8.6765|
+Verze upgradu informace najdete v tématu [ATA upgradu](upgrade-path.md).
 
 ## <a name="what-version-should-i-use-to-upgrade-my-current-ata-deployment-to-the-latest-version"></a>Jakou verzi mám použít k upgradu aktuálního nasazení ATA na nejnovější verzi?
 
-![Tabulka upgradu verzí ATA](./media/version-matrix.png)
+Upgrade matice verze ATA najdete v části [ATA upgradu](upgrade-path.md).
 
 
 ## <a name="how-do-i-verify-windows-event-forwarding"></a>Jak ověřím předávání událostí systému Windows?

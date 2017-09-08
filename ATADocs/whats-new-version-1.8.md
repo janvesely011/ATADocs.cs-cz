@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 8/14/2017
+ms.date: 9/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 9592d413-df0e-4cec-8e03-be1ae00ba5dc
 ms.reviewer: 
 ms.suite: ems
-ms.openlocfilehash: 1ec9308e046a228ac1276eb1aace58eec47e95d0
-ms.sourcegitcommit: 8b622fa5457cf1a540504899c8c98e860b946e01
+ms.openlocfilehash: 2793a602a0cd0fb9902197acd45dd5bdd4612ea4
+ms.sourcegitcommit: 654500928025e3cb127e095c17cc1d6444defd3a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2017
+ms.lasthandoff: 09/03/2017
 ---
 # <a name="whats-new-in-ata-version-18"></a>Novinky ATA verze 1.8
 
@@ -126,6 +126,14 @@ Na jádru Windows Serveru 2016 se chyba nemusí zobrazit, ale proces se při pok
 **Popis**: Od verze ATA 1.8 komunikuje ATA Gateway s ATA Center pomocí protokolu http. Pokud počítač, na kterém je brána ATA Gateway nainstalovaná, používá pro připojení k ATA Center proxy server, může dojít k narušení této komunikace. 
 
 **Alternativní řešení**: Vypněte používání proxy serveru v účtu služby ATA Gateway. Tento problém bude odstraněn aktualizací v budoucí verzi.
+
+### <a name="report-settings-reset"></a>Resetování nastavení sestav
+
+**Příznaky**: všechna nastavení, které byly provedeny plánované sestavy jsou vymazány při aktualizaci 1,8 update 1.
+
+**Popis**: aktualizace na 1,8 aktualizací 1 z 1,8 resetování sestavy nastavení plánu.
+
+**Alternativní řešení**: před aktualizací k 1,8 update 1, vytvořte kopii nastavení sestavy a zadejte je znovu, lze také se to pomocí skriptu pro další informace najdete v tématu [exportu a importu konfigurace ATA](ata-configuration-file.md).
 
 
 ## <a name="see-also"></a>Viz také
