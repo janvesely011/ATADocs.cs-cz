@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 8/20/2017
+ms.date: 9/3/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: f9c2df3c454e2098277f4c475dc1d69378a90987
-ms.sourcegitcommit: 46dd0e695f16a0dd23bbfa140eba15ea6a34d7af
+ms.openlocfilehash: d7f5423104b3e42777b6ce8013832b3bac6353be
+ms.sourcegitcommit: 654500928025e3cb127e095c17cc1d6444defd3a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/03/2017
 ---
 *Platí pro: Advanced Threat Analytics verze 1.8*
 
@@ -124,13 +124,19 @@ K usnadnění instalace ATA můžete během instalace nainstalovat certifikáty 
 
 Zajistěte, aby ATA Center a ATA Gateway mají přístup k seznamu odvolaných certifikátů distribučnímu bodu. Pokud nemají přístup k Internetu, postupujte podle [postup pro ruční import seznamu CRL](https://technet.microsoft.com/library/aa996972%28v=exchg.65%29.aspx), dbejte nainstalovat všechny CRL distribuční body pro celý řetězec.
 
+Certifikát musí mít:
+-   Privátní klíč
+-   Typ zprostředkovatele zprostředkovatele kryptografických služeb (CSP) nebo zprostředkovatele úložiště klíčů (KSP)
+-   Veřejný klíč o délce 2 048 bitů
+-   Nastavte hodnotu pro KeyEncipherment a ServerAuthentication příznaky využití
+
+Například můžete použít standardní **webový server** nebo **počítače** šablony.
 
 > [!WARNING]
 > - Proces obnovení existujícího certifikátu není podporována. Jediný způsob, jak obnovit certifikát, je vytvoření nového certifikátu a konfiguraci ATA na použití nového certifikátu.
 
 
 > [!NOTE]
-> - Jako typ zprostředkovatele certifikátu můžete použít zprostředkovatele kryptografických služeb (CSP) nebo zprostředkovatele úložiště klíčů (KSP).
 > - Pokud budete ke konzole ATA přistupovat z jiných počítačů, zkontrolujte, že tyto počítače důvěřují certifikátu používanému konzolou ATA, jinak se před ještě zobrazením přihlašovací stránky zobrazí upozornění, že došlo k potížím s certifikátem zabezpečení webu.
 > - Od verze ATA verze 1.8 komponenty ATA Gateway a Lightweight Gateway spravujete vlastní certifikáty a potřebovat zásahu správce spravovat.
 
