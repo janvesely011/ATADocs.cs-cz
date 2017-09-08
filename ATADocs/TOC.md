@@ -45,8 +45,7 @@
 ## [Export/import konfigurace ATA](ata-configuration-file.md)
 ## [Správa telemetrie ATA](manage-telemetry-settings.md)
 # Prošetření
-## [Zvýšení oprávnění prostřednictvím datových útoků založených na podvržené autorizaci](use-case-forged-pac.md)
-## [Rekognoskace pomocí DNS](use-case-dns.md)
+## [Průvodce prošetřováním podezřelých aktivit](suspicious-activity-guide.md)
 # Řešení problémů
 ## [Práce se záznamy pro audit](troubleshoot-audit.md)
 ## [Řešení známých problémů](troubleshooting-ata-known-errors.md)
