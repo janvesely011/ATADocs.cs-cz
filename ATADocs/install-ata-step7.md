@@ -1,11 +1,11 @@
 ---
-title: "Instalace Advanced Threat Analytics – krok 7 | Dokumentace Microsoftu"
+title: Instalace Advanced Threat Analytics - krok 8 | Microsoft Docs
 description: "V posledním kroku instalace ATA nakonfigurujete uživatele honeytokenu."
 keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 09/03/2017
+ms.date: 09/19/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,22 +13,22 @@ ms.technology:
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: f5cb87148741c92dc7832da16cc37a749fa72fae
-ms.sourcegitcommit: 654500928025e3cb127e095c17cc1d6444defd3a
+ms.openlocfilehash: 3a8ccb1412bbd8e2013c84d36f4142301159c46c
+ms.sourcegitcommit: 34c3d6f56f175994b672842c7576040956ceea69
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/03/2017
+ms.lasthandoff: 09/19/2017
 ---
 *Platí pro: Advanced Threat Analytics verze 1.8*
 
 
 
-# <a name="install-ata---step-7"></a>Instalace ATA – krok 7
+# <a name="install-ata---step-8"></a>Instalace ATA – krok 8
 
 >[!div class="step-by-step"]
-[« Krok 6](install-ata-step6.md)
+[«Krok 7](vpn-integration-install-step.md)
 
-## <a name="step-7-configure-ip-address-exclusions-and-honeytoken-user"></a>Krok 7: Konfigurace vyloučení IP adres a uživatele honeytokenu
+## <a name="step-8-configure-ip-address-exclusions-and-honeytoken-user"></a>Krok 8: Konfigurace vyloučení IP adres a uživatele honeytokenu
 ATA umožňuje vyloučit z řady detekcí konkrétní IP adresy nebo uživatele. 
 
 Například při **vyloučení DNS Reconnaissance** se může jednat o kontrolu zabezpečení, která jako mechanismus pro prohledávání používá službu DNS. Vyloučení pomáhá službě ATA takové kontroly ignorovat. Příkladem vyloučení *Pass-the-Ticket* je zařízení NAT.    
@@ -64,7 +64,7 @@ Pokud chcete zkontrolovat, jestli je ATA v provozu a odchytává průniky do va�
 
 
 >[!div class="step-by-step"]
-[« Krok 6](install-ata-step6.md)
+[«Krok 7](vpn-integration-install-step.md)
 
 
 
