@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/29/2017
+ms.date: 09/19/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: ac591d960028268f6c1ebd74706839a3b91597da
-ms.sourcegitcommit: 9ce330726e5de8c05eae6a20d3e6c1d8bef3cd0e
+ms.openlocfilehash: 068c3ca2858934f68beea9d092fbeb113b77ba2a
+ms.sourcegitcommit: 34c3d6f56f175994b672842c7576040956ceea69
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2017
+ms.lasthandoff: 09/19/2017
 ---
 *Platí pro: Advanced Threat Analytics verze 1.8*
 
@@ -27,8 +27,9 @@ ms.lasthandoff: 08/29/2017
 
 >[!div class="step-by-step"]
 [« Krok 5](install-ata-step5.md)
+[Krok 7 »](vpn-integration-install-step.md)
 
-## <a name="step-6-configure-event-collection-and-vpn"></a>Krok 6: Konfigurace shromažďování událostí a sítě VPN
+## <a name="step-6-configure-event-collection"></a>Krok 6: Konfigurace shromažďování událostí
 ### <a name="configure-event-collection"></a>Konfigurace shromažďování událostí
 Kvůli vylepšení detekčních schopností potřebuje ATA následující události Windows: 4776, 4732, 4733, 4728, 4729, 4756, 4757. Tyto události buď může automaticky číst ATA Lightweight Gateway, nebo mohou být jedním ze dvou způsobů předávány komponentě ATA Gateway (v případě, že komponenta ATA Lightweight Gateway není nasazená), a to konfigurací komponenty ATA Gateway pro naslouchání událostem SIEM, nebo [konfigurací předávání událostí Windows](configure-event-collection.md).
 
@@ -184,26 +185,10 @@ Nezapomeňte použít oddělit páry klíč=hodnota pomocí \t.
 > Použití funkce WinCollect pro shromažďování událostí Windows se nepodporuje.
 
 
-### <a name="configuring-vpn"></a>Konfigurace sítě VPN
-
-ATA shromažďuje data sítě VPN, která pomáhají při profilaci lokalit, ze kterých se počítače připojují k síti.
-
-Data sítě VPN nakonfigurujete tak, že přejdete na **Konfigurace** > **Síť VPN** a zadáte **Sdílený tajný kód účtu Radius** vaší sítě VPN.
-
-![Konfigurace sítě VPN](./media/vpn.png)
-
-Informace o získání sdíleného tajného kódu najdete v dokumentaci k síti VPN. Podporovaní dodavatelé sítí VPN:
-
-- Microsoft
-- F5
-- Check Point
-- Cisco ASA
-
-
 
 >[!div class="step-by-step"]
 [« Krok 5](install-ata-step5.md)
-[Krok 7 »](install-ata-step7.md)
+[Krok 7 »](vpn-integration-install-step.md)
 
 
 
