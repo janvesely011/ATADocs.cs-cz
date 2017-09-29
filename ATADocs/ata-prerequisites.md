@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 9/3/2017
+ms.date: 9/24/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: d7f5423104b3e42777b6ce8013832b3bac6353be
-ms.sourcegitcommit: 654500928025e3cb127e095c17cc1d6444defd3a
+ms.openlocfilehash: b681a6a27189d2e1aec3f7f9913b97f9e7717911
+ms.sourcegitcommit: 47b2b9ebaadff79c087d14f86462d3d8102cc551
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/03/2017
+ms.lasthandoff: 09/24/2017
 ---
 *Platí pro: Advanced Threat Analytics verze 1.8*
 
@@ -60,9 +60,9 @@ V této části jsou uvedené informace, které byste měli získat, a účty a 
 
 -    Doporučujeme: Uživatel by měl mít oprávnění jen pro čtení v kontejneru odstraněné objekty. To umožňuje ATA detekovat hromadné odstranění objektů v doméně. Informace o konfiguraci oprávnění jen pro čtení pro kontejner odstraněných objektů najdete v tématu **Změna oprávnění pro kontejner odstraněných objektů** tématu [zobrazení nebo nastavení oprávnění pro objekt adresáře](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) tématu.
 
--   Volitelné: Uživatelský účet uživatele, který nemá žádné síťové aktivity. Tento účet je nakonfigurovaný jako uživatel Honeytokenu ATA. Ke konfiguraci uživatele Honeytokenu potřebovat SID účtu uživatele, nikoli jeho uživatelské jméno. Další informace najdete v tématu [práce s nastavením detekce ATA](https://docs.microsoft.com/en-us/advanced-threat-analytics/deploy-use/working-with-detection-settings) tématu.
+-   Volitelné: Uživatelský účet uživatele, který nemá žádné síťové aktivity. Tento účet je nakonfigurovaný jako uživatel Honeytokenu ATA. Ke konfiguraci uživatele Honeytokenu, potřebovat SID účtu uživatele, nikoli jeho uživatelské jméno. Další informace najdete v tématu [práce s nastavením detekce ATA](https://docs.microsoft.com/en-us/advanced-threat-analytics/deploy-use/working-with-detection-settings) tématu.
 
--   Volitelné: Kromě shromažďování a analýzy síťového provozu na řadičích domén může ATA pomocí událostí Windows 4776, 4732, 4733, 4728, 4729, 4756 a 4757 dál vylepšit detekce předání hodnoty hash, hrubé síly a úpravy citlivých skupin a honeytokenů. Tyto události mohou být přijímány ze služby SIEM nebo nastavením předávání událostí Windows z řadiče domény. Shromážděné události poskytují řešení ATA další informace, které není možné zjistit z monitorování provozu na řadiči domény.
+-   Volitelné: Kromě shromažďování a analýzy síťových přenosů do a z řadičů domény, může ATA využít události systému Windows 4776, 4732, 4733, 4728, 4729, 4756 a 4757 k dalšímu vylepšení útoků ATA Pass-the-Hash, útoků hrubou silou, změny citlivých skupin a Sloužícím jako návnada detekce tokeny. Tyto události mohou být přijímány ze služby SIEM nebo nastavením předávání událostí Windows z řadiče domény. Shromážděné události poskytují řešení ATA další informace, které není možné zjistit z monitorování provozu na řadiči domény.
 
 
 ## <a name="ata-center-requirements"></a>Požadavky pro ATA Center
@@ -81,20 +81,20 @@ Instalace komponenty ATA Center jako virtuálního počítače se podporuje.
 
 Pokud ATA Center spouštíte jako virtuální počítač, před vytvořením nového kontrolního bodu vypněte server. Vyhnete se tak možnému poškození databází.
 ### <a name="server-specifications"></a>Specifikace serveru
-Při práci na fyzickém serveru databáze ATA vyžaduje, abyste v systému BIOS **zakázali** neuniformní přístup k paměti (NUMA). Ve vašem systému se NUMA může označovat také jako prokládání uzlů. V takovém případě bude potřeba prokládání uzlů **povolit**, abyste NUMA zakázali. Další informace najdete v dokumentaci k systému BIOS. Pokud ATA Center běží na virtuálním serveru, není tento text relevantní.<br>
+Při práci na fyzickém serveru databáze ATA vyžaduje, abyste v systému BIOS **zakázali** neuniformní přístup k paměti (NUMA). Systému se NUMA může označovat jako prokládání uzlů v takovém případě budete muset **povolit** prokládání uzlů, abyste NUMA zakázali. Další informace najdete v dokumentaci systému BIOS. Tento postup není relevantní, pokud ATA Center běží na virtuálním serveru.<br>
 K zajištění optimálního výkonu nastavte **možnost napájení**  pro ATA Center na hodnotu **Vysoký výkon**.<br>
-Počet řadičů domény, které monitorujete, a zatížení na jednotlivých řadičích určuje potřebnou specifikaci serveru. Další informace najdete v tématu [Plánování kapacity ATA](ata-capacity-planning.md).
+Počet řadičů domény, které monitorujete a zatížení na jednotlivých řadičích určuje specifikaci serveru potřeba. Další informace najdete v tématu [plánování kapacity ATA](ata-capacity-planning.md).
 
 
 ### <a name="time-synchronization"></a>Časová synchronizace
-Server ATA Center, servery ATA Gateway a řadiče domény musí být vzájemně časově synchronizované (s tolerancí 5 minut).
+Server ATA Center, servery ATA Gateway a řadiče domény musí mít časově synchronizované intervalu než pět minut.
 
 
 ### <a name="network-adapters"></a>Síťové adaptéry
-Měli byste mít:
+Musí mít následující:
 -   Alespoň jeden síťový adaptér (pokud používáte fyzický server v prostředí sítě VLAN, doporučujeme použít dva síťové adaptéry)
 
--   IP adresa pro komunikaci mezi komponentami ATA Center a ATA Gateway, která je zašifrovaná pomocí SSL na portu 443. (Služba ATA se váže k všechny IP adresy, které ATA Center má na portu 443.)
+-   IP adresa pro komunikaci mezi ATA Center a ATA Gateway, která je zašifrovaná pomocí SSL na portu 443. (Služba ATA se váže k všechny IP adresy, které ATA Center má na portu 443.)
 
 ### <a name="ports"></a>Porty
 Následující tabulka uvádí minimální porty, které musí být otevřené, aby služba ATA Center fungovala správně.
@@ -112,7 +112,7 @@ Následující tabulka uvádí minimální porty, které musí být otevřené, 
 |**DNS**|TCP a UDP|53|Servery DNS|Odchozí|
 |**Kerberos** (volitelné při připojení k doméně)|TCP a UDP|88|Řadiče domény|Odchozí|
 |**Přihlašování k síti** (volitelné při připojení k doméně)|TCP a UDP|445|Řadiče domény|Odchozí|
-|**Čas Windows** (volitelné při připojení k doméně)|UDP|123|Řadiče domény|Odchozí|
+|**Systémový čas** (volitelné, pokud je připojený k doméně)|UDP|123|Řadiče domény|Odchozí|
 
 > [!NOTE]
 > LDAP je potřeba otestovat pověření pro použití mezi komponenty ATA Gateway a řadiče domény. Test se provádí z ATA Center na řadič domény k testování platnosti tyto přihlašovací údaje, po kterých ATA Gateway využívá LDAP jako součást procesu jeho normální řešení.
@@ -137,7 +137,7 @@ Například můžete použít standardní **webový server** nebo **počítače*
 
 
 > [!NOTE]
-> - Pokud budete ke konzole ATA přistupovat z jiných počítačů, zkontrolujte, že tyto počítače důvěřují certifikátu používanému konzolou ATA, jinak se před ještě zobrazením přihlašovací stránky zobrazí upozornění, že došlo k potížím s certifikátem zabezpečení webu.
+> - Pokud budete ke konzole ATA přistupovat z jiných počítačů, ujistěte se, že tyto počítače důvěřují certifikátu používanému službou ATA Center jinak získáte na stránce upozornění, že došlo k potížím s certifikátem zabezpečení webu před získáním přihlašovací stránky.
 > - Od verze ATA verze 1.8 komponenty ATA Gateway a Lightweight Gateway spravujete vlastní certifikáty a potřebovat zásahu správce spravovat.
 
 ## <a name="ata-gateway-requirements"></a>Požadavky na ATA Gateway
@@ -155,7 +155,7 @@ Toto ověření můžete provést spuštěním následující rutiny Windows Pow
 Informace o používání virtuálních počítačů se službou ATA Gateway najdete v tématu [Konfigurace zrcadlení portů](configure-port-mirroring.md).
 
 > [!NOTE]
-> Vyžaduje se minimálně 5 GB volného místa, doporučuje se 10 GB. Zahrnuje to prostor potřebný pro binární soubory ATA, [protokoly ATA](troubleshooting-ata-using-logs.md) a [protokoly výkonu](troubleshooting-ata-using-perf-counters.md).
+> Vyžaduje se minimálně 5 GB volného místa, doporučuje se 10 GB. To zahrnuje prostor potřebný pro binárních souborů ATA, [protokoly ATA, a [protokolování výkonu](troubleshooting-ata-using-perf-counters.md).
 
 ### <a name="server-specifications"></a>Specifikace serveru
 K zajištění optimálního výkonu nastavte **možnost napájení**  pro ATA Gateway na hodnotu **Vysoký výkon**.<br>
@@ -164,15 +164,15 @@ ATA Gateway může podporovat monitorování několika řadičů domény, v záv
 >[!NOTE] 
 > Pokud se spustí jako dynamická paměť virtuálního počítače nebo libovolná jiná paměť, funkce rozšiřování rozsahů stránek se nepodporuje.
 
-Další informace o hardwarových požadavcích ATA Gateway najdete v článku [Plánování kapacity ATA](ata-capacity-planning.md).
+Další informace o požadavcích na hardware ATA Gateway najdete v tématu [plánování kapacity ATA](ata-capacity-planning.md).
 
 ### <a name="time-synchronization"></a>Časová synchronizace
-Server ATA Center, servery ATA Gateway a řadiče domény musí být vzájemně časově synchronizované (s tolerancí 5 minut).
+Server ATA Center, servery ATA Gateway a řadiče domény musí mít časově synchronizované intervalu než pět minut.
 
 ### <a name="network-adapters"></a>Síťové adaptéry
 ATA Gateway vyžaduje nejméně jen adaptér pro správu a jeden adaptér pro zachytávání:
 
--   **Adaptér pro správu** se použije pro komunikace ve vaší firemní síti. Pro tento adaptér by měly být nakonfigurované tyto parametry:
+-   **Adaptér pro správu** – používá pro komunikaci ve vaší podnikové síti. Tento adaptér by měl být nakonfigurován s následujícím nastavením:
 
     -   Statická IP adresa včetně výchozí brány
 
@@ -188,8 +188,8 @@ ATA Gateway vyžaduje nejméně jen adaptér pro správu a jeden adaptér pro za
 -   **Adaptér pro zachytávání** se použije pro zachycení přenosu dat z a do řadičů domény.
 
     > [!IMPORTANT]
-    > -   Nakonfigurujte zrcadlení portů pro adaptér pro zachytávání jako cíl síťového provozu řadiče domény. Další informace najdete v tématu [Konfigurace zrcadlení portů](configure-port-mirroring.md). Při konfiguraci zrcadlení portů budete obvykle spolupracovat s týmem pro sítě nebo virtualizace.
-    > -   Pro vaše prostředí nakonfigurujte statickou nepřesměrovatelnou IP adresu bez výchozí brány a adresy serveru DNS. Příklad: 1.1.1.1/32. Zajistíte tak, že síťový adaptér pro zachytávání může zachytit maximální objem přenášených dat a síťový adaptér pro správu se bude používat k odesílání a příjmu požadované síťové komunikace.
+    > -   Nakonfigurujte zrcadlení portů pro adaptér pro zachytávání jako cíl síťového provozu řadiče domény. Další informace najdete v tématu [Konfigurace zrcadlení portů](configure-port-mirroring.md). Obvykle musíte spolupracovat s týmem podpory sítí nebo virtualizace konfigurace zrcadlení portů.
+    > -   Pro vaše prostředí nakonfigurujte statickou nepřesměrovatelnou IP adresu bez výchozí brány a adresy serveru DNS. Příklad: 1.1.1.1/32. To zajišťuje, že síťového adaptéru pro zachytávání může zachytit maximální objem přenášených dat a že síťový adaptér pro správu se používá k odesílání a příjmu požadované síťové komunikace.
 
 ### <a name="ports"></a>Porty
 Následující tabulka uvádí minimální porty, u kterých ATA Gateway vyžaduje, aby byly nakonfigurované na adaptéru pro správu:
@@ -220,7 +220,7 @@ V této části je uveden seznam požadavků pro ATA Lightweight Gateway.
 ### <a name="general"></a>Obecné
 ATA Lightweight Gateway podporuje instalaci na řadičích domény se systémem Windows Server 2008 R2 SP1 (kromě jádra serveru), Windows Server 2012, Windows Server 2012 R2 nebo Windows Server 2016 (včetně jádra, ale ne Nano).
 
-Řadičem domény může být řadič domény jen pro čtení (RODC).
+Řadič domény může být řadič domény jen pro čtení (RODC).
 
 Před instalací ATA Lightweight Gateway na řadiči domény se systémem Windows Server 2012 R2 ověřte, že je nainstalovaná aktualizace [KB2919355](https://support.microsoft.com/kb/2919355/).
 
@@ -235,21 +235,21 @@ Během instalace se nainstaluje rozhraní .Net Framework 4.6.1 a může dojít k
 
 
 > [!NOTE]
-> Vyžaduje se minimálně 5 GB volného místa, doporučuje se 10 GB. Zahrnuje to prostor potřebný pro binární soubory ATA, [protokoly ATA](troubleshooting-ata-using-logs.md) a [protokoly výkonu](troubleshooting-ata-using-perf-counters.md).
+> Vyžaduje se minimálně 5 GB volného místa, doporučuje se 10 GB. To zahrnuje prostor potřebný pro binárních souborů ATA, [protokoly ATA, a [protokolování výkonu](troubleshooting-ata-using-perf-counters.md).
 
 ### <a name="server-specifications"></a>Specifikace serveru
 
-ATA Lightweight Gateway vyžaduje nejméně 2 jádra a 6 GB paměti RAM nainstalované na řadiči domény.
+ATA Lightweight Gateway vyžaduje minimálně dvě jádra a 6 GB paměti RAM nainstalované na řadiči domény.
 K zajištění optimálního výkonu nastavte **možnost napájení**  pro ATA Lightweight Gateway na hodnotu **Vysoký výkon**.
 Komponenta ATA Lightweight Gateway se dá nasadit na řadiče domény s různým zatížením i velikostí, v závislosti na objemu síťového přenosu dat do a z řadiče domény a na počtu prostředků, které jsou na příslušném řadiči domény nainstalované.
 
 >[!NOTE] 
 > Pokud se spustí jako dynamická paměť virtuálního počítače nebo libovolná jiná paměť, funkce rozšiřování rozsahů stránek se nepodporuje.
 
-Další informace o hardwarových požadavcích ATA Lightweight Gateway najdete v článku [Plánování kapacity ATA](ata-capacity-planning.md).
+Další informace o požadavcích na hardware ATA Lightweight Gateway najdete v tématu [plánování kapacity ATA](ata-capacity-planning.md).
 
 ### <a name="time-synchronization"></a>Časová synchronizace
-Server ATA Center, servery ATA Lightweight Gateway a řadiče domény musí být vzájemně časově synchronizované (s tolerancí 5 minut).
+Server ATA Center, servery ATA Lightweight Gateway a řadiče domény musí mít časově synchronizované intervalu než pět minut.
 ### <a name="network-adapters"></a>Síťové adaptéry
 ATA Lightweight Gateway monitoruje místní provoz na všech síťových adaptérech příslušného řadiče domény. <br>
 Po nasazení můžete pomocí konzoly ATA případně změnit, které síťové adaptéry se monitorují.
@@ -272,7 +272,7 @@ Následující tabulka uvádí minimální porty, které ATA Lightweight Gateway
 > -   NetBIOS
 
 ## <a name="ata-console"></a>Konzola ATA
-Přístup ke konzole ATA je prostřednictvím prohlížeče. Podporují se tyto:
+Přístup ke konzole ATA je prostřednictvím prohlížeče, podpora prohlížeče a nastavení:
 
 -   Internet Explorer verze 10 a novější
 
