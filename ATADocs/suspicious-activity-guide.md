@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 1fe5fd6f-1b79-4a25-8051-2f94ff6c71c1
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 05550e56479de0390d7f2d990ffae4b319dec9f9
-ms.sourcegitcommit: 74cce0c1d52086fdf10ea70f590b306c1c7e8b14
+ms.openlocfilehash: cd6e2968cad2393e2f56ece03be880622a3a0c6a
+ms.sourcegitcommit: 79abfe095f5def259ebb5018d49f9aadd5f2d4f4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 10/01/2017
 ---
 *Platí pro: Advanced Threat Analytics verze 1.8*
 
@@ -285,7 +285,7 @@ Známé chyby zabezpečení v systému Windows Server starší verze útočníko
 
 2. Je cílový počítač (v části **ACCESSED** sloupec) opravit s MS14-068 (řadič domény) nebo MS11-013 (server)? Pokud ano, **Zavřít** podezřelé aktivity (je falešně pozitivní).
 
-3. Pokud ne, nemá zdrojového počítače (v části **FROM** sloupec) označuje změnit certifikát PAC operačního systému nebo aplikace? Pokud ano, **potlačit** podezřelé aktivity (je neškodné skutečně pozitivní).
+3. Pokud ne, zdrojový počítač spouští (v části **FROM** sloupec) označuje změnit certifikát PAC operačního systému nebo aplikace? Pokud ano, **potlačit** podezřelé aktivity (je neškodné skutečně pozitivní).
 
 4. Pokud odpověď byla již na výše uvedené dvě otázky, předpokládá to se zlými úmysly.
 
