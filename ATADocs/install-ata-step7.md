@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 09/19/2017
+ms.date: 10/9/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 3a8ccb1412bbd8e2013c84d36f4142301159c46c
-ms.sourcegitcommit: 34c3d6f56f175994b672842c7576040956ceea69
+ms.openlocfilehash: 49d0df5f3d835a879990d590b447ed3b4de88685
+ms.sourcegitcommit: e9f2bfd610b7354ea3fef749275f16819d60c186
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2017
+ms.lasthandoff: 10/09/2017
 ---
 *Platí pro: Advanced Threat Analytics verze 1.8*
 
@@ -69,6 +69,7 @@ Pokud chcete zkontrolovat, jestli je ATA v provozu a odchytává průniky do va�
 
 
 ## <a name="related-videos"></a>Související videa
+- [Přehled nasazení ATA](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATA-Deployment-in-10-Minutes)
 - [Výběr správné typu ATA Gateway](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
 

@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 08/20/2017
+ms.date: 10/9/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 7fb024e6-297a-4ad9-b962-481bb75a0ba3
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 22541007bd6ebf0e37818e205bac57191ca6f28d
-ms.sourcegitcommit: 129bee06ff89b72d21b64f9aa0d1a29f66bf9153
+ms.openlocfilehash: f466dddfd2c490d71a57fb27aa833c5ee3a0e5e2
+ms.sourcegitcommit: e9f2bfd610b7354ea3fef749275f16819d60c186
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2017
+ms.lasthandoff: 10/09/2017
 ---
 *Platí pro: Advanced Threat Analytics verze 1.8*
 
@@ -57,6 +57,7 @@ Soubor zip obsahuje následující:
 
 
 ## <a name="related-videos"></a>Související videa
+- [Přehled nasazení ATA](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATA-Deployment-in-10-Minutes)
 - [Výběr správné typu ATA Gateway](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
 ## <a name="see-also"></a>Viz také
