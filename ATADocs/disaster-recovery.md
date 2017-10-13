@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 8/6/2017
+ms.date: 10/9/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 7620e171-76d5-4e3f-8b03-871678217a3a
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: d3621338070c257d9fa196fba8657a805216383b
-ms.sourcegitcommit: 28f5d0f39149955c0d1059e13db289d13be9b642
+ms.openlocfilehash: 21661568ccb75811fa860137fe053714b28a7260
+ms.sourcegitcommit: 699d238ef9022cfd59663bd8e4e7636daa218f4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/09/2017
 ---
 *Platí pro: Advanced Threat Analytics verze 1.8*
 
@@ -31,7 +31,7 @@ Tento článek popisuje postup rychlého zotavení komponenty ATA Center a obnov
 
 ## <a name="back-up-your-ata-center-configuration"></a>Zazálohování konfigurace ATA Center
 
-1. Konfigurace ATA Center se každou hodinu zálohuje do souboru. Vyhledejte nejnovější záložní kopii konfigurace ATA Center a uložte ji na oddělený počítač. Úplné vysvětlení postupu vyhledání těchto souborů najdete v části [Export a import konfigurace ATA](/advanced-threat-analytics/deploy-use/ata-configuration-file). 
+1. Konfigurace ATA Center se každou hodinu zálohuje do souboru. Vyhledejte nejnovější záložní kopii konfigurace ATA Center a uložte ji na oddělený počítač. Úplné vysvětlení postupu vyhledání těchto souborů najdete v části [Export a import konfigurace ATA](ata-configuration-file.md). 
 2. Vyexportujte certifikát ATA Center.
     1. Ve správci certifikátů přejděte na **Certifikáty (místní)** -> **Osobní** ->**Certifikáty** a vyberte **ATA Center**.
     2. Pravým tlačítkem myši klikněte na **ATA Center** a vyberte **Všechny úkoly** a potom **Exportovat**. 
@@ -40,13 +40,13 @@ Tento článek popisuje postup rychlého zotavení komponenty ATA Center a obnov
     4. Vyexportovaný soubor certifikátu zazálohujte na oddělený počítač.
 
   > [!NOTE] 
-  > Pokud privátní klíč exportovat nejde, musíte vytvořit nový certifikát a nasadit ho do ATA podle postupu uvedeného v části [Změna certifikátu ATA Center](/advanced-threat-analytics/deploy-use/modifying-ata-config-centercert). Pak ho vyexportujte. 
+  > Pokud privátní klíč exportovat nejde, musíte vytvořit nový certifikát a nasadit ho do ATA podle postupu uvedeného v části [Změna certifikátu ATA Center](modifying-ata-center-configuration#the-ata-center-certificate). Pak ho vyexportujte. 
 
 ## <a name="recover-your-ata-center"></a>Obnovení vašeho ATA Center
 
 1. Pomocí stejné IP adresy a názvu, jaké měl předchozí počítač ATA Center, vytvořte nový počítač s Windows Serverem.
 4. Na nový server naimportujte certifikát, který jste zazálohovali výše.
-5. Na nově vytvořeném Windows Serveru postupujte podle pokynů pro [Nasazení ATA Center](/advanced-threat-analytics/deploy-use/install-ata-step1). ATA Gateways není potřeba znovu nasazovat. Po zobrazení výzvy k zadání certifikátu zadejte certifikát, který jste vyexportovali při zálohování konfigurace ATA Center. 
+5. Na nově vytvořeném Windows Serveru postupujte podle pokynů pro [Nasazení ATA Center](install-ata-step1.md). ATA Gateways není potřeba znovu nasazovat. Po zobrazení výzvy k zadání certifikátu zadejte certifikát, který jste vyexportovali při zálohování konfigurace ATA Center. 
 ![Obnovení ATA Center](media/disaster-recovery-deploymentss.png)
 6. Naimportujte zazálohovanou konfiguraci ATA Center:
     1. Z MongoDB odeberte výchozí dokument profilu systému ATA Center: 
@@ -54,9 +54,9 @@ Tento článek popisuje postup rychlého zotavení komponenty ATA Center a obnov
         2. Spusťte `mongo.exe ATA` 
         3. Spuštěním tohoto příkazu odeberte výchozí systémový profil: `db.SystemProfile.remove({})`
     2. Spusťte příkaz `mongoimport.exe --db ATA --collection SystemProfile --file "<SystemProfile.json backup file>" --upsert` s použitím záložního souboru z kroku 1.</br>
-    Úplné vysvětlení postupu vyhledání a importu záložních souborů najdete v části [Export a import konfigurace ATA](/advanced-threat-analytics/deploy-use/ata-configuration-file). 
+    Úplné vysvětlení postupu vyhledání a importu záložních souborů najdete v části [Export a import konfigurace ATA](ata-configuration-file.md). 
     3. Otevřete konzolu ATA. Všechny komponenty ATA Gateways byste měli vidět propojené na kartě Konfigurace/Brány. 
-    5. Nezapomeňte definovat [**uživatele adresářových služeb**](/advanced-threat-analytics/deploy-use/install-ata-step2) a zvolit [**synchronizátor řadiče domény**](/advanced-threat-analytics/deploy-use/install-ata-step5). 
+    5. Nezapomeňte definovat [**uživatele adresářových služeb**](install-ata-step2.md) a zvolit [**synchronizátor řadiče domény**](install-ata-step5.md). 
 
 
 
@@ -64,8 +64,8 @@ Tento článek popisuje postup rychlého zotavení komponenty ATA Center a obnov
 
 
 ## <a name="see-also"></a>Viz také
-- [Požadavky ATA](/advanced-threat-analytics/plan-design/ata-prerequisites)
-- [Plánování kapacity ATA](/advanced-threat-analytics/plan-design/ata-capacity-planning)
-- [Konfigurace shromažďování událostí](/advanced-threat-analytics/deploy-use/configure-event-collection)
-- [Konfigurace předávání událostí systému Windows](/advanced-threat-analytics/deploy-use/configure-event-collection#configuring-windows-event-forwarding)
+- [Požadavky ATA](ata-prerequisites.md)
+- [Plánování kapacity ATA](ata-capacity-planning.md)
+- [Konfigurace shromažďování událostí](configure-event-collection.md)
+- [Konfigurace předávání událostí systému Windows](configure-event-collection#configuring-windows-event-forwarding)
 - [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
