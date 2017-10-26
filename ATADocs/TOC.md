@@ -38,14 +38,16 @@
 ## [Skupiny rolí ATA](ata-role-groups.md)
 ## [Změna konfigurace ATA Center](modifying-ata-center-configuration.md)
 ## [Změna hesla připojení k doméně](modifying-ata-config-dcpassword.md)
-###[Vyloučení entit z detekce](excluding-entities-from-detections.md)
+## [Vyloučení entit z detekce](excluding-entities-from-detections.md)
 ## [Export/import konfigurace ATA](ata-configuration-file.md)
 ## [Správa telemetrie ATA](manage-telemetry-settings.md)
 ## [Nastavení oznámení ATA](setting-ata-alerts.md)
 ## [Nastavení e-mailového serveru a serveru Syslog](setting-syslog-email-server-settings.md)
-## [Referenční informace k protokolům pro SIEM](cef-format-sa.md)
 ## [Práce s podezřelými aktivitami](working-with-suspicious-activities.md)
 ## [Práce s konzolou ATA](working-with-ata-console.md)
+## [ATA referenční informace]
+### [Referenční informace k protokolům pro SIEM](cef-format-sa.md)
+### [Reference ID události](event-id-reference.md)
 # Prošetření
 ## [Průvodce prošetřováním podezřelých aktivit](suspicious-activity-guide.md)
 # Řešení problémů
