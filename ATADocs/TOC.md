@@ -45,7 +45,7 @@
 ## [Nastavení e-mailového serveru a serveru Syslog](setting-syslog-email-server-settings.md)
 ## [Práce s podezřelými aktivitami](working-with-suspicious-activities.md)
 ## [Práce s konzolou ATA](working-with-ata-console.md)
-## [ATA referenční informace]
+## ATA referenční informace
 ### [Referenční informace k protokolům pro SIEM](cef-format-sa.md)
 ### [Reference ID události](event-id-reference.md)
 # Prošetření
