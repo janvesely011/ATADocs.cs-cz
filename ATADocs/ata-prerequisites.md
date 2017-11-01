@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 9/24/2017
+ms.date: 10/25/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: b681a6a27189d2e1aec3f7f9913b97f9e7717911
-ms.sourcegitcommit: 47b2b9ebaadff79c087d14f86462d3d8102cc551
+ms.openlocfilehash: 2f720118b1d9ac08f26b7057e5c7b6706ff4b0b1
+ms.sourcegitcommit: 0cc999b20e919abe4d6edaedee78185788a3e3b9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2017
+ms.lasthandoff: 10/25/2017
 ---
 *Platí pro: Advanced Threat Analytics verze 1.8*
 
@@ -60,7 +60,7 @@ V této části jsou uvedené informace, které byste měli získat, a účty a 
 
 -    Doporučujeme: Uživatel by měl mít oprávnění jen pro čtení v kontejneru odstraněné objekty. To umožňuje ATA detekovat hromadné odstranění objektů v doméně. Informace o konfiguraci oprávnění jen pro čtení pro kontejner odstraněných objektů najdete v tématu **Změna oprávnění pro kontejner odstraněných objektů** tématu [zobrazení nebo nastavení oprávnění pro objekt adresáře](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) tématu.
 
--   Volitelné: Uživatelský účet uživatele, který nemá žádné síťové aktivity. Tento účet je nakonfigurovaný jako uživatel Honeytokenu ATA. Ke konfiguraci uživatele Honeytokenu, potřebovat SID účtu uživatele, nikoli jeho uživatelské jméno. Další informace najdete v tématu [práce s nastavením detekce ATA](https://docs.microsoft.com/en-us/advanced-threat-analytics/deploy-use/working-with-detection-settings) tématu.
+-   Volitelné: Uživatelský účet uživatele, který nemá žádné síťové aktivity. Tento účet je nakonfigurovaný jako uživatel Honeytokenu ATA. Ke konfiguraci uživatele Honeytokenu, potřebovat SID účtu uživatele, nikoli jeho uživatelské jméno. Další informace najdete v tématu [vyloučení konfigurace IP adres a uživatele Honeytokenu](install-ata-step7.md).
 
 -   Volitelné: Kromě shromažďování a analýzy síťových přenosů do a z řadičů domény, může ATA využít události systému Windows 4776, 4732, 4733, 4728, 4729, 4756 a 4757 k dalšímu vylepšení útoků ATA Pass-the-Hash, útoků hrubou silou, změny citlivých skupin a Sloužícím jako návnada detekce tokeny. Tyto události mohou být přijímány ze služby SIEM nebo nastavením předávání událostí Windows z řadiče domény. Shromážděné události poskytují řešení ATA další informace, které není možné zjistit z monitorování provozu na řadiči domény.
 

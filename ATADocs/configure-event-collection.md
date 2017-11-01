@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 8/29/2017
+ms.date: 10/23/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: fb34b1d10e923620e1c5e59ef210ebbac15e1ef0
-ms.sourcegitcommit: 9ce330726e5de8c05eae6a20d3e6c1d8bef3cd0e
+ms.openlocfilehash: 3ebf3165973c14c45d33c95769f0e6ae47e3e795
+ms.sourcegitcommit: 835ea2b8190eb753aaf8d400531040ce1845d75a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2017
+ms.lasthandoff: 10/23/2017
 ---
 *Platí pro: Advanced Threat Analytics verze 1.8*
 
@@ -87,7 +87,7 @@ Mějte na paměti, že po přidání **Síťové služby** do skupiny **Event Lo
    4.   Klikněte na **Vybrat události**.
 
         1. Klikněte na **Podle protokolu** a vyberte **Zabezpečení**.
-        2. Do pole **Zahrne nebo vyloučí ID události** zadejte číslo události a klikněte na **OK**. 
+        2. Do pole **Zahrne nebo vyloučí ID události** zadejte číslo události a klikněte na **OK**. Zadejte 4776, jako je například následující ukázka.
 
  ![Obrázek filtru dotazu](media/wef 4 query filter.png)
 
