@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 8/20/2017
+ms.date: 10/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 2362f6bf64147b972e9c45e3b97bab4280c6eeac
-ms.sourcegitcommit: 46dd0e695f16a0dd23bbfa140eba15ea6a34d7af
+ms.openlocfilehash: 09936cf9f86711ea6d48d0571178d2387694d412
+ms.sourcegitcommit: 835ea2b8190eb753aaf8d400531040ce1845d75a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 10/23/2017
 ---
 *Platí pro: Advanced Threat Analytics verze 1.8*
 
@@ -48,12 +48,11 @@ Tato část podrobně popisuje možné chyby v nasazení ATA a kroky potřebné 
 |System.ApplicationException: Není možné spustit relaci ETW MMA-ETW-Livecapture-a4f595bd-f567-49a7-b963-20fa4e370329|V souboru hostitelů se nachází položka hostitele odkazující na krátký název počítače|Odeberte položku hostitele ze souboru C:\Windows\System32\drivers\etc\HOSTS nebo ji změňte na FQDN.|
 |System.IO.IOException: Ověření se nezdařilo, protože vzdálená strana uzavřela přenosový stream.|Protokol TLS 1.0 je zakázána na ATA Gateway, ale .net je nastavený na použití protokolu TLS 1.2|Použijte jednu z následujících možností: </br> Povolení protokolu TLS 1.0 na bráně ATA Gateway </br>Povolení protokolu TLS 1.2 na rozhraní .net nastavením klíče registru, který chcete použít výchozí nastavení operačního systému pro protokol SSL a TLS, následujícím způsobem: </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001` </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`</br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SchUseStrongCrypto"=dword:00000001 `</br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] " SchUseStrongCrypto"=dword:00000001`|
 |System.TypeLoadException: Nebylo možné načíst typ Microsoft.Opn.Runtime.Values.BinaryValueBufferManager ze sestavení Microsoft.Opn.Runtime, Verze=4.0.0.0, Jazyková verze=neutrální, PublicKeyToken=31bf3856ad364e35|Komponentě ATA Gateway se nepodařilo načíst požadované parsovací soubory.|Zkontrolujte, jestli je nainstalovaný Microsoft Message Analyzer. Instalace nástroje Message Analyzer společně s komponentami ATA Gateway / Lightweight Gateway není podporovaná. Odinstalujte Message Analyzer a restartujte službu Gateway.|
-|Upozornění na přerušené přenosy se zrcadlením portů při použití Lightweight Gateway na VMwaru|Pokud používáte řadiče domény na virtuálních počítačích VMware, můžou se zobrazit upozornění na **přerušené síťové přenosy se zrcadlením portů**. Toto může nastat kvůli neshodě v konfiguraci ve VMware. |Pokud se chcete těmto upozorněním vyhnout, zkontrolujte, že následující nastavení mají hodnotu 0 nebo jsou zakázaná: TsoEnable, LargeSendOffload, IPv4, TSO Offload. Zvažte také zakázání procesu IPv4 Giant TSO Offload. Další informace najdete v dokumentaci k VMware.|
 |System.Net.WebException: Vzdálený server vrátil chybu: (407) Vyžadováno ověřování proxy serveru|Komunikaci mezi ATA Gateway a ATA Center ruší proxy server.|Vypněte proxy server na počítači s ATA Gateway. <br></br>Nastavení proxy serveru můžou záviset na konkrétním účtu.|
 |System.IO.DirectoryNotFoundException: Systém nemůže nalézt zadanou cestu. (Výjimka na základě hodnoty HRESULT: 0x80070003)|Jednu nebo více služeb potřebných pro provoz ATA se nepodařilo spustit.|Spusťte tyto služby: <br></br>Výstrahy a protokolování výkonu, Plánovač úloh.|
 |System.Net.WebException: Vzdálený server vrátil chybu: (403) zakázán|ATA Gateway nebo Lightweight Gateway může bylo zakázáno z navazování připojení HTTP, protože komponenty ATA Center není důvěryhodný.|Přidejte název pro rozhraní NetBIOS a plně kvalifikovaný název domény pro ATA Center do seznamu důvěryhodných webů a vymažte mezipaměť na Interne Explorer (nebo na název komponenty ATA Center jako zadaný v konfiguraci, pokud je nakonfigurované se liší od pro rozhraní NetBIOS nebo plně kvalifikovaný název domény).|
 |System.Net.Http.HttpRequestException: PostAsync se nezdařilo [requestTypeName = StopNetEventSessionRequest]|ATA Gateway nebo ATA Lightweight Gateway nelze zastavit a spustit relaci trasování událostí pro Windows, která shromažďuje síťový provoz z důvodu problému rozhraní WMI|Postupujte podle pokynů v [rozhraní WMI: znovu sestavit úložiště služby WMI](https://blogs.technet.microsoft.com/askperf/2009/04/13/wmi-rebuilding-the-wmi-repository/) vyřešit problém, rozhraní WMI|
-
+|System.Net.Sockets.SocketException: Byl proveden pokus o přístup k soketu způsobem, jeho přístupovými oprávněními|Na ATA Gateway je port 514 používá jiná aplikace|Použití `netstat -o` k vytvoření, které proces používá tento port.|
  
 ## <a name="deployment-errors"></a>Chyby nasazení
 > [!div class="mx-tableFixed"]
