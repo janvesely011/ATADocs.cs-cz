@@ -13,18 +13,18 @@ ms.technology:
 ms.assetid: e5a9718c-b22e-41f7-a614-f00fc4997682
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 89d3d80e647e61cded6e2428ed1d1f8905552867
-ms.sourcegitcommit: 42ce07e3207da10e8dd7585af0e34b51983c4998
+ms.openlocfilehash: 540d1cb0754dc9191a985625a8f988cb44c9f000
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/25/2017
+ms.lasthandoff: 11/07/2017
 ---
 # <a name="updating-ata-to-version-18"></a>Aktualizace ATA na verzi 1.8
 
 > [!NOTE] 
-> Pokud ve vašem prostředí neexistuje instalace ATA, stáhněte si úplnou verzi ATA, která zahrnuje verzi 1.8, a použijte standardní postup instalace popsaný v tématu [Instalace ATA](install-ata-step1.md).
+> Pokud ve vašem prostředí neexistuje instalace ATA, stáhněte si úplnou verzi ATA, která zahrnuje verzi 1.8 a použijte standardní postup instalace popsaný v [instalace ATA](install-ata-step1.md).
 
-Pokud už máte nasazenou verzi ATA 1.7, provede vás tento postup kroky potřebnými k aktualizaci vašeho nasazení.
+Pokud již máte ATA verze 1.7 nasazen, tento postup vás provede kroky potřebnými k aktualizaci vašeho nasazení.
 
 > [!NOTE] 
 >  Na verzi 1.8 je možné aktualizovat jen verze ATA 1.7 Update 1 a 1.7 Update 2. Žádné předchozí verze ATA nelze na verzi ATA 1.8 aktualizovat přímo.
@@ -45,7 +45,7 @@ V migrační verzi lze soubor použít pouze k aktualizaci z verze ATA 1.7. Ve v
 
 1.  Zazálohujte svou databázi: (volitelné)
 
-    -   Pokud ATA Center běží jako virtuální počítač a chcete pořídit kontrolní bod, ukončete nejprve virtuální počítač.
+    -   Pokud ATA Center běží jako virtuální počítač a chcete pořídit kontrolní bod, nejprve vypnout virtuální počítač.
 
     -   Pokud ATA Center běží na fyzickém serveru, najdete informace o zálohování databáze v článku [Zotavení po havárii](disaster-recovery.md).
 
@@ -53,14 +53,14 @@ V migrační verzi lze soubor použít pouze k aktualizaci z verze ATA 1.7. Ve v
 
     -  Na **uvítací** stránce si zvolte jazyk a klikněte na **Další**.
 
-    -  Pokud jste ve verzi 1.7 nepovolili automatické aktualizace, zobrazí se výzva, abyste k zajištění aktuálnosti ATA používali službu Microsoft Update.  Na stránce služby Microsoft Update zaškrtněte **Při kontrole aktualizací použít službu Microsoft Update (doporučeno)**.
-    ![Obrázek zajištění aktuálnosti ATA](media/ata_ms_update.png)
+    -  Pokud povolíte nebylo automatické aktualizace ve verzi 1.7, zobrazí se výzva k nastavení použít službu Microsoft Update pro ATA k zajištění aktuálnosti ATA.  Na stránce služby Microsoft Update zaškrtněte **Při kontrole aktualizací použít službu Microsoft Update (doporučeno)**.
+    ![Zachovat aktuální obrázek ATA](media/ata_ms_update.png)
      
-     Upraví se tak nastavení Windows, které povolí aktualizace služby ATA. 
+     To se upraví nastavení Windows tak, aby povolovala aktualizace pro ATA. 
     
-    -  Na obrazovce **Migrace dat** určete, jestli chcete migrovat všechna data nebo částečná data. Pokud se rozhodnete migrovat jen částečná data, budou všechny detekce fungovat okamžitě kromě detekce neobvyklého chování, protože sestavení kompletního profilu trvá tři týdny.  
+    -  Na obrazovce **Migrace dat** určete, jestli chcete migrovat všechna data nebo částečná data. Pokud zvolíte možnost migrovat pouze částečná data, všechna nalezení okamžitě pracovat s výjimkou zjišťování neobvyklé chování, která přebírá tři týdny k sestavení celého profilu.  
     
-    **Částečná** migrace dat se instaluje mnohem kratší dobu. Pokud si vyberete **úplnou** migraci dat, může dokončení instalace trvat podstatně déle. Nezapomeňte se podívat na odhadovanou dobu a požadované místo na disku, které jsou uvedené na obrazovce **Migrace dat**. Tyto údaje závisejí na množství dříve zachyceného síťového provozu, který jste uložili do předchozích verzí ATA. Na níže uvedené obrazovce například vidíte migraci dat z velmi rozsáhlé databáze:
+    **Částečná** migrace dat se instaluje mnohem kratší dobu. Pokud si vyberete **úplnou** migraci dat, může dokončení instalace trvat podstatně déle. Nezapomeňte se podívat na odhadovanou dobu a požadované místo na disku, které jsou uvedené na obrazovce **Migrace dat**. Tyto údaje závisejí na množství dříve zachyceného síťového provozu, který jste uložili do předchozích verzí ATA. Například na obrazovce níže můžete vidět migraci dat z velké databáze:
          
     ![Migrace dat ATA](media/migration-data-migration.png)
 
@@ -70,7 +70,7 @@ V migrační verzi lze soubor použít pouze k aktualizaci z verze ATA 1.7. Ve v
 
     ![Obrazovka Úspěšná aktualizace](media/migration-center-success.png)
 
-5.  Na obrazovce **Aktualizace** se ATA Gateway teď aktualizují (pokud jste již nastavili automatické aktualizace). V opačném případě klikněte na tlačítko **Aktualizovat** vedle každé ATA Gateway.
+5.  V **aktualizace** obrazovky, pokud jste již nastavili vašich komponent ATA Gateway k automatické aktualizaci, jejich aktualizace v tomto okamžiku, v opačném případě klikněte na tlačítko **aktualizace** vedle každé komponenty ATA Gateway.
   
 ![Obrázek aktualizace bran](media/migration-update-gw.png)
 

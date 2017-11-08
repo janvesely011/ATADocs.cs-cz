@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/6/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,21 +13,21 @@ ms.technology:
 ms.assetid: f3db435e-9553-40a2-a2ad-278fad4f0ef5
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: efca57d6e6dac5b769d7380ddcd77b723cdf323e
-ms.sourcegitcommit: e2cb3af9c1dbb0b75946dc70cc439b19d654541c
+ms.openlocfilehash: 1820687d1340dfbef703129e5fad7d7a63cfd632
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/06/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Platí pro: Advanced Threat Analytics verze 1.8*
 
 # <a name="investigating-privilege-escalation-using-forged-authorization-data-attacks"></a>Prošetření eskalace oprávnění prostřednictvím útoků založených na zfalšovaných datech autorizace
 
-Microsoft neustále zlepšuje své možnosti bezpečnostních detekcí a schopnost poskytovat analytikům zabezpečení téměř v reálném čase informace, na základě kterých pak můžou jednat. Tuto změnu pomáhá uskutečňovat služba Advanced Threat Analytics (ATA) Microsoftu. Pokud ATA detekuje eskalaci oprávnění prostřednictvím podezřelé aktivity související se zfalšovanými daty autorizace a zobrazí výstrahu, pomůže vám ji tento článek pochopit a prošetřit.
+Microsoft neustále zlepšuje své možnosti bezpečnostních detekcí a schopnost poskytovat analytikům zabezpečení téměř v reálném čase informace, na základě kterých pak můžou jednat. Tuto změnu pomáhá uskutečňovat služba Advanced Threat Analytics (ATA) Microsoftu. Pokud ATA zjistí zvýšení oprávnění pomocí forged autorizační data podezřelé aktivity v síti a zobrazí upozornění, v tomto článku pomáhá pochopit a prozkoumat ho.
 
 ## <a name="what-is-a-privileged-attribute-certificate-pac"></a>Co je PAC (Privileged Attribute Certificate)?
 
-PAC (Privileged Access Certificate) je datová struktura v lístku Kerberosu, která obsahuje autorizační informace, včetně členství ve skupinách, identifikátorů zabezpečení a informací o profilech uživatelů. V doméně Active Directory to umožňuje, aby se autorizační data poskytnutá řadičem domény předala dalším členským serverům a pracovním stanicím pro účely ověřování a autorizace. Kromě informací o členství obsahuje PAC další přihlašovací údaje, informace o profilech a zásadách a pomocná metadata zabezpečení. 
+Na certifikát PAC (Privilege Attribute) je datová struktura v lístku protokolu Kerberos, který obsahuje informace o ověření, včetně členství ve skupinách, identifikátory zabezpečení a informace o profilu uživatele. V doméně Active Directory to umožňuje, aby se autorizační data poskytnutá řadičem domény předala dalším členským serverům a pracovním stanicím pro účely ověřování a autorizace. Kromě informací o členství obsahuje PAC další přihlašovací údaje, informace o profilech a zásadách a pomocná metadata zabezpečení. 
 
 Datovou strukturu PAC používají protokoly ověřování (protokoly, které ověřují identity) k přenosu autorizačních informací, které řídí přístup k prostředkům.
 
@@ -49,19 +49,19 @@ Bulletiny zabezpečení [MS14 068](https://technet.microsoft.com/library/securit
 Eskalace oprávnění prostřednictvím útoků založených na zfalšovaných datech autorizace je postup, kterým útočník zneužije chyby zabezpečení certifikátu PAC ke zvýšení svých oprávnění v doménové struktuře nebo doméně služby Active Directory. K provedení tohoto útoku útočník musí:
 -   Mít přihlašovací údaje k uživateli domény
 -   Mít síťové připojení k řadiči domény, který se dá použít k ověření pomocí zcizených přihlašovacích údajů pro domény
--   Mít správné nástroje. Známým nástrojem, který zfalšuje certifikáty PAC, je Python Kerberos Exploitation Kit (PyKEK).
+-   Mít správné nástroje. Python Kerberos zneužití Kit (PyKEK) je známé nástroj, který padělají PACs.
 
-Pokud má útočník potřebné přihlašovací údaje a připojení, může pak změnit nebo zfalšovat certifikát PAC existujícího přihlašovacího tokenu uživatele Kerberosu (TGT). Útočník změní deklaraci členství skupiny, aby zahrnovala skupinu s vyšší úrovní oprávnění (třeba „Domain Administrators“ nebo „Enterprise Administrators“). Útočník pak upravený PAC přidá do lístku Kerberosu. Tento lístek Kerberosu se pak použije k vyžádání lístku služby z řadiče domény bez opravy zabezpečení. Útočník tak získá vyšší oprávnění v doméně a autorizaci k provádění akcí, které by provádět neměl. Útočník může předložit upravený přihlašovací token uživatele (TGT), aby získal přístup ke všem prostředkům v doméně vyžádáním tokenů přístupu k prostředkům (TGS). To znamená, že útočník může obejít všechny nakonfigurované seznamy ACL prostředků, které omezují přístup v síti, pomocí zfalšování autorizačních dat (PAC) pro libovolného uživatele v Active Directory.
+Pokud má útočník potřebné přihlašovací údaje a připojení, může pak změnit nebo zfalšovat certifikát PAC existujícího přihlašovacího tokenu uživatele Kerberosu (TGT). Útočník změní deklaraci členství skupiny, aby zahrnovala skupinu s vyšší úrovní oprávnění (třeba „Domain Administrators“ nebo „Enterprise Administrators“). Útočník pak upravený PAC přidá do lístku Kerberosu. Tento lístek Kerberosu se pak použije k vyžádání lístku služby z řadiče domény bez opravy zabezpečení. Útočník tak získá vyšší oprávnění v doméně a autorizaci k provádění akcí, které by provádět neměl. Útočník může předložit upravený přihlašovací token uživatele (TGT), aby získal přístup ke všem prostředkům v doméně vyžádáním tokenů přístupu k prostředkům (TGS). To znamená, že útočník může obejít všechny nakonfigurované prostředků seznamů řízení přístupu, která omezují přístup v síti pomocí falšování identity data autorizace (PAC) pro všechny uživatele ve službě Active Directory.
 
 ## <a name="discovering-the-attack"></a>Zjištění útoku
-Když se útočník pokusí zvýšit svá oprávnění, ATA to zjistí a označí jako upozornění s vysokou závažností.
+Když se útočník pokusí zvyšovat jejich oprávnění, ATA rozpozná a označte ji jako upozornění na vysokou závažností.
 
 ![Podezřelá aktivita zfalšovaných certifikátů PAC](./media/forged-pac.png)
 
-ATA v upozornění na podezřelou aktivitu označí, jestli byla eskalace oprávnění prostřednictvím zfalšovaných dat autorizace úspěšná nebo neúspěšná. Prověřit by se měla upozornění na úspěšné i neúspěšné útoky, protože neúspěšné pokusy můžou stále indikovat přítomnost útočníka ve vašem prostředí.
+ATA označuje ve výstraze podezřelou aktivitu, jestli ke zvýšení oprávnění pomocí forged data autorizace byla úspěšná, nebo pokud se nezdařilo. Prověřit by se měla upozornění na úspěšné i neúspěšné útoky, protože neúspěšné pokusy můžou stále indikovat přítomnost útočníka ve vašem prostředí.
 
 ## <a name="investigating"></a>Prošetření
-Po přijetí upozornění na eskalaci oprávnění prostřednictvím zfalšovaných dat autorizace v ATA musíte zjistit, co je třeba udělat ke zmírnění tohoto útoku. K tomu musíte nejdřív upozornění klasifikovat jako jedno z následujících: 
+Po přijetí upozornění na eskalaci oprávnění prostřednictvím zfalšovaných dat autorizace v ATA musíte zjistit, co je třeba udělat ke zmírnění tohoto útoku. K tomuto účelu musí nejprve klasifikovat výstrahu jako jeden z následujících typů výstrah: 
 -   Pravdivě pozitivní: škodlivá akce zjištěná službou ATA
 -   Falešně pozitivní: falešné upozornění – k eskalaci oprávnění prostřednictvím zfalšovaných dat autorizace ve skutečnosti nedošlo (jedná se o událost, kterou řešení ATA mylně považovalo za tento typ útoku)
 -   Neškodné pravdivě pozitivní: akce zjištěná službou ATA, která je skutečná, ale není škodlivá, třeba test průniku
@@ -76,7 +76,7 @@ Následující schéma vám pomůže určit, které kroky byste měli provést:
 
 
 2.  Pokud byla detekovaná eskalace oprávnění prostřednictvím útoků založených na zfalšovaných datech autorizace úspěšná:
-    -   Pokud má řadič domény, na kterém bylo upozornění vyvoláno, správně nainstalované opravy, jde o falešně pozitivní upozornění. V takovém případě byste měli upozornění zrušit a poslat týmu ATA na ATAEval@microsoft.com oznámení e-mailem, abychom mohli naše zjišťování stále zlepšovat. 
+    -   Pokud má řadič domény, na kterém bylo upozornění vyvoláno, správně nainstalované opravy, jde o falešně pozitivní upozornění. V takovém případě by měl výstrahu zamítnout a e-mailovou zprávu upozornění ATA týmu na ATAEval@microsoft.com tak může ATA neustálé zlepšování jeho zjištění. 
     -   Pokud řadič domény v upozornění nemá správné opravy:
         -   Pokud služba uvedená v upozornění nemá vlastní autorizační mechanismus, jde o pravdivě pozitivní upozornění a měli byste provést proces reagování na incidenty vaší organizace. 
         -   Pokud má služba uvedená v upozornění interní autorizační mechanismus, který vyžaduje data autorizace, může být falešně identifikovaná jako eskalace oprávnění prostřednictvím útoku založeného na zfalšovaných datech autorizace. 
@@ -86,7 +86,7 @@ Následující schéma vám pomůže určit, které kroky byste měli provést:
 
     -   Pokud není známo, že by operační systém nebo aplikace PAC upravovaly: 
 
-        -   Pokud uvedená služba nemá vlastní autorizační službu, jde o pravdivě pozitivní upozornění a měli byste provést proces reagování na incidenty vaší organizace. I když se útočníkovi svá oprávnění v doméně zvýšit nepodařilo, můžete předpokládat, že se ve vaší síti útočník nachází, a měli byste ho co nejrychleji najít, než se pokusí svá oprávnění zvýšit jinými známými pokročilými vytrvalými útoky. 
+        -   Pokud uvedená služba nemá vlastní autorizační službu, jde o pravdivě pozitivní upozornění a měli byste provést proces reagování na incidenty vaší organizace. I když útočník nebyla úspěšná. v zvýšit svá oprávnění v doméně, můžete předpokládat, je útočník ve vaší síti a chcete je před pokoušejí další známé pokročilých útoků trvalé ke zvýšení oprávnění tak rychle najít jejich oprávnění. 
         -   Pokud má služba uvedená v upozornění svůj vlastní autorizační mechanismus, který vyžaduje data autorizace, může být falešně identifikovaná jako eskalace oprávnění prostřednictvím útoku založeného na zfalšovaných datech autorizace.
 
 ## <a name="post-investigation"></a>Následné prošetření

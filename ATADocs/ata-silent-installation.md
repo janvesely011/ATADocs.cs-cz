@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/6/2017
+ms.date: 11/7/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 16a8eb868448cc43244d3cf3c933e2e539b08d07
-ms.sourcegitcommit: e2cb3af9c1dbb0b75946dc70cc439b19d654541c
+ms.openlocfilehash: 3210d9153cd6781ae13a784e1f2b5927e0703009
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/06/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Platí pro: Advanced Threat Analytics verze 1.8*
 
@@ -29,13 +29,13 @@ Tento článek poskytuje podrobné pokyny k bezobslužné instalaci ATA.
 
 ATA verze 1.8 vyžaduje instalaci rozhraní Microsoft .NET Framework 4.6.1. 
 
-Když instalujete nebo aktualizujete ATA, jako součást nasazení Microsoft ATA se automaticky nainstaluje .Net Framework 4.6.1.
+Když instalujete nebo aktualizujete ATA, rozhraní .net Framework 4.6.1 je automaticky nainstalován jako součást nasazení Microsoft ATA.
 
 > [!Note] 
 > Instalace rozhraní .Net Framework 4.6.1 může vyžadovat restartování serveru. Když instalujete ATA Gateway na řadiče domény, zvažte naplánování časového období údržby pro tyto řadiče.
-Při použití metody bezobslužné instalace ATA je instalační program nakonfigurovaný tak, aby po ukončení instalace (v případě potřeby) automaticky restartoval server. Vzhledem k tomu, že je v Instalační službě systému Windows chyba, není možné spolehlivě použít příznak norestart a zajistit tak, že se server nebude restartovat. Během údržby tedy musí běžet jenom tichá instalace.
+Při použití metody bezobslužné instalace ATA je instalační program nakonfigurovaný tak, aby po ukončení instalace (v případě potřeby) automaticky restartoval server. Z důvodu chyby Instalační služby systému Windows norestart příznak nelze použít spolehlivě a ujistěte se, že se server nerestartuje, tak zajistěte, aby běžela jenom tichou instalaci během časového období údržby.
 
-Pokud chcete sledovat průběh nasazení, monitorujte instalační protokoly ATA, které jsou umístěné ve složce **%AppData%\Local\Temp**.
+Pokud chcete sledovat průběh nasazení, monitorujte instalační protokoly ATA, které jsou umístěny v **%AppData%\Local\Temp**.
 
 
 ## <a name="install-the-ata-center"></a>Instalace ATA Center
@@ -66,9 +66,9 @@ K instalaci komponenty ACA Center použijte následující příkaz:
 |DatabaseDataPath|DatabaseDataPath= "<DBPath>"|Ne|Nastavuje cestu k datové složce databáze ATA. Výchozí cesta: C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data|
 |CenterIpAddress|CenterIpAddress=<CenterIPAddress>|Ano|Nastaví IP adresu služby ATA Center.|
 |CenterPort|CenterPort=<CenterPort>|Ano|Nastaví síťový port služby ATA Center.|
-|CenterCertificateThumbprint|CenterCertificateThumbprint="<CertThumbprint>"|Ne|Nastaví kryptografický otisk certifikátu pro službu ATA Center. Tento certifikát slouží k zabezpečení komunikace mezi komponentami ATA Center a ATA Gateway. Pokud není nastavený, instalace vytvoří certifikát podepsaný svým držitelem (self-signed certificate).|
+|CenterCertificateThumbprint|CenterCertificateThumbprint="<CertThumbprint>"|Ne|Nastaví kryptografický otisk certifikátu pro službu ATA Center. Tento certifikát slouží k zabezpečení komunikace mezi komponentami ATA Center a ATA Gateway. Pokud není sada, instalace vytvoří certifikát podepsaný svým držitelem.|
 |ConsoleIpAddress|ConsoleIpAddress=<ConsoleIPAddress>|Ano|Nastaví IP adresu konzoly ATA.|
-|ConsoleCertificateThumbprint|ConsoleCertificateThumbprint="<CertThumbprint >"|Ne|Nastaví kryptografický otisk certifikátu pro konzolu ATA. Tento certifikát slouží k ověření identity webu konzoly ATA. Pokud není nastavený, instalace vytvoří certifikát podepsaný svým držitelem (self-signed certificate).|
+|ConsoleCertificateThumbprint|ConsoleCertificateThumbprint="<CertThumbprint >"|Ne|Nastaví kryptografický otisk certifikátu pro konzolu ATA. Tento certifikát se používá k ověření identity webu konzoly ATA. Pokud není zadaný, instalace vytvoří certifikát podepsaný svým držitelem|
 
 **Příklady**: Instalace komponenty ATA Center s výchozími instalačními cestami a jednou IP adresou:
 
@@ -168,7 +168,7 @@ K bezobslužné instalaci komponenty ACA Gateway použijte následující přík
 |ConsoleAccountName|ConsoleAccountName="<AccountName>"|Ano|Nastaví název uživatelského účtu (user@domain.com), který se použije k registraci komponenty ATA Gateway ve službě ATA Center.|
 |ConsoleAccountPassword|ConsoleAccountPassword="<AccountPassword>"|Ano|Nastaví heslo uživatelského účtu (user@domain.com), který se použije k registraci komponenty ATA Gateway ve službě ATA Center.|
 
-**Příklady**: Aby byla možná tichá instalace ATA Gateway na počítač připojený do domény, přihlaste se svými přihlašovacími údaji správce ATA a nebudete muset zadávat přihlašovací údaje. V opačném případě použijte k registraci v ATA Center uvedené přihlašovací údaje:
+**Příklady**: K bezobslužné instalaci ATA Gateway, přihlaste se k doméně připojený k počítači pomocí přihlašovacích údajů správce ATA tak, že není potřeba zadat přihlašovací údaje jako součást instalace. V opačném případě použijte k registraci v ATA Center uvedené přihlašovací údaje:
 
     "Microsoft ATA Gateway Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" 
     ConsoleAccountName="user@contoso.com" ConsoleAccountPassword="userpwd"

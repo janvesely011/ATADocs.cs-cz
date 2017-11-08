@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/9/2017
+ms.date: 11/7/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 49d0df5f3d835a879990d590b447ed3b4de88685
-ms.sourcegitcommit: e9f2bfd610b7354ea3fef749275f16819d60c186
+ms.openlocfilehash: 0feb12a2e86adae124016c90431209ec33cdbcb5
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Platí pro: Advanced Threat Analytics verze 1.8*
 
@@ -33,9 +33,9 @@ ATA umožňuje vyloučit z řady detekcí konkrétní IP adresy nebo uživatele.
 
 Například při **vyloučení DNS Reconnaissance** se může jednat o kontrolu zabezpečení, která jako mechanismus pro prohledávání používá službu DNS. Vyloučení pomáhá službě ATA takové kontroly ignorovat. Příkladem vyloučení *Pass-the-Ticket* je zařízení NAT.    
 
-ATA také umožňuje konfiguraci uživatele honeytokenu, který slouží jako past pro útočníky – jakákoliv autorizace přidružená k tomuto účtu (obvykle neaktivnímu) spustí výstrahu.
+ATA taky umožňuje konfiguraci uživatele Honeytokenu, který se používá jako depeše nebezpečného actors – ověřování spojené s tímto účtem (obvykle spících) aktivuje výstrahu.
 
-Výše uvedené možnosti nakonfiguruje následovně:
+To můžete nakonfigurovat, postupujte takto:
 
 1.  V konzole ATA klikněte na ikonu nastavení a vyberte **Konfigurace**.
 
@@ -43,7 +43,7 @@ Výše uvedené možnosti nakonfiguruje následovně:
 
 2.  V části **Detekce** klikněte na **Obecné**.
 
-2. V části **Účty honeytokenu** zadejte název účtu honeytokenu. Pole účtu honeytokenu lze prohledávat a automaticky zobrazí entity ve vaší síti.
+2. V části **Účty honeytokenu** zadejte název účtu honeytokenu. Pole účtů Honeytokenu je prohledávat a entity se automaticky zobrazí ve vaší síti.
 
    ![Honeytoken](media/honeytoken.png)
 
@@ -58,7 +58,7 @@ Blahopřejeme, úspěšně jste nasadili Microsoft Advanced Threat Analytics.
 
 Zkontrolujte časovou osu útoků, abyste viděli zjištěné podezřelé aktivity a našli uživatele nebo počítače a zobrazili jejich profily.
 
-ATA okamžitě spustí vyhledávání podezřelých aktivit. Některé aktivity, jako jsou třeba konkrétní typy podezřelého chování, budou dostupné, až ATA bude mít čas vytvořit profily chování (nejméně tři týdny).
+ATA spustí vyhledávání podezřelých aktivit okamžitě. Některé aktivity, například některé aktivity podezřelého chování, není k dispozici, až ATA bude mít čas vytvořit profily chování (nejméně tři týdny).
 
 Pokud chcete zkontrolovat, jestli je ATA v provozu a odchytává průniky do vaší sítě, můžete vyzkoušet [scénář simulace útoku ATA](https://docs.microsoft.com/enterprise-mobility-security/solutions/ata-attack-simulation-playbook).
 

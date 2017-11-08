@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/6/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 8c1c7a1b-a3de-4105-9fd0-08a061952172
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: a164179261dd5a50df973fab89be7ddce99f8c47
-ms.sourcegitcommit: e2cb3af9c1dbb0b75946dc70cc439b19d654541c
+ms.openlocfilehash: 2f5db3fad62b0fe2243b5bbd82677426ee6fe90c
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/06/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Platí pro: Advanced Threat Analytics verze 1.8*
 
@@ -27,7 +27,7 @@ ms.lasthandoff: 11/06/2017
 Advanced Threat Analytics (ATA) shromažďuje anonymních telemetrická data o ATA a odesílá je přes připojení HTTPS na servery Microsoftu.  Tato data Microsoft používá k vylepšení budoucích verzích ATA.
 
 ## <a name="data-collected"></a>Shromažďovaná data
-Shromážděná anonymizovaná data zahrnují následující:
+Shromážděná anonymizovaná data zahrnují následující parametry:
 
 -   Čítače výkonu z ATA Center a ATA Gateway
 
@@ -79,7 +79,7 @@ Shromážděná anonymizovaná data zahrnují následující:
 
     -   Počáteční a koncový čas
 
-- Adresa URL konzoly ATA – adresy URL při používání konzoly ATA, tzn. navštívené stránky v konzole ATA.
+- Adresa URL konzoly ATA adresy - adresy URL při použití konzoly ATA, to znamená, navštívené stránky v konzole ATA.
 
 
 ### <a name="disable-data-collection"></a>Zakázání shromažďování dat

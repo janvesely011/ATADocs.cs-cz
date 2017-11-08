@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: be9ee613-4eb3-40f1-8973-e7f0a707ff57
 ms.reviewer: 
 ms.suite: ems
-ms.openlocfilehash: 036871da05f59e380b045139e735762c1cc8a363
-ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
+ms.openlocfilehash: 7bbca4eeb6ad8c5b9cf161f60144bbd27ca3c8d2
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 11/07/2017
 ---
 # <a name="whats-new-in-ata-version-17"></a>Novinky ATA verze 1.7
 Tyto poznámky k verzi obsahují informace o známých problémech v této verzi Advanced Threat Analytics.
@@ -104,14 +104,14 @@ Pokud chcete tento problém vyřešit, přejděte na příkazovém řádku se zv
 ### <a name="export-suspicious-activity-details-to-excel-may-fail"></a>Export podrobností o podezřelých aktivitách do Excelu se nemusí podařit
 Při pokusu o export podrobností o podezřelých aktivitách do souboru Excelu se nemusí tato operace podařit a může se zobrazit tato chybová zpráva: *Chyba [BsonClassMapSerializer`1] System.FormatException: Při deserializaci vlastnosti Activity třídy Microsoft.Tri.Common.Data.NetworkActivities.SuspiciousActivityActivitydošlo k chybě: Prvek 'ResourceIdentifier' neodpovídá žádnému poli nebo vlastnosti třídy Microsoft.Tri.Common.Data.EventActivities.NtlmEvent. ---> System.FormatException: Prvek 'ResourceIdentifier' neodpovídá žádnému poli nebo vlastnosti třídy Microsoft.Tri.Common.Data.EventActivities.NtlmEvent.*
 
-Pokud chcete tento problém vyřešit, otevřete příkazový řádek se zvýšenými oprávněními, přejděte do složky: **%ProgramFiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin** a spusťte:
-1.  **Mongo.exe ATA** (ATA musí být velkými písmeny)
-2.  **db.SuspiciousActivityActivity.update({ "Activity._t": "NtlmEvent" },{$unset: {"Activity.ResourceIdentifier": ""}}, {multi: true});**
+Chcete-li vyřešit tento problém, z příkazového řádku se zvýšenými oprávněními, přejděte do následujícího umístění: **%ProgramFiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin** a spusťte následující příkazy:
+1.  `Mongo.exe ATA`(ATA musí být velkými písmeny)
+2.  `db.SuspiciousActivityActivity.update({ "Activity._t": "NtlmEvent" },{$unset: {"Activity.ResourceIdentifier": ""}}, {multi: true});`
 
 ## <a name="minor-changes"></a>Menší změny
 
 - ATA teď pro konzolu ATA používá OWIN místo IIS.
-- Pokud nefunguje služba ATA Center, nebudete mít přístup ke konzole ATA.
+- Pokud služba ATA Center je vypnutý, nebude možné získat konzole ATA.
 - Podsítě pro krátkodobé zapůjčení už nejsou potřebné z důvodu změn v ATA NNR.
 
 ## <a name="see-also"></a>Viz také

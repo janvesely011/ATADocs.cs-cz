@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/6/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 93b27f15-f7e5-49bb-870a-d81d09dfe9fc
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 68dda1254757d9633119cbb8b486c3042c612d5b
-ms.sourcegitcommit: e2cb3af9c1dbb0b75946dc70cc439b19d654541c
+ms.openlocfilehash: 4fe4569cd6477775e8a888d2acd05511f16fb5f6
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/06/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Platí pro: Advanced Threat Analytics verze 1.8*
 
@@ -26,7 +26,7 @@ ms.lasthandoff: 11/06/2017
 # <a name="modifying-the-ata-center-configuration"></a>Změna konfigurace ATA Center
 
 
-Po počátečním nasazení by se změny ATA Center měly dělat opatrně. Pomocí následujících postupů při aktualizaci adresu URL konzoly a certifikát.
+Po počátečním nasazení by se změny ATA Center měly dělat opatrně. Při aktualizaci adresu URL konzoly a certifikát, použijte následující postupy.
 
 ## <a name="the-ata-console-url"></a>Adresa URL konzoly ATA
 
@@ -44,7 +44,7 @@ Adresa URL se používá v následujících scénářích:
 
 1. Zajistěte, aby nové adrese URL, kterou chcete použít přeloží na IP adresu konzoly ATA.
 
-2. V nastavení ATA pod **Center**, zadejte nové adrese URL. V tomto okamžiku bude služba ATA Center stále používat původní adresu URL. 
+2. V nastavení ATA pod **Center**, zadejte nové adrese URL. V tomto okamžiku služba ATA Center stále používá původní adresu URL. 
 
  ![Změna konfigurace ATA](media/change-center-config.png)
 
@@ -68,7 +68,7 @@ Adresa URL se používá v následujících scénářích:
 
 Nahraďte certifikát pomocí tohoto postupu:
 
-1. Předtím, než vyprší platnost aktuálního certifikátu, vytvořte nový certifikát a ujistěte se, že je nainstalovaná na serveru ATA Center. <br></br>Doporučujeme vybrat si certifikát od interní certifikační autority, ale je také možné vytvořit nový certifikát podepsaný svým držitelem. Další informace najdete v části [New-SelfSignedCertificate](https://technet.microsoft.com/itpro/powershell/windows/pkiclient/new-selfsignedcertificate).
+1. Předtím, než vyprší platnost aktuálního certifikátu, vytvořte nový certifikát a ujistěte se, že je nainstalovaná na serveru ATA Center. <br></br>Doporučujeme vybrat si certifikát od interní certifikační autority, ale je také možné vytvořit nový certifikát podepsaný svým držitelem. Další informace najdete v tématu [New-SelfSignedCertificate](https://technet.microsoft.com/itpro/powershell/windows/pkiclient/new-selfsignedcertificate).
 
 2. V nastavení ATA pod **Center**, vyberte tento nově vytvořený certifikát. V tomto okamžiku je služba ATA Center stále vázaná na původní certifikát. 
 
@@ -76,7 +76,7 @@ Nahraďte certifikát pomocí tohoto postupu:
 
 3. Počkejte, než pro komponenty ATA Gateway k synchronizaci. Nyní mají dva potenciální certifikáty, které jsou platné pro vzájemné ověřování. Tak dlouho, dokud ATA Gateway bude moct připojit pomocí původního certifikátu, nepokusí novým.
 
-4. Po všechny komponenty ATA Gateway synchronizovaly s aktualizovanou konfigurací aktivujte nový certifikát, který je služba ATA Center vázána. Po aktivaci nového certifikátu služba ATA Center vytvoří vazbu na nový certifikát. Komponenty ATA Gateway se teď použít nový certifikát k ověření ve službě ATA Center. Po připojení ke službě ATA Center, ATA Gateway stáhne nejnovější konfiguraci a bude mít pouze nový certifikát pro ATA Center. 
+4. Po všechny komponenty ATA Gateway synchronizovaly s aktualizovanou konfigurací aktivujte nový certifikát, který je služba ATA Center vázána. Po aktivaci nového certifikátu služba ATA Center vytvoří vazbu na nový certifikát. Komponenty ATA Gateway teď používají nový certifikát k ověření ve službě ATA Center. Po připojení ke službě ATA Center, ATA Gateway stáhne nejnovější konfiguraci a bude mít pouze nový certifikát pro ATA Center. 
 
 > [!NOTE]
 > -   Pokud ATA Gateway offline a aktivovat nový certifikát a nikdy nezískala aktualizovanou konfiguraci, ručně aktualizujte konfigurační soubor JSON v ATA Gateway.

@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/6/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,18 +13,18 @@ ms.technology:
 ms.assetid: 44d7c899-816c-4f7f-91d3-84a09d291a24
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: f488536341f96f66aac17e23f6938a83060a1116
-ms.sourcegitcommit: e2cb3af9c1dbb0b75946dc70cc439b19d654541c
+ms.openlocfilehash: b78f0407d74c3c8e0187c9934d3d7555104cd6ec
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/06/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Platí pro: Advanced Threat Analytics verze 1.8*
 
 
 
 # <a name="working-with-suspicious-activities"></a>Práce s podezřelými aktivitami
-Toto téma vysvětluje základy pro práci s Advanced Threat Analytics.
+Tento článek vysvětluje základy pro práci s Advanced Threat Analytics.
 
 ## <a name="review-suspicious-activities-on-the-attack-time-line"></a>Kontrola podezřelých na časové ose útoku
 Po přihlášení ke konzole ATA se vám automaticky otevře **Suspicious Activities Time Line** (Časová osa podezřelých aktivit). Podezřelé aktivity jsou uvedené v chronologickém pořadí s nejnovějšími podezřelými aktivita na vrcholu časové osy.
@@ -52,16 +52,16 @@ Každá podezřelá aktivita obsahuje následující informace:
 
 > [!NOTE]
 > -   Po přesunutí ukazatele myši nad uživatele nebo počítač, zobrazí se zkrácený profil entity, který nabízí další informace o entitě a obsahuje počet podezřelých aktivit, se kterými je entita propojená.
-> -   Pokud kliknete na entitu, přejdete na profil entity pro uživatele nebo počítač.
+> -   Pokud kliknete na entitu, budete přejdete do entity profil uživatele nebo počítače.
 
 ![Obrázek časové osy podezřelých aktivit ATA](media/ATA-Suspicious-Activity-Timeline.JPG)
 
 ## <a name="filter-suspicious-activities-list"></a>Filtrování seznamu podezřelých aktivit
 Chcete-li filtrovat seznam podezřelých aktivit:
 
-1.  V **filtrovat podle** na levé straně obrazovky vyberte jednu z následujících: **všechny**, **otevřete**, **uzavřeno**, nebo  **Potlačené**.
+1.  V **filtrovat podle** na levé straně obrazovky vyberte jednu z následujících možností: **všechny**, **otevřete**, **uzavřeno**, nebo **Potlačené**.
 
-2.  Chcete-li dál filtrovat seznam, vyberte **Vysoká**, **Střední** nebo **Nízká**.
+2.  Chcete-li dál filtrovat seznam, vyberte **vysokou**, **střední**, nebo **nízká**.
 
 **Závažnost podezřelé aktivity**
 
@@ -75,13 +75,13 @@ Chcete-li filtrovat seznam podezřelých aktivit:
 
 -   **Vysoká**
 
-    Označuje podezřelé aktivity, které můžou vést ke krádeži identity, zvýšení úrovně oprávnění nebo jiným vysoce závažným útokům.
+    Označuje podezřelé aktivity, které může vést ke krádeži identity, zvýšení úrovně oprávnění nebo jiných vysoce závažným útokům.
 
 
 
 
 ## <a name="remediating-suspicious-activities"></a>Opravy podezřelých aktivit
-Stav podezřelé aktivity můžete změnit tak, že klepnete na aktuální stav podezřelé aktivity a vyberete jednu z možností **Open** (Otevřeno), **Suppressed** (Potlačeno), **Closed** (Uzavřeno) nebo **Deleted** (Odstraněno).
+Můžete změnit stav podezřelé aktivity klepnutím na aktuální stav podezřelé aktivity a výběrem jedné z následujících **otevřete**, **Suppressed**, **uzavřeno**, nebo **odstranit**.
 Uděláte to tak, že kliknete na tři tečky v pravém horním rohu konkrétní podezřelé aktivity a zobrazíte seznam dostupných akcí.
 
 ![Akce ATA pro podezřelé aktivity](./media/sa-actions.png)
@@ -90,14 +90,14 @@ Uděláte to tak, že kliknete na tři tečky v pravém horním rohu konkrétní
 
 -   **Open** (Otevřeno): V tomto seznamu se zobrazí všechny nové podezřelé aktivity.
 
--   **Closed** (Uzavřeno): Slouží ke sledování podezřelých aktivit, které jste identifikovali, prozkoumali a opravili s cílem zmírnit jejich dopad.
+-   **Zavřít**: slouží ke sledování podezřelých aktivit, které určili, prozkoumali a opravili omezeny.
 
     > [!NOTE]
-    > ATA může znovu otevřít uzavřenou aktivitu, pokud se stejná aktivita zjistí během krátké doby znovu.
+    > Pokud se stejná aktivita zjistí během krátké doby znovu, ATA může znovu otevřít uzavřenou aktivitu.
 
--   **Suppressed** (Potlačeno): Potlačení aktivity znamená, že ji chcete prozatím ignorovat a upozornění chcete zobrazit, jenom pokud se bude jednat o novou instanci. Znamená to, že pokud se vyskytne podobná výstraha, služba ATA ji neotevře. Pokud se ale výstraha na 7 dní zastaví a pak se znovu objeví, budete znovu upozorněni.
+-   **Suppressed** (Potlačeno): Potlačení aktivity znamená, že ji chcete prozatím ignorovat a upozornění chcete zobrazit, jenom pokud se bude jednat o novou instanci. To znamená, že, pokud je podobné výstrahy ATA nebude ho znovu otevřít. Ale pokud výstrahu zastaví sedm dní a potom je opět zobrazit, budete upozorněni znovu.
 
-- **Delete** (Odstranit): Pokud výstrahu odstraníte, odstraní se z databáze v systému a NEBUDE možné ji obnovit. Po kliknutí na možnost pro odstranění budete moct odstranit všechny podezřelé aktivity stejného typu.
+- **Odstranit**: Pokud odstraníte výstrahu, je odstraněn ze systému, z databáze a nebudete moci obnovit. Po kliknutí na možnost pro odstranění budete moct odstranit všechny podezřelé aktivity stejného typu.
 
 - **Exclude** (Vyloučit): Možnost vyloučit entitu, aby se už nevyvolávaly další určité typy výstrah. Můžete například nastavit, aby ATA vyloučila určitou entitu (uživatele nebo počítač) a neupozorňovala znovu na určitý typ podezřelé aktivity, jako je například určitý správce, který spouští vzdálený kód, nebo kontrola zabezpečení provádějící rekognoskaci DNS. Kromě toho, že je možné přidávat výjimky přímo k podezřelým aktivitám při jejich zjištění na časové ose, můžete také přejít na možnost **Exclusions** (Vyloučení) na stránce Configuration (Konfigurace) a pro každou podezřelou aktivitu ručně přidat a odebrat vyloučené entity nebo podsítě (například pro Pass-the-Ticket). 
 > [!NOTE]

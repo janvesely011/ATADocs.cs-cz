@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/9/2017
+ms.date: 11/7/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: e1c5ff41-d989-46cb-aa38-5a3938f03c0f
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 6a2e559f5aef382230476dde44e8118f2f26b3cf
-ms.sourcegitcommit: e9f2bfd610b7354ea3fef749275f16819d60c186
+ms.openlocfilehash: c4cd30446193ff2d9ab4069b1312593a2102282a
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Platí pro: Advanced Threat Analytics verze 1.8*
 
@@ -43,9 +43,9 @@ Při prvním otevření konzoly ATA se objeví následující obrazovka:
     |**Heslo** (povinné)|Zadejte heslo pro uživatele, který je jen pro čtení, například **Pencil1**.|
     |**Doména** (povinné)|Zadejte doménu pro uživatele, který je jen pro čtení, například **contoso.com**. **Poznámka:** Je důležité, abyste zadali kompletní plně kvalifikovaný název domény, ve které je uživatel umístěný. Pokud je například účet uživatele v doméně corp.contoso.com, musíte zadat `corp.contoso.com`, a ne contoso.com.|
 
-2. Kliknutím na **Test připojení** můžete otestovat připojení k doméně a ověřit, že zadané přihlašovací údaje poskytují přístup. Bude to fungovat jenom v případě, že je komponenta ATA Center připojená k doméně.   
+2. Kliknutím na **Test připojení** můžete otestovat připojení k doméně a ověřit, že zadané přihlašovací údaje poskytují přístup. Toto funguje, pokud ATA Center má připojení k doméně.    
 
-    Po uložení se uvítací zpráva v konzole změní na následující: ![Uvítání ATA fáze 1 dokončeno](media/ATA_1.7-welcome-provide-username-finished.png)
+    Po uložení, zobrazení uvítací zprávy v konzole se změní na tuto zprávu: ![ATA Vítejte fáze 1 dokončení](media/ATA_1.7-welcome-provide-username-finished.png)
 
 3. Na konzole pokračujte kliknutím na **Stáhnout instalační soubor brány a nainstalovat první bránu**.
 

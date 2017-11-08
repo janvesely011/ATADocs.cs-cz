@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/9/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 283e7b4e-996a-4491-b7f6-ff06e73790d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 1afaf258198c1b18aca5cc2e4be6774600f72a73
-ms.sourcegitcommit: e9f2bfd610b7354ea3fef749275f16819d60c186
+ms.openlocfilehash: 44f50b2daefb5a54c56b90289faf08b897494093
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Platí pro: Advanced Threat Analytics verze 1.8*
 
@@ -27,7 +27,7 @@ ms.lasthandoff: 10/09/2017
 
 ## <a name="how-ata-works"></a>Popis fungování řešení ATA
 
-ATA využívá proprietární modul pro parsování sítě k zachycení a parsování síťového provozu přes různé protokoly (například Kerberos, DNS, RPC, NTLM a další) za účelem ověřování, autorizaci a shromažďování informací. ATA tyto informace shromažďuje prostřednictvím:
+ATA využívá proprietární sítě, analýza modul k zaznamenání a analyzovat síťový provoz více protokolů (například protokolu Kerberos, DNS, RPC, protokol NTLM a dalších) pro ověřování, autorizaci a shromažďování informací. ATA tyto informace shromažďuje prostřednictvím:
 
 -   zrcadlení portů z řadičů domény a serverů DNS na ATA Gateway a/nebo
 -   nasazení ATA Lightweight Gateway (LGW) přímo na řadičích domény.
@@ -40,18 +40,18 @@ ATA může přijímat události a protokoly z následujících zdrojů:
 -   Přímo z protokolu událostí Windows (komponenta Lightweight Gateway)
 
 
-Další informace o architektuře ATA najdete v článku [Architektura ATA](ata-architecture.md).
+Další informace o architektuře ATA najdete v tématu [architektura ATA](ata-architecture.md).
 
 ## <a name="what-does-ata-do"></a>Co ATA dělá?
 
 Technologie ATA detekuje různé podezřelé aktivity a zaměřuje se na několik fází v řetězci internetového útoku, včetně následujícího:
 
--   Rekognoskace, během které útočníci shromažďují informace o konstrukci prostředí, o různých assetech a entitách a připravují si plán pro další fáze útoku.
+-   Rekognoskace, během které útočníci shromažďovat informace o tom, jak je integrovaná prostředí, jaké jiné prostředky jsou a entit, které neexistuje. Obecně se vytváření jejich plán pro další fáze útoku.
 -   Cyklus laterálního pohybu, během kterého útočník investuje čas a úsilí do rozšíření prostoru pro útoky uvnitř vaší sítě.
--   Dominance domény (trvalost), během které útočník zachycuje informace, které mu umožňují pokračovat v kampani pomocí různých sad vstupních bodů, přihlašovacích údajů a technik. 
+-   Dominance v doméně (trvalost), během které útočník zachytává informace, což jim umožní obnovit jejich kampaň použití různých sad vstupních bodů, přihlašovací údaje a techniky. 
 
 Tyto fáze internetového útoku jsou podobné a předvídatelné bez ohledu na typ napadené společnosti nebo typ informací, o které se usiluje.
-ATA hledá tří hlavní typy útoků: Škodlivé útoky, nestandardní chování a bezpečnostní problémy a rizika.
+ATA hledání pro tři hlavní typy útoků: útoky se zlými úmysly, neobvyklé chování a problémy se zabezpečením a rizika.
 
 **Škodlivé útoky** se detekují deterministicky vyhledáváním úplného seznamu známých typů útoků, včetně následujících:
 
@@ -65,7 +65,8 @@ ATA hledá tří hlavní typy útoků: Škodlivé útoky, nestandardní chován�
 -   Hrubá síla
 -   Vzdálené spuštění
 
-Úplný seznam detekcí a jejich popisu najdete v článku [Jaké podezřelé aktivity může ATA detekovat?](ata-threats.md)
+Úplný seznam, zjištění a jejich popisy najdete v tématu [co podezřelých aktivit může ATA rozpoznat?](ata-threats.md). 
+
 ATA detekuje tyto podezřelé aktivity a zobrazí příslušné informace v konzole ATA včetně jasného zobrazení kdo, co, kdy a jak. Jak vidíte, při sledování tohoto jednoduchého a uživatelsky vstřícného řídicího panelu budete upozorněni, že ATA má podezření na útok typu Pass-the-Ticket proti počítačům Klient 1 a 2 ve vaší síti.
 
  ![Ukázková obrazovka ATA s útokem typu Pass-the-Ticket](media/pass_the_ticket_sa.png)
@@ -79,7 +80,7 @@ ATA detekuje **neobvyklé chování** pomocí analýzy chování a využitím st
 -   Úprava citlivých skupin
 
 
-Podezřelé aktivity tohoto typu můžete zobrazit na řídicím panelu ATA. V následujícím příkladu vás ATA upozorní, když uživatel získá přístup ke čtyřem počítačům, které obvykle nepoužívá, což může být důvod pro poplach.
+Podezřelé aktivity tohoto typu můžete zobrazit na řídicím panelu ATA. V následujícím příkladu ATA vás upozorní, když uživatel přistupuje k čtyř počítačů, které nejsou přístupné normálně tímto uživatelem, které by mohly být příčinu výstrahy.
 
  ![ukázková obrazovka řešení ATA s neobvyklým chováním](media/abnormal-behavior-sa.png) 
 
@@ -96,9 +97,9 @@ Podezřelé aktivity tohoto typu můžete zobrazit na řídicím panelu ATA. V n
 
 ## <a name="known-issues"></a>Známé problémy
 
-- Pokud aktualizujete na ATA 1.7 a hned potom na ATA 1.8, aniž nejprve aktualizujete komponenty ATA Gateway, nebudete moct migrovat na ATA 1.8. Před aktualizací komponenty ATA Center na verzi 1.8 je nezbytné nejprve aktualizovat všechny brány na verzi 1.7.1 nebo 1.7.2.
+- Pokud aktualizujete ATA 1.7 a okamžitě ATA 1.8 bez první aktualizace komponenty ATA Gateway, nemůžete migrovat do ATA 1.8. Před aktualizací komponenty ATA Center na verzi 1.8 je nezbytné nejprve aktualizovat všechny brány na verzi 1.7.1 nebo 1.7.2.
 
-- Pokud vyberete možnost provedení úplné migrace, může to v závislosti na velikosti databáze trvat velmi dlouho. Při výběru možností migrace se zobrazuje odhadovaný čas. Než se rozhodnete, kterou možnost vyberete, věnujte prosím tomuto údaji pozornost. 
+- Pokud vyberete možnost provedení úplné migrace, může to v závislosti na velikosti databáze trvat velmi dlouho. Při výběru možnosti migrace, zobrazí se odhadovanou dobu – poznamenejte si to předtím, než se rozhodnete, kterou možnost vybrat. 
 
 
 ## <a name="whats-next"></a>Co dál?

@@ -4,7 +4,7 @@ description: "Toto téma popisuje různé možnosti podpory pro verze Microsoft 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/6/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -12,26 +12,26 @@ ms.technology:
 ms.assetid: a8afbd91-c888-4dfc-94ab-72e38745163e
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: a7b7d95289cc997a647c2d6703315c283e8a9328
-ms.sourcegitcommit: e2cb3af9c1dbb0b75946dc70cc439b19d654541c
+ms.openlocfilehash: f77f8ef71765dc71d690876d4043e1b3702b9971
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/06/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Platí pro: Advanced Threat Analytics verze 1.8*
 
 # <a name="support-for-microsoft-advanced-threat-analytics-ata-versions"></a>Podpora pro verze Microsoft Advanced Threat Analytics (ATA)
 
-Microsoft má v plánu vydávat aktualizace ATA párkrát za rok s tím, že každá verze aktualizace bude podporována po dobu 12 měsíců od data jejího vydání s obecnou dostupností. Technická podpora bude poskytována po celých 12 měsíců. Naše struktura podpory je teď ale dynamická – rozvíjí se do dvou různých fází údržby, které závisejí na dostupnosti nejnovější verze.
+Microsoft má v plánu vydávat aktualizace ATA párkrát za rok s tím, že každá verze aktualizace bude podporována po dobu 12 měsíců od data jejího vydání s obecnou dostupností. Technická podpora je k dispozici po celou dobu 12 měsíců. Naše struktura podpory je teď ale dynamická – rozvíjí se do dvou různých fází údržby, které závisejí na dostupnosti nejnovější verze.
 
--   Fáze údržby Důležité aktualizace a aktualizace zabezpečení: Pokud provozujete nejnovější verzi ATA, obdržíte aktualizace zabezpečení i důležité aktualizace.
+-   Zabezpečení a důležité aktualizace údržby fáze – když spustíte nejnovější verzi ATA, zobrazí se zabezpečení a důležité aktualizace.
 
 -   Fáze údržby Aktualizace zabezpečení (pouze): Po vydání nové verze ATA se podpora starších verzí omezí po zbytek 12měsíčního životního cyklu podpory jen na aktualizace zabezpečení (jak ukazuje následující příklad podpory údržby verzí).
  
 ![Příklad podpory údržby verzí](media/versions.png)
 
 > [!Note]
-> Nejnovější verze ATA je vždy ve fázi údržby Důležité aktualizace a aktualizace zabezpečení. Znamená to, že pokud narazíte na chybu kódu, která si zasluhuje důležitou aktualizaci, a chcete obdržet opravu, musíte mít nainstalovanou nejnovější verzi Current Branch. Všechny ostatní podporované verze dávají oprávnění pouze k získání aktualizací zabezpečení. Veškerá podpora verze, jejíž platnost vypršela, skončí po uplynutí 12měsíčního životního cyklu. V tu chvíli musí zákazníci provést aktualizaci na podporovanou verzi.
+> Nejnovější verze ATA je vždy ve fázi údržby Důležité aktualizace a aktualizace zabezpečení. Znamená to, že pokud narazíte na chybu kódu, která si zasluhuje důležitou aktualizaci, a chcete obdržet opravu, musíte mít nainstalovanou nejnovější verzi Current Branch. Všechny podporované verze jsou jenom oprávněni přijímat aktualizace zabezpečení. Veškerá podpora verze, jejíž platnost vypršela, skončí po uplynutí 12měsíčního životního cyklu. V tu chvíli musí zákazníci provést aktualizaci na podporovanou verzi.
 
 ## <a name="version-history"></a>Historie verzí
 
