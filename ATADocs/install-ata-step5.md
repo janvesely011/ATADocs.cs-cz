@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/9/2017
+ms.date: 11/7/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 2a5b6652-2aef-464c-ac17-c7e5f12f920f
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 518153d03f41956871ec5e7bf680f72187e4919c
-ms.sourcegitcommit: e9f2bfd610b7354ea3fef749275f16819d60c186
+ms.openlocfilehash: 05af384d91e899c1c0bc50ec2da6147eb47adb82
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Platí pro: Advanced Threat Analytics verze 1.8*
 
@@ -47,29 +47,29 @@ Po instalaci komponenty ATA Gateway proveďte následující kroky a nakonfiguru
 
       Následující informace platí pro servery, které zadáte do seznamu **Řadiče domény**:
       - Všechny řadiče domény, jejichž provoz ATA Gateway monitoruje přes zrcadlení portů, musí být uvedené v seznamu **Řadiče domény**. Pokud řadič domény není uvedený v seznamu **Řadiče domény**, detekce podezřelých aktivit nemusí fungovat podle očekávání.
-      - Nejméně jeden řadič domény v seznamu by měl být globální katalog. Tak může ATA překládat objekty počítačů a uživatelů v jiných doménách v doménové struktuře.
+      - Nejméně jeden řadič domény v seznamu by měl být globální katalog. To umožňuje ATA překládat objekty počítačů a uživatelů v jiných doménách v doménové struktuře.
 
   - **Síťové adaptéry pro zachytávání** (povinné):
-  - Pro ATA Gateway na vyhrazeném serveru vyberte síťové adaptéry, které jsou nakonfigurované jako cílový port zrcadlení. Tyto budou přijímat zrcadlený provoz řadičů domén.
+  - Pro ATA Gateway na vyhrazeném serveru vyberte síťové adaptéry, které jsou nakonfigurované jako cílový port zrcadlení. Tyto přijímat zrcadlený provoz řadičů domén.
   - V případě ATA Lightweight Gateway by to měly být všechny síťové adaptéry, které se používají ke komunikaci s ostatními počítači ve vaší organizaci.
 
 
-  - **Kandidát na synchronizátora domény**: Za synchronizaci mezi ATA a doménou Active Directory může být zodpovědná libovolná ATA Gateway, která je nastavená jako kandidát na synchronizátora domény. V závislosti na velikosti domény může počáteční synchronizace nějakou dobu trvat a je náročná na prostředky. Ve výchozím nastavení jsou jako kandidáti na synchronizátora domény nastavené jenom ATA Gateway.
-   Doporučuje se zakázat komponentám ATA Gateway vzdálené lokality, aby byly kandidátem na synchronizátora domény.
+  - **Kandidát na synchronizátora domény**: Za synchronizaci mezi ATA a doménou Active Directory může být zodpovědná libovolná ATA Gateway, která je nastavená jako kandidát na synchronizátora domény. V závislosti na velikosti domény počáteční synchronizace může chvíli trvat a je náročná. Ve výchozím nastavení jsou jako kandidáti na synchronizátora domény nastavené jenom ATA Gateway.
+   Doporučuje se zakázat všechny vzdálené lokality komponenty ATA Gateway nebudou kandidáti na synchronizátora domény.
    Pokud je řadič domény jen pro čtení, nenastavujte ho jako kandidáta na synchronizátora domény. Další informace najdete v části [Architektura ATA](ata-architecture.md#ata-lightweight-gateway-features).
 
   > [!NOTE] 
   > První spuštění služby ATA Gateway po instalaci bude trvat několik minut, protože sestavuje mezipaměť analyzátorů zachytávání dat ze sítě.
-  > Změny konfigurace se použijí v ATA Gateway při příští plánované synchronizaci mezi komponentami ATA Gateway a ATA Center.
+  > Změny konfigurace platí pro ATA Gateway na příští plánované synchronizaci mezi ATA Gateway a ATA Center.
 
 3. Volitelně můžete nastavit [Syslog listener and Windows Event Forwarding Collection](configure-event-collection.md) (Naslouchací proces syslog a kolekce předávání událostí systému Windows). 
-4. Zaškrtněte políčko pro **automatickou aktualizaci ATA Gateway**, aby se ve vydání příštích verzí při aktualizaci komponenty ATA Center automaticky aktualizovala tato komponenta ATA Gateway.
+4. Povolit **aktualizaci ATA Gateway automaticky** tak, že ve vydání příštích verzí při aktualizaci komponenty ATA Center, tato komponenta ATA Gateway se automaticky aktualizuje.
 
 5. Klikněte na **Uložit**.
 
 
 ## <a name="validate-installations"></a>Ověření instalací
-Chcete-li ověřit, že ATA Gateway je úspěšně nasazená, zkontrolujte následující:
+Chcete-li ověřit, že ATA Gateway je úspěšně nasazená, zkontrolujte následující kroky:
 
 1.  Zkontrolujte, že je služba **Microsoft Advanced Threat Analytics Gateway** spuštěná. Po uložení nastavení ATA Gateway může trvat několik minut, než se služba spustí.
 

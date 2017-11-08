@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/25/2017
+ms.date: 11/7/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 2f720118b1d9ac08f26b7057e5c7b6706ff4b0b1
-ms.sourcegitcommit: 0cc999b20e919abe4d6edaedee78185788a3e3b9
+ms.openlocfilehash: d0d7ce6aae1bb59d266ddc0f7162ecfbc477b78a
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/25/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Platí pro: Advanced Threat Analytics verze 1.8*
 
@@ -56,13 +56,13 @@ V této části jsou uvedené informace, které byste měli získat, a účty a 
     > [!NOTE]
     > Pokud jste pro různé organizační jednotky (OU) ve vaší doméně nastavili vlastní seznamy ACL, ujistěte se, že vybraný uživatel má pro tyto organizační jednotky oprávnění ke čtení.
 
--   Neinstalujte Microsoft Message Analyzer na ATA Gateway nebo Lightweight Gateway. Ovladač nástroje Message Analyzer koliduje s ovladači komponent ATA Gateway a Lightweight Gateway. Pokud na komponentě ATA Gateway spustíte Wireshark a následně zastavíte jeho zachytávání, budete muset restartovat službu Microsoft Advanced Threat Analytics Gateway. Pokud ne, brána zastaví zachycení provozu. Wireshark běžící na komponentě ATA Lightweight Gateway nijak nenarušuje její činnost.
+-   Neinstalujte Microsoft Message Analyzer na ATA Gateway nebo Lightweight Gateway. Ovladač nástroje Message Analyzer koliduje s ovladači komponent ATA Gateway a Lightweight Gateway. Pokud na komponentě ATA Gateway spustíte Wireshark a následně zastavíte jeho zachytávání, budete muset restartovat službu Microsoft Advanced Threat Analytics Gateway. Pokud ne, brána zastaví zachycení provozu. Wireshark systémem ATA Lightweight Gateway nebudou v konfliktu s ATA Lightweight Gateway.
 
--    Doporučujeme: Uživatel by měl mít oprávnění jen pro čtení v kontejneru odstraněné objekty. To umožňuje ATA detekovat hromadné odstranění objektů v doméně. Informace o konfiguraci oprávnění jen pro čtení pro kontejner odstraněných objektů najdete v tématu **Změna oprávnění pro kontejner odstraněných objektů** tématu [zobrazení nebo nastavení oprávnění pro objekt adresáře](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) tématu.
+-    Doporučujeme: Uživatel by měl mít oprávnění jen pro čtení v kontejneru odstraněné objekty. To umožňuje ATA detekovat hromadné odstranění objektů v doméně. Informace o konfiguraci oprávnění jen pro čtení pro kontejner odstraněných objektů najdete v tématu **Změna oprávnění pro kontejner odstraněných objektů** tématu [zobrazení nebo nastavení oprávnění pro objekt adresáře](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) článku.
 
 -   Volitelné: Uživatelský účet uživatele, který nemá žádné síťové aktivity. Tento účet je nakonfigurovaný jako uživatel Honeytokenu ATA. Ke konfiguraci uživatele Honeytokenu, potřebovat SID účtu uživatele, nikoli jeho uživatelské jméno. Další informace najdete v tématu [vyloučení konfigurace IP adres a uživatele Honeytokenu](install-ata-step7.md).
 
--   Volitelné: Kromě shromažďování a analýzy síťových přenosů do a z řadičů domény, může ATA využít události systému Windows 4776, 4732, 4733, 4728, 4729, 4756 a 4757 k dalšímu vylepšení útoků ATA Pass-the-Hash, útoků hrubou silou, změny citlivých skupin a Sloužícím jako návnada detekce tokeny. Tyto události mohou být přijímány ze služby SIEM nebo nastavením předávání událostí Windows z řadiče domény. Shromážděné události poskytují řešení ATA další informace, které není možné zjistit z monitorování provozu na řadiči domény.
+-   Volitelné: Kromě shromažďování a analýzy síťových přenosů do a z řadičů domény, může ATA využít události systému Windows 4776, 4732, 4733, 4728, 4729, 4756 a 4757 k dalšímu vylepšení útoků ATA Pass-the-Hash, útoků hrubou silou, změny citlivých skupin a Sloužícím jako návnada detekce tokeny. Tyto události mohou přijímat z vašeho systému SIEM nebo nastavením předávání událostí systému Windows z řadiče domény. Shromážděné události poskytují řešení ATA další informace, které není možné zjistit z monitorování provozu na řadiči domény.
 
 
 ## <a name="ata-center-requirements"></a>Požadavky pro ATA Center
@@ -185,10 +185,10 @@ ATA Gateway vyžaduje nejméně jen adaptér pro správu a jeden adaptér pro za
         > [!NOTE]
         > Pokud je ATA Gateway členem domény, může konfigurace proběhnout automaticky.
 
--   **Adaptér pro zachytávání** se použije pro zachycení přenosu dat z a do řadičů domény.
+-   **Adaptér pro zachytávání** – použité pro zachycení přenosu dat do a z řadičů domény.
 
     > [!IMPORTANT]
-    > -   Nakonfigurujte zrcadlení portů pro adaptér pro zachytávání jako cíl síťového provozu řadiče domény. Další informace najdete v tématu [Konfigurace zrcadlení portů](configure-port-mirroring.md). Obvykle musíte spolupracovat s týmem podpory sítí nebo virtualizace konfigurace zrcadlení portů.
+    > -   Nakonfigurujte zrcadlení portů pro adaptér pro zachytávání jako cíl síťového provozu řadiče domény. Další informace najdete v tématu [konfigurace zrcadlení portů](configure-port-mirroring.md). Obvykle musíte spolupracovat s týmem podpory sítí nebo virtualizace konfigurace zrcadlení portů.
     > -   Pro vaše prostředí nakonfigurujte statickou nepřesměrovatelnou IP adresu bez výchozí brány a adresy serveru DNS. Příklad: 1.1.1.1/32. To zajišťuje, že síťového adaptéru pro zachytávání může zachytit maximální objem přenášených dat a že síťový adaptér pro správu se používá k odesílání a příjmu požadované síťové komunikace.
 
 ### <a name="ports"></a>Porty
@@ -239,7 +239,7 @@ Během instalace se nainstaluje rozhraní .Net Framework 4.6.1 a může dojít k
 
 ### <a name="server-specifications"></a>Specifikace serveru
 
-ATA Lightweight Gateway vyžaduje minimálně dvě jádra a 6 GB paměti RAM nainstalované na řadiči domény.
+ATA Lightweight Gateway vyžaduje nejméně 2 jádra a 6 GB paměti RAM nainstalované na řadiči domény.
 K zajištění optimálního výkonu nastavte **možnost napájení**  pro ATA Lightweight Gateway na hodnotu **Vysoký výkon**.
 Komponenta ATA Lightweight Gateway se dá nasadit na řadiče domény s různým zatížením i velikostí, v závislosti na objemu síťového přenosu dat do a z řadiče domény a na počtu prostředků, které jsou na příslušném řadiči domény nainstalované.
 

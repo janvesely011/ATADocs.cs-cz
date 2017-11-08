@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/6/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 14cb7513-5dc8-49cb-b3e0-94f469c443dd
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 11692b6c61c2a06b338615fbf1ad83ace2fae419
-ms.sourcegitcommit: e2cb3af9c1dbb0b75946dc70cc439b19d654541c
+ms.openlocfilehash: dce36e1943ee18f27dfc11d5bc9094c5fd97edb6
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/06/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Platí pro: Advanced Threat Analytics verze 1.8*
 
@@ -27,11 +27,11 @@ ms.lasthandoff: 11/06/2017
 ATA vás může upozornit, když zjistí podezřelou aktivitu, a to buď e-mailem, nebo pomocí funkce předávání událostí ATA a předáním události na váš server SIEM/syslog. Před výběrem oznámení, která chcete dostávat, musíte [nastavit svůj e-mailový server a server Syslog](setting-syslog-email-server-settings.md).
 
 > [!NOTE]
-> -   E-mailová oznámení zahrnují odkaz, který přenese uživatele přímo k podezřelé aktivitě, která byla zjištěna. Část názvu hostitele v odkazu je převzatá z nastavení adresy URL konzoly ATA na stránce ATA Center. Ve výchozím nastavení adresa URL konzoly ATA je IP adresa vybraná při instalaci ATA Center.  Pokud chcete nakonfigurovat e-mailová oznámení, doporučuje se použít jako adresu URL konzoly ATA plně kvalifikovaný název domény.
+> -   E-mailová oznámení zahrnují odkaz, který přebírá uživatele přímo k podezřelé aktivitě, která byla zjištěna. Část názvu hostitele v odkazu je převzatá z nastavení adresy URL konzoly ATA na stránce ATA Center. Ve výchozím nastavení adresa URL konzoly ATA je IP adresa vybraná při instalaci ATA Center. Pokud chcete nakonfigurovat e-mailová oznámení, se doporučuje použít jako adresu URL konzoly ATA plně kvalifikovaný název domény.
 > -   Oznámení se z ATA Center posílají na server SMTP, nebo na server Syslog.
 
 
-Nastavení, pokud chcete dostávat oznámení:
+Pokud chcete dostávat oznámení, nastavte následující parametry:
 
 
 1. V konzole ATA vyberte na panelu nástrojů možnost nastavení a vyberte **Konfigurace**.
@@ -42,7 +42,7 @@ Nastavení, pokud chcete dostávat oznámení:
 3. V části **Mail notifications** (Oznámení e-mailem) zadejte, která oznámení se mají posílat e-mailem – nové podezřelé aktivity a nové problémy v oblasti stavu. Můžete nastavit oddělené e-mailové adresy, na které se mají odesílat informace o podezřelých aktivitách a výstrahy týkající se stavu samostatně tak, aby například analytik zabezpečení dostával oznámení o podezřelých aktivitách a správce IT oznámení týkající se stavu.
 >   [!NOTE]
 >   E-mailové výstrahy pro podezřelé aktivity se odesílají jenom při vytvoření podezřelé aktivity.
-3. V části **Syslog notifications** (Oznámení Syslog) určete oznámení, která se mají odesílat na váš server Syslog – nové podezřelé aktivity, aktualizované podezřelé aktivity a nové problémy v oblasti stavu.
+3. V části **oznámení Syslog**, určete oznámení, která se mají odesílat na váš server Syslog - nové podezřelé aktivity, aktualizované podezřelé aktivity a nové problémy v oblasti stavu.
 5. Klikněte na **Uložit**.
 
 ![Obrázek nastavení e-mailových upozornění ATA](media/ata-mail-notification-settings.png)

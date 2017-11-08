@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/26/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 7620e171-76d5-4e3f-8b03-871678217a3a
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 819f006ae89960ed8f9494ce36ba4fd7f120357a
-ms.sourcegitcommit: 5563c6861bb5db5cb73e058e5a51b4938b9a7d46
+ms.openlocfilehash: 005f698c19c99c31dfa0e660e489f8c402eb1bc6
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/30/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Platí pro: Advanced Threat Analytics verze 1.8*
 
@@ -34,7 +34,7 @@ Tento článek popisuje postup rychlého zotavení komponenty ATA Center a obnov
 1. Konfigurace ATA Center se každou hodinu zálohuje do souboru. Vyhledejte nejnovější záložní kopii konfigurace ATA Center a uložte ji na oddělený počítač. Úplné vysvětlení postupu vyhledání těchto souborů najdete v části [Export a import konfigurace ATA](ata-configuration-file.md). 
 2. Vyexportujte certifikát ATA Center.
     1. Ve správci certifikátů přejděte na **Certifikáty (místní)** -> **Osobní** ->**Certifikáty** a vyberte **ATA Center**.
-    2. Pravým tlačítkem myši klikněte na **ATA Center** a vyberte **Všechny úkoly** a potom **Exportovat**. 
+    2. Klikněte pravým tlačítkem na **ATA Center** a vyberte **všechny úlohy** následuje **exportovat**. 
      ![Certifikát ATA Center](media/ata-center-cert.png)
     3. Postupujte podle pokynů pro export certifikátu a nezapomeňte vyexportovat také privátní klíč.
     4. Vyexportovaný soubor certifikátu zazálohujte na oddělený počítač.
@@ -45,10 +45,10 @@ Tento článek popisuje postup rychlého zotavení komponenty ATA Center a obnov
 ## <a name="recover-your-ata-center"></a>Obnovení vašeho ATA Center
 
 1. Pomocí stejné IP adresy a názvu, jaké měl předchozí počítač ATA Center, vytvořte nový počítač s Windows Serverem.
-4. Na nový server naimportujte certifikát, který jste zazálohovali výše.
+4. Importujte certifikátu, který jste zálohovali dříve, na nový server.
 5. Na nově vytvořeném Windows Serveru postupujte podle pokynů pro [Nasazení ATA Center](install-ata-step1.md). ATA Gateways není potřeba znovu nasazovat. Po zobrazení výzvy k zadání certifikátu zadejte certifikát, který jste vyexportovali při zálohování konfigurace ATA Center. 
 ![Obnovení ATA Center](media/disaster-recovery-deploymentss.png)
-6. Naimportujte zazálohovanou konfiguraci ATA Center:
+6. Importujte konfigurace zálohovaná ATA Center:
     1. Z MongoDB odeberte výchozí dokument profilu systému ATA Center: 
         1. Přejděte na **C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin**. 
         2. Spusťte `mongo.exe ATA` 

@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/6/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: bff20bf7-8b53-49da-81e5-b818a1c3b24e
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 5ba7d030a82c1c7515f0e71a865d727b0e675044
-ms.sourcegitcommit: e2cb3af9c1dbb0b75946dc70cc439b19d654541c
+ms.openlocfilehash: 70e076dea5b1ff200b1b9f2a6529a76c175c7a88
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/06/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Platí pro: Advanced Threat Analytics verze 1.8*
 
@@ -39,8 +39,8 @@ ATA vás může upozornit, když zjistí podezřelou aktivitu. Aby řešení ATA
     |Pole|Popis|Hodnota|
     |---------|---------------|---------|
     |Koncový bod serveru SMTP (povinné)|Zadejte plně kvalifikovaný název domény serveru SMTP a volitelně změňte číslo portu (výchozí hodnota 25).|Například:<br />smtp.contoso.com|
-    |SSL|Přepněte SSL, pokud SMTP server vyžaduje protokol SSL. **Poznámka:** Pokud povolíte protokol SSL, bude taky nutné změnit číslo portu.|Ve výchozím nastavení je zakázáno.|
-    |Ověřování|Povolte, pokud váš server SMTP vyžaduje ověření. **Poznámka:** Pokud povolíte ověřování, je nutné zadat uživatelské jméno a heslo pro e-mailový účet, který má oprávnění pro připojení k serveru SMTP.|Ve výchozím nastavení je zakázáno.|
+    |SSL|Přepněte SSL, pokud SMTP server vyžaduje protokol SSL. **Poznámka:** Pokud povolíte protokol SSL, musíte taky změňte číslo portu.|Ve výchozím nastavení je zakázáno.|
+    |Ověřování|Povolte, pokud váš server SMTP vyžaduje ověření. **Poznámka:** Pokud povolíte ověřování, je nutné zadat uživatelské jméno a heslo e-mailový účet, který má oprávnění pro připojení k serveru SMTP.|Ve výchozím nastavení je zakázáno.|
     |Odesilatel (povinné)|Zadejte e-mailovou adresu odesilatele e-mailu.|Například:<br />ATA@contoso.com|
     ![Obrázek nastavení e-mailového serveru ATA](media/ata-email-server.png)
 
@@ -53,7 +53,7 @@ Když ATA zjistí podezřelou aktivitu, může vás upozornit tak, že zašle up
 
     -   Port, na kterém naslouchá server SIEM
 
-    -   Typ používaného přenosu: UDP ,TCP nebo TLS (Syslog se zabezpečením)
+    -   Typ používaného přenosu: UDP, TCP nebo TLS (Syslog se zabezpečením)
 
     -   Formát odesílání dat: RFC 3164 nebo 5424
 

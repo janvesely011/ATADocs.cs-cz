@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/6/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 1d186a96-ef70-4787-aa64-c03d1db94ce0
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 4455be4f300b698b2ba8b53529e894700a282147
-ms.sourcegitcommit: e2cb3af9c1dbb0b75946dc70cc439b19d654541c
+ms.openlocfilehash: 5ec554b303a19a6e7b12cd788755604f1aaf43db
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/06/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Platí pro: Advanced Threat Analytics verze 1.8*
 
@@ -30,7 +30,7 @@ Pokud ATA ve vaší síti detekuje **rekognoskaci pomocí DNS** a zobrazí upozo
 Upozornění na **rekognoskaci pomocí DNS** označuje, že nějaký neobvyklý hostitel pomocí podezřelých dotazů DNS (Domain Name System) provádí rekognoskaci vaší interní sítě.
 
 DNS (Domain Name System) je služba implementovaná jako hierarchická distribuovaná databáze, která zajišťuje překlad názvů hostitelů a názvů domén. Názvy v databázi DNS tvoří hierarchickou stromovou strukturu, která se označuje jako obor názvů domény.
-Pro nežádoucí osobu obsahuje DNS cenné informace sloužící ke zmapování interní sítě včetně seznamu všech serverů a často také klientů přiřazených k příslušným IP adresám. Tyto informace jsou cenné také kvůli tomu, že obsahují názvy hostitelů, které jsou v daném síťovém prostředí často popisné. Při získání těchto informací tak může nežádoucí osoba během kampaně lépe zaměřit své úsilí na relevantní entity. Funkce pro zjišťování hostitelů pomocí rekognoskace DNS poskytují nástroje typu [Nmap](https://nmap.org/), [Fierce](https://github.com/mschwager/fierce) a předinstalované nástroje jako [Nslookup](https://technet.microsoft.com/library/cc725991(v=ws.11).aspx).
+Pro nežádoucí osobu obsahuje DNS cenné informace sloužící ke zmapování interní sítě včetně seznamu všech serverů a často také klientů přiřazených k příslušným IP adresám. Kromě toho tyto informace jsou hodnoty, protože obsahuje seznam názvů hostitelů, které jsou často popisný v prostředí s danou sítí. Při získání těchto informací tak může nežádoucí osoba během kampaně lépe zaměřit své úsilí na relevantní entity. Funkce pro zjišťování hostitelů pomocí rekognoskace DNS poskytují nástroje typu [Nmap](https://nmap.org/), [Fierce](https://github.com/mschwager/fierce) a předinstalované nástroje jako [Nslookup](https://technet.microsoft.com/library/cc725991(v=ws.11).aspx).
 Detekce rekognoskace pomocí dotazů DNS od některého interního hostitele je příčinou znepokojení a svědčí o možnosti napadení existujícího hostitele, rozsáhlejším napadení sítě nebo možném útoku zevnitř.
 
 ## <a name="dns-query-types"></a>Typy dotazů DNS
@@ -56,7 +56,7 @@ Následující graf vám pomůže určit kroky, které byste při prošetřován
 
 ![Řešení rekognoskace DNS pomocí ATA](./media/dns-recon-diagram.png)
  
-1.  První krok spočívá v identifikaci počítače, ze kterého upozornění pochází, jak je znázorněno níže:
+1.  Prvním krokem je identifikovat počítač, který výstrahu pochází z, jak je znázorněno na obrazovce následující:
  
     ![Zobrazení podezřelé aktivity rekognoskace DNS v ATA](./media/dns-recon.png)
 2.  Zjistěte, o jaký počítač se jedná. Je to pracovní stanice, server, pracovní stanice správce, stanice pro testování průniku apod.?
@@ -80,7 +80,7 @@ Microsoft doporučuje využívat profesionální tým Incident Response & Recove
 
 ## <a name="mitigation"></a>Zmírnění dopadů
 
-Interní server DNS lze proti rekognoskaci pomocí DNS zabezpečit zakázáním nebo omezením přenosů zóny jen na konkrétní IP adresy. Další informace o omezení přenosů zóny najdete v článku [Omezení přenosů zóny](https://technet.microsoft.com/library/ee649273(v=ws.10).aspx) pro Windows Server na Technetu. Omezené přenosy zóny lze dále uzamknout [zabezpečením přenosů zóny protokolem IPsec](https://technet.microsoft.com/library/ee649192(v=ws.10).aspx). Úprava přenosů zóny je jedním z úkolů na kontrolním seznamu, pomocí kterého byste měli své [servery DNS zabezpečit proti interním a externím útokům](https://technet.microsoft.com/library/cc770432(v=ws.11).aspx).
+Interní server DNS lze proti rekognoskaci pomocí DNS zabezpečit zakázáním nebo omezením přenosů zóny jen na konkrétní IP adresy. Další informace o omezení přenosy zóny, najdete v části [omezit přenosy zóny](https://technet.microsoft.com/library/ee649273(v=ws.10).aspx). Omezené přenosy zóny lze dále uzamknout [zabezpečením přenosů zóny protokolem IPsec](https://technet.microsoft.com/library/ee649192(v=ws.10).aspx). Úprava přenosů zóny je jedním z úkolů na kontrolním seznamu, pomocí kterého byste měli své [servery DNS zabezpečit proti interním a externím útokům](https://technet.microsoft.com/library/cc770432(v=ws.11).aspx).
 
 
 

@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/31/2017
+ms.date: 11/7/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: e0aed853-ba52-46e1-9c55-b336271a68e7
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 748121a709ac05756edf34e04e13b996190e9711
-ms.sourcegitcommit: b951c64228d4f165ee1fcc5acc0ad6bb8482d6a2
+ms.openlocfilehash: 2eab8649f225071ad548a8134b385d46f02b3222
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Platí pro: Advanced Threat Analytics verze 1.8*
 
@@ -31,7 +31,7 @@ ms.lasthandoff: 10/31/2017
 
 ## <a name="step-7-integrate-vpn"></a>Krok 7: Integrovat sítě VPN
 
-Microsoft Advanced Threat Analytics (ATA) verze 1.8 může shromažďovat informace o monitorování účtů z řešení sítě VPN. Při konfiguraci, stránky profil uživatele bude obsahovat informace z připojení k síti VPN, jako je například IP adresy a umístění, kde připojení vytvořena. Doplní procesu šetření to budou poskytování dalších informací o činnosti uživatelů. Volání přeložit externí IP adresu na umístění jsou anonymní. Žádné osobní identifikátor se odešlou v toto volání.
+Microsoft Advanced Threat Analytics (ATA) verze 1.8 může shromažďovat informace o monitorování účtů z řešení sítě VPN. Při konfiguraci, stránka profil uživatele obsahuje informace z připojení k síti VPN, jako je například IP adresy a umístění, kde připojení vytvořena. To tím, že poskytuje další informace na aktivity uživatelů doplňuje procesu šetření. Volání přeložit externí IP adresu na umístění jsou anonymní. Žádné osobní identifikátor se odešlou v toto volání.
 
 ATA se integruje s řešení sítě VPN prostřednictvím naslouchání událostech monitorování účtů protokolu RADIUS předávaných do ATA Gateway. Tento mechanismus je založen na standardní monitorování účtů protokolu RADIUS ([RFC 2866](https://tools.ietf.org/html/rfc2866)), a jsou podporovány následující dodavatelů VPN:
 
@@ -42,19 +42,19 @@ ATA se integruje s řešení sítě VPN prostřednictvím naslouchání událost
 
 ## <a name="prerequisites"></a>Požadavky
 
-Povolit síť VPN, integrace Přesvědčte se, že nastavíte následující:
+Chcete-li povolit integraci VPN, nezapomeňte nastavit následující parametry:
 
 -   Otevřete port UDP 1813 na ATA Gateway a ATA Lightweight Gateway.
 
 -   ATA Center připojení k Internetu, tak, aby se můžete dotazovat umístění příchozí IP adresy.
 
-V následujícím příkladu používáme Microsoft Routing a vzdálený přístup (RRAS) popisují proces konfigurace sítě VPN.
+Následující příklad používá Microsoft Routing a vzdálený přístup (RRAS) do popisují proces konfigurace sítě VPN.
 
-Pokud používáte 3. stran řešení sítě VPN, si projděte jejich dokumentaci pokyny o tom, jak povolit monitorování účtů protokolu RADIUS.
+Pokud používáte řešení sítě VPN třetí strany, si projděte jejich dokumentaci pokyny o tom, jak povolit monitorování účtů protokolu RADIUS.
 
 ## <a name="configure-radius-accounting-on-the-vpn-system"></a>Nakonfigurujte monitorování účtů protokolu RADIUS na serveru sítě VPN
 
-Na serveru RRAS, proveďte následující kroky.
+Proveďte následující kroky na serveru RRAS.
  
 1.  Otevřete konzolu pro směrování a vzdálený přístup.
 2.  Klikněte pravým tlačítkem na název serveru a klikněte na tlačítko **vlastnosti**.
@@ -62,7 +62,7 @@ Na serveru RRAS, proveďte následující kroky.
 
     ![Instalační program protokolu RADIUS](./media/radius-setup.png)
 
-4.  V **přidat Server RADIUS** okno, zadejte **název serveru** nejbližší ATA Gateway nebo ATA Lightweight Gateway. V části **Port**, zkontrolujte, že je nakonfigurované výchozí 1813. Klikněte na tlačítko **změnu** a zadejte nový sdílený tajný řetězec alfanumerické znaky, které si pamatujete. Musíte se k vyplnění později v konfiguraci ATA. Zkontrolujte **zprávy odesílat účet protokolu RADIUS na a monitorování účtů Off** pole a pak klikněte na **OK** na všechna otevřená dialogová okna.
+4.  V **přidat Server RADIUS** okno, zadejte **název serveru** nejbližší ATA Gateway nebo ATA Lightweight Gateway. V části **Port**, zkontrolujte, že je nakonfigurované výchozí 1813. Klikněte na tlačítko **změnu** a zadejte nový sdílený tajný řetězec alfanumerické znaky, které si pamatujete. Budete muset vyplňovat později v konfiguraci ATA. Zkontrolujte **zprávy odesílat účet protokolu RADIUS na a monitorování účtů Off** pole a pak klikněte na **OK** na všechna otevřená dialogová okna.
  
      ![Nastavení virtuální privátní sítě](./media/vpn-set-accounting.png)
      
@@ -76,7 +76,7 @@ Konfigurace sítě VPN data v ATA:
  
   ![Nabídky konfigurace ATA](./media/config-menu.png)
 
-2.  Zapnout **monitorování účtů protokolu Radius** a zadejte **sdílený tajný klíč** jste nakonfigurovali dříve na serveru RRAS VPN. Potom klikněte na **Uložit**.
+2.  Zapnout **monitorování účtů protokolu Radius**a zadejte **sdílený tajný klíč** jste nakonfigurovali dříve na serveru RRAS VPN. Potom klikněte na **Uložit**.
  
 
   ![Konfigurovat síť VPN ATA](./media/vpn.png)
@@ -84,7 +84,7 @@ Konfigurace sítě VPN data v ATA:
 
 Jakmile je tato možnost povolena, všechny komponenty ATA Gateway a Lightweight Gateway naslouchat na portu 1813 pro události monitorování účtů protokolu RADIUS. 
 
-Vaše instalace je dokončena a zobrazí aktivitu sítě VPN v stránky profil uživatele:
+Vaše instalace je dokončena a nyní vidíte aktivitu sítě VPN v stránky profil uživatele:
  
    ![Nastavení virtuální privátní sítě](./media/vpn-user.png)
 

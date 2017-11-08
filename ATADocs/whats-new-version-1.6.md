@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 27b139e5-12b9-4953-8f53-eb58e8ce0038
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: c5beb4868fb8ced42457a8cadd1123956dd69ad7
-ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
+ms.openlocfilehash: 47a8b5c52bf978d5e07007a3402a567be39e2157
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 11/07/2017
 ---
 # <a name="whats-new-in-ata-version-16"></a>Novinky ATA verze 1.6
 Tyto poznámky k verzi obsahují informace o známých problémech v této verzi Advanced Threat Analytics.
@@ -103,7 +103,7 @@ Při aktualizaci na ATA 1.6 může proces aktualizace selhat s následujícím k
 
 Může se také zobrazit chyba typu System.ArgumentNullException: Hodnota nemůže být null.
     
-Pokud se zobrazí některá z těchto chyb, spusťte následující alternativní řešení.
+Pokud se zobrazí některá z těchto chyb, spusťte následující alternativní řešení:
 
 **Alternativní řešení:** 
 
@@ -120,19 +120,19 @@ Pokud se zobrazí některá z těchto chyb, spusťte následující alternativn�
     2.  Microsoft Advanced Threat Analytics Center
 7.  Zkontrolujte protokoly a ověřte, že produkt běží bez chyb.
 8.  [Stažení](http://aka.ms/ataremoveduplicateprofiles "Stáhněte") nástroj RemoveDuplicateProfiles.exe a zkopírujte ho do hlavní instalační cesty (%ProgramFiles%\Microsoft Advanced Threat Analytics\Center).
-9.  Z příkazového řádku se zvýšenými oprávněními spusťte RemoveDuplicateProfiles.exe a počkejte, než se úspěšně dokončí.
+9.  Z příkazového řádku se zvýšenými oprávněními spusťte `RemoveDuplicateProfiles.exe` a počkejte, dokud nebude úspěšně dokončen.
 10. Z adresáře …\Microsoft Advanced Threat Analytics\Center\MongoDB\bin pro **Mongo ATA** zadejte následující příkaz:
 
-    db.SuspiciousActivities.remove({ "_t" : "RemoteExecutionSuspiciousActivity", "DetailsRecords" : { "$elemMatch" : { "ReturnCode" : null } } }, { "_id" : 1 });
+          db.SuspiciousActivities.remove({ "_t" : "RemoteExecutionSuspiciousActivity", "DetailsRecords" : { "$elemMatch" : { "ReturnCode" : null } } }, { "_id" : 1 });
 
 ![Alternativní řešení aktualizace](http://i.imgur.com/Nj99X2f.png)
 
-Toto volání by mělo vrátit WriteResult({ "nRemoved" : XX }), kde XX je počet podezřelých aktivit, které se odstranily. Pokud je toto číslo větší než 0, ukončete příkazový řádek a pokračujte v procesu aktualizace.
+Měla by se vrátit `WriteResult({ "nRemoved" : XX })` kde "XX" je počet podezřelých aktivit, které byly odstraněny. Pokud je toto číslo větší než 0, ukončete příkazový řádek a pokračujte v procesu aktualizace.
 
 
 ### <a name="net-framework-461-requires-restarting-the-server"></a>Net Framework 4.6.1 vyžaduje restartování serveru
 
-V některých případech může instalace rozhraní .Net Framework 4.6.1 vyžadovat restartování serveru. Upozorňujeme, že po kliknutí na tlačítko OK v dialogovém okně **Microsoft Advanced Threat Analytics Center – instalace** se server restartuje automaticky. To je důležité hlavně při instalaci ATA Lightweight Gateway na řadiči domény, protože před instalací můžete chtít naplánovat časové období údržby.
+V některých případech může instalace rozhraní .Net Framework 4.6.1 vyžadovat restartování serveru. Všimněte si, že kliknete na OK v **Microsoft Advanced Threat Analytics Center – instalace** dialogové okno automaticky restartuje server. To je důležité hlavně při instalaci ATA Lightweight Gateway na řadiči domény, protože před instalací můžete chtít naplánovat časové období údržby.
     ![Restartování rozhraní .Net Framework](media/ata-net-framework-restart.png)
 
 ### <a name="historical-network-activities-no-longer-migrated"></a>Historické síťové aktivity se už nemigrují

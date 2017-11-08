@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/6/2017
+ms.date: 11/7/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: df162a62-f273-4465-9887-94271f5000d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 3c5fbece9ed4de595c20a8935054a37ed3449ec6
-ms.sourcegitcommit: e2cb3af9c1dbb0b75946dc70cc439b19d654541c
+ms.openlocfilehash: 2172b6b8e1c54345841357e1f4d0a7dec2c346db
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/06/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Platí pro: Advanced Threat Analytics verze 1.8*
 
@@ -105,18 +105,18 @@ Tady je seznam hlavních čítačů výkonu komponenty ATA Center, kterým je po
 > [!div class="mx-tableFixed"]
 |Čítač|Popis|Prahová hodnota|Odstraňování potíží|
 |-----------|---------------|-------------|-------------------|
-|Velikost bloku dávky entit Microsoft ATA Center\EntityReceiver|Počet dávek entit, které komponenta ATA Center zařadila do fronty|Hodnota by měla být menší než maximum-1 (výchozí maximum je 10000).|Zkontrolujte, jestli některá komponenta nedosáhla své maximální velikosti a neblokuje předchozí komponenty až ke komponentě NetworkListener.  Další informace najdete v části **Proces komponent ATA** uvedené výš.<br /><br />Zkontrolujte, jestli nejsou potíže s procesorem nebo pamětí.|
-|Velikost bloku síťových aktivit Microsoft ATA Center\NetworkActivityProcessor|Počet síťových aktivit (NA) zařazených do fronty pro zpracování|Hodnota by měla být menší než maximum-1 (výchozí maximum je 50000).|Zkontrolujte, jestli některá komponenta nedosáhla své maximální velikosti a neblokuje předchozí komponenty až ke komponentě NetworkListener. Další informace najdete v části **Proces komponent ATA** uvedené výš.<br /><br />Zkontrolujte, jestli nejsou potíže s procesorem nebo pamětí.|
-|Velikost bloku síťových aktivit Microsoft ATA Center\EntityProfiler|Počet síťových aktivit (NA) zařazených do fronty pro profilování|Hodnota by měla být menší než maximum-1 (výchozí maximum je 10000).|Zkontrolujte, jestli některá komponenta nedosáhla své maximální velikosti a neblokuje předchozí komponenty až ke komponentě NetworkListener. Další informace najdete v části **Proces komponent ATA** uvedené výš.<br /><br />Zkontrolujte, jestli nejsou potíže s procesorem nebo pamětí.|
-|Microsoft ATA Center\Database &#42; velikost bloku|Počet síťových aktivit konkrétního typu zařazených do fronty pro zápis do databáze|Hodnota by měla být menší než maximum-1 (výchozí maximum je 50000).|Zkontrolujte, jestli některá komponenta nedosáhla své maximální velikosti a neblokuje předchozí komponenty až ke komponentě NetworkListener. Další informace najdete v části **Proces komponent ATA** uvedené výš.<br /><br />Zkontrolujte, jestli nejsou potíže s procesorem nebo pamětí.|
+|Velikost bloku dávky entit Microsoft ATA Center\EntityReceiver|Počet dávek entit, které komponenta ATA Center zařadila do fronty|Hodnota by měla být menší než maximum-1 (výchozí maximum je 10000).|Zkontrolujte, jestli některá komponenta nedosáhla své maximální velikosti a neblokuje předchozí komponenty až ke komponentě NetworkListener.  Odkazovat na předchozím **proces komponent ATA**.<br /><br />Zkontrolujte, jestli nejsou potíže s procesorem nebo pamětí.|
+|Velikost bloku síťových aktivit Microsoft ATA Center\NetworkActivityProcessor|Počet síťových aktivit (NA) zařazených do fronty pro zpracování|Hodnota by měla být menší než maximum-1 (výchozí maximum je 50000).|Zkontrolujte, jestli některá komponenta nedosáhla své maximální velikosti a neblokuje předchozí komponenty až ke komponentě NetworkListener. Odkazovat na předchozím **proces komponent ATA**.<br /><br />Zkontrolujte, jestli nejsou potíže s procesorem nebo pamětí.|
+|Velikost bloku síťových aktivit Microsoft ATA Center\EntityProfiler|Počet síťových aktivit (NA) zařazených do fronty pro profilování|Hodnota by měla být menší než maximum-1 (výchozí maximum je 10000).|Zkontrolujte, jestli některá komponenta nedosáhla své maximální velikosti a neblokuje předchozí komponenty až ke komponentě NetworkListener. Odkazovat na předchozím **proces komponent ATA**.<br /><br />Zkontrolujte, jestli nejsou potíže s procesorem nebo pamětí.|
+|Microsoft ATA Center\Database &#42; velikost bloku|Počet síťových aktivit konkrétního typu zařazených do fronty pro zápis do databáze|Hodnota by měla být menší než maximum-1 (výchozí maximum je 50000).|Zkontrolujte, jestli některá komponenta nedosáhla své maximální velikosti a neblokuje předchozí komponenty až ke komponentě NetworkListener. Odkazovat na předchozím **proces komponent ATA**.<br /><br />Zkontrolujte, jestli nejsou potíže s procesorem nebo pamětí.|
 
 
 > [!NOTE]
 > -   Hodnoty čítačů jsou v milisekundách.
-> -   Někdy je vhodnější monitorovat všechny čítače pomocí typu grafu Sestava (příklad: monitorování všech čítačů v reálném čase).
+> -   Někdy je vhodnější monitorovat všechny čítače pomocí typu grafu pro sestavu (Příklad: monitorování všech čítačů v reálném čase).
 
 ## <a name="operating-system-counters"></a>Čítače operačního systému
-Následuje seznam hlavních čítačů operačního systému, kterým je potřeba věnovat pozornost:
+Následující tabulka uvádí čítače hlavní operační systém věnovat pozornost:
 
 > [!div class="mx-tableFixed"]
 |Čítač|Popis|Prahová hodnota|Odstraňování potíží|
@@ -124,9 +124,9 @@ Následuje seznam hlavních čítačů operačního systému, kterým je potřeb
 |Procesor(_celkem)\% času procesoru|Procentuální hodnota uplynulého času, kdy procesor zpracovával vlákno, které není nečinné|V průměru méně než 80 %|Zkontrolujte, jestli některý z procesů nespotřebovává více procesorového času, než by měl.<br /><br />Přidejte víc procesorů.<br /><br />Snižte objem provozu na server.<br /><br />Čítač Procesor(_celkem)\%% času procesoru může být u virtuálních serverů méně přesný. V takovém případě je přesnější měřit nedostatek výkonu procesoru pomocí čítače Systém\Délka fronty procesoru.|
 |Systém\Přepnutí kontextu/s|Celková rychlost přepínání procesorů mezi jednotlivými vlákny|Méně než 5000&#42;jader (fyzických jader)|Zkontrolujte, jestli některý z procesů nespotřebovává více procesorového času, než by měl.<br /><br />Přidejte víc procesorů.<br /><br />Snižte objem provozu na server.<br /><br />Čítač Procesor(_celkem)\%% času procesoru může být u virtuálních serverů méně přesný. V takovém případě je přesnější měřit nedostatek výkonu procesoru pomocí čítače Systém\Délka fronty procesoru.|
 |Systém\Délka fronty procesoru|Počet vláken, které jsou připravené ke spuštění a čekají na naplánování|Méně než 5&#42;jader (fyzických jader)|Zkontrolujte, jestli některý z procesů nespotřebovává více procesorového času, než by měl.<br /><br />Přidejte víc procesorů.<br /><br />Snižte objem provozu na server.<br /><br />Čítač Procesor(_celkem)\%% času procesoru může být u virtuálních serverů méně přesný. V takovém případě je přesnější měřit nedostatek výkonu procesoru pomocí čítače Systém\Délka fronty procesoru.|
-|Paměť\Počet MB k dispozici|Velikost fyzické paměti (RAM), která je k dispozici pro přidělení|Hodnota by měla být vyšší než 512.|Zkontrolujte, jestli některý z procesů nespotřebovává více fyzické paměti, než by měl.<br /><br />Zvětšete velikost fyzické paměti.<br /><br />Snižte objem provozu na server.|
-|Logický disk(&#42;)\Střední Doba disku/čtení|Průměrná latence pro čtení dat z disku (jako instanci byste měli zvolit databázovou jednotku).|Hodnota by měla být menší než 10 milisekund.|Zkontrolujte, jestli některý z procesů nevyužívá databázovou jednotku víc, než by měl.<br /><br />Poraďte se s dodavatelem nebo týmem pro úložiště, jestli tato jednotka dokáže zvládat aktuální zatížení a mít přitom latenci menší než 10 ms. Aktuální zatížení se dá určit pomocí čítačů využití disku.|
-|Logický disk(&#42;)\Střední Doba disku/zápis|Průměrná latence pro zápis dat na disk (jako instanci byste měli zvolit databázovou jednotku).|Hodnota by měla být menší než 10 milisekund.|Zkontrolujte, jestli některý z procesů nevyužívá databázovou jednotku víc, než by měl.<br /><br />Poraďte se s dodavatelem nebo týmem pro úložiště, jestli tato jednotka dokáže zvládat aktuální zatížení a mít přitom latenci menší než 10 ms. Aktuální zatížení se dá určit pomocí čítačů využití disku.|
+|Paměť\Počet MB k dispozici|Velikost fyzické paměti (RAM), která je k dispozici pro přidělení|Musí být více než 512|Zkontrolujte, jestli některý z procesů nespotřebovává více fyzické paměti, než by měl.<br /><br />Zvětšete velikost fyzické paměti.<br /><br />Snižte objem provozu na server.|
+|Logický disk(&#42;)\Střední Doba disku/čtení|Průměrná latence pro čtení dat z disku (jako instanci byste měli zvolit databázovou jednotku).|Hodnota by měla být menší než 10 milisekund.|Zkontrolujte, jestli některý z procesů nevyužívá databázovou jednotku víc, než by měl.<br /><br />Pokud tato jednotka dokáže zvládat aktuální zatížení přitom má méně než 10 ms latence se poraďte se tým nebo dodavatele úložiště. Aktuální zatížení se dá určit pomocí čítačů využití disku.|
+|Logický disk(&#42;)\Střední Doba disku/zápis|Průměrná latence pro zápis dat na disk (jako instanci byste měli zvolit databázovou jednotku).|Hodnota by měla být menší než 10 milisekund.|Zkontrolujte, jestli některý z procesů nevyužívá databázovou jednotku víc, než by měl.<br /><br />Poraďte se s vaší team\vendor úložiště, pokud tato jednotka dokáže zvládat aktuální zatížení přitom má méně než 10 ms latence. Aktuální zatížení se dá určit pomocí čítačů využití disku.|
 |\Logický disk(&#42;)\Čtení z disku/s|Rychlost provádění operací čtení z disku|Žádná prahová hodnota|Čítače využití disku mohou pomoci při řešení potíží s latencí úložiště.|
 |\Logický disk(&#42;)\Bajty čtení z disku/s|Počet bajtů, které se za sekundu načtou z disku|Žádná prahová hodnota|Čítače využití disku mohou pomoci při řešení potíží s latencí úložiště.|
 |\Logický disk&#42;\Zápisy na disk/s|Rychlost provádění operací zápisu na disk|Žádná prahová hodnota|Čítače využití disku (mohou pomoci při řešení potíží s latencí úložiště)|

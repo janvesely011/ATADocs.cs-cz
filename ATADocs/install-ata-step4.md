@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/9/2017
+ms.date: 11/7/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 6bbc50c3-bfa8-41db-a2f9-56eed68ef5d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 66e910c1d6d11781fa66f8386b4b3939fd49ebf7
-ms.sourcegitcommit: e9f2bfd610b7354ea3fef749275f16819d60c186
+ms.openlocfilehash: 4abeda5a54de771c6e6d3c73d9217113dfe88b8e
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Platí pro: Advanced Threat Analytics verze 1.8*
 
@@ -31,7 +31,7 @@ ms.lasthandoff: 10/09/2017
 
 ## <a name="step-4-install-the-ata-gateway"></a>Krok 4. Instalace ATA Gateway
 
-Před instalací ATA Gateway na vyhrazený server ověřte, že je zrcadlení portů správně nakonfigurované a že ATA Gateway vidí provoz do a z řadičů domény. Další informace najdete v tématu [Ověření zrcadlení portů](validate-port-mirroring.md).
+Před instalací ATA Gateway na vyhrazený server ověřte, že je zrcadlení portů správně nakonfigurované a že ATA Gateway vidí provoz do a z řadičů domény. Další informace najdete v tématu [ověření zrcadlení portů](validate-port-mirroring.md).
 
 
 > [!IMPORTANT]
@@ -49,25 +49,25 @@ Na serveru ATA Gateway proveďte tento postup.
 
 3.  Na stránce **Vítejte** vyberte svůj jazyk a klikněte na **Další**.
 
-4.  Průvodce instalací automaticky zjistí, jestli je server řadič domény nebo vyhrazený server. Pokud se jedná o řadič domény, nainstaluje se komponenta ATA Lightweight Gateway, pokud se jedná o vyhrazený server, nainstaluje se ATA Gateway. 
+4.  Průvodce instalací automaticky kontroluje, zda je server řadičem domény nebo vyhrazený server. Pokud je řadič domény, ATA Lightweight Gateway je nainstalovaná, pokud je vyhrazený server, ATA Gateway se instaluje. 
     
-    V případě komponenty ATA Gateway se například zobrazí následující obrazovka s oznámením, že se na vyhrazeném serveru nainstaluje ATA Gateway:
+    Například pro ATA Gateway, se zobrazí následující obrazovka který vám oznamuje, že ATA Gateway bude nainstalována na vyhrazený server:
     
     ![Instalace ATA Gateway](media/ata-gw-install.png) Klikněte na **Další**.
 
     > [!NOTE] 
-    > Pokud řadič domény nebo vyhrazený server nesplňuje minimální hardwarové požadavky na instalaci, zobrazí se upozornění. Přesto můžete kliknout na tlačítko **Další** a pokračovat v instalaci. Může to být správná volba pro instalaci ATA v malém prostředí testovací laboratoře, ve kterém nebudete potřebovat tolik místa pro ukládání dat. V případě provozních prostředí důrazně doporučujeme pracovat s průvodcem pro [plánování kapacity](ata-capacity-planning.md) ATA, ve kterém zjistíte, jestli řadiče domény nebo vyhrazené servery splňují nezbytné požadavky.
+    > Pokud řadič domény nebo vyhrazený server nesplňuje minimální požadavky na hardware pro instalaci, zobrazí se upozornění. Přesto můžete kliknout na tlačítko **Další** a pokračovat v instalaci. To může být správné volby pro instalaci ATA v testovacím prostředí malé testovacím ve kterém tolik prostor pro ukládání dat nepotřebujete. V případě provozních prostředí důrazně doporučujeme pracovat s průvodcem pro [plánování kapacity](ata-capacity-planning.md) ATA, ve kterém zjistíte, jestli řadiče domény nebo vyhrazené servery splňují nezbytné požadavky.
 
 4.  V části **Configure the Gateway** (Konfigurace Gateway) zadejte následující informace podle daného prostředí:
 
     ![Obrázek konfigurace ATA Gateway](media/ata-gw-configure.png)
 
     > [!NOTE]
-    > Při nasazení ATA Gateway nebudete muset zadávat přihlašovací údaje. Pokud se při instalaci ATA Gateway nepovede načíst vaše přihlašovací údaje pomocí jednotného přihlašování (například k tomu může dojít, pokud ATA Center není v doméně, pokud ATA Gateway není v doméně, když nemáte přihlašovací údaje správce ATA), zobrazí se výzva k zadání přihlašovacích údajů, jako na následující obrazovce. 
+    > Při nasazení ATA Gateway, nemáte k zadání přihlašovacích údajů. V případě selhání instalace ATA Gateway vaše pověření pomocí jednotného přihlašování (například k tomu může dojít, pokud ATA Center není v doméně, pokud ATA Gateway není v doméně, nemáte přihlašovací údaje správce ATA), zobrazí se výzva k zadání přihlašovací údaje, jako v následující obrazovka: 
 
-  ![Zadání přihlašovacích údajů pro ATA Gateway](media/ata-install-credentials.png)
+  ![Zadejte přihlašovací údaje ATA gateway](media/ata-install-credentials.png)
 
-   - Instalační cesta: Jedná se o umístění, kam se nainstaluje ATA Gateway. Ve výchozím nastavení je to %programfiles%\Microsoft Advanced Threat Analytics\Gateway. Nechte nastavenou výchozí hodnotu.
+   - Instalační cesta: Toto je umístění, kde je nainstalován ATA Gateway. Ve výchozím nastavení je to %programfiles%\Microsoft Advanced Threat Analytics\Gateway. Nechte nastavenou výchozí hodnotu.
     
 5. Klikněte na tlačítko **Nainstalovat**. Během instalace ATA Gateway se instalují a konfigurují následující komponenty:
 

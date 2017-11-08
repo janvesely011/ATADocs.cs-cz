@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 10/23/2017
+ms.date: 11/7/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 3ebf3165973c14c45d33c95769f0e6ae47e3e795
-ms.sourcegitcommit: 835ea2b8190eb753aaf8d400531040ce1845d75a
+ms.openlocfilehash: 482b16462d115c7bcc2854d30c2ef19fce37f2c0
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/23/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Platí pro: Advanced Threat Analytics verze 1.8*
 
@@ -35,17 +35,17 @@ Kvůli vylepšení detekčních schopností potřebuje ATA následující událo
 
 ### <a name="wef-configuration-for-ata-gateways-with-port-mirroring"></a>Konfigurace WEF pro ATA Gateway se zrcadlením portů
 
-Po nakonfigurování zrcadlení portů z řadičů domény do ATA Gateway postupujte podle níže uvedených pokynů a nakonfigurujte předávání událostí systému Windows pomocí konfigurace Spuštěno zdrojem. Je to jedna z možných konfigurací pro předávání událostí systému Windows. 
+Po dokončení konfigurace zrcadlení portů na ATA Gateway z řadičů domény postupujte podle následující pokyny ke konfiguraci pomocí iniciované zdroj konfigurace předávání událostí systému Windows. Je to jedna z možných konfigurací pro předávání událostí systému Windows. 
 
 **Krok 1: Přidejte účet síťových služeb do skupiny Event Log Readers domény.** 
 
-V tomto scénáři předpokládáme, že ATA Gateway je členem domény.
+V tomto scénáři předpokládá, že ATA Gateway členem domény.
 
-1.  Otevřete Uživatelé a počítače služby Active Directory, přejděte do složky **BuiltIn** a poklikejte na skupinu **Event Log Readers**. 
+1.  Otevřete Active Directory Users and Computers, přejděte **BuiltIn** složku a dvojím kliknutím **Event Log Readers**. 
 2.  Vyberte možnost **Členové**.
 4.  Pokud **Síťová služba** není uvedená, klikněte na **Přidat** a do pole **Zadejte názvy objektů k výběru** zadejte **Síťová služba**. Potom klikněte na **Zkontrolovat jména** a dvakrát klikněte na **OK**. 
 
-Mějte na paměti, že po přidání **Síťové služby** do skupiny **Event Log Readers** musíte restartovat řadiče domény, aby se změna projevila.
+Po přidání **síťové služby** k **Event Log Readers** skupině, restartování řadiče domény pro změna se projeví.
 
 **Krok 2: Vytvořte zásadu pro řadiče domény, abyste nastavili možnost Nakonfigurovat cílového správce odběrů.** 
 > [!Note] 
@@ -57,11 +57,11 @@ Mějte na paměti, že po přidání **Síťové služby** do skupiny **Event Lo
 
  ![Obrázek editoru skupiny místních zásad](media/wef 1 local group policy editor.png)
 
-4.  Dvakrát klikněte na **Nakonfigurovat cílového správce odběrů**.
+4.  Klikněte dvakrát na **cíl konfigurovat odběr Manager**.
    
     1.  Vyberte **Povoleno**.
-    2.  V části **Možnosti** klikněte na **Zobrazit**.
-    3.  V části **SubscriptionManagers** zadejte následující hodnotu a klikněte na tlačítko **OK**:  *Server=http://<fqdnATAGateway>:5985/wsman/SubscriptionManager/WEC,Refresh=10* (například: Server=http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10).
+    2.  V části **možnosti**, klikněte na tlačítko **zobrazit**.
+    3.  V části **SubscriptionManagers**, zadejte následující hodnotu a klikněte na **OK**: *Server = http: / /<fqdnATAGateway>: 5985 nebo wsman/SubscriptionManager/WEC, aktualizace = 10* () For example: Server = http://atagateway9.contoso.com:5985 nebo wsman/SubscriptionManager/WEC, aktualizace = 10)
  
    ![Obrázek konfigurace cílového odběru](media/wef 2 config target sub manager.png)
    
@@ -72,10 +72,10 @@ Mějte na paměti, že po přidání **Síťové služby** do skupiny **Event Lo
 
 1.  Otevřete příkazový řádek se zvýšenými oprávněními a zadejte příkaz *wecutil qc*.
 2.  Otevřete **Prohlížeč událostí**. 
-3.  Klikněte pravým tlačítkem na **Odběry** a vyberte **Vytvořit odběr**. 
+3.  Klikněte pravým tlačítkem na **odběry** a vyberte **vytvořit odběr**. 
 
    1.   Zadejte název a popis odběru. 
-   2.   V případě možnosti **Cílový protokol** potvrďte výběr možnosti **Předané události**. Aby řešení ATA mohlo události číst, musí být cílovým protokolem **Předané události**. 
+   2.   Pro **cílové protokolu**, ujistěte se, že **předávaných událostí ty** je vybrána. Aby řešení ATA mohlo události číst, musí být cílovým protokolem **Předané události**. 
    3.   Vyberte **Spuštěno zdrojovým počítačem** a klikněte na **Vybrat skupiny počítačů**.
         1.  Klikněte na **Přidat počítač domény**.
         2.  Do pole **Zadejte název objektu k výběru** zadejte název řadiče domény. Potom klikněte na **Zkontrolovat jména** a nakonec na **OK**. 
@@ -91,11 +91,11 @@ Mějte na paměti, že po přidání **Síťové služby** do skupiny **Event Lo
 
  ![Obrázek filtru dotazu](media/wef 4 query filter.png)
 
-   5.   Klikněte pravým tlačítkem na vytvořený odběr a vyberte **Stav runtime**, abyste viděli, jestli jsou se stavem nějaké potíže. 
+   5.   Klikněte pravým tlačítkem na vytvořený odběr a vyberte **běhový stav** zda jsou všechny problémy se stavem. 
    6.   Po několika minutách ověřte, že se události, jejichž předávání jste nastavili, zobrazují mezi předanými událostmi v komponentě ATA Gateway.
 
 
-Další informace najdete v tématu [Konfigurace počítačů pro předání a shromáždění událostí](https://technet.microsoft.com/library/cc748890).
+Další informace najdete v tématu: [konfigurace počítačů pro předání a shromáždění událostí](https://technet.microsoft.com/library/cc748890)
 
 ## <a name="see-also"></a>Viz také
 - [Instalace ATA](install-ata-step1.md)

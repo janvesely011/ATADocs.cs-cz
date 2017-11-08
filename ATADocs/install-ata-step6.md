@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 3798f7faeb62e44d3877880c2d594332502e76c5
-ms.sourcegitcommit: e9f2bfd610b7354ea3fef749275f16819d60c186
+ms.openlocfilehash: 2f38ee3b8a50a4776709f1a5aa1f37af869a916b
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Platí pro: Advanced Threat Analytics verze 1.8*
 
@@ -36,10 +36,10 @@ Kvůli vylepšení detekčních schopností potřebuje ATA následující událo
 > [!NOTE]
 > U ATA verze 1.8 a vyšších se u komponent ATA Lightweight Gateway shromažďování událostí už nemusí konfigurovat. ATA Lightweight Gateway teď dokáže číst události místně bez nutnosti konfigurace předávání událostí.
 
-Kromě shromažďování a analýzy síťového provozu na řadičích domény dokáže ATA dál vylepšit detekce pomocí událostí Windows. Využívá událost 4776 protokolu NTLM, která vylepšuje různé detekce, a události 4732, 4733, 4728, 4729, 4756 a 4757, které vylepšují detekci úprav citlivých skupin. Tyto události může přijímat buď od svého systému SIEM, nebo tak, že si nastavíte předávání událostí systému Windows ze svého řadiče domény. Shromážděné události poskytují řešení ATA další informace, které není možné zjistit z monitorování provozu na řadiči domény.
+Kromě shromažďování a analýzy síťového provozu na řadičích domény dokáže ATA dál vylepšit detekce pomocí událostí Windows. Událost 4776 používá pro protokol NTLM, což zlepšuje různé detekce a události 4732, 4733, 4728, 4729, 4756 a 4757 pro zlepšení detekce citlivou skupinu úpravy. Tyto události může přijímat buď od svého systému SIEM, nebo tak, že si nastavíte předávání událostí systému Windows ze svého řadiče domény. Shromážděné události poskytují řešení ATA další informace, které není možné zjistit z monitorování provozu na řadiči domény.
 
 #### <a name="siemsyslog"></a>SIEM/Syslog
-Aby řešení ATA mohlo využívat data ze serveru Syslog, je třeba provést následující:
+Aby řešení ATA mohlo využívat data ze serveru Syslog musíte provést následující kroky:
 
 -   Nakonfigurujte servery ATA Gateway, aby naslouchaly událostem, které jsou předávány ze serveru SIEM/Syslog, a přijímaly je.
 > [!NOTE]
@@ -61,7 +61,7 @@ Informace o konfiguraci předávání určitých událostí na jiný server najd
 
     ![Obrázek povolení UDP naslouchacího procesu Syslog](media/ATA-enable-siem-forward-events.png)
 
-2.  Nakonfigurujte server Syslog nebo SIEM, aby předával události systému Windows s ID 4776 na IP adresu jedné ze součástí ATA Gateway. Další informace o konfiguraci vašeho systému SIEM najdete v online nápovědě SIEM nebo použijte možnosti technické podpory pro speciální požadavky formátování pro každý server SIEM.
+2.  Nakonfigurujte server Syslog nebo SIEM, aby předával události systému Windows s ID 4776 na IP adresu jedné ze součástí ATA Gateway. Další informace o konfiguraci vašeho systému SIEM najdete v online nápovědě SIEM nebo možnosti technické podpory pro speciální požadavky formátování pro každý server SIEM.
 
 ATA podporuje události SIEM v následujících formátech:  
 
@@ -76,7 +76,7 @@ ATA podporuje události SIEM v následujících formátech:
 
     1.  Konstanta RsaSA (musí být uvedena).
 
-    2.  Časové razítko skutečné události (ujistěte se, že to není časové razítko přijetí do systému SIEM nebo odeslání do ATA). Pokud možno s přesností na milisekundy, to je velmi důležité.
+    2.  Časové razítko skutečné události (ujistěte se, že to není časové razítko přijetí do systému SIEM nebo odeslání do ATA). Pokud možno na milisekundy, to je důležité.
 
     3.  ID události Windows
 
@@ -107,7 +107,7 @@ CEF:0|Microsoft|Microsoft Windows||Microsoft-Windows-Security-Auditing:4776|Řad
 
     -   externalId = ID události Windows
 
-    -   rt = Časové razítko skutečné události (ujistěte se, že to není časové razítko přijetí do systému SIEM nebo odeslání nám). Pokud možno s přesností na milisekundy, to je velmi důležité.
+    -   RT = časové razítko skutečné události (ujistěte se, že není časové razítko přijetí do systému SIEM nebo odeslání do ATA). Pokud možno na milisekundy, to je důležité.
 
     -   cat = Název protokolu událostí Windows
 
@@ -152,7 +152,7 @@ Kód chyby:         0x0
 
     -   SourceName = Název zprostředkovatele událostí Windows
 
-    -   TimeGenerated = Časové razítko skutečné události (ujistěte se, že to není časové razítko přijetí do systému SIEM nebo odeslání do ATA). Formát by měl odpovídat yyyyMMddHHmmss.FFFFFF, pokud možno s přesností na milisekundy, to je velmi důležité.
+    -   TimeGenerated = Časové razítko skutečné události (ujistěte se, že to není časové razítko přijetí do systému SIEM nebo odeslání do ATA). Formát by měl odpovídat yyyyMMddHHmmss.FFFFFF, pokud možno na milisekundy, to je důležité.
 
     -   ComputerName = Název hostitele zdroje
 
@@ -175,7 +175,7 @@ Potřebná pole:
 - Plně kvalifikovaný název domény pro řadič domény
 - ID události Windows
 
-TimeGenerated je časové razítko skutečné události (ujistěte se, že to není časové razítko přijetí do systému SIEM nebo odeslání do ATA). Formát by měl odpovídat rrrrMMddHHmmss.FFFFFF, pokud možno s přesností na milisekundy, to je velmi důležité.
+TimeGenerated je časové razítko skutečné události (ujistěte se, že to není časové razítko přijetí do systému SIEM nebo odeslání do ATA). Formát by měl odpovídat yyyyMMddHHmmss.FFFFFF, pokud možno na milisekundy, to je důležité.
 
 Message je původní text události z události Windows.
 

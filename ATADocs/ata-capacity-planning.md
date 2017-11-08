@@ -5,25 +5,25 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 9/19/2017
+ms.date: 11/7/2017
 ms.topic: get-started-article
 ms.service: advanced-threat-analytics
 ms.prod: 
 ms.assetid: 279d79f2-962c-4c6f-9702-29744a5d50e2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 713d0070f6cc8949ceab80b2940469c1abc8adab
-ms.sourcegitcommit: 34c3d6f56f175994b672842c7576040956ceea69
+ms.openlocfilehash: a0cc958cd7c802d02c96b6d7d3bc7e7180bd3d95
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Platí pro: Advanced Threat Analytics verze 1.8*
 
 
 
 # <a name="ata-capacity-planning"></a>Plánování kapacity ATA
-Toto téma vám pomůže určit, kolik serverů ATA potřebujete k monitorování sítě. S jeho pomocí také zjistíte, kolik potřebujete komponent ATA Gateway a/nebo ATA Lightweight Gateway, a kapacitu serveru pro ATA Center a komponenty ATA Gateway.
+Tento článek vám pomůže určit kolik serverů ATA jsou zapotřebí pro monitorování sítě. Vám pomůže zjistit, kolik komponent ATA Gateway a ATA Lightweight Gateway je nutné a kapacitu serveru vyžadují ATA Center a ATA Gateway.
 
 > [!NOTE] 
 > ATA Center se dá nasadit na libovolného dodavatele IaaS, pokud jsou splněné požadavky na výkon popsané v tomto článku.
@@ -70,8 +70,8 @@ Pro vypracování analýzy chování uživatelů vyžaduje ATA Center data za ne
 > -   Latence úložiště pro čtení a zápisu aktivit musí být menší než 10 ms.
 > -   Poměr mezi čtením a zápisem aktivit je přibližně 1:3 při méně než 100 000 paketů za sekundu a 1:6 při více než 100 000 paketů za sekundu.
 > -   Pokud se spustí jako dynamická paměť virtuálního počítače nebo libovolná jiná paměť, funkce rozšiřování rozsahů stránek se nepodporuje.
-> -   K zajištění optimálního výkonu nastavte **možnost napájení ** pro ATA Center na hodnotu **Vysoký výkon**.<br>
-> -   Při práci na fyzickém serveru databáze ATA vyžaduje, abyste v systému BIOS **zakázali** neuniformní přístup k paměti (NUMA). Ve vašem systému se NUMA může označovat také jako prokládání uzlů. V takovém případě bude potřeba prokládání uzlů **povolit**, abyste NUMA zakázali. Další informace najdete v dokumentaci k systému BIOS. Tento postup není relevantní, pokud ATA Center běží na virtuálním serveru.
+> -   K zajištění optimálního výkonu nastavte **možnost napájení**  pro ATA Center na hodnotu **Vysoký výkon**.<br>
+> -   Při práci na fyzickém serveru databáze ATA vyžaduje, abyste v systému BIOS **zakázali** neuniformní přístup k paměti (NUMA). Ve vašem systému se NUMA může označovat také jako prokládání uzlů. V takovém případě bude potřeba prokládání uzlů **povolit**, abyste NUMA zakázali. Další informace najdete v dokumentaci systému BIOS. Tento postup není relevantní, pokud ATA Center běží na virtuálním serveru.
 
 
 ## <a name="choosing-the-right-gateway-type-for-your-deployment"></a>Výběr vhodného typu brány pro vaše nasazení
@@ -122,8 +122,8 @@ ATA Lightweight Gateway může podporovat monitorování jednoho řadiče domén
 > [!NOTE]   
 > -   Pokud řadič domény nemá prostředky, které ATA Lightweight Gateway vyžaduje, výkon řadiče domény to neovlivní, ale ATA Lightweight Gateway nemusí fungovat podle očekávání.
 > -   Pokud se spustí jako dynamická paměť virtuálního počítače nebo libovolná jiná paměť, funkce rozšiřování rozsahů stránek se nepodporuje.
-> -   K zajištění optimálního výkonu nastavte **možnost napájení ** pro ATA Lightweight Gateway na hodnotu **Vysoký výkon**.
-> -   Vyžaduje se minimálně 5 GB místa, ale doporučuje se 10 GB včetně místa potřebného pro binární soubory ATA, [protokoly ATA](troubleshooting-ata-using-logs.md) a [protokoly výkonu](troubleshooting-ata-using-perf-counters.md).
+> -   K zajištění optimálního výkonu nastavte **možnost napájení**  pro ATA Lightweight Gateway na hodnotu **Vysoký výkon**.
+> -   Je vyžadován minimálně 5 GB místa a 10 GB se doporučuje, včetně prostor potřebný pro binárních souborů ATA, [protokoly ATA](troubleshooting-ata-using-logs.md), a [protokolování výkonu](troubleshooting-ata-using-perf-counters.md).
 
 
 ### <a name="ata-gateway-sizing"></a>Nastavení velikosti ATA Gateway
@@ -157,8 +157,8 @@ Aspekty zrcadlení portů můžou vyžadovat, abyste pro datové centrum nebo po
 
 > [!NOTE] 
 > -   Dynamická paměť se nepodporuje.
-> -   K zajištění optimálního výkonu nastavte **možnost napájení ** pro ATA Gateway na hodnotu **Vysoký výkon**.
-> -   Vyžaduje se minimálně 5 GB místa, ale doporučuje se 10 GB včetně místa potřebného pro binární soubory ATA, [protokoly ATA](troubleshooting-ata-using-logs.md) a [protokoly výkonu](troubleshooting-ata-using-perf-counters.md).
+> -   K zajištění optimálního výkonu nastavte **možnost napájení**  pro ATA Gateway na hodnotu **Vysoký výkon**.
+> -   Je vyžadován minimálně 5 GB místa a 10 GB se doporučuje, včetně prostor potřebný pro binárních souborů ATA, [protokoly ATA](troubleshooting-ata-using-logs.md), a [protokolování výkonu](troubleshooting-ata-using-perf-counters.md).
 
 
 ## <a name="domain-controller-traffic-estimation"></a>Odhad provozu řadiče domény
@@ -197,7 +197,7 @@ Pokud chcete určit počet paketů za sekundu, proveďte na každém řadiči do
 
 9. Nastavte umístění, kam chcete data uložit.
 
-10. V části **Chcete vytvořit sadu kolekcí?** vyberte **Spustit tuto sadu kolekcí nyní** a klikněte na **Dokončit**.
+10. V části **vytvořit sadu kolekcí dat**, vyberte **spustit tuto sadu kolekcí dat**a klikněte na tlačítko **Dokončit**.
 
     Nyní byste měli vidět vytvořenou sadu kolekcí dat se zeleným trojúhelníkem, který označuje, že je funkční.
 

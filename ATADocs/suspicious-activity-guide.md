@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/6/2017
+ms.date: 11/7/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 1fe5fd6f-1b79-4a25-8051-2f94ff6c71c1
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 32fe3fa2f5464b0b771491186d0775e9474e5483
-ms.sourcegitcommit: e2cb3af9c1dbb0b75946dc70cc439b19d654541c
+ms.openlocfilehash: bff477a66b837d82bb10a43a0dad7d36c6542d9f
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/06/2017
+ms.lasthandoff: 11/07/2017
 ---
 *Platí pro: Advanced Threat Analytics verze 1.8*
 
@@ -34,7 +34,7 @@ Následující správné šetření můžou být klasifikované podezřelé akti
 
 Další informace o tom, jak pracovat s výstrahami ATA najdete v tématu [práce s podezřelými aktivitami](working-with-suspicious-activities.md).
 
-Pro dotazy nebo připomínky, obraťte se na nás na adrese [ ATAEval@microsoft.com ](mailto:ATAEval@microsoft.com).
+Pro dotazy nebo připomínky, obraťte se na tým ATA na [ ATAEval@microsoft.com ](mailto:ATAEval@microsoft.com).
 
 ## <a name="abnormal-sensitive-group-modification"></a>Neobvyklá úprava citlivých skupin
 
@@ -47,7 +47,7 @@ Definice citlivých skupin v ATA, najdete v části [práce s konzolou ATA](work
 
 
 Detekce spoléhá na [události auditovat na řadičích domény](https://docs.microsoft.com/advanced-threat-analytics/configure-event-collection).
-Pomocí nástroje, kterou se odkazuje v [ATA auditování (AuditPol, pokročilé Audit vynucení nastavení zjišťování služeb Lightweight Gateway)](https://aka.ms/ataauditingblog) zajistit doménu řadiče potřebné události auditu.
+Pokud chcete mít jistotu, potřebné události auditu řadičů domény, použijte nástroj pro kterou se odkazuje v [ATA auditování (AuditPol, pokročilé Audit vynucení nastavení zjišťování služeb Lightweight Gateway)](https://aka.ms/ataauditingblog).
 
 **Šetření**
 
@@ -109,7 +109,7 @@ Existují tři typy detekce:
 
 1.  Typu Skeleton Key – je malware, který běží na řadičích domény a povoluje ověřování k doméně pomocí libovolného účtu bez znalosti jeho heslo. Tímto malwarem často používá slabší algoritmy šifrování pro kódování hesla uživatele na řadiči domény. V této detekce metodu šifrování zprávy KRB_ERR ze zdrojového počítače snížit ve srovnání s dřív zjištěné chování.
 
-2.  Lístek Golden – [zlatý lístek](#golden-ticket) výstrah, metodu šifrování pole lístku TGT zprávy TGS_REQ (žádost o službu) ze zdrojového počítače byl snížit ve srovnání s dřív zjištěné chování. Všimněte si, že to není založen na čas anomálií (stejně jako ostatní zlatý lístek detekce). Kromě toho se žádný požadavek ověřování protokolu Kerberos přidružené výše žádost o služby detekuje ATA.
+2.  Lístek Golden – [zlatý lístek](#golden-ticket) výstrah, metodu šifrování pole lístku TGT zprávy TGS_REQ (žádost o službu) ze zdrojového počítače byl snížit ve srovnání s dřív zjištěné chování. Toto není založena na čas anomálií (stejně jako ostatní zlatý lístek detekce). Kromě toho se žádný požadavek ověřování protokolu Kerberos přidružené předchozí žádost o služby detekuje ATA.
 
 3.  Overpass-the-Hash – typ šifrování zprávy AS_REQ ze zdrojového počítače byl snížit ve srovnání s dřív zjištěné chování (to znamená, počítač se pomocí standardu AES).
 
@@ -131,7 +131,7 @@ Nejprve zkontrolujte popis výstrahy, abyste zjistili, která výše tři typy d
 2.  Zlatý lístek – postupujte podle pokynů [zlatý lístek](#golden-ticket) podezřelé aktivity.   
     Navíc vzhledem k tomu, že vytváření zlatý lístek vyžaduje oprávnění správce domény, implementovat [předat doporučení hash](http://aka.ms/PtH).
 
-3.  Overpass-the-Hash – Pokud související se situací účet nerozlišuje malá písmena, pak resetovat heslo tohoto účtu. Tím se zabrání útočník vytváření nové lístky protokolu Kerberos z hodnoty hash hesla, i když existujících lístků je můžete dále používat, dokud nevyprší jejich platnost. Pokud se jedná o citlivých účet, měli byste zvážit resetovat účet KRBTGT dvakrát jako podezřelou aktivitu zlatý lístek. Resetování KRBTGT dvakrát zrušíte platnost všech Kerberos lístků v této doméně, takže Plánujte než tak učiníte. Viz pokyny v [KRBTGT účtu heslo resetovat skripty nyní dostupné pro zákazníky](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/). Viz také pomocí [resetování hesla nebo klíče nástroj účet KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Protože se jedná o laterální pohyb techniku, držte se osvědčených postupů z [předat doporučení hash](http://aka.ms/PtH).
+3.  Overpass-the-Hash – Pokud související se situací účet nerozlišuje malá písmena, pak resetovat heslo tohoto účtu. To brání útočník vytváření nové lístky protokolu Kerberos z hodnoty hash hesla, i když existujících lístků je můžete dále používat, dokud nevyprší jejich platnost. Pokud se jedná o citlivých účet, měli byste zvážit resetovat účet KRBTGT dvakrát jako podezřelou aktivitu zlatý lístek. Resetování KRBTGT dvakrát zruší platnost všech Kerberos lístků v této doméně, takže Plánujte než tak učiníte. Viz pokyny v [KRBTGT účtu heslo resetovat skripty nyní dostupné pro zákazníky](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/). Viz také pomocí [resetování hesla nebo klíče nástroj účet KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Protože se jedná o laterální pohyb techniku, držte se osvědčených postupů z [předat doporučení hash](http://aka.ms/PtH).
 
 ## Zlatý lístek<a name="golden-ticket"></a>
 
@@ -139,7 +139,7 @@ Nejprve zkontrolujte popis výstrahy, abyste zjistili, která výše tři typy d
 
 Útočníci s právy správce domény může ohrozit [účet KRBTGT](https://technet.microsoft.com/library/dn745899(v=ws.11).aspx#Sec_KRBTGT). Pomocí účtu KRBTGT, můžete vytvořit lístku TGT, která poskytuje autorizace k jakémukoli prostředku a nastavit dobu platnosti lístku k kdykoli libovolný udělování lístek protokolu Kerberos. Tato falešných lístku TGT se označuje jako "Zlatý lístek" a útočníkům umožňuje, aby dosáhnout persistency v síti.
 
-V této detekce výstraha aktivuje, když lístek protokolu Kerberos udělování lístků se používá pro více než povoleném čase povolené zadané v [maximální doba života lístku uživatele](https://technet.microsoft.com/library/jj852169(v=ws.11).aspx) zásady zabezpečení.
+V této detekce výstrahy při lístek protokolu Kerberos udělování lístků se používá pro více než povoleném čase povolené zadané v [maximální doba života lístku uživatele](https://technet.microsoft.com/library/jj852169(v=ws.11).aspx) zásady zabezpečení.
 
 **Šetření**
 
@@ -151,7 +151,7 @@ V této detekce výstraha aktivuje, když lístek protokolu Kerberos udělován�
 
 **Nápravy**
 
-Změňte heslo protokolu Kerberos lístku udělování lístků (KRBTGT) dvakrát podle pokynů v [KRBTGT účtu heslo resetovat skripty nyní dostupné pro zákazníky,](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/)pomocí [resetování hesla nebo klíče účtu KRBTGT Nástroj](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Resetování KRBTGT dvakrát zrušíte platnost všech Kerberos lístků v této doméně, takže Plánujte než tak učiníte.  
+Změňte heslo protokolu Kerberos lístku udělování lístků (KRBTGT) dvakrát podle pokynů v [KRBTGT účtu heslo resetovat skripty nyní dostupné pro zákazníky,](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/)pomocí [resetování hesla nebo klíče účtu KRBTGT Nástroj](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Resetování KRBTGT dvakrát zruší platnost všech Kerberos lístků v této doméně, takže Plánujte než tak učiníte.  
 Navíc vzhledem k tomu, že vytváření zlatý lístek vyžaduje oprávnění správce domény, implementovat [předat doporučení hash](http://aka.ms/PtH).
 
 ## <a name="honeytoken-activity"></a>Aktivita Honeytokenu
@@ -189,9 +189,9 @@ Hodnota hash použila z počítače, cílový uživatel vlastní nebo pravideln�
 
 **Nápravy**
 
-1. Pokud není účet související se situací citlivé, poté resetujte heslo tohoto účtu. Tím se zabrání útočník vytváření nové lístky protokolu Kerberos z hodnoty hash hesla, i když existujících lístků je můžete dále používat, dokud nevyprší jejich platnost. 
+1. Pokud není účet související se situací citlivé, poté resetujte heslo tohoto účtu. To brání útočník vytváření nové lístky protokolu Kerberos z hodnoty hash hesla, i když existujících lístků je můžete dále používat, dokud nevyprší jejich platnost. 
 
-2. Pokud se jedná o citlivých účet, měli byste zvážit resetovat účet KRBTGT dvakrát jako podezřelou aktivitu zlatý lístek. Resetování KRBTGT dvakrát zrušíte platnost všech Kerberos lístků v této doméně, takže Plánujte než tak učiníte. Viz pokyny v [KRBTGT účtu heslo resetovat skripty nyní dostupné pro zákazníky,](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), také zjistit pomocí [resetování hesla nebo klíče nástroj účet KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Protože se jedná o laterální pohyb techniku, držte se osvědčených postupů z [předat doporučení hash](http://aka.ms/PtH).
+2. Pokud se jedná o citlivých účet, měli byste zvážit resetovat účet KRBTGT dvakrát jako podezřelou aktivitu zlatý lístek. Resetování KRBTGT dvakrát zruší platnost všech Kerberos lístků v této doméně, takže Plánujte než tak učiníte. Viz pokyny v [KRBTGT účtu heslo resetovat skripty nyní dostupné pro zákazníky,](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), také zjistit pomocí [resetování hesla nebo klíče nástroj účet KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Protože se jedná o laterální pohyb techniku, držte se osvědčených postupů z [předat doporučení hash](http://aka.ms/PtH).
 
 ## <a name="identity-theft-using-pass-the-ticket-attack"></a>Krádeži identity pomocí útoku Pass-the-Ticket
 
@@ -207,16 +207,16 @@ Pass-the-Ticket je laterální pohyb technika, ve kterém útočník získá lí
 
 **Nápravy**
 
-1. Pokud není účet související se situací citlivé, poté resetujte heslo tohoto účtu. Tím se zabrání útočník vytváření nové lístky protokolu Kerberos z hodnoty hash hesla, i když existujících lístků je můžete dále používat, dokud nevyprší jejich platnost.  
+1. Pokud není účet související se situací citlivé, poté resetujte heslo tohoto účtu. To brání útočník vytváření nové lístky protokolu Kerberos z hodnoty hash hesla, i když existujících lístků je můžete dále používat, dokud nevyprší jejich platnost.  
 
-2. Pokud se jedná o citlivých účet, měli byste zvážit resetovat účet KRBTGT dvakrát jako podezřelou aktivitu zlatý lístek. Resetování KRBTGT dvakrát zrušíte platnost všech Kerberos lístků v této doméně, takže Plánujte než tak učiníte. Viz pokyny v [KRBTGT účtu heslo resetovat skripty nyní dostupné pro zákazníky,](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), také zjistit pomocí [resetování hesla nebo klíče nástroj účet KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).  Protože se jedná o laterální pohyb techniku, držte se osvědčených postupů v [předat doporučení hash](http://aka.ms/PtH).
+2. Pokud se jedná o citlivých účet, měli byste zvážit resetovat účet KRBTGT dvakrát jako podezřelou aktivitu zlatý lístek. Resetování KRBTGT dvakrát zruší platnost všech Kerberos lístků v této doméně, takže Plánujte než tak učiníte. Viz pokyny v [KRBTGT účtu heslo resetovat skripty nyní dostupné pro zákazníky,](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), také zjistit pomocí [resetování hesla nebo klíče nástroj účet KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).  Protože se jedná o laterální pohyb techniku, držte se osvědčených postupů v [předat doporučení hash](http://aka.ms/PtH).
 
 ## <a name="malicious-data-protection-private-information-request"></a>Škodlivá žádost o soukromé informace přes Data Protection
 
 **Popis**
 
 Data Protection API (DPAPI) se používá v systému Windows k ochraně bezpečně hesla uloží prostřednictvím prohlížeče, šifrované soubory a další citlivá data. Řadiče domény uložení zálohování hlavního klíče, který slouží k dešifrování všech tajných klíčů šifrován DPAPI na počítačích připojených k doméně systému Windows. Útočník může použít tento hlavní klíč k dešifrování všech tajných klíčů chráněných pomocí rozhraní DPAPI na všech počítačích připojených k doméně.
-V této detekce výstraha aktivuje, když rozhraní DPAPI se používá k načtení zálohování hlavního klíče.
+V této detekce výstrahy při rozhraní DPAPI se používá k načtení zálohování hlavního klíče.
 
 **Šetření**
 
@@ -237,7 +237,7 @@ Pokud chcete používat rozhraní DPAPI, musí útočník oprávnění správce 
 
 Replikace služby Active Directory je proces, podle kterého jsou synchronizovány změny provedené na jeden řadič domény s jinými řadiči domény. Zadané potřebná oprávnění, útočníci můžete spustit požadavek na replikaci, což jim umožní načíst dat uložená ve službě Active Directory, včetně hodnot hash hesel.
 
-V této detekce výstraha aktivuje, když inicializuje požadavek na replikaci z počítače, který není řadičem domény.
+V této detekce výstrahy při inicializuje požadavek na replikaci z počítače, který není řadičem domény.
 
 **Šetření**
 
@@ -262,7 +262,7 @@ Můžete využít [AD seznamu ACL skener](https://blogs.technet.microsoft.com/pf
 
 V některých scénářích útočníci provést odepření služby (DoS) namísto právě krádež informace. Odstranění velký počet účtů je jednoho technika DoS.
 
-V této detekce výstraha aktivuje, když se odstraní víc než 5 % všechny účty. Detekce vyžaduje přístup pro čtení ke kontejneru odstraněných objektů.  
+V této detekce výstrahy při více než 5 % všechny účty jsou odstraněny. Detekce vyžaduje přístup pro čtení ke kontejneru odstraněných objektů.  
 Informace o konfiguraci oprávnění jen pro čtení pro kontejner odstraněných objektů najdete v tématu **Změna oprávnění pro kontejner odstraněných objektů** v [zobrazení nebo nastavení oprávnění pro objekt adresáře](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx).
 
 **Šetření**
@@ -351,7 +351,7 @@ Interní server DNS lze proti rekognoskaci pomocí DNS zabezpečit zakázáním 
 
 Výčet serveru Message Block (SMB) umožňuje útočníkům získat informace, kde uživatelé nedávno přihlášení. Jakmile útočník tyto informace, se můžete následně k laterálnímu pohybu v síti přístup k citlivé určitého účtu.
 
-V této detekce výstrahu aktivuje, když je výčet relací SMB adresovat řadič domény, protože to nemělo stát.
+V této detekce výstrahy při provádění výčet relací SMB vůči řadiči domény, protože to nemělo stát.
 
 **Šetření**
 
@@ -399,7 +399,7 @@ Použití [Net Ustanou nástroj](https://gallery.technet.microsoft.com/Net-Cease
 
 **Popis**
 
-Některé služby odeslat přihlašovací údaje účtu ve formátu prostého textu. Tomu může dojít i pro citlivé účty. Útočníci monitorování síťového provozu můžete zachytit a pak znovu použít tyto přihlašovací údaje zlými úmysly. Všechny hesla v nešifrovaném textu pro zpřístupnění citlivých účtů aktivují upozornění, když pro účty necitlivých se aktivuje výstraha, pokud pět nebo víc různých účtech odeslání hesla v nešifrovaném textu ze stejného zdrojového počítače. 
+Některé služby odeslat přihlašovací údaje účtu ve formátu prostého textu. Tomu může dojít i pro citlivé účty. Útočníci monitorování síťového provozu můžete zachytit a pak znovu použít tyto přihlašovací údaje zlými úmysly. Všechny hesla v nešifrovaném textu pro zpřístupnění citlivých účtů spustí výstrahu, když pro účty necitlivých se aktivuje výstraha, pokud pět nebo víc různých účtech odeslání hesla v nešifrovaném textu ze stejného zdrojového počítače. 
 
 **Šetření**
 
@@ -417,7 +417,7 @@ Ověřte konfiguraci na zdrojových počítačích a zajistěte, aby nepoužíva
 
 V rámci útoku hrubou silou útočník pokusí ověřování pomocí mnoho různých hesla pro různé účty, dokud nebude nalezen správné heslo pro alespoň jeden účet. Jednou najde, útočník může přihlásit pomocí tohoto účtu.
 
-V toto zjišťování aktivuje výstrahu, když došlo k mnoha chybám ověřování, může se jednat buď vodorovně s malou sadu hesla mezi mnoha uživateli; nebo svisle s velkým sady hesel ve pouze několik uživatelů; nebo libovolnou kombinaci těchto dvou možností.
+Toto zjišťování výstrahy při selhání mnoho ověřování došlo k chybě, může se jednat buď vodorovně s malou sadu hesla mezi mnoha uživateli; nebo svisle s velkým sady hesel ve pouze několik uživatelů; nebo libovolnou kombinaci těchto dvou možností.
 
 **Šetření**
 
@@ -453,7 +453,7 @@ V závislosti na tom, co způsobilo tento neobvyklé chování proběhnout by m�
 
 **Popis**
 
-Útočníci pomocí nástrojů, které implementují různých protokolů (protokol SMB, protokolu Kerberos, NTLM) nestandardní způsoby. Když tento typ síťového provozu je obecně přijat Windows bez upozornění, bude ATA rozpoznat potenciální zlými úmysly. Toto chování je určující pro techniky, jako je například přesahu-Pass-the-Hash a hrubou silou, jakož i zneužití používané pokročilé ransomware, například WannaCry.
+Útočníci pomocí nástrojů, které implementují různých protokolů (protokol SMB, protokolu Kerberos, NTLM) nestandardní způsoby. Když tento typ síťového provozu je přijat Windows bez upozornění, bude ATA rozpoznat potenciální zlými úmysly. Toto chování je určující pro techniky, jako je například přesahu-Pass-the-Hash a hrubou silou, jakož i zneužití používané pokročilé ransomware, například WannaCry.
 
 **Šetření**
 

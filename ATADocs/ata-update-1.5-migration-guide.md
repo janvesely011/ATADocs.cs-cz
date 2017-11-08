@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: fb65eb41-b215-4530-93a2-0b8991f4e980
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: daaa2b3d495900d84fe7b61afb8e3bb22b3d7f72
-ms.sourcegitcommit: 470675730967e0c36ebc90fc399baa64e7901f6b
+ms.openlocfilehash: 654312c841c38c86c9efa826227d7cc93eb772cf
+ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 11/07/2017
 ---
 # <a name="ata-update-to-15-migration-guide"></a>Průvodce migrací pro aktualizaci ATA na verzi 1.5
 Aktualizace ATA na verzi 1.5 přináší vylepšení v následujících oblastech:
@@ -38,7 +38,7 @@ Aktualizace ATA na verzi 1.5 přináší vylepšení v následujících oblastec
 
 ## <a name="updating-ata-to-version-15"></a>Aktualizace ATA na verzi 1.5
 > [!NOTE]
-> Pokud ve vašem prostředí neexistuje instalace ATA, stáhněte si úplnou verzi ATA, která zahrnuje verzi 1.5, a použijte standardní postup instalace popsaný v tématu [Instalace ATA](install-ata-step1.md).
+> Pokud ve vašem prostředí neexistuje instalace ATA, stáhněte si úplnou verzi ATA, která zahrnuje verzi 1.5 a použijte standardní postup instalace popsaný v [instalace ATA](install-ata-step1.md).
 
 Pokud již máte nasazení ATA verze 1.4, tento postup vás provede kroky potřebnými k aktualizaci instalace.
 
@@ -62,7 +62,7 @@ Podle těchto kroků provedete aktualizaci ATA na verzi 1.5:
 
 1.  Zazálohujte svou databázi: (volitelné)
 
-    -   Pokud ATA Center běží jako virtuální počítač a chcete pořídit kontrolní bod, ukončete nejprve virtuální počítač.
+    -   Pokud ATA Center běží jako virtuální počítač a chcete pořídit kontrolní bod, nejprve vypnout virtuální počítač.
 
     -   Pokud ATA Center běží na fyzickém serveru, postupujte podle doporučeného postupu [zálohování MongoDB](https://docs.mongodb.org/manual/core/backups/).
 
@@ -70,15 +70,15 @@ Podle těchto kroků provedete aktualizaci ATA na verzi 1.5:
 
     1.  Na stránce **Vítejte** vyberte svůj jazyk a klikněte na **Další**.
 
-    2.  Přečtěte si licenční smlouvou s koncovým uživatelem, a pokud s podmínkami souhlasíte, klikněte na zaškrtávací políčko a klikněte na **Další**.
+    2.  Přečtěte si licenční smlouvou s koncovým uživatelem a pokud souhlasíte s podmínkami, klikněte na zaškrtávací políčko a klikněte na **Další**.
 
     3.  Vyberte, zda chcete spustit úplnou (výchozí) nebo částečnou migraci.
 
         ![Volba úplné nebo částečné migrace](media/ATA-center-fullpartial.png)
 
-        -   Pokud vyberete **částečnou** migraci, veškerý shromážděný síťový provoz a předávané události Windows, které analyzuje ATA, se odstraní a profily chování uživatelů bude potřeba znovu učit po dobu aspoň tří týdnů. Pokud máte málo místa na disku, pak je vhodné spustit **částečnou** migraci.
+        -   Pokud vyberete **částečné** migraci, veškerý shromážděný síťový provoz a předávané události Windows analyzován pomocí ATA se odstraní a profily chování uživatelů bude muset být relearned; to trvá nejméně tři týdny. Pokud máte málo místa na disku, pak je vhodné spustit **částečné** migrace.
 
-        -   Pokud spustíte **úplnou** migraci, budete potřebovat další místo na disku, které je pro vás spočítané na stránce upgradu, a migrace může trvat déle, v závislosti na provoz v síti. Úplná migrace uchovává všechny dříve shromážděná data a zachovají se profily chování uživatelů, což znamená, že ATA nebude potřebovat další čas pro učení profilů chování a neobvyklé chování bude možné zjišťovat okamžitě po aktualizaci.
+        -   Pokud spustíte **úplné** migrace, budete potřebovat další místo na disku, jako je pro vás spočítané na stránce upgradu a migrace může trvat déle, v závislosti na síťový provoz. Úplná migrace uchovává všechny dříve shromážděná data a zachovají se profily chování uživatelů, což znamená, že ATA nebude potřebovat další čas pro učení profilů chování a neobvyklé chování bude možné zjišťovat okamžitě po aktualizaci.
 
 3.  Klikněte na **Aktualizovat**. Po klepnutí na Aktualizovat bude ATA až do dokončení aktualizace offline.
 
@@ -104,7 +104,7 @@ Stažení instalačního balíčku ATA Gateway:
 
 4.  Uložte balíček místně.
 
-Soubor zip obsahuje následující:
+Soubor zip obsahuje následující soubory:
 
 -   Instalační program ATA Gateway
 
