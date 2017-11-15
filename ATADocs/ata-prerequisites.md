@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 11/14/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: d0d7ce6aae1bb59d266ddc0f7162ecfbc477b78a
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: 29aef3eeddf6045d200f9b27809567f18a2fa2d0
+ms.sourcegitcommit: 4d9d1e089bbb50baceb87f273ddf2d3aaa9a78e8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 11/14/2017
 ---
 *Platí pro: Advanced Threat Analytics verze 1.8*
 
@@ -101,7 +101,7 @@ Následující tabulka uvádí minimální porty, které musí být otevřené, 
 
 |Protokol|Přenos|Port|Směr|Direction|
 |------------|-------------|--------|-----------|-------------|
-|**SSL** (komunikace ATA)|TCP|443 nebo konfigurovatelné|ATA Gateway|Příchozí|
+|**SSL** (komunikace ATA)|TCP|443|ATA Gateway|Příchozí|
 |**HTTP** (volitelné)|TCP|80|Podniková síť|Příchozí|
 |**HTTPS**|TCP|443|Podniková síť a ATA Gateway|Příchozí|
 |**SMTP** (volitelné)|TCP|25|Server SMTP|Odchozí|
@@ -206,7 +206,7 @@ Následující tabulka uvádí minimální porty, u kterých ATA Gateway vyžadu
 |DNS|TCP a UDP|53|Servery DNS|Odchozí|
 |NTLM přes RPC|TCP|135|Všechna zařízení v síti|Odchozí|
 |NetBIOS|UDP|137|Všechna zařízení v síti|Odchozí|
-|SSL|TCP|443 nebo podle konfigurace pro službu Center|ATA Center:<br /><br />– IP adresa pro službu Center<br />- IP adresa konzoly|Odchozí|
+|SSL|TCP|443|ATA Center|Odchozí|
 |Syslog (volitelné)|UDP|514|Server SIEM|Příchozí|
 
 > [!NOTE]
@@ -262,7 +262,7 @@ Následující tabulka uvádí minimální porty, které ATA Lightweight Gateway
 |DNS|TCP a UDP|53|Servery DNS|Odchozí|
 |NTLM přes RPC|TCP|135|Všechna zařízení v síti|Odchozí|
 |NetBIOS|UDP|137|Všechna zařízení v síti|Odchozí|
-|SSL|TCP|443 nebo podle konfigurace pro službu Center|ATA Center:<br /><br />– IP adresa pro službu Center<br />- IP adresa konzoly|Odchozí|
+|SSL|TCP|443|ATA Center|Odchozí|
 |Syslog (volitelné)|UDP|514|Server SIEM|Příchozí|
 
 > [!NOTE]
