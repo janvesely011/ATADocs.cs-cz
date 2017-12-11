@@ -56,4 +56,5 @@
 ## [Řešení problémů pomocí protokolů](troubleshooting-ata-using-logs.md)
 ## [Řešení problémů pomocí čítačů výkonu](troubleshooting-ata-using-perf-counters.md)
 ## [Řešení problémů pomocí databáze](troubleshooting-ata-using-ata-database.md)
+## [Řešení potíží se spuštěním služby](troubleshooting-service-startup.md)
 ## [Obnovení po havárii](disaster-recovery.md)
