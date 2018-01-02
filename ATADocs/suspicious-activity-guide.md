@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 12/17/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 1fe5fd6f-1b79-4a25-8051-2f94ff6c71c1
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: bff477a66b837d82bb10a43a0dad7d36c6542d9f
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
-ms.translationtype: MT
+ms.openlocfilehash: 261b0bf277de97520e4d5473d8a16280f8e4534b
+ms.sourcegitcommit: 1c4ccb320e712a180433a7625312862235be66f0
+ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 12/17/2017
 ---
 *Platí pro: Advanced Threat Analytics verze 1.8*
 
@@ -292,6 +292,34 @@ Známé chyby zabezpečení v systému Windows Server starší verze útočníko
 **Nápravy**
 
 Zajistěte, aby na všech řadičích domény s operačním systémem až do verze Windows Server 2012 R2 byla nainstalovaná aktualizace [KB3011780](https://support.microsoft.com/help/2496930/ms11-013-vulnerabilities-in-kerberos-could-allow-elevation-of-privilege) a na všech členských serverech a řadičích domény až do verze 2012 R2 byla nainstalovaná aktualizace KB2496930. Další informace najdete v článku [Stříbrný certifikát PAC](https://technet.microsoft.com/library/security/ms11-013.aspx) a [Zfalšovaný certifikát PAC](https://technet.microsoft.com/library/security/ms14-068.aspx).
+
+## <a name="reconnaissance-using-account-enumeration"></a>Rekognoskace pomocí výčtu účtů
+
+**Popis**
+
+V účtu výčtu rekognoskace útočník používá slovník s tisíci uživatelská jména nebo nástroje, jako je KrbGuess tak snadno uhodnout uživatelských jmen ve vaší doméně. Útočník díky požadavky protokolu Kerberos pomocí tyto názvy, abyste mohli zkusit najít platné uživatelské jméno ve vaší doméně. Pokud odhad úspěšně Určuje uživatelské jméno, útočník dostane chyby protokolu Kerberos **požadované předběžné ověření** místo **neznámý objekt zabezpečení**. 
+
+V této detekce ATA může zjistit, odkud pochází útoku, celkový počet pokusů o odhad a kolik byly odpovídá. Pokud jsou příliš mnoho uživatelů neznámé, ATA ho rozpoznat jako podezřelou aktivitu. 
+
+**Šetření**
+
+1. Klikněte na výstrahu zobrazíte stránku s jeho podrobnosti. 
+
+2. Má tento počítač hostitele dotaz na řadič domény, jestli neexistují účty (například servery Exchange Server)? <br></br>
+Je skript nebo aplikace běžící na hostiteli, který může generovat toto chování? <br></br>
+Pokud ano, je odpověď na jednu z těchto otázek **Zavřít** podezřelé aktivity (je neškodné skutečně pozitivní) a vyloučení, který hostitelem z podezřelé aktivity.
+
+3. Stáhněte si podrobnosti výstrahy v tabulce aplikace Excel pohodlně zobrazíte seznam pokusy o účet, rozdělené do stávající a neexistující účty. Pokud se podíváte na jiný existující účty list v tabulce a účty vypadat povědomě, mohou být zakázané účty nebo zaměstnancům, kteří ve společnosti. V takovém případě nepravděpodobné, že pokus pochází ze slovníku. S největší pravděpodobností je aplikace nebo skript, který je zjišťujeme, které účty jsou stále existují ve službě Active Directory, což znamená, že se jedná o neškodný skutečně pozitivní.
+
+3. Pokud jsou názvy z velké části obeznámeni, se všechny pokusy o odhad odpovídat existující názvy účtů ve službě Active Directory? Pokud nejsou nalezeny žádné shody, pokus byl zbytečné, ale měli byste věnovat pozornost výstrahy zda získá aktualizovány v čase.
+
+4. Pokud žádné z odhad pokusů o odpovídající existující názvy účtů, útočník ví o existenci účty ve vašem prostředí a pokuste se použít pro přístup k vaší doméně pomocí zjištěných uživatelská jména hrubou silou. Zkontrolujte názvy odhadované účtů pro další podezřelé aktivity. Zkontrolujte, jestli všechny odpovídající účty jsou citlivé účty.
+
+
+**Nápravy**
+
+[Komplexní a dlouhá hesla](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) poskytovat potřebné první úrovně zabezpečení před útoky hrubou silou.
+
 
 ## <a name="reconnaissance-using-directory-services-queries"></a>Rekognoskace pomocí dotazů na adresářové služby
 
