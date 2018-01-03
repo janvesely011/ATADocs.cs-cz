@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/14/2017
+ms.date: 12/20/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 29aef3eeddf6045d200f9b27809567f18a2fa2d0
-ms.sourcegitcommit: 4d9d1e089bbb50baceb87f273ddf2d3aaa9a78e8
+ms.openlocfilehash: d3f112c455fbf2bbab2137d158cbd31fe6e02f7e
+ms.sourcegitcommit: 5a02c6d497265e65633f96f5f8264a29a18a1114
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/14/2017
+ms.lasthandoff: 12/20/2017
 ---
 *Platí pro: Advanced Threat Analytics verze 1.8*
 
@@ -249,10 +249,15 @@ Komponenta ATA Lightweight Gateway se dá nasadit na řadiče domény s různým
 Další informace o požadavcích na hardware ATA Lightweight Gateway najdete v tématu [plánování kapacity ATA](ata-capacity-planning.md).
 
 ### <a name="time-synchronization"></a>Časová synchronizace
+
 Server ATA Center, servery ATA Lightweight Gateway a řadiče domény musí mít časově synchronizované intervalu než pět minut.
+
 ### <a name="network-adapters"></a>Síťové adaptéry
+
 ATA Lightweight Gateway monitoruje místní provoz na všech síťových adaptérech příslušného řadiče domény. <br>
 Po nasazení můžete pomocí konzoly ATA případně změnit, které síťové adaptéry se monitorují.
+
+Domény, řadiče se systémem Windows 2008 R2 s Broadcom seskupování síťových adaptérů povoleno nepodporuje Lightweight Gateway.
 
 ### <a name="ports"></a>Porty
 Následující tabulka uvádí minimální porty, které ATA Lightweight Gateway vyžaduje:

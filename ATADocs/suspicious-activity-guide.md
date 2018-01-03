@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 1fe5fd6f-1b79-4a25-8051-2f94ff6c71c1
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 261b0bf277de97520e4d5473d8a16280f8e4534b
-ms.sourcegitcommit: 1c4ccb320e712a180433a7625312862235be66f0
-ms.translationtype: HT
+ms.openlocfilehash: 0d951edf1037422c1ee52c8b1e35308665aad256
+ms.sourcegitcommit: 91158e5e63ce2021a1f5f85d47de03d963b7cb70
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/17/2017
+ms.lasthandoff: 12/20/2017
 ---
 *Platí pro: Advanced Threat Analytics verze 1.8*
 
@@ -350,6 +350,9 @@ V této detekce by být žádné výstrahy aktivovány v první měsíc po nasaz
 **Nápravy**
 
 Použití [SAMRi10 nástroj](https://gallery.technet.microsoft.com/SAMRi10-Hardening-Remote-48d94b5b) k posílení zabezpečení vaše prostředí před tento postup.
+Pokud tento nástroj se nevztahuje na vašem řadiči domény:
+1. Je počítač se službou ohrožení zabezpečení skenovacího nástroje?  
+2. Zjistěte, jestli konkrétní dotazované uživatele a skupiny v útoku jsou účty privilegované nebo vysokou hodnotu (tj. CEO, ředitel, správu IT atd.).  Pokud ano, podívejte se na další aktivitu v koncovém bodě také a monitorovat počítače, které jsou předmětem dotazu účty se protokolují do, jako jsou pravděpodobně cíle pro laterální pohyb.
 
 ## <a name="reconnaissance-using-dns"></a>Rekognoskace pomocí DNS
 
