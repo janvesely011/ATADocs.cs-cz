@@ -1,11 +1,11 @@
 ---
-title: "Řešení potíží s Advanced Threat Analytics pomocí protokolů | Dokumentace Microsoftu"
-description: "Popisuje, jak můžete protokoly ATA použít k řešení potíží."
+title: "Řešení potíží s spuštění služby Advanced Threat Analytics | Microsoft Docs"
+description: "Popisuje, jak můžete potíže ATA spuštění"
 keywords: 
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 12/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,17 +13,19 @@ ms.technology:
 ms.assetid: 5a65285c-d1de-4025-9bb4-ef9c20b13cfa
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 125376b1e3530481a3b9f62c4661dd10dce13f22
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: 33ff11f592984b754521c562414ffeabd2d1f255
+ms.sourcegitcommit: 91158e5e63ce2021a1f5f85d47de03d963b7cb70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 12/20/2017
 ---
 *Platí pro: Advanced Threat Analytics verze 1.8*
 
 
 
-# <a name="troubleshooting-ata-center-service-startup"></a>Řešení potíží se spuštěním služby ATA Center
+# <a name="troubleshooting-service-startup"></a>Řešení potíží s spuštění služby
+
+## <a name="troubleshooting-ata-center-service-startup"></a>Řešení potíží se spuštěním služby ATA Center
 
 Pokud ATA Center se nespustí, proveďte následující postup řešení potíží:
 
@@ -42,6 +44,22 @@ Pokud můžete spustit, je pravděpodobně poškozena platformu. Pokud ne, je st
         logman start "Microsoft ATA Center"
         sc start ATACenter
 
+## <a name="troubleshooting-ata-lightweight-gateway-startup"></a>Řešení potíží s ATA Lightweight Gateway spuštění
+
+**Příznaky**
+
+ATA Gateway se nespustí a se tato chyba:<br></br>
+*System.Net.Http.HttpRequestException: Stavový kód odpovědi není indikuje úspěšné provedení: 500 (vnitřní chyba serveru)*
+
+**Popis**
+
+K tomu dochází, protože jako součást procesu instalace Lightweight Gateway, ATA přiděluje procesoru prahovou hodnotu, která umožňuje Lightweight Gateway pro využití procesoru s vyrovnávací paměť % 15. Pokud jste nastavili nezávisle prahovou hodnotu pomocí klíče registru: Tento konflikt zabrání Lightweight Gateway spuštění. 
+
+**Řešení**
+
+1. V registru klíče, pokud je hodnota DWORD názvem **zakázat čítače výkonu** zkontrolujte, zda je nastavena na **0**: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfOS\Performance\``HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfProc\Performance`
+ 
+2. Potom restartujte službu Pla. ATA Lightweight Gateway automaticky rozpozná změny a restartujte službu.
 
 
 ## <a name="see-also"></a>Viz také
