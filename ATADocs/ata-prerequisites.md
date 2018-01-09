@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: d3f112c455fbf2bbab2137d158cbd31fe6e02f7e
-ms.sourcegitcommit: 5a02c6d497265e65633f96f5f8264a29a18a1114
+ms.openlocfilehash: 54c738a63f47280c91f72812476b559b773e9b97
+ms.sourcegitcommit: 56c7d749b17745430e372e514accf537b3f215d0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 *Platí pro: Advanced Threat Analytics verze 1.8*
 
@@ -80,17 +80,21 @@ Instalace komponenty ATA Center jako virtuálního počítače se podporuje.
 > Pokud se spustí jako dynamická paměť virtuálního počítače nebo libovolná jiná paměť, funkce rozšiřování rozsahů stránek se nepodporuje.
 
 Pokud ATA Center spouštíte jako virtuální počítač, před vytvořením nového kontrolního bodu vypněte server. Vyhnete se tak možnému poškození databází.
+
 ### <a name="server-specifications"></a>Specifikace serveru
+
 Při práci na fyzickém serveru databáze ATA vyžaduje, abyste v systému BIOS **zakázali** neuniformní přístup k paměti (NUMA). Systému se NUMA může označovat jako prokládání uzlů v takovém případě budete muset **povolit** prokládání uzlů, abyste NUMA zakázali. Další informace najdete v dokumentaci systému BIOS. Tento postup není relevantní, pokud ATA Center běží na virtuálním serveru.<br>
 K zajištění optimálního výkonu nastavte **možnost napájení**  pro ATA Center na hodnotu **Vysoký výkon**.<br>
 Počet řadičů domény, které monitorujete a zatížení na jednotlivých řadičích určuje specifikaci serveru potřeba. Další informace najdete v tématu [plánování kapacity ATA](ata-capacity-planning.md).
 
 
 ### <a name="time-synchronization"></a>Časová synchronizace
+
 Server ATA Center, servery ATA Gateway a řadiče domény musí mít časově synchronizované intervalu než pět minut.
 
 
 ### <a name="network-adapters"></a>Síťové adaptéry
+
 Musí mít následující:
 -   Alespoň jeden síťový adaptér (pokud používáte fyzický server v prostředí sítě VLAN, doporučujeme použít dva síťové adaptéry)
 
