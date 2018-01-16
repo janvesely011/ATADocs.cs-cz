@@ -58,4 +58,4 @@
 ## [Řešení problémů pomocí databáze](troubleshooting-ata-using-ata-database.md)
 ## [Řešení potíží se spuštěním služby](troubleshooting-service-startup.md)
 ## [Obnovení po havárii](disaster-recovery.md)
-# [Prostředky](ata-resources.md)
+# [Plán připravenosti ATA](ata-resources.md)
