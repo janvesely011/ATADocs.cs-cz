@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 1/15/2018
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: e0aed853-ba52-46e1-9c55-b336271a68e7
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 2eab8649f225071ad548a8134b385d46f02b3222
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: 8d7468103e14e31116c4b6cb9846ecdcd2bf0ef0
+ms.sourcegitcommit: 55f7ac32bcd4ac8edb8b8b3b47993bf96b9acce2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 01/15/2018
 ---
 *Platí pro: Advanced Threat Analytics verze 1.8*
 
@@ -37,7 +37,6 @@ ATA se integruje s řešení sítě VPN prostřednictvím naslouchání událost
 
 -   Microsoft
 -   F5
--   Check Point
 -   Cisco ASA
 
 ## <a name="prerequisites"></a>Požadavky
@@ -46,7 +45,7 @@ Chcete-li povolit integraci VPN, nezapomeňte nastavit následující parametry:
 
 -   Otevřete port UDP 1813 na ATA Gateway a ATA Lightweight Gateway.
 
--   ATA Center připojení k Internetu, tak, aby se můžete dotazovat umístění příchozí IP adresy.
+-   ATA Center musí být schopni přistupovat *ti.ata.azure.com* pomocí protokolu HTTPS (port 443) tak, aby se můžete dotazovat umístění příchozí IP adresy.
 
 Následující příklad používá Microsoft Routing a vzdálený přístup (RRAS) do popisují proces konfigurace sítě VPN.
 
@@ -68,7 +67,7 @@ Proveďte následující kroky na serveru RRAS.
      
 ### <a name="configure-vpn-in-ata"></a>Konfigurace sítě VPN v ATA
 
-ATA shromažďuje data sítě VPN, která pomáhá profil umístění, ze které počítače připojit k síti a jako dokáže detekovat nestandardní připojení k síti VPN.
+ATA shromažďuje údaje o VPN a identifikuje, kdy a kde přihlašovací údaje jsou používány prostřednictvím sítě VPN a integruje data do šetření. To poskytuje dodatečné informace, které vám pomůže prozkoumat výstrahy hlášení ATA.
 
 Konfigurace sítě VPN data v ATA:
 
@@ -88,8 +87,7 @@ Vaše instalace je dokončena a nyní vidíte aktivitu sítě VPN v stránky pro
  
    ![Nastavení virtuální privátní sítě](./media/vpn-user.png)
 
-Po ATA Gateway přijímá VPN události a odesílá je ATA Center pro zpracování, ATA Center vyžaduje připojení k Internetu pro protokol HTTPS port 443 pro umět překládat externí IP adresy v událostech VPN na jejich informace o zeměpisné poloze.
-
+Po ATA Gateway přijímá VPN události a odesílá je ATA Center pro zpracování, ATA Center potřebuje přístup k *ti.ata.azure.com* umět překládat externí IP adresy v události sítě VPN, které chcete pomocí protokolu HTTPS (port 443) jejich zeměpisné umístění.
 
 
 
