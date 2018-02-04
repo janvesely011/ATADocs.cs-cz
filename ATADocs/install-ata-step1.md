@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 2/1/2018
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: f35c495193806f1c1ccc00800402d9b0aca36982
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: 7a5dd2c722244ec94ebf49555483ddd201b5ba54
+ms.sourcegitcommit: 7684a9942719a90444ab567ffe9b2ff86438c04b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 02/01/2018
 ---
 *Platí pro: Advanced Threat Analytics verze 1.8*
 
@@ -90,6 +90,10 @@ Vzhledem k tomu, že se přihlašujete do lokality pomocí IP adresy, zobrazí s
 
 1.  Zkontrolujte, že je služba **Microsoft Advanced Threat Analytics Center** spuštěná.
 2.  Na ploše klikněte na zástupce **Microsoft Advanced Threat Analytics** a připojte se ke konzole ATA. Přihlaste se pomocí stejných přihlašovacích údajů, které jste použili k instalaci ATA Center.
+
+### <a name="set-anti-virus-exclusions"></a>Nastavte antivirový výjimky
+
+Po instalaci ATA Center má být vyloučena adresář databáze MongoDB z nepřetržitě skenovaných antivirový aplikací. Výchozí umístění v databázi je: **C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data**.
 
 
 

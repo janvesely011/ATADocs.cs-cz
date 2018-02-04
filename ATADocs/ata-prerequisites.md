@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 1/15/2018
+ms.date: 2/1/2018
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 05be0f1a696bab215f35521e0c719ddf45238a37
-ms.sourcegitcommit: 55f7ac32bcd4ac8edb8b8b3b47993bf96b9acce2
+ms.openlocfilehash: dd422a7feffcddc0f56b54b11d5dadb029457a8e
+ms.sourcegitcommit: 7684a9942719a90444ab567ffe9b2ff86438c04b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/15/2018
+ms.lasthandoff: 02/01/2018
 ---
 *Platí pro: Advanced Threat Analytics verze 1.8*
 
@@ -83,7 +83,7 @@ Pokud ATA Center spouštíte jako virtuální počítač, před vytvořením nov
 
 ### <a name="server-specifications"></a>Specifikace serveru
 
-Při práci na fyzickém serveru databáze ATA vyžaduje, abyste v systému BIOS **zakázali** neuniformní přístup k paměti (NUMA). Systému se NUMA může označovat jako prokládání uzlů v takovém případě budete muset **povolit** prokládání uzlů, abyste NUMA zakázali. Další informace najdete v dokumentaci systému BIOS. Tento postup není relevantní, pokud ATA Center běží na virtuálním serveru.<br>
+Při práci na fyzickém serveru databáze ATA vyžaduje, abyste v systému BIOS **zakázali** neuniformní přístup k paměti (NUMA). Systému se NUMA může označovat jako prokládání uzlů v takovém případě budete muset **povolit** prokládání uzlů, abyste NUMA zakázali. Další informace najdete v dokumentaci systému BIOS. <br>
 K zajištění optimálního výkonu nastavte **možnost napájení**  pro ATA Center na hodnotu **Vysoký výkon**.<br>
 Počet řadičů domény, které monitorujete a zatížení na jednotlivých řadičích určuje specifikaci serveru potřeba. Další informace najdete v tématu [plánování kapacity ATA](ata-capacity-planning.md).
 
