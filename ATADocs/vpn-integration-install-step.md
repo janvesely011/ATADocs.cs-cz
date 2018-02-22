@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: e0aed853-ba52-46e1-9c55-b336271a68e7
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 8d7468103e14e31116c4b6cb9846ecdcd2bf0ef0
-ms.sourcegitcommit: 55f7ac32bcd4ac8edb8b8b3b47993bf96b9acce2
+ms.openlocfilehash: f8a4e3ce06e775706f9bf05f5511d6b5ee53e8cc
+ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/15/2018
+ms.lasthandoff: 02/21/2018
 ---
 *Platí pro: Advanced Threat Analytics verze 1.8*
 
@@ -105,7 +105,7 @@ Po ATA Gateway přijímá VPN události a odesílá je ATA Center pro zpracován
 
 ## <a name="see-also"></a>Viz také
 - [Průvodce nasazením ATA POC](http://aka.ms/atapoc)
-- [Nástroje pro změnu velikosti ATA](http://aka.ms/atasizingtool)
+- [Nástroje pro změnu velikosti ATA](http://aka.ms/aatpsizingtool)
 - [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurace shromažďování událostí](configure-event-collection.md)
 - [Požadavky ATA](ata-prerequisites.md)
