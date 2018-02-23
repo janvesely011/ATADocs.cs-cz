@@ -1,1 +1,41 @@
-# [Index](index.md)
+# Porozumění a prozkoumávání – verze Preview
+## [Co je Azure Advanced Threat Protection?](what-is-atp.md)
+## [Nejčastější dotazy](atp-technical-faq.md)
+# Plánování a navrhování
+## [Požadavky služby Azure ATP](atp-prerequisites.md)
+## [Architektura služby Azure ATP](atp-architecture.md)
+## [Plánování kapacity služby Azure ATP](atp-capacity-planning.md)
+# Nasazení
+## [1 Vytvoření pracovního prostoru na portálu pro správu pracovních prostorů](install-atp-step1.md)
+## [2 Připojení k AD](install-atp-step2.md)
+## [3 Stažení balíčku senzoru služby Azure ATP](install-atp-step3.md)
+## [4 Instalace senzoru služby Azure ATP](install-atp-step4.md)
+## [5 Konfigurace senzoru služby Azure ATP](install-atp-step5.md)
+## [6 Integrace sítě VPN](install-atp-step6-vpn.md)
+## [7 Vyloučení a účty honeytoken](install-atp-step7.md)
+### [8 Konfigurace požadovaných oprávnění pro SAM-R](install-atp-step8-samr.md)
+## [Bezobslužná instalace](ATP-silent-installation.md)
+## Další kroky se senzorem Azure ATP
+### [Konfigurace zrcadlení portů](configure-port-mirroring.md)
+### [Konfigurace shromažďování událostí](configure-event-collection.md)
+### [Konfigurace předávání událostí Windows](configure-event-forwarding.md)
+### [Konfigurace proxy serveru v zájmu povolení komunikace](configure-proxy.md)
+# Použití
+## [Centrum stavu služby Azure ATP](atp-health-center.md)
+## [Sestavy služby Azure ATP](reports.md)
+## [Skupiny rolí služby Azure ATP](atp-role-groups.md)
+## [Změna hesla připojení k doméně](modifying-atp-config-dcpassword.md)
+## [Vyloučení entit z detekce](excluding-entities-from-detections.md)
+## [Integrace s Ochranou ATP v programu Windows Defender](integrate-wd-atp.md)
+## [Monitorování výstrah](monitoring-alerts.md)
+## [Nastavení oznámení služby Azure ATP](notifications.md)
+## [Integrace se Syslogem](setting-syslog.md)
+## [Práce s citlivými účty](sensitive-accounts.md)
+## [Práce s portálem pracovních prostorů služby Azure ATP](workspace-portal.md)
+## Referenční informace k službě Azure ATP
+### [Referenční informace k protokolům pro SIEM](cef-format-sa.md)
+# Prošetření
+## [Práce s podezřelými aktivitami](working-with-suspicious-activities.md)
+## [Průvodce prošetřováním podezřelých aktivit](suspicious-activity-guide.md)
+## [Prošetřování laterálních průnikových tras pomocí služby Azure ATP](use-case-lateral-movement-path.md)
+## [Prošetřování entit](entity-profiles.md)
