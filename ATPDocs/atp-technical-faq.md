@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/20/2018
+ms.date: 2/27/2018
 ms.topic: article
 ms.prod: 
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 6a9b5273-eb26-414e-9cdd-f64406e24ed8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c37b46f66715a34145b6123a9278fbc53d4f0d15
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 6a6a34b9a2aae0e507fe18872a31368cf3f3e9d0
+ms.sourcegitcommit: 21d8f9abf909fc5f0e0da03cd100fa8fb950baa4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 02/27/2018
 ---
 *Platí pro: Azure Advanced Threat Protection*
 
@@ -27,7 +27,7 @@ Tento článek obsahuje seznam nejčastějších dotazů týkajících Azure ATP
 
 ## <a name="where-can-i-get-a-license-for-azure-advanced-threat-protection-atp"></a>Kde lze získat licenci pro Azure Advanced Threat Protection (ATP)?
 
-Pokud jste získali licenci pro Enterprise Mobility + Security (EMS 5) 5 přímo prostřednictvím portálu služeb Office 365 nebo prostřednictvím licenčním modelu cloudové řešení partnera (CSP) a nemáte přístup k Azure ATP prostřednictvím webu Microsoft Volume Licensing Center (VLSC), obraťte se na Zákaznická podpora Microsoftu získat proces aktivace Azure Advanced Threat Protection (ATP).
+Pokud jste získali licenci pro Enterprise Mobility + Security 5 (EMS E5) přímo prostřednictvím portálu služeb Office 365 nebo prostřednictvím licenčním modelu cloudové řešení partnera (CSP) a nemáte přístup k Azure ATP prostřednictvím webu Microsoft Volume Licensing Center (VLSC), obraťte se na Zákaznická podpora Microsoftu získat proces aktivace Azure Advanced Threat Protection (ATP).
 
 ## <a name="what-should-i-do-if-the-azure-atp-sensor-or-standalone-sensor-doesnt-start"></a>Co je třeba udělat, pokud se nespustí senzor Azure ATP nebo samostatné senzor?
 Podívejte se na poslední chybu v aktuálním protokolu chyb (kde ATP Azure je nainstalován ve složce "Protokoly").
@@ -144,7 +144,7 @@ Vývojáři a správci, návrh mít dostatečná oprávnění k provádění sv�
 Kromě toho společnost Microsoft provádí ověřovací kontroly na určité operace pracovníky a omezuje přístup k aplikacím, systémy a síťové infrastruktury v poměru k úroveň ověřování pozadí. Operace pracovníky podle formální proces vyžádání přístup k účtu zákazníka nebo související informace ve výkonu jejich funkce. 
 
 ## <a name="see-also"></a>Viz také
-- [Požadavky Azure ATP](atp-prerequisites.md)
+- [Požadavky služby Azure ATP](atp-prerequisites.md)
 - [Plánování kapacity v Azure ATP](atp-capacity-planning.md)
 - [Konfigurace shromažďování událostí](configure-event-collection.md)
 - [Konfigurace předávání událostí systému Windows](configure-event-forwarding.md#configuring-windows-event-forwarding)
