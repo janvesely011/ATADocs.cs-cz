@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 2/27/2018
 ms.topic: article
 ms.prod: 
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 90f68f2c-d421-4339-8e49-1888b84416e6
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 09f82fa21bbaf61573b39fbe7a051db5c5e3b92a
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: ffa58d4e6ca24773f7168dd94ad0596878eaf151
+ms.sourcegitcommit: 21d8f9abf909fc5f0e0da03cd100fa8fb950baa4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 02/27/2018
 ---
 *Platí pro: Azure Advanced Threat Protection*
 
@@ -46,7 +46,7 @@ Na portálu Azure ATP prostoru přijímá data z ATP senzory a senzory samostatn
 -   **Azure senzor ATP**<br>
 Senzor Azure ATP se instaluje přímo na řadiče domény a monitoruje jejich provoz přímo, bez nutnosti využívat vyhrazený server nebo konfigurovat zrcadlení portů. 
 
--   Azure senzor samostatné ATP<br>
+-   **Azure senzor samostatné ATP**<br>
 Senzor samostatné Azure ATP je nainstalován na vyhrazený server, který monitoruje provoz z řadičů domény pomocí zrcadlení portů nebo síťového ODPOSLOUCHÁVÁNÍ. Jde o alternativu k Azure ATP senzoru.
 
 ## <a name="deployment-options"></a>Možnosti nasazení
@@ -71,6 +71,9 @@ Portálu pro správu prostoru Azure ATP umožňuje:
 -   Integrace s jinými službami zabezpečení Microsoftu
 
 Nastavení pracovního prostoru hlavní jako **primární**. Pouze jednoho pracovního prostoru můžete nastavit jako primární. Nastavení pracovního prostoru jako primární účinky integrace - lze pouze integrovat Azure ATP s Windows Defender ATP vašeho primární pracovního prostoru. Můžete změnit, které pracovní prostor je primární později, ale aby bylo možné provést, budete muset odebrat všechny integrace pro aktuální primární pracovní prostor již nastaven.
+
+> [!NOTE]
+> Azure ATP aktuálně podporuje vytvoření dvou pracovních prostorů. Doporučuje se vytvořit primární pracovní prostor pro produkční prostředí a další pracovní prostor jako pracovní prostředí.
 
 ### <a name="azure-atp-workspace-portal"></a>Portál Azure prostoru ATP
 
@@ -184,7 +187,7 @@ Pro zlepšení detekce Azure ATP Pass-the-Hash, útoků hrubou silou, změny cit
 
 
 ## <a name="see-also"></a>Viz také
-- [Požadavky Azure ATP](atp-prerequisites.md)
+- [Požadavky služby Azure ATP](atp-prerequisites.md)
 - [Nástroje pro změnu velikosti Azure ATP](http://aka.ms/trisizingtool)
 - [Plánování kapacity v Azure ATP](atp-capacity-planning.md)
 - [Konfigurace předávání událostí](configure-event-forwarding.md)

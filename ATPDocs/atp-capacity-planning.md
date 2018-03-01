@@ -5,18 +5,18 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 2/27/2018
 ms.topic: get-started-article
 ms.service: azure-advanced-threat-protection
 ms.prod: 
 ms.assetid: da0ee438-35f8-4097-b3a1-1354ad59eb32
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 3939cba25f262991b000dbdd09bdfbf78f5102e7
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 4219199ad9f426f61ac52826ab85bf3e60e67396
+ms.sourcegitcommit: 21d8f9abf909fc5f0e0da03cd100fa8fb950baa4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 02/27/2018
 ---
 *Platí pro: Azure Advanced Threat Protection*
 
@@ -82,7 +82,7 @@ Azure ATP senzor může podporovat monitorování jednoho řadiče domény zalo�
 |75 tisíc - 100k|3.50 |9.50|
 
 > [!NOTE]
-> - Celkový počet-hyper jádra s vlákny typu, které tento řadič domény nainstalovanou.<br>Hyper-threading je přijatelné pro senzoru Azure ATP při plánování kapacity, byste měli počítat skutečná jádra a ne hyper jádra s vlákny typu.
+> - Celkový počet jader, která nainstaloval tento řadič domény.<br>Doporučuje se nemáte spolupráci s jádra typu hyper.
 > - Celková velikost paměti, která má nainstalovanou tento řadič domény.
 > -   Pokud řadič domény nemá prostředků vyžaduje Azure ATP senzoru, výkon řadiče domény není provedena, ale senzoru Azure ATP nemusí fungovat podle očekávání.
 > -   Pokud se spustí jako dynamická paměť virtuálního počítače nebo libovolná jiná paměť, funkce rozšiřování rozsahů stránek se nepodporuje.
@@ -145,6 +145,6 @@ Pokud chcete určit počet paketů za sekundu, proveďte na každém řadiči do
 
 ## <a name="see-also"></a>Viz také
 - [Nástroje pro změnu velikosti Azure ATP](http://aka.ms/aatpsizingtool)
-- [Požadavky Azure ATP](atp-prerequisites.md)
-- [Architektura Azure ATP](atp-architecture.md)
+- [Požadavky služby Azure ATP](atp-prerequisites.md)
+- [Architektura služby Azure ATP](atp-architecture.md)
 - [Podívejte se na fórum ATP!](https://aka.ms/azureatpcommunity)

@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 2/25/2018
 ms.topic: get-started-article
 ms.prod: 
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 819eeb73c57e7b1de5e7e5e837aa2d6db2e0848d
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 3cb4eb8a914f1fd4be0c1ddb26f9be3964c529f7
+ms.sourcegitcommit: 26d833f7d9502db73876ced9879789db395224f7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 02/27/2018
 ---
 *Platí pro: Azure Advanced Threat Protection*
 
@@ -51,7 +51,7 @@ Každý pracovní prostor Azure ATP podporuje hranice doménové struktury Activ
 Tato část obsahuje informace, které byste měli získat a účty a síťové entity, které byste měli mít před zahájením instalace Azure ATP.
 
 
--   **Místní** Azure AD uživatelský účet a heslo s přístupem pro čtení pro všechny objekty v monitorovaném domén.
+-   **Místní** AD uživatelský účet a heslo s přístupem pro čtení pro všechny objekty v monitorovaném domén.
 
     > [!NOTE]
     > Pokud jste pro různé organizační jednotky (OU) ve vaší doméně nastavili vlastní seznamy ACL, ujistěte se, že vybraný uživatel má pro tyto organizační jednotky oprávnění ke čtení.
@@ -216,7 +216,7 @@ Následující tabulka uvádí minimální porty, které vyžaduje senzoru Azure
 
 ## <a name="see-also"></a>Viz také
 - [Nástroje pro změnu velikosti Azure ATP](http://aka.ms/aatpsizingtool)
-- [Architektura Azure ATP](atp-architecture.md)
+- [Architektura služby Azure ATP](atp-architecture.md)
 - [Nainstalujte ATP](install-atp-step1.md)
 - [Podívejte se na fórum ATP!](https://aka.ms/azureatpcommunity)
 
