@@ -5,18 +5,18 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/27/2018
+ms.date: 3/3/2018
 ms.topic: get-started-article
 ms.service: azure-advanced-threat-protection
 ms.prod: 
 ms.assetid: da0ee438-35f8-4097-b3a1-1354ad59eb32
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4219199ad9f426f61ac52826ab85bf3e60e67396
-ms.sourcegitcommit: 21d8f9abf909fc5f0e0da03cd100fa8fb950baa4
+ms.openlocfilehash: 0191ca50a5ea6328cc50ada6d9231ccb73da5c21
+ms.sourcegitcommit: 84556e94a3efdf20ca1ebf89a481550d7f8f0f69
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/08/2018
 ---
 *Platí pro: Azure Advanced Threat Protection*
 
@@ -40,7 +40,7 @@ Doporučený a nejjednodušší způsob jak určit kapacitu pro vaše nasazení 
 Pokud z nějakého důvodu nemůžete použít nástroj pro změnu velikosti ATP Azure, ručně shromážděte informace z čítače paketů za sekundu ze všech řadičů domény po dobu 24 hodin s malým intervalem sběru hodnot (přibližně 5 sekund). Pak u každého řadiče domény musíte vypočítat denní průměr a průměr za nejvytíženější období (15 minut).
 Následující části uvádějí pokyny, jak shromáždit čítač paketů za sekundu z jednoho řadiče domény.
 
-## <a name="choosing-the-right-sensor-type-for-your-deployment"></a>Výběr typu správné senzor pro vaše nasazení
+## Výběr typu správné senzor pro vaše nasazení<a name="choosing-the right-sensor-type-for-your-deployment"></a>
 V nasazení služby Azure ATP je podporováno libovolnou kombinaci typů sensor samostatné Azure ATP:
 
 - Jenom Azure ATP samostatné senzorů
