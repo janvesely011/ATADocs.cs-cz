@@ -13,14 +13,15 @@
 ## [5 Konfigurace senzoru služby Azure ATP](install-atp-step5.md)
 ## [6 Integrace sítě VPN](install-atp-step6-vpn.md)
 ## [7 Vyloučení a účty honeytoken](install-atp-step7.md)
-### [8 Konfigurace požadovaných oprávnění pro SAM-R](install-atp-step8-samr.md)
+## [8 Konfigurace požadovaných oprávnění pro SAM-R](install-atp-step8-samr.md)
 ## [Bezobslužná instalace](ATP-silent-installation.md)
 ## Další kroky se senzorem Azure ATP
 ### [Konfigurace zrcadlení portů](configure-port-mirroring.md)
+### [Ověření zrcadlení portů](validate-port-mirroring.md)
 ### [Konfigurace shromažďování událostí](configure-event-collection.md)
-### [Konfigurace předávání událostí Windows](configure-event-forwarding.md)
+### [Konfigurace předávání událostí Windows](configure-event-forwarding.md))
 ### [Konfigurace proxy serveru v zájmu povolení komunikace](configure-proxy.md)
-# Použití
+# Použijte
 ## [Centrum stavu služby Azure ATP](atp-health-center.md)
 ## [Sestavy služby Azure ATP](reports.md)
 ## [Skupiny rolí služby Azure ATP](atp-role-groups.md)
@@ -39,3 +40,5 @@
 ## [Průvodce prošetřováním podezřelých aktivit](suspicious-activity-guide.md)
 ## [Prošetřování laterálních průnikových tras pomocí služby Azure ATP](use-case-lateral-movement-path.md)
 ## [Prošetřování entit](entity-profiles.md)
+# Odstraňování potíží
+## [Řešení známých problémů](troubleshooting-atp-known-issues.md)
