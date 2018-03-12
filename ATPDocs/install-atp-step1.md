@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 3/11/2018
 ms.topic: get-started-article
 ms.prod: 
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,11 @@ ms.technology:
 ms.assetid: 15ee7d0b-9a0c-46b9-bc71-98d0b4619ed0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: aa5f1af43a77d37ba8635fba10628d1720174393
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 5eabf4fc3965e8745b7e2c0fbae4973deb358814
+ms.sourcegitcommit: 912e453753156902618ae6ebb8489c2320c06fc6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 03/12/2018
 ---
 *Platí pro: Azure Advanced Threat Protection*
 
@@ -29,7 +29,10 @@ ms.lasthandoff: 02/21/2018
 
 Tento instalační postup uvádí pokyny k vytváření a správě pracovního prostoru v portálu pro správu Azure ATP pracovního prostoru. Informace na architektuře Azure ATP najdete v tématu [Azure ATP architektura](atp-architecture.md).
 
-V Azure ATP máte možnost spravovat a sledovat více pracovní prostory. To je obzvláště užitečné, pokud chcete vytvořit pracovní prostor ukázku a testovací prostoru, ve kterém můžete POC Azure ATP před distribucí v celé organizaci. Také je potřeba pro podporu nasazení s více doménovými strukturami. Jednoho pracovního prostoru můžete monitorovat jenom několika domén z jedné doménové struktury.
+V Azure ATP máte možnost spravovat a sledovat více pracovní prostory. To je obzvláště užitečné, pokud chcete vytvořit pracovní prostor ukázku a testovací prostoru, ve kterém můžete POC Azure ATP před distribucí v celé organizaci. Také je potřeba pro podporu nasazení s více doménovými strukturami. Jednoho pracovního prostoru můžete monitorovat jenom několika domén z jedné doménové struktury. 
+
+> [!NOTE]
+> Může mít maximálně dvě active pracovních prostorů. Po odstranění pracovního prostoru můžete kontaktovat podporu, aby jej znovu aktivovat. Můžete mít mazimum tři odstraněné pracovních prostorů. Chcete-li zvýšit počet uložené, odstraněné pracovní prostory, kontaktujte podporu Azure ATP.
 
 ## <a name="step-1-enter-the-workspace-management-portal"></a>Krok 1: Přejít na portál pro správu pracovního prostoru
 
@@ -75,5 +78,5 @@ Po ověření, že vaše síť splňuje požadavky na senzoru můžete pokračov
 ## <a name="see-also"></a>Viz také
 - [Nástroje pro změnu velikosti Azure ATP](http://aka.ms/aatpsizingtool)
 - [Konfigurace shromažďování událostí](configure-event-collection.md)
-- [Požadavky Azure ATP](atp-prerequisites.md)
+- [Požadavky služby Azure ATP](atp-prerequisites.md)
 - [Podívejte se na fórum ATP!](https://aka.ms/azureatpcommunity)
