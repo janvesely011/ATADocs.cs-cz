@@ -5,18 +5,18 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/3/2018
+ms.date: 3/11/2018
 ms.topic: get-started-article
 ms.service: azure-advanced-threat-protection
 ms.prod: 
 ms.assetid: da0ee438-35f8-4097-b3a1-1354ad59eb32
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0191ca50a5ea6328cc50ada6d9231ccb73da5c21
-ms.sourcegitcommit: 84556e94a3efdf20ca1ebf89a481550d7f8f0f69
+ms.openlocfilehash: 577b7a5105e8de773f57b1e00bc1c9cb51096799
+ms.sourcegitcommit: 912e453753156902618ae6ebb8489c2320c06fc6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/12/2018
 ---
 *Platí pro: Azure Advanced Threat Protection*
 
@@ -68,8 +68,9 @@ Při rozhodování o tom, kolik senzorů samostatné Azure ATP k nasazení, zva�
 
 ## Azure senzor ATP a samostatné senzor velikosti <a name="sizing"></a>
 
-Azure ATP senzor může podporovat monitorování jednoho řadiče domény založené na objem síťového provozu, který generuje řadičem domény. V následující tabulce je odhad, konečné množství, které analyzuje senzoru je závislá na objem provozu, které máte. 
-
+Azure ATP senzor může podporovat monitorování jednoho řadiče domény založené na objem síťového provozu, který generuje řadičem domény. V následující tabulce je odhad, konečné množství, které analyzuje senzoru je závisí na množství provozu a distribuci přenosů. 
+> [!NOTE]
+> Následující kapacity procesoru a paměti odkazuje na spotřebu senzoru vlastní – není kapacity řadiče domény.
 
 |Pakety za sekundu. *|Procesor (jádra)|Paměť (GB)|
 |----|----|-----|
@@ -82,12 +83,12 @@ Azure ATP senzor může podporovat monitorování jednoho řadiče domény zalo�
 |75 tisíc - 100k|3.50 |9.50|
 
 > [!NOTE]
-> - Celkový počet jader, která nainstaloval tento řadič domény.<br>Doporučuje se nemáte spolupráci s jádra typu hyper.
-> - Celková velikost paměti, která má nainstalovanou tento řadič domény.
-> -   Pokud řadič domény nemá prostředků vyžaduje Azure ATP senzoru, výkon řadiče domény není provedena, ale senzoru Azure ATP nemusí fungovat podle očekávání.
+> - Celkový počet jader, která bude používán službou senzoru.<br>Doporučuje se nemáte spolupráci s jádra typu hyper.
+> - Celková velikost paměti, který bude používán službou senzoru.
+> -   Pokud řadič domény nemá prostředků vyžaduje Azure ATP senzoru, nemá vliv výkon řadiče domény, ale senzoru Azure ATP nemusí fungovat podle očekávání.
 > -   Pokud se spustí jako dynamická paměť virtuálního počítače nebo libovolná jiná paměť, funkce rozšiřování rozsahů stránek se nepodporuje.
 > -   Pro zajištění optimálního výkonu nastavte **možnost napájení** snímače Azure ATP k **vysoký výkon**.
-> -   Je vyžadován nejméně 2 jádra a 6 GB místa a 10 GB se doporučuje, včetně prostor potřebný pro binární soubory Azure ATP.
+> -   Je vyžadován nejméně 2 jádra a 6 GB místa a 10 GB se doporučuje, včetně prostor potřebný pro Azure ATP binární soubory a protokoly.
 
 
 ## <a name="domain-controller-traffic-estimation"></a>Odhad provozu řadiče domény
