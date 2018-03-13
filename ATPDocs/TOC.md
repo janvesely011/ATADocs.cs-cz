@@ -1,6 +1,7 @@
-# Porozumění a prozkoumávání – verze Preview
+# Porozumění a prozkoumávání
 ## [Co je Azure Advanced Threat Protection?](what-is-atp.md)
 ## [Nejčastější dotazy](atp-technical-faq.md)
+## [Co je nového v Azure ATP](atp-whats-new.md)
 # Plánování a navrhování
 ## [Požadavky služby Azure ATP](atp-prerequisites.md)
 ## [Architektura služby Azure ATP](atp-architecture.md)
@@ -19,7 +20,7 @@
 ### [Konfigurace zrcadlení portů](configure-port-mirroring.md)
 ### [Ověření zrcadlení portů](validate-port-mirroring.md)
 ### [Konfigurace shromažďování událostí](configure-event-collection.md)
-### [Konfigurace předávání událostí Windows](configure-event-forwarding.md))
+### [Konfigurace předávání událostí Windows](configure-event-forwarding.md)
 ### [Konfigurace proxy serveru v zájmu povolení komunikace](configure-proxy.md)
 # Použijte
 ## [Centrum stavu služby Azure ATP](atp-health-center.md)
