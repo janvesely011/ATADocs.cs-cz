@@ -43,3 +43,4 @@
 ## [Prošetřování entit](entity-profiles.md)
 # Odstraňování potíží
 ## [Řešení známých problémů](troubleshooting-atp-known-issues.md)
+## [Podpora a informace](atp-support.md)
