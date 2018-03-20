@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/11/2018
+ms.date: 3/18/2018
 ms.topic: article
 ms.prod: 
 ms.service: azure-advanced-threat-protection
@@ -13,16 +13,24 @@ ms.technology:
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4a81d84a46b9710c2376bbc50f699966a24138db
-ms.sourcegitcommit: 912e453753156902618ae6ebb8489c2320c06fc6
+ms.openlocfilehash: 6b3c9ddd1873b3139009a44e9c1f7a85ea3b6901
+ms.sourcegitcommit: adfa7a3a3918518b6b14b94d3c0a9f899142196a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 *Platí pro: Azure Advanced Threat Protection*
 
 
 # <a name="whats-new-in-azure-atp"></a>Co je nového v Azure ATP 
+
+## <a name="azure-atp-release-225"></a>Azure ATP verze 2.25
+
+Vydané 18 března 2018
+
+- Vícefaktorové ověřování (MFA) se teď podporuje v Azure ATP. Klienty pomocí vícefaktorového ověřování můžete nyní přejít na portál Azure ATP.
+- Azure ATP má teď [ **stav systému** ](https://health.atp.azure.com/) stránky, kde přinášejí informace o tom, jestli portálu pro správu pracovního prostoru je nahoru a aktivní, pokud dochází k potížím s detekcí a pokud je možné odesílat senzoru přenosy dat do cloudu. Dostanete **stav systému** z řádku nabídek Azure ATP.
+
 
 ## <a name="azure-atp-release-224"></a>Azure ATP verze 2,24
 
