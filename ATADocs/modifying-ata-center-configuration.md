@@ -5,21 +5,20 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
-ms.topic: article
+ms.date: 3/21/2018
 ms.prod: 
 ms.service: advanced-threat-analytics
 ms.technology: 
 ms.assetid: 93b27f15-f7e5-49bb-870a-d81d09dfe9fc
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 4fe4569cd6477775e8a888d2acd05511f16fb5f6
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: 294b9204f9ca6a40a835e5360a7011947e3255b4
+ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 03/22/2018
 ---
-*Platí pro: Advanced Threat Analytics verze 1.8*
+*Platí pro: Advanced Threat Analytics verze 1.9*
 
 
 
@@ -53,7 +52,9 @@ Adresa URL se používá v následujících scénářích:
     
 3. Počkejte, než pro komponenty ATA Gateway k synchronizaci. Nyní mají dva potenciální adresy URL, pomocí kterého se přístup ke konzole ATA. Tak dlouho, dokud se ATA Gateway můžete připojit pomocí původní adresu URL, nepokusí novým.
 
-4. Po všechny komponenty ATA Gateway synchronizovaly s aktualizovanou konfigurací aktivujte novou adresu URL. Po aktivaci nové adrese URL komponenty ATA Gateway teď použít nové adrese URL pro přístup k ATA Center. Po připojení ke službě ATA Center, ATA Gateway stáhne nejnovější konfiguraci a bude mít pouze nové adrese URL pro konzolu ATA. 
+4. Po všechny komponenty ATA Gateway synchronizovaly s aktualizovanou konfigurací, na stránce konfigurace Center klikněte **aktivovat** tlačítko aktivovat nové adrese URL. Po aktivaci nové adrese URL komponenty ATA Gateway teď použít nové adrese URL pro přístup k ATA Center. Po připojení ke službě ATA Center, ATA Gateway stáhne nejnovější konfiguraci a bude mít pouze nové adrese URL pro konzolu ATA. 
+5. 
+ ![Aktivovat certifikátu](media/center-activation.png)
 
 > [!NOTE]
 > -   Pokud ATA Gateway offline a aktivovat nové adrese URL a nikdy nezískala aktualizovanou konfiguraci, ručně aktualizujte konfigurační soubor JSON v ATA Gateway.

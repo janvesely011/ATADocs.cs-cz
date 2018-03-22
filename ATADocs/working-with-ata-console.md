@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/6/2017
+ms.date: 3/21/2018
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,13 +13,13 @@ ms.technology:
 ms.assetid: 1bf264d9-9697-44b5-9533-e1c498da4f07
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 26c093c4163593611b175f4f0002f443e593f952
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: 2ecffce7d692a9f1ecea8d8c5220ce3b2dbf848e
+ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 03/22/2018
 ---
-*Platí pro: Advanced Threat Analytics verze 1.8*
+*Platí pro: Advanced Threat Analytics verze 1.9*
 
 
 
@@ -77,6 +77,10 @@ Když se detekuje nová podezřelá aktivita, oznamovací pruh se automaticky ot
 
 ![Obrázek oznamovacího pruhu ATA](media/notification-bar-1.7.png)
 
+### <a name="whats-new"></a>Co je nového
+
+Po vydání nové verze ATA, **co je nového** okno se zobrazí v horní pravé umožnit vám vědět, co byl přidán v nejnovější verzi. Je také poskytuje odkaz na stažení verze.
+
 ### <a name="filtering-panel"></a>Panel filtrování
 
 Na základě stavu a závažnosti umožňuje filtrovat, které podezřelé aktivity se zobrazí na časové ose útoků nebo na kartě podezřelých aktivit profilu entity.
@@ -94,23 +98,6 @@ Health Center zobrazuje výstrahy, pokud v nasazení ATA něco nefunguje tak, ja
 ![Obrázek ATA Health Center](media/ATA-Health-Issue.jpg)
 
 Kdykoli váš systém narazí na problém, třeba Chyba připojení nebo odpojení komponenty ATA Gateway, ikona Health Center umožňuje upozorní zobrazením červené tečky. ![Obrázek červené tečky ATA Health Center](media/ATA-Health-Center-Alert-red-dot.png)
-
-### <a name="user-and-computer-profiles"></a>Profily uživatelů a počítačů
-
-ATA vytvoří profil pro každého uživatele a každý počítač v síti. V profilu uživatele ATA zobrazuje obecné informace, jako jsou členství ve skupinách, poslední přihlášení a prostředky s posledním přístupem. Poskytuje také seznam umístění, kde uživatel připojenou pomocí VPN typu. Seznam členství ve skupinách, které ATA považuje za citlivé najdete v následujícím seznamu.
-
-![Profil uživatele](media/user-profile.png)
-
-V profilu počítače ATA zobrazuje obecné informace, jako jsou nedávná přihlášení a prostředky s nedávným přístupem.
-
-![Profil počítače](media/computer-profile.png)
-
-ATA poskytuje další informace o entitách (počítače, zařízení, uživatelé) na těchto stránkách: Souhrn, Aktivity a Podezřelé aktivity.
-
-Profil, který ATA nemůže úplně vyřešit, je identifikován ikonou napůl vyplněného kruhu vedle sebe.
-
-
-![Obrázek nevyřešeného profilu ATA](media/ATA-Unresolved-Profile.jpg)
 
 ### <a name="sensitive-groups"></a>Citlivé skupiny
 

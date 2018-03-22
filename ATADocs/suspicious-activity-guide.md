@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 12/17/2017
+ms.date: 3/21/2018
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,13 +13,13 @@ ms.technology:
 ms.assetid: 1fe5fd6f-1b79-4a25-8051-2f94ff6c71c1
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 0d951edf1037422c1ee52c8b1e35308665aad256
-ms.sourcegitcommit: 91158e5e63ce2021a1f5f85d47de03d963b7cb70
+ms.openlocfilehash: d76c34b115bd38bdb1eb82fbff1c0857b0ad8dfa
+ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 03/22/2018
 ---
-*Platí pro: Advanced Threat Analytics verze 1.8*
+*Platí pro: Advanced Threat Analytics verze 1.9*
 
 
 # <a name="advanced-threat-analytics-suspicious-activity-guide"></a>Pokročilé Průvodce podezřelou aktivitu Threat Analytics
@@ -63,6 +63,8 @@ Nastavit [Privileged Access Management pro službu Active Directory](https://doc
 
 ## <a name="broken-trust-between-computers-and-domain"></a>Porušení vztahu důvěryhodnosti mezi počítači a domény
 
+> ! [POZNÁMKA] Tento podezřelé aktivity se považovat za zastaralou a zobrazí se pouze v ATA verze starší než 1.9.
+
 **Popis**
 
 Porušení vztahu důvěryhodnosti znamená, že požadavky na zabezpečení služby Active Directory nemusí být platí pro počítače v. To se často považuje za nedostatek základního zabezpečení a dodržování předpisů a za snadný cíl pro útočníky. V této detekce výstrahy Pokud víc než 5 selhání ověřování protokolem Kerberos se z účtu počítače pohledu za 24 hodin.
@@ -76,6 +78,7 @@ Na dotyčném počítači umožňuje uživatelům domény přihlásit?
 
 V případě potřeby znovu připojit počítač zpět do domény nebo resetování hesla tohoto počítače.
 
+
 ## <a name="brute-force-attack-using-ldap-simple-bind"></a>Útoku hrubou silou použití jednoduché vazby protokolu LDAP
 
 **Popis**
@@ -85,7 +88,7 @@ V případě potřeby znovu připojit počítač zpět do domény nebo resetová
 
 V rámci útoku hrubou silou útočník pokusí ověřování pomocí mnoho různých hesla pro různé účty, dokud nebude nalezen správné heslo pro alespoň jeden účet. Jednou najde, útočník může přihlásit pomocí tohoto účtu.
 
-V této detekce výstraha se spustí, když ATA zjistí mnoho různých hesel používá. To může být buď *vodorovně* s malou sadu hesla mezi mnoha uživateli; nebo *svisle "* s velké sady hesla na několika uživatelů; nebo libovolnou kombinaci těchto dvou možností.
+V této detekce výstraha se spustí, když ATA zjistí masivní počet ověření jednoduchých vazeb. To může být buď *vodorovně* s malou sadu hesla mezi mnoha uživateli; nebo *svisle "* s velké sady hesla na několika uživatelů; nebo libovolnou kombinaci těchto dvou možností.
 
 **Šetření**
 
@@ -103,15 +106,15 @@ V této detekce výstraha se spustí, když ATA zjistí mnoho různých hesel po
 
 **Popis**
 
-Různé metody útoku využívat slabé šifrování doklad protokolu Kerberos. V této detekce ATA zjišťuje typy šifrování pomocí protokolu Kerberos, počítačů a uživatelů a upozorní, že jste po slabší šifrováním použije: (1) neobvyklé pro zdrojový počítač nebo uživatele. a (2) odpovídá známé útoky techniky.
+Přechod na starší verzi šifrování je metoda oslabení protokolu Kerberos podle Downgrade úrovně šifrování různých polí protokolu, které jsou obvykle šifrována pomocí nejvyšší úroveň šifrování. Oslabeným šifrované pole může být snazší cíl pokusů offline hrubou silou. Různé metody útoku využívat slabé šifrování doklad protokolu Kerberos. V této detekce ATA zjišťuje typy šifrování pomocí protokolu Kerberos, počítačů a uživatelů a upozorní, že jste po slabší šifrováním použije: (1) neobvyklé pro zdrojový počítač nebo uživatele. a (2) odpovídá známé útoky techniky.
 
 Existují tři typy detekce:
 
-1.  Typu Skeleton Key – je malware, který běží na řadičích domény a povoluje ověřování k doméně pomocí libovolného účtu bez znalosti jeho heslo. Tímto malwarem často používá slabší algoritmy šifrování pro kódování hesla uživatele na řadiči domény. V této detekce metodu šifrování zprávy KRB_ERR ze zdrojového počítače snížit ve srovnání s dřív zjištěné chování.
+1.  Typu Skeleton Key – je malware, který běží na řadičích domény a povoluje ověřování k doméně pomocí libovolného účtu bez znalosti jeho heslo. Tímto malwarem často používá slabší algoritmy šifrování hodnoty hash hesla uživatele na řadiči domény. V této detekce metodu šifrování zprávy KRB_ERR z řadiče domény k účtu s žádostí o lístek snížit ve srovnání s dřív zjištěné chování.
 
 2.  Lístek Golden – [zlatý lístek](#golden-ticket) výstrah, metodu šifrování pole lístku TGT zprávy TGS_REQ (žádost o službu) ze zdrojového počítače byl snížit ve srovnání s dřív zjištěné chování. Toto není založena na čas anomálií (stejně jako ostatní zlatý lístek detekce). Kromě toho se žádný požadavek ověřování protokolu Kerberos přidružené předchozí žádost o služby detekuje ATA.
 
-3.  Overpass-the-Hash – typ šifrování zprávy AS_REQ ze zdrojového počítače byl snížit ve srovnání s dřív zjištěné chování (to znamená, počítač se pomocí standardu AES).
+3.  Overpass-the-Hash – útočník může použít slabé odcizené hodnoty hash chcete-li vytvořit lístek silné s žádostí ověřovací služby protokolu Kerberos. V této detekce AS_REQ typ šifrování zprávy ze zdrojového počítače byl snížit ve srovnání s dřív zjištěné chování (to znamená, počítač se pomocí standardu AES).
 
 **Šetření**
 
@@ -347,6 +350,8 @@ V této detekce by být žádné výstrahy aktivovány v první měsíc po nasaz
 
  - Pokud odpověď byla ne ke všem z výše uvedených, předpokládá se, toto je škodlivý.
 
+6. Pokud nejsou žádné informace o účtu, který byl zahrnut, můžete přejít do koncového bodu a zkontrolovat, který účet byl přihlášen v době výstrahy.
+
 **Nápravy**
 
 Použití [SAMRi10 nástroj](https://gallery.technet.microsoft.com/SAMRi10-Hardening-Remote-48d94b5b) k posílení zabezpečení vaše prostředí před tento postup.
@@ -428,6 +433,9 @@ Použití [Net Ustanou nástroj](https://gallery.technet.microsoft.com/Net-Cease
 
 ## <a name="sensitive-account-credentials-exposed--services-exposing-account-credentials"></a>Zpřístupnění citlivých účtů přihlašovací údaje jsou zveřejněné & vystavení přihlašovací údaje účtu služby
 
+> [!NOTE]
+> Tento podezřelé aktivity se považovat za zastaralou a zobrazí se pouze v ATA verze starší než 1.9. Pro ATA 1.9 a novější, najdete v části [sestavy](reports.md).
+
 **Popis**
 
 Některé služby odeslat přihlašovací údaje účtu ve formátu prostého textu. Tomu může dojít i pro citlivé účty. Útočníci monitorování síťového provozu můžete zachytit a pak znovu použít tyto přihlašovací údaje zlými úmysly. Všechny hesla v nešifrovaném textu pro zpřístupnění citlivých účtů spustí výstrahu, když pro účty necitlivých se aktivuje výstraha, pokud pět nebo víc různých účtech odeslání hesla v nešifrovaném textu ze stejného zdrojového počítače. 
@@ -448,7 +456,7 @@ Ověřte konfiguraci na zdrojových počítačích a zajistěte, aby nepoužíva
 
 V rámci útoku hrubou silou útočník pokusí ověřování pomocí mnoho různých hesla pro různé účty, dokud nebude nalezen správné heslo pro alespoň jeden účet. Jednou najde, útočník může přihlásit pomocí tohoto účtu.
 
-Toto zjišťování výstrahy při selhání mnoho ověřování došlo k chybě, může se jednat buď vodorovně s malou sadu hesla mezi mnoha uživateli; nebo svisle s velkým sady hesel ve pouze několik uživatelů; nebo libovolnou kombinaci těchto dvou možností.
+Toto zjišťování výstraha se spustí, když došlo k mnoha selhání ověřování pomocí protokolu Kerberos nebo NTLM, může se jednat buď vodorovně s malou sadu hesla mezi mnoha uživateli; nebo svisle s velkým sady hesel ve pouze několik uživatelů; nebo libovolnou kombinaci těchto dvou možností. Minimální dobu, než může být výstraha je jeden týden.
 
 **Šetření**
 
@@ -461,6 +469,30 @@ Toto zjišťování výstrahy při selhání mnoho ověřování došlo k chybě
 **Nápravy**
 
 [Komplexní a dlouhá hesla](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) poskytovat potřebné první úrovně zabezpečení před útoky hrubou silou.
+
+## Vytvoření podezřelé služby <a name="suspicious-service-creation"></a>
+
+**Popis**
+
+Útočníci se pokusí spustit podezřelé services ve vaší síti. Po vytvoření nové služby, který zdá se, že podezřelé na řadiči domény, ATA vydá výstrahu. Tato výstraha závisí na události 7045 a je zjištěn z každého řadiče domény, která je předmětem ATA Gateway nebo Lightweight Gateway.
+
+**Šetření**
+
+1. Pokud je počítač v pracovní stanici správce nebo počítač, na které členové týmu IT a služby účty provádět úlohy správy, může to být falešně pozitivní a budete muset **potlačit** výstrahy a přidejte ho do Seznam vyloučení v případě potřeby.
+
+2. Je služba něco, co rozpoznat v tomto počítači?
+
+ - Je **účet** dotyčném dovoleno instalovat tuto službu?
+
+ - Pokud je odpověď na obě otázky *Ano*, pak **Zavřít** výstrahy, nebo ho přidat do seznamu vyloučení.
+
+3. Pokud je odpověď na obě otázky *žádné*, a to by se měly zvažovat skutečně pozitivní.
+
+**Nápravy**
+
+- Implementace méně privilegovaného přístupu na počítače domény povolit jenom konkrétní uživatelé práva k vytvoření nové služby.
+
+
 
 ## <a name="suspicion-of-identity-theft-based-on-abnormal-behavior"></a>Podezření na krádež identity na základě neobvyklého chování
 
@@ -484,7 +516,7 @@ V závislosti na tom, co způsobilo tento neobvyklé chování proběhnout by m�
 
 **Popis**
 
-Útočníci pomocí nástrojů, které implementují různých protokolů (protokol SMB, protokolu Kerberos, NTLM) nestandardní způsoby. Když tento typ síťového provozu je přijat Windows bez upozornění, bude ATA rozpoznat potenciální zlými úmysly. Toto chování je určující pro techniky, jako je například přesahu-Pass-the-Hash a hrubou silou, jakož i zneužití používané pokročilé ransomware, například WannaCry.
+Útočníci pomocí nástrojů, které implementují různých protokolů (protokol SMB, protokolu Kerberos, NTLM) nestandardní způsoby. Když tento typ síťového provozu je přijat Windows bez upozornění, bude ATA rozpoznat potenciální zlými úmysly. Toto chování je určující pro techniky, jako je například přesahu-Pass-the-Hash, jakož i zneužití používané pokročilé ransomware, například WannaCry.
 
 **Šetření**
 
@@ -513,6 +545,10 @@ Oprava všechny počítače, zejména použití aktualizací zabezpečení.
 2. [Odebrat WannaCry](https://support.microsoft.com/help/890830/remove-specific-prevalent-malware-with-windows-malicious-software-remo)
 
 3. WanaKiwi mohly dešifrovat data do nesprávných rukou některé ransom softwaru, ale pouze, pokud uživatel restartovat nebo vypnout počítač. Další informace najdete v tématu [pokřik Ransomware, který chcete](https://answers.microsoft.com/en-us/windows/forum/windows_10-security/wanna-cry-ransomware/5afdb045-8f36-4f55-a992-53398d21ed07?auth=1)
+
+
+>[!NOTE]
+> Chcete-li zakázat podezřelou aktivitu, kontaktujte podporu.
 
 ## <a name="related-videos"></a>Související videa
 - [Připojení k zabezpečení komunitě](https://channel9.msdn.com/Shows/Microsoft-Security/Join-the-Security-Community)

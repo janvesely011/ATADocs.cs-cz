@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 3/21/2018
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,13 +13,13 @@ ms.technology:
 ms.assetid: 4a25561b-a5ed-44aa-9b72-366976b3c72a
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 652d3a9e20737d26e8776035690a180f6bd84593
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: 47bd7e9cdd97d8343202be86954e82e69948afed
+ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 03/22/2018
 ---
-*Platí pro: Advanced Threat Analytics verze 1.8*
+*Platí pro: Advanced Threat Analytics verze 1.9*
 
 
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 11/07/2017
 ## <a name="change-the-domain-connectivity-password"></a>Změna hesla připojení k doméně
 Pokud změníte heslo připojení k doméně, ujistěte se, že je zadané heslo správné. Pokud není, služba ATA Gateway zastaví na ATA Gateway.
 
-Pokud máte podezření, že se to stalo na ATA Gateway, podívejte se na v souboru Microsoft.Tri.Gateway-Errors.log k následujícím chybám:`The supplied credential is invalid.`
+Pokud máte podezření, že se to stalo na ATA Gateway, podívejte se na v souboru Microsoft.Tri.Gateway-Errors.log k následujícím chybám: `The supplied credential is invalid.`
 
 Když to chcete opravit, podle následujícího postupu aktualizujte na ATA Center heslo připojení k doméně:
 

@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 12/20/2017
+ms.date: 3/21/2018
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,13 +13,13 @@ ms.technology:
 ms.assetid: 5a65285c-d1de-4025-9bb4-ef9c20b13cfa
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 33ff11f592984b754521c562414ffeabd2d1f255
-ms.sourcegitcommit: 91158e5e63ce2021a1f5f85d47de03d963b7cb70
+ms.openlocfilehash: 87d3f1de8167c1198e6b334826f90df83cc96780
+ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 03/22/2018
 ---
-*Platí pro: Advanced Threat Analytics verze 1.8*
+*Platí pro: Advanced Threat Analytics verze 1.9*
 
 
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 12/20/2017
 Pokud ATA Center se nespustí, proveďte následující postup řešení potíží:
 
 1.  Spusťte následující příkaz prostředí Windows PowerShell: `Get-Service Pla | Select Status` a ujistěte se, je spuštěna služba čítače výkonu. Pokud není, jedná se o problém platformy a vy musíte zajistit opětovné spuštění této služby.
-2.  Pokud byl spuštěn, pokusí se ji restartovat a zobrazí, pokud se tím problém nevyřeší:`Restart-Service Pla`
+2.  Pokud byl spuštěn, pokusí se ji restartovat a zobrazí, pokud se tím problém nevyřeší: `Restart-Service Pla`
 3.  Zkuste vytvořit ručně nový kolektor dat (bude stačit jakýkoliv, třeba jenom procesor počítače pro sběr dat).
 Pokud můžete spustit, je pravděpodobně poškozena platformu. Pokud ne, je stále problém platformy.
 
@@ -57,7 +57,7 @@ K tomu dochází, protože jako součást procesu instalace Lightweight Gateway,
 
 **Řešení**
 
-1. V registru klíče, pokud je hodnota DWORD názvem **zakázat čítače výkonu** zkontrolujte, zda je nastavena na **0**: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfOS\Performance\``HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfProc\Performance`
+1. V registru klíče, pokud je hodnota DWORD názvem **zakázat čítače výkonu** zkontrolujte, zda je nastavena na **0**:  `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfOS\Performance\` `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfProc\Performance`
  
 2. Potom restartujte službu Pla. ATA Lightweight Gateway automaticky rozpozná změny a restartujte službu.
 
