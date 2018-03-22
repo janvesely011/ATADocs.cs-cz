@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/6/2017
+ms.date: 3/21/2018
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,13 +13,13 @@ ms.technology:
 ms.assetid: 5d639e84-2e37-43a9-9667-49be6c4fa8b7
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 07be2dad511158a9234c99287f7eefd7cc12ba83
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: e9147f4333f481eaec4967dd32846bd123866941
+ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 03/22/2018
 ---
-*Platí pro: Advanced Threat Analytics verze 1.8*
+*Platí pro: Advanced Threat Analytics verze 1.9*
 
 
 # <a name="ata-event-id-reference"></a>Odkaz na ID událostí ATA
@@ -84,8 +84,6 @@ Události naleznete zde:
 
 2004 – LDAP hrubou vynutit podezřelé aktivity 
 
-2005 – předběžné ověření počítače se nezdařilo podezřelé aktivity 
-
 2006 – directory services replikace podezřelé aktivity 
 
 2007 – DNS rekognoskace podezřelé aktivity 
@@ -97,8 +95,6 @@ Události naleznete zde:
 2013 – forged PAC podezřelé aktivity 
 
 2014 – Honeytokenu aktivity podezřelé aktivity 
-
-2015 – LDAP vymažte text heslo podezřelé aktivity 
 
 2016 – masivní objekt odstranění podezřelé aktivity 
 

@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 3/21/2018
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,13 +13,13 @@ ms.technology:
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: f13416c4179d65ee8096d246ea92969b1cf9af43
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: a7172447de5b4d4088da2d8d687a7bec47a01551
+ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 03/22/2018
 ---
-*Platí pro: Advanced Threat Analytics verze 1.8*
+*Platí pro: Advanced Threat Analytics verze 1.9*
 
 
 
@@ -51,7 +51,7 @@ Tato část podrobně popisuje možné chyby v nasazení ATA a kroky potřebné 
 |System.Net.WebException: Vzdálený server vrátil chybu: (407) Vyžadováno ověřování proxy serveru|Komunikaci mezi ATA Gateway a ATA Center ruší proxy server.|Vypněte proxy server na počítači s ATA Gateway. <br></br>Nastavení proxy serveru můžou záviset na konkrétním účtu.|
 |System.IO.DirectoryNotFoundException: Systém nemůže nalézt zadanou cestu. (Výjimka na základě hodnoty HRESULT: 0x80070003)|Jednu nebo více služeb potřebných pro provoz ATA se nepodařilo spustit.|Spusťte tyto služby: <br></br>Výstrahy a protokolování výkonu, Plánovač úloh.|
 |System.Net.WebException: Vzdálený server vrátil chybu: (403) zakázán|ATA Gateway nebo Lightweight Gateway může bylo zakázáno z navazování připojení HTTP, protože komponenty ATA Center není důvěryhodný.|Přidejte název pro rozhraní NetBIOS a plně kvalifikovaný název domény pro ATA Center do seznamu důvěryhodných webů a vymažte mezipaměť na Interne Explorer (nebo na název komponenty ATA Center jako zadaný v konfiguraci, pokud je nakonfigurované se liší od pro rozhraní NetBIOS nebo plně kvalifikovaný název domény).|
-|System.Net.Http.HttpRequestException: PostAsync se nezdařilo [requestTypeName = StopNetEventSessionRequest]|ATA Gateway nebo ATA Lightweight Gateway nelze zastavit a spustit relaci trasování událostí pro Windows, která shromažďuje síťový provoz z důvodu problému rozhraní WMI|Postupujte podle pokynů v [rozhraní WMI: znovu sestavit úložiště služby WMI](https://blogs.technet.microsoft.com/askperf/2009/04/13/wmi-rebuilding-the-wmi-repository/) vyřešit problém, rozhraní WMI|
+|System.Net.Http.HttpRequestException: PostAsync failed [requestTypeName=StopNetEventSessionRequest]|ATA Gateway nebo ATA Lightweight Gateway nelze zastavit a spustit relaci trasování událostí pro Windows, která shromažďuje síťový provoz z důvodu problému rozhraní WMI|Postupujte podle pokynů v [rozhraní WMI: znovu sestavit úložiště služby WMI](https://blogs.technet.microsoft.com/askperf/2009/04/13/wmi-rebuilding-the-wmi-repository/) vyřešit problém, rozhraní WMI|
 |System.Net.Sockets.SocketException: Byl proveden pokus o přístup k soketu způsobem, jeho přístupovými oprávněními|Na ATA Gateway je port 514 používá jiná aplikace|Použití `netstat -o` k vytvoření, které proces používá tento port.|
  
 ## <a name="deployment-errors"></a>Chyby nasazení

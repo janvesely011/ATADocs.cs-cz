@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/9/2017
+ms.date: 3/21/2018
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,13 +13,13 @@ ms.technology:
 ms.assetid: 88720401-1fb2-4353-ad39-32bc0088f0de
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: b82c9da819302ef7cf3f94746b156c2053b20ca4
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: 314c86b1a1e13dd20e52210e4b75ff5fe66ecd2c
+ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 03/22/2018
 ---
-*Platí pro: Advanced Threat Analytics verze 1.8*
+*Platí pro: Advanced Threat Analytics verze 1.9*
 
 # <a name="recommended-upgrade-path-for-ata"></a>Doporučený způsob upgradu pro ATA
 Tento článek obsahuje informace o dostupných verzí Advanced Threat Analytics a postup upgradu ATA, v závislosti na tom, jaká verze máte systémem.
@@ -36,6 +36,7 @@ Tento článek obsahuje informace o dostupných verzí Advanced Threat Analytics
 |1.7 Update 2|1.7.5757|
 |1.8|1.8.6645|
 |1.8 update 1|1.8.6765|
+|1.9|1.9.7312|
 
 ## <a name="ata-version-upgrade-matrix"></a>Tabulka upgradu verzí ATA
 

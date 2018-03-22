@@ -5,20 +5,20 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/1/2018
+ms.date: 3/21/2018
 ms.topic: get-started-article
 ms.service: advanced-threat-analytics
 ms.prod: 
 ms.assetid: 279d79f2-962c-4c6f-9702-29744a5d50e2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 76173dfa0b41195e641235f8792723fa7b038a68
-ms.sourcegitcommit: 7684a9942719a90444ab567ffe9b2ff86438c04b
+ms.openlocfilehash: e58fe62fc655fed8f17ae800dda20e022e198a26
+ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/22/2018
 ---
-*Platí pro: Advanced Threat Analytics verze 1.8*
+*Platí pro: Advanced Threat Analytics verze 1.9*
 
 
 
@@ -28,7 +28,7 @@ Tento článek vám pomůže určit kolik serverů ATA jsou zapotřebí pro moni
 > [!NOTE] 
 > ATA Center se dá nasadit na libovolného dodavatele IaaS, pokud jsou splněné požadavky na výkon popsané v tomto článku.
 
-##<a name="using-the-sizing-tool"></a>Použití nástroje pro změnu velikosti
+## <a name="using-the-sizing-tool"></a>Použití nástroje pro změnu velikosti
 Doporučený a nejjednodušší způsob, jak určit kapacitu pro vaše nasazení ATA, je použití [nástroje pro změnu velikosti ATA](http://aka.ms/atasizingtool). Spusťte nástroj pro změnu velikosti ATA a z výsledků v excelovém souboru pomocí následujících polí určete potřebnou kapacitu ATA:
 
 - Procesor a paměť pro ATA Center: Porovnejte pole **Busy Packets/sec** (Počet paketů za sekundu při vytížení) v souboru výsledků s tabulkou pro ATA Center s polem **PACKETS PER SECOND** (Počet paketů za sekundu) v [tabulce pro ATA Center](#ata-center-sizing).
@@ -47,6 +47,9 @@ Doporučený a nejjednodušší způsob, jak určit kapacitu pro vaše nasazení
 Pokud z nějakého důvodu nemůžete použít nástroj pro změnu velikosti ATA, ručně shromažďujte údaje čítače paketů za sekundu ze všech řadičů domény po dobu 24 hodin s nízkým intervalem sběru hodnot (přibližně 5 sekund). Pak u každého řadiče domény musíte vypočítat denní průměr a průměr za nejvytíženější období (15 minut).
 Následující části uvádějí pokyny, jak shromáždit čítač paketů za sekundu z jednoho řadiče domény.
 
+
+> [!NOTE]
+> Protože různých prostředích se liší a mají více speciální a neočekávané síťové přenosy charakteristiky, po počátečním nasazení ATA a spusťte nástroj pro změnu velikosti, musíte upravit a vyladit nasazení kapacity.
 
 
 ### <a name="ata-center-sizing"></a>Nastavení velikosti ATA Center
@@ -67,8 +70,7 @@ Pro vypracování analýzy chování uživatelů vyžaduje ATA Center data za ne
 &#42;&#42;Průměrné počty (počty ve špičce)
 > [!NOTE]
 > -   ATA Center dokáže zpracovat agregované maximum 1 milion paketů za sekundu ze všech monitorovaných řadičů domény. V některých prostředích stejné komponentě ATA Center může zpracovávat celkového provozu, který je vyšší než 1 milion. Pokud potřebujete s takovými prostředími pomoct, obraťte se na adresu askcesec@microsoft.com.
-> -   Zde předepsané velikosti úložiště představují čisté hodnoty. Vždy byste měli zohlednit budoucí nárůst a zajistit, aby na disku, kde se nachází databáze, bylo alespoň 20 % volného místa.
-> -   Pokud velikost volného místa dosáhne minimální hodnoty buď 20 % nebo 200 GB, nejstarší kolekce dat se odstraní. Odstraňování pokračuje, dokud nezůstane 5 % nebo 50 GB volného místa, kdy shromažďování dat přestane fungovat.
+> -   Pokud velikost volného místa dosáhne minimální hodnoty buď 20 % nebo 200 GB, nejstarší kolekce dat se odstraní. Pokud není možné úspěšně snížit shromažďování dat do této úrovně, bude protokolována výstrahu.  ATA bude fungovat až prahovou hodnotu 5 % nebo 50 GB volného místa je k ní dostat.  V tomto okamžiku ATA se zastaví naplnění databáze a se zobrazí další výstraha.
 > - ATA Center je možné nasadit na libovolného dodavatele IaaS, pokud jsou splněné požadavky na výkon popsané v tomto článku.
 > -   Latence úložiště pro čtení a zápisu aktivit musí být menší než 10 ms.
 > -   Poměr mezi čtením a zápisem aktivit je přibližně 1:3 při méně než 100 000 paketů za sekundu a 1:6 při více než 100 000 paketů za sekundu.
@@ -163,56 +165,6 @@ Aspekty zrcadlení portů můžou vyžadovat, abyste pro datové centrum nebo po
 > -   K zajištění optimálního výkonu nastavte **možnost napájení**  pro ATA Gateway na hodnotu **Vysoký výkon**.
 > -   Je vyžadován minimálně 5 GB místa a 10 GB se doporučuje, včetně prostor potřebný pro binárních souborů ATA, [protokoly ATA](troubleshooting-ata-using-logs.md), a [protokolování výkonu](troubleshooting-ata-using-perf-counters.md).
 
-
-## <a name="domain-controller-traffic-estimation"></a>Odhad provozu řadiče domény
-Existují různé nástroje, které můžete použít ke zjištění průměrného počtu paketů za sekundu vašich řadičů domény. Pokud nemáte žádné nástroje, které sledují tento čítač, můžete k získání požadovaných informací použít nástroj Sledování výkonu.
-
-Pokud chcete určit počet paketů za sekundu, proveďte na každém řadiči domény následující postup:
-
-1.  Otevřete nástroj Sledování výkonu.
-
-    ![Obrázek nástroje Sledování výkonu](media/ATA-traffic-estimation-1.png)
-
-2.  Rozbalte položku **Sady kolekcí dat**.
-
-    ![Obrázek sad kolekcí dat](media/ATA-traffic-estimation-2.png)
-
-3.  Klikněte pravým tlačítkem na **Definované uživatelem** a vyberte **Nová položka** &gt; **Sada kolekcí dat**.
-
-    ![Obrázek nové sady kolekcí dat](media/ATA-traffic-estimation-3.png)
-
-4.  Zadejte název pro sadu kolekcí a vyberte **Vytvořit ručně (Upřesnit)**.
-
-5.  V části **Jaký typ dat chcete zahrnout?** vyberte **Protokoly vytváření dat a Čítač výkonu**.
-
-    ![Obrázek typu dat pro novou sadu kolekcí dat](media/ATA-traffic-estimation-5.png)
-
-6.  V části **Které čítače výkonu chcete protokolovat?** klikněte na **Přidat**.
-
-7.  Rozbalte položku **Síťový adaptér**, vyberte **Pakety/s** a vyberte vhodnou instanci. Pokud si nejste jisti, můžete vybrat **&lt;Všechny instance&gt;** a kliknout na **Přidat** a **OK**.
-
-    > [!NOTE]
-    > Pokud chcete tuto operaci provést na příkazovém řádku, spuštěním příkazu `ipconfig /all` zobrazte název adaptéru a konfiguraci.
-
-    ![Obrázek přidání čítačů výkonu](media/ATA-traffic-estimation-7.png)
-
-8.  Změňte **Interval vzorku** na **1 sekunda**.
-
-9. Nastavte umístění, kam chcete data uložit.
-
-10. V části **vytvořit sadu kolekcí dat**, vyberte **spustit tuto sadu kolekcí dat**a klikněte na tlačítko **Dokončit**.
-
-    Nyní byste měli vidět vytvořenou sadu kolekcí dat se zeleným trojúhelníkem, který označuje, že je funkční.
-
-11. Po 24 hodinách sadu kolekcí dat zastavte kliknutím pravým tlačítkem na sadu kolekcí dat a výběrem **Zastavit**.
-
-    ![Obrázek zastavení sady kolekcí dat](media/ATA-traffic-estimation-12.png)
-
-12. V Průzkumníku souborů přejděte do složky, kam byl uložen soubor .blg, a dvojím kliknutím ho otevřete v nástroji Sledování výkonu.
-
-13. Vyberte čítač Pakety/s a poznamenejte si průměrnou a maximální hodnotu.
-
-    ![Obrázek čítače Pakety/s](media/ATA-traffic-estimation-14.png)
 
 
 ## <a name="related-videos"></a>Související videa

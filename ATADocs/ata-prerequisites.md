@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/1/2018
+ms.date: 3/21/2018
 ms.topic: get-started-article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,13 +13,13 @@ ms.technology:
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: dd422a7feffcddc0f56b54b11d5dadb029457a8e
-ms.sourcegitcommit: 7684a9942719a90444ab567ffe9b2ff86438c04b
+ms.openlocfilehash: 419df4c4404bf26a85c1a955139d0dee6f50828e
+ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/22/2018
 ---
-*Platí pro: Advanced Threat Analytics verze 1.8*
+*Platí pro: Advanced Threat Analytics verze 1.9*
 
 
 
@@ -68,7 +68,12 @@ V této části jsou uvedené informace, které byste měli získat, a účty a 
 ## <a name="ata-center-requirements"></a>Požadavky pro ATA Center
 V této části je uveden seznam požadavků pro ATA Center.
 ### <a name="general"></a>Obecné
-ATA Center podporuje instalaci na serveru s Windows Serverem 2012 R2 nebo Windows Serverem 2016. ATA Center se dá nainstalovat na server, který je členem domény nebo pracovní skupiny.
+ATA Center podporuje instalaci na serveru s Windows Serverem 2012 R2 nebo Windows Serverem 2016. 
+
+ > [!NOTE]
+ > ATA Center nepodporuje jádra serveru systému Windows.
+
+ATA Center se dá nainstalovat na server, který je členem domény nebo pracovní skupiny.
 
 Před instalací součásti ATA Center do systému Windows Server 2012 R2 zkontrolujte, jestli je nainstalovaná aktualizace [KB2919355](https://support.microsoft.com/kb/2919355/).
 
@@ -83,7 +88,8 @@ Pokud ATA Center spouštíte jako virtuální počítač, před vytvořením nov
 
 ### <a name="server-specifications"></a>Specifikace serveru
 
-Při práci na fyzickém serveru databáze ATA vyžaduje, abyste v systému BIOS **zakázali** neuniformní přístup k paměti (NUMA). Systému se NUMA může označovat jako prokládání uzlů v takovém případě budete muset **povolit** prokládání uzlů, abyste NUMA zakázali. Další informace najdete v dokumentaci systému BIOS. <br>
+Při práci na fyzickém serveru databáze ATA vyžaduje, abyste v systému BIOS **zakázali** neuniformní přístup k paměti (NUMA). Systému se NUMA může označovat jako prokládání uzlů v takovém případě budete muset **povolit** prokládání uzlů, abyste NUMA zakázali. Další informace najdete v dokumentaci systému BIOS.<br>
+
 K zajištění optimálního výkonu nastavte **možnost napájení**  pro ATA Center na hodnotu **Vysoký výkon**.<br>
 Počet řadičů domény, které monitorujete a zatížení na jednotlivých řadičích určuje specifikaci serveru potřeba. Další informace najdete v tématu [plánování kapacity ATA](ata-capacity-planning.md).
 
@@ -117,6 +123,7 @@ Následující tabulka uvádí minimální porty, které musí být otevřené, 
 |**Kerberos** (volitelné při připojení k doméně)|TCP a UDP|88|Řadiče domény|Odchozí|
 |**Přihlašování k síti** (volitelné při připojení k doméně)|TCP a UDP|445|Řadiče domény|Odchozí|
 |**Systémový čas** (volitelné, pokud je připojený k doméně)|UDP|123|Řadiče domény|Odchozí|
+|**Netlogon (SMB, CIFS, SAM-R)**|TCP a UDP|445|Brány a zařízení|Příchozí a odchozí|
 
 > [!NOTE]
 > LDAP je potřeba otestovat pověření pro použití mezi komponenty ATA Gateway a řadiče domény. Test se provádí z ATA Center na řadič domény k testování platnosti tyto přihlašovací údaje, po kterých ATA Gateway využívá LDAP jako součást procesu jeho normální řešení.
@@ -147,7 +154,7 @@ Například můžete použít standardní **webový server** nebo **počítače*
 ## <a name="ata-gateway-requirements"></a>Požadavky na ATA Gateway
 V této části je uveden seznam požadavků pro ATA Gateway.
 ### <a name="general"></a>Obecné
-ATA Gateway podporuje instalaci na serveru s Windows Serverem 2012 R2 nebo Windows Serverem 2016 (včetně jádra serveru).
+ATA Gateway podporuje instalaci na serveru se systémem Windows Server 2012 R2 nebo Windows Server 2016 (včetně jádra serveru).
 ATA Gateway se dá nainstalovat na server, který je členem domény nebo pracovní skupiny.
 ATA Gateway můžete použít k monitorování řadičů domény pomocí funkční úrovně domény v systému Windows 2003 a novějším.
 

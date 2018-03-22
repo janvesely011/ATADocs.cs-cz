@@ -5,7 +5,7 @@ keywords:
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 11/7/2017
+ms.date: 3/21/2018
 ms.topic: article
 ms.prod: 
 ms.service: advanced-threat-analytics
@@ -13,13 +13,13 @@ ms.technology:
 ms.assetid: 38ea49b5-cd5e-43e5-bc39-5071f759633b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: f97033ee685c10e9ee647e52c19cbd4ee1640b6f
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: b7f921bb2eb655a929eb19c849788c1bf9f64527
+ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 03/22/2018
 ---
-*Platí pro: Advanced Threat Analytics verze 1.8*
+*Platí pro: Advanced Threat Analytics verze 1.9*
 
 
 # <a name="ata-reports"></a>Sestavy ATA
@@ -28,16 +28,23 @@ ms.lasthandoff: 11/07/2017
 
 Pokud chcete získat přístup na stránku sestav, klikněte na ikonu sestav na řádku nabídek: ![ikona sestav](./media/ata-report-icon.png).
 Dostupné sestavy: 
-- Souhrnná sestava: Souhrnná sestava představuje řídicí panel stavu systému. Můžete zobrazit tři karty – **Summary** (Souhrn) se souhrnnými informacemi o tom, co bylo zjištěno ve vaší síti, **Open suspicious activities** (Otevřít podezřelé aktivity) s informacemi o podezřelých aktivitách, kterým byste měli věnovat pozornost, a **Open health issues** (Otevřené problémy se stavem), kde najdete seznam problémů se stavem služby ATA, kterým byste měli věnovat pozornost. Podezřelé aktivity, které jsou uvedené, jsou rozdělené podle typu, stejně jako problémy se stavem. 
-- Změny citlivých skupin: V této sestavě je uvedená každá změna provedená v důvěrných skupinách (např. admins).
+
+- **Souhrnná sestava**: Souhrnná sestava uvede řídicí panel stavu systému. Můžete zobrazit tři karty – **Summary** (Souhrn) se souhrnnými informacemi o tom, co bylo zjištěno ve vaší síti, **Open suspicious activities** (Otevřít podezřelé aktivity) s informacemi o podezřelých aktivitách, kterým byste měli věnovat pozornost, a **Open health issues** (Otevřené problémy se stavem), kde najdete seznam problémů se stavem služby ATA, kterým byste měli věnovat pozornost. Podezřelé aktivity, které jsou uvedené, jsou rozdělené podle typu, stejně jako problémy se stavem. 
+
+- **Úprava citlivých skupin**: Tato sestava obsahuje seznam pokaždé, když změny do citlivých skupin (například admins).
+
+- **Hesla, které jsou zveřejněné jako nezašifrovaný text**: Některé služby používat nezabezpečené protokolu LDAP k odesílání přihlašovací údaje účtu ve formátu prostého textu. Tomu může dojít i pro citlivé účty. Útočníci monitorování síťového provozu můžete zachytit a pak znovu použít tyto přihlašovací údaje zlými úmysly. Tato sestava obsahuje seznam všech zdrojového počítače a účtu hesel, která ATA zjistil, že je odesláno jako nezašifrovaný text. 
+
+- **Pomoci odhalit laterální pohyb cesty k citlivým účtům**: Tato sestava obsahuje seznam citlivé účty, které jsou zveřejňovány prostřednictvím cesty laterální pohyb. Další informace najdete v tématu [pomoci odhalit laterální pohyb cesty](use-case-lateral-movement-path.md)
 
 Existují dva způsoby, jak vygenerovat sestavu: na vyžádání nebo na základě naplánování pravidelného odesílání sestav e-mailem.
 
 Vygenerování sestavy na vyžádání:
 
 1. Na řádku nabídek na konzole ATA klikněte na ikonu sestav: ![ikona sestav](./media/ata-report-icon.png).
-2. V části **Summary** (Souhrn) nebo **Modifications to sensitive groups** (Úpravy důvěrných skupin) nastavte datum **From** (Od) a **To** (Do) a klikněte na **Download** (Stáhnout). 
-![sestavy](./media/reports.png)
+
+2. V části buď typ vašeho vybranou sestavu, nastavit **z** a **k** kalendářních dat a klikněte na tlačítko **Stáhnout**. 
+ ![sestavy](./media/reports.png)
 
 Nastavení naplánované sestavy:
  
@@ -45,13 +52,13 @@ Nastavení naplánované sestavy:
 
    ![Plánování sestav](./media/ata-sched-reports.png)
 
-2. Klikněte na **Schedule** (Plán) vedle možnosti **Summary** (Souhrn) nebo **Modification to sensitive groups** (Úpravy důvěrných skupin), nastavte četnost a e-mailovou adresu pro doručení sestav a klikněte na znaménko plus vedle e-mailových adres, které chcete přidat. Potom klikněte na **Save** (Uložit).
+2. Klikněte na tlačítko **plán** vedle vašeho typu vybranou sestavu, nastavit četnost a e-mailovou adresu pro doručení sestavy, a klikněte na znaménko plus vedle e-mailové adresy je přidat, a klikněte na **Uložit**.
 
    ![Naplánování četnosti sestav a e-mailů](./media/sched-report1.png)
 
 
 > [!NOTE]
-> Naplánované sestavy jsou doručovány e-mailem a je možné je posílat, jenom pokud jste už nakonfigurovali e-mailový server v části **Configuration** (Konfigurace). V části Notifications and Reports (Oznámení a sestavy) pak vyberte **Mail server** (Poštovní server).
+> Naplánované sestavy jsou doručovány prostřednictvím e-mailu a může odeslat pouze pokud jste již nakonfigurovali e-mailový server v části **konfigurace** a pak v části **oznámení a sestavy**, vyberte **e-mailu Server**.
 
 
 ## <a name="see-also"></a>Viz také
