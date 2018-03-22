@@ -2,6 +2,8 @@
 ## [Co je Microsoft Advanced Threat Analytics?](what-is-ata.md)
 ## [Jaké hrozby ATA detekuje?](ata-threats.md)
 ## Novinky ATA
+### [Novinky ATA verze 1.9](whats-new-version-1.9.md)
+#### [Aktualizace na ATA 1.9 – průvodce migrací](ata-update-1.9-migration-guide.md)
 ### [Novinky ATA verze 1.8](whats-new-version-1.8.md)
 #### [Aktualizace na ATA 1.8 – průvodce migrací](ata-update-1.8-migration-guide.md)
 ### [Novinky ATA verze 1.7](whats-new-version-1.7.md)
@@ -26,6 +28,7 @@
 ## [6 Shromažďování událostí](install-ata-step6.md)
 ## [7 Integrace sady VPN](vpn-integration-install-step.md)
 ## [8 Vyloučení a honeytoken](install-ata-step7.md)
+## [9 Konfigurace SAM-R](install-ata-step9-samr.md)
 ## [Bezobslužná instalace](ata-silent-installation.md)
 ## ATA Gateway – další kroky
 ### [1. Konfigurace zrcadlení portů](configure-port-mirroring.md)
@@ -43,8 +46,11 @@
 ## [Správa telemetrie ATA](manage-telemetry-settings.md)
 ## [Nastavení oznámení ATA](setting-ata-alerts.md)
 ## [Nastavení e-mailového serveru a serveru Syslog](setting-syslog-email-server-settings.md)
+## [Označování citlivých účtů](tag-sensitive-accounts.md)
 ## [Práce s podezřelými aktivitami](working-with-suspicious-activities.md)
 ## [Práce s konzolou ATA](working-with-ata-console.md)
+### [Profily entit](entity-profiles.md)
+##[Zabránění laterálním průnikovým trasám](use-case-lateral-movement-path.md)
 ## ATA referenční informace
 ### [Referenční informace k protokolům pro SIEM](cef-format-sa.md)
 ### [Reference ID události](event-id-reference.md)
