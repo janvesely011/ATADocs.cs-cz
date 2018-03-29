@@ -1,23 +1,23 @@
 ---
 title: Architektura Azure Advanced Threat Protection | Microsoft Docs
 description: Popisuje architekturu z Azure Advanced Threat Analytics (ATP)
-keywords: 
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/11/2018
+ms.date: 3/27/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: 90f68f2c-d421-4339-8e49-1888b84416e6
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 640974bbeb0ff147b21da24d6ad6df2f54e9ab4d
-ms.sourcegitcommit: 912e453753156902618ae6ebb8489c2320c06fc6
+ms.openlocfilehash: 57f4eb56eaa0547d18421b17fb5804840e4997e3
+ms.sourcegitcommit: 158bf048d549342f2d4689f98ab11f397d9525a2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/28/2018
 ---
 *Platí pro: Azure Advanced Threat Protection*
 
@@ -74,7 +74,7 @@ Nastavení pracovního prostoru hlavní jako **primární**. Pouze jednoho praco
 
 > [!NOTE]
 > Azure ATP aktuálně podporuje vytvoření dvou pracovních prostorů. Doporučuje se vytvořit primární pracovní prostor pro produkční prostředí a další pracovní prostor jako pracovní prostředí.
-> Po odstranění pracovního prostoru můžete kontaktovat podporu, aby jej znovu aktivovat. Můžete mít mazimum tři odstraněné pracovních prostorů. Chcete-li zvýšit počet uložené, odstraněné pracovní prostory, kontaktujte podporu Azure ATP.
+> Po odstranění pracovního prostoru můžete kontaktovat podporu, aby jej znovu aktivovat. Můžete maximálně tři odstraněné pracovních prostorů. Chcete-li zvýšit počet uložené, odstraněné pracovní prostory, kontaktujte podporu Azure ATP.
 
 
 ### <a name="azure-atp-workspace-portal"></a>Portál Azure prostoru ATP
@@ -122,7 +122,7 @@ Při rozhodování o tom, kolik pracovních prostorů Azure ATP nasadit ve vaš�
 
 -   Monitorování několika řadičů domény z jedné samostatné senzoru Azure ATP nebo monitorování jeden řadič domény pro senzor Azure ATP.
 
-Azure ATP podporuje až 100 senzorů. Pokud chcete nainstalovat více, kontaktujte podporu Azure ATP.
+Ve výchozím nastavení podporuje až 100 senzorů Azure ATP. Pokud chcete nainstalovat více, kontaktujte podporu Azure ATP.
 
 Senzor samostatné Azure ATP přijímá síťový provoz a události systému Windows ze sítě a zpracovává je v následujících hlavních komponentách:
 

@@ -1,23 +1,23 @@
 ---
-title: "Požadavky Azure Advanced Threat Protection | Microsoft Docs"
-description: "Popisuje požadavky pro úspěšné nasazení Azure ATP ve vašem prostředí"
-keywords: 
+title: Požadavky Azure Advanced Threat Protection | Microsoft Docs
+description: Popisuje požadavky pro úspěšné nasazení Azure ATP ve vašem prostředí
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/25/2018
+ms.date: 3/28/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 3cb4eb8a914f1fd4be0c1ddb26f9be3964c529f7
-ms.sourcegitcommit: 26d833f7d9502db73876ced9879789db395224f7
+ms.openlocfilehash: 3c8e0b239c335981b2030021d1d4e319b2810fda
+ms.sourcegitcommit: 7c9fe4eb781bec71129310a6e0c5e76b022a0213
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/28/2018
 ---
 *Platí pro: Azure Advanced Threat Protection*
 
@@ -131,11 +131,13 @@ Následující tabulka uvádí minimální porty, které vyžaduje samostatné s
 
 |Protokol|Přenos|Port|Směr|Direction|
 |------------|-------------|--------|-----------|-------------|
+|**Porty Internetu**|||||
+|SSL (*.atp.azure.com)|TCP|443|Cloudovou službu Azure ATP|Odchozí|
+|**Interní porty**|||||
 |LDAP|TCP a UDP|389|Řadiče domény|Odchozí|
 |Zabezpečený LDAP (LDAPS)|TCP|636|Řadiče domény|Odchozí|
 |LDAP pro globální katalog|TCP|3268|Řadiče domény|Odchozí|
 |LDAPS pro globální katalog|TCP|3269|Řadiče domény|Odchozí|
-|SSL (*.atp.azure.com)|TCP|443|Cloudovou službu Azure ATP|Odchozí|
 |Kerberos|TCP a UDP|88|Řadiče domény|Odchozí|
 |Netlogon (SMB, CIFS, SAM-R)|TCP a UDP|445|Řadiče domény|Odchozí|
 |Čas Windows|UDP|123|Řadiče domény|Odchozí|
@@ -195,7 +197,9 @@ Následující tabulka uvádí minimální porty, které vyžaduje senzoru Azure
 
 |Protokol|Přenos|Port|Směr|Direction|
 |------------|-------------|--------|-----------|-------------|
+|**Porty Internetu**|||||
 |SSL (*.atp.azure.com)|TCP|443|Cloudovou službu Azure ATP|Odchozí|
+|**Interní porty**|||||
 |DNS|TCP a UDP|53|Servery DNS|Odchozí|
 |NTLM přes RPC|TCP|135|Všechna zařízení v síti|Odchozí|
 |Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|Řadiče domény|Odchozí|

@@ -1,23 +1,23 @@
 ---
-title: "Práce s Azure ATP sestavy | Microsoft Docs"
-description: "Popisuje, jak můžete generovat sestavy v Azure ATP k monitorování vaší sítě."
-keywords: 
+title: Práce s Azure ATP sestavy | Microsoft Docs
+description: Popisuje, jak můžete generovat sestavy v Azure ATP k monitorování vaší sítě.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 2/27/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: 2c2d6b1a-fc8c-4ff7-b07d-64ce6159f84d
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 2ebc0d9bb860bd93f14c4c511b034c740b59dffb
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 8d9c7f9208ce76e6c2ca915729b9c64f769ae7bd
+ms.sourcegitcommit: 158bf048d549342f2d4689f98ab11f397d9525a2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 *Platí pro: Azure Advanced Threat Protection*
 
@@ -25,6 +25,7 @@ ms.lasthandoff: 02/21/2018
 # <a name="azure-atp-reports"></a>Azure ATP sestavy
 
 Části sestavy Azure ATP v prostoru portálu můžete generovat sestavy, které poskytují informace o stavu systému, stavu systému a sestavy podezřelých aktivit zjistil ve vašem prostředí.
+
 
 Pokud chcete získat přístup na stránku sestav, klikněte na ikonu sestav na řádku nabídek: ![ikona sestav](./media/atp-report-icon.png).
 Dostupné sestavy: 
@@ -51,6 +52,9 @@ Nastavení naplánované sestavy:
 1. V **sestavy** klikněte na tlačítko **nastavit plánované sestavy**, nebo na stránce Konfigurace portálu prostoru Azure ATP v rámci oznámení a sestavy, klikněte na tlačítko **naplánované sestavy**.
 
    ![Plánování sestav](./media/atp-sched-reports.png)
+ 
+ > [!NOTE]
+ > Denní zprávy jsou navrženy pro odeslání krátce po půlnoci času UTC.
 
 2. Klikněte na tlačítko **plán** vedle vašeho typu vybranou sestavu, nastavit četnost a e-mailovou adresu pro doručení sestavy, a klikněte na znaménko plus vedle e-mailové adresy je přidat, a klikněte na **Uložit**.
 
@@ -58,7 +62,7 @@ Nastavení naplánované sestavy:
 
 
 ## <a name="see-also"></a>Viz také
-- [Požadavky Azure ATP](atp-prerequisites.md)
+- [Požadavky služby Azure ATP](atp-prerequisites.md)
 - [Plánování kapacity v Azure ATP](atp-capacity-planning.md)
 - [Konfigurace shromažďování událostí](configure-event-collection.md)
 - [Konfigurace předávání událostí systému Windows](configure-event-forwarding.md#configuring-windows-event-forwarding)
