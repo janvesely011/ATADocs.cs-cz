@@ -1,23 +1,23 @@
 ---
-title: "Práce s profily entit v konzole Advanced Threat Analytics | Microsoft Docs"
-description: "Popisuje, jak prozkoumat entity na obrazovce uživatelské profily v konzole ATA"
-keywords: 
+title: Práce s profily entit v konzole Advanced Threat Analytics | Microsoft Docs
+description: Popisuje, jak prozkoumat entity na obrazovce uživatelské profily v konzole ATA
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/21/2018
+ms.date: 3/25/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: 581a3257-32dc-453f-b84e-b9f99186f5d3
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: f9e19a1d033238f506fc0523bf50af6e204ba0cf
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: f2fd6f28eb6bf11aa3705f5320fcdae01d02f6d0
+ms.sourcegitcommit: 158bf048d549342f2d4689f98ab11f397d9525a2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 03/28/2018
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
@@ -46,6 +46,8 @@ V horní části můžete zobrazit souhrn dlaždice, které získáte rychlý p�
 - Tom, kolik prostředků uživatele přístup
 - Z umístění, které uživatel přihlášen do sítě VPN
 
+  ![entity nabídky](media/entity-menu.png)
+
 Pro počítače se zobrazí:
 - Kolik otevřete podezřelé aktivity, které jsou pro počítač
 - Počet uživatelů, kteří se protokolují do počítače
@@ -53,7 +55,7 @@ Pro počítače se zobrazí:
 - Kolik umístění sítě VPN byl získat přístup z počítače
 - Seznam IP adres počítače, které se používá.
 
-![entity nabídky](media/entity-menu.png)
+  ![počítač nabídky entity](media/entity-computer.png)
 
 Pomocí **filtrovat podle** tlačítko výše časové ose aktivity můžete filtrovat aktivity podle typu aktivity. Můžete také filtrovat na konkrétní (aktivní) typ aktivity. To je velmi užitečné pro šetření, když chcete pochopit základy toho, co je to entity v síti. Můžete také přejít na určité datum a aktivity můžete exportovat jako filtruje tak, aby aplikace Excel. Exportovaný soubor obsahuje na stránce pro změny directory services (věcí, které změnily ve službě Active Directory pro účet) a samostatné stránce pro aktivity. 
 

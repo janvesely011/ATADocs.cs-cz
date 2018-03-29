@@ -1,23 +1,23 @@
 ---
-title: "Advanced Threat Analytics aktualizace na Průvodce migrací 1,9 | Microsoft Docs"
+title: Advanced Threat Analytics aktualizace na Průvodce migrací 1,9 | Microsoft Docs
 description: Postupy aktualizace ATA na verzi 1.9
-keywords: 
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 03/21/2018
+ms.date: 03/25/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: 2946310a-8e4e-48fc-9450-fc9647efeb22
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 99865293dd5aa6648516fbebbf61977176b1de36
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: 0bd4bca536facb9ad4b7fea627f2ef512949728e
+ms.sourcegitcommit: 158bf048d549342f2d4689f98ab11f397d9525a2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="updating-ata-to-version-19"></a>Aktualizace ATA na verzi 1.9
 
@@ -31,7 +31,7 @@ Pokud již máte ATA verze 1.8 nasazen, tento postup vás provede kroky potřebn
 
 Postupujte podle těchto kroků provedete aktualizaci ATA na verzi 1.9:
 
-1.  [Stáhnout aktualizovanou verzi ATA 1.9 z webu Stažení softwaru](https://www.microsoft.com/download/details.aspx?id=55536) nebo na plnou verzi z [Eval center](http://www.microsoft.com/evalcenter/evaluate-microsoft-advanced-threat-analytics).<br>
+1.  [Stáhnout aktualizovanou verzi ATA 1.9 z webu Stažení softwaru](https://www.microsoft.com/download/details.aspx?id=56725) nebo na plnou verzi z [Eval center](http://www.microsoft.com/evalcenter/evaluate-microsoft-advanced-threat-analytics).<br>
 Ve verzi migrace soubor slouží pouze pro aktualizaci z ATA 1.8. Ve verzi z centra vyhodnocení se stejný instalační soubor (Microsoft ATA Center Setup.exe) používá jak k instalaci a novému nasazení ATA, tak k upgradu existujících nasazení.
 
 2.  Aktualizace ATA Center

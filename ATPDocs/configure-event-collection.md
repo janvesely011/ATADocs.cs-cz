@@ -1,23 +1,23 @@
 ---
 title: Nainstalovat Azure Advanced Threat Protection | Microsoft Docs
-description: "V tomto kroku instalace ATP nakonfigurujete datové zdroje."
-keywords: 
+description: V tomto kroku instalace ATP nakonfigurujete datové zdroje.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2017
+ms.date: 3/28/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: 88692d1a-45a3-4d54-a549-4b5bba6c037b
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 060ebd048fddacfb276ae32e4e589d7c8b70cbb6
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 2c2a8e6d70d937c559c110a18feec4afc75271e9
+ms.sourcegitcommit: 45d0108d0cbf8fe7550d13486d3d9c06c1e58506
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 *Platí pro: Azure Advanced Threat Protection*
 
@@ -38,8 +38,10 @@ Kromě shromažďování a analýzy síťových přenosů do a z řadičů domé
 Pro Azure ATP moct využívat data ze serveru Syslog musíte provést následující kroky:
 
 -   Konfiguraci serverů senzor Azure ATP a naslouchání na akceptovat události, které jsou předávány ze serveru SIEM/Syslog.
-> [!NOTE]
-> Azure ATP naslouchá jenom na IPv4 a IPv6 není. 
+
+ > [!NOTE]
+ > Azure ATP naslouchá jenom na IPv4 a IPv6 není. 
+
 -   Nakonfigurujte server SIEM/Syslog aby předával určité události do Azure ATP senzoru.
 
 > [!IMPORTANT]
@@ -159,7 +161,7 @@ Kód chyby:         0x0
 -   Pořadí není pro dvojice klíč=hodnota důležité.
 
 ### <a name="qradar"></a>QRadar
-QRadar umožňuje shromažďování událostí prostřednictvím agenta. Pokud se data shromažďují pomocí agenta, formát času se shromažďuje bez údajů o milisekundách. Protože Azure ATP vyžaduje údaje o milisekundách, je nutné nastavit Qradaru bez agentů shromažďování událostí Windows. Další informace najdete v tématu [http://www-01.ibm.com/support/docview.wss?uid=swg21700170](http://www-01.ibm.com/support/docview.wss?uid=swg21700170 "QRadar: Agentless Windows Events Collection using the MSRPC Protocol") (QRadar: Shromažďování událostí Windows bez agenta pomocí protokolu MSRPC).
+QRadar umožňuje shromažďování událostí prostřednictvím agenta. Pokud se data shromažďují pomocí agenta, formát času se shromažďuje bez údajů o milisekundách. Protože Azure ATP vyžaduje údaje o milisekundách, je nutné nastavit Qradaru bez agentů shromažďování událostí Windows. Další informace najdete v tématu [ http://www-01.ibm.com/support/docview.wss?uid=swg21700170 ] (http://www-01.ibm.com/support/docview.wss?uid=swg21700170 "QRadar: Agentless kolekce událostí systému Windows pomocí protokolu MSRPC").
 
     <13>Feb 11 00:00:00 %IPADDRESS% AgentDevice=WindowsLog AgentLogFile=Security Source=Microsoft-Windows-Security-Auditing Computer=%FQDN% User= Domain= EventID=4776 EventIDCode=4776 EventType=8 EventCategory=14336 RecordNumber=1961417 TimeGenerated=1456144380009 TimeWritten=1456144380009 Message=The computer attempted to validate the credentials for an account. Authentication Package: MICROSOFT_AUTHENTICATION_PACKAGE_V1_0 Logon Account: Administrator Source Workstation: HOSTNAME Error Code: 0x0
 

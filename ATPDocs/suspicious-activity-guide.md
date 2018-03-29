@@ -1,23 +1,23 @@
 ---
-title: "Průvodce podezřelou aktivitu Azure ATP | Microsoft Docs"
+title: Průvodce podezřelou aktivitu Azure ATP | Microsoft Docs
 d|Description: This article provides a list of the suspicious activities Azure ATP can detect and steps for remediation.
-keywords: 
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 3/25/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ee8e45b6ef2da2d8866a1795bdab3987180acefe
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: ec9a2bc18262f88ada0a7a4ac56b5a4b2c104165
+ms.sourcegitcommit: 158bf048d549342f2d4689f98ab11f397d9525a2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 *Platí pro: Azure Advanced Threat Protection*
 
@@ -240,6 +240,21 @@ Ověřte následující oprávnění:
 Další informace najdete v tématu [oprávnění Grant Active Directory Domain Services pro profil synchronizace SharePoint Server 2013](https://technet.microsoft.com/library/hh296982.aspx).
 Můžete využít [AD seznamu ACL skener](https://blogs.technet.microsoft.com/pfesweplat/2013/05/13/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool/) nebo vytvořit skript prostředí Windows PowerShell k určení, kdo v doméně, má tato oprávnění.
 
+
+## <a name="password-exposed-in-cleartext-report"></a>Heslo, které jsou zveřejněné v sestavě ve formě prostého textu
+
+**Popis**
+
+Některé služby odeslat přihlašovací údaje účtu ve formátu prostého textu. Tomu může dojít i pro účty uživatelů. Útočníci monitorování síťového provozu můžete zachytit a pak znovu použít tyto přihlašovací údaje zlými úmysly. 
+
+**Šetření**
+
+Klikněte na stránce sestavy a stáhnout hesla vystavený v sestavě ve formě prostého textu. Najdete v tabulce aplikace Excel, které účty byly vystaveny.
+Obvykle je skript nebo starší verze aplikace na zdrojových počítačích, používající jednoduché vazby protokolu LDAP.
+
+**Nápravy**
+
+Ověřte konfiguraci na zdrojových počítačích a zajistěte, aby nepoužívaly jednoduchou vazbu protokolu LDAP. Místo použití jednoduché vazby LDAP můžete použít SAL LDAP nebo LDAPS.
 
 ## <a name="privilege-escalation-using-forged-authorization-data"></a>Pomocí zvýšení oprávnění forged data autorizace
 
