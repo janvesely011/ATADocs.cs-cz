@@ -1,23 +1,23 @@
 ---
-title: "Instalace Azure Advanced Threat Protection – krok 1 | Microsoft Docs"
-description: "Prvním krokem k instalaci Azure ATP zahrnuje vytvoření pracovního prostoru pro vaše nasazení Azure ATP."
-keywords: 
+title: Instalace Azure Advanced Threat Protection – krok 1 | Microsoft Docs
+description: Prvním krokem k instalaci Azure ATP zahrnuje vytvoření pracovního prostoru pro vaše nasazení Azure ATP.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/15/2018
+ms.date: 4/10/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: 15ee7d0b-9a0c-46b9-bc71-98d0b4619ed0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 833e0bdf61ce25a8c56d820ad04981cd44321ac2
-ms.sourcegitcommit: f9d07a6b1f2193f0d2906092e252eb1d7398b493
+ms.openlocfilehash: a4c2f03955eddb4615b347fa8a211501546e6f4a
+ms.sourcegitcommit: e0209c6db649a1ced8303bb1692596b9a19db60d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/16/2018
 ---
 *Platí pro: Azure Advanced Threat Protection*
 
@@ -32,7 +32,8 @@ Tento instalační postup uvádí pokyny k vytváření a správě pracovního p
 V Azure ATP máte možnost spravovat a sledovat více pracovní prostory. To je obzvláště užitečné, pokud chcete vytvořit pracovní prostor ukázku a testovací prostoru, ve kterém můžete POC Azure ATP před distribucí v celé organizaci. Také je potřeba pro podporu nasazení s více doménovými strukturami. Jednoho pracovního prostoru můžete monitorovat jenom několika domén z jedné doménové struktury. 
 
 > [!NOTE]
-> Může mít maximálně dvě active pracovních prostorů. Po odstranění pracovního prostoru můžete kontaktovat podporu, aby jej znovu aktivovat. Můžete mít mazimum tři odstraněné pracovních prostorů. Chcete-li zvýšit počet uložené, odstraněné pracovní prostory, kontaktujte podporu Azure ATP.
+> - Může mít maximálně dvě active pracovních prostorů. Po odstranění pracovního prostoru můžete kontaktovat podporu, aby jej znovu aktivovat. Můžete maximálně tři odstraněné pracovních prostorů. Chcete-li zvýšit počet uložené, odstraněné pracovní prostory, kontaktujte podporu Azure ATP.
+> - V současné době datových centrech Azure ATP nasazených v Evropa, Severní Ameriku a střední Amerika nebo karibské a Asii.
 
 ## <a name="step-1-enter-the-workspace-management-portal"></a>Krok 1: Přejít na portál pro správu pracovního prostoru
 

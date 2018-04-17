@@ -1,29 +1,29 @@
 ---
-title: "Principy Azure ATP výstrahy monitorování | Microsoft Docs"
-description: "Popisuje, jak můžete použít protokol Azure ATP k řešení potíží"
-keywords: 
+title: Principy Azure ATP výstrahy monitorování | Microsoft Docs
+description: Popisuje, jak můžete použít protokol Azure ATP k řešení potíží
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 4/15/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: d0551e91-3b21-47d5-ad9d-3362df6d47c0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: cdb440e92aef0f9d09d3aa9411d0ce65435469d1
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 34702edcde2b96ca16570af5803a03d4f0f66c6e
+ms.sourcegitcommit: e0209c6db649a1ced8303bb1692596b9a19db60d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/16/2018
 ---
 *Platí pro: Azure Advanced Threat Protection*
 
 # <a name="understanding-azure-atp-sensor-and-standalone-sensor-monitoring-alerts"></a>Princip senzor Azure ATP a senzor samostatné výstrahy monitorování
 
-Azure ATP Health Center umožňuje vědět, když dojde k problému s žádným z vaší worksapces Azure ATP zobrazením upozornění na monitorování. Tento článek popisuje všechna monitorovací upozornění jednotlivých komponent včetně příčiny a postupu vedoucího k vyřešení problému.
+Azure ATP Health Center umožňuje vědět, když dojde k problému s žádným z vašich pracovních prostorů Azure ATP zobrazením upozornění na monitorování. Tento článek popisuje všechna monitorovací upozornění jednotlivých komponent včetně příčiny a postupu vedoucího k vyřešení problému.
 
 ## <a name="read-only-user-password-to-expire-shortly"></a>Jen pro čtení uživatelské heslo vyprší za chvíli
 
@@ -100,7 +100,7 @@ Azure ATP Health Center umožňuje vědět, když dojde k problému s žádným 
 
 ## <a name="see-also"></a>Viz také
 
-- [Požadavky Azure ATP](atp-prerequisites.md)
+- [Požadavky služby Azure ATP](atp-prerequisites.md)
 - [Plánování kapacity v Azure ATP](atp-capacity-planning.md)
 - [Konfigurace shromažďování událostí](configure-event-collection.md)
 - [Konfigurace předávání událostí systému Windows](configure-event-forwarding.md#configuring-windows-event-forwarding)

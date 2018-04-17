@@ -13,16 +13,16 @@ ms.technology: ''
 ms.assetid: 90f68f2c-d421-4339-8e49-1888b84416e6
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 57f4eb56eaa0547d18421b17fb5804840e4997e3
-ms.sourcegitcommit: 158bf048d549342f2d4689f98ab11f397d9525a2
+ms.openlocfilehash: 435e5141c8abda338c1115004d1876ff5b7736a4
+ms.sourcegitcommit: e0209c6db649a1ced8303bb1692596b9a19db60d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 *Platí pro: Azure Advanced Threat Protection*
 
 
-# <a name="azure-atp-architecture"></a>Azure ATP Architecture
+# <a name="azure-atp-architecture"></a>Architektura Azure ATP
 Architektura Azure Advanced Threat Protection je znázorněna v tomto obrázku:
 
 ![Diagram topologie architektury služby Azure ATP](media/atp-architecture-topology.png)
@@ -106,7 +106,7 @@ Při rozhodování o tom, kolik pracovních prostorů Azure ATP nasadit ve vaš�
 
 ## <a name="azure-atp-sensor-and-azure-atp-standalone-sensor"></a>Azure senzor ATP a senzor samostatné Azure ATP
 
-**Azure ATP senzor** a **Azure ATP senzor** mají stejné základní funkce:
+**Azure ATP senzor** a **Azure ATP samostatné senzor** mají stejné základní funkce:
 
 -   Zachytávají a prošetřují síťový provoz na řadiči domény. Toto je provoz prostřednictvím zrcadlení portů pro samostatné senzorů Azure ATP a místní provoz řadiče domény v Azure ATP senzorů. 
 

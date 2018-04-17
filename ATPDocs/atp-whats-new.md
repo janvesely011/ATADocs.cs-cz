@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/25/2018
+ms.date: 4/15/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,16 +13,35 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0693bd3a25d6438874d422bedf8da05931a15d54
-ms.sourcegitcommit: 158bf048d549342f2d4689f98ab11f397d9525a2
+ms.openlocfilehash: bc81fd16c72c1b8c66c0c2f65100b3b1e04dba78
+ms.sourcegitcommit: e0209c6db649a1ced8303bb1692596b9a19db60d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 *Platí pro: Azure Advanced Threat Protection*
 
 
 # <a name="whats-new-in-azure-atp"></a>Co je nového v Azure ATP 
+
+
+
+## <a name="azure-atp-release-228"></a>Azure ATP verze 2.28
+
+Vydané 15 duben 2018
+ 
+-   Uživatelé, kteří jsou členy skupin rolí uživatelům ATP Azure a Azure ATP prohlížeče nyní mají oprávnění k zobrazení výstrahy monitorování.
+- Tato verze obsahuje opravy a vylepšení pro víc problémy. 
+
+
+## <a name="azure-atp-release-227"></a>Azure ATP verze 2,27
+
+Vydané 8. dubna 2018
+
+- Nyní máte možnost k poskytnutí zpětné vazby uživatele z horním navigačním panelu. Kliknutím na tlačítko emotikony v panelu nabídek umožňuje odesílat e-mailu týmu Azure Advanced Threat Protection s váš názor.
+
+- Tato verze obsahuje opravy a vylepšení pro víc problémy. 
+ 
 
 ## <a name="azure-atp-release-226"></a>Azure ATP verze 2.26
 
