@@ -1,57 +1,75 @@
 ---
-title: "Konfigurace proxy serveru nebo brány firewall tak, aby Azure ATP komunikace s senzoru | Microsoft Docs"
-description: "Popisuje, jak nastavit brány firewall nebo proxy server a povolit komunikaci mezi Azure ATP cloud service a Azure ATP senzorů"
-keywords: 
+title: Konfigurace proxy serveru nebo brány firewall tak, aby Azure ATP komunikace s senzoru | Microsoft Docs
+description: Popisuje, jak nastavit brány firewall nebo proxy server a povolit komunikaci mezi Azure ATP cloud service a Azure ATP senzorů
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/3/2018
+ms.date: 4/11/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: 9c173d28-a944-491a-92c1-9690eb06b151
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f077bbd9990affbb6c552c5ad8875fdfebbd70f2
-ms.sourcegitcommit: 84556e94a3efdf20ca1ebf89a481550d7f8f0f69
+ms.openlocfilehash: 1e5e0d0665dfcf5251954cd8b0916c7cf80a722c
+ms.sourcegitcommit: e0209c6db649a1ced8303bb1692596b9a19db60d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 *Platí pro: Azure Advanced Threat Protection*
 
 
 
-# <a name="configure-your-proxy-to-allow-communication-between-azure-atp-sensors-and-the-azure-atp-cloud-service"></a>Konfigurace proxy a povolit komunikaci mezi Azure ATP senzory a cloudové služby Azure ATP
+# <a name="configure-endpoint-proxy-and-internet-connectivity-settings-for-your-azure-atp-sensor"></a>Konfigurace koncového bodu proxy serveru a nastavení připojení k Internetu pro vaše senzor ATP Azure
 
-Pro řadiče domény ke komunikaci s cloudovou službou, je nutné otevřít: *. atp.azure.com portu 443 v bráně firewall nebo proxy serveru. Konfigurace musí být na úrovni počítače (= účet počítače) a ne na úrovni účtu uživatele. Jste mohli otestovat vaši konfiguraci pomocí následujících kroků:
+Každý senzor Azure Advanced Threat Protection (ATP) vyžaduje připojení k Internetu ke cloudové službě Azure ATP správně fungovala. V některých organizacích řadiče domény nejsou připojené přímo k Internetu, ale jsou připojené prostřednictvím připojení k webové proxy. Každý senzor Azure ATP vyžaduje, abyste používat conifguration proxy serveru Microsoft Windows Internet (WinINET) pro data snímačů sestavy a komunikovat se službou Azure ATP. Pokud používáte pro konfiguraci proxy serveru WinHTTP, stále potřebujete nakonfigurovat nastavení proxy serveru Cookies Internet systému Windows (WinINet) pro komunikaci mezi senzoru a cloudové služby Azure ATP.
+
+
+Při konfiguraci proxy serveru, budete muset vědět, že embedded Azure ATP senzor služba bude spuštěna v systému pomocí kontextu **LocalService** účet a Azure ATP senzor aktualizační službu běží v kontextu systému pomocí **LocalSystem** účtu. 
+
+> [!NOTE]
+> Pokud používáte transparentní server proxy nebo WPAD v topologii vaší sítě, není potřeba konfigurovat WinINET pro proxy.
+
+## <a name="configure-the-proxy"></a>Konfigurace proxy serveru 
+
+Nakonfigurujte proxy server ručně pomocí založenou na registru statické proxy, aby bylo možné senzor Azure ATP do sestavy diagnostických dat a komunikovat s cloudovou službou Azure ATP, když počítač nemá oprávnění k připojení k Internetu.
+
+> [!NOTE]
+> Změny registru bude použito pouze pro účely LocalService a účet LocalSystem.
+
+Statické proxy je lze změnit v nastavení registru. Localsystem a localservice musíte zkopírovat konfiguraci proxy serveru, který můžete použít v kontextu uživatele. Kopírování vaše nastavení proxy serveru kontext uživatele:
+
+1.   Ujistěte se, že před jejich úpravou klíče registru zálohovat.
+
+2. V registru, vyhledejte hodnotu `DefaultConnectionSetting` jako REG_BINARY v klíči registru `HKCU\Software\Microsoft\Windows\CurrentVersion\InternetSetting\Connections\DefaultConnectionSetting` a zkopírujte ho.
  
-1.  Potvrďte, že **aktuální uživatel** má přístup ke koncovému bodu procesoru pomocí Internet Exploreru, procházením následující adresu URL z řadiče domény: https://triprd1wcuse1sensorapi.eastus.cloudapp.azure.com (pro USA), měli byste obdržet chyby 503:
+2.  Pokud účet LocalSystem nemá nastavení správné proxy (nejsou nakonfigurovány nebo jsou liší od Current_User), pak zkopírujte nastavení z Current_User oprávnění LocalSystem proxy serveru. V klíči registru `HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\InternetSetting\Connections\DefaultConnectionSetting`.
 
- ![Služba není k dispozici](./media/service-unavailable.png)
- 
-2.  Pokud obdržíte chybu 503, zkontrolujte konfiguraci proxy serveru a zkuste to znovu.
+3.  Vložit hodnotu z Current_user `DefaultConnectionSetting` jako REG_BINARY.
 
-3.  Pokud konfiguraci proxy serveru funguje pro **CURRENT_USER** (to znamená, zobrazí tato chyba 503) potom zkontrolujte, zda jsou nastavení proxy serveru WinInet povolena pro **LOCAL_SYSTEM** účtu (používané aktualizační senzor služby) tak, že v příkazovém řádku se zvýšenými oprávněními spustíte následující příkaz:
- 
-    REG porovnat "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\Connections" "HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Connections" /v DefaultConnectionSettings
+4.  Pokud LocalService nemá nastavení proxy serveru správný, poté zkopírujte nastavení z Current_User k LocalService proxy serveru. V klíči registru `HKU\S-1-5-19\Software\Microsoft\Windows\CurrentVersion\InternetSetting\Connections\DefaultConnectionSetting`.
 
-Pokud se zobrazí chyba "Chyba: Nelze najít zadaný klíč registru nebo hodnotu." To znamená, že byl nastaven žádný proxy server **LOCAL_SYSTEM** úroveň
- 
- ![Chyba místní systém proxy](./media/proxy-local-system-error.png)
+5.  Vložit hodnotu z Current_User `DefaultConnectionSetting` jako REG_BINARY.
 
-Pokud je výsledek "výsledek porovnání: různé" to znamená, že je pro nastavit proxy server **LOCAL_SYSTEM** ale není to stejné jako **CURRENT_USER**:
- 
-  ![Porovnávaný výsledek proxy](./media/proxy-result-compared.png)
+> [!NOTE]
+> Tato akce ovlivní všechny aplikace, včetně služby systému Windows, které používají WinINET s LocalService LocalSytem kontextu.
 
-5.  Pokud **LOCAL_SYSTEM** nemá nastavení správné proxy (nakonfigurován nebo liší od **CURRENT_USER**), pak budete muset zkopírovat nastavení z proxy serveru **CURRENT_ Uživatel** k **LOCAL_SYSTEM**. Ujistěte se, že jste před zahájením úprav zálohovat tento klíč registru:
 
- Aktuální uživatelský klíč: HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\Connections\DefaultConnectionSettings "místní systém klíč: HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Connections\ DefaultConnectionSettings"
+## <a name="enable-access-to-azure-atp-service-urls-in-the-proxy-server"></a>Povolit přístup k adresám URL služby Azure ATP v proxy serveru
 
- 
-6.  Proveďte kroky 4 a 5 pro**Local_Service** účtu (je stejný jako **Local_System** ale měl by být S-1-5-19 místo S-1-5-18.
+Pokud server proxy nebo brány firewall blokuje veškerý provoz ve výchozím nastavení a povolení jenom konkrétní domény prostřednictvím nebo HTTPS kontrolu (kontrolu SSL) je povoleno, ujistěte se, že následující adresy URL jsou uvedené prázdné, aby umožňovala komunikaci se službou Windows Defender ATP v portu 443:
 
+|Umístění služby|. Záznam Atp.Azure.com DNS|
+|----|----|
+|NÁM |triprd1wcusw1sensorapi.ATP.Azure.com<br>triprd1wcuswb1sensorapi.ATP.Azure.com<br>triprd1wcuse1sensorapi.ATP.Azure.com|
+|Evropa|triprd1wceun1sensorapi.ATP.Azure.com<br>triprd1wceuw1sensorapi.ATP.Azure.com|
+|Asie|triprd1wcasse1sensorapi.ATP.Azure.com|
+
+> [!NOTE]
+> Při provádění kontroly protokolu SSL na síti Azure ATP (mezi senzoru a službou Azure ATP), musí podporovat kontrolu SSL vzájemné kontroly.
 
 
 ## <a name="see-also"></a>Viz také

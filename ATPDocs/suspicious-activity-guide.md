@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/25/2018
+ms.date: 4/15/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,11 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ec9a2bc18262f88ada0a7a4ac56b5a4b2c104165
-ms.sourcegitcommit: 158bf048d549342f2d4689f98ab11f397d9525a2
+ms.openlocfilehash: 6246849cf7e8566b27c969b73e9c96cb0e7b7978
+ms.sourcegitcommit: e0209c6db649a1ced8303bb1692596b9a19db60d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 *Platí pro: Azure Advanced Threat Protection*
 
@@ -100,14 +100,20 @@ Existují tři typy detekce:
 
 **Šetření**
 
-Nejprve zkontrolujte popis výstrahy, abyste zjistili, která výše tři typy detekce, že pracujete s.
+Nejprve zkontrolujte popis výstrahy, abyste zjistili, která výše tři typy detekce, že pracujete s. Zkoumání nejprve zkontrolujte popis výstrahu, kterou chcete zobrazit, který z výše uvedených tři typy detekce, že pracujete s. Další informace stáhněte si tabulky aplikace Excel.
 
-1.  Typu Skeleton Key – můžete zkontrolovat, pokud typu Skeleton Key ovlivnil řadičů domény pomocí [skeneru zapsána tým Azure ATP](https://gallery.technet.microsoft.com/Aorato-Skeleton-Key-24e46b73).
-    Pokud skeneru najde malware v 1 nebo více řadičů domény, je skutečně pozitivní.
+1.  Typu Skeleton Key – můžete zkontrolovat, pokud typu Skeleton Key ovlivnil řadičů domény pomocí [skeneru zapsána tým Azure ATP](https://gallery.technet.microsoft.com/Aorato-Skeleton-Key-24e46b73). Pokud skeneru najde malware v 1 nebo více řadičů domény, je skutečně pozitivní.
 
-2.  Zlatý lístek – existují případy, ve kterých je vlastní aplikaci, která je používána zřídka, ověřování pomocí nižší úroveň šifrování. Zkontrolujte, zda jsou na zdrojovém počítači všechny vlastní aplikace. Pokud ano, je pravděpodobně neškodné skutečně pozitivní a lze potlačit.
+2.  Zlatý lístek – v tabulce aplikace excel přejděte na kartu síťové aktivity. Zobrazí se, že pole relevantní nižší verze je **typ šifrování lístku žádosti**, a **typy šifrování podporované zdrojové počítače** obsahuje metody silnější šifrování.
 
-3.  Overpass-the-Hash – existují případy, ve kterých může být tato výstraha aktivuje, když uživatelé nakonfigurovaní s čipovými kartami jsou požadovány pro interaktivní přihlášení a toto nastavení je zakázané a poté povoleny. Zkontrolujte, pokud byly související se situací změny takto pro účty. Pokud ano, to je pravděpodobně neškodné skutečně pozitivní a lze potlačit.
+  1. Zkontrolujte zdrojový počítač a účet nebo pokud máte více zdrojových počítačů a účty zkontrolujte Pokud něco mají v běžné (například všechny marketing pracovníky použít konkrétní aplikaci, která může být příčinou výstrahu, kterou chcete aktivovat). Existují případy, ve kterých je vlastní aplikaci, která je používána zřídka, ověřování pomocí nižší úroveň šifrování. Zkontrolujte, zda jsou na zdrojovém počítači všechny vlastní aplikace. Pokud ano, je pravděpodobně neškodné skutečně pozitivní a lze potlačit.
+  
+  2. Kontrola prostředku přístup těchto lístků, pokud je jeden prostředek, který uživatelé všechny přistupují, ověřte ji, ujistěte se, že je platný prostředek, který se má přístup. Kromě toho ověřte, jestli cílový prostředek podporuje metody silné šifrování. Zkontrolovat to můžete ve službě Active Directory kontrolou atribut msDS-SupportedEncryptionTypes, účet služby prostředků.
+
+3.  Overpass-the-Hash – v tabulce aplikace excel přejděte na kartu síťové aktivity. Zobrazí se, že pole relevantní nižší verze je **šifrované typ šifrování časové razítko** a **typy šifrování podporované zdrojové počítače** obsahuje metody silnější šifrování.
+
+  1. Existují případy, ve kterých může aktivovat tuto výstrahu, jakmile se uživatel přihlásí pomocí čipové karty, pokud se nedávno změnila konfigurace čipové karty. Zkontrolujte, pokud byly související se situací změny takto pro účty. Pokud ano, to je pravděpodobně neškodné skutečně pozitivní a lze potlačit.
+  2. Kontrola prostředku přístup těchto lístků, pokud je jeden prostředek, který uživatelé všechny přistupují, ověřte ji, ujistěte se, že je platný prostředek, který se má přístup. Kromě toho ověřte, jestli cílový prostředek podporuje metody silné šifrování. Zkontrolovat to můžete ve službě Active Directory kontrolou atribut msDS-SupportedEncryptionTypes, účet služby prostředků.
 
 **Nápravy**
 
@@ -225,9 +231,10 @@ V této detekce výstrahy při inicializuje požadavek na replikaci z počítač
 
 **Šetření**
 
-1. Je počítač v otázku řadiče domény? Například nově propagovaných řadiče domény, který měl potíže s replikací. Pokud ano, **zavřete a vyloučení** podezřelou aktivitu.  
+1.  Je počítač v otázku řadiče domény? Například nově propagovaných řadiče domény, který měl potíže s replikací. Pokud ano, **Zavřít** podezřelou aktivitu. 
+2.  Na dotyčném počítači by měl být replikaci dat ze služby Active Directory? Například Azure AD Connect. Pokud ano, **zavřete a vyloučení** podezřelou aktivitu.
+3.  Klikněte na zdrojový počítač nebo účet, který chcete přejít na stránku s jeho profil. Zkontrolujte, co se stalo v době replikace, hledání neobvyklé aktivity, jako například: kdo byl přihlášen, které prostředky tam, kde získat přístup. Pokud jste povolili integrace Windows Defender ATP, klikněte na tlačítko oznámení Windows Defender ATP ![Oznámení "BADGE" Windows Defender ATP](./media/wd-badge.png) k hlubšímu prošetření na počítač. V systému Windows Defender ATP se zobrazí, které procesy a výstrahy došlo k chybě v době výstrahy. 
 
-2. Na dotyčném počítači by měl být replikaci dat ze služby Active Directory? Například Azure AD Connect. Pokud ano, **zavřete a vyloučení** podezřelou aktivitu.
 
 **Nápravy**
 
@@ -352,7 +359,7 @@ Protokol DNS obsahuje několik typů dotazů. Azure ATP zjistí AXFR (přenos) �
 
 2. Zdrojový počítač je spuštěný kontrolu zabezpečení? Pokud ano, **vyloučit entity** v ATP, buď přímo pomocí **zavřete a vyloučení** nebo prostřednictvím **vyloučení** stránky (v části **konfigurace** – dostupné pro admins Azure ATP.)
 
-3. Pokud odpověď na všechny předchozí otázky se předpokládá Ne, to se zlými úmysly.
+3. Pokud odpověď na všechny předchozí otázky je Ne, zachovat příčin zaměřené na zdrojovém počítači. Klikněte na zdrojový počítač přejít na stránku s jeho profil. Zkontrolujte, co došlo okolo doby požadavku, hledání neobvyklé aktivity, jako například: kdo byl přihlášen, které prostředky tam, kde získat přístup. Pokud jste povolili integrace Windows Defender ATP, klikněte na tlačítko oznámení Windows Defender ATP ![Oznámení "BADGE" Windows Defender ATP](./media/wd-badge.png) k hlubšímu prošetření na počítač. V systému Windows Defender ATP se zobrazí, které procesy a výstrahy došlo k chybě v době výstrahy. 
 
 **Nápravy**
 
@@ -386,7 +393,7 @@ V této detekce výstrahy při provádění výčet relací SMB vůči řadiči 
 
 Použití [Net Ustanou nástroj](https://gallery.technet.microsoft.com/Net-Cease-Blocking-Net-1e8dcb5b) k posílení zabezpečení vaše prostředí před tento útok.
 
-## <a name="remote-execution-attempt-detected"></a>Pokus o vzdálené spuštění zjistil
+## <a name="remote-execution-attempt"></a>Pokus o vzdálené spuštění
 
 **Popis**
 
@@ -402,7 +409,7 @@ Použití [Net Ustanou nástroj](https://gallery.technet.microsoft.com/Net-Cease
 
  - Pokud je odpověď na obě otázky *Ano*, pak **Zavřít** výstrahy.
 
-3. Pokud je odpověď na obě otázky *žádné*, a to by se měly zvažovat skutečně pozitivní.
+3. Pokud je odpověď na obě otázky Ne, pak to by se měly zvažovat skutečně pozitivní. Zkuste najít zdroj pokus kontrolou počítači a účtu profily. Klikněte na zdrojový počítač nebo účet, který chcete přejít na stránku s jeho profil. Zkontrolujte, co se stalo v době tyto pokusy hledání neobvyklé aktivity, jako například: kdo byl přihlášen, které prostředky tam, kde získat přístup. Pokud jste povolili Windows Defender ATPintegration, klikněte na tlačítko oznámení Windows Defender ATP ![Oznámení "BADGE" Windows Defender ATP](./media/wd-badge.png) k hlubšímu prošetření na počítač. V systému Windows Defender ATPyou můžete zobrazit výstrahy a procesy došlo k chybě v době výstrahy. 
 
 **Nápravy**
 
@@ -420,21 +427,25 @@ Toto zjišťování výstraha se spustí, když došlo k mnoha selhání ověřo
 
 **Šetření**
 
-1. Pokud existuje mnoho účtů související se situací, klikněte na tlačítko **stáhnout podrobnosti o** pro zobrazení seznamu v tabulce aplikace Excel.
+1.  Klikněte na tlačítko **stáhnout podrobnosti o** zobrazíte úplné informace v tabulce aplikace Excel. Můžete získat následující informace: 
+   -    Seznam attacked účtů
+   -    Seznam odhadované účtů, ve které pokusů o přihlášení, bylo dokončeno s úspěšné ověření
+   -    Pokud se pokusy o ověření se provádí pomocí protokolu NTLM, zobrazí se příslušné události aktivit 
+   -    Pokud pokusy o ověření se provádí pomocí protokolu Kerberos, zobrazí se příslušné síťové aktivity
 
-2. Klikněte na výstrahu, kterou chcete přejít na stránku s jeho podrobnosti. Kontrola Pokud pokusy o žádné přihlášení bylo dokončeno s úspěšné ověřování, ty by se zobrazí jako **uhádnout účty** na pravé straně infografice. Pokud ano, jsou některé z **uhádnout účty** běžně používaný ze zdrojového počítače? Pokud ano, **potlačit** podezřelou aktivitu.
+2.  Klikněte na zdrojový počítač přejít na stránku s jeho profil. Zkontrolujte, co se stalo v době tyto pokusy hledání neobvyklé aktivity, jako například: kdo byl přihlášen, které prostředky tam, kde získat přístup. Pokud jste povolili integrace Windows Defender ATP, klikněte na tlačítko oznámení Windows Defender ATP ![Oznámení "BADGE" Windows Defender ATP](./media/wd-badge.png) k hlubšímu prošetření na počítač. V systému Windows Defender ATP se zobrazí, které procesy a výstrahy došlo k chybě v době výstrahy. 
 
-3. Pokud neexistují žádné **uhádnout účty**, jsou některé z **napadení účty** běžně používaný ze zdrojového počítače? Pokud ano, **potlačit** podezřelou aktivitu.
+3.  Pokud se provedlo ověřování pomocí protokolu NTLM a zjistíte, že výstraha vyskytuje několikrát a není dostatek informací o serveru, který má zdrojový počítač se pokusili získat přístup k dispozici, měli byste povolit **NTLM auditování** na řadiče domény související se situací. To pokud chcete udělat, zapněte událostí 8004. Toto je událost ověřování NTLM, která obsahuje informace o zdrojovém počítači, uživatelský účet a **server** který zdrojového počítače se pokusili získat přístup. Po víte, které server odeslal ověření ověřování, které byste měli prozkoumat serveru kontrolou události, jako je 4624 pro lepší pochopení proces ověřování. 
 
 **Nápravy**
 
 [Komplexní a dlouhá hesla](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) poskytovat potřebné první úrovně zabezpečení před útoky hrubou silou.
 
-## <a name="suspicious-service-creation---preview-feature"></a>Vytvoření podezřelé služby – funkce ve verzi Preview!
+## <a name="suspicious-service-creation"></a>Vytvoření podezřelé služby
 
 **Popis**
 
-Podezřelé služby byl vytvořen na řadič domény ve vaší organizaci. Tato výstraha spoléhá na události 7045 za účelem zjištění tohoto podezřelých aktivit na koncové body. Událost 7045 předáte z koncových bodů ATP nakonfigurováním [předávání událostí systému Windows](configure-event-forwarding.md) nebo předávání do systému SIEM 7045 a [konfiguraci vašeho systému SIEM](configure-event-collection.md) jako zdroj dat, který předává události k ATP.
+Podezřelé služby byl vytvořen na řadič domény ve vaší organizaci. Tato výstraha spoléhá na události 7045 za účelem zjištění tohoto podezřelých aktivit na koncové body. 
 
 **Šetření**
 
@@ -488,7 +499,8 @@ Oprava všechny počítače, zejména použití aktualizací zabezpečení.
 3. WanaKiwi mohly dešifrovat data do nesprávných rukou některé ransom softwaru, ale pouze, pokud uživatel restartovat nebo vypnout počítač. Další informace najdete v tématu [pokřik Ransomware, který chcete](https://answers.microsoft.com/en-us/windows/forum/windows_10-security/wanna-cry-ransomware/5afdb045-8f36-4f55-a992-53398d21ed07?auth=1)
 
 
->! [POZNÁMKA] Chcete-li zakázat podezřelou aktivitu, kontaktujte podporu.
+> [!NOTE]
+> Chcete-li zakázat podezřelou aktivitu, kontaktujte podporu.
 
 
 ## <a name="see-also"></a>Viz také

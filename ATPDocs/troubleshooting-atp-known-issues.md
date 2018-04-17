@@ -1,28 +1,33 @@
 ---
-title: "Řešení potíží s Azure ATP známé problémy | Microsoft Docs"
-description: "Popisuje, jak můžete potíže v Azure ATP."
-keywords: 
+title: Řešení potíží s Azure ATP známé problémy | Microsoft Docs
+description: Popisuje, jak můžete potíže v Azure ATP.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/6/2018
+ms.date: 4/10/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: 23386e36-2756-4291-923f-fa8607b5518a
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 2895a38e2328fb7de4fe7f47d00c4e40ac854e74
-ms.sourcegitcommit: 84556e94a3efdf20ca1ebf89a481550d7f8f0f69
+ms.openlocfilehash: 2112e9fea1f316ff12d87b3a477b78bff4457a5f
+ms.sourcegitcommit: e0209c6db649a1ced8303bb1692596b9a19db60d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 *Platí pro: Azure Advanced Threat Protection*
 
 
 # <a name="troubleshooting-azure-atp-known-issues"></a>Řešení potíží s Azure ATP – známé problémy 
+
+
+## <a name="deployment-log-location"></a>Umístění protokolu nasazení
+ 
+Protokoly nasazení Azure ATP jsou umístěné v adresáři temp uživatele, který příslušný produkt nainstaloval. Ve výchozím umístění instalace, se nachází v: C:\Users\Administrator\AppData\Local\Temp (nebo v adresáři % temp %).
 
 ## <a name="azure-atp-sensor-nic-teaming-issue"></a>Azure ATP senzor seskupování problém síťový adaptér
 
@@ -30,14 +35,14 @@ Pokud se pokusíte nainstalovat senzoru ATP na počítači nakonfigurované s ad
 
 Pokud jste senzoru neinstalovali ještě:
 
-1.  Stáhněte si Npcap z [https://nmap.org/npcap/](https://nmap.org/npcap/).
+1.  Stáhněte si Npcap z [ https://nmap.org/npcap/ ](https://nmap.org/npcap/).
 2.  Odinstalujte WinPcap, pokud byl nainstalovaný.
 3.  Instalace Npcap pomocí následujících možností: loopback_support = ne & winpcap_mode = Ano
 4.  Nainstalujte balíček senzoru.
 
 Pokud jste již nainstalovali senzoru:
 
-1.  Stáhněte si Npcap z [https://nmap.org/npcap/](https://nmap.org/npcap/).
+1.  Stáhněte si Npcap z [ https://nmap.org/npcap/ ](https://nmap.org/npcap/).
 2.  Odinstalujte senzoru.
 3.  Odinstalujte WinPcap.
 4.  Instalace Npcap pomocí následujících možností: loopback_support = ne & winpcap_mode = Ano
