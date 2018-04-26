@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/28/2018
+ms.date: 4/22/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,11 @@ ms.technology: ''
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 3c8e0b239c335981b2030021d1d4e319b2810fda
-ms.sourcegitcommit: 7c9fe4eb781bec71129310a6e0c5e76b022a0213
+ms.openlocfilehash: 9a9998360a24fd7f4d4151d4572c7715be03d34d
+ms.sourcegitcommit: d2d2750bfb0198c8488d538f1773fda6eda5e6f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/23/2018
 ---
 *Platí pro: Azure Advanced Threat Protection*
 
@@ -88,7 +88,7 @@ Pro řadiče domény ke komunikaci s cloudovou službou, musíte otevřít port 
 Informace o používání virtuálních počítačů s senzoru samostatné Azure ATP najdete v tématu [konfigurace zrcadlení portů](configure-port-mirroring.md).
 
 > [!NOTE]
-> Vyžaduje se minimálně 5 GB volného místa, doporučuje se 10 GB. To zahrnuje prostor potřebný pro binární soubory Azure ATP, Azure ATP protokoly a výkonu protokoly.
+> Je vyžadován minimálně 5 GB místa na disku a doporučuje se 10 GB. To zahrnuje prostor potřebný pro binární soubory Azure ATP, Azure ATP protokoly a výkonu protokoly.
 
 ### <a name="server-specifications"></a>Specifikace serveru
 Pro zajištění optimálního výkonu nastavte **možnost napájení** snímače samostatné Azure ATP k **vysoký výkon**.<br>
@@ -107,9 +107,9 @@ Servery a řadiče domény, na kterých je nainstalovaný senzoru musí být ča
 ### <a name="network-adapters"></a>Síťové adaptéry
 Senzor samostatné Azure ATP vyžaduje minimálně jeden adaptér pro správu a minimálně jeden adaptér pro zachytávání:
 
--   **Adaptér pro správu** – používá pro komunikaci ve vaší podnikové síti. Tento adaptér by měl být nakonfigurován s následujícím nastavením:
+-   **Adaptér pro správu** – používá pro komunikaci ve vaší podnikové síti. Senzoru budou používat tento adaptér dotazovat řadiče domény je ochrana a překladu pro účty počítače. <br>Tento adaptér by měl být nakonfigurován s následujícím nastavením:
 
-    -   Statická IP adresa včetně výchozí senzor
+    -   Statická IP adresa včetně výchozí brány
 
     -   Upřednostňovaný a alternativní server DNS
 
@@ -164,11 +164,11 @@ Senzor Azure ATP podporuje instalaci na řadič domény se systémem Windows Ser
 
 Pro řadiče domény ke komunikaci s cloudovou službou, musíte otevřít port 443 v bran firewall a proxy servery k *. atp.azure.com.
 
-Během instalace rozhraní .net Framework 4.7 je nainstalován a může dojít k restartování řadiče domény.
+Během instalace rozhraní .net Framework 4.7 je nainstalován a může vyžadovat restartování řadiče domény, pokud se už čeká na restartování.
 
 
 > [!NOTE]
-> Vyžaduje se minimálně 5 GB volného místa, doporučuje se 10 GB. To zahrnuje prostor potřebný pro binární soubory Azure ATP, Azure ATP protokoly a výkonu protokoly.
+> Je vyžadován minimálně 5 GB místa na disku a doporučuje se 10 GB. To zahrnuje prostor potřebný pro binární soubory Azure ATP, Azure ATP protokoly a výkonu protokoly.
 
 ### <a name="server-specifications"></a>Specifikace serveru
 

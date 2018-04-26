@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 4/11/2018
+ms.date: 4/22/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,11 @@ ms.technology: ''
 ms.assetid: 9c173d28-a944-491a-92c1-9690eb06b151
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 1e5e0d0665dfcf5251954cd8b0916c7cf80a722c
-ms.sourcegitcommit: e0209c6db649a1ced8303bb1692596b9a19db60d
+ms.openlocfilehash: c52fa6d7cb42605f1809a40926e391bf39fe3eb2
+ms.sourcegitcommit: d2d2750bfb0198c8488d538f1773fda6eda5e6f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/23/2018
 ---
 *Platí pro: Azure Advanced Threat Protection*
 
@@ -60,7 +60,7 @@ Statické proxy je lze změnit v nastavení registru. Localsystem a localservice
 
 ## <a name="enable-access-to-azure-atp-service-urls-in-the-proxy-server"></a>Povolit přístup k adresám URL služby Azure ATP v proxy serveru
 
-Pokud server proxy nebo brány firewall blokuje veškerý provoz ve výchozím nastavení a povolení jenom konkrétní domény prostřednictvím nebo HTTPS kontrolu (kontrolu SSL) je povoleno, ujistěte se, že následující adresy URL jsou uvedené prázdné, aby umožňovala komunikaci se službou Windows Defender ATP v portu 443:
+Pokud server proxy nebo brány firewall blokuje veškerý provoz ve výchozím nastavení a povolení jenom konkrétní domény prostřednictvím nebo HTTPS kontrolu (kontrolu SSL) je povoleno, ujistěte se, že následující adresy URL jsou uvedené prázdné, aby umožňovala komunikaci se službou Azure ATP v portu 443:
 
 |Umístění služby|. Záznam Atp.Azure.com DNS|
 |----|----|

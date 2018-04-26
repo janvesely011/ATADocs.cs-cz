@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 4/15/2018
+ms.date: 4/22/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,11 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: bc81fd16c72c1b8c66c0c2f65100b3b1e04dba78
-ms.sourcegitcommit: e0209c6db649a1ced8303bb1692596b9a19db60d
+ms.openlocfilehash: edf9222f7ccaca33317120a7cdaacf04873a67a4
+ms.sourcegitcommit: d2d2750bfb0198c8488d538f1773fda6eda5e6f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/23/2018
 ---
 *Platí pro: Azure Advanced Threat Protection*
 
@@ -26,6 +26,13 @@ ms.lasthandoff: 04/16/2018
 
 
 
+## <a name="azure-atp-release-229"></a>Azure ATP verze 2.29
+
+Vydané 22 duben 2018
+ 
+- Tato verze obsahuje opravy a vylepšení pro víc problémy. 
+ 
+ 
 ## <a name="azure-atp-release-228"></a>Azure ATP verze 2.28
 
 Vydané 15 duben 2018
