@@ -1,23 +1,23 @@
 ---
-title: "Průvodce podezřelými aktivitami ATA | Dokumentace Microsoftu"
+title: Průvodce podezřelými aktivitami ATA | Dokumentace Microsoftu
 d|Description: This article provides a list of the suspicious activities ATA can detect and steps for remediation.
-keywords: 
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/21/2018
+ms.date: 4/29/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: 1fe5fd6f-1b79-4a25-8051-2f94ff6c71c1
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: d76c34b115bd38bdb1eb82fbff1c0857b0ad8dfa
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: a5e93ab47f454acc3157a9c6ee4053255be59f23
+ms.sourcegitcommit: 5c0f914b44bfb8e03485f12658bfa9a7cd3d8bbc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/30/2018
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
@@ -118,14 +118,14 @@ Existují tři typy detekce:
 
 **Šetření**
 
-Nejprve zkontrolujte popis výstrahy, abyste zjistili, která výše tři typy detekce, že pracujete s.
-
-1.  Typu Skeleton Key – můžete zkontrolovat, pokud typu Skeleton Key ovlivnil řadičů domény pomocí [skeneru zapsána tým ATA](https://gallery.technet.microsoft.com/Aorato-Skeleton-Key-24e46b73).
-    Pokud skeneru najde malware v 1 nebo více řadičů domény, je skutečně pozitivní.
-
-2.  Zlatý lístek – existují případy, ve kterých je vlastní aplikaci, která je používána zřídka, ověřování pomocí nižší úroveň šifrování. Zkontrolujte, zda jsou na zdrojovém počítači všechny vlastní aplikace. Pokud ano, je pravděpodobně neškodné skutečně pozitivní a lze potlačit.
-
-3.  Overpass-the-Hash – existují případy, ve kterých může být tato výstraha aktivuje, když uživatelé nakonfigurovaní s čipovými kartami jsou požadovány pro interaktivní přihlášení a toto nastavení je zakázané a poté povoleny. Zkontrolujte, pokud byly související se situací změny takto pro účty. Pokud ano, to je pravděpodobně neškodné skutečně pozitivní a lze potlačit.
+Nejprve zkontrolujte popis výstrahu, kterou chcete zobrazit, který z výše uvedených tři typy detekce, že pracujete s. Další informace stáhněte si tabulky aplikace Excel.
+1.  Typu Skeleton Key – můžete zkontrolovat, pokud typu Skeleton Key ovlivnil řadičů domény pomocí skeneru zapsána tým ATA. Pokud skeneru najde malware v 1 nebo více řadičů domény, je skutečně pozitivní.
+2.  Zlatý lístek – v tabulce aplikace Excel přejděte na **síťovou aktivitu** kartě. Zobrazí se, že pole relevantní nižší verze je **typ šifrování lístku žádosti**, a **typy šifrování podporované zdrojové počítače** obsahuje metody silnější šifrování.
+  a.    Zkontrolujte zdrojový počítač a účet nebo pokud máte více zdrojových počítačů a účty zkontrolujte Pokud něco mají v běžné (například všechny marketing pracovníky použít konkrétní aplikaci, která může být příčinou výstrahu, kterou chcete aktivovat). Existují případy, ve kterých je vlastní aplikaci, která je používána zřídka ověřování pomocí nižší úroveň šifrování. Zkontrolujte, zda jsou na zdrojovém počítači všechny vlastní aplikace. Pokud ano, je pravděpodobně neškodné skutečně pozitivní a můžete **potlačit** ho.
+  b.    Kontrola prostředku přístup těchto lístků, pokud je jeden prostředek, který uživatelé všechny přistupují, ověřte ji, ujistěte se, že je platný prostředek, který se má přístup. Kromě toho ověřte, jestli cílový prostředek podporuje metody silné šifrování. Zkontrolovat to můžete ve službě Active Directory atribut `msDS-SupportedEncryptionTypes`, účtu služby prostředků.
+3.  Overpass-the-Hash – v tabulce aplikace Excel přejděte na **síťovou aktivitu** kartě. Zobrazí se, že pole relevantní nižší verze je **šifrované typ šifrování časové razítko** a **typy šifrování podporované zdrojové počítače** obsahuje metody silnější šifrování.
+  a.    Existují případy, ve kterých může aktivovat tuto výstrahu, jakmile se uživatel přihlásí pomocí čipové karty, pokud se nedávno změnila konfigurace čipové karty. Zkontrolujte, pokud byly související se situací změny takto pro účty. Pokud ano, je pravděpodobně neškodné skutečně pozitivní a můžete **potlačit** ho.
+  b.    Kontrola prostředku přístup těchto lístků, pokud je jeden prostředek, který uživatelé všechny přistupují, ověřte ji, ujistěte se, že je platný prostředek, který se má přístup. Kromě toho ověřte, jestli cílový prostředek podporuje metody silné šifrování. Zkontrolovat to můžete ve službě Active Directory atribut `msDS-SupportedEncryptionTypes`, účtu služby prostředků.
 
 **Nápravy**
 
@@ -244,9 +244,10 @@ V této detekce výstrahy při inicializuje požadavek na replikaci z počítač
 
 **Šetření**
 
-1. Je počítač v otázku řadiče domény? Například nově propagovaných řadiče domény, který měl potíže s replikací. Pokud ano, **zavřete a vyloučení** podezřelou aktivitu.  
+1.  Je počítač v otázku řadiče domény? Například nově propagovaných řadiče domény, který měl potíže s replikací. Pokud ano, **Zavřít** podezřelou aktivitu. 
+2.  Na dotyčném počítači by měl být replikaci dat ze služby Active Directory? Například Azure AD Connect. Pokud ano, **zavřete a vyloučení** podezřelou aktivitu.
+3.  Klikněte na zdrojový počítač nebo účet, který chcete přejít na stránku s jeho profil. Zkontrolujte, co se stalo v době replikace, hledání neobvyklé aktivity, jako například: kdo byl přihlášen, které prostředky tam, kde získat přístup. 
 
-2. Na dotyčném počítači by měl být replikaci dat ze služby Active Directory? Například Azure AD Connect. Pokud ano, **zavřete a vyloučení** podezřelou aktivitu.
 
 **Nápravy**
 
@@ -369,11 +370,10 @@ Protokol DNS obsahuje několik typů dotazů. ATA detekuje AXFR (přenos) žádo
 
 **Šetření**
 
-1. Je zdrojový počítač (**pocházející z...** ) DNS server? Pokud ano, pak je to pravděpodobně falešně pozitivní. K ověření, klikněte na výstrahu zobrazíte stránku s jeho podrobnosti. V tabulce v části **dotazu**, zkontrolujte, které domény dotaz se poslal. Jsou tyto existující domény? Pokud ano, pak **Zavřít** podezřelé aktivity (je falešně pozitivní). Kromě toho zkontrolujte, zda je otevřený mezi komponenty ATA Gateway a zdrojový počítač, aby se zabránilo budoucí falešně pozitivních UDP port 53.
+1. Je zdrojový počítač (**pocházející z...** ) DNS server? Pokud ano, pak je to pravděpodobně falešně pozitivní. K ověření, klikněte na výstrahu zobrazíte stránku s jeho podrobnosti. V tabulce v části **dotazu**, zkontrolujte, které domény dotaz se poslal. Jsou tyto existující domény? Pokud ano, pak **Zavřít** podezřelé aktivity (je falešně pozitivní). Kromě toho zkontrolujte, zda je otevřený mezi ATA Gateway a zdrojový počítač, aby se zabránilo budoucí falešně pozitivních UDP port 53.
+2.  Zdrojový počítač je spuštěný kontrolu zabezpečení? Pokud ano, **vyloučit** entity v ATA, buď přímo pomocí **zavřete a vyloučení** nebo prostřednictvím **vyloučení** stránky (v části **konfigurace** – k dispozici pro správce ATA).
+3.  Pokud odpověď na všechny předchozí otázky je Ne, zachovat příčin zaměřené na zdrojovém počítači. Klikněte na zdrojový počítač přejít na stránku s jeho profil. Zkontrolujte, co došlo okolo doby požadavku, hledání neobvyklé aktivity, jako například: kdo byl přihlášen, které prostředky tam, kde získat přístup.
 
-2. Zdrojový počítač je spuštěný kontrolu zabezpečení? Pokud ano, **vyloučit entity** ATA, buď přímo pomocí **zavřete a vyloučení** nebo prostřednictvím **vyloučení** stránky (v části **konfigurace** – k dispozici pro správce ATA).
-
-3. Pokud odpověď na všechny výše uvedené je Ne, předpokládají, že to je škodlivý.
 
 **Nápravy**
 
@@ -411,19 +411,16 @@ Použití [Net Ustanou nástroj](https://gallery.technet.microsoft.com/Net-Cease
 
 **Popis**
 
-Útočníci, kteří ohrozit přihlašovací údaje správce, nebo použijte zneužití den nasazení můžete spustit vzdálené příkazy na vašem řadiči domény. Toho mohou využít k trvalému průniku do sítě, shromažďování informací, útokům DoS (Denial of Service) nebo z jakéhokoli jiného důvodu. ATA detekuje nástroje PSexec a rozhraní WMI pro vzdálená připojení.
+Útočníci, kteří ohrozit přihlašovací údaje správce, nebo použijte zneužití den nasazení můžete spustit vzdálené příkazy na vašem řadiči domény. Tímto lze pro získání trvalost, shromažďování informací, odepření služby (DOS) nebo z jiného důvodu. ATA detekuje nástroje PSexec a rozhraní WMI pro vzdálená připojení.
 
 **Šetření**
 
-1. To je běžné pro pracovních stanic pro správu a členové týmu IT a účty služby, které provádět úlohy správy řadičem domény. Pokud se jedná o tento případ a výstrahu získá aktualizovány od stejné správce nebo počítače provádění úkolů, pak **potlačit** výstrahy.
+1. To je běžné pro pracovních stanic pro správu také jako členové týmu IT a účty služby, které provádět úlohy správy řadičem domény. Pokud je to tento případ a výstrahu získá aktualizovat, protože je správce nebo počítač provádění úkolů, pak **potlačit** výstrahy.
+2.  Má v daném počítači povoleno k provedení této vzdálené spuštění na vašem řadiči domény?
+  - Je nejistá účtu povoleno k provedení této vzdálené spuštění na vašem řadiči domény?
+  - Pokud je odpověď na obě otázky pak Ano, **Zavřít** výstrahy.
+3.  Pokud je odpověď na obě otázky Ne, pak to by se měly zvažovat skutečně pozitivní. Zkuste najít zdroj pokus kontrolou počítači a účtu profily. Klikněte na zdrojový počítač nebo účet, který chcete přejít na stránku s jeho profil. Zkontrolujte, co se stalo v době tyto pokusy hledání neobvyklé aktivity, jako například: kdo byl přihlášen, které prostředky tam, kde získat přístup.
 
-2. Je **počítače** dotyčném oprávnění k provedení této vzdálené spuštění na vašem řadiči domény?
-
- - Je **účet** dotyčném oprávnění k provedení této vzdálené spuštění na vašem řadiči domény?
-
- - Pokud je odpověď na obě otázky *Ano*, pak **Zavřít** výstrahy.
-
-3. Pokud je odpověď na obě otázky *žádné*, a to by se měly zvažovat skutečně pozitivní.
 
 **Nápravy**
 
@@ -460,11 +457,14 @@ Toto zjišťování výstraha se spustí, když došlo k mnoha selhání ověřo
 
 **Šetření**
 
-1. Pokud existuje mnoho účtů související se situací, klikněte na tlačítko **stáhnout podrobnosti o** pro zobrazení seznamu v tabulce aplikace Excel.
+1.  Klikněte na tlačítko **stáhnout podrobnosti o** zobrazíte úplné informace v tabulce aplikace Excel. Můžete získat následující informace: 
+  - Seznam attacked účtů
+  - Seznam odhadované účtů, ve které pokusů o přihlášení, bylo dokončeno s úspěšné ověření
+  - Pokud se pokusy o ověření se provádí pomocí protokolu NTLM, zobrazí se příslušné události aktivit 
+  - Pokud pokusy o ověření se provádí pomocí protokolu Kerberos, zobrazí se příslušné síťové aktivity
+2.  Klikněte na zdrojový počítač přejít na stránku s jeho profil. Zkontrolujte, co se stalo v době tyto pokusy hledání neobvyklé aktivity, jako například: kdo byl přihlášen, které prostředky tam, kde získat přístup. 
+3.  Pokud se provedlo ověřování pomocí protokolu NTLM a zjistíte, že výstraha vyskytuje několikrát a není dostatek informací o serveru, který má zdrojový počítač se pokusili získat přístup k dispozici, měli byste povolit **NTLM auditování** na podílejí řadiče domény. To pokud chcete udělat, zapněte událostí 8004. Toto je událost ověřování NTLM, která obsahuje informace o zdrojovém počítači, uživatelský účet a **server** který zdrojového počítače se pokusili získat přístup. Po víte, které server odeslal ověření ověřování, které byste měli prozkoumat serveru kontrolou události, jako je 4624 pro lepší pochopení proces ověřování. 
 
-2. Klikněte na výstrahu, kterou chcete přejít na stránku s jeho podrobnosti. Kontrola Pokud pokusy o žádné přihlášení bylo dokončeno s úspěšné ověřování, ty by se zobrazí jako **uhádnout účty** na pravé straně infografice. Pokud ano, jsou některé z **uhádnout účty** běžně používaný ze zdrojového počítače? Pokud ano, **potlačit** podezřelou aktivitu.
-
-3. Pokud neexistují žádné **uhádnout účty**, jsou některé z **napadení účty** běžně používaný ze zdrojového počítače? Pokud ano, **potlačit** podezřelou aktivitu.
 
 **Nápravy**
 

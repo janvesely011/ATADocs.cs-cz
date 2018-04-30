@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 4/22/2018
+ms.date: 4/29/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,11 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: edf9222f7ccaca33317120a7cdaacf04873a67a4
-ms.sourcegitcommit: d2d2750bfb0198c8488d538f1773fda6eda5e6f9
+ms.openlocfilehash: de761df3badbd1ae1118c96d018a24dd22318328
+ms.sourcegitcommit: 5c0f914b44bfb8e03485f12658bfa9a7cd3d8bbc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2018
+ms.lasthandoff: 04/30/2018
 ---
 *Platí pro: Azure Advanced Threat Protection*
 
@@ -25,6 +25,15 @@ ms.lasthandoff: 04/23/2018
 # <a name="whats-new-in-azure-atp"></a>Co je nového v Azure ATP 
 
 
+
+## <a name="azure-atp-release-230"></a>Azure ATP verze 2.30
+
+Vydané 29. dubna 2018
+ 
+- Šifrování přechod na starší verzi podezřelých aktivit nyní zadat důkaz oddíl popisuje detekovaných službou Azure ATP příznaky, které způsobit, že předpokládat, že, k čemu aktivitu přechod na starší verzi šifrování. 
+-   Azure ATP teď používá Azure e-mailu Orchestrator pro všechny e-mailů odeslaný Azure ATP, včetně podezřelé aktivity, monitorování výstrah a sestav. Zobrazí se, že tyto e-mailová oznámení teď můžete pomocí konzistentní formát pro snadné použití a souborů aplikace Excel bude propojen v e-mailu ke stažení z konzoly.
+ 
+ 
 
 ## <a name="azure-atp-release-229"></a>Azure ATP verze 2.29
 

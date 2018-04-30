@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/27/2018
+ms.date: 4/29/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,11 @@ ms.technology: ''
 ms.assetid: 90f68f2c-d421-4339-8e49-1888b84416e6
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 435e5141c8abda338c1115004d1876ff5b7736a4
-ms.sourcegitcommit: e0209c6db649a1ced8303bb1692596b9a19db60d
+ms.openlocfilehash: 838c5ce470bdf78ec81aed5d6fa1cf2407abc6f9
+ms.sourcegitcommit: 5c0f914b44bfb8e03485f12658bfa9a7cd3d8bbc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/30/2018
 ---
 *Platí pro: Azure Advanced Threat Protection*
 
@@ -30,6 +30,8 @@ Architektura Azure Advanced Threat Protection je znázorněna v tomto obrázku:
 Azure ATP monitoruje síťového provozu řadiče domény s využitím zrcadlení portů na senzor samostatné služby Azure ATP pomocí fyzických nebo virtuálních přepínačů. Pokud nasadíte senzoru Azure ATP přímo na řadiče domény, eliminuje požadavek pro zrcadlení portů. Kromě toho Azure ATP můžete využívat události systému Windows (předávaných přímo z řadičů domény nebo serveru SIEM) a analyzovat data související s útoky a hrozbami. Azure ATP přijímá analyzovaný provoz z Azure ATP samostatné senzor a senzor Azure ATP. Pomocí profilace, deterministické detekce, strojového učení a behaviorálních algoritmů pak poznává vaši síť, umožňuje detekovat anomálie a upozorňuje vás na podezřelé aktivity.
 
 Tato část popisuje tok zaznamenávání událostí a síťových a prochází k podrobnému popisu funkce základních komponent ATP: senzor samostatné Azure ATP, Azure ATP senzor (což je stejné základní funkce jako samostatný senzoru Azure ATP), a cloudové služby Azure ATP. 
+
+Při instalaci přímo na řadiče domény, přistupuje senzoru požadované protokoly událostí přímo z řadiče domény. Po senzor nejsou analyzovány tyto protokoly a síťový provoz, Azure ATP odešle jenom tyto analyzované informace do služby Azure ATP (ne všechny protokoly).
 
 ## <a name="azure-atp-components"></a>Azure ATP součásti
 Azure ATP se skládá z následujících součástí:

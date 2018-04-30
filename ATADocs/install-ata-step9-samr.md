@@ -1,23 +1,23 @@
 ---
-title: "Konfigurace SAM-R, aby se povolilo rozpoznání laterálního pohybu cestu v Advanced Threat Analytics | Microsoft Docs"
-description: "Popisuje postup konfigurace SAM-R, aby se povolilo rozpoznání laterálního pohybu cestu v Advanced Threat Analytics (ATA)"
-keywords: 
+title: Konfigurace SAM-R, aby se povolilo rozpoznání laterálního pohybu cestu v Advanced Threat Analytics | Microsoft Docs
+description: Popisuje postup konfigurace SAM-R, aby se povolilo rozpoznání laterálního pohybu cestu v Advanced Threat Analytics (ATA)
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/21/2018
+ms.date: 4/25/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: 7597ed25-87f5-472c-a496-d5f205c9c391
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a49478698adea15637698f4c715cdd34a9a601c4
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: 6e32f3ce59b049d0ced68a1330eefca7315bf49d
+ms.sourcegitcommit: 5c0f914b44bfb8e03485f12658bfa9a7cd3d8bbc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/30/2018
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 03/22/2018
 
 [Laterální pohyb cesta](use-case-lateral-movement-path.md) detekce spoléhá na dotazy, které identifikují místní správci na konkrétní počítače. Tyto dotazy se provádí pomocí protokolu SAM-R, prostřednictvím účtu služby ATA vytvořené v [kroku 2. Připojení ke službě AD](install-ata-step2.md).
  
-Aby klienti systému Windows a servery, aby účet služby ATA k provedení této operace SAM-R, musí být provedeny úpravy zásad skupiny.
+K zajištění, že Windows klienty a servery povolit účet služby ATA k provedení této operace SAM-R změny vašeho **zásady skupiny** musí být provedeny, přidá účet služby ATA kromě nakonfigurované účty uvedené v **přístup k síti** zásad.
 
 1. Vyhledejte zásady:
 
