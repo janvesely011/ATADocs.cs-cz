@@ -6,6 +6,7 @@
 ## [Požadavky služby Azure ATP](atp-prerequisites.md)
 ## [Architektura služby Azure ATP](atp-architecture.md)
 ## [Plánování kapacity služby Azure ATP](atp-capacity-planning.md)
+### [Konfigurace proxy serveru v zájmu povolení komunikace](configure-proxy.md)
 # Nasazení
 ## [1 Vytvoření pracovního prostoru na portálu pro správu pracovních prostorů](install-atp-step1.md)
 ## [2 Připojení k AD](install-atp-step2.md)
@@ -21,7 +22,6 @@
 ### [Ověření zrcadlení portů](validate-port-mirroring.md)
 ### [Konfigurace shromažďování událostí](configure-event-collection.md)
 ### [Konfigurace předávání událostí Windows](configure-event-forwarding.md)
-### [Konfigurace proxy serveru v zájmu povolení komunikace](configure-proxy.md)
 # Použijte
 ## [Centrum stavu služby Azure ATP](atp-health-center.md)
 ## [Sestavy služby Azure ATP](reports.md)
@@ -44,3 +44,4 @@
 # Odstraňování potíží
 ## [Řešení známých problémů](troubleshooting-atp-known-issues.md)
 ## [Podpora a informace](atp-support.md)
+## [Plán připravenosti na Azure ATP](atp-resources.md)
