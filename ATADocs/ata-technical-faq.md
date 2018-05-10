@@ -1,23 +1,23 @@
 ---
-title: "Nejčastější dotazy k Advanced Threat Analytics | Dokumentace Microsoftu"
-description: "Seznam nejčastějších dotazů týkajících se ATA a související odpovědi"
-keywords: 
+title: Nejčastější dotazy k Advanced Threat Analytics | Dokumentace Microsoftu
+description: Seznam nejčastějších dotazů týkajících se ATA a související odpovědi
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/21/2018
+ms.date: 5/6/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: a7d378ec-68ed-4a7b-a0db-f5e439c3e852
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 5fe0e6f0d8c75c099aa6623cd0f5245c955d9ffa
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: f372b4b85c240079da157052e2c20c46801398be
+ms.sourcegitcommit: 39a1ddeb6c9dd0817f92870b711627350b7f6f03
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/08/2018
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
@@ -51,6 +51,10 @@ Verze upgradu informace najdete v tématu [ATA upgradu](upgrade-path.md).
 
 Upgrade matice verze ATA najdete v části [ATA upgradu](upgrade-path.md).
 
+
+## <a name="how-does-the-ata-center-update-its-latest-signatures"></a>Jak ATA Center aktualizovat své nejnovější podpisy?
+
+Tento mechanismus detekce ATA je lepší, pokud se nainstaluje se nová verze v ATA Center. Centru můžete upgradovat pomocí Microsoft Update (MU) nebo ručně stažením nové verze ze služby Stažení softwaru nebo svazek licence webu.
 
 ## <a name="how-do-i-verify-windows-event-forwarding"></a>Jak ověřím předávání událostí systému Windows?
 Do souboru můžete vložit tento kód a pak jej z příkazového řádku v adresáři: **\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin** můžete spustit následovně:

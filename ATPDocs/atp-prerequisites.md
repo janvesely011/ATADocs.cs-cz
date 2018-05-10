@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 4/22/2018
+ms.date: 5/8/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,11 @@ ms.technology: ''
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9a9998360a24fd7f4d4151d4572c7715be03d34d
-ms.sourcegitcommit: d2d2750bfb0198c8488d538f1773fda6eda5e6f9
+ms.openlocfilehash: ae859121fbe856c93b8568ef38bf0b4bdb77837a
+ms.sourcegitcommit: 8472f3f46fc90da7471cd1065cdb2f6a1d5a9f69
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2018
+ms.lasthandoff: 05/08/2018
 ---
 *Platí pro: Azure Advanced Threat Protection*
 
@@ -139,21 +139,21 @@ Následující tabulka uvádí minimální porty, které vyžaduje samostatné s
 |LDAP pro globální katalog|TCP|3268|Řadiče domény|Odchozí|
 |LDAPS pro globální katalog|TCP|3269|Řadiče domény|Odchozí|
 |Kerberos|TCP a UDP|88|Řadiče domény|Odchozí|
-|Netlogon (SMB, CIFS, SAM-R)|TCP a UDP|445|Řadiče domény|Odchozí|
+|Netlogon (SMB, CIFS, SAM-R)|TCP a UDP|445|Všechna zařízení v síti|Odchozí|
 |Čas Windows|UDP|123|Řadiče domény|Odchozí|
 |DNS|TCP a UDP|53|Servery DNS|Odchozí|
 |NTLM přes RPC|TCP|135|Všechna zařízení v síti|Odchozí|
 |NetBIOS|UDP|137|Všechna zařízení v síti|Odchozí|
 |Syslog (volitelné)|TCP/UDP|514, v závislosti na konfiguraci|Server SIEM|Příchozí|
 |RADIUS|UDDP|1813|RADIUS|Příchozí|
+|PROTOKOLU RDP|TCP|3389|Všechna zařízení v síti|Odchozí|
 
 > [!NOTE]
 > - Používáte účet uživatele adresářové služby, senzoru dotazuje koncových bodů ve vaší organizaci pro použití SAM-R (přihlášením k síti) k vytvoření místního správce [laterální pohyb cesta grafu](use-case-lateral-movement-path.md). Další informace najdete v tématu [konfigurace SAM-R požadovaná oprávnění](install-atp-step8-samr.md).
 > - Musí být otevřený příchozí na zařízení v síti ze senzorů samostatné Azure ATP následující porty:
 >   -   NTLM přes RPC (TCP Port 135) pro účely řešení
 >   -   Pro rozhraní NetBIOS (UDP port 137) pro účely řešení
->   -   SAM-R dotazy (TCP/UDP port 445) pro účely zjišťování
-
+>   -   Protokol RDP (TCP port 3389), pouze první paket *Client hello*, pro účely řešení<br> Všimněte si, že na všech portech neprobíhá žádné ověřování.
 
 ## <a name="azure-atp-sensor-requirements"></a>Požadavky pro Azure senzor ATP
 Tato část uvádí požadavky pro Azure ATP senzoru.
@@ -202,18 +202,18 @@ Následující tabulka uvádí minimální porty, které vyžaduje senzoru Azure
 |**Interní porty**|||||
 |DNS|TCP a UDP|53|Servery DNS|Odchozí|
 |NTLM přes RPC|TCP|135|Všechna zařízení v síti|Odchozí|
-|Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|Řadiče domény|Odchozí|
+|Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|Všechna zařízení v síti|Odchozí|
 |NetBIOS|UDP|137|Všechna zařízení v síti|Odchozí|
 |Syslog (volitelné)|TCP/UDP|514, v závislosti na konfiguraci|Server SIEM|Příchozí|
 |RADIUS|UDDP|1813|RADIUS|Příchozí|
+|Protokol TLS k portu RDP|TCP|3389|Všechna zařízení v síti|Odchozí|
 
 > [!NOTE]
-> - Používáte účet uživatele adresářové služby, senzoru dotazuje koncových bodů ve vaší organizaci pro použití SAM-R (přihlášením k síti) k vytvoření místního správce [laterální pohyb cesta grafu](use-case-lateral-movement-path.md).
-> - Musí být otevřený příchozí na zařízení v síti ze senzorů Azure ATP následující porty:
+> - Používáte účet uživatele adresářové služby, senzoru dotazuje koncových bodů ve vaší organizaci pro použití SAM-R (přihlášením k síti) k vytvoření místního správce [laterální pohyb cesta grafu](use-case-lateral-movement-path.md). Další informace najdete v tématu [konfigurace SAM-R požadovaná oprávnění](install-atp-step8-samr.md).
+> - Musí být otevřený příchozí na zařízení v síti ze senzorů samostatné Azure ATP následující porty:
 >   -   NTLM přes RPC (TCP Port 135) pro účely řešení
 >   -   Pro rozhraní NetBIOS (UDP port 137) pro účely řešení
->   -   SAM-R dotazy (TCP/UDP port 445) pro účely zjišťování
-
+>   -   Protokol RDP (TCP port 3389), pouze první paket *Client hello*, pro účely řešení<br> Všimněte si, že na všech portech neprobíhá žádné ověřování.
 
 
 

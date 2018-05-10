@@ -1,23 +1,23 @@
 ---
-title: "Požadavky Advanced Threat Analytics | Dokumentace Microsoftu"
-description: "Popisuje požadavky pro úspěšné nasazení ATA ve vašem prostředí."
-keywords: 
+title: Požadavky Advanced Threat Analytics | Dokumentace Microsoftu
+description: Popisuje požadavky pro úspěšné nasazení ATA ve vašem prostředí.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/21/2018
+ms.date: 5/6/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 419df4c4404bf26a85c1a955139d0dee6f50828e
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: 91ce961b832fd02ba343b3f55ae3570fe4b10207
+ms.sourcegitcommit: 39a1ddeb6c9dd0817f92870b711627350b7f6f03
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/08/2018
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
@@ -121,9 +121,7 @@ Následující tabulka uvádí minimální porty, které musí být otevřené, 
 |**LDAPS** (volitelné)|TCP|636|Řadiče domény|Odchozí|
 |**DNS**|TCP a UDP|53|Servery DNS|Odchozí|
 |**Kerberos** (volitelné při připojení k doméně)|TCP a UDP|88|Řadiče domény|Odchozí|
-|**Přihlašování k síti** (volitelné při připojení k doméně)|TCP a UDP|445|Řadiče domény|Odchozí|
 |**Systémový čas** (volitelné, pokud je připojený k doméně)|UDP|123|Řadiče domény|Odchozí|
-|**Netlogon (SMB, CIFS, SAM-R)**|TCP a UDP|445|Brány a zařízení|Příchozí a odchozí|
 
 > [!NOTE]
 > LDAP je potřeba otestovat pověření pro použití mezi komponenty ATA Gateway a řadiče domény. Test se provádí z ATA Center na řadič domény k testování platnosti tyto přihlašovací údaje, po kterých ATA Gateway využívá LDAP jako součást procesu jeho normální řešení.
@@ -212,7 +210,7 @@ Následující tabulka uvádí minimální porty, u kterých ATA Gateway vyžadu
 |LDAP pro globální katalog|TCP|3268|Řadiče domény|Odchozí|
 |LDAPS pro globální katalog|TCP|3269|Řadiče domény|Odchozí|
 |Kerberos|TCP a UDP|88|Řadiče domény|Odchozí|
-|Netlogon|TCP a UDP|445|Řadiče domény|Odchozí|
+|Netlogon (SMB, CIFS, SAM-R)|TCP a UDP|445|Všechna zařízení v síti|Odchozí|
 |Čas Windows|UDP|123|Řadiče domény|Odchozí|
 |DNS|TCP a UDP|53|Servery DNS|Odchozí|
 |NTLM přes RPC|TCP|135|Všechna zařízení v síti|Odchozí|
@@ -225,6 +223,10 @@ Následující tabulka uvádí minimální porty, u kterých ATA Gateway vyžadu
 >
 > -   NTLM přes RPC (port TCP 135)
 > -   NetBIOS (port UDP 137)
+> - Používáte účet uživatele adresářové služby, ATA Gateway dotazuje koncových bodů ve vaší organizaci pro použití SAM-R (přihlášením k síti) k vytvoření místního správce [laterální pohyb cesta grafu](use-case-lateral-movement-path.md). Další informace najdete v tématu [konfigurace SAM-R požadovaná oprávnění](install-ata-step9-samr.md).
+> - Musí být otevřený příchozí na zařízení v síti z ATA Gateway následující porty:
+>   -   NTLM přes RPC (TCP Port 135) pro účely řešení
+>   -   Pro rozhraní NetBIOS (UDP port 137) pro účely řešení
 
 ## <a name="ata-lightweight-gateway-requirements"></a>Požadavky pro ATA Lightweight Gateway
 V této části je uveden seznam požadavků pro ATA Lightweight Gateway.
@@ -280,12 +282,17 @@ Následující tabulka uvádí minimální porty, které ATA Lightweight Gateway
 |NetBIOS|UDP|137|Všechna zařízení v síti|Odchozí|
 |SSL|TCP|443|ATA Center|Odchozí|
 |Syslog (volitelné)|UDP|514|Server SIEM|Příchozí|
+|Netlogon (SMB, CIFS, SAM-R)|TCP a UDP|445|Všechna zařízení v síti|Odchozí|
 
 > [!NOTE]
 > V rámci procesu překladu, který provádí ATA Lightweight Gateway, musí být na zařízeních v síti následující porty otevřené pro příjem dat z ATA Lightweight Gateway.
 >
 > -   NTLM přes RPC
 > -   NetBIOS
+> - Používáte účet uživatele adresářové služby, ATA Lightweight Gateway dotazuje koncových bodů ve vaší organizaci pro použití SAM-R (přihlášením k síti) k vytvoření místního správce [laterální pohyb cesta grafu](use-case-lateral-movement-path.md). Další informace najdete v tématu [konfigurace SAM-R požadovaná oprávnění](install-ata-step9-samr.md).
+> - Musí být otevřený příchozí na zařízení v síti z ATA Gateway následující porty:
+>   -   NTLM přes RPC (TCP Port 135) pro účely řešení
+>   -   Pro rozhraní NetBIOS (UDP port 137) pro účely řešení
 
 ## <a name="ata-console"></a>Konzola ATA
 Přístup ke konzole ATA je prostřednictvím prohlížeče, podpora prohlížeče a nastavení:
