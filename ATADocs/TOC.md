@@ -14,6 +14,7 @@
 #### [Aktualizace na ATA 1.5 – průvodce migrací](ata-update-1.5-migration-guide.md)
 ### [Novinky ATA verze 1.4](whats-new-version-1.4.md)
 ## [Nejčastější dotazy](ata-technical-faq.md)
+## [Dodržování předpisů, vztahy důvěryhodnosti, zabezpečení dat a ochrana osobních údajů v rámci ATA](ata-privacy-compliance.md)
 # Plánování a navrhování
 ## [Architektura ATA](ata-architecture.md)
 ## [Plánování kapacity ATA](ata-capacity-planning.md)

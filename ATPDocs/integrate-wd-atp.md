@@ -1,23 +1,23 @@
 ---
-title: "Advanced Threat Protection integrace se službou Azure s Windows Defender ATP | Microsoft Docs"
-description: "Postup pro integraci Azure Advanced Threat Protection pro pokrytí detekce hrozeb úplné Windows Defender ATP"
-keywords: 
+title: Advanced Threat Protection integrace se službou Azure s Windows Defender ATP | Microsoft Docs
+description: Postup pro integraci Azure Advanced Threat Protection pro pokrytí detekce hrozeb úplné Windows Defender ATP
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 5/16/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: f6f3ed75-d6bb-4966-a9a7-5339c4f3ebac
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 3521e500548b04febbff37d3dfe9150cf6f2d35b
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 17ade33a55039eaf8abc98901cdab9ebeef850c5
+ms.sourcegitcommit: 714a01edc9006b38d1163d03852dafc2a5fddb5f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/16/2018
 ---
 *Platí pro: Azure Advanced Threat Protection*
 
@@ -96,8 +96,10 @@ Pokud kliknete na oznámení "BADGE", budete přesměrováni na portálu Windows
  ![Šedá Windows Defender ATP](./media/wd-grey.png)
 
 Na portálu Windows Defender ATP po kliknutí na koncový bod, můžete zobrazit výstrahy Azure ATP. Pokud kliknete na výstrahy pro tuto entitu v systému Windows Defender ATP, otevře se stránka profilu entity v Azure ATP. 
+ 
+ > ! [POZNÁMKA] V současné době Azure ATP integrace s Windows Defender ATP podporuje pouze uživatelé a počítače z místní AD. Uživatelé z Azure AD a virtuálních počítačů, které jsou spravovány v Azure se nezobrazí v rámci integrace 
 
- ![Windows Defender ATP výstrahy](./media/wd-atp-alerts.png)
+![Windows Defender ATP výstrahy](./media/wd-atp-alerts.png)
 
 
 ## <a name="see-also"></a>Viz také

@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 4/22/2018
+ms.date: 5/16/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,11 @@ ms.technology: ''
 ms.assetid: 9c173d28-a944-491a-92c1-9690eb06b151
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c52fa6d7cb42605f1809a40926e391bf39fe3eb2
-ms.sourcegitcommit: d2d2750bfb0198c8488d538f1773fda6eda5e6f9
+ms.openlocfilehash: 5a1fd5631a568419c600f35d44f09c9c61f17129
+ms.sourcegitcommit: 714a01edc9006b38d1163d03852dafc2a5fddb5f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2018
+ms.lasthandoff: 05/16/2018
 ---
 *Platí pro: Azure Advanced Threat Protection*
 
@@ -25,7 +25,7 @@ ms.lasthandoff: 04/23/2018
 
 # <a name="configure-endpoint-proxy-and-internet-connectivity-settings-for-your-azure-atp-sensor"></a>Konfigurace koncového bodu proxy serveru a nastavení připojení k Internetu pro vaše senzor ATP Azure
 
-Každý senzor Azure Advanced Threat Protection (ATP) vyžaduje připojení k Internetu ke cloudové službě Azure ATP správně fungovala. V některých organizacích řadiče domény nejsou připojené přímo k Internetu, ale jsou připojené prostřednictvím připojení k webové proxy. Každý senzor Azure ATP vyžaduje, abyste používat conifguration proxy serveru Microsoft Windows Internet (WinINET) pro data snímačů sestavy a komunikovat se službou Azure ATP. Pokud používáte pro konfiguraci proxy serveru WinHTTP, stále potřebujete nakonfigurovat nastavení proxy serveru Cookies Internet systému Windows (WinINet) pro komunikaci mezi senzoru a cloudové služby Azure ATP.
+Každý senzor Azure Advanced Threat Protection (ATP) vyžaduje připojení k Internetu ke cloudové službě Azure ATP správně fungovala. V některých organizacích řadiče domény nejsou připojené přímo k Internetu, ale jsou připojené prostřednictvím připojení k webové proxy. Každý senzor Azure ATP vyžaduje, abyste používat konfiguraci proxy serveru Microsoft Windows Internet (WinINET) pro data snímačů sestavy a komunikovat se službou Azure ATP. Pokud používáte pro konfiguraci proxy serveru WinHTTP, stále potřebujete nakonfigurovat nastavení proxy Internetu systému Windows (WinINet) prohlížeče pro komunikaci mezi senzoru a cloudové služby Azure ATP.
 
 
 Při konfiguraci proxy serveru, budete muset vědět, že embedded Azure ATP senzor služba bude spuštěna v systému pomocí kontextu **LocalService** účet a Azure ATP senzor aktualizační službu běží v kontextu systému pomocí **LocalSystem** účtu. 
@@ -68,6 +68,11 @@ Pokud server proxy nebo brány firewall blokuje veškerý provoz ve výchozím n
 |Evropa|triprd1wceun1sensorapi.ATP.Azure.com<br>triprd1wceuw1sensorapi.ATP.Azure.com|
 |Asie|triprd1wcasse1sensorapi.ATP.Azure.com|
 
+
+Kvůli posílení zabezpečení brány firewall nebo proxy server pravidla pro určitý pracovní prostor, že jste vytvořili, a vytvoření pravidla pro tyto záznamy DNS:
+- < název pracovního prostoru >. atp.azure.com – pro připojení konzoly
+- < název pracovního prostoru > sensorapi.atp.azure.com – senzor připojení k
+ 
 > [!NOTE]
 > Při provádění kontroly protokolu SSL na síti Azure ATP (mezi senzoru a službou Azure ATP), musí podporovat kontrolu SSL vzájemné kontroly.
 
