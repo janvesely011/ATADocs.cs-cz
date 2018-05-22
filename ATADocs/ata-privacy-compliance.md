@@ -1,11 +1,11 @@
 ---
-title: Advanced Threat Analytics dodržování předpisů, vztah důvěryhodnosti, zabezpečení dat a ochrany osobních údajů | Microsoft Docs
-description: Poskytuje seznam ATA prostředků, videa, Začínáme, nasazení a odkazy plán připravenosti.
+title: Advanced Threat Analytics osobní data zásad | Microsoft Docs
+description: Obsahuje odkazy na informace o tom, jak odstranit soukromé informace a osobní data z ATA.
 keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 5/16/2018
+ms.date: 5/21/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: advanced-threat-analytics
@@ -13,15 +13,15 @@ ms.technology: ''
 ms.assetid: 1b2d185c-62cd-45f0-b0dd-687b51317f32
 ms.reviewer: ophirp
 ms.suite: ems
-ms.openlocfilehash: dee55446c18ee9bc560045c94f9421840fc28fc2
-ms.sourcegitcommit: 714a01edc9006b38d1163d03852dafc2a5fddb5f
+ms.openlocfilehash: cf08f2d46eaa939f414d1e3793446384cd22100b
+ms.sourcegitcommit: 3539dd3f9ab7729e5326b904fc64985c808bc8ce
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/16/2018
+ms.lasthandoff: 05/21/2018
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
-# <a name="ata-compliance-trust-data-security-and-privacy"></a>Dodržování předpisů ATA, vztah důvěryhodnosti, zabezpečení dat a ochrany osobních údajů 
+# <a name="ata-data-security"></a>Zabezpečení dat ATA 
 
 Informace o vztahu důvěryhodnosti ATA a dodržování předpisů najdete v tématu [vztah důvěryhodnosti služby portálu](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted) a [Microsoft 365 Enterprise GDPR kompatibility lokality](https://docs.microsoft.com/microsoft-365/compliance/compliance-solutions-overview).
 
@@ -36,6 +36,10 @@ Z komponenty ATA Center použijte panelu Hledat zobrazíte identifikovatelné os
 Osobní data o uživatelích a entity v ATA je odvozený od uživatele AD je objekt ve vaší organizaci. Z toho důvodu se projeví jakékoli změny provedené v profilu uživatele ve službě AD v ATA. 
 
 ## <a name="deleting-personal-data"></a>Odstranění osobní data 
+
+> [!NOTE]
+> Pokud vás zajímá zobrazení nebo odstranění osobních údajů, přečtěte si pokyny společnosti Microsoft v [správce dodržování předpisů Microsoft](https://servicetrust.microsoft.com/ComplianceManager) a v [GDPR části webu Microsoft 365 Enterprise dodržování předpisů] (https://docs.microsoft.com/en-us/microsoft-365/compliance/gdpr]. Pokud hledáte obecné informace o GDPR, přečtěte si téma [GDPR části portálu služby důvěřovat](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
+
 
 I když se data v ATA se replikují a vždy aktualizovat ze služby Active Directory, když je odstraněn entity ve službě AD, data entity v ATA se udržuje pro účely zabezpečení šetření. 
 
@@ -69,16 +73,23 @@ Tento skript odeberete všechna data pro všechny entity aktivit a výstrahy zab
 
 ## <a name="exporting-personal-data"></a>Export osobní data 
 
+> [!NOTE]
+> Pokud vás zajímá zobrazení nebo odstranění osobních údajů, přečtěte si pokyny společnosti Microsoft v [správce dodržování předpisů Microsoft](https://servicetrust.microsoft.com/ComplianceManager) a v [GDPR části webu Microsoft 365 Enterprise dodržování předpisů] (https://docs.microsoft.com/en-us/microsoft-365/compliance/gdpr]. Pokud hledáte obecné informace o GDPR, přečtěte si téma [GDPR části portálu služby důvěřovat](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
+
+
 Vzhledem k tomu, že data související s entitami ATA je odvozena ze služby Active Directory, je pouze podmnožinu dat uložené v databázi ATA. Z tohoto důvodu je třeba exportovat data související s entity ze služby Active Directory. 
 
 ATA můžete exportovat do Excelu všechny informace týkající se zabezpečení, která by mohla obsahovat osobní data. 
 
  
-## <a name="opt-out-of-telemetry"></a>Výslovný nesouhlas s telemetrie 
+## <a name="opt-out-of-system-generated-logs"></a>Výslovný nesouhlas s protokoly generované systémem 
 
-ATA shromažďuje anonymních telemetrická o každé nasazení a odesílá tato data přes HTTPS k serverům Microsoftu. Tato data Microsoft používá k vylepšení budoucích verzích ATA. 
+> [!NOTE]
+> Pokud vás zajímá zobrazení nebo odstranění osobních údajů, přečtěte si pokyny společnosti Microsoft v [správce dodržování předpisů Microsoft](https://servicetrust.microsoft.com/ComplianceManager) a v [GDPR části webu Microsoft 365 Enterprise dodržování předpisů] (https://docs.microsoft.com/en-us/microsoft-365/compliance/gdpr]. Pokud hledáte obecné informace o GDPR, přečtěte si téma [GDPR části portálu služby důvěřovat](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
 
-Další informace najdete v tématu [Správa nastavení telemetrie](manage-telemetry-settings.md).
+ATA shromažďuje anonymizovaná generována protokoly o každé nasazení a odesílá tato data přes HTTPS k serverům Microsoftu. Tato data Microsoft používá k vylepšení budoucích verzích ATA. 
+
+Další informace najdete v tématu [správu generována protokolů](manage-telemetry-settings.md).
 
 Postup při zakázání shromažďování dat:
 

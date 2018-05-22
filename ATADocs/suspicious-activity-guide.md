@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 5/6/2018
+ms.date: 5/21/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: advanced-threat-analytics
@@ -13,11 +13,11 @@ ms.technology: ''
 ms.assetid: 1fe5fd6f-1b79-4a25-8051-2f94ff6c71c1
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: db63df945bf218f384c9f9dac6f111f5290aa138
-ms.sourcegitcommit: 39a1ddeb6c9dd0817f92870b711627350b7f6f03
+ms.openlocfilehash: b6c11292fd8e7436257e4616c65d76aad1aed8de
+ms.sourcegitcommit: c01f93bd9e41355d2f47f648e3fea7736e1218f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/21/2018
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
@@ -119,7 +119,7 @@ Existují tři typy detekce:
 **Šetření**
 
 Nejprve zkontrolujte popis výstrahu, kterou chcete zobrazit, který z výše uvedených tři typy detekce, že pracujete s. Další informace stáhněte si tabulky aplikace Excel.
-1.  Typu Skeleton Key – můžete zkontrolovat, pokud typu Skeleton Key ovlivnil řadičů domény pomocí skeneru zapsána tým ATA. Pokud skeneru najde malware v 1 nebo více řadičů domény, je skutečně pozitivní.
+1.  Typu Skeleton Key – můžete zkontrolovat, pokud typu Skeleton Key ovlivnil řadičů domény pomocí [skeneru zapsána tým ATA](https://gallery.technet.microsoft.com/Aorato-Skeleton-Key-24e46b73). Pokud skeneru najde malware v 1 nebo více řadičů domény, je skutečně pozitivní.
 2.  Zlatý lístek – v tabulce aplikace Excel přejděte na **síťovou aktivitu** kartě. Zobrazí se, že pole relevantní nižší verze je **typ šifrování lístku žádosti**, a **typy šifrování podporované zdrojové počítače** obsahuje metody silnější šifrování.
   a.    Zkontrolujte zdrojový počítač a účet nebo pokud máte více zdrojových počítačů a účty zkontrolujte Pokud něco mají v běžné (například všechny marketing pracovníky použít konkrétní aplikaci, která může být příčinou výstrahu, kterou chcete aktivovat). Existují případy, ve kterých je vlastní aplikaci, která je používána zřídka ověřování pomocí nižší úroveň šifrování. Zkontrolujte, zda jsou na zdrojovém počítači všechny vlastní aplikace. Pokud ano, je pravděpodobně neškodné skutečně pozitivní a můžete **potlačit** ho.
   b.    Kontrola prostředku přístup těchto lístků, pokud je jeden prostředek, který uživatelé všechny přistupují, ověřte ji, ujistěte se, že je platný prostředek, který se má přístup. Kromě toho ověřte, jestli cílový prostředek podporuje metody silné šifrování. Zkontrolovat to můžete ve službě Active Directory atribut `msDS-SupportedEncryptionTypes`, účtu služby prostředků.

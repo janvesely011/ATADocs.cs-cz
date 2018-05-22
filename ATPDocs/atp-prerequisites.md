@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 5/8/2018
+ms.date: 5/21/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,11 @@ ms.technology: ''
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ae859121fbe856c93b8568ef38bf0b4bdb77837a
-ms.sourcegitcommit: 8472f3f46fc90da7471cd1065cdb2f6a1d5a9f69
+ms.openlocfilehash: 1fc2b3656701ee5db54a4f918ab617a2ad487780
+ms.sourcegitcommit: 3539dd3f9ab7729e5326b904fc64985c808bc8ce
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/21/2018
 ---
 *Platí pro: Azure Advanced Threat Protection*
 
@@ -58,7 +58,7 @@ Tato část obsahuje informace, které byste měli získat a účty a síťové 
 
 -   Pokud spustíte Wireshark na samostatné senzor Azure ATP, musíte po je nutné zastavit zachycení Wireshark restartovat senzoru Azure Advanced Threat Protection Service. Pokud ne, senzoru zastaví zachycení provozu.
 
-- Pokud se pokusíte nainstalovat senzoru ATP na počítači nakonfigurované s adaptérem seskupování síťových adaptérů, obdržíte chybu instalace. Pokud chcete nainstalovat senzoru ATP na počítači nakonfigurovaná se Seskupováním síťových adaptérů, obraťte se na zástupce podpory Azure ATP.
+- Pokud se pokusíte nainstalovat senzoru ATP na počítači nakonfigurované s adaptérem seskupování síťových adaptérů, obdržíte chybu instalace. Pokud chcete nainstalovat senzoru ATP na počítači nakonfigurovaná se Seskupováním síťových adaptérů najdete v tématu [Azure ATP senzor Síťových adaptérů problém](troubleshooting-atp-known-issues.md#nic-teaming).
 
 -    Doporučujeme: Uživatel by měl mít oprávnění jen pro čtení v kontejneru odstraněné objekty. To umožňuje Azure ATP detekovat hromadné odstranění objektů v doméně. Informace o konfiguraci oprávnění jen pro čtení pro kontejner odstraněných objektů najdete v tématu **Změna oprávnění pro kontejner odstraněných objektů** tématu [zobrazení nebo nastavení oprávnění pro objekt adresáře](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) článku.
 
