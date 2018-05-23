@@ -44,7 +44,7 @@
 ## [Změna hesla připojení k doméně](modifying-ata-config-dcpassword.md)
 ## [Vyloučení entit z detekce](excluding-entities-from-detections.md)
 ## [Export/import konfigurace ATA](ata-configuration-file.md)
-## [Správa telemetrie ATA](manage-telemetry-settings.md)
+## [Správa protokolů generovaných systémem](manage-telemetry-settings.md)
 ## [Nastavení oznámení ATA](setting-ata-alerts.md)
 ## [Nastavení e-mailového serveru a serveru Syslog](setting-syslog-email-server-settings.md)
 ## [Označování citlivých účtů](tag-sensitive-accounts.md)
