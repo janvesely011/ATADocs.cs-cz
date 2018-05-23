@@ -13,18 +13,18 @@ ms.technology: ''
 ms.assetid: 8c1c7a1b-a3de-4105-9fd0-08a061952172
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 17e5778543b9f08d3157ed91cb0a7a73ea268c0a
-ms.sourcegitcommit: 3539dd3f9ab7729e5326b904fc64985c808bc8ce
+ms.openlocfilehash: 7f1a0cb9a7e237259a9b77b96e16c6680336c2b0
+ms.sourcegitcommit: 324dc941282f2948366afa5a919bda0b029bd59d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/21/2018
+ms.lasthandoff: 05/22/2018
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
 
 
 # <a name="manage-system-generated-logs-note"></a>Spravovat generována protokoly > [!NOTE]
-> Pokud vás zajímá zobrazení nebo odstranění osobních údajů, přečtěte si pokyny společnosti Microsoft v [správce dodržování předpisů Microsoft](https://servicetrust.microsoft.com/ComplianceManager) a v [GDPR části webu Microsoft 365 Enterprise dodržování předpisů] (https://docs.microsoft.com/en-us/microsoft-365/compliance/gdpr]. Pokud hledáte obecné informace o GDPR, přečtěte si téma [GDPR části portálu služby důvěřovat](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
+> Pokud vás zajímá zobrazení nebo odstranění osobních údajů, přečtěte si pokyny společnosti Microsoft v [správce dodržování předpisů Microsoft](https://servicetrust.microsoft.com/ComplianceManager) a v [GDPR části webu Microsoft 365 Enterprise dodržování předpisů](https://docs.microsoft.com/en-us/microsoft-365/compliance/gdpr). Pokud hledáte obecné informace o GDPR, přečtěte si téma [GDPR části portálu služby důvěřovat](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
 
 
 Advanced Threat Analytics (ATA) shromažďuje anonymizovaná data protokolu generována týkající se ATA a odesílá je přes připojení HTTPS k serverům Microsoftu.  Tato data Microsoft používá k vylepšení budoucích verzích ATA.

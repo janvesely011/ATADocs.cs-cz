@@ -1,23 +1,23 @@
 ---
-title: "Ověření zrcadlení portů v Azure Advanced Threat Protection | Microsoft Docs"
-description: "Popisuje, jak ověřit, že je zrcadlení portů nakonfigurované správně v Azure ATP"
-keywords: 
+title: Ověření zrcadlení portů v Azure Advanced Threat Protection | Microsoft Docs
+description: Popisuje, jak ověřit, že je zrcadlení portů nakonfigurované správně v Azure ATP
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/3/2018
+ms.date: 5/22/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: 0a56cf27-9eaa-4ad0-ae6c-9d0484c69094
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 7628fa491ddbe477cab7eb414409028c0f94f44d
-ms.sourcegitcommit: 84556e94a3efdf20ca1ebf89a481550d7f8f0f69
+ms.openlocfilehash: b3d9d35d31eee7ae46800e0547f18330d66e90cc
+ms.sourcegitcommit: 324dc941282f2948366afa5a919bda0b029bd59d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 05/22/2018
 ---
 *Platí pro: Azure Advanced Threat Protection*
 
@@ -25,7 +25,7 @@ ms.lasthandoff: 03/08/2018
 
 # <a name="validate-port-mirroring"></a>Ověření zrcadlení portů
 > [!NOTE] 
-> Tento článek se týká pouze pokud nasazujete nasadit Azure ATP samostatné senzor místo senzor ATP Azure. Pokud chcete zjistit, pokud budete muset použít snímač ATP Azure, najdete v části [výběr správné senzoru pro vaše nasazení](atp-capacity-planning#choosing-the-right-sensor-type-for-your-deployment).
+> Tento článek se týká pouze pokud nasazujete nasadit Azure ATP samostatné senzor místo senzor ATP Azure. Pokud chcete zjistit, pokud budete muset použít snímač ATP Azure, najdete v části [výběr správné senzoru pro vaše nasazení](atp-capacity-planning.md#choosing-the-right-sensor-type-for-your-deployment).
  
 Následující kroky vás provedou procesem ověření, že je zrcadlení portů správně nakonfigurované. Pro Azure ATP fungovalo správně musí být samostatné senzoru Azure ATP moci zobrazit provoz do a z řadiče domény. Hlavní zdroj dat používá Azure ATP je hloubková kontrola paketů síťového provozu do a z řadičů domény. Pro Azure ATP sledovat síťový provoz zrcadlení portů je potřeba nakonfigurovat. Zrcadlení portů kopíruje provoz z jednoho portu (zdrojový port) na jiný port (cílový port).
 

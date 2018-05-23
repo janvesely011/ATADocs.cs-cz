@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 5/21/2018
+ms.date: 5/22/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: advanced-threat-analytics
@@ -13,17 +13,18 @@ ms.technology: ''
 ms.assetid: 1b2d185c-62cd-45f0-b0dd-687b51317f32
 ms.reviewer: ophirp
 ms.suite: ems
-ms.openlocfilehash: cf08f2d46eaa939f414d1e3793446384cd22100b
-ms.sourcegitcommit: 3539dd3f9ab7729e5326b904fc64985c808bc8ce
+ms.openlocfilehash: 94aa6ffff6dee7163293cd70be72de0f8ebc8f7d
+ms.sourcegitcommit: 324dc941282f2948366afa5a919bda0b029bd59d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/21/2018
+ms.lasthandoff: 05/22/2018
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
-# <a name="ata-data-security"></a>Zabezpečení dat ATA 
+# <a name="ata-data-security-and-privacy"></a>ATA data zabezpečení a ochrana osobních údajů
 
-Informace o vztahu důvěryhodnosti ATA a dodržování předpisů najdete v tématu [vztah důvěryhodnosti služby portálu](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted) a [Microsoft 365 Enterprise GDPR kompatibility lokality](https://docs.microsoft.com/microsoft-365/compliance/compliance-solutions-overview).
+> [!NOTE]
+> Pokud vás zajímá zobrazení nebo odstranění osobních údajů, přečtěte si pokyny společnosti Microsoft v [správce dodržování předpisů Microsoft](https://servicetrust.microsoft.com/ComplianceManager) a v [GDPR části webu Microsoft 365 Enterprise dodržování předpisů](https://docs.microsoft.com/en-us/microsoft-365/compliance/gdpr). Pokud hledáte obecné informace o GDPR, přečtěte si téma [GDPR části portálu služby důvěřovat](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
 
 ## <a name="searching-for-and-identifying-personal-data"></a>Hledání a identifikaci osobní data 
 
@@ -38,7 +39,7 @@ Osobní data o uživatelích a entity v ATA je odvozený od uživatele AD je obj
 ## <a name="deleting-personal-data"></a>Odstranění osobní data 
 
 > [!NOTE]
-> Pokud vás zajímá zobrazení nebo odstranění osobních údajů, přečtěte si pokyny společnosti Microsoft v [správce dodržování předpisů Microsoft](https://servicetrust.microsoft.com/ComplianceManager) a v [GDPR části webu Microsoft 365 Enterprise dodržování předpisů] (https://docs.microsoft.com/en-us/microsoft-365/compliance/gdpr]. Pokud hledáte obecné informace o GDPR, přečtěte si téma [GDPR části portálu služby důvěřovat](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
+> Pokud vás zajímá zobrazení nebo odstranění osobních údajů, přečtěte si pokyny společnosti Microsoft v [správce dodržování předpisů Microsoft](https://servicetrust.microsoft.com/ComplianceManager) a v [GDPR části webu Microsoft 365 Enterprise dodržování předpisů](https://docs.microsoft.com/en-us/microsoft-365/compliance/gdpr). Pokud hledáte obecné informace o GDPR, přečtěte si téma [GDPR části portálu služby důvěřovat](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
 
 
 I když se data v ATA se replikují a vždy aktualizovat ze služby Active Directory, když je odstraněn entity ve službě AD, data entity v ATA se udržuje pro účely zabezpečení šetření. 
@@ -74,7 +75,7 @@ Tento skript odeberete všechna data pro všechny entity aktivit a výstrahy zab
 ## <a name="exporting-personal-data"></a>Export osobní data 
 
 > [!NOTE]
-> Pokud vás zajímá zobrazení nebo odstranění osobních údajů, přečtěte si pokyny společnosti Microsoft v [správce dodržování předpisů Microsoft](https://servicetrust.microsoft.com/ComplianceManager) a v [GDPR části webu Microsoft 365 Enterprise dodržování předpisů] (https://docs.microsoft.com/en-us/microsoft-365/compliance/gdpr]. Pokud hledáte obecné informace o GDPR, přečtěte si téma [GDPR části portálu služby důvěřovat](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
+> Pokud vás zajímá zobrazení nebo odstranění osobních údajů, přečtěte si pokyny společnosti Microsoft v [správce dodržování předpisů Microsoft](https://servicetrust.microsoft.com/ComplianceManager) a v [GDPR části webu Microsoft 365 Enterprise dodržování předpisů](https://docs.microsoft.com/en-us/microsoft-365/compliance/gdpr). Pokud hledáte obecné informace o GDPR, přečtěte si téma [GDPR části portálu služby důvěřovat](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
 
 
 Vzhledem k tomu, že data související s entitami ATA je odvozena ze služby Active Directory, je pouze podmnožinu dat uložené v databázi ATA. Z tohoto důvodu je třeba exportovat data související s entity ze služby Active Directory. 
@@ -85,7 +86,7 @@ ATA můžete exportovat do Excelu všechny informace týkající se zabezpečen�
 ## <a name="opt-out-of-system-generated-logs"></a>Výslovný nesouhlas s protokoly generované systémem 
 
 > [!NOTE]
-> Pokud vás zajímá zobrazení nebo odstranění osobních údajů, přečtěte si pokyny společnosti Microsoft v [správce dodržování předpisů Microsoft](https://servicetrust.microsoft.com/ComplianceManager) a v [GDPR části webu Microsoft 365 Enterprise dodržování předpisů] (https://docs.microsoft.com/en-us/microsoft-365/compliance/gdpr]. Pokud hledáte obecné informace o GDPR, přečtěte si téma [GDPR části portálu služby důvěřovat](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
+> Pokud vás zajímá zobrazení nebo odstranění osobních údajů, přečtěte si pokyny společnosti Microsoft v [správce dodržování předpisů Microsoft](https://servicetrust.microsoft.com/ComplianceManager) a v [GDPR části webu Microsoft 365 Enterprise dodržování předpisů](https://docs.microsoft.com/en-us/microsoft-365/compliance/gdpr). Pokud hledáte obecné informace o GDPR, přečtěte si téma [GDPR části portálu služby důvěřovat](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
 
 ATA shromažďuje anonymizovaná generována protokoly o každé nasazení a odesílá tato data přes HTTPS k serverům Microsoftu. Tato data Microsoft používá k vylepšení budoucích verzích ATA. 
 
@@ -104,10 +105,4 @@ Postup při zakázání shromažďování dat:
 
 ## <a name="additional-resources"></a>Další materiály a zdroje informací
 
-[Stránka Microsoft Security Channel 9](https://channel9.msdn.com/Shows/Microsoft-Security/)
-
-## <a name="community-resources"></a>Zdroje informací a materiály z komunity
-
-[ATA blog](https://aka.ms/ATABlog)
-[ATA komunity](https://aka.ms/ATACommunity)
-[svůj názor na ATA](https://aka.ms/ATAUserVoice)
+- Informace o vztahu důvěryhodnosti ATA a dodržování předpisů najdete v tématu [vztah důvěryhodnosti služby portálu](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted) a [Microsoft 365 Enterprise GDPR kompatibility lokality](https://docs.microsoft.com/microsoft-365/compliance/compliance-solutions-overview).

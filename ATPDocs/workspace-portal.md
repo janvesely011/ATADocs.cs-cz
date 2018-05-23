@@ -1,23 +1,23 @@
 ---
-title: "Principy prostoru portálu Azure Advanced Threat Protection | Microsoft Docs"
-description: "Popisuje, jak pro přihlášení k portálu Azure ATP prostoru a součástí portálu pracovního prostoru"
-keywords: 
+title: Principy prostoru portálu Azure Advanced Threat Protection | Microsoft Docs
+description: Popisuje, jak pro přihlášení k portálu Azure ATP prostoru a součástí portálu pracovního prostoru
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 5/22/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: 4ba46d60-3a74-480e-8f0f-9a082d62f343
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 21cc8b6b27efb514d2a313fc0959152d601d4344
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 40e139cc5e7dc6396914b0314d2d698a4782af02
+ms.sourcegitcommit: 324dc941282f2948366afa5a919bda0b029bd59d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/22/2018
 ---
 *Platí pro: Azure Advanced Threat Protection*
 
@@ -39,7 +39,7 @@ Chcete-li úspěšně přihlásit k portálu Azure ATP pracovního prostoru, bud
 
 ## <a name="logging-into-the-azure-atp-workspace-portal"></a>Protokolování do portálu Azure ATP pracovního prostoru
 
-1. Můžete přejít na portál pro pracovní prostor, buď po přihlášení k portálu pro správu prostoru [https://portal.atp.azure.com](https://portal.atp.azure.com) a potom výběrem příslušné prostoru nebo procházení k adrese URL pracovního prostoru: [https://*workspacename*. atp.azure.com](https://*workspacename*.atp.azure.com).
+1. Můžete přejít na portál pro pracovní prostor, buď po přihlášení k portálu pro správu prostoru [ https://portal.atp.azure.com ](https://portal.atp.azure.com) a potom výběrem příslušné prostoru nebo procházení k adrese URL pracovního prostoru: [https:// *workspacename*. atp.azure.com](https://*workspacename*.atp.azure.com).
 
 
 2.  Azure ATP podporuje jednotné přihlašování v integraci s ověřováním systému Windows – Pokud jste již přihlášeni k počítači, Azure ATP používá tento token pro přihlášení k portálu Azure ATP pracovního prostoru. K přihlášení můžete použít také čipovou kartu. Vaše oprávnění v Azure ATP odpovídají s vaší [role správce](atp-role-groups.md).
@@ -64,7 +64,7 @@ Po vydání nové verze Azure ATP, **co je nového** okno se zobrazí v horní p
 
 Na základě stavu a závažnosti umožňuje filtrovat, které podezřelé aktivity se zobrazí na časové ose útoků nebo na kartě podezřelých aktivit profilu entity.
 
-### <a name="search-bar"></a>Panel hledání
+### Panel hledání <a name="search-bar"></a>
 
 Panel hledání můžete najít v horní nabídce. Můžete hledat konkrétního uživatele, počítače nebo skupiny v Azure ATP. Pokud si ho chcete vyzkoušet, stačí začít psát. V dolní části panelu Hledat počet výsledků hledání najít uvedené. 
 

@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 4/30/2018
+ms.date: 5/22/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,11 +13,11 @@ ms.technology: ''
 ms.assetid: effca0f2-fcae-4fca-92c1-c37306decf84
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 8fda27ed8ed4a589ff205e815e8b3cf97026b819
-ms.sourcegitcommit: 5c0f914b44bfb8e03485f12658bfa9a7cd3d8bbc
+ms.openlocfilehash: 77a2464634b4286d2f6d35504e9ab7512cf7b612
+ms.sourcegitcommit: 324dc941282f2948366afa5a919bda0b029bd59d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/22/2018
 ---
 *Platí pro: Azure Advanced Threat Protection*
 
@@ -25,6 +25,11 @@ ms.lasthandoff: 04/30/2018
 
 
 # <a name="azure-atp-role-groups"></a>Azure skupin rolí ATP
+
+Azure ATP nabízí na základě rolí zabezpečení k ochraně dat podle potřeb konkrétní zabezpečení a dodržování předpisů v organizaci. Azure ATP podporují tři samostatné role: správci, uživatelů a prohlížeče. 
+
+> [!NOTE]
+> Pokud vás zajímá zobrazení nebo odstranění osobních údajů, přečtěte si pokyny společnosti Microsoft v [správce dodržování předpisů Microsoft](https://servicetrust.microsoft.com/ComplianceManager) a v [GDPR části webu Microsoft 365 Enterprise dodržování předpisů](https://docs.microsoft.com/en-us/microsoft-365/compliance/gdpr). Pokud hledáte obecné informace o GDPR, přečtěte si téma [GDPR části portálu služby důvěřovat](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
 
 Role skupiny umožňují správu přístupu k Azure ATP. Pomocí skupin rolí můžete oddělit úlohy v rámci týmu zabezpečení a udělit přístup pouze v takovém rozsahu, který uživatelé potřebují ke své práci. Tento článek vysvětluje správu přístupu a autorizace Azure ATP role a pomáhá získat spuštěná pomocí skupin rolí v ATP.
 

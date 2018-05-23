@@ -1,22 +1,22 @@
 ---
-title: "Plánování nasazení Azure Advanced Threat Protection | Microsoft Docs"
-description: "Pomůže vám naplánovat nasazení a rozhodnout, kolik serverů Azure ATP bude potřeba k podpoře vaší sítě."
-keywords: 
+title: Plánování nasazení Azure Advanced Threat Protection | Microsoft Docs
+description: Pomůže vám naplánovat nasazení a rozhodnout, kolik serverů Azure ATP bude potřeba k podpoře vaší sítě.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/11/2018
+ms.date: 5/22/2018
 ms.topic: get-started-article
 ms.service: azure-advanced-threat-protection
-ms.prod: 
+ms.prod: ''
 ms.assetid: da0ee438-35f8-4097-b3a1-1354ad59eb32
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 577b7a5105e8de773f57b1e00bc1c9cb51096799
-ms.sourcegitcommit: 912e453753156902618ae6ebb8489c2320c06fc6
+ms.openlocfilehash: 35d3495585cce321adccb05f202fd664356db37f
+ms.sourcegitcommit: 324dc941282f2948366afa5a919bda0b029bd59d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 05/22/2018
 ---
 *Platí pro: Azure Advanced Threat Protection*
 
@@ -40,7 +40,7 @@ Doporučený a nejjednodušší způsob jak určit kapacitu pro vaše nasazení 
 Pokud z nějakého důvodu nemůžete použít nástroj pro změnu velikosti ATP Azure, ručně shromážděte informace z čítače paketů za sekundu ze všech řadičů domény po dobu 24 hodin s malým intervalem sběru hodnot (přibližně 5 sekund). Pak u každého řadiče domény musíte vypočítat denní průměr a průměr za nejvytíženější období (15 minut).
 Následující části uvádějí pokyny, jak shromáždit čítač paketů za sekundu z jednoho řadiče domény.
 
-## Výběr typu správné senzor pro vaše nasazení<a name="choosing-the right-sensor-type-for-your-deployment"></a>
+## Výběr typu správné senzor pro vaše nasazení<a name="choosing-the-right-sensor-type-for-your-deployment"></a>
 V nasazení služby Azure ATP je podporováno libovolnou kombinaci typů sensor samostatné Azure ATP:
 
 - Jenom Azure ATP samostatné senzorů
@@ -75,11 +75,11 @@ Azure ATP senzor může podporovat monitorování jednoho řadiče domény zalo�
 |Pakety za sekundu. *|Procesor (jádra)|Paměť (GB)|
 |----|----|-----|
 |0-1 kB|0.25|2.50|
-|1k-5k|0.75|6.00|
-|5k-10k|1.00|6.50|
-|10 tisíc - 20k|2.00|9.00|
+|1 tisíc - 5k|0.75|6.00|
+|tisíc 5-10 TIS|1.00|6.50|
+|10 tisíc - 20k|2.00|9,00|
 |20k – 50 tisíc|3.50|9.50|
-|50k-75k |3.50|9.50|
+|50 tisíc - 75k |3.50|9.50|
 |75 tisíc - 100k|3.50 |9.50|
 
 > [!NOTE]

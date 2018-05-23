@@ -1,23 +1,23 @@
 ---
-title: "Konfigurace zrcadlení portů při nasazování Azure Advanced Threat Protection | Microsoft Docs"
-description: "Popisuje možnosti zrcadlení portů a způsob jejich konfigurace pro Azure ATP"
-keywords: 
+title: Konfigurace zrcadlení portů při nasazování Azure Advanced Threat Protection | Microsoft Docs
+description: Popisuje možnosti zrcadlení portů a způsob jejich konfigurace pro Azure ATP
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 5/22/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: 9ec7eb4c-3cad-4543-bbf0-b951d8fc8ffe
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 1cc622f1a8306530423920873e5efa05e8c87064
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 1f59f02f73507fe29b41fd13c96a359dee2e88fc
+ms.sourcegitcommit: 324dc941282f2948366afa5a919bda0b029bd59d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/22/2018
 ---
 *Platí pro: Azure Advanced Threat Protection*
 
@@ -51,10 +51,10 @@ Další informace najdete v dokumentaci od dodavatele.
 |Virtuální|Virtuální na stejném hostiteli|Virtuální přepínač musí podporovat zrcadlení portů.<br /><br />Přesunutí jednoho z virtuálních počítačů do jiného hostitele může samo o sobě způsobit nefunkčnost zrcadlení portů.|
 |Virtuální|Virtuální na různých hostitelích|Zkontrolujte, že váš virtuální přepínač tento scénář podporuje.|
 |Virtuální|Fyzické|Vyžaduje vyhrazený síťový adaptér, jinak hodnota ATP Azure uvidí veškerý provoz přicházející do/z hostitele, dokonce i provoz, který odesílá do cloudové služby Azure ATP.|
-|Fyzické|Virtuální|Ujistěte se, že virtuální přepínač podporuje tento scénář a konfiguraci zrcadlení portů na fyzických přepínačích v závislosti na scénáři:<br /><br />Pokud je virtuální hostitel na stejném fyzickém přepínači, budete muset nakonfigurovat span na úrovni přepínače.<br /><br />Pokud je virtuální hostitele na jiném přepínači, budete muset nakonfigurovat RSPAN nebo ERSPAN &#42;.|
+|Fyzické|Virtuální|Ujistěte se, že virtuální přepínač podporuje tento scénář a konfiguraci zrcadlení portů na fyzických přepínačích v závislosti na scénáři:<br /><br />Pokud je virtuální hostitel na stejném fyzickém přepínači, budete muset nakonfigurovat span na úrovni přepínače.<br /><br />Pokud je virtuální hostitele na jiném přepínači, budete muset nakonfigurovat RSPAN nebo ERSPAN&#42;.|
 |Fyzické|Fyzický na stejném přepínači|Fyzický přepínač musí podporovat SPAN / zrcadlení portů.|
 |Fyzické|Fyzický na jiném přepínači|Vyžaduje fyzické přepínače podporující RSPAN nebo ERSPAN&#42;.|
-&#42; ERSPAN se podporuje jenom při předtím, než je provoz analyzován pomocí ATP zrušeno zapouzdření.
+&#42;ERSPAN se podporuje jenom při předtím, než je provoz analyzován pomocí ATP zrušeno zapouzdření.
 
 > [!NOTE]
 > Ujistěte se, že řadiče domény a senzor samostatné Azure ATP, ke kterým se připojují jsou časově synchronizované intervalu než pět minut.
