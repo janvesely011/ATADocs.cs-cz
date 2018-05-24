@@ -13,18 +13,17 @@ ms.technology: ''
 ms.assetid: 1b2d185c-62cd-45f0-b0dd-687b51317f32
 ms.reviewer: ophirp
 ms.suite: ems
-ms.openlocfilehash: 94aa6ffff6dee7163293cd70be72de0f8ebc8f7d
-ms.sourcegitcommit: 324dc941282f2948366afa5a919bda0b029bd59d
+ms.openlocfilehash: b89e841412385c9eca20e40d78ff10be342c6b22
+ms.sourcegitcommit: 571297209b15e9dc4d43c5e57da359973da8d207
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/22/2018
+ms.lasthandoff: 05/23/2018
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
 # <a name="ata-data-security-and-privacy"></a>ATA data zabezpečení a ochrana osobních údajů
 
-> [!NOTE]
-> Pokud vás zajímá zobrazení nebo odstranění osobních údajů, přečtěte si pokyny společnosti Microsoft v [správce dodržování předpisů Microsoft](https://servicetrust.microsoft.com/ComplianceManager) a v [GDPR části webu Microsoft 365 Enterprise dodržování předpisů](https://docs.microsoft.com/en-us/microsoft-365/compliance/gdpr). Pokud hledáte obecné informace o GDPR, přečtěte si téma [GDPR části portálu služby důvěřovat](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
+[!INCLUDE [Handle personal data](../includes/gdpr-intro-sentence.md)]
 
 ## <a name="searching-for-and-identifying-personal-data"></a>Hledání a identifikaci osobní data 
 
@@ -37,9 +36,6 @@ Z komponenty ATA Center použijte panelu Hledat zobrazíte identifikovatelné os
 Osobní data o uživatelích a entity v ATA je odvozený od uživatele AD je objekt ve vaší organizaci. Z toho důvodu se projeví jakékoli změny provedené v profilu uživatele ve službě AD v ATA. 
 
 ## <a name="deleting-personal-data"></a>Odstranění osobní data 
-
-> [!NOTE]
-> Pokud vás zajímá zobrazení nebo odstranění osobních údajů, přečtěte si pokyny společnosti Microsoft v [správce dodržování předpisů Microsoft](https://servicetrust.microsoft.com/ComplianceManager) a v [GDPR části webu Microsoft 365 Enterprise dodržování předpisů](https://docs.microsoft.com/en-us/microsoft-365/compliance/gdpr). Pokud hledáte obecné informace o GDPR, přečtěte si téma [GDPR části portálu služby důvěřovat](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
 
 
 I když se data v ATA se replikují a vždy aktualizovat ze služby Active Directory, když je odstraněn entity ve službě AD, data entity v ATA se udržuje pro účely zabezpečení šetření. 
@@ -74,19 +70,12 @@ Tento skript odeberete všechna data pro všechny entity aktivit a výstrahy zab
 
 ## <a name="exporting-personal-data"></a>Export osobní data 
 
-> [!NOTE]
-> Pokud vás zajímá zobrazení nebo odstranění osobních údajů, přečtěte si pokyny společnosti Microsoft v [správce dodržování předpisů Microsoft](https://servicetrust.microsoft.com/ComplianceManager) a v [GDPR části webu Microsoft 365 Enterprise dodržování předpisů](https://docs.microsoft.com/en-us/microsoft-365/compliance/gdpr). Pokud hledáte obecné informace o GDPR, přečtěte si téma [GDPR části portálu služby důvěřovat](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
-
-
 Vzhledem k tomu, že data související s entitami ATA je odvozena ze služby Active Directory, je pouze podmnožinu dat uložené v databázi ATA. Z tohoto důvodu je třeba exportovat data související s entity ze služby Active Directory. 
 
 ATA můžete exportovat do Excelu všechny informace týkající se zabezpečení, která by mohla obsahovat osobní data. 
 
  
 ## <a name="opt-out-of-system-generated-logs"></a>Výslovný nesouhlas s protokoly generované systémem 
-
-> [!NOTE]
-> Pokud vás zajímá zobrazení nebo odstranění osobních údajů, přečtěte si pokyny společnosti Microsoft v [správce dodržování předpisů Microsoft](https://servicetrust.microsoft.com/ComplianceManager) a v [GDPR části webu Microsoft 365 Enterprise dodržování předpisů](https://docs.microsoft.com/en-us/microsoft-365/compliance/gdpr). Pokud hledáte obecné informace o GDPR, přečtěte si téma [GDPR části portálu služby důvěřovat](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
 
 ATA shromažďuje anonymizovaná generována protokoly o každé nasazení a odesílá tato data přes HTTPS k serverům Microsoftu. Tato data Microsoft používá k vylepšení budoucích verzích ATA. 
 
@@ -96,12 +85,6 @@ Postup při zakázání shromažďování dat:
 
 1. Přihlaste se ke konzole ATA, na panelu nástrojů klikněte na tlačítko se třemi tečkami a vyberte **O aplikaci**. 
 2. Zrušte zaškrtnutí políčka **Send us usage information to help improve your customer experience in the future** (Posílat nám informace o použití k vylepšení zkušeností uživatelů v budoucnosti). 
-
- 
-
- 
-
- 
 
 ## <a name="additional-resources"></a>Další materiály a zdroje informací
 

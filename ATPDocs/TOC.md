@@ -2,6 +2,7 @@
 ## [Co je Azure Advanced Threat Protection?](what-is-atp.md)
 ## [Nejčastější dotazy](atp-technical-faq.md)
 ## [Co je nového v Azure ATP](atp-whats-new.md)
+## [Zabezpečení dat a ochrana osobních údajů v Azure ATP](atp-privacy-compliance.md)
 # Plánování a navrhování
 ## [Požadavky služby Azure ATP](atp-prerequisites.md)
 ## [Architektura služby Azure ATP](atp-architecture.md)
