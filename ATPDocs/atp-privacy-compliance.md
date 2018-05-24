@@ -13,18 +13,17 @@ ms.technology: ''
 ms.assetid: 224e629a-0e82-458c-bb03-b67070a9241d
 ms.reviewer: ophirp
 ms.suite: ems
-ms.openlocfilehash: 1e890491b44bcf97a7f0f19d825155072ac1a2f4
-ms.sourcegitcommit: 324dc941282f2948366afa5a919bda0b029bd59d
+ms.openlocfilehash: d6bf11d55743b7422985577f512f16af93159618
+ms.sourcegitcommit: 571297209b15e9dc4d43c5e57da359973da8d207
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/22/2018
+ms.lasthandoff: 05/23/2018
 ---
 *Platí pro: Azure Advanced Threat Protection*
 
 # <a name="azure-atp-data-security-and-privacy"></a>Azure ATP data zabezpečení a ochrana osobních údajů
 
-> [!NOTE]
-> Pokud vás zajímá zobrazení nebo odstranění osobních údajů, přečtěte si pokyny společnosti Microsoft v [správce dodržování předpisů Microsoft](https://servicetrust.microsoft.com/ComplianceManager) a v [GDPR části webu Microsoft 365 Enterprise dodržování předpisů](https://docs.microsoft.com/en-us/microsoft-365/compliance/gdpr). Pokud hledáte obecné informace o GDPR, přečtěte si téma [GDPR části portálu služby důvěřovat](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
+[!INCLUDE [Handle personal data](../includes/gdpr-intro-sentence.md)]
 
 ## <a name="search-for-and-identify-personal-data"></a>Vyhledat a identifikovat osobní data 
 
@@ -49,12 +48,8 @@ V Azure ATP máte možnost [export]((working-with-suspicious-activities.md#revie
  
 ## <a name="audit-personal-data"></a>Osobní data auditu
 
- 
 Azure ATP implementuje auditování změn osobní data, včetně odstranění a export záznamů osobní data. Doba uchování záznamu pro audit je 90 dní. V Azure ATP auditování je funkce back-end a není k dispozici pro zákazníky.
  
-
- 
-
 ## <a name="additional-resources"></a>Další materiály a zdroje informací
 
 - Informace o vztahu důvěryhodnosti Azure ATP a dodržování předpisů najdete v tématu [vztah důvěryhodnosti služby portálu](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted) a [Microsoft 365 Enterprise GDPR kompatibility lokality](https://docs.microsoft.com/microsoft-365/compliance/compliance-solutions-overview).
