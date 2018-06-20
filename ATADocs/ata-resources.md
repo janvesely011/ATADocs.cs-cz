@@ -1,15 +1,15 @@
 ---
-title: "Advanced Threat Analytics prostředky a připravenost roadamp | Microsoft Docs"
-description: "Poskytuje seznam ATA prostředků, videa, Začínáme, nasazení a odkazy plán připravenosti."
-keywords: 
+title: Advanced Threat Analytics prostředky a připravenost roadamp | Microsoft Docs
+description: Poskytuje seznam ATA prostředků, videa, Začínáme, nasazení a odkazy plán připravenosti.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: 42a1a34f-ed6b-4538-befb-452168a30e8c
 ms.reviewer: bennyl
 ms.suite: ems
@@ -18,6 +18,7 @@ ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 03/22/2018
+ms.locfileid: "30010223"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 

@@ -1,15 +1,15 @@
 ---
-title: "Nastavení e-mailových oznámení v Azure Advanced Threat Protection | Microsoft Docs"
-description: "Popisuje, jak mají ATP Azure (e-mailem nebo předáváním událostí Azure ATP) vám to oznámí při zjištění podezřelých aktivit"
-keywords: 
+title: Nastavení e-mailových oznámení v Azure Advanced Threat Protection | Microsoft Docs
+description: Popisuje, jak mají ATP Azure (e-mailem nebo předáváním událostí Azure ATP) vám to oznámí při zjištění podezřelých aktivit
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 2/21/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: a2d29c9c-7ecb-4804-b74b-fde899b28648
 ms.reviewer: itargoet
 ms.suite: ems
@@ -18,6 +18,7 @@ ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 02/21/2018
+ms.locfileid: "29445991"
 ---
 *Platí pro: Azure Advanced Threat Protection*
 

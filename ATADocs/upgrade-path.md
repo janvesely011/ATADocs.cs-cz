@@ -1,15 +1,15 @@
 ---
-title: "Advanced Threat Analytics doporučená upgradu | Microsoft Docs"
-description: "Poskytuje pokyny k upgradu vaší verzi Advanced Threat Analytics (ATA)."
-keywords: 
+title: Advanced Threat Analytics doporučená upgradu | Microsoft Docs
+description: Poskytuje pokyny k upgradu vaší verzi Advanced Threat Analytics (ATA).
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: 88720401-1fb2-4353-ad39-32bc0088f0de
 ms.reviewer: bennyl
 ms.suite: ems
@@ -18,6 +18,7 @@ ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 03/22/2018
+ms.locfileid: "30009968"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 

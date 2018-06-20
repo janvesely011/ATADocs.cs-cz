@@ -1,15 +1,15 @@
 ---
-title: "Instalace Advanced Threat Analytics – krok 3 | Dokumenty Microsoftu"
-description: "Třetí krok instalace ATA vám pomůže stáhnout instalační balíček ATA Gateway."
-keywords: 
+title: Instalace Advanced Threat Analytics – krok 3 | Dokumenty Microsoftu
+description: Třetí krok instalace ATA vám pomůže stáhnout instalační balíček ATA Gateway.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: 7fb024e6-297a-4ad9-b962-481bb75a0ba3
 ms.reviewer: bennyl
 ms.suite: ems
@@ -18,6 +18,7 @@ ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 03/22/2018
+ms.locfileid: "30010172"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 

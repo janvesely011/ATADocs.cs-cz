@@ -1,15 +1,15 @@
 ---
-title: "Jaké hrozby Advanced Threat Analytics detekuje? | Dokumentace Microsoftu"
-description: "Uvádí hrozby, které ATA detekuje"
-keywords: 
+title: Jaké hrozby Advanced Threat Analytics detekuje? | Dokumentace Microsoftu
+description: Uvádí hrozby, které ATA detekuje
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: 283e7b4e-996a-4491-b7f6-ff06e73790d2
 ms.reviewer: bennyl
 ms.suite: ems
@@ -18,6 +18,7 @@ ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 03/22/2018
+ms.locfileid: "30009417"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 

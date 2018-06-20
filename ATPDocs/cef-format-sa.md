@@ -18,6 +18,7 @@ ms.sourcegitcommit: 7c9fe4eb781bec71129310a6e0c5e76b022a0213
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 03/28/2018
+ms.locfileid: "30251404"
 ---
 *Platí pro: Azure Advanced Threat Protection*
 

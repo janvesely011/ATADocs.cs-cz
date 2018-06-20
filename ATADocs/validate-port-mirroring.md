@@ -1,15 +1,15 @@
 ---
-title: "Ověření zrcadlení portů v Advanced Threat Analytics | Dokumentace Microsoftu"
-description: "Popisuje jak ověřit, že je zrcadlení portů nakonfigurované správně."
-keywords: 
+title: Ověření zrcadlení portů v Advanced Threat Analytics | Dokumentace Microsoftu
+description: Popisuje jak ověřit, že je zrcadlení portů nakonfigurované správně.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: ebd41719-c91a-4fdd-bcab-2affa2a2cace
 ms.reviewer: bennyl
 ms.suite: ems
@@ -18,6 +18,7 @@ ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 03/22/2018
+ms.locfileid: "30009798"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 

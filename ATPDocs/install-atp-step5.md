@@ -1,15 +1,15 @@
 ---
-title: "Instalace Azure Advanced Threat Protection – krok 5 | Microsoft Docs"
-description: "Krok 5 instalace Azure ATP vám pomůže nakonfigurovat nastavení pro vaše senzor samostatné Azure ATP."
-keywords: 
+title: Instalace Azure Advanced Threat Protection – krok 5 | Microsoft Docs
+description: Krok 5 instalace Azure ATP vám pomůže nakonfigurovat nastavení pro vaše senzor samostatné Azure ATP.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 2/21/2017
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: d7c95f8c-04f8-4946-9bae-c27ed362fcb0
 ms.reviewer: itargoet
 ms.suite: ems
@@ -18,6 +18,7 @@ ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 02/21/2018
+ms.locfileid: "29446033"
 ---
 *Platí pro: Azure Advanced Threat Protection*
 

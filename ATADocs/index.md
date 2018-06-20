@@ -1,12 +1,13 @@
 ---
 layout: LandingPage
-description: "Naučte se používat Advanced Threat Analytics."
+description: Naučte se používat Advanced Threat Analytics.
 ms.topic: landing-page
 ms.openlocfilehash: a966ebda6f23dc367b5e5108faf262480073879f
 ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 03/22/2018
+ms.locfileid: "30009937"
 ---
 # <a name="advanced-threat-analytics-documentation"></a>Dokumentace k Advanced Threat Analytics
 

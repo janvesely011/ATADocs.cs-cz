@@ -1,15 +1,15 @@
 ---
-title: "Průvodce migrací pro aktualizaci Advanced Threat Analytics na verzi 1.7 | Dokumentace Microsoftu"
+title: Průvodce migrací pro aktualizaci Advanced Threat Analytics na verzi 1.7 | Dokumentace Microsoftu
 description: Postupy aktualizace ATA na verzi 1.7
-keywords: 
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 01/23/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: 8eefcd45-7a4b-4074-ac5b-1ffc48e6654a
 ms.reviewer: bennyl
 ms.suite: ems
@@ -18,6 +18,7 @@ ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/07/2017
+ms.locfileid: "24019234"
 ---
 # <a name="ata-update-to-17-migration-guide"></a>Průvodce migrací pro aktualizaci ATA na verzi 1.7
 Aktualizace ATA na verzi 1.7 přináší vylepšení v následujících oblastech:

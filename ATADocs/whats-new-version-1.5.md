@@ -1,15 +1,15 @@
 ---
 title: Novinky Advanced Threat Analytics verze 1.5 | Dokumentace Microsoftu
-description: "Uvádí novinky ATA verze 1.5 spolu se známými problémy."
-keywords: 
+description: Uvádí novinky ATA verze 1.5 spolu se známými problémy.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 01/23/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: a0d64aff-ca9e-4300-b3f8-eb3c8b8ae045
 ms.reviewer: bennyl
 ms.suite: ems
@@ -18,6 +18,7 @@ ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/07/2017
+ms.locfileid: "24018265"
 ---
 # <a name="whats-new-in-ata-version-15"></a>Novinky ATA verze 1.5
 Tyto poznámky k verzi obsahují informace o známých problémech v této verzi Advanced Threat Analytics.

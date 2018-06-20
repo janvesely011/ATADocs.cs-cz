@@ -1,15 +1,15 @@
 ---
-title: "Řešení potíží s spuštění služby Advanced Threat Analytics | Microsoft Docs"
-description: "Popisuje, jak můžete potíže ATA spuštění"
-keywords: 
+title: Řešení potíží s spuštění služby Advanced Threat Analytics | Microsoft Docs
+description: Popisuje, jak můžete potíže ATA spuštění
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: 5a65285c-d1de-4025-9bb4-ef9c20b13cfa
 ms.reviewer: bennyl
 ms.suite: ems
@@ -18,6 +18,7 @@ ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 03/22/2018
+ms.locfileid: "30009264"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 

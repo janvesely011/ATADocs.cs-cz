@@ -1,15 +1,15 @@
 ---
-title: "Značka citlivé účty s Azure ATP | Microsoft Docs"
-description: "Popisuje, jak k označování citlivé účty pomocí Azure Advanced Threat Protection (ATP)"
-keywords: 
+title: Značka citlivé účty s Azure ATP | Microsoft Docs
+description: Popisuje, jak k označování citlivé účty pomocí Azure Advanced Threat Protection (ATP)
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 2/21/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: 43e57f87-ca85-4922-8ed0-9830139fe7cb
 ms.reviewer: itargoet
 ms.suite: ems
@@ -18,6 +18,7 @@ ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 02/21/2018
+ms.locfileid: "29446054"
 ---
 *Platí pro: Azure Advanced Threat Protection verze 1.9*
 

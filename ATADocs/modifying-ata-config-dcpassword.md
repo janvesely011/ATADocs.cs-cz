@@ -1,15 +1,15 @@
 ---
-title: "Změna konfigurace Advanced Threat Analytics – heslo připojení k doméně | Dokumentace Microsoftu"
-description: "Popisuje způsob změny hesla připojení k doméně na ATA Gateway."
-keywords: 
+title: Změna konfigurace Advanced Threat Analytics – heslo připojení k doméně | Dokumentace Microsoftu
+description: Popisuje způsob změny hesla připojení k doméně na ATA Gateway.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: 4a25561b-a5ed-44aa-9b72-366976b3c72a
 ms.reviewer: bennyl
 ms.suite: ems
@@ -18,6 +18,7 @@ ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 03/22/2018
+ms.locfileid: "30009305"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 

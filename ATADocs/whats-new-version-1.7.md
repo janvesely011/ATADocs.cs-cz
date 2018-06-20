@@ -1,23 +1,24 @@
 ---
 title: Novinky ATA verze 1.7 | Dokumentace Microsoftu
-description: "Uvádí novinky ATA verze 1.7 spolu se známými problémy."
-keywords: 
+description: Uvádí novinky ATA verze 1.7 spolu se známými problémy.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 1/23/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: be9ee613-4eb3-40f1-8973-e7f0a707ff57
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: ems
 ms.openlocfilehash: 7bbca4eeb6ad8c5b9cf161f60144bbd27ca3c8d2
 ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/07/2017
+ms.locfileid: "24018214"
 ---
 # <a name="whats-new-in-ata-version-17"></a>Novinky ATA verze 1.7
 Tyto poznámky k verzi obsahují informace o známých problémech v této verzi Advanced Threat Analytics.

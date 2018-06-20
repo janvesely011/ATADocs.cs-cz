@@ -1,15 +1,15 @@
 ---
-title: "Řešení známých problémů ATA | Dokumentace Microsoftu"
-description: "Tento článek popisuje řešení známých problémů v Advanced Threat Analytics."
-keywords: 
+title: Řešení známých problémů ATA | Dokumentace Microsoftu
+description: Tento článek popisuje řešení známých problémů v Advanced Threat Analytics.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: arzinger
 ms.suite: ems
@@ -18,6 +18,7 @@ ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 03/22/2018
+ms.locfileid: "30010478"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 

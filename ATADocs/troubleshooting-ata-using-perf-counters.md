@@ -1,15 +1,15 @@
 ---
-title: "Řešení potíží s Advanced Threat Analytics pomocí čítačů výkonu | Dokumentace Microsoftu"
-description: "Popisuje, jak se čítače výkonu dají použít k řešení potíží s ATA."
-keywords: 
+title: Řešení potíží s Advanced Threat Analytics pomocí čítačů výkonu | Dokumentace Microsoftu
+description: Popisuje, jak se čítače výkonu dají použít k řešení potíží s ATA.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: df162a62-f273-4465-9887-94271f5000d2
 ms.reviewer: bennyl
 ms.suite: ems
@@ -18,6 +18,7 @@ ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 03/22/2018
+ms.locfileid: "30010427"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 

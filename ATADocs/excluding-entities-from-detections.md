@@ -1,15 +1,15 @@
 ---
-title: "Vyloučení entit z detekce ve službě Advanced Threat Analytics | Dokumentace Microsoftu"
-description: "Popisuje, jak ve službě ATA zastavit zjišťování aktivit konkrétních entit jako podezřelých"
-keywords: 
+title: Vyloučení entit z detekce ve službě Advanced Threat Analytics | Dokumentace Microsoftu
+description: Popisuje, jak ve službě ATA zastavit zjišťování aktivit konkrétních entit jako podezřelých
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: 344c0f33-45e1-42e2-a051-f722a4504531
 ms.reviewer: bennyl
 ms.suite: ems
@@ -18,6 +18,7 @@ ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 03/22/2018
+ms.locfileid: "30010257"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 

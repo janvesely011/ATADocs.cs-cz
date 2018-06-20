@@ -1,15 +1,15 @@
 ---
-title: "Konfigurace předávání událostí Windows v Advanced Threat Analytics | Dokumentace Microsoftu"
-description: "Tento článek popisuje, jaké máte u ATA možnosti pro konfiguraci předávání událostí Windows."
-keywords: 
+title: Konfigurace předávání událostí Windows v Advanced Threat Analytics | Dokumentace Microsoftu
+description: Tento článek popisuje, jaké máte u ATA možnosti pro konfiguraci předávání událostí Windows.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
@@ -18,6 +18,7 @@ ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 03/22/2018
+ms.locfileid: "30010240"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 

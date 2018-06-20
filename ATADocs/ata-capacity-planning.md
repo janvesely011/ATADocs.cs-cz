@@ -1,14 +1,14 @@
 ---
-title: "Plánování nasazení Advanced Threat Analytics | Dokumentace Microsoftu"
-description: "Pomůže vám naplánovat nasazení a určit, kolik serverů ATA bude potřeba k podpoře vaší sítě."
-keywords: 
+title: Plánování nasazení Advanced Threat Analytics | Dokumentace Microsoftu
+description: Pomůže vám naplánovat nasazení a určit, kolik serverů ATA bude potřeba k podpoře vaší sítě.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
 ms.topic: get-started-article
 ms.service: advanced-threat-analytics
-ms.prod: 
+ms.prod: ''
 ms.assetid: 279d79f2-962c-4c6f-9702-29744a5d50e2
 ms.reviewer: bennyl
 ms.suite: ems
@@ -17,6 +17,7 @@ ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 03/22/2018
+ms.locfileid: "30010019"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 

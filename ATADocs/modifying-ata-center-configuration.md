@@ -1,14 +1,14 @@
 ---
-title: "Změna konfigurace ATA Center služby Advanced Threat Analytics | Dokumentace Microsoftu"
-description: "Popisuje, jak změnit IP adresu, port, adresu URL konzoly nebo certifikát pro ATA Center."
-keywords: 
+title: Změna konfigurace ATA Center služby Advanced Threat Analytics | Dokumentace Microsoftu
+description: Popisuje, jak změnit IP adresu, port, adresu URL konzoly nebo certifikát pro ATA Center.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: 93b27f15-f7e5-49bb-870a-d81d09dfe9fc
 ms.reviewer: bennyl
 ms.suite: ems
@@ -17,6 +17,7 @@ ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 03/22/2018
+ms.locfileid: "30010036"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 

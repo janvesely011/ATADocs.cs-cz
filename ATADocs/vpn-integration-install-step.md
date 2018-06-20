@@ -1,15 +1,15 @@
 ---
-title: "Instalace Advanced Threat Analytics – krok 7 | Dokumentace Microsoftu"
-description: "V tomto kroku instalace ATA můžete integrovat vaši síť VPN."
-keywords: 
+title: Instalace Advanced Threat Analytics – krok 7 | Dokumentace Microsoftu
+description: V tomto kroku instalace ATA můžete integrovat vaši síť VPN.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: e0aed853-ba52-46e1-9c55-b336271a68e7
 ms.reviewer: bennyl
 ms.suite: ems
@@ -18,6 +18,7 @@ ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 03/22/2018
+ms.locfileid: "30010325"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 

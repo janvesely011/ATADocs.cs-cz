@@ -18,6 +18,7 @@ ms.sourcegitcommit: 158bf048d549342f2d4689f98ab11f397d9525a2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 03/28/2018
+ms.locfileid: "30202329"
 ---
 # <a name="updating-ata-to-version-19"></a>Aktualizace ATA na verzi 1.9
 

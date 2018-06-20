@@ -1,15 +1,15 @@
 ---
-title: "Správa databáze Advanced Threat Analytics | Dokumentace Microsoftu"
-description: "Postupy, které vám pomůžou přesunout, zálohovat a obnovit databázi ATA"
-keywords: 
+title: Správa databáze Advanced Threat Analytics | Dokumentace Microsoftu
+description: Postupy, které vám pomůžou přesunout, zálohovat a obnovit databázi ATA
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: 05e49e23-6e0a-4ec0-9a63-a2093173c8a1
 ms.reviewer: bennyl
 ms.suite: ems
@@ -18,6 +18,7 @@ ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 03/22/2018
+ms.locfileid: "30009366"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 

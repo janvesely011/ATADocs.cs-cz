@@ -1,15 +1,15 @@
 ---
-title: "Konfigurace zrcadlení portů při nasazování Advanced Threat Analytics | Dokumentace Microsoftu"
-description: "Popisuje možnosti zrcadlení portů a způsob jejich konfigurace pro ATA."
-keywords: 
+title: Konfigurace zrcadlení portů při nasazování Advanced Threat Analytics | Dokumentace Microsoftu
+description: Popisuje možnosti zrcadlení portů a způsob jejich konfigurace pro ATA.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: cdaddca3-e26e-4137-b553-8ed3f389c460
 ms.reviewer: bennyl
 ms.suite: ems
@@ -18,6 +18,7 @@ ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 03/22/2018
+ms.locfileid: "30010291"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 

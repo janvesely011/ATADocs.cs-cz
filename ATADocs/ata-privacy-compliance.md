@@ -18,6 +18,7 @@ ms.sourcegitcommit: 571297209b15e9dc4d43c5e57da359973da8d207
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34470725"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 

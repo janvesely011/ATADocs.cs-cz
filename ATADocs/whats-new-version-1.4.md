@@ -1,15 +1,15 @@
 ---
 title: Novinky Advanced Threat Analytics verze 1.4 | Dokumentace Microsoftu
-description: "Uvádí novinky ATA verze 1.4 spolu se známými problémy."
-keywords: 
+description: Uvádí novinky ATA verze 1.4 spolu se známými problémy.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 01/23/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: cbea47f9-34c1-42b6-ae9e-6a472b49e1a5
 ms.reviewer: bennyl
 ms.suite: ems
@@ -18,6 +18,7 @@ ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/07/2017
+ms.locfileid: "24018520"
 ---
 # <a name="what39s-new-in-ata-version-14"></a>Novinky ATA verze 1.4
 Tyto poznámky k verzi obsahují informace o známých problémech ve verzi 1.4 Advanced Threat Analytics.
