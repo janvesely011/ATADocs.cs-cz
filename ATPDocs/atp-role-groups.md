@@ -1,11 +1,11 @@
 ---
-title: Azure Advanced Threat Protection role skupiny pro správu přístupu | Microsoft Docs
-description: Vás provede procesem práce se skupinami role Azure ATP.
+title: Azure Advanced Threat Protection role skupin pro správu přístupu | Dokumentace Microsoftu
+description: Provede vás práce se skupinami rolí služby Azure ATP.
 keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 5/22/2018
+ms.date: 6/26/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,66 +13,65 @@ ms.technology: ''
 ms.assetid: effca0f2-fcae-4fca-92c1-c37306decf84
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 77a2464634b4286d2f6d35504e9ab7512cf7b612
-ms.sourcegitcommit: 324dc941282f2948366afa5a919bda0b029bd59d
+ms.openlocfilehash: 39709e4749b7f897bffb914dd1e15c80277d6ed8
+ms.sourcegitcommit: 7d025a2518ce63f38ce609dc21d8c3bacdd6a8e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34444769"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36948961"
 ---
-*Platí pro: Azure Advanced Threat Protection*
+*Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
 
 
 
-# <a name="azure-atp-role-groups"></a>Azure skupin rolí ATP
+# <a name="azure-atp-role-groups"></a>Skupiny rolí Azure ATP
 
-Azure ATP nabízí na základě rolí zabezpečení k ochraně dat podle potřeb konkrétní zabezpečení a dodržování předpisů v organizaci. Azure ATP podporují tři samostatné role: správci, uživatelů a prohlížeče. 
+Ochrana ATP v programu Azure nabízí zabezpečení na základě rolí na trhu při ochraně dat podle konkrétního zabezpečení a dodržování předpisů v organizaci. Ochrana ATP v programu Azure podporují tři samostatné role: správci, uživatelé a čtenáři. 
+
+[!INCLUDE [Handle personal data](../includes/gdpr-intro-sentence.md)]
+
+Skupiny rolí umožňují správu přístupu pro služby Azure ATP. Pomocí skupin rolí můžete oddělit úlohy v rámci týmu zabezpečení a udělit přístup pouze v takovém rozsahu, který uživatelé potřebují ke své práci. Tento článek vysvětluje správu přístupu a autorizaci rolí ochrany ATP v programu Azure a pomůže vám začít pracovat se skupinami rolí v ochrany ATP v programu.
 
 > [!NOTE]
-> Pokud vás zajímá zobrazení nebo odstranění osobních údajů, přečtěte si pokyny společnosti Microsoft v [správce dodržování předpisů Microsoft](https://servicetrust.microsoft.com/ComplianceManager) a v [GDPR části webu Microsoft 365 Enterprise dodržování předpisů](https://docs.microsoft.com/en-us/microsoft-365/compliance/gdpr). Pokud hledáte obecné informace o GDPR, přečtěte si téma [GDPR části portálu služby důvěřovat](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
-
-Role skupiny umožňují správu přístupu k Azure ATP. Pomocí skupin rolí můžete oddělit úlohy v rámci týmu zabezpečení a udělit přístup pouze v takovém rozsahu, který uživatelé potřebují ke své práci. Tento článek vysvětluje správu přístupu a autorizace Azure ATP role a pomáhá získat spuštěná pomocí skupin rolí v ATP.
-
-> [!NOTE]
-> Všechny globální správce nebo správce zabezpečení na klienta Azure Active Directory je automaticky správce Azure ATP.
+> Všechny globální správce nebo správce zabezpečení do vašeho tenanta Azure Active Directory je automaticky správcem služby Azure ATP.
 
 ## <a name="accessing-the-workspace-management-portal"></a>Přístup k portálu pro správu pracovního prostoru
 
-Přístup k portálu pro správu prostoru (portal.atp.azure.com) můžete provést pouze uživatele Azure AD, který má roli adresáře globální správce nebo správce zabezpečení. Po zadání portálu, můžete vytvořit jiný pracovní prostory. Pro každý pracovní prostor služby Azure ATP vytvoří tři skupiny zabezpečení v klientovi služby Azure Active Directory: správci, uživatelé, prohlížečů. 
+Přístup k portálu pro správu pracovního prostoru (portal.atp.azure.com) můžete udělat jenom uživatele Azure AD, který má role adresáře globální správce nebo správce zabezpečení. Jakmile zadáte na portál, můžete vytvořit různé pracovní prostory. Za každý pracovní prostor, službě ochrana ATP v programu Azure vytvoří tři skupiny zabezpečení ve vašem tenantovi Azure Active Directory: správci, uživatelé, prohlížeče. 
 
 > [!NOTE]
-> Přístup k portálu Azure ATP pracovního prostoru je udělit pouze pro uživatele v rámci skupiny zabezpečení Azure AD pro tento pracovní prostor a globální správci a správci zabezpečení.
+> Přístup k portálu pracovního prostoru ochrana ATP v programu Azure poskytována pouze pro uživatele v rámci skupiny zabezpečení Azure AD pro tento pracovní prostor a globální správci a správci zabezpečení.
 
 
-## <a name="types-of-azure-atp-security-groups"></a>Typy skupin zabezpečení Azure ATP 
+## <a name="types-of-azure-atp-security-groups"></a>Typy skupin zabezpečení služby Azure ATP 
 
-Azure ATP zavádí tři typy skupiny zabezpečení: Azure ATP *název pracovního prostoru* správců, Azure ATP *název pracovního prostoru* uživatelů a Azure ATP *název pracovního prostoru* prohlížečů . Následující tabulka popisuje typ přístupu na portálu Azure ATP prostoru k dispozici na roli. Podle toho, jakou roli přiřadíte, různé obrazovky a možnosti nabídky v Azure ATP prostoru portál nejsou k dispozici, následujícím způsobem:
+Zavádí tři typy skupiny zabezpečení, ochrany ATP v programu Azure: ochrana ATP v programu Azure *název pracovního prostoru* Administrators, ochrana ATP v programu Azure *název pracovního prostoru* uživatele a služby Azure ATP *název pracovního prostoru* prohlížeče . Následující tabulka popisuje typ přístupu na portálu ochrany ATP v programu Azure pracovní prostor dostupný pro určitou roli. V závislosti na roli, které přiřadíte, různé obrazovky a možnosti nabídky v ochrany ATP v programu Azure portal pracovní prostor nejsou k dispozici, následujícím způsobem:
 
-|Aktivita |Azure ATP *název pracovního prostoru* správci|Azure ATP *název pracovního prostoru* uživatelů|Azure ATP *název pracovního prostoru* prohlížečů|
+|Aktivita |Ochrana ATP v programu Azure *název pracovního prostoru* správci|Ochrana ATP v programu Azure *název pracovního prostoru* uživatelů|Ochrana ATP v programu Azure *název pracovního prostoru* prohlížeče|
 |----|----|----|----|
 |Přihlášení|K dispozici|K dispozici|K dispozici|
 |Změna stavu podezřelé aktivity|K dispozici|K dispozici|Není k dispozici|
 |Sdílení a export podezřelé aktivity prostřednictvím e-mailu nebo odkazu|K dispozici|K dispozici|K dispozici|
 |Změna stavu výstrah monitorování|K dispozici|Není k dispozici|Není k dispozici|
-|Aktualizace konfigurace Azure ATP|K dispozici|Není k dispozici|Není k dispozici|
-|senzor – přidat|K dispozici|Není k dispozici|Není k dispozici|
-|senzor – odstranit |K dispozici|Není k dispozici|Není k dispozici|
+|Aktualizace konfigurace ochrany ATP v programu Azure|K dispozici|Není k dispozici|Není k dispozici|
+|Snímač – přidat|K dispozici|Není k dispozici|Není k dispozici|
+|Snímač – odstranit |K dispozici|Není k dispozici|Není k dispozici|
 |Monitorované DC – přidání |K dispozici|Není k dispozici|Není k dispozici|
 |Monitorované DC – odstranění|K dispozici|Není k dispozici|Není k dispozici|
 |Zobrazení výstrah a podezřelých aktivit|K dispozici|K dispozici|K dispozici|
 
 
-Uživatelé se pokusí přistoupit ke stránce, která není k dispozici pro jejich role skupiny, je přesměrován na stránku neoprávněným Azure ATP. 
+Uživatelé se pokusí otevřít stránku, která není k dispozici pro jejich skupinu rolí, je přesměrován na stránku neoprávněné ochrany ATP v programu Azure. 
 
-## <a name="add-and-remove-users"></a>Přidání a odebrání uživatelů 
+## <a name="add-and-remove-users"></a>Přidávat a odebírat uživatele 
 
-Azure ATP používá skupiny zabezpečení Azure AD jako základ pro skupin rolí. Skupin rolí lze spravovat z [ https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/UserManagementMenuBlade/All skupiny](https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/UserManagementMenuBlade/All groups).  Pouze AAD uživatele můžete přidat nebo odebrat ze skupiny zabezpečení. 
+Ochrana ATP v programu Azure používá skupiny zabezpečení Azure AD jako základ pro skupiny rolí. Skupiny rolí je možné spravovat z [ https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/UserManagementMenuBlade/All%20groups ](https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/UserManagementMenuBlade/All%20groups). Pouze uživatel AAD lze přidat nebo odebrat ze skupiny zabezpečení. 
 
 
 ## <a name="see-also"></a>Viz také
 - [Nástroje pro změnu velikosti ATA](http://aka.ms/aatpsizingtool)
 - [Architektura ATA](atp-architecture.md)
 - [Instalace ATA](install-atp-step1.md)
-- [Podívejte se na fórum ATP!](https://aka.ms/azureatpcommunity)
+- [Podívejte se na fórum ochrany ATP v programu.](https://aka.ms/azureatpcommunity)
 

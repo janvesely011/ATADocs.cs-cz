@@ -1,11 +1,11 @@
 ---
-title: Co je nového v Azure ATP | Microsoft Docs
-description: Popisuje nejnovější verze Azure ATP a poskytuje informace o tom, co je nového v každé verzi.
+title: Co je nového v ochraně ATP v Azure | Dokumentace Microsoftu
+description: Popisuje nejnovější verze ochrany ATP v programu Azure a poskytuje informace o novinkách v jednotlivých verzích.
 keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 5/13/2018
+ms.date: 6/24/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,106 +13,162 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a40c2b188e777ca78462e4a3901b311af457d9ae
-ms.sourcegitcommit: 170bc1c04d1ea0538dddbb497d8045781a6a8b74
+ms.openlocfilehash: 7282b58e25c3cc79f40ca05477bb015f8746cd0d
+ms.sourcegitcommit: 7d025a2518ce63f38ce609dc21d8c3bacdd6a8e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/13/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36949016"
 ---
-*Platí pro: Azure Advanced Threat Protection*
+*Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
 
 # <a name="whats-new-in-azure-atp"></a>Co je nového v Azure ATP 
 
+## <a name="azure-atp-release-237"></a>Verze ochrany ATP v programu Azure 2.37
+
+Vydáno 24. června 2018
+
+- Tato verze obsahuje opravy a vylepšení pro několik problémů. 
+
+## <a name="azure-atp-release-236"></a>Verze ochrany ATP v programu Azure hodnotu 2,36
+
+Vydáno 17. června 2018
+
+- Tato verze obsahuje opravy a vylepšení pro několik problémů. 
 
 
-## <a name="azure-atp-release-232"></a>Azure ATP verze 2.32
+## <a name="azure-atp-release-235"></a>Verze ochrany ATP v programu Azure 2.35
 
-Vydané 13 může 2018
+Vydáno 10. června 2018
  
-- Tato verze obsahuje opravy a vylepšení pro víc problémy. 
-
-## <a name="azure-atp-release-231"></a>Azure ATP verze 2.31
-
-Vydané 6 může 2018
+- **Nové ve verzi preview detekce**<br></br>Z nichž lze dodat nové funkce v nyní, bude ochrana ATP v programu Azure využít výhod skutečnost, že je Cloudová služba – rychlá cykly – a poskytneme vám nové detekce nejkratší možné době. Tyto nové detekce byla označená jako "preview" při prvním vydání. Obvykle nové detekce se přesune z verze preview pro obecnou dostupnost během pár týdnů. Ve výchozím nastavení se zobrazí náhled detekcí. Informace o vyjádří svůj nesouhlas najdete v tématu [ve verzi preview detekce](working-with-suspicious-activities.md#preview-detections).
  
-- Vylepšení byly provedeny pro překlad názvů. V rámci této snahy kromě active řešení RPC a rozhraní NetBIOS, senzoru vystavovat paket TLS klienta Hello pro koncový bod RDP portu (3389). 
-- Tato verze obsahuje opravy a vylepšení pro víc problémy. 
+- **Podezřelé zjišťování sítě VPN**<br></br>Tato verze přináší předběžnou verzi detekce podezřelých VPN. Ochrana ATP v programu Azure učí chování uživatele sítě VPN, včetně počítačů, uživatelů přihlášených k a umístění, které uživatelé připojit z a vás upozorní, když je odchylky od očekávané chování. Další informace najdete v tématu [detekce podezřelých VPN](suspicious-activity-guide.md#suspicious-vpn-detection).
 
-## <a name="azure-atp-release-230"></a>Azure ATP verze 2.30
+- **Zpožděné aktualizace**<br></br>Teď máte možnost nastavit ochrana ATP v programu Azure snímačů a aktualizovat později pokaždé, když aktualizace ochrany ATP v programu Azure. Teď můžete nastavit každou senzoru služby Azure ATP **zpožděné aktualizace** tak, aby se aktualizuje po 24 hodinách od aktualizace ochrany ATP v programu Azure cloud service. Tato funkce umožňuje otestovat aktualizaci na konkrétní testovací senzorů a aktualizovat vaše produkční senzorů pouze později. Pokud během první cyklu aktualizací zjistíte problém, otevřete lístek podpory. Další informace najdete v části [ochrany ATP v programu Azure aktualizace senzorů](sensor-update.md).
 
-Vydané 29. dubna 2018
+- **Implementace zjišťování aktualizované neobvyklý protokol**<br></br>Neobvyklý protokol implementace detekce nyní poskytuje další informace. Můžete teď najdete v tématu, které potenciál útoku podezření nástroj ochrany ATP v programu Azure je v práci v síti. Další informace najdete v tématu [Průvodce prošetřováním podezřelých aktivit](suspicious-activity-guide.md).
  
-- Šifrování přechod na starší verzi podezřelých aktivit nyní zadat důkaz oddíl popisuje detekovaných službou Azure ATP příznaky, které způsobit, že předpokládat, že, k čemu aktivitu přechod na starší verzi šifrování. 
--   Azure ATP teď používá Azure e-mailu Orchestrator pro všechny e-mailů odeslaný Azure ATP, včetně podezřelé aktivity, monitorování výstrah a sestav. Zobrazí se, že tyto e-mailová oznámení teď můžete pomocí konzistentní formát pro snadné použití a souborů aplikace Excel bude propojen v e-mailu ke stažení z konzoly.
+- **Výstraha zastaralé senzor**<br></br>Ochrana ATP v programu Azure zahrnuje nové monitorování výstrahy dali vám vědět, pokud je senzoru více než tři verze zastaralé. Pokud se zobrazí toto upozornění, by měl aktualizovat senzoru nebo prozkoumat, proč se senzor neaktualizují automaticky. Pokud výstrahy se opakuje, odinstalujte a znovu nainstalujte senzoru.
+
+- Tato verze obsahuje opravy a vylepšení pro několik problémů. 
+
+## <a name="azure-atp-release-234"></a>Verze ochrany ATP v programu Azure 2.34
+
+Vydáno 3. června 2018
+ 
+- Tato verze obsahuje opravy a vylepšení pro několik problémů. 
+
+ 
+## <a name="azure-atp-release-233"></a>Verze ochrany ATP v programu Azure 2,33
+
+Vydáno 27. května 2018
+
+- Funkce ve verzi Preview: ochrana ATP v programu Azure teď podporuje nové jazyky a 13 nové národní prostředí:
+    - Čeština
+    - Maďarština
+    - Italština
+    - Korejština
+    - Holandština
+    - Polština
+    - Portugalština (Brazílie)
+    - Portugalština (Portugalsko)
+    - Rusko
+    - Švédština
+    - Turečtina
+    - Čínština (Čína)
+    - Čínština (Tchaj-wan)
+
+
+
+## <a name="azure-atp-release-232"></a>Verze ochrany ATP v programu Azure 2.32
+
+Vydáno 13. května 2018
+ 
+- Tato verze obsahuje opravy a vylepšení pro několik problémů. 
+
+## <a name="azure-atp-release-231"></a>Verze ochrany ATP v programu Azure 2.31
+
+Vydáno 6. května 2018
+ 
+- Byly vylepšeny překlad názvů. V rámci tohoto úsilí, kromě aktivního řešení RPC a NetBIOS senzor vydat paket TLS klienta Hello na koncový bod protokolu RDP (3389) portu. 
+- Tato verze obsahuje opravy a vylepšení pro několik problémů. 
+
+## <a name="azure-atp-release-230"></a>Verze ochrany ATP v programu Azure 2,30
+
+Vydáno 29. dubna 2018
+ 
+- Podezřelé aktivity oslabení šifrování teď obsahují důkazy oddílu, který popisuje příznaky detekovaných službou ochrany ATP v programu Azure, které ji podezření, že, k čemu aktivita oslabení šifrování. 
+-   Ochrana ATP v programu Azure nyní používá Azure Email Orchestrator pro všechny e-mailů z ochrany ATP v programu Azure, včetně podezřelých aktivit monitorování výstrah a sestav. Uvidíte, že tato e-mailová oznámení teď řídí konzistentní formát pro snadné použití a Excelové soubory se propojí s e-mailu ke stažení z konzoly.
  
  
 
-## <a name="azure-atp-release-229"></a>Azure ATP verze 2.29
+## <a name="azure-atp-release-229"></a>Verze ochrany ATP v programu Azure 2.29
 
-Vydané 22 duben 2018
+Vydáno 22. dubna 2018
  
-- Tato verze obsahuje opravy a vylepšení pro víc problémy. 
+- Tato verze obsahuje opravy a vylepšení pro několik problémů. 
  
  
-## <a name="azure-atp-release-228"></a>Azure ATP verze 2.28
+## <a name="azure-atp-release-228"></a>Verze ochrany ATP v programu Azure 2.28
 
-Vydané 15 duben 2018
+Vydáno 15. dubna 2018
  
--   Uživatelé, kteří jsou členy skupin rolí uživatelům ATP Azure a Azure ATP prohlížeče nyní mají oprávnění k zobrazení výstrahy monitorování.
-- Tato verze obsahuje opravy a vylepšení pro víc problémy. 
+-   Uživatelé, kteří jsou členy skupin rolí uživatelů ochrany ATP v programu Azure a prohlížeče ochrany ATP v programu Azure teď mají oprávnění k zobrazení výstrah monitorování.
+- Tato verze obsahuje opravy a vylepšení pro několik problémů. 
 
 
-## <a name="azure-atp-release-227"></a>Azure ATP verze 2,27
+## <a name="azure-atp-release-227"></a>Verze ochrany ATP v programu Azure 2,27
 
-Vydané 8. dubna 2018
+Vydáno 8. dubna 2018
 
-- Nyní máte možnost k poskytnutí zpětné vazby uživatele z horním navigačním panelu. Kliknutím na tlačítko emotikony v panelu nabídek umožňuje odesílat e-mailu týmu Azure Advanced Threat Protection s váš názor.
+- Nyní máte možnost k poskytnutí zpětné vazby uživatelů v horním navigačním panelu. Kliknutím na ikonu veselého obličeje v panelu nabídky vám umožní odesílat e-mailu týmu rozšířené ochrany před internetovými útoky pro Azure s vaším názorem.
 
-- Tato verze obsahuje opravy a vylepšení pro víc problémy. 
+- Tato verze obsahuje opravy a vylepšení pro několik problémů. 
  
 
-## <a name="azure-atp-release-226"></a>Azure ATP verze 2.26
+## <a name="azure-atp-release-226"></a>Verze ochrany ATP v programu Azure 2.26
 
-Vydané 25 března 2018
+Vydáno 25. března 2018
 
-- Pokud Azure ATP upozorňuje podezřelé aktivity, které identifikujete jako neškodné kladnou (legitimní akce, který není podezřelou aktivitu) máte možnost vyloučit počítače a IP adresy pro další detekce, včetně: šifrování přechod na starší verzi, LDAP Útok hrubou silou, Forged PAC, hrubou silou a Pass-the-hash.
--   Byl vylepšen výkon senzor Azure ATP.
--   Novou oblast pro nasazení pracovního prostoru, přidala se teď můžete nasadit pracovního prostoru v Asii. 
-
-
-## <a name="azure-atp-release-225"></a>Azure ATP verze 2.25
-
-Vydané 18 března 2018
-
-- Vícefaktorové ověřování (MFA) se teď podporuje v Azure ATP. Klienty pomocí vícefaktorového ověřování můžete nyní přejít na portál Azure ATP.
-- Azure ATP má teď [ **stav systému** ](https://health.atp.azure.com/) stránky, kde přinášejí informace o tom, jestli portálu pro správu pracovního prostoru je nahoru a aktivní, pokud dochází k potížím s detekcí a pokud je možné odesílat senzoru přenosy dat do cloudu. Dostanete **stav systému** z řádku nabídek Azure ATP.
+- Až ochrany ATP v programu Azure upozorňuje vás na podezřelé aktivity, které identifikují jako neškodné pozitivní (legitimní akci, která není podezřelé aktivity), budete mít možnost vyloučit počítače a IP adresy pro další způsoby detekce, včetně: oslabení šifrování, LDAP Útok hrubou silou, podobě zfalšovaných certifikátů PAC, útoky hrubou silou a Pass-the-hash.
+-   Byl vylepšen výkon senzoru služby Azure ATP.
+-   Nové oblasti pro nasazení pracovního prostoru, přidala se teď můžete nasadit pracovní prostor v Asii. 
 
 
-## <a name="azure-atp-release-224"></a>Azure ATP verze 2,24
+## <a name="azure-atp-release-225"></a>Verze ochrany ATP v programu Azure 2.25
 
-Vydané 11 března 2018
+Vydáno 18. března 2018
+
+- Vícefaktorové ověřování (MFA) je nyní podporována v ochrany ATP v programu Azure. Tenanty používající MFA nyní můžete zadat na portálu ochrany ATP v programu Azure.
+- Ochrana ATP v programu Azure teď má [ **stav systému** ](https://health.atp.azure.com/) stránku, kde přinášejí informace o tom, zda na portálu pro správu pracovního prostoru je aplikace bude aktivní, pokud dojde k problémům s detekcí a senzor je možné odeslat přenosy dat do cloudu. Můžete přistupovat **stav systému** z řádku nabídek služby Azure ATP.
+
+
+## <a name="azure-atp-release-224"></a>Verze ochrany ATP v programu Azure 2,24
+
+Vydáno 11. března 2018
 
 **Nové a aktualizované detekce**
-  - Vytvoření podezřelé služby – útočníci se pokusí spustit podezřelé services ve vaší síti. Azure ATP nyní vyvolá výstrahu, pokud rozpozná, že někdo v určitém počítači běží novou službu, která vypadá podezřelé. Toto zjišťování je na základě událostí (ne síťový provoz) a je na všech řadičích domény v síti, která je pro předávání událostí 7045, Azure ATP. Další informace najdete v článku [Průvodce podezřelou aktivitu](suspicious-activity-guide.md).
+  - Podezřelé vytvoření služby – útočníci se pokusí spustit podezřelé služby ve vaší síti. Ochrana ATP v programu Azure nyní vydá výstrahu, když zjistí, že někdo v určitém počítači běží novou službu, která se zdá podezřelá. Tato detekce se zakládá na událostech (ne přenosy v síti) a je na všech řadičích domény v síti, které je předávání událostí 7045 do služby Azure ATP. Další informace najdete v článku [Průvodce prošetřováním podezřelých aktivit](suspicious-activity-guide.md).
 
 **Vylepšené šetření**
-  - Azure ATP zahrnuje provádět rozšířené [profil entity](entity-profiles.md). Profil entity poskytuje platformu, která je určená pro přímý podrobnější prošetření aktivit uživatele patří sem materiály, které k nim přistupovat, počítačů, které budou přihlášený a mnoho dalších. Profil entity také poskytuje data adresáře a umožňuje identifikovat potenciální cesty laterální pohyb do nebo z entity, které další informace o potenciálních porušení ve vaší organizaci.
+  - Ochrana ATP v programu Azure zahrnuje bohatších možností [profil entity](entity-profiles.md). Profil entity poskytuje platformu, která je navržená pro podrobné informace o zkoumání aktivity uživatelů, jedná se o prostředky, které k nim přistupovat, počítače, které jsou přihlášeni a mnoho dalších. Profil entity také poskytuje data adresáře a umožní vám identifikovat potenciální cesty taktiky Lateral Movement do nebo z entity, můžete získat další informace o potenciálním porušením ve vaší organizaci.
 
-  - ATP vám umožňuje ručně značky entity jako *citlivé* k vylepšení detekce a monitorování. Toto značení má dopad na mnoho detekce Azure ATP, jako je například změna detekce citlivou skupinu a [laterální pohyb cesta](use-case-lateral-movement-path.md), které spoléhají na entity, které se považují za citlivé.
+  - Ochrana ATP v programu můžete ručně značka entity jako *citlivé* k vylepšení detekce a sledování. Toto značení ovlivňuje mnoho detekce ochrany ATP v programu Azure, jako je například detekci úprav citlivých skupin a [cesty laterální pohyb](use-case-lateral-movement-path.md), které využívají entity, které se považují za citlivé.
 
-**Nové sestavy, který vám pomůže prozkoumat**
-  - [Zveřejněné hesla v nešifrovaném textu sestavy](reports.md) umožňuje rozpoznat, kdy služby odeslat přihlašovací údaje účtu se odesílají v prostém textu. To umožňuje prozkoumat služby a zvýšit úroveň zabezpečení sítě. Tato sestava nahrazuje výstrahy podezřelé aktivity ve formě prostého textu.
-  - [Pomoci odhalit laterální pohyb cesty k sestavě citlivé účty](reports.md) uvádí citlivé účty, které jsou zveřejňovány prostřednictvím cesty laterální pohyb. To umožňuje zmírnit tyto cesty a posilovat jejich zabezpečení sítě s cílem minimalizovat riziko útoku prostor. To vám umožňuje zabránit laterální pohyb tak, aby útočníci nelze přesunout ve vaší síti mezi uživatelé a počítače, dokud se dosáhl jackpotu virtuální zabezpečení: přihlašovací údaje účtu citlivé správce.
+**Nové sestavy, které pomáhají s prošetřením**
+  - [Hesla přístupný ve formátu prostého textu sestavy](reports.md) umožňuje rozpoznat, kdy se služby odeslat přihlašovací údaje k účtu se odesílají v prostém textu. To umožňuje prozkoumat služby a zvýšit úroveň zabezpečení sítě. Tato sestava nahradí výstrahy podezřelá aktivita ve formě prostého textu.
+  - [Laterální cesty Lateral Movement k citlivým účtům sestavě](reports.md) obsahuje citlivé účty, které jsou zveřejňovány prostřednictvím cesty taktiky Lateral Movement. To umožňuje zmírnit tyto cesty a posilovat jejich zabezpečení sítě s cílem minimalizovat riziko útoku povrchu. To vám umožňuje zabránit taktiky Lateral Movement tak, aby útočníci nelze přesouvat mezi vaší sítě mezi uživatelé a počítače služby, dokud se přístupů v loterii zabezpečení virtuálních: přihlašovací údaje účtu správce citlivé.
 
-- Můžete teď snadno poskytnout přístup k dokumentaci pomocí odkazu v rámci upozornění na podezřelou aktivitu Chcete-li zobrazit [šetření kroky, které můžete provést](suspicious-activity-guide.md). 
+- Můžete teď snadno poskytnout přístup k dokumentaci z odkazu v rámci upozornění na podezřelou aktivitu Chcete-li zobrazit [šetření kroky, které můžete provést](suspicious-activity-guide.md). 
 
 **Vylepšení výkonu**
- -  Senzor infrastruktury Azure ATP byl vylepšen výkonu: agregovaná zobrazení provozu umožňuje optimalizace procesoru a paket kanálu a opětovně používá sockets na řadičích domény, chcete-li minimalizovat relací SSL na řadič domény.
+ -  Senzor infrastruktury služby Azure ATP byla vylepšena z hlediska výkonu: agregovaná zobrazení provozu povolí optimalizaci CPU a paketů kanálu a opětovně používá sockets k řadičům domény, chcete-li minimalizovat relace protokolu SSL řadiči domény.
 
 ## <a name="see-also"></a>Viz také
 - [Požadavky služby Azure ATP](atp-prerequisites.md)
 - [Plánování kapacity v Azure ATP](atp-capacity-planning.md)
 - [Konfigurace shromažďování událostí](configure-event-collection.md)
 - [Konfigurace předávání událostí systému Windows](configure-event-forwarding.md#configuring-windows-event-forwarding)
-- [Podívejte se na fórum ATP!](https://aka.ms/azureatpcommunity)
+- [Podívejte se na fórum ochrany ATP v programu.](https://aka.ms/azureatpcommunity)
