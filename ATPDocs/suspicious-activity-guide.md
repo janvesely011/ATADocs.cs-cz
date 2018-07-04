@@ -1,11 +1,11 @@
 ---
-title: Průvodce podezřelou aktivitu Azure ATP | Microsoft Docs
+title: Průvodce prošetřováním podezřelých aktivit Azure ochrany ATP v programu | Dokumentace Microsoftu
 d|Description: This article provides a list of the suspicious activities Azure ATP can detect and steps for remediation.
 keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 5/6/2018
+ms.date: 6/10/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,26 +13,27 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9b28cf2497e1f742416f996e4b2dcaf934dc9142
-ms.sourcegitcommit: 39a1ddeb6c9dd0817f92870b711627350b7f6f03
+ms.openlocfilehash: de0b8f1673098a1b4b00255f4543ca18a903c83f
+ms.sourcegitcommit: f61616a8269d27a8fcde6ecf070a00e2c56481ac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35259221"
 ---
-*Platí pro: Azure Advanced Threat Protection*
+*Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
 
-# <a name="azure-advanced-threat-protection-suspicious-activity-guide"></a>Průvodce podezřelou aktivitu Azure Advanced Threat Protection
+# <a name="azure-advanced-threat-protection-suspicious-activity-guide"></a>Průvodce prošetřováním podezřelých aktivit Azure Advanced Threat Protection
 
-Následující správné šetření můžou být klasifikované podezřelé aktivity, jako:
+Po správném šetření dají považovat za podezřelé aktivity:
 
--   **Hodnota TRUE, kladnou**: škodlivou akci detekovaných službou Azure ATP.
+-   **Pravdivě pozitivní upozornění**: škodlivá akce zjištěná službou ochrany ATP v programu Azure.
 
--   **Neškodné true kladnou**: akce detekovaných službou Azure ATP skutečné, ale není škodlivý, jako je například průnikům testu.
+-   **Neškodné pravdivě pozitivní upozornění**: akce zjištěná službou ochrany ATP v Azure, která je skutečná, ale není škodlivá, třeba test průniku.
 
--   **Falešně pozitivní**: znamená aktivity nebylo dojít alarmů hodnotu false.
+-   **Falešně pozitivní**: alarm hodnotu false, to znamená aktivity neměli stát.
 
-Další informace o tom, jak pracovat s výstrahami Azure ATP najdete v tématu [práce s podezřelými aktivitami](working-with-suspicious-activities.md).
+Další informace o tom, jak pracovat s výstrahami ochrany ATP v programu Azure najdete v tématu [práce s podezřelými aktivitami](working-with-suspicious-activities.md).
 
 
 ## <a name="abnormal-sensitive-group-modification"></a>Neobvyklá úprava citlivých skupin
@@ -40,246 +41,246 @@ Další informace o tom, jak pracovat s výstrahami Azure ATP najdete v tématu 
 
 **Popis**
 
-Útočníci přidání uživatelů do vysoce privilegovaných skupin. Učiní tak k získání přístupu k více prostředkům a k získání persistency. Detekce spoléhá na profilace činnosti Změna skupiny uživatelů a výstrahy, když je vidět neobvyklé doplněk ke skupině citlivé. Profilace nepřetržitě provádí ATP. Minimální dobu, než může být výstraha je jeden měsíc na každém řadiči domény.
+Útočníci přidání uživatelů do skupiny s vysokou úrovní oprávnění. Učiní tak získat přístup k více prostředkům a k získání průniku do sítě. Tato detekce spoléhá na profilaci aktivity Změna skupiny uživatelů a upozorní při viděli doplněk neobvyklé citlivých skupin. Profilace se provádí nepřetržitě pomocí ochrany ATP v programu. Minimální dobu, než může být výstraha je jeden měsíc na každém řadiči domény.
 
-Definice citlivých skupin v Azure ATP, najdete v části [práce s citlivé účty](sensitive-accounts.md).
+Definice citlivých skupin v Azure ATP, naleznete v tématu [práce s citlivými účty](sensitive-accounts.md).
 
 
-Detekce spoléhá na [události auditovat na řadičích domény](configure-event-collection.md).
-Abyste měli jistotu, vaše doména je potřebné události auditu řadiče.
+Tato detekce spoléhá na [události se auditují na řadiče domény](configure-event-collection.md).
+Abyste měli jistotu, vaše doména auditu řadiče potřebné události.
 
 **Šetření**
 
-1. Oprávněný úpravy skupiny? </br>Úpravy legitimní skupiny, které dochází zřídka a nebyly naučili jako "normální", může způsobit výstrahu, která lze považovat za neškodné skutečně pozitivní.
+1. Úpravy skupiny je legitimní? </br>Úpravy legitimní skupiny zřídka dojít a nebyly zjistili, jako je "normální", může dojít k upozornění, která může být považovaná za neškodné pravdivě pozitivní upozornění.
 
-2. Pokud objekt přidaný uživatelský účet, zkontrolujte, které akce trvala uživatelský účet po přidávané ke skupině pro správu. Přejděte na stránku uživatele v Azure ATP získat další kontext. Byly existuje jakékoliv podezřelé aktivity, které jsou přidružené k účtu před nebo po přidání byla provedena? Stažení **citlivou skupinu úpravy** sestav zobrazit, jaké další úpravy byly učiněna a kým stejné časovém období.
+2. Pokud byl přidaný objekt uživatelský účet, zkontrolujte akce, které trvalo uživatelský účet po přidání do skupiny správců. Přejděte na stránku uživatele v Azure ATP, chcete-li získat podrobnější přehled. Tam byli jakýkoli jiný podezřelé aktivity, které jsou přidružené k účtu před nebo po přidání konal úplně? Stáhnout **úpravy citlivých skupin** sestavu, abyste viděli, jaké další změny byly provedeny a kým stejného časového období.
 
-**Nápravy**
+**Náprava**
 
-Minimalizujte počet uživatelů, kteří mají oprávnění k úpravě citlivých skupin.
+Minimalizujte počet uživatelů, kteří mají oprávnění upravit citlivých skupin.
 
-Nastavit [Privileged Access Management pro službu Active Directory](https://docs.microsoft.com/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services) Pokud jsou k dispozici.
+Nastavit [Privileged Access Management pro službu Active Directory](https://docs.microsoft.com/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services) Pokud je k dispozici.
 
 
-## <a name="brute-force-attack-using-ldap-simple-bind"></a>Útoku hrubou silou použití jednoduché vazby protokolu LDAP
+## <a name="brute-force-attack-using-ldap-simple-bind"></a>Útok hrubou silou pomocí jednoduché vazby LDAP.
 
 **Popis**
 
 >[!NOTE]
-> Hlavní rozdíl mezi **selhání podezřelé ověřování** a toto zjišťování je, že v této detekce Azure ATP můžete určit, zda různá hesla používán.
+> Hlavní rozdíl mezi **podezřelá neúspěšná ověření** a toto zjišťování je, že v této detekce ochrany ATP v programu Azure můžete určit, zda byly použity odlišná hesla.
 
-V rámci útoku hrubou silou útočník pokusí ověřování pomocí mnoho různých hesla pro různé účty, dokud nebude nalezen správné heslo pro alespoň jeden účet. Jednou najde, útočník může přihlásit pomocí tohoto účtu.
+V rámci útoku hrubou silou se útočník pokusí ověření pomocí mnoha různých hesel pro různé účty, dokud nebude nalezen správné heslo pro alespoň jeden účet. Jednou najde, útočník může přihlásit pomocí tohoto účtu.
 
-V této detekce výstrahy při Azure ATP zjistí masivní počet ověření jednoduchých vazeb. To může být buď *vodorovně* s malou sadu hesla mezi mnoha uživateli; nebo *svisle "* s velké sady hesla na několika uživatelů; nebo libovolnou kombinaci těchto dvou možností.
+V této detekce se aktivuje upozornění, když zjistí velké množství jednoduché vazby ověřování ochrana ATP v programu Azure. Může to být buď *vodorovně* s menší skupinou hesel mezi mnoha uživateli; nebo *svisle "* s rozsáhlou sadou hesla u několika uživatelů; či libovolnou kombinaci těchto dvou možností.
 
 **Šetření**
 
-1. Pokud existuje mnoho účtů související se situací, klikněte na tlačítko **stáhnout podrobnosti o** pro zobrazení seznamu v tabulce aplikace Excel.
+1. Pokud se využívá řada řadu účtů, klikněte na tlačítko **stáhnout podrobnosti o** pro zobrazení seznamu v Excelové tabulce.
 
-2. Klikněte na výstrahu, kterou chcete přejít na stránku s jeho vyhrazené. Zkontrolujte, zda pokusy o žádné přihlášení bylo dokončeno s úspěšné ověření. Pokusy se zobrazí jako **uhádnout účty** na pravé straně infografice. Pokud ano, jsou některé z **uhádnout účty** běžně používaný ze zdrojového počítače? Pokud ano, **potlačit** podezřelou aktivitu.
+2. Klikněte na výstrahu, kterou chcete přejít na jeho vyhrazenou stránku. Zkontrolujte, zda pokusů o přihlášení jakékoli skončilo s po provedení úspěšného ověření. Pokusy se zobrazí jako **odhadnuté účty** na pravé straně infografiku. Pokud ano, jsou všechny **odhadnuté účty** běžně používaný ze zdrojového počítače? Pokud ano, **potlačit** podezřelou aktivitu.
 
-3. Pokud neexistují žádné **uhádnout účty**, jsou některé z **napadení účty** běžně používaný ze zdrojového počítače? Pokud ano, **potlačit** podezřelou aktivitu.
+3. Pokud neexistují žádné **odhadnuté účty**, jsou všechny **napadených účtů** běžně používaný ze zdrojového počítače? Pokud ano, **potlačit** podezřelou aktivitu.
 
-**Nápravy**
+**Náprava**
 
-[Komplexní a dlouhá hesla](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) poskytovat potřebné první úrovně zabezpečení před útoky hrubou silou.
+[Složitá a dlouhá hesla](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) poskytují nezbytnou první úroveň zabezpečení před útoky hrubou silou.
 
-## <a name="encryption-downgrade-activity"></a>Přechod na starší verzi aktivity šifrování
+## <a name="encryption-downgrade-activity"></a>Aktivita snížení úrovně šifrování
 
 **Popis**
 
-Přechod na starší verzi šifrování je metoda oslabení protokolu Kerberos podle Downgrade úrovně šifrování různých polí protokolu, které jsou obvykle šifrována pomocí nejvyšší úroveň šifrování. Oslabeným šifrované pole může být snazší cíl pokusů offline hrubou silou. Různé metody útoku využívat slabé šifrování doklad protokolu Kerberos. V této detekce Azure ATP zjišťuje typy šifrování pomocí protokolu Kerberos, počítačů a uživatelů a upozorní, že jste po slabší šifrováním použije: (1) neobvyklé pro zdrojový počítač nebo uživatele. a (2) odpovídá známé útoky techniky.
+Oslabení šifrování je metoda oslabení podle downgradu úrovně šifrování protokolu různých polí, které jsou obvykle šifrována pomocí nejvyšší úrovně šifrování pomocí protokolu Kerberos. Oslabeným šifrované pole může být snazší target na offline útoky hrubou silou při pokusech. Různých metod útoku zvýšit využití slabé šifrování doklad protokolu Kerberos. Pokud skript nenašli, že daný počítač hostuje nakažené nebo ohrožená a pak může pořád nakažené, ale SMBv1 můžou byly zakázané nebo na počítači, byla opravena, které by ovlivnily skenovací nástroj.
 
-Existují tři typy detekce:
+Oprava všech počítačů, zejména použití aktualizací zabezpečení.
 
-1.  Typu Skeleton Key – je malware, který běží na řadičích domény a povoluje ověřování k doméně pomocí libovolného účtu bez znalosti jeho heslo. Tímto malwarem často používá slabší algoritmy šifrování hodnoty hash hesla uživatele na řadiči domény. V této detekce metodu šifrování zprávy KRB_ERR z řadiče domény k účtu s žádostí o lístek snížit ve srovnání s dřív zjištěné chování.
+1.  Zakázat SMBv1 Odebrat WannaCry WanaKiwi může dešifrovat data v rámci ransom softwaru, ale jen pokud uživatel nebyl restartovat nebo vypnout počítač.
 
-2.  Lístek Golden – [zlatý lístek](#golden-ticket) výstrah, metodu šifrování pole lístku TGT zprávy TGS_REQ (žádost o službu) ze zdrojového počítače byl snížit ve srovnání s dřív zjištěné chování. Toto není založena na čas anomálií (stejně jako ostatní zlatý lístek detekce). Kromě toho se žádný požadavek ověřování protokolu Kerberos přidružené předchozí žádost o služby rozpozná ATP.
+2.  Další informace najdete v tématu [chcete pokřik Ransomwaru Pokud chcete zakázat podezřelé aktivity, obraťte se na podporu. Kromě toho se žádný požadavek na ověření Kerberos související s předchozí žádosti o službu detekovaných službou ochrany ATP v programu.
 
-3.  Overpass-the-Hash – útočník může použít slabé odcizené hodnoty hash chcete-li vytvořit lístek silné s žádostí ověřovací služby protokolu Kerberos. V této detekce AS_REQ typ šifrování zprávy ze zdrojového počítače byl snížit ve srovnání s dřív zjištěné chování (to znamená, počítač se pomocí standardu AES).
+3.  Overpass-the-Hash – může útočník zneužít k vytvoření lístku silné žádost Kerberos AS slabé odcizené hodnoty hash. Při tomto zjišťování byla downgradovat typ šifrování zprávy AS_REQ ze zdrojového počítače, ve srovnání s dřív zjištěné chování (to znamená, počítač se pomocí standardu AES).
 
 **Šetření**
 
-Nejprve zkontrolujte popis výstrahy, abyste zjistili, která výše tři typy detekce, že pracujete s. Zkoumání nejprve zkontrolujte popis výstrahu, kterou chcete zobrazit, který z výše uvedených tři typy detekce, že pracujete s. Další informace stáhněte si tabulky aplikace Excel.
+Nejprve zkontrolujte popis výstrahy, abyste zjistili, která z výše uvedených tří typů detekce, že pracujete s. Šetření, nejprve zkontrolujte Popis upozornění a uvidíte, které z výše uvedených tří typů detekce, že pracujete s. Další informace stáhněte si Excelové tabulky.
 
-1.  Typu Skeleton Key – můžete zkontrolovat, pokud typu Skeleton Key ovlivnil řadičů domény pomocí [skeneru zapsána tým Azure ATP](https://gallery.technet.microsoft.com/Aorato-Skeleton-Key-24e46b73). Pokud skeneru najde malware v 1 nebo více řadičů domény, je skutečně pozitivní.
+1.  Skeleton Key – můžete zkontrolovat, pokud Skeleton Key ovlivnila řadičů domény s použitím [kontroly vytvořené týmem služby Azure ATP](https://gallery.technet.microsoft.com/Aorato-Skeleton-Key-24e46b73). Skener najde malware na 1 nebo více řadičů domény, jde o pravdivě pozitivní upozornění.
 
-2.  Zlatý lístek – v tabulce aplikace excel přejděte na kartu síťové aktivity. Zobrazí se, že pole relevantní nižší verze je **typ šifrování lístku žádosti**, a **typy šifrování podporované zdrojové počítače** obsahuje metody silnější šifrování.
+2.  Zlatý lístek – v excelové tabulce, přejděte na kartu se síťovou aktivitou. Uvidíte, že je pole relevantní sníženou příbuzností **typ šifrování lístku žádosti**, a **typy šifrování podporované zdrojové počítače** obsahuje silnější metody šifrování.
 
-  1. Zkontrolujte zdrojový počítač a účet nebo pokud máte více zdrojových počítačů a účty zkontrolujte Pokud něco mají v běžné (například všechny marketing pracovníky použít konkrétní aplikaci, která může být příčinou výstrahu, kterou chcete aktivovat). Existují případy, ve kterých je vlastní aplikaci, která je používána zřídka, ověřování pomocí nižší úroveň šifrování. Zkontrolujte, zda jsou na zdrojovém počítači všechny vlastní aplikace. Pokud ano, je pravděpodobně neškodné skutečně pozitivní a lze potlačit.
+  1. Zkontrolujte zdrojový počítač a účet, nebo pokud existuje více zdrojových počítačů a účtů kontrolovat, jestli se mají něco společné (například všechny marketingové pracovníky pomocí konkrétní aplikace, které by mohly způsobovat aktivovat upozornění). Existují případy, ve kterých je vlastní aplikaci, která se používá jen občas, ověřování pomocí nižší šifry šifrování. Zkontrolujte, jestli jsou na zdrojovém počítači těchto vlastních aplikací. Pokud ano, je pravděpodobně o neškodné pravdivě pozitivní upozornění a lze potlačit.
   
-  2. Kontrola prostředku přístup těchto lístků, pokud je jeden prostředek, který uživatelé všechny přistupují, ověřte ji, ujistěte se, že je platný prostředek, který se má přístup. Kromě toho ověřte, jestli cílový prostředek podporuje metody silné šifrování. Zkontrolovat to můžete ve službě Active Directory kontrolou atribut msDS-SupportedEncryptionTypes, účet služby prostředků.
+  2. Zkontrolujte prostředek přistupuje tyto lístky, pokud je jeden prostředek, ke kterým všechny přistupují, ověřte ho, ujistěte se, že je platný prostředek, který se má přístup. Dále ověřte, jestli cílový prostředek podporuje metody silné šifrování. Můžete to zkontrolovat ve službě Active Directory tak, že zkontrolujete atribut msDS-SupportedEncryptionTypes, účet služby zdroje.
 
-3.  Overpass-the-Hash – v tabulce aplikace excel přejděte na kartu síťové aktivity. Zobrazí se, že pole relevantní nižší verze je **šifrované typ šifrování časové razítko** a **typy šifrování podporované zdrojové počítače** obsahuje metody silnější šifrování.
+3.  Overpass-the-Hash – v excelové tabulce, přejděte na kartu se síťovou aktivitou. Uvidíte, že je pole relevantní sníženou příbuzností **šifrované typ šifrování časové razítko** a **typy šifrování podporované zdrojové počítače** obsahuje silnější metody šifrování.
 
-  1. Existují případy, ve kterých může aktivovat tuto výstrahu, jakmile se uživatel přihlásí pomocí čipové karty, pokud se nedávno změnila konfigurace čipové karty. Zkontrolujte, pokud byly související se situací změny takto pro účty. Pokud ano, to je pravděpodobně neškodné skutečně pozitivní a lze potlačit.
-  2. Kontrola prostředku přístup těchto lístků, pokud je jeden prostředek, který uživatelé všechny přistupují, ověřte ji, ujistěte se, že je platný prostředek, který se má přístup. Kromě toho ověřte, jestli cílový prostředek podporuje metody silné šifrování. Zkontrolovat to můžete ve službě Active Directory kontrolou atribut msDS-SupportedEncryptionTypes, účet služby prostředků.
+  1. Existují případy, ve kterých může aktivuje toto upozornění, když uživatel přihlásí pomocí čipové karty, pokud byla nedávno změnila konfigurace čipové karty. Zaškrtněte, pokud došlo ke změně tímto způsobem pro účty používané. Pokud ano, to je pravděpodobně o neškodné pravdivě pozitivní upozornění a lze potlačit.
+  2. Zkontrolujte prostředek přistupuje tyto lístky, pokud je jeden prostředek, ke kterým všechny přistupují, ověřte ho, ujistěte se, že je platný prostředek, který se má přístup. Dále ověřte, jestli cílový prostředek podporuje metody silné šifrování. Můžete to zkontrolovat ve službě Active Directory tak, že zkontrolujete atribut msDS-SupportedEncryptionTypes, účet služby zdroje.
 
-**Nápravy**
+**Náprava**
 
-1.  Kostru klíče – odebere malware. Další informace najdete v tématu [Malware Analysis typu Skeleton Key](https://www.secureworks.com/research/skeleton-key-malware-analysis) podle SecureWorks.
+1.  Kostru klíče – odebere malware. Další informace najdete v tématu [analýzy Malware Skeleton Key](https://www.secureworks.com/research/skeleton-key-malware-analysis) podle SecureWorks.
 
-2.  Zlatý lístek – postupujte podle pokynů [zlatý lístek](#golden-ticket) podezřelé aktivity.   
-    Navíc vzhledem k tomu, že vytváření zlatý lístek vyžaduje oprávnění správce domény, implementovat [předat doporučení hash](http://aka.ms/PtH).
+2.  Zlatý lístek – postupujte podle pokynů [Golden Ticket](#golden-ticket) podezřelých aktivit.   
+    Navíc vzhledem k tomu, že vytvoření Golden Ticket vyžaduje práva správce domény, implementovat [předání hodnoty hash doporučení](http://aka.ms/PtH).
 
-3.  Overpass-the-Hash – Pokud související se situací účet nerozlišuje malá písmena, pak resetovat heslo tohoto účtu. To brání útočník vytváření nové lístky protokolu Kerberos z hodnoty hash hesla, i když existujících lístků je můžete dále používat, dokud nevyprší jejich platnost. Pokud se jedná o citlivých účet, měli byste zvážit resetovat účet KRBTGT dvakrát jako podezřelou aktivitu zlatý lístek. Resetování KRBTGT dvakrát zruší platnost všech Kerberos lístků v této doméně, takže Plánujte než tak učiníte. Viz pokyny v [KRBTGT účtu heslo resetovat skripty nyní dostupné pro zákazníky](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/). Viz také pomocí [resetování hesla nebo klíče nástroj účet KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Protože se jedná o laterální pohyb techniku, držte se osvědčených postupů z [předat doporučení hash](http://aka.ms/PtH).
+3.  Overpass-the-Hash – Pokud je potřebný účet není citlivé, poté resetujte heslo daného účtu. To zabrání útočník vytváření nových lístky protokolu Kerberos z hodnoty hash hesla, i když existující lístky je stále možné až do vypršení jejich platnosti. Pokud je citlivý účet, měli byste zvážit, obnovení účtu KRBTGT dvakrát jako podezřelá aktivita zlatého lístku. Obnovení účtu KRBTGT dvakrát zruší platnost všech protokolu Kerberos, takže Plánujte lístky v této doméně než to uděláte. Přečtěte si pokyny v [KRBTGT účet skriptů pro resetování hesla nyní k dispozici pro zákazníky, kteří](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/). Viz také pomocí [resetování nástroj hesla/klíčů účtu KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Protože to je technika laterálního pohybu, postupujte podle osvědčené postupy z [předání hodnoty hash doporučení](http://aka.ms/PtH).
 
 ## <a name="honeytoken-activity"></a>Aktivita Honeytokenu
 
 
 **Popis**
 
-Honeytokenu účty jsou účty vábničky nastavit tak, aby Vyhledávejte a sledujte podezřelé aktivity, které zahrnuje tyto účty. Účtů Honeytokenu by měl být ponecháno nevyužité, přitom má název atraktivní aby z útočníci (například SQL-správce). Všechny aktivity z nich může znamenat škodlivé chování.
+Návnada účty nastavené tak identifikovat a sledovat škodlivou aktivitu, která zahrnuje tyto účty jsou účty Honeytokenu. Honeytokenové účty by měla zůstat nevyužité, přitom má atraktivní název k navést útočníci (například SQL-Admin). Všechny aktivity z nich může znamenat škodlivého chování.
 
-Další informace o účtů honeytokenu najdete v tématu [nainstalovat ATP Azure - kroku 7](install-atp-step7.md).
+Další informace o honeytokenové účty, najdete v části [instalace služby Azure ATP – krok 7](install-atp-step7.md).
 
 **Šetření**
 
-1.  Zkontrolujte, zda Vlastník zdrojového počítače použité k ověření, účtů Honeytokenu pomocí metody popsané na stránce podezřelé aktivity (například protokolu Kerberos, LDAP, protokol NTLM).
+1.  Zkontrolujte, zda Vlastník zdrojového počítače používá účet Honeytokenu k ověření, pomocí metody popsané na stránce podezřelých aktivit (například Kerberos, LDAP, NTLM).
 
-2.  Přejděte na stránky profilu počítačů zdroje a zkontrolujte, které účty, které ověření z nich. Pokud používají účtů Honeytokenu, obraťte se na vlastníci tyto účty.
+2.  Přejděte na stránku nebo stránky zdrojového počítače profilu a zkontrolujte ostatní účty, které se ověřil z nich. Obraťte se na vlastníky účtů, pokud použity účtů Honeytokenu.
 
-3.  To může být neinteraktivní přihlášení, takže nezapomeňte zaškrtnout pro aplikace nebo skripty, které běží na zdrojovém počítači.
+3.  To může být neinteraktivního přihlášení, proto nezapomeňte zaškrtnout pro aplikace nebo skripty, které běží na zdrojovém počítači.
 
-Pokud po provedení kroků 1 až 3, pokud nejsou důkazy neškodné použití, předpokládají, že to je škodlivý.
+Pokud po provedení kroků 1 až 3, pokud neexistuje žádný doklad o neškodné použití, se předpokládá, že jde o škodlivé.
 
-**Nápravy**
+**Náprava**
 
-Ujistěte se, že Honeytokenu účtů se používají pouze pro jejich zamýšlený účel, jinak může vygenerovat velký počet výstrah.
+Ujistěte se, že Honeytokenu účtů se používají pouze pro jejich zamýšlený účel, jinak může generovat více výstrah.
 
-## <a name="identity-theft-using-pass-the-hash-attack"></a>Krádeži identity pomocí útoku Pass-the-Hash
+## <a name="identity-theft-using-pass-the-hash-attack"></a>Krádež identity pomocí útoku Pass-the-Hash
 
 **Popis**
 
-Pass-the-Hash je laterální pohyb technika, ve kterém útočník získá hodnoty hash NTLM uživatele z jednoho počítače a použije ho k získání přístupu k jinému počítači. 
+Pass-the-Hash je technika laterálního pohybu, kdy útočník získá NTLM hash uživatele z jednoho počítače a použije ho k získání přístupu k jinému počítači. 
 
 **Šetření**
 
-Hodnota hash použila z počítače, cílový uživatel vlastní nebo pravidelně používá? Pokud ano, je to falešně pozitivní. Pokud ne, je pravděpodobně skutečně pozitivní.
+Hodnota hash použil z počítače, že cílový uživatel vlastní, nebo pravidelně používá? Pokud ano, jde o falešně pozitivní upozornění. V opačném případě se pravděpodobně o pravdivě pozitivní upozornění.
 
-**Nápravy**
+**Náprava**
 
-1. Pokud není účet související se situací citlivé, poté resetujte heslo tohoto účtu. To brání útočník vytváření nové lístky protokolu Kerberos z hodnoty hash hesla, i když existujících lístků je můžete dále používat, dokud nevyprší jejich platnost. 
+1. Pokud není potřebný účet citlivé, resetujte heslo daného účtu. To zabrání útočník vytváření nových lístky protokolu Kerberos z hodnoty hash hesla, i když existující lístky je stále možné až do vypršení jejich platnosti. 
 
-2. Pokud se jedná o citlivých účet, měli byste zvážit resetovat účet KRBTGT dvakrát jako podezřelou aktivitu zlatý lístek. Resetování KRBTGT dvakrát zruší platnost všech Kerberos lístků v této doméně, takže Plánujte než tak učiníte. Viz pokyny v [KRBTGT účtu heslo resetovat skripty nyní dostupné pro zákazníky,](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), také zjistit pomocí [resetování hesla nebo klíče nástroj účet KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Protože se jedná o laterální pohyb techniku, držte se osvědčených postupů z [předat doporučení hash](http://aka.ms/PtH).
+2. Pokud je citlivý účet, měli byste zvážit, obnovení účtu KRBTGT dvakrát jako podezřelá aktivita zlatého lístku. Obnovení účtu KRBTGT dvakrát zruší platnost všech protokolu Kerberos, takže Plánujte lístky v této doméně než to uděláte. Přečtěte si pokyny v [KRBTGT účet skriptů pro resetování hesla nyní dostupný pro zákazníky se](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), také naleznete pomocí [resetování nástroj hesla/klíčů účtu KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Protože to je technika laterálního pohybu, postupujte podle osvědčené postupy z [předání hodnoty hash doporučení](http://aka.ms/PtH).
 
-## <a name="identity-theft-using-pass-the-ticket-attack"></a>Krádeži identity pomocí útoku Pass-the-Ticket
+## <a name="identity-theft-using-pass-the-ticket-attack"></a>Krádež identity pomocí útoku Pass-the-Ticket
 
 **Popis**
 
-Pass-the-Ticket je laterální pohyb technika, ve kterém útočník získá lístek Kerberos z jednoho počítače a použije ho k získání přístupu k jinému počítači pomocí opakovaného použití odcizené lístku. V této detekce lístek protokolu Kerberos je seznámili použít v různých počítačích dva (nebo více).
+Pass-the-Ticket je technika laterálního pohybu, kdy útočník získá lístek Kerberos z jednoho počítače a použije ho k získání přístupu k jinému počítači opětovným použitím odcizených lístků. Při zjišťování je zobrazena lístek protokolu Kerberos používá na dvou (nebo více) různých počítačích.
 
 **Šetření**
 
-1. Klikněte **stáhnout podrobnosti o** tlačítko zobrazit úplný seznam IP adres související se situací. Ukládá IP adresu jednoho nebo obou počítače patřit do podsítě, které je přiděleno z fondu podměrečných DHCP, například VPN nebo Wi-Fi? Je IP adresa sdílená? Například tím, že zařízení NAT? Jsou jeden nebo více zdrojových IP adres, nebudou vyřešeny senzoru? (to může znamenat, že nejsou správně otevřené správné porty z senzoru do zařízení.) Pokud je odpověď na některý z těchto otázek Ano, je falešně pozitivní.
+1. Klikněte na tlačítko **stáhnout podrobnosti o** tlačítko zobrazit úplný seznam IP adres zahrnuté. Nemá IP adresu jedné nebo obou počítačích patřit do podsítě, která je přidělena z nedostatečné velikosti fondu adres DHCP, například síť VPN nebo Wi-Fi? Sdílet adresu IP Například tím, že zařízení NAT? Jsou jedna nebo více zdrojových IP adres nebyl rozeznán senzor? (to může znamenat, že nejsou správně otevřené správné porty z senzor do zařízení.) Pokud je odpověď na kteroukoli z těchto otázek Ano, je falešně pozitivní.
 
-2. Je k dispozici vlastní aplikaci, která předá lístky jménem uživatelů? Pokud ano, je neškodné skutečně pozitivní.
+2. Existuje vlastní aplikaci, která předává lístky jménem uživatelů? Pokud ano, jedná se o neškodnou pravdivě pozitivní.
 
-**Nápravy**
+**Náprava**
 
-1. Pokud není účet související se situací citlivé, poté resetujte heslo tohoto účtu. To brání útočník vytváření nové lístky protokolu Kerberos z hodnoty hash hesla, i když existujících lístků je můžete dále používat, dokud nevyprší jejich platnost.  
+1. Pokud není potřebný účet citlivé, resetujte heslo daného účtu. To zabrání útočník vytváření nových lístky protokolu Kerberos z hodnoty hash hesla, i když existující lístky je stále možné až do vypršení jejich platnosti.  
 
-2. Pokud se jedná o citlivých účet, měli byste zvážit resetovat účet KRBTGT dvakrát jako podezřelou aktivitu zlatý lístek. Resetování KRBTGT dvakrát zruší platnost všech Kerberos lístků v této doméně, takže Plánujte než tak učiníte. Viz pokyny v [KRBTGT účtu heslo resetovat skripty nyní dostupné pro zákazníky,](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), také zjistit pomocí [resetování hesla nebo klíče nástroj účet KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).  Protože se jedná o laterální pohyb techniku, držte se osvědčených postupů v [předat doporučení hash](http://aka.ms/PtH).
+2. Pokud je citlivý účet, měli byste zvážit, obnovení účtu KRBTGT dvakrát jako podezřelá aktivita zlatého lístku. Obnovení účtu KRBTGT dvakrát zruší platnost všech protokolu Kerberos, takže Plánujte lístky v této doméně než to uděláte. Přečtěte si pokyny v [KRBTGT účet skriptů pro resetování hesla nyní dostupný pro zákazníky se](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), také naleznete pomocí [resetování nástroj hesla/klíčů účtu KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).  Protože to je technika laterálního pohybu, postupujte podle osvědčených postupů v [předání hodnoty hash doporučení](http://aka.ms/PtH).
 
-## Lístek protokolu Kerberos Golden<a name="golden-ticket"></a>
+## Protokol Kerberos Golden Ticket<a name="golden-ticket"></a>
 
 **Popis**
 
-Útočníci s právy správce domény může ohrozit [účet KRBTGT](https://technet.microsoft.com/library/dn745899(v=ws.11).aspx#Sec_KRBTGT). Pomocí účtu KRBTGT, můžete vytvořit lístku TGT, která poskytuje autorizace k jakémukoli prostředku a nastavit dobu platnosti lístku k kdykoli libovolný udělování lístek protokolu Kerberos. Tato falešných lístku TGT se označuje jako "Zlatý lístek" a útočníkům umožňuje, aby dosáhnout persistency v síti.
+Útočníci s právy správce domény může ohrozit [účtu KRBTGT](https://technet.microsoft.com/library/dn745899(v=ws.11).aspx#Sec_KRBTGT). Pomocí účtu KRBTGT, můžete vytvořit lístek Kerberos udělující lístek (TGT), který poskytuje autorizaci k jakémukoli prostředku a nastavit dobu platnosti lístku do libovolného kdykoli. Tato falešných lístků TGT se nazývá "Zlatých lístků" a útočníkům umožňuje dosáhnout trvalého průniku do sítě.
 
-V této detekce výstrahy při lístek protokolu Kerberos udělování lístků se používá pro více než povoleném čase povolené zadané v [maximální doba života lístku uživatele](https://technet.microsoft.com/library/jj852169(v=ws.11).aspx) zásady zabezpečení.
+V této detekce se aktivuje upozornění, pokud je lístek Kerberos udělující lístek se používá pro více než povolená doba uvedená v [maximální doba života lístku uživatele](https://technet.microsoft.com/library/jj852169(v=ws.11).aspx) zásady zabezpečení.
 
 **Šetření**
 
-1. Se někdo všechny poslední (během posledních několik hodin) změny provedené **maximální doba života lístku uživatele** nastavení v zásadách skupiny? Pokud ano, pak **Zavřít** výstrahy (byl falešně pozitivní).
+1. Pokusil se poslední (během posledních několik hodin) změny provedené **maximální doba života lístku uživatele** nastavení v zásadách skupiny? Pokud ano, pak **Zavřít** upozornění (bylo falešně pozitivní).
 
-2. Je samostatný senzoru Azure ATP účastnící se tato výstraha virtuálního počítače? Pokud ano, ji nedávno obnovit z uloženého stavu? Pokud ano, pak **Zavřít** této výstrahy.
+2. Samostatný senzor ochrany ATP v programu Azure je zahrnutých v této výstraze virtuálního počítače? Pokud ano, ji nedávno pokračovat od uloženého stavu? Pokud ano, pak **Zavřít** této výstrahy.
 
-3. Pokud je odpověď na výše uvedené otázky Ne, předpokládá, to se zlými úmysly.
+3. Pokud je odpověď na otázky uvedené výše předpokládají Ne, to se zlými úmysly.
 
-**Nápravy**
+**Náprava**
 
-Změňte heslo protokolu Kerberos lístku udělování lístků (KRBTGT) dvakrát podle pokynů v [KRBTGT účtu heslo resetovat skripty nyní dostupné pro zákazníky,](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/)pomocí [resetování hesla nebo klíče účtu KRBTGT Nástroj](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Resetování KRBTGT dvakrát zruší platnost všech Kerberos lístků v této doméně, takže Plánujte než tak učiníte. Navíc vzhledem k tomu, že vytváření zlatý lístek vyžaduje oprávnění správce domény, implementovat [předat doporučení hash](http://aka.ms/PtH).
+Změnit heslo protokolu Kerberos KRBTGT Ticket Granting Ticket () dvakrát podle pokynů v [KRBTGT účet skriptů pro resetování hesla nyní k dispozici pro zákazníky, kteří](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), použije [resetování hesla/klíčů účtu KRBTGT Nástroj](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Obnovení účtu KRBTGT dvakrát zruší platnost všech protokolu Kerberos, takže Plánujte lístky v této doméně než to uděláte. Navíc vzhledem k tomu, že vytvoření Golden Ticket vyžaduje práva správce domény, implementovat [předání hodnoty hash doporučení](http://aka.ms/PtH).
 
 ## <a name="malicious-data-protection-private-information-request"></a>Škodlivá žádost o soukromé informace přes Data Protection
 
 **Popis**
 
-Data Protection API (DPAPI) se používá v systému Windows k ochraně bezpečně hesla uloží prostřednictvím prohlížeče, šifrované soubory a další citlivá data. Řadiče domény uložení zálohování hlavního klíče, který slouží k dešifrování všech tajných klíčů šifrován DPAPI na počítačích připojených k doméně systému Windows. Útočník může použít tento hlavní klíč k dešifrování všech tajných klíčů chráněných pomocí rozhraní DPAPI na všech počítačích připojených k doméně.
-V této detekce výstrahy při rozhraní DPAPI se používá k načtení zálohování hlavního klíče.
+Data Protection API (DPAPI) používá Windows bezpečné ochrany hesel uložil prohlížeče, šifrované soubory a další citlivá data. Řadičích domény se nachází záložní hlavní klíč, který slouží k dešifrování všech tajných kódů zašifrovaných pomocí rozhraní DPAPI na počítačích připojených k doméně Windows. Útočníci můžou používat tohoto hlavního klíče k dešifrování všech tajných kódů chráněn DPAPI na všech počítačích připojených k doméně.
+V této detekce se aktivuje upozornění při použití neúspěšně pokusil načíst záložní hlavní klíč rozhraní DPAPI.
 
 **Šetření**
 
-1. Je zdrojový počítač s, organizaci schválené rozšířený kontrolu zabezpečení pro službu Active Directory?
+1. Zdrojový počítač, s organizaci schválení je pokročilý kontrolu zabezpečení Active Directory?
 
-2. Pokud ano a ho by měl vždycky být tak, **zavřete a vyloučení** podezřelou aktivitu.
+2. Pokud ano a ji by měl vždy být tím, **zavřít a vyloučit** podezřelou aktivitu.
 
-3. Pokud ano a je to neměli dělat, **Zavřít** podezřelou aktivitu.
+3. Pokud ano a je to dělat neměli, **Zavřít** podezřelou aktivitu.
 
-**Nápravy**
+**Náprava**
 
-Pokud chcete používat rozhraní DPAPI, musí útočník oprávnění správce domény. Implementace [předat doporučení hash](http://aka.ms/PtH).
+Použití rozhraní DPAPI, potřebuje útočník práva správce domény. Implementace [předání hodnoty hash doporučení](http://aka.ms/PtH).
 
 ## <a name="malicious-replication-of-directory-services"></a>Škodlivá replikace adresářových služeb
 
 
 **Popis**
 
-Replikace služby Active Directory je proces, podle kterého jsou synchronizovány změny provedené na jeden řadič domény s jinými řadiči domény. Zadané potřebná oprávnění, útočníci můžete spustit požadavek na replikaci, což jim umožní načíst dat uložená ve službě Active Directory, včetně hodnot hash hesel.
+Replikace služby Active Directory je proces, podle kterého se změny provedené na jednom řadiči domény synchronizují s jinými řadiči domény. Udělili nezbytná oprávnění, útočníci mohou zahájit žádost o replikaci, což jim umožní načíst dat uložená ve službě Active Directory, včetně hodnot hash hesel.
 
-V této detekce výstrahy při inicializuje požadavek na replikaci z počítače, který není řadičem domény.
+V této detekce se aktivuje upozornění, když se spustí požadavek replikace na počítači, který není řadičem domény.
 
 **Šetření**
 
-1.  Je počítač v otázku řadiče domény? Například nově propagovaných řadiče domény, který měl potíže s replikací. Pokud ano, **Zavřít** podezřelou aktivitu. 
-2.  Na dotyčném počítači by měl být replikaci dat ze služby Active Directory? Například Azure AD Connect. Pokud ano, **zavřete a vyloučení** podezřelou aktivitu.
-3.  Klikněte na zdrojový počítač nebo účet, který chcete přejít na stránku s jeho profil. Zkontrolujte, co se stalo v době replikace, hledání neobvyklé aktivity, jako například: kdo byl přihlášen, které prostředky tam, kde získat přístup. Pokud jste povolili integrace Windows Defender ATP, klikněte na tlačítko oznámení Windows Defender ATP ![Oznámení "BADGE" Windows Defender ATP](./media/wd-badge.png) k hlubšímu prošetření na počítač. V systému Windows Defender ATP se zobrazí, které procesy a výstrahy došlo k chybě v době výstrahy. 
+1.  Je počítač v otázce řadiče domény? Například připojovaly řadiče domény, které měly potíže s replikací. Pokud ano, **Zavřít** podezřelou aktivitu. 
+2.  Dotyčný počítač by měl být replikaci dat ze služby Active Directory? Například Azure AD Connect. Pokud ano, **zavřít a vyloučit** podezřelou aktivitu.
+3.  Klikněte na zdrojový počítač nebo účet, přejděte na stránku jeho profil. Zkontrolujte, co se stalo v době replikace, hledání neobvyklých aktivit, jako například: kdo byl přihlášen, které prostředky tam, kde získat přístup. Pokud jste nepovolili integraci ochrany ATP v programu Windows Defender, klikněte na možnost ochrana ATP v programu Windows Defender odznáčku ![Oznámení "BADGE" ochrany ATP v programu Windows Defender](./media/wd-badge.png) aby to prověřili počítače. V programu Windows Defender ATP uvidíte, které procesy a výstrahy došlo k přibližně v době výstrahy. 
 
 
-**Nápravy**
+**Náprava**
 
 Ověřte následující oprávnění: 
 
-- Replikovat změny adresáře   
+- Replikace změn adresáře   
 
-- Replikovat všechny změny adresáře  
+- Replikovat všechny změny v adresáři  
 
-Další informace najdete v tématu [oprávnění Grant Active Directory Domain Services pro profil synchronizace SharePoint Server 2013](https://technet.microsoft.com/library/hh296982.aspx).
-Můžete využít [AD seznamu ACL skener](https://blogs.technet.microsoft.com/pfesweplat/2013/05/13/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool/) nebo vytvořit skript prostředí Windows PowerShell k určení, kdo v doméně, má tato oprávnění.
+Další informace najdete v tématu [udělení Active Directory Domain Services oprávnění k synchronizaci profilu v SharePoint serveru 2013](https://technet.microsoft.com/library/hh296982.aspx).
+Můžete využít [AD ACL Scanner](https://blogs.technet.microsoft.com/pfesweplat/2013/05/13/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool/) nebo vytvořit skript prostředí Windows PowerShell k určení, kdo v doméně tato oprávnění má.
 
 
-## <a name="password-exposed-in-cleartext-report"></a>Heslo, které jsou zveřejněné v sestavě ve formě prostého textu
-
-**Popis**
-
-Některé služby odeslat přihlašovací údaje účtu ve formátu prostého textu. Tomu může dojít i pro účty uživatelů. Útočníci monitorování síťového provozu můžete zachytit a pak znovu použít tyto přihlašovací údaje zlými úmysly. 
-
-**Šetření**
-
-Klikněte na stránce sestavy a stáhnout hesla vystavený v sestavě ve formě prostého textu. Najdete v tabulce aplikace Excel, které účty byly vystaveny.
-Obvykle je skript nebo starší verze aplikace na zdrojových počítačích, používající jednoduché vazby protokolu LDAP.
-
-**Nápravy**
-
-Ověřte konfiguraci na zdrojových počítačích a zajistěte, aby nepoužívaly jednoduchou vazbu protokolu LDAP. Místo použití jednoduché vazby LDAP můžete použít SAL LDAP nebo LDAPS.
-
-## <a name="privilege-escalation-using-forged-authorization-data"></a>Pomocí zvýšení oprávnění forged data autorizace
+## <a name="password-exposed-in-cleartext-report"></a>Hesla v nešifrovaném textu sestavy
 
 **Popis**
 
-Známé chyby zabezpečení v systému Windows Server starší verze útočníkovi umožnit, aby manipulaci privilegovaný PAC (Attribute Certificate), pole v lístku protokolu Kerberos, obsahující data autorizace uživatele (ve službě Active Directory je to členství ve skupině), udělení Útočníci další oprávnění.
+Některé služby posílají přihlašovací údaje účtu v prostém textu. To může nastat i pro účty uživatelů. Útočníci monitorování síťového provozu můžete zachytit a pak znovu použít tyto přihlašovací údaje ke škodlivým účelům. 
 
 **Šetření**
 
-1. Klikněte na výstrahu zobrazíte stránku s jeho podrobnosti.
+Klikněte na stránce sestavy a stáhněte si hesla v nešifrovaném textu sestavy. Zobrazit v Excelové tabulce, které účty byly vystaveny.
+Obvykle je skript nebo starší verze aplikace na zdrojových počítačích, který používá jednoduché vazby LDAP.
 
-2. Je cílový počítač (v části **ACCESSED** sloupec) opravit s MS14-068 (řadič domény) nebo MS11-013 (server)? Pokud ano, **Zavřít** podezřelé aktivity (je falešně pozitivní).
+**Náprava**
 
-3. Pokud ne, zdrojový počítač spouští (v části **FROM** sloupec) označuje změnit certifikát PAC operačního systému nebo aplikace? Pokud ano, **potlačit** podezřelé aktivity (je neškodné skutečně pozitivní).
+Ověřte konfiguraci na zdrojových počítačích a zajistěte, aby nepoužívaly jednoduchou vazbu protokolu LDAP. Namísto použití jednoduché vazby protokolu LDAP můžete použít LDAP SALS nebo LDAPS.
 
-4. Pokud odpověď byla již na výše uvedené dvě otázky, předpokládá to se zlými úmysly.
+## <a name="privilege-escalation-using-forged-authorization-data"></a>Eskalace oprávnění prostřednictvím zfalšovaných dat autorizace
 
-**Nápravy**
+**Popis**
+
+Známé chyby zabezpečení ve starších verzích Windows serveru umožňují útočníkům manipulovat s certifikát PAC (Privileged Attribute), pole v lístku protokolu Kerberos, která obsahuje data autorizace uživatelů (ve službě Active Directory je to členství ve skupině), poskytování Útočníci další oprávnění.
+
+**Šetření**
+
+1. Klikněte na výstrahu, kterou chcete získat jeho stránku podrobností.
+
+2. Je cílovém počítači (v části **ACCESSED** sloupce) opravit zneužití MS14-068 (řadič domény) nebo zneužití MS11-013 (server)? Pokud ano, **Zavřít** podezřelé aktivity (je falešně pozitivní).
+
+3. Pokud ne, běží zdrojovém počítači (v části **FROM** sloupce) označuje upravuje PAC operačního systému nebo aplikace? Pokud ano, **potlačit** podezřelé aktivity (jedná se o neškodnou pravdivě pozitivní).
+
+4. Pokud byla odpověď již na výše uvedené dva dotazy, předpokládá to se zlými úmysly.
+
+**Náprava**
 
 Zajistěte, aby na všech řadičích domény s operačním systémem až do verze Windows Server 2012 R2 byla nainstalovaná aktualizace [KB3011780](https://support.microsoft.com/help/2496930/ms11-013-vulnerabilities-in-kerberos-could-allow-elevation-of-privilege) a na všech členských serverech a řadičích domény až do verze 2012 R2 byla nainstalovaná aktualizace KB2496930. Další informace najdete v článku [Stříbrný certifikát PAC](https://technet.microsoft.com/library/security/ms11-013.aspx) a [Zfalšovaný certifikát PAC](https://technet.microsoft.com/library/security/ms14-068.aspx).
 
@@ -287,222 +288,242 @@ Zajistěte, aby na všech řadičích domény s operačním systémem až do ver
 
 **Popis**
 
-V účtu výčtu rekognoskace útočník používá slovník s tisíci uživatelská jména nebo nástroje, jako je KrbGuess tak snadno uhodnout uživatelských jmen ve vaší doméně. Útočník díky požadavky protokolu Kerberos pomocí tyto názvy, abyste mohli zkusit najít platné uživatelské jméno ve vaší doméně. Pokud odhad úspěšně Určuje uživatelské jméno, útočník získá chyby protokolu Kerberos **požadované předběžné ověření** místo **neznámý objekt zabezpečení**. 
+V účtu výčet rekognoskace útočník využívá slovník s tisíci uživatelská jména nebo nástrojů, jako je KrbGuess pokusu odhadnout uživatelská jména ve vaší doméně. Útočník vytvářejí požadavky protokolu Kerberos pomocí tyto názvy, abyste mohli zkusit najít platné uživatelské jméno ve vaší doméně. Pokud odhad úspěšně Určuje uživatelské jméno, útočník získá Chyba protokolu Kerberos **požadované předběžné ověření** místo **neznámý objekt zabezpečení**. 
 
-V této detekce Azure ATP může zjistit, odkud pochází útoku, celkový počet pokusů o odhad a kolik byly porovnány. Pokud jsou příliš mnoho uživatelů neznámé, Azure ATP ho detekuje jako podezřelou aktivitu. 
+Při zjišťování dokáže ochrana ATP v programu Azure útoku, odkud, celkový počet pokusů uhádnout a kolik se shoda našla. Pokud existuje příliš mnoho uživatelů neznámý, ochrana ATP v programu Azure rozpozná jako podezřelou aktivitu. 
 
 **Šetření**
 
-1. Klikněte na výstrahu zobrazíte stránku s jeho podrobnosti. 
+1. Klikněte na výstrahu, kterou chcete získat jeho stránku podrobností. 
 
-2. Má tento počítač hostitele dotaz na řadič domény, jestli neexistují účty (například servery Exchange Server)? <br></br>
-Je skript nebo aplikace běžící na hostiteli, který může generovat toto chování? <br></br>
-Pokud ano, je odpověď na jednu z těchto otázek **Zavřít** podezřelé aktivity (je neškodné skutečně pozitivní) a vyloučení, který hostitelem z podezřelé aktivity.
+2. Tento hostitelský počítač by měl dotaz řadičem domény. jde o tom, jestli existují účty (například servery Exchange)? <br></br>
+Je skript nebo aplikace spuštěná v hostiteli, který může generovat toto chování? <br></br>
+Pokud ano, je odpověď na některý z těchto otázek **Zavřít** podezřelé aktivity (jedná se o neškodnou pravdivě pozitivní) a vyloučení, který hostovat v rámci podezřelé aktivity.
 
-3. Stáhněte si podrobnosti výstrahy v tabulce aplikace Excel pohodlně zobrazíte seznam pokusy o účet, rozdělené do stávající a neexistující účty. Pokud se podíváte na jiný existující účty list v tabulce a účty vypadat povědomě, mohou být zakázané účty nebo zaměstnancům, kteří ve společnosti. V takovém případě nepravděpodobné, že pokus pochází ze slovníku. S největší pravděpodobností je aplikace nebo skript, který je zjišťujeme, které účty jsou stále existují ve službě Active Directory, což znamená, že se jedná o neškodný skutečně pozitivní.
+3. Stáhněte podrobnosti výstrahy v Excelové tabulce pohodlně zobrazí seznam pokusů o účet, rozdělit do existující a neexistujících účtů. Podíváte na bez existujícího listu v tabulce účty a účty nic neříká, mohou být zakázané účty nebo zaměstnanců, kteří opustil společnost. V takovém případě je pravděpodobné, že tento pokus pochází ze slovníku. Největší pravděpodobností je aplikace nebo skript, který kontroluje se, které účty jsou stále existují ve službě Active Directory, což znamená, že se jedná o neškodnou pravdivě pozitivní.
 
-3. Pokud jsou názvy z velké části obeznámeni, se všechny pokusy o odhad odpovídat existující názvy účtů ve službě Active Directory? Pokud nejsou nalezeny žádné shody, pokus byl zbytečné, ale měli byste věnovat pozornost výstrahy zda získá aktualizovány v čase.
+3. Pokud jsou do značné míry neznámé názvy, odpovídat kterákoli tento počet pokusů uhádnout existujícími názvy účtů ve službě Active Directory? Pokud neexistují žádné odpovídající položky, pokus byl zbytečné, ale byste měli věnovat pozornost výstrahu, kterou chcete zobrazit, pokud se aktualizuje v čase.
 
-4. Pokud žádné z odhad pokusů o odpovídající existující názvy účtů, útočník ví o existenci účty ve vašem prostředí a pokuste se použít pro přístup k vaší doméně pomocí zjištěných uživatelská jména hrubou silou. Zkontrolujte názvy odhadované účtů pro další podezřelé aktivity. Zkontrolujte, jestli všechny odpovídající účty jsou citlivé účty.
+4. Pokud některý z odhad pokusí shodovat s existujícími názvy účtů, jak útočník ví o existenci účty ve vašem prostředí a může pokusit použít útok hrubou silou pro přístup k vlastní domény s využitím zjištěných uživatelská jména. Zkontrolujte názvy účtů uhádnuté další podezřelých aktivit. Zkontrolujte, jestli některý z odpovídající účty jsou citlivé účty.
 
 
-**Nápravy**
+**Náprava**
 
-[Komplexní a dlouhá hesla](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) poskytovat potřebné první úrovně zabezpečení před útoky hrubou silou.
+[Složitá a dlouhá hesla](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) poskytují nezbytnou první úroveň zabezpečení před útoky hrubou silou.
 
 
 ## <a name="reconnaissance-using-directory-services-queries"></a>Rekognoskace pomocí dotazů na adresářové služby
 
 **Popis**
 
-Adresář služby rekognoskace je používaných útočníky k namapování strukturu adresáře a cíle privilegovaných účtů pro pozdější kroky v útoku. Protokol vzdáleného správce zabezpečení účtů (SAM-R) je jedním z metody použité k dotazování adresáře k provedení takových mapování.
+Rekognoskace adresářových služeb je útočníci ke zmapování struktury adresáře a zacílení privilegovaných účtů v pozdějších krocích útoku. Protokol vzdáleného správce zabezpečení účtů (SAM-R) je jedna z metod používaných k dotazování adresáře k provedení těchto mapování.
 
-V této detekce by být žádné výstrahy aktivovány v první měsíc po nasazení Azure ATP. Při učení doby Azure ATP profily které dotazy SAM-R jsou vytvářeny ze kterých počítačů výčet a jednotlivé dotazy citlivé účty.
+Při zjišťování by žádné výstrahy aktivovat první měsíc po nasazení služby Azure ATP. Během učení období, ochrana ATP v programu Azure profily které dotazy SAM-R se sestavují z které počítače výčet a jednotlivé dotazy citlivých účtů.
 
 **Šetření**
 
-1. Klikněte na výstrahu zobrazíte stránku s jeho podrobnosti. Zkontrolujte, které dotazy nebyly provedeny (pro příklad, Enterprise admins nebo správce) a jestli byli úspěšní.
+1. Klikněte na výstrahu, kterou chcete získat jeho stránku podrobností. Zkontrolujte, které dotazy se prováděly (pro příklad, Enterprise admins nebo správce) a jestli byli úspěšní.
 
-2. Je takové dotazy mají být provedeny ze zdrojového počítače dotyčném?
+2. Takové dotazy mají být provedeny ze zdrojového počítače dotyčný?
 
-3. Pokud ano a výstrahu získá aktualizovány, **potlačit** podezřelou aktivitu.
+3. Pokud ano a výstraha aktualizována, **potlačit** podezřelou aktivitu.
 
-4. Pokud ano a je to dělat neměli už **Zavřít** podezřelou aktivitu.
+4. Pokud ano a to už nepotřebujeme, by neměla provést **Zavřít** podezřelou aktivitu.
 
-5. Pokud obsahuje informace související se situací účtu: je takové dotazy mají být provedené tento účet nebo nemá tento účet normálně přihlásit ke zdrojovému počítači?
+5. Pokud nejsou k dispozici informace na zahrnutých účtu: k tomuto účtu mají takové dotazy nebo nemá tento účet normálně přihlásit ke zdrojovému počítači?
 
- - Pokud ano a výstrahu získá aktualizovány, **potlačit** podezřelou aktivitu.
+ - Pokud ano a výstraha aktualizována, **potlačit** podezřelou aktivitu.
 
- - Pokud ano a je to dělat neměli už **Zavřít** podezřelou aktivitu.
+ - Pokud ano a to už nepotřebujeme, by neměla provést **Zavřít** podezřelou aktivitu.
 
- - Pokud odpověď byla ne ke všem z výše uvedených, předpokládá se, toto je škodlivý.
+ - Pokud byla odpověď Ne všechny výše uvedené, se předpokládá to se zlými úmysly.
 
-6. Pokud nejsou žádné informace o účtu, který byl zahrnut, můžete přejít do koncového bodu a zkontrolovat, který účet byl přihlášen v době výstrahy.
+6. Pokud není k dispozici žádné informace o účet, který je obsažená, můžete přejít ke koncovému bodu a zkontrolovat účtu, který byl přihlášen v době výstrahy.
 
-**Nápravy**
+**Náprava**
 
-Posílení zabezpečení vaše prostředí před Tato technika provedením následujících kroků:
-1. Je počítač se službou ohrožení zabezpečení skenovacího nástroje?  
-2. Zjistěte, jestli konkrétní dotazované uživatele a skupiny v útoku jsou účty privilegované nebo vysokou hodnotu (tj, CEO, ředitel, správu IT atd.).  Pokud ano, podívejte se na další aktivitu v koncovém bodě také a monitorovat počítače, které jsou předmětem dotazu účty se protokolují do, jako jsou pravděpodobně cíle pro laterální pohyb.
+Posilte zabezpečení svého prostředí proti tuto techniku provedením následujících kroků:
+1. Je počítač se službou zjišťování nástroj ohrožení zabezpečení?  
+2. Zjistěte, jestli konkrétní dotazované uživatele a skupiny v útoku jsou privilegovaných nebo vysoce hodnotných účtů (to znamená, generální ředitel, Ředitelka, správy IT, atd.).  Pokud ano, podívejte se na další aktivitu v koncovém bodě také a monitorovat počítače, které jsou dotazované účty přihlášení, protože jde pravděpodobně o cíle taktiky Lateral Movement.
 
 ## <a name="reconnaissance-using-dns"></a>Rekognoskace pomocí DNS
 
 **Popis**
 
-DNS server obsahuje mapu všechny počítače, IP adresy a služby ve vaší síti. Tyto údaje používají útočníci ke zmapování struktury vaší sítě a zacílení zajímavých počítačů v pozdějších krocích útoku.
+DNS server obsahuje mapu všech počítačů, IP adresy a služby ve vaší síti. Tyto údaje používají útočníci ke zmapování struktury vaší sítě a zacílení zajímavých počítačů v pozdějších krocích útoku.
 
-Protokol DNS obsahuje několik typů dotazů. Azure ATP zjistí AXFR (přenos) žádosti pocházející z jiných servery.
+Protokol DNS obsahuje několik typů dotazů. Ochrana ATP v programu Azure detekuje žádosti AXFR (přenos) pocházející z jiné servery než DNS.
 
 **Šetření**
 
-1. Je zdrojový počítač (**pocházející z...** ) DNS server? Pokud ano, pak je to pravděpodobně falešně pozitivní. K ověření, klikněte na výstrahu zobrazíte stránku s jeho podrobnosti. V tabulce v části **dotazu**, zkontrolujte, které domény dotaz se poslal. Jsou tyto existující domény? Pokud ano, pak **Zavřít** podezřelé aktivity (je falešně pozitivní). Kromě toho zkontrolujte, zda je otevřený mezi senzor samostatné Azure ATP a zdrojový počítač, aby se zabránilo budoucí falešně pozitivních UDP port 53.
+1. Je na zdrojovém počítači (**pocházející z...** ) DNS server? Pokud ano, pak jde pravděpodobně o falešně pozitivní upozornění. Pokud chcete ověřit, klikněte na výstrahu, kterou chcete získat jeho stránku podrobností. V tabulce v části **dotazu**, zkontrolujte, které domény se poslal dotaz. Jsou tyto existující domény? Pokud ano, pak **Zavřít** podezřelé aktivity (je falešně pozitivní). Kromě toho Ujistěte se, že je UDP port 53 otevřený mezi samostatnou senzoru služby Azure ATP a zdrojový počítač, aby se zabránilo budoucí počet falešně pozitivních výsledků.
 
-2. Zdrojový počítač je spuštěný kontrolu zabezpečení? Pokud ano, **vyloučit entity** v ATP, buď přímo pomocí **zavřete a vyloučení** nebo prostřednictvím **vyloučení** stránky (v části **konfigurace** – dostupné pro admins Azure ATP.)
+2. Zdrojový počítač je spuštěný kontrolu zabezpečení? Pokud ano, **vyloučit entity** v ochrany ATP v programu, buď přímo pomocí **zavřít a vyloučit** nebo prostřednictvím **vyloučení** stránky (v části **konfigurace** – k dispozici pro správce služby Azure ATP).
 
-3. Pokud odpověď na všechny předchozí otázky je Ne, zachovat příčin zaměřené na zdrojovém počítači. Klikněte na zdrojový počítač přejít na stránku s jeho profil. Zkontrolujte, co došlo okolo doby požadavku, hledání neobvyklé aktivity, jako například: kdo byl přihlášen, které prostředky tam, kde získat přístup. Pokud jste povolili integrace Windows Defender ATP, klikněte na tlačítko oznámení Windows Defender ATP ![Oznámení "BADGE" Windows Defender ATP](./media/wd-badge.png) k hlubšímu prošetření na počítač. V systému Windows Defender ATP se zobrazí, které procesy a výstrahy došlo k chybě v době výstrahy. 
+3. Pokud odpověď je pro všechny předchozí otázky Ne, ponechat zkoumání zaměření na zdrojovém počítači. Klikněte na zdrojovém počítači přejděte na stránku jeho profil. Zkontrolujte, co se stalo v době požadavku hledání neobvyklých aktivit, jako například: kdo byl přihlášen, které prostředky tam, kde získat přístup. Pokud jste nepovolili integraci ochrany ATP v programu Windows Defender, klikněte na možnost ochrana ATP v programu Windows Defender odznáčku ![Oznámení "BADGE" ochrany ATP v programu Windows Defender](./media/wd-badge.png) aby to prověřili počítače. V programu Windows Defender ATP uvidíte, které procesy a výstrahy došlo k přibližně v době výstrahy. 
 
-**Nápravy**
+**Náprava**
 
-Interní server DNS lze proti rekognoskaci pomocí DNS zabezpečit zakázáním nebo omezením přenosů zóny jen na konkrétní IP adresy. Další informace o omezení přenosy zóny, najdete v části [omezit přenosy zóny](https://technet.microsoft.com/library/ee649273(v=ws.10).aspx).
-Úprava přenosy zóny je jeden úkol mezi kontrolní seznam, který by měl být řešit pro [zabezpečení vaše servery DNS před útoky interních i externích](https://technet.microsoft.com/library/cc770432(v=ws.11).aspx).
+Interní server DNS lze proti rekognoskaci pomocí DNS zabezpečit zakázáním nebo omezením přenosů zóny jen na konkrétní IP adresy. Další informace o omezení přenosů zóny najdete v tématu [omezení přenosů zóny](https://technet.microsoft.com/library/ee649273(v=ws.10).aspx).
+Úprava přenosů zóny je jedním z úkolů na kontrolním seznamu, která by měla být určena pro [zabezpečení před útoky interních i externích serverů DNS](https://technet.microsoft.com/library/cc770432(v=ws.11).aspx).
 
 ## <a name="reconnaissance-using-smb-session-enumeration"></a>Rekognoskace pomocí výčtu relací SMB
 
 
 **Popis**
 
-Výčet serveru Message Block (SMB) umožňuje útočníkům získat informace, kde uživatelé nedávno přihlášení. Jakmile útočník tyto informace, se můžete následně k laterálnímu pohybu v síti přístup k citlivé určitého účtu.
+Výčet Message Block (SMB) serveru umožňuje útočníkům získat informace, kde uživatelé nedávno přihlašovali. Jakmile útočník tyto informace, se můžete přesunout následně k laterálnímu v síti k určité citlivých účtů.
 
-V této detekce výstrahy při provádění výčet relací SMB vůči řadiči domény, protože to nemělo stát.
+V této detekce se aktivuje upozornění při provádění výčet relací SMB proti řadiči domény, protože to nemělo stát.
 
 **Šetření**
 
-1. Klikněte na výstrahu zobrazíte stránku s jeho podrobnosti. Zkontrolujte, který účet se provést operaci a účty, které byly vystaveny, pokud existuje.
+1. Klikněte na výstrahu, kterou chcete získat jeho stránku podrobností. Zkontrolujte operaci provést, které účtu/s a které účty byly vystaveny, pokud existuje.
 
- - Je nějaký druh kontrolu zabezpečení systémem zdrojového počítače? Pokud ano, **zavřete a vyloučení** podezřelou aktivitu.
+ - Existuje nějaký druh kontrolu zabezpečení, které běží na zdrojovém počítači? Pokud ano, **zavřít a vyloučit** podezřelou aktivitu.
 
-2. Zkontrolujte, které hrající roli uživatele nebo s provést operaci. Za normálních okolností protokolují do zdrojového počítače nebo budou správci, kteří měli provádět tyto akce?  
+2. Zkontrolujte operaci provést, které zahrnutých uživatelů/s. Obvykle protokolují do zdrojového počítače nebo jsou správci, kteří by měl provádět tyto akce?  
 
-3. Pokud ano a výstrahu získá aktualizovány, **potlačit** podezřelou aktivitu.  
+3. Pokud ano a výstraha aktualizována, **potlačit** podezřelou aktivitu.  
 
-4. Pokud ano a je to dělat neměli už **Zavřít** podezřelou aktivitu.
+4. Pokud ano a to už nepotřebujeme, by neměla provést **Zavřít** podezřelou aktivitu.
 
-5. Pokud odpověď na všechny výše uvedené je Ne, předpokládají, že to je škodlivý.
+5. Pokud odpovědi na všechny výše uvedené je Ne, Předpokládejme, že to je škodlivý.
 
-**Nápravy**
+**Náprava**
 
-Použití [Net Ustanou nástroj](https://gallery.technet.microsoft.com/Net-Cease-Blocking-Net-1e8dcb5b) k posílení zabezpečení vaše prostředí před tento útok.
+Použití [Net ukončí nástroj](https://gallery.technet.microsoft.com/Net-Cease-Blocking-Net-1e8dcb5b) Posilte zabezpečení vašeho prostředí vůči útoku.
 
 ## <a name="remote-execution-attempt"></a>Pokus o vzdálené spuštění
 
 **Popis**
 
-Útočníci, kteří ohrozit přihlašovací údaje správce, nebo použijte zneužití den nasazení můžete spustit vzdálené příkazy na vašem řadiči domény. Toho mohou využít k trvalému průniku do sítě, shromažďování informací, útokům DoS (Denial of Service) nebo z jakéhokoli jiného důvodu. Azure ATP zjistí nástroje PSexec a rozhraní WMI pro vzdálená připojení.
+Útočníci, kteří ohrozit přihlašovacími údaji správce, nebo použijte před zneužitím nultého dne může na vašem řadiči domény spouštět vzdálené příkazy. Toho mohou využít k trvalému průniku do sítě, shromažďování informací, útokům DoS (Denial of Service) nebo z jakéhokoli jiného důvodu. Ochrana ATP v programu Azure zjistí PSexec a WMI vzdáleného připojení.
 
 **Šetření**
 
-1. To je běžné pro pracovních stanic pro správu a členové týmu IT a účty služby, které provádět úlohy správy řadičem domény. Pokud se jedná o tento případ a výstrahu získá aktualizovány od stejné správce nebo počítače provádění úkolů, pak **potlačit** výstrahy.
+1. To je běžné, že pracovní stanice pro správu a členové týmu IT a účty služeb, které provádět úlohy správy na řadiče domény. Pokud je to tento případ a výstraha aktualizována od stejné správce a/nebo počítače provádění úkolů, pak **potlačit** výstrahu.
 
-2. Je **počítače** dotyčném oprávnění k provedení této vzdálené spuštění na vašem řadiči domény?
+2. Je **počítače** dotyčný povoleno vzdálené spuštění vůči vašemu řadiči domény?
 
- - Je **účet** dotyčném oprávnění k provedení této vzdálené spuštění na vašem řadiči domény?
+ - Je **účet** dotyčný povoleno vzdálené spuštění vůči vašemu řadiči domény?
 
- - Pokud je odpověď na obě otázky *Ano*, pak **Zavřít** výstrahy.
+ - Pokud na obě otázky odpovíte *Ano*, pak **Zavřít** výstrahu.
 
-3. Pokud je odpověď na obě otázky Ne, pak to by se měly zvažovat skutečně pozitivní. Zkuste najít zdroj pokus kontrolou počítači a účtu profily. Klikněte na zdrojový počítač nebo účet, který chcete přejít na stránku s jeho profil. Zkontrolujte, co se stalo v době tyto pokusy hledání neobvyklé aktivity, jako například: kdo byl přihlášen, které prostředky tam, kde získat přístup. Pokud jste povolili Windows Defender ATPintegration, klikněte na tlačítko oznámení Windows Defender ATP ![Oznámení "BADGE" Windows Defender ATP](./media/wd-badge.png) k hlubšímu prošetření na počítač. V systému Windows Defender ATPyou můžete zobrazit výstrahy a procesy došlo k chybě v době výstrahy. 
+3. Pokud je odpověď na obě otázky Ne, pak toto by měl být pravdivě pozitivní upozornění. Pokuste se najít zdrojový na pokus o kontrolou počítače a účtu profily. Klikněte na zdrojový počítač nebo účet, přejděte na stránku jeho profil. Zkontrolujte, co se stalo v době těchto pokusů o přihlášení, hledání neobvyklých aktivit, jako například: kdo byl přihlášen, které prostředky tam, kde získat přístup. Pokud jste povolili Windows Defender ATPintegration, klikněte na oznámení ochrany ATP v programu Windows Defender ![Oznámení "BADGE" ochrany ATP v programu Windows Defender](./media/wd-badge.png) aby to prověřili počítače. V systému Windows Defender ATPyou můžete zobrazit výstrahy a procesů došlo k přibližně v době výstrahy. 
 
-**Nápravy**
+**Náprava**
 
 1. Zakažte vzdálený přístup k řadičům domény z počítačů, které nejsou ve vrstvě 0.
 
-2. Implementace [privilegovaný přístup](https://technet.microsoft.com/windows-server-docs/security/securing-privileged-access/securing-privileged-access) povolit pouze posílené počítače pro připojení k řadiči domény pro správce.
+2. Implementace [privilegovaný přístup](https://technet.microsoft.com/windows-server-docs/security/securing-privileged-access/securing-privileged-access) povolit jen počítačům s posíleným zabezpečením pro připojení k řadiči domény pro správce.
 
-## <a name="suspicious-authentication-failures"></a>Selhání podezřelé ověřování
-
-**Popis**
-
-V rámci útoku hrubou silou útočník pokusí ověřování pomocí mnoho různých hesla pro různé účty, dokud nebude nalezen správné heslo pro alespoň jeden účet. Jednou najde, útočník může přihlásit pomocí tohoto účtu.
-
-Toto zjišťování výstraha se spustí, když došlo k mnoha selhání ověřování pomocí protokolu Kerberos nebo NTLM, může se jednat buď vodorovně s malou sadu hesla mezi mnoha uživateli; nebo svisle s velkým sady hesel ve pouze několik uživatelů; nebo libovolnou kombinaci těchto dvou možností. Minimální dobu, než může být výstraha je jeden týden.
-
-**Šetření**
-
-1.  Klikněte na tlačítko **stáhnout podrobnosti o** zobrazíte úplné informace v tabulce aplikace Excel. Můžete získat následující informace: 
-   -    Seznam attacked účtů
-   -    Seznam odhadované účtů, ve které pokusů o přihlášení, bylo dokončeno s úspěšné ověření
-   -    Pokud se pokusy o ověření se provádí pomocí protokolu NTLM, zobrazí se příslušné události aktivit 
-   -    Pokud pokusy o ověření se provádí pomocí protokolu Kerberos, zobrazí se příslušné síťové aktivity
-
-2.  Klikněte na zdrojový počítač přejít na stránku s jeho profil. Zkontrolujte, co se stalo v době tyto pokusy hledání neobvyklé aktivity, jako například: kdo byl přihlášen, které prostředky tam, kde získat přístup. Pokud jste povolili integrace Windows Defender ATP, klikněte na tlačítko oznámení Windows Defender ATP ![Oznámení "BADGE" Windows Defender ATP](./media/wd-badge.png) k hlubšímu prošetření na počítač. V systému Windows Defender ATP se zobrazí, které procesy a výstrahy došlo k chybě v době výstrahy. 
-
-3.  Pokud se provedlo ověřování pomocí protokolu NTLM a zjistíte, že výstraha vyskytuje několikrát a není dostatek informací o serveru, který má zdrojový počítač se pokusili získat přístup k dispozici, měli byste povolit **NTLM auditování** na řadiče domény související se situací. To pokud chcete udělat, zapněte událostí 8004. Toto je událost ověřování NTLM, která obsahuje informace o zdrojovém počítači, uživatelský účet a **server** který zdrojového počítače se pokusili získat přístup. Po víte, které server odeslal ověření ověřování, které byste měli prozkoumat serveru kontrolou události, jako je 4624 pro lepší pochopení proces ověřování. 
-
-**Nápravy**
-
-[Komplexní a dlouhá hesla](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) poskytovat potřebné první úrovně zabezpečení před útoky hrubou silou.
-
-## <a name="suspicious-service-creation"></a>Vytvoření podezřelé služby
+## <a name="suspicious-authentication-failures"></a>Podezřelé chyby ověřování
 
 **Popis**
 
-Podezřelé služby byl vytvořen na řadič domény ve vaší organizaci. Tato výstraha spoléhá na události 7045 za účelem zjištění této podezřelé aktivity. 
+V rámci útoku hrubou silou se útočník pokusí ověření pomocí mnoha různých hesel pro různé účty, dokud nebude nalezen správné heslo pro alespoň jeden účet. Jednou najde, útočník může přihlásit pomocí tohoto účtu.
+
+Tato detekce se aktivuje upozornění, když došlo k mnoha chyb ověřování pomocí protokolu Kerberos nebo NTLM, napříč mnoha uživatelů; to může být buď vodorovně s menší skupinou hesel nebo svisle s velkým nastavte hesel pouze několik uživatelů. nebo libovolnou kombinaci těchto dvou možností. Minimální dobu, než může být výstraha je jeden týden.
 
 **Šetření**
 
-1. Pokud je počítač v pracovní stanici správce nebo počítač, na které členové týmu IT a služby účty provádět úlohy správy, může to být falešně pozitivní a budete muset **potlačit** výstrahy a přidejte ho do Seznam vyloučení v případě potřeby.
+1.  Klikněte na tlačítko **stáhnout podrobnosti o** zobrazíte úplné informace v Excelové tabulce. Můžete získat následující informace: 
+   -    Seznam napadené účty
+   -    Seznam odhadnuté účty v které pokusů o přihlášení, bylo dokončeno s úspěšné ověření
+   -    Pokud byly provedeny pokusy o ověření, pomocí protokolu NTLM, zobrazí se příslušné události aktivit 
+   -    Pokud byly provedeny pokusy o ověření, pomocí protokolu Kerberos, zobrazí se příslušné síťové aktivity
+
+2.  Klikněte na zdrojovém počítači přejděte na stránku jeho profil. Zkontrolujte, co se stalo v době těchto pokusů o přihlášení, hledání neobvyklých aktivit, jako například: kdo byl přihlášen, které prostředky tam, kde získat přístup. Pokud jste nepovolili integraci ochrany ATP v programu Windows Defender, klikněte na možnost ochrana ATP v programu Windows Defender odznáčku ![Oznámení "BADGE" ochrany ATP v programu Windows Defender](./media/wd-badge.png) aby to prověřili počítače. V programu Windows Defender ATP uvidíte, které procesy a výstrahy došlo k přibližně v době výstrahy. 
+
+3.  Pokud se provádí ověřování pomocí protokolu NTLM a objeví se, že výstrahy v mnoha případech a není dostatek informací o serveru, které na zdrojovém počítači se pokusili získat přístup, měli byste povolit **auditování protokolu NTLM** na řadiče domény zahrnuté. K tomuto účelu zapněte události 8004. Toto je událost ověřování NTLM, která obsahuje informace o zdrojovém počítači, uživatelský účet a **server** které na zdrojovém počítači se pokusili získat přístup. Až budete vědět, které server odeslal ověření ověřování, které byste měli prozkoumat serveru tak, že zkontrolujete jeho události, jako je 4624 pro lepší pochopení procesu ověřování. 
+
+**Náprava**
+
+[Složitá a dlouhá hesla](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) poskytují nezbytnou první úroveň zabezpečení před útoky hrubou silou.
+
+## <a name="suspicious-service-creation"></a>Podezřelé vytvoření služby
+
+**Popis**
+
+Podezřelé služba je vytvořená na řadiči domény ve vaší organizaci. Tato výstraha se spoléhá na událost 7045 za účelem zjištění této podezřelé aktivity. 
+
+**Šetření**
+
+1. Pokud v daném počítači je k pracovní stanici správce, nebo počítače, na které členové týmu IT a služba účty provádět úlohy správy, může jít o falešně pozitivní upozornění a možná budete muset **potlačit** upozornění a přidejte ho do Seznam vyloučení v případě potřeby.
 
 2. Je služba něco, co rozpoznat v tomto počítači?
 
- - Je **účet** dotyčném dovoleno instalovat tuto službu?
+ - Je **účet** dotyčný můžou nainstalovat tuto službu?
 
- - Pokud je odpověď na obě otázky *Ano*, pak **Zavřít** výstrahy, nebo ho přidat do seznamu vyloučení.
+ - Pokud na obě otázky odpovíte *Ano*, pak **Zavřít** výstrahu nebo ho přidejte do seznamu vyloučení.
 
-3. Pokud je odpověď na obě otázky *žádné*, a to by se měly zvažovat skutečně pozitivní.
+3. Pokud na obě otázky odpovíte *žádné*, a to by se měly zvažovat pravdivě pozitivní upozornění.
 
-**Nápravy**
+**Náprava**
 
-- Implementovat méně privilegovaný přístup v doméně počítače, které chcete povolit jenom konkrétní uživatelé práva k vytvoření nové služby.
+- Implementace méně privilegovaný přístup v doméně počítače povolit jenom konkrétní uživatelé práva k vytvoření nové služby.
+
+## Podezřelé připojení k síti VPN – Preview<a name="suspicious-vpn-detection"></a>
+
+**Popis**
+
+Ochrana ATP v programu Azure se učí chování entit pro uživatele sítě VPN klouzavou dobu jednoho měsíce. 
+
+Model chování VPN je založen na následující činnosti: počítače přihlášení uživatele k a umístění se uživatelé připojovat z. 
+
+Oznámení se otevře po odchylky od chování uživatele podle algoritmu strojového učení.
+
+**Šetření**
+
+1.  Dotyčný uživatel by měl být provádění těchto operací?
+2.  Vezměte v úvahu následující případů jako potenciální falešně pozitivní: uživatel změnil jeho umístění, jako uživatel, který je na cestách a připojit se z nového zařízení.
+
+**Náprava**
+
+1.  Zvažte, resetuje se heslo tohoto uživatele. Útočník zabrání vytvoření nových připojení sítě VPN pomocí staré přihlašovacích údajů.
+2.  Vezměte v úvahu blokování tento uživatel v připojení prostřednictvím sítě VPN.
 
 ## <a name="unusual-protocol-implementation"></a>Neobvyklá implementace protokolu
 
 
 **Popis**
 
-Útočníci pomocí nástrojů, které implementují různých protokolů (protokol SMB, protokolu Kerberos, NTLM) nestandardní způsoby. Když tento typ síťového provozu je přijat Windows bez upozornění, Azure ATP je rozpoznat potenciální zlými úmysly. Toto chování je určující pro techniky, jako je například přesahu-Pass-the-Hash a hrubou silou, jakož i zneužití používané pokročilé ransomware, například WannaCry.
+Útočníci použít nástroje, které implementují různé protokoly (SMB, Kerberos, NTLM) nestandardním způsobem. Tento typ síťového provozu je přijat ve Windows bez upozornění, je ochrana ATP v programu Azure rozpoznat potenciální škodlivým činnostem. Chování je indikátorem techniky, jako je například over-pass-the-Hash a útoky hrubou silou, jakož i zneužití používané Upřesnit ransomwaru, například WannaCry.
 
 **Šetření**
 
-Identifikovat protokol, který neobvyklé – z časové ose podezřelé aktivity, klikněte na podezřelou aktivitu, abyste se dostali na stránku s jeho podrobnosti; protokol se zobrazí nad šipku: protokolu Kerberos nebo NTLM.
+Identifikujte na protokol, který neobvyklá – z časové osy podezřelých aktivit, klikněte na podezřelé aktivity a získat na stránku jeho podrobnosti. protokol se zobrazí nad šipku: protokolu Kerberos nebo NTLM.
 
-- **Protokol Kerberos**: to se často spustí Pokud hackerům nástroje, jako byl použit Mimikatz, potenciálně provedení útoku Overpass-the-Hash. Zkontrolujte, zda zdrojový počítač je spuštěna aplikace, která implementuje vlastní zásobník protokolu Kerberos, není v souladu s RFC protokolu Kerberos. Pokud je to tento případ, je neškodné skutečně pozitivní a můžete **Zavřít** výstrahy. Pokud zachová se výstraha a stále je případ, můžete **potlačit** výstrahy.
+- **Protokol Kerberos**: to se často aktivuje, pokud hackerům nástroj, jako je nástroj Mimikatz se použil, potenciálně provedení útoku Overpass-the-Hash. Zaškrtněte, pokud zdrojovém počítači běží aplikace, která implementuje vlastní zásobník protokolu Kerberos, není v souladu s RFC protokolu Kerberos. Pokud je to tento případ, se jedná o neškodné pravdivě pozitivní upozornění a můžete **Zavřít** výstrahu. Pokud udržuje se výstraha a se stále o případ, můžete si **potlačit** výstrahu.
 
-- **NTLM**: může být WannaCry nebo nástroje, jako je Metasploit, Medusa a Hydra.  
+- **NTLM**: může být WannaCry nebo nástrojů, jako je Metasploit Medusa a Hydra.  
 
-Pokud chcete zjistit, jestli se jedná o útoku WannaCry, proveďte následující kroky:
+Pokud chcete zjistit, zda se jedná o útok WannaCry, proveďte následující kroky:
 
-1. Zkontrolujte, zda zdrojový počítač je spuštěn nástroj na útok například Metasploit, Medusa nebo Hydra.
+1. Zkontrolujte, jestli zdrojovém počítači běží nástroj útoku například Metasploit, Medusa nebo Hydra.
 
-2. Pokud se nenajdou žádné nástroje útoku, zkontrolujte, zda zdrojový počítač je spuštěna aplikace, která implementuje vlastní zásobník protokolu NTLM nebo protokolu SMB.
+2. Pokud se nenajdou žádné nástroje útoku, zkontrolujte, zda zdrojovém počítači běží aplikace, která implementuje vlastní zásobník protokolu NTLM nebo podepisování SMB.
 
-3. Pokud ne, zkontrolujte, pokud je to způsobeno WannaCry spuštěním skriptu WannaCry skener, například [Tento skener](https://github.com/apkjet/TrustlookWannaCryToolkit/tree/master/scanner) proti zahrnutých v podezřelé aktivity zdrojového počítače. Pokud skeneru zjistí, že tento počítač jako nakažené nebo snadno napadnutelný, pracovních na opravy na počítač a odebrání malware a blokování ze sítě.
+3. Pokud ne, zaškrtněte, pokud to je způsobeno WannaCry spuštěním skriptu skener WannaCry, například [Tento skener](https://github.com/apkjet/TrustlookWannaCryToolkit/tree/master/scanner) proti účastnící se podezřelá aktivita zdrojového počítače. Pokud skener zjistí, že tento počítač jako nakažené nebo zranitelné, práce na opravy chyb počítač a odebrat malware a blokování ze sítě.
 
-4. Pokud skript nebyl nalezen, že je počítač nakažené nebo snadno napadnutelný, pak může pořád nakažené, ale SMBv1 mohla být zakázána nebo tento počítač má zúčastněné, které by došlo k ovlivnění nástroj vyhledávání.
+4. Pokud skript nenašli, že daný počítač hostuje nakažené nebo ohrožená a pak může pořád nakažené, ale SMBv1 můžou byly zakázané nebo na počítači, byla opravena, které by ovlivnily skenovací nástroj.
 
-**Nápravy**
+**Náprava**
 
-Oprava všechny počítače, zejména použití aktualizací zabezpečení.
+Oprava všech počítačů, zejména použití aktualizací zabezpečení.
 
 1. [Zakázat SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/)
 
 2. [Odebrat WannaCry](https://support.microsoft.com/help/890830/remove-specific-prevalent-malware-with-windows-malicious-software-remo)
 
-3. WanaKiwi mohly dešifrovat data do nesprávných rukou některé ransom softwaru, ale pouze, pokud uživatel restartovat nebo vypnout počítač. Další informace najdete v tématu [pokřik Ransomware, který chcete](https://answers.microsoft.com/en-us/windows/forum/windows_10-security/wanna-cry-ransomware/5afdb045-8f36-4f55-a992-53398d21ed07?auth=1)
+3. WanaKiwi může dešifrovat data v rámci ransom softwaru, ale jen pokud uživatel nebyl restartovat nebo vypnout počítač. Další informace najdete v tématu [chcete pokřik Ransomwaru](https://answers.microsoft.com/en-us/windows/forum/windows_10-security/wanna-cry-ransomware/5afdb045-8f36-4f55-a992-53398d21ed07?auth=1)
 
 
 > [!NOTE]
-> Chcete-li zakázat podezřelou aktivitu, kontaktujte podporu.
+> Pokud chcete zakázat podezřelé aktivity, obraťte se na podporu.
 
 
 ## <a name="see-also"></a>Viz také
 - [Práce s podezřelými aktivitami](working-with-suspicious-activities.md)
-- [Podívejte se na fórum ATP!](https://aka.ms/azureatpcommunity)
+- [Podívejte se na fórum ochrany ATP v programu.](https://aka.ms/azureatpcommunity)
