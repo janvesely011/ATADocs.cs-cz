@@ -18,6 +18,7 @@
 ## [7 Vyloučení a účty honeytoken](install-atp-step7.md)
 ## [8 Konfigurace požadovaných oprávnění pro SAM-R](install-atp-step8-samr.md)
 ## [Bezobslužná instalace](ATP-silent-installation.md)
+## [Aktualizace senzorů služby ATP](sensor-update.md)
 ## Další kroky se senzorem Azure ATP
 ### [Konfigurace zrcadlení portů](configure-port-mirroring.md)
 ### [Ověření zrcadlení portů](validate-port-mirroring.md)
