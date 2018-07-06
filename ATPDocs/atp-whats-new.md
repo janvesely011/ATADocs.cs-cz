@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 7/4/2018
+ms.date: 7/5/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,17 +13,25 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f38e7fc2fb1c50718cac27664737e46d83fa6084
-ms.sourcegitcommit: 40dbce8045f689376a50275fb12e3c5c32ca8092
-ms.translationtype: HT
+ms.openlocfilehash: f533d835c9129dd56db5ac6e0ef2cca4b33cc043
+ms.sourcegitcommit: 4170888deee71060e9a17c8a1ac772cc2fe4b51e
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37799089"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37800704"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
 
 # <a name="whats-new-in-azure-atp"></a>Co je nového v Azure ATP 
+
+## <a name="azure-atp-release-239"></a>Verze ochrany ATP v programu Azure 2.39
+
+Vydané 5. července 2018
+-   **Přidat nové detekce: Kerberos golden ticket - neexistující účet** (preview)<br>Toto nové zjišťování pomáhá chránit vaši organizaci před útoky, ve kterých je vytvořen zlatý lístek Kerberos účtu, který neexistuje ve vaší doméně. Další informace najdete v tématu [Průvodce prošetřováním podezřelých aktivit rozšířené ochrany před internetovými útoky pro Azure](suspicious-activity-guide.md#golden-ticket)
+
+- Tato verze obsahuje opravy a vylepšení pro několik problémů. 
+
 
 ## <a name="azure-atp-release-238"></a>Verze ochrany ATP v programu Azure 2,38
 
