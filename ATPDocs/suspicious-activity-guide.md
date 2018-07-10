@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 6/10/2018
+ms.date: 7/5/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: de0b8f1673098a1b4b00255f4543ca18a903c83f
-ms.sourcegitcommit: f61616a8269d27a8fcde6ecf070a00e2c56481ac
+ms.openlocfilehash: 610a84ac0e9b3c199971ced47dc5a5d08db00287
+ms.sourcegitcommit: 4170888deee71060e9a17c8a1ac772cc2fe4b51e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35259221"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37800670"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -95,7 +95,7 @@ Oprava všech počítačů, zejména použití aktualizací zabezpečení.
 
 1.  Zakázat SMBv1 Odebrat WannaCry WanaKiwi může dešifrovat data v rámci ransom softwaru, ale jen pokud uživatel nebyl restartovat nebo vypnout počítač.
 
-2.  Další informace najdete v tématu [chcete pokřik Ransomwaru Pokud chcete zakázat podezřelé aktivity, obraťte se na podporu. Kromě toho se žádný požadavek na ověření Kerberos související s předchozí žádosti o službu detekovaných službou ochrany ATP v programu.
+2.  Lístku Golden – [Golden Ticket](#golden-ticket) výstrah, metoda šifrování pole TGT v TGS_REQ (žádost o službu) zprávy ze zdrojového počítače byl downgradovat ve srovnání s dřív zjištěné chování. Pokud chcete zakázat podezřelé aktivity, obraťte se na podporu. Kromě toho se žádný požadavek na ověření Kerberos související s předchozí žádosti o službu detekovaných službou ochrany ATP v programu.
 
 3.  Overpass-the-Hash – může útočník zneužít k vytvoření lístku silné žádost Kerberos AS slabé odcizené hodnoty hash. Při tomto zjišťování byla downgradovat typ šifrování zprávy AS_REQ ze zdrojového počítače, ve srovnání s dřív zjištěné chování (to znamená, počítač se pomocí standardu AES).
 
@@ -182,25 +182,44 @@ Pass-the-Ticket je technika laterálního pohybu, kdy útočník získá lístek
 
 2. Pokud je citlivý účet, měli byste zvážit, obnovení účtu KRBTGT dvakrát jako podezřelá aktivita zlatého lístku. Obnovení účtu KRBTGT dvakrát zruší platnost všech protokolu Kerberos, takže Plánujte lístky v této doméně než to uděláte. Přečtěte si pokyny v [KRBTGT účet skriptů pro resetování hesla nyní dostupný pro zákazníky se](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), také naleznete pomocí [resetování nástroj hesla/klíčů účtu KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).  Protože to je technika laterálního pohybu, postupujte podle osvědčených postupů v [předání hodnoty hash doporučení](http://aka.ms/PtH).
 
-## Protokol Kerberos Golden Ticket<a name="golden-ticket"></a>
+## Protokol Kerberos golden ticket<a name="golden-ticket"></a>
 
 **Popis**
 
-Útočníci s právy správce domény může ohrozit [účtu KRBTGT](https://technet.microsoft.com/library/dn745899(v=ws.11).aspx#Sec_KRBTGT). Pomocí účtu KRBTGT, můžete vytvořit lístek Kerberos udělující lístek (TGT), který poskytuje autorizaci k jakémukoli prostředku a nastavit dobu platnosti lístku do libovolného kdykoli. Tato falešných lístků TGT se nazývá "Zlatých lístků" a útočníkům umožňuje dosáhnout trvalého průniku do sítě.
+Útočníci s právy správce domény může ohrozit [účtu KRBTGT](https://technet.microsoft.com/library/dn745899(v=ws.11).aspx#Sec_KRBTGT). Pomocí účtu KRBTGT, můžete vytvořit lístek Kerberos udělující lístek (TGT), který poskytuje autorizaci k jakémukoli prostředku a nastavit dobu platnosti lístku do libovolného kdykoli. Tato falešných lístků TGT se nazývá "goldentTicket" a útočníkům umožňuje dosáhnout trvalého průniku do sítě.
 
-V této detekce se aktivuje upozornění, pokud je lístek Kerberos udělující lístek se používá pro více než povolená doba uvedená v [maximální doba života lístku uživatele](https://technet.microsoft.com/library/jj852169(v=ws.11).aspx) zásady zabezpečení.
+V této detekce se aktivuje upozornění, pokud je lístek Kerberos udělující lístek se používá pro více než povolená doba uvedená v [maximální doba života lístku uživatele](https://technet.microsoft.com/library/jj852169(v=ws.11).aspx), jde **čas anomálií**útok typu golden Ticket, nebo neexistující účet jde **neexistující účet** útok metodou golden ticket.
+zásady zabezpečení.
 
 **Šetření**
 
-1. Pokusil se poslední (během posledních několik hodin) změny provedené **maximální doba života lístku uživatele** nastavení v zásadách skupiny? Pokud ano, pak **Zavřít** upozornění (bylo falešně pozitivní).
+- **Čas anomálií**
+   1.   Byl poslední (během posledních několik hodin) změny do maximální doba života lístku nastavení hlavního názvu uživatele v zásadách skupiny? Vyhledat konkrétní hodnotu a zjistěte, jestli je nižší než čas, kdy-the-ticket se použil pro. Pokud ano, pak zavřete výstrahu (bylo falešně pozitivní).
+   2.   Je senzoru služby Azure ATP zahrnutých v této výstraze virtuálního počítače? Pokud ano, ji nedávno pokračovat od uloženého stavu? Pokud ano, tuto výstrahu zavřete.
+   3.   Pokud je odpověď na otázky uvedené výše předpokládají Ne, to se zlými úmysly.
+- **Neexistující účet**
+   1.   Odpovědět na tyto otázky:
+         - Je, že uživatel je uživatelem domény známé a platný? Pokud ano, pak zavřete výstrahu (bylo falešně pozitivní).
+         - Uživatel byl nedávno přidán? Pokud ano, pak zavřete výstrahu, změna nemusí mít nebyly synchronizovány.
+         - Uživatel byl nedávno odstraněn z AD? Pokud ano, pak zavřete výstrahu.
+   2.   Pokud je odpověď na otázky uvedené výše předpokládají Ne, to se zlými úmysly.
 
-2. Samostatný senzor ochrany ATP v programu Azure je zahrnutých v této výstraze virtuálního počítače? Pokud ano, ji nedávno pokračovat od uloženého stavu? Pokud ano, pak **Zavřít** této výstrahy.
+1. Pro oba typy útoků pomocí zlatého lístku, klikněte na tlačítko na zdrojovém počítači přejděte do jeho **profilu** stránky. Zkontrolujte, co se stalo v době aktivity a podívejte se na neobvyklé aktivity, včetně, který byl přihlášen, získal přístup k jakým prostředkům? 
 
-3. Pokud je odpověď na otázky uvedené výše předpokládají Ne, to se zlými úmysly.
+2.  Jsou všichni uživatelé, které se připojily k počítači, by měl být přihlášení? Jaké jsou jejich oprávnění? 
+
+3.  Tito uživatelé mají mít přístup k těmto prostředkům?<br>
+Pokud jste nepovolili integraci ochrany ATP v programu Windows Defender, klikněte na možnost ochrana ATP v programu Windows Defender Odznáček ![WD oznámení "BADGE"](./media/wd-badge.png).
+ 
+ 4. Aby to prověřili počítače, v programu Windows Defender ATP, zkontrolujte, které procesy a výstrahy došlo k chybě v době výskytu výstrahy.
 
 **Náprava**
 
+
 Změnit heslo protokolu Kerberos KRBTGT Ticket Granting Ticket () dvakrát podle pokynů v [KRBTGT účet skriptů pro resetování hesla nyní k dispozici pro zákazníky, kteří](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), použije [resetování hesla/klíčů účtu KRBTGT Nástroj](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Obnovení účtu KRBTGT dvakrát zruší platnost všech protokolu Kerberos, takže Plánujte lístky v této doméně než to uděláte. Navíc vzhledem k tomu, že vytvoření Golden Ticket vyžaduje práva správce domény, implementovat [předání hodnoty hash doporučení](http://aka.ms/PtH).
+
+
+
 
 ## <a name="malicious-data-protection-private-information-request"></a>Škodlivá žádost o soukromé informace přes Data Protection
 
@@ -232,9 +251,14 @@ V této detekce se aktivuje upozornění, když se spustí požadavek replikace 
 
 **Šetření**
 
-1.  Je počítač v otázce řadiče domény? Například připojovaly řadiče domény, které měly potíže s replikací. Pokud ano, **Zavřít** podezřelou aktivitu. 
-2.  Dotyčný počítač by měl být replikaci dat ze služby Active Directory? Například Azure AD Connect. Pokud ano, **zavřít a vyloučit** podezřelou aktivitu.
-3.  Klikněte na zdrojový počítač nebo účet, přejděte na stránku jeho profil. Zkontrolujte, co se stalo v době replikace, hledání neobvyklých aktivit, jako například: kdo byl přihlášen, které prostředky tam, kde získat přístup. Pokud jste nepovolili integraci ochrany ATP v programu Windows Defender, klikněte na možnost ochrana ATP v programu Windows Defender odznáčku ![Oznámení "BADGE" ochrany ATP v programu Windows Defender](./media/wd-badge.png) aby to prověřili počítače. V programu Windows Defender ATP uvidíte, které procesy a výstrahy došlo k přibližně v době výstrahy. 
+> [!NOTE]
+> Pokud máte řadiče domény, ve kterých nejsou nainstalované senzory ochrany ATP v programu Azure, tyto řadiče domény nejsou pokryty ochrany ATP v programu Azure. V takovém případě Pokud nasazujete nový řadič domény na řadič domény zrušit nebo nechráněné, ho nejsou označené pomocí služby Azure ATP jako řadič domény v první. Důrazně doporučujeme nainstalovat na každý řadič domény zajistěte tak kompletní senzoru služby Azure ATP.
+
+1. Je počítač v otázce řadiče domény? Například připojovaly řadiče domény, které měly potíže s replikací. Pokud ano, **Zavřít** podezřelou aktivitu. 
+2.  Dotyčný počítač by měl být replikaci dat ze služby Active Directory? Například Azure AD Connect nebo v síti monitorování výkonu zařízení. Pokud ano, **zavřít a vyloučit** podezřelou aktivitu.
+3. Je IP adresa, ze které byl odeslán požadavek na replikaci NAT nebo proxy server? Pokud ano, zkontrolujte, jestli je nový řadič domény za zařízení, nebo pokud z něj došlo k jiné podezřelých aktivit. 
+
+4. Klikněte na zdrojový počítač nebo účet, přejděte na stránku jeho profil. Zkontrolujte, co se stalo v době replikace, hledání neobvyklých aktivit, jako například: kdo byl přihlášen, které prostředky tam, kde získat přístup. Pokud jste nepovolili integraci ochrany ATP v programu Windows Defender, klikněte na možnost ochrana ATP v programu Windows Defender odznáčku ![Oznámení "BADGE" ochrany ATP v programu Windows Defender](./media/wd-badge.png) aby to prověřili počítače. V programu Windows Defender ATP uvidíte, které procesy a výstrahy došlo k přibližně v době výstrahy. 
 
 
 **Náprava**
@@ -505,9 +529,9 @@ Pokud chcete zjistit, zda se jedná o útok WannaCry, proveďte následující k
 
 2. Pokud se nenajdou žádné nástroje útoku, zkontrolujte, zda zdrojovém počítači běží aplikace, která implementuje vlastní zásobník protokolu NTLM nebo podepisování SMB.
 
-3. Pokud ne, zaškrtněte, pokud to je způsobeno WannaCry spuštěním skriptu skener WannaCry, například [Tento skener](https://github.com/apkjet/TrustlookWannaCryToolkit/tree/master/scanner) proti účastnící se podezřelá aktivita zdrojového počítače. Pokud skener zjistí, že tento počítač jako nakažené nebo zranitelné, práce na opravy chyb počítač a odebrat malware a blokování ze sítě.
+3. Klikněte na zdrojovém počítači přejděte na stránku jeho profil. Zkontrolujte, co se stalo v době výskytu výstrahy, hledání neobvyklých aktivit, jako například: kdo byl přihlášen, které prostředky tam, kde získat přístup. Pokud jste nepovolili integraci ochrany ATP v programu Windows Defender, klikněte na možnost ochrana ATP v programu Windows Defender odznáčku ![oznámení "BADGE" WD](./media/wd-badge.png) aby to prověřili počítače. V programu Windows Defender ATP uvidíte, které procesy a výstrahy došlo k přibližně v době výstrahy.
 
-4. Pokud skript nenašli, že daný počítač hostuje nakažené nebo ohrožená a pak může pořád nakažené, ale SMBv1 můžou byly zakázané nebo na počítači, byla opravena, které by ovlivnily skenovací nástroj.
+
 
 **Náprava**
 
