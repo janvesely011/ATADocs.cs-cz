@@ -4,7 +4,7 @@ description: Toto téma popisuje různé možnosti podpory pro verze Microsoft A
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 4/10/2018
+ms.date: 7/15/2018
 ms.topic: article
 ms.prod: ''
 ms.service: advanced-threat-analytics
@@ -12,31 +12,29 @@ ms.technology: ''
 ms.assetid: a8afbd91-c888-4dfc-94ab-72e38745163e
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 93c26e0049936b3db1253a785c6b28bffe0ab197
-ms.sourcegitcommit: e0209c6db649a1ced8303bb1692596b9a19db60d
+ms.openlocfilehash: 2aebec8f93153f626905067880235479705aa20a
+ms.sourcegitcommit: a9b8bc26d3cb5645f21a68dc192b4acef8f54895
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31007283"
+ms.lasthandoff: 07/16/2018
+ms.locfileid: "39064014"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
 # <a name="support-for-microsoft-advanced-threat-analytics-ata-versions"></a>Podpora pro verze Microsoft Advanced Threat Analytics (ATA)
 
-Microsoft má v plánu vydávat aktualizace ATA párkrát za rok s tím, že každá verze aktualizace bude podporována po dobu 12 měsíců od data jejího vydání s obecnou dostupností. Technická podpora je k dispozici po celou dobu 12 měsíců. Naše struktura podpory je teď ale dynamická – rozvíjí se do dvou různých fází údržby, které závisejí na dostupnosti nejnovější verze.
+Microsoft má v plánu vydávat aktualizace ATA párkrát za rok s tím, že každá verze aktualizace bude podporována po dobu 12 měsíců od data jejího vydání s obecnou dostupností. Technická podpora je poskytována po celých 12 měsíců. Naše struktura podpory je teď ale dynamická – rozvíjí se do dvou různých fází údržby, které závisejí na dostupnosti nejnovější verze.
 
--   Zabezpečení a důležité aktualizace údržby fáze – když spustíte nejnovější verzi ATA, zobrazí se zabezpečení a důležité aktualizace.
+-   Zabezpečení a fáze údržby důležité aktualizace – když spustíte nejnovější verzi ATA, zobrazí se zabezpečení a důležité aktualizace.
 
 -   Fáze údržby Aktualizace zabezpečení (pouze): Po vydání nové verze ATA se podpora starších verzí omezí po zbytek 12měsíčního životního cyklu podpory jen na aktualizace zabezpečení (jak ukazuje následující příklad podpory údržby verzí).
  
-![Příklad podpory údržby verzí](media/versions.png)
-
 > [!Note]
-> Nejnovější verze ATA je vždy ve fázi údržby Důležité aktualizace a aktualizace zabezpečení. Znamená to, že pokud narazíte na chybu kódu, která si zasluhuje důležitou aktualizaci, a chcete obdržet opravu, musíte mít nainstalovanou nejnovější verzi Current Branch. Všechny podporované verze jsou jenom oprávněni přijímat aktualizace zabezpečení. Veškerá podpora verze, jejíž platnost vypršela, skončí po uplynutí 12měsíčního životního cyklu. V tu chvíli musí zákazníci provést aktualizaci na podporovanou verzi.
+> Nejnovější verze ATA je vždy ve fázi údržby Důležité aktualizace a aktualizace zabezpečení. Znamená to, že pokud narazíte na chybu kódu, která si zasluhuje důležitou aktualizaci, a chcete obdržet opravu, musíte mít nainstalovanou nejnovější verzi Current Branch. Všechny ostatní podporované verze jsou jenom způsobilá k přijímání aktualizací zabezpečení. Veškerá podpora verze, jejíž platnost vypršela, skončí po uplynutí 12měsíčního životního cyklu. V tu chvíli musí zákazníci provést aktualizaci na podporovanou verzi.
 
 ## <a name="version-history"></a>Historie verzí
 
-|VERZE|ČÍSLO BUILDU|DATUM DOSTUPNOSTI| DATUM UKONČENÍ PODPORY|
+|VERZE|ČÍSLO BUILDU|DATUM DOSTUPNOSTI|DATUM UKONČENÍ PODPORY|
 |----|----|----|----|
 |1.4|1.4.2457|31. SRPNA 2015|30. SRPNA 2016|
 |1.5|1.5.2946|17. PROSINCE 2015|16. PROSINCE 2016|
@@ -48,7 +46,7 @@ Microsoft má v plánu vydávat aktualizace ATA párkrát za rok s tím, že ka�
 |1.8|1.8.6645|30. ČERVNA 2017|30. ČERVNA 2018|
 |1.8.1|1.8.6765|02. SRPNA 2017|02. SRPNA 2018|
 |1.9|1.9.7312|21. BŘEZNA 2018|21. BŘEZNA 2019|
-
+|1.9.1|1.9.7412|01. ČERVENCE 2018|01. ČERVENCE 2019|
 
 
 

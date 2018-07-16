@@ -1,11 +1,11 @@
 ---
-title: Advanced Threat Analytics doporučená upgradu | Microsoft Docs
+title: Advanced Threat Analytics doporučená Cesta upgradu | Dokumentace Microsoftu
 description: Poskytuje pokyny k upgradu vaší verzi Advanced Threat Analytics (ATA).
 keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/21/2018
+ms.date: 7/15/2018
 ms.topic: article
 ms.prod: ''
 ms.service: advanced-threat-analytics
@@ -13,17 +13,17 @@ ms.technology: ''
 ms.assetid: 88720401-1fb2-4353-ad39-32bc0088f0de
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 314c86b1a1e13dd20e52210e4b75ff5fe66ecd2c
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: 52d500bfb61818b9cc1785382f92c7d3b4ca3501
+ms.sourcegitcommit: a9b8bc26d3cb5645f21a68dc192b4acef8f54895
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30009968"
+ms.lasthandoff: 07/16/2018
+ms.locfileid: "39064147"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
-# <a name="recommended-upgrade-path-for-ata"></a>Doporučený způsob upgradu pro ATA
-Tento článek obsahuje informace o dostupných verzí Advanced Threat Analytics a postup upgradu ATA, v závislosti na tom, jaká verze máte systémem.
+# <a name="recommended-upgrade-path-for-ata"></a>Doporučená Cesta upgradu pro ATA
+Tento článek obsahuje informace o dostupných verzí Advanced Threat Analytics a postupu při upgradu ATA v závislosti na tom, jakou verzi máte systémem.
 
 
 ## <a name="ata-versions"></a>Verze ATA
@@ -38,10 +38,11 @@ Tento článek obsahuje informace o dostupných verzí Advanced Threat Analytics
 |1.8|1.8.6645|
 |1.8 update 1|1.8.6765|
 |1.9|1.9.7312|
+|1.9 update 1|1.9.7412|
 
 ## <a name="ata-version-upgrade-matrix"></a>Tabulka upgradu verzí ATA
 
-![Tabulka upgradu verzí ATA](./media/version-matrix.png)
+![Tabulka upgradu verzí ATA](./media/upgrade-path.png)
 
 
 

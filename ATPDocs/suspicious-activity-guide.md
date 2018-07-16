@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 610a84ac0e9b3c199971ced47dc5a5d08db00287
-ms.sourcegitcommit: 4170888deee71060e9a17c8a1ac772cc2fe4b51e
+ms.openlocfilehash: 83c855a89ad418769c81a4f1da3950ae0b6c54f7
+ms.sourcegitcommit: a9b8bc26d3cb5645f21a68dc192b4acef8f54895
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37800670"
+ms.lasthandoff: 07/16/2018
+ms.locfileid: "39064113"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -89,13 +89,13 @@ V této detekce se aktivuje upozornění, když zjistí velké množství jednod
 
 **Popis**
 
-Oslabení šifrování je metoda oslabení podle downgradu úrovně šifrování protokolu různých polí, které jsou obvykle šifrována pomocí nejvyšší úrovně šifrování pomocí protokolu Kerberos. Oslabeným šifrované pole může být snazší target na offline útoky hrubou silou při pokusech. Různých metod útoku zvýšit využití slabé šifrování doklad protokolu Kerberos. Pokud skript nenašli, že daný počítač hostuje nakažené nebo ohrožená a pak může pořád nakažené, ale SMBv1 můžou byly zakázané nebo na počítači, byla opravena, které by ovlivnily skenovací nástroj.
+Oslabení šifrování je metoda oslabení podle downgradu úrovně šifrování protokolu různých polí, které jsou obvykle šifrována pomocí nejvyšší úrovně šifrování pomocí protokolu Kerberos. Oslabeným šifrované pole může být snazší target na offline útoky hrubou silou při pokusech. Různých metod útoku zvýšit využití slabé šifrování doklad protokolu Kerberos. V tomto zjišťování ochrany ATP v programu Azure učí typy šifrování pomocí protokolu Kerberos, počítačů a uživatelů a upozorní vás, když je slabší šifrovací, který používá: (1) neobvyklé, že u zdrojového počítače nebo uživatele. a (2) shod označuje technik útoku.
 
-Oprava všech počítačů, zejména použití aktualizací zabezpečení.
+Existují tři typy detekce:
 
-1.  Zakázat SMBv1 Odebrat WannaCry WanaKiwi může dešifrovat data v rámci ransom softwaru, ale jen pokud uživatel nebyl restartovat nebo vypnout počítač.
+1.  Skeleton Key – je malware, který běží na řadičích domény a umožňuje ověření vůči doméně pomocí libovolného účtu bez znalosti jeho hesla. Tento malware často používá slabší šifrovací algoritmy k vytvoření hodnoty hash hesel uživatelů na řadiči domény. Tato detekce byla metoda šifrování zprávy KRB_ERR z řadiče domény k účtu s žádostí o lístek downgradovat ve srovnání s dřív zjištěné chování.
 
-2.  Lístku Golden – [Golden Ticket](#golden-ticket) výstrah, metoda šifrování pole TGT v TGS_REQ (žádost o službu) zprávy ze zdrojového počítače byl downgradovat ve srovnání s dřív zjištěné chování. Pokud chcete zakázat podezřelé aktivity, obraťte se na podporu. Kromě toho se žádný požadavek na ověření Kerberos související s předchozí žádosti o službu detekovaných službou ochrany ATP v programu.
+2.  Lístku Golden – [Golden Ticket](#golden-ticket) výstrah, metoda šifrování pole TGT v TGS_REQ (žádost o službu) zprávy ze zdrojového počítače byl downgradovat ve srovnání s dřív zjištěné chování. To není založené na čase anomálií (stejně jako v jiných detekce Golden Ticket). Kromě toho se žádný požadavek na ověření Kerberos související s předchozí žádosti o službu detekovaných službou ochrany ATP v programu.
 
 3.  Overpass-the-Hash – může útočník zneužít k vytvoření lístku silné žádost Kerberos AS slabé odcizené hodnoty hash. Při tomto zjišťování byla downgradovat typ šifrování zprávy AS_REQ ze zdrojového počítače, ve srovnání s dřív zjištěné chování (to znamená, počítač se pomocí standardu AES).
 
@@ -107,9 +107,11 @@ Nejprve zkontrolujte popis výstrahy, abyste zjistili, která z výše uvedenýc
 
 2.  Zlatý lístek – v excelové tabulce, přejděte na kartu se síťovou aktivitou. Uvidíte, že je pole relevantní sníženou příbuzností **typ šifrování lístku žádosti**, a **typy šifrování podporované zdrojové počítače** obsahuje silnější metody šifrování.
 
-  1. Zkontrolujte zdrojový počítač a účet, nebo pokud existuje více zdrojových počítačů a účtů kontrolovat, jestli se mají něco společné (například všechny marketingové pracovníky pomocí konkrétní aplikace, které by mohly způsobovat aktivovat upozornění). Existují případy, ve kterých je vlastní aplikaci, která se používá jen občas, ověřování pomocí nižší šifry šifrování. Zkontrolujte, jestli jsou na zdrojovém počítači těchto vlastních aplikací. Pokud ano, je pravděpodobně o neškodné pravdivě pozitivní upozornění a lze potlačit.
+  1. Zkontrolujte prostředek přistupuje tyto lístky, pokud je jeden prostředek, ke kterým všechny přistupují, ověřte ho, ujistěte se, že je platný prostředek, který se má přístup. Dále ověřte, jestli cílový prostředek podporuje metody silné šifrování. Můžete to zkontrolovat ve službě Active Directory tak, že zkontrolujete atribut msDS-SupportedEncryptionTypes, účet služby zdroje.
   
-  2. Zkontrolujte prostředek přistupuje tyto lístky, pokud je jeden prostředek, ke kterým všechny přistupují, ověřte ho, ujistěte se, že je platný prostředek, který se má přístup. Dále ověřte, jestli cílový prostředek podporuje metody silné šifrování. Můžete to zkontrolovat ve službě Active Directory tak, že zkontrolujete atribut msDS-SupportedEncryptionTypes, účet služby zdroje.
+  2. Zkontrolujte zdrojový počítač a účet, nebo pokud existuje více zdrojových počítačů a účtů kontrolovat, jestli se mají něco společné (například všechny marketingové pracovníky pomocí konkrétní aplikace, které by mohly způsobovat aktivovat upozornění). Existují případy, ve kterých je vlastní aplikaci, která se používá jen občas, ověřování pomocí nižší šifry šifrování. Zkontrolujte, jestli jsou na zdrojovém počítači těchto vlastních aplikací. Pokud ano, je pravděpodobně o neškodné pravdivě pozitivní upozornění a lze potlačit.
+  
+  
 
 3.  Overpass-the-Hash – v excelové tabulce, přejděte na kartu se síťovou aktivitou. Uvidíte, že je pole relevantní sníženou příbuzností **šifrované typ šifrování časové razítko** a **typy šifrování podporované zdrojové počítače** obsahuje silnější metody šifrování.
 
@@ -197,7 +199,8 @@ zásady zabezpečení.
    1.   Byl poslední (během posledních několik hodin) změny do maximální doba života lístku nastavení hlavního názvu uživatele v zásadách skupiny? Vyhledat konkrétní hodnotu a zjistěte, jestli je nižší než čas, kdy-the-ticket se použil pro. Pokud ano, pak zavřete výstrahu (bylo falešně pozitivní).
    2.   Je senzoru služby Azure ATP zahrnutých v této výstraze virtuálního počítače? Pokud ano, ji nedávno pokračovat od uloženého stavu? Pokud ano, tuto výstrahu zavřete.
    3.   Pokud je odpověď na otázky uvedené výše předpokládají Ne, to se zlými úmysly.
-- **Neexistující účet**
+
+- **Neexistující účet** (Preview)
    1.   Odpovědět na tyto otázky:
          - Je, že uživatel je uživatelem domény známé a platný? Pokud ano, pak zavřete výstrahu (bylo falešně pozitivní).
          - Uživatel byl nedávno přidán? Pokud ano, pak zavřete výstrahu, změna nemusí mít nebyly synchronizovány.
