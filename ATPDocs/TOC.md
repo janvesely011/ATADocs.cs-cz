@@ -17,6 +17,7 @@
 ## [6 Integrace sítě VPN](install-atp-step6-vpn.md)
 ## [7 Vyloučení a účty honeytoken](install-atp-step7.md)
 ## [8 Konfigurace požadovaných oprávnění pro SAM-R](install-atp-step8-samr.md)
+## [9 Nastavení podpory více doménových struktur](atp-multi-forest.md)
 ## [Bezobslužná instalace](ATP-silent-installation.md)
 ## [Aktualizace senzorů služby ATP](sensor-update.md)
 ## Další kroky se senzorem Azure ATP
