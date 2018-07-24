@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 7/5/2018
+ms.date: 7/20/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 83c855a89ad418769c81a4f1da3950ae0b6c54f7
-ms.sourcegitcommit: a9b8bc26d3cb5645f21a68dc192b4acef8f54895
+ms.openlocfilehash: 089481d393acd0c18ad098d22a63bc521946b4e3
+ms.sourcegitcommit: 7909deafdd9323f074d0ff2f590e307bcfaaabad
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/16/2018
-ms.locfileid: "39064113"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39202077"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -468,6 +468,72 @@ Tato detekce se aktivuje upozornění, když došlo k mnoha chyb ověřování p
 **Náprava**
 
 [Složitá a dlouhá hesla](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) poskytují nezbytnou první úroveň zabezpečení před útoky hrubou silou.
+
+## <a name="suspicious-domain-controller-promotion-potential-dcshadow-attack"></a>Povýšení řadiče domény podezřelé (možný útok DCShadow)
+
+**Popis**
+
+Útok stínové (DCShadow) řadiče domény je útok navržené tak, aby změnit pomocí škodlivou replikaci objektů adresáře. Tento útok lze provést z libovolného počítače tak, že vytvoříte řadič domény neautorizovaných serverů pomocí procesu replikace.
+ 
+DCShadow používá vzdálené volání Procedur a protokolu LDAP:
+1. Zaregistrovat účet počítače jako řadič domény (pomocí oprávnění správce domény), a
+2. Provádění replikace (s použitím udělena práva replikace) za drsuapi s žádostí o a odeslat změny objektů adresáře.
+ 
+V této detekce se aktivuje upozornění, když počítače v síti se pokouší zaregistrovat jako řadič domény neautorizovaných serverů. 
+
+**Šetření**
+ 
+1. Je počítač v otázce řadiče domény? Například připojovaly řadiče domény, které měly potíže s replikací. Pokud ano, **Zavřít** podezřelou aktivitu.
+2. Dotyčný počítač by měl být replikaci dat ze služby Active Directory? Například Azure AD Connect. Pokud ano, **zavřít a vyloučit** podezřelou aktivitu.
+3. Klikněte na zdrojový počítač nebo účet, přejděte na stránku jeho profil. Zkontrolujte, co se stalo v době replikace, hledání neobvyklých aktivit, jako například: kdo byl přihlášen, k jakým prostředkům a co je počítač, operační systém?
+   1. Jsou všichni uživatelé, které se připojily k počítači, by měl být přihlášení? Jaké jsou jejich oprávnění? Mají oprávnění ke zvýšení úrovně serveru na řadič domény? (jsou domain admins)?
+   2. Mají uživatelé k těmto prostředkům přístup?
+   3. Běží počítači operační systém Windows Server (nebo Windows/Linux)? Počítač jiného typu než server by nemělo replikovat data.
+Pokud jste nepovolili integraci ochrany ATP v programu Windows Defender, klikněte na možnost ochrana ATP v programu Windows Defender Odznáček ![ochrany ATP v programu Windows Defender oznámení "BADGE"](./media/wd-badge.png) k hlubšímu prošetření je počítač. V programu Windows Defender ATP uvidíte, které procesy a výstrahy došlo k přibližně v době výstrahy.
+
+4. Podívejte se na Prohlížeč událostí zobrazíte [události služby Active Directory, které zaznamenává v adresáři protokolu služeb](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/cc961809(v=technet.10)). V protokolu můžete použít ke sledování změn ve službě Active Directory. Ve výchozím nastavení, služby Active Directory zaznamená pouze kritické chybové události, ale pokud tento upozornění recurrs, povolte tento audit na řadiči domény relevantní pro další zkoumání.
+
+**Opravit**
+
+Kontrola, kdo ve vaší organizaci tato oprávnění: 
+- Replikace změn adresáře 
+- Replikovat všechny změny v adresáři 
+ 
+ 
+Další informace najdete v tématu [udělení Active Directory Domain Services oprávnění k synchronizaci profilu v SharePoint serveru 2013](https://technet.microsoft.com/library/hh296982.aspx). 
+
+Můžete využít [AD ACL Scanner](https://blogs.technet.microsoft.com/pfesweplat/2013/05/13/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool/) nebo vytvořit skript prostředí Windows PowerShell k určení, kdo v doméně tato oprávnění má.
+ 
+
+
+
+## <a name="suspicious-replication-request-potential-dcshadow-attack"></a>Podezřelá replikace požadavku (možný útok DCShadow)
+
+**Popis** 
+
+Replikace služby Active Directory je proces, podle kterého se změny provedené na jednom řadiči domény synchronizují s jinými řadiči domény. Udělili nezbytná oprávnění, útočníci mohou neuděluje práva k jejich účet počítače, což jim umožní zosobnit řadiče domény. Útočníci se snažit inicializujte žádost o škodlivou replikaci, což jim umožní změnit objekty služby Active Directory na řadič domény pravosti, která může přidělit útočníci přetrvávání v doméně.
+V této detekce se aktivuje upozornění při generování podezřelá replikace požadavek proti řadiči domény originální chráněné službou ochrany ATP v programu Azure. Chování je indikátorem techniky využívají útocích stínové řadič domény.
+
+**Šetření** 
+ 
+1. Je počítač v otázce řadiče domény? Například připojovaly řadiče domény, které měly potíže s replikací. Pokud ano, **Zavřít** podezřelou aktivitu.
+2. Dotyčný počítač by měl být replikaci dat ze služby Active Directory? Například Azure AD Connect. Pokud ano, **zavřít a vyloučit** podezřelou aktivitu.
+3. Klikněte na zdrojovém počítači přejděte na stránku jeho profil. Zkontrolujte, co se stalo **v době** replikace, hledání neobvyklých aktivit, jako například: kdo byl přihlášen, které prostředky byly použity a co je počítač, operační systém?
+
+   1.  Jsou všichni uživatelé, které se připojily k počítači, by měl být přihlášení? Jaké jsou jejich oprávnění? Mají oprávnění k provedení akce replikace (jsou domain admins)?
+   2.  Mají uživatelé k těmto prostředkům přístup?
+   3. Běží počítači operační systém Windows Server (nebo Windows/Linux)? Počítač jiného typu než server by nemělo replikovat data.
+Pokud jste nepovolili integraci ochrany ATP v programu Windows Defender, klikněte na možnost ochrana ATP v programu Windows Defender Odznáček ![ochrany ATP v programu Windows Defender oznámení "BADGE"](./media/wd-badge.png) k hlubšímu prošetření je počítač. V programu Windows Defender ATP uvidíte, které procesy a výstrahy došlo k přibližně v době výstrahy.
+1. Podívejte se na Prohlížeč událostí zobrazíte [události služby Active Directory, které zaznamenává v adresáři protokolu služeb](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/cc961809(v=technet.10)). V protokolu můžete použít ke sledování změn ve službě Active Directory. Ve výchozím nastavení, služby Active Directory zaznamená pouze kritické chybové události, ale pokud tento upozornění recurrs, povolte tento audit na řadiči domény relevantní pro další zkoumání.
+
+**Náprava**
+
+Kontrola, kdo ve vaší organizaci tato oprávnění: 
+- Replikace změn adresáře 
+- Replikovat všechny změny v adresáři 
+
+K tomuto účelu můžete využít [AD ACL Scanner](https://blogs.technet.microsoft.com/pfesweplat/2013/05/13/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool/) nebo vytvořit skript prostředí Windows PowerShell k určení, kdo v doméně tato oprávnění má.
+
 
 ## <a name="suspicious-service-creation"></a>Podezřelé vytvoření služby
 

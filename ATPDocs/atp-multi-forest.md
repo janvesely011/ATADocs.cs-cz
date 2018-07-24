@@ -5,7 +5,7 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 7/17/2018
+ms.date: 7/20/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: effca0f2-fcae-4fca-92c1-c37306decf84
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c76e459709c786082bea7566a61e5384a235eda4
-ms.sourcegitcommit: 8feb9b65dc0e1de0ace00aca11784e54f9852a15
+ms.openlocfilehash: a48bf96bd6a71282455d932a35aac23ba4c8193a
+ms.sourcegitcommit: 7909deafdd9323f074d0ff2f590e307bcfaaabad
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39098198"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39202128"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -44,7 +44,7 @@ Schopnost podporují více doménových struktur služby Active Directory umož�
 Ke zjištění aktivity mezi doménovými strukturami, senzory ochrany ATP v programu Azure dotazovat řadiče domény ve vzdálených doménových strukturách vytvořit profily pro všechny entity používané, včetně uživatelů a počítačů ze vzdálených doménových strukturách. 
 
 > [!NOTE]
-> - V pořadí, aby to fungovalo musí důvěřovat doménové struktuře, ve kterém jsou nainstalované senzory ochrany ATP v programu Azure všechny ostatní doménové struktury.
+> - Azure senzorů ochrany ATP v programu se dá nainstalovat na všechny doménové struktury (pokud existuje minimální jednosměrný vztah důvěryhodnosti).
 > - Uživatel, který konfigurujete v konzole služby Azure ATP v **adresářové služby** musí důvěřovat ve všech dalších doménových struktur.
 
 
