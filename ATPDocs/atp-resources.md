@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 34dc152c-6b7f-4128-93fe-aad56c282730
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d7ef73907b224758aabde1db5dd4f6060b6d244a
-ms.sourcegitcommit: 7909deafdd9323f074d0ff2f590e307bcfaaabad
+ms.openlocfilehash: 498d1b4d14db079583da1999bfb68a5648111362
+ms.sourcegitcommit: 63a36cd96aec30e90dd77bee1d0bddb13d2c4c64
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39202043"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39227134"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -64,6 +64,7 @@ Po vytvoření a spuštění je ochrana ATP v programu Azure, budete moci zobraz
 ## <a name="security-best-practices"></a>Osvědčené postupy zabezpečení
 
 - [Azure ATP – nejčastější dotazy](atp-technical-faq.md) – Tento článek obsahuje seznam nejčastější dotazy týkající se ochrany ATP v programu Azure a poskytuje podrobné informace a odpovědi. 
+
 ## <a name="community-resources"></a>Zdroje informací a materiály z komunity
 
 Blog: [blogu Azure ATP](https://aka.ms/aatpblog)
