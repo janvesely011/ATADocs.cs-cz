@@ -1,6 +1,6 @@
 ---
-title: Instalace Azure Advanced Threat Protection – krok 4 | Microsoft Docs
-description: Čtvrtý krok instalace Azure ATP vám pomůže s instalací senzoru samostatné Azure ATP.
+title: Instalace Azure Advanced Threat Protection – krok 4 | Dokumentace Microsoftu
+description: Čtvrtý krok instalace ochrany ATP v programu Azure vám pomůže s instalací samostatného senzoru služby Azure ATP.
 keywords: ''
 author: rkarlin
 ms.author: rkarlin
@@ -14,79 +14,79 @@ ms.assetid: 51911e39-76c7-4dcd-bc0b-ec6235d0403f
 ms.reviewer: itargoet
 ms.suite: ems
 ms.openlocfilehash: 56b3cea2089c64e2c78361c44d049d6de67764b6
-ms.sourcegitcommit: 158bf048d549342f2d4689f98ab11f397d9525a2
+ms.sourcegitcommit: 759e99f670c42c2dd60d07b2200d3de01ddf6055
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 07/30/2018
 ms.locfileid: "30202268"
 ---
-*Platí pro: Azure Advanced Threat Protection*
+*Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
 
 
-# <a name="install-azure-atp---step-4"></a>Nainstalovat Azure ATP – krok 4
+# <a name="install-azure-atp---step-4"></a>Instalace služby Azure ATP – krok 4
 
 >[!div class="step-by-step"]
 [« Krok 3](install-atp-step3.md)
 [Krok 5 »](install-atp-step5.md)
 
-## <a name="step-4-install-the-azure-atp-sensor"></a>Krok 4: Nainstalovat Azure ATP senzoru
+## <a name="step-4-install-the-azure-atp-sensor"></a>Krok 4: Instalace senzoru služby Azure ATP
 
-Před instalací senzoru samostatné Azure ATP na vyhrazený server ověřte, že je zrcadlení portů správně nakonfigurované a že senzoru samostatné Azure ATP vidí provoz do a z řadičů domény. 
+Před instalací služby Azure ATP samostatný senzor na vyhrazený server ověřte, že je zrcadlení portů správně nakonfigurované a že samostatného senzoru služby Azure ATP vidí provoz do a z řadičů domény. 
 
 
 > [!IMPORTANT]
->Ujistěte se, že rozhraní .net Framework 4.7 je nainstalován na počítači. Pokud je rozhraní .net Framework 4.7 není nainstalován Azure ATP senzor instalační balíček nainstaluje, který vyžaduje restartování serveru.
+>Ujistěte se, že rozhraní .net Framework 4.7 je nainstalovaná na počítači. Pokud je rozhraní .net Framework 4.7 není nainstalovaná Instalační balíček senzoru služby Azure ATP ho nainstaluje, která vyžaduje restartování serveru.
 
-Proveďte následující kroky v Azure ATP senzor serveru nebo řadiče domény.
+Proveďte následující kroky na serveru senzoru služby Azure ATP nebo řadič domény.
 
-1. Ověřte, zda je počítač připojen k příslušné koncový bod Azure ATP cloudové služby:
-  - https://triprd1wceuw1sensorapi.atp.azure.com (pro Evropu)  
+1. Ověřte, zda je počítač připojen k relevantní koncový bod cloudu služby ochrany ATP v programu Azure:
+  - https://triprd1wceuw1sensorapi.atp.azure.com (pro Evropa)  
   - https://triprd1wcuse1sensorapi.atp.azure.com (pro USA)
-  - https://triprd1wcasse1sensorapi.atp.azure.com (pro Asii)
+  - https://triprd1wcasse1sensorapi.atp.azure.com (pro Asie)
 
 2. Rozbalte instalační soubory ze souboru zip. 
 > [!NOTE] 
 > Instalace přímo ze souboru zip selže.
 
-2.  Spustit **Azure ATP senzor setup.exe** a postupujte podle pokynů Průvodce instalací.
+2.  Spustit **setup.exe senzoru služby Azure ATP** a postupujte podle pokynů Průvodce instalací.
 
 3.  Na stránce **Vítejte** vyberte svůj jazyk a klikněte na **Další**.
 
-     ![Azure ATP samostatné senzor instalace jazyka](media/sensor-install-language.png)
+     ![Azure jazyk instalace samostatného senzoru ochrany ATP v programu](media/sensor-install-language.png)
 
 
-4.  Průvodce instalací automaticky kontroluje, zda je server řadičem domény nebo vyhrazený server. Pokud je řadič domény, je nainstalovaná senzoru Azure ATP, pokud je vyhrazený server, je nainstalována senzoru samostatné Azure ATP. 
+4.  Průvodce instalací automaticky kontroluje, zda je server řadičem domény nebo vyhrazený server. Pokud je řadič domény, nainstaluje se senzoru služby Azure ATP, pokud se jedná o vyhrazený server, Azure ATP samostatný senzor je nainstalovaný. 
     
-    Pro samostatné senzor Azure ATP, například následující obrazovka se zobrazí pokaždé senzor samostatné Azure ATP je nainstalovaný na vyhrazený server:
+    Například pro Azure ATP samostatný senzor, se zobrazí následující obrazovka s oznámením, že Azure ATP samostatný senzor je nainstalovaný na vyhrazeném serveru:
     
-    ![Azure ATP samostatná senzor instalace](media/sensor-install-deployment-type.png)
+    ![Instalace samostatné senzoru služby Azure ochrany ATP v programu](media/sensor-install-deployment-type.png)
 
     Klikněte na **Další**.
 
     > [!NOTE] 
-    > Pokud řadič domény nebo vyhrazený server nesplňuje minimální požadavky na hardware pro instalaci, zobrazí se upozornění. Přesto můžete kliknout na tlačítko **Další** a pokračovat v instalaci. To může být správné volby pro instalaci v testovacím prostředí malé testovacím ve kterém nepotřebujete tolik místo pro uložení dat v Azure ATP. Pro produkční prostředí, důrazně doporučujeme pro práci s Azure ATP [plánování kapacity](atp-capacity-planning.md) průvodce zajistěte, aby řadiče domény nebo vyhrazené servery splňují požadavky.
+    > Pokud řadič domény nebo vyhrazený server nesplňuje minimální požadavky na hardware pro instalaci, zobrazí se upozornění. Přesto můžete kliknout na tlačítko **Další** a pokračovat v instalaci. To může být správná volba pro instalaci služby Azure ATP v testovacím prostředí malé lab, ve kterém není třeba tolik místa pro ukládání dat. Pro produkční prostředí, důrazně doporučujeme pro práci s Azure ATP [plánování kapacity](atp-capacity-planning.md) Průvodce Ujistěte se, že řadiče domény nebo vyhrazené servery splňují nezbytné požadavky.
 
-4.  V části **Konfigurace senzoru**, zadejte cestu instalace a přístupový klíč, který jste zkopírovali v předchozím kroku, podle vašeho prostředí:
+4.  V části **Konfigurace senzoru**, zadejte instalační cestu a přístupový klíč, který jste zkopírovali v předchozím kroku, podle vašeho prostředí:
 
-    ![Obrázek konfigurace senzor samostatné sady Azure ATP](media/sensor-install-config.png)
+    ![Azure ochrany ATP v programu samostatný senzor konfigurace image](media/sensor-install-config.png)
 
-      - Instalační cesta: Toto je umístění, kde je nainstalován senzoru samostatné Azure ATP. Ve výchozím nastavení je to senzor %programfiles%\Azure Advanced Threat Protection. Nechte nastavenou výchozí hodnotu.
+      - Instalační cesta: Toto je umístění, kde je nainstalován samostatného senzoru služby Azure ATP. Ve výchozím nastavení to je %programfiles%\Azure Advanced Threat Protection senzoru. Nechte nastavenou výchozí hodnotu.
 
-      - Přístupový klíč: to je načíst z portálu prostoru v předchozím kroku.
+      - Přístupový klíč: to je načten z portálu pracovního prostoru v předchozím kroku.
     
-5. Klikněte na tlačítko **Nainstalovat**. Následující součásti jsou nainstalovaná a nakonfigurovaná v průběhu instalace senzoru Azure ATP:
+5. Klikněte na tlačítko **Nainstalovat**. Následující komponenty jsou nainstalovaná a nakonfigurovaná v průběhu instalace senzoru služby Azure ATP:
 
     -   KB 3047154 (pouze pro Windows Server 2012 R2)
 
         > [!IMPORTANT]
         > -   Neinstalujte KB 3047154 na hostiteli virtualizace (na hostiteli, na kterém je spuštěná virtualizace, spuštění na virtuálním počítači je v pořádku). Může způsobit, že zrcadlení portů přestane fungovat správně. 
-        > -   Pokud Wireshark je nainstalovaná na počítači senzor ATP po spuštění Wireshark budete muset restartovat ATP senzoru, protože používá stejné ovladače.
+        > -   Pokud Wireshark je nainstalovaná na počítači senzor ochrany ATP v programu, až spustíte Wireshark budete muset restartovat senzor ochrany ATP v programu, protože používá stejné ovladače.
 
-    -   Služba Azure senzor ATP a Azure ATP senzor aktualizační službu
+    -   Azure službu sensor ochrany ATP v programu a službu updater senzoru služby Azure ATP
     -   Microsoft Visual C++ 2013 Redistributable
 
-5.  Po dokončení instalace, klikněte na tlačítko **spusťte** otevřete prohlížeč a přihlaste se k portálu Azure ATP pracovního prostoru.
+5.  Po dokončení instalace klikněte na tlačítko **spuštění** otevřete prohlížeč a přihlaste se k portálu pracovního prostoru služby Azure ATP.
 
 
 >[!div class="step-by-step"]
@@ -102,4 +102,4 @@ Proveďte následující kroky v Azure ATP senzor serveru nebo řadiče domény.
 
 - [Požadavky služby Azure ATP](atp-prerequisites.md)
 
-- [Podívejte se na fórum ATP!](https://aka.ms/azureatpcommunity)
+- [Podívejte se na fórum ochrany ATP v programu.](https://aka.ms/azureatpcommunity)
