@@ -2,10 +2,10 @@
 title: Řešení známých problémů ATA | Dokumentace Microsoftu
 description: Tento článek popisuje řešení známých problémů v Advanced Threat Analytics.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 3/21/2018
+ms.date: 7/25/2018
 ms.topic: article
 ms.prod: ''
 ms.service: advanced-threat-analytics
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: a7172447de5b4d4088da2d8d687a7bec47a01551
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: 3433da5ca3d6d08f91cd97b24f6b97251c6b28ae
+ms.sourcegitcommit: 759e99f670c42c2dd60d07b2200d3de01ddf6055
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30010478"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39335992"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
@@ -47,13 +47,13 @@ Tato část podrobně popisuje možné chyby v nasazení ATA a kroky potřebné 
 |System.InvalidOperationException: Instance 'Microsoft.Tri.Gateway' v určené kategorii neexistuje.|Pro názvy procesů v bráně ATA byl povolen identifikátor PID|PID v názvech procesů zakážete pomocí [KB281884](https://support.microsoft.com/kb/281884)|
 |System.InvalidOperationException: Kategorie neexistuje.|Čítače můžou být v registru zakázané|Čítače výkonu znovu sestavíte pomocí [KB2554336](https://support.microsoft.com/kb/2554336)|
 |System.ApplicationException: Není možné spustit relaci ETW MMA-ETW-Livecapture-a4f595bd-f567-49a7-b963-20fa4e370329|V souboru hostitelů se nachází položka hostitele odkazující na krátký název počítače|Odeberte položku hostitele ze souboru C:\Windows\System32\drivers\etc\HOSTS nebo ji změňte na FQDN.|
-|System.IO.IOException: Ověření se nezdařilo, protože vzdálená strana uzavřela přenosový stream.|Protokol TLS 1.0 je zakázána na ATA Gateway, ale .net je nastavený na použití protokolu TLS 1.2|Použijte jednu z následujících možností: </br> Povolení protokolu TLS 1.0 na bráně ATA Gateway </br>Povolení protokolu TLS 1.2 na rozhraní .net nastavením klíče registru, který chcete použít výchozí nastavení operačního systému pro protokol SSL a TLS, následujícím způsobem: </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001` </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`</br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SchUseStrongCrypto"=dword:00000001 `</br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] " SchUseStrongCrypto"=dword:00000001`|
+|System.IO.IOException: Ověření se nezdařilo, protože vzdálená strana uzavřela přenosový stream.|Protokol TLS 1.0 je zakázaný v komponentě ATA Gateway, ale rozhraní .net je nastavené na použití protokolu TLS 1.2|Použijte jednu z následujících možností: </br> Povolení protokolu TLS 1.0 na bráně ATA Gateway </br>Protokol TLS 1.2 na rozhraní .net nastavením klíčů registru použít výchozí nastavení operačního systému pro protokol SSL a TLS, následujícím způsobem: </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001` </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`</br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SchUseStrongCrypto"=dword:00000001 `</br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] " SchUseStrongCrypto"=dword:00000001`|
 |System.TypeLoadException: Nebylo možné načíst typ Microsoft.Opn.Runtime.Values.BinaryValueBufferManager ze sestavení Microsoft.Opn.Runtime, Verze=4.0.0.0, Jazyková verze=neutrální, PublicKeyToken=31bf3856ad364e35|Komponentě ATA Gateway se nepodařilo načíst požadované parsovací soubory.|Zkontrolujte, jestli je nainstalovaný Microsoft Message Analyzer. Instalace nástroje Message Analyzer společně s komponentami ATA Gateway / Lightweight Gateway není podporovaná. Odinstalujte Message Analyzer a restartujte službu Gateway.|
 |System.Net.WebException: Vzdálený server vrátil chybu: (407) Vyžadováno ověřování proxy serveru|Komunikaci mezi ATA Gateway a ATA Center ruší proxy server.|Vypněte proxy server na počítači s ATA Gateway. <br></br>Nastavení proxy serveru můžou záviset na konkrétním účtu.|
 |System.IO.DirectoryNotFoundException: Systém nemůže nalézt zadanou cestu. (Výjimka na základě hodnoty HRESULT: 0x80070003)|Jednu nebo více služeb potřebných pro provoz ATA se nepodařilo spustit.|Spusťte tyto služby: <br></br>Výstrahy a protokolování výkonu, Plánovač úloh.|
-|System.Net.WebException: Vzdálený server vrátil chybu: (403) zakázán|ATA Gateway nebo Lightweight Gateway může bylo zakázáno z navazování připojení HTTP, protože komponenty ATA Center není důvěryhodný.|Přidejte název pro rozhraní NetBIOS a plně kvalifikovaný název domény pro ATA Center do seznamu důvěryhodných webů a vymažte mezipaměť na Interne Explorer (nebo na název komponenty ATA Center jako zadaný v konfiguraci, pokud je nakonfigurované se liší od pro rozhraní NetBIOS nebo plně kvalifikovaný název domény).|
-|System.Net.Http.HttpRequestException: PostAsync failed [requestTypeName=StopNetEventSessionRequest]|ATA Gateway nebo ATA Lightweight Gateway nelze zastavit a spustit relaci trasování událostí pro Windows, která shromažďuje síťový provoz z důvodu problému rozhraní WMI|Postupujte podle pokynů v [rozhraní WMI: znovu sestavit úložiště služby WMI](https://blogs.technet.microsoft.com/askperf/2009/04/13/wmi-rebuilding-the-wmi-repository/) vyřešit problém, rozhraní WMI|
-|System.Net.Sockets.SocketException: Byl proveden pokus o přístup k soketu způsobem, jeho přístupovými oprávněními|Na ATA Gateway je port 514 používá jiná aplikace|Použití `netstat -o` k vytvoření, které proces používá tento port.|
+|System.Net.WebException: Vzdálený server vrátil chybu: zakázáno (403)|ATA Gateway a Lightweight Gateway by byl zakázán z navazování připojení HTTP, protože komponenty ATA Center není důvěryhodný.|Přidejte název rozhraní NetBIOS a plně kvalifikovaný název domény z komponenty ATA Center do seznamu důvěryhodných webů a vymažte mezipaměť na Interne Explorer (nebo názvu komponenty ATA Center, jak je zadáno v konfiguraci, pokud je nakonfigurované se liší od rozhraní NetBIOS nebo plně kvalifikovaný název).|
+|System.Net.Http.HttpRequestException: PostAsync failed [requestTypeName=StopNetEventSessionRequest]|ATA Gateway nebo ATA Lightweight Gateway nejde zastavit a spustit relaci trasování událostí pro Windows, která shromažďuje síťový provoz z důvodu problému s WMI|Postupujte podle pokynů v [rozhraní WMI: opětovné vytvoření úložiště služby WMI](https://blogs.technet.microsoft.com/askperf/2009/04/13/wmi-rebuilding-the-wmi-repository/) k vyřešení tohoto problému rozhraní WMI|
+|System.Net.Sockets.SocketException: Byl proveden pokus o přístup k soketu tak automatické připojení zakázáno její přístupová oprávnění|Používá jiná aplikace portu 514 v komponentě ATA Gateway|Použití `netstat -o` stanovit, které proces používá daný port.|
  
 ## <a name="deployment-errors"></a>Chyby nasazení
 > [!div class="mx-tableFixed"]
@@ -62,11 +62,15 @@ Tato část podrobně popisuje možné chyby v nasazení ATA a kroky potřebné 
 |Instalace rozhraní .Net Framework 4.6.1 se nepovedla s chybou 0x800713ec.|Na serveru nejsou nainstalované nezbytné komponenty pro .Net Framework 4.6.1. |Před instalací ATA ověřte, že jsou na serveru nainstalované aktualizace systému Windows [KB2919442](https://www.microsoft.com/download/details.aspx?id=42135) a [KB2919355](https://support.microsoft.com/kb/2919355).|
 |System.Threading.Tasks.TaskCanceledException: Úloha byla zrušena.|Procesu nasazení vypršel časový limit, protože komponenta ATA Center nebyla dosažitelná.|1.    Zkontrolujte síťové připojení komponenty ATA Center tím, že na ni přejdete pomocí její IP adresy. <br></br>2.    Zkontrolujte konfiguraci proxy serveru nebo firewallu.|
 |System.Net.Http.HttpRequestException: Při odesílání žádosti došlo k chybě. ---> System.Net.WebException: Vzdálený server vrátil chybu: (407) Vyžadováno ověřování proxy serveru|Procesu nasazení vypršel časový limit, protože kvůli chybné konfiguraci proxy serveru nebyla komponenta ATA Center dosažitelná.|Před nasazením zakažte konfiguraci proxy serveru a pak ji znovu povolte. Alternativně můžete v proxy serveru nakonfigurovat výjimku.|
-|System.Net.Sockets.SocketException: Stávající připojení bylo vynuceně ukončeno vzdáleným hostitelem||Použijte jednu z následujících možností: </br>Povolení protokolu TLS 1.0 na bráně ATA Gateway </br>Povolení protokolu TLS 1.2 na rozhraní .net nastavením klíče registru, který chcete použít výchozí nastavení operačního systému pro protokol SSL a TLS, následujícím způsobem:</br> `[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`</br> `[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`</br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SchUseStrongCrypto"=dword:00000001` </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] " SchUseStrongCrypto"=dword:00000001`|
-|Chyby [\[] DeploymentModel [\]] se nezdařilo ověření správy [\[] CurrentlyLoggedOnUser =<domain>\<uživatelské jméno > Stav = FailedAuthentication výjimka = [\]]|Proces nasazení ATA Gateway nebo ATA Lightweight Gateway nelze úspěšně ověřil v komponentě ATA Center|Otevřít prohlížeč z počítače, na kterém se nezdařil proces nasazení a zobrazit, pokud se lze připojit konzolu ATA. </br>V opačném případě spusťte řešení potíží s zobrazíte, proč nelze v prohlížeči ověřování na základě ATA Center. </br>Co je potřeba zkontrolovat: </br>Konfigurace proxy serveru</br>Problémy sítě</br>Nastavení zásad skupiny pro ověřování na tomto počítači, který se liší od ATA Center.|
+|System.Net.Sockets.SocketException: Stávající připojení vynuceně zavřel vzdálený hostitel||Použijte jednu z následujících možností: </br>Povolení protokolu TLS 1.0 na bráně ATA Gateway </br>Protokol TLS 1.2 na rozhraní .net nastavením klíčů registru použít výchozí nastavení operačního systému pro protokol SSL a TLS, následujícím způsobem:</br> `[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`</br> `[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`</br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SchUseStrongCrypto"=dword:00000001` </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] " SchUseStrongCrypto"=dword:00000001`|
+|Chyby [\[] DeploymentModel [\]] se nezdařilo ověřování pro správu [\[] CurrentlyLoggedOnUser =<domain>\<uživatelské jméno > Stav = FailedAuthentication výjimka = [\]]|Procesu nasazení komponenty ATA Gateway nebo ATA Lightweight Gateway se nepovedlo úspěšně ověřit komponentě ATA Center|Z počítače, na kterém procesu nasazení se nepodařilo otevřít prohlížeč a zobrazit, pokud se lze připojit konzolu ATA. </br>V opačném případě spusťte řešení potíží zobrazíte, proč se v prohlížeči nemůže ověřit komponentě ATA Center. </br>Co je potřeba zkontrolovat: </br>Konfigurace proxy serveru</br>Problémy sítě</br>Nastavení zásad skupiny pro ověřování v daném počítači, který se liší od komponenty ATA Center.|
 
 
-
+## <a name="ata-center-errors"></a>Chyby komponenty ATA Center
+> [!div class="mx-tableFixed"]
+|Chyba|Popis|Řešení|
+|-------------|----------|---------|
+|System.Security.Cryptography.CryptographicException: Přístup byl odepřen.|Komponenty ATA Center se nepodařilo použít se zapisuje certifikát vydaný pro dešifrování. K tomu pravděpodobně dojít z důvodu použití certifikátu s specifikace klíče (KeyNumber) nastavena na podpis (na\_podpis) což není podporováno pro dešifrování, namísto použití pro výměnu (na\_pro výměnu).|1.    Zastavte službu ATA Center. <br></br>2.     Odstraníte certifikát ATA Center z úložiště certifikátů System center. (Před odstraněním, ujistěte se, že certifikát zálohovány pomocí soukromého klíče v souboru PFX.) <br></br>3.    Otevřete příkazový řádek se zvýšenými oprávněními a spusťte příkaz certutil - importpfx "CenterCertificate.pfx" AT\_pro výměnu <br></br>4.     Spuštění služby ATA Center. <br></br>5.     Ověřte, že všechno, co teď funguje podle očekávání.|
 
 
 ## <a name="ata-gateway-and-lightweight-gateway-issues"></a>Problémy související s ATA Gateway a Lightweight Gateway
@@ -75,7 +79,7 @@ Tato část podrobně popisuje možné chyby v nasazení ATA a kroky potřebné 
 |Problém|Popis|Řešení|
 |-------------|----------|---------|
 |Z řadiče domény se nepřijímá žádný provoz, jsou ale pozorována monitorovací upozornění|    Z řadiče domény nebyl pomocí zrcadlení portů přes ATA Gateway přijat žádný provoz|U síťové karty pro zachytávání na ATA Gateway zakažte v oblasti **Upřesnit nastavení** tyto funkce:<br></br>Slučování příjmových segmentů (IPv4)<br></br>Slučování příjmových segmentů (IPv6)|
-|Zobrazí se tato monitorování výstraha: **není analyzované provoz v síti**|Pokud máte Lightweight Gateway nebo ATA Gateway na virtuální počítače VMware, zobrazí se tato výstraha monitorování. K tomu dochází z důvodu neshody konfigurace v prostředí VMware.|Nastavte následující nastavení **0** nebo **zakázané** v konfiguraci virtuálního počítače síťový adaptér: TsoEnable, LargeSendOffload, TSO snižování zátěže, snižování zátěže Obří TSO|Protokol TLS 1.0 je zakázána na ATA Gateway, ale .net je nastavený na použití protokolu TLS 1.2|
+|Zobrazí se toto monitorovací upozornění: **některý síťový provoz se neanalyzuje**|Pokud máte ATA Gateway a Lightweight Gateway na virtuálních počítačích VMware, může se zobrazit toto monitorovací upozornění. K tomu dochází kvůli neshodě v konfiguraci ve VMware.|Nastavte následující nastavení na **0** nebo **zakázané** v konfiguraci síťové karty virtuálního počítače: TsoEnable, LargeSendOffload, TSO Offload a Giant TSO Offload|Protokol TLS 1.0 je zakázaný v komponentě ATA Gateway, ale rozhraní .net je nastavené na použití protokolu TLS 1.2|
 
 
 

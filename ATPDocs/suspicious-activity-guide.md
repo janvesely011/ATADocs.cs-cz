@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 7ae5ac30d1d17084df4c30d502a58767b97a4582
-ms.sourcegitcommit: 63a36cd96aec30e90dd77bee1d0bddb13d2c4c64
+ms.openlocfilehash: 4e6a7d90ad5670b3d1c01ba70d7b5a81e8808b5e
+ms.sourcegitcommit: 759e99f670c42c2dd60d07b2200d3de01ddf6055
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39227168"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39335873"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -101,7 +101,7 @@ Existují tři typy detekce:
 
 **Šetření**
 
-Nejprve zkontrolujte popis výstrahy, abyste zjistili, která z výše uvedených tří typů detekce, že pracujete s. Šetření, nejprve zkontrolujte Popis upozornění a uvidíte, které z výše uvedených tří typů detekce, že pracujete s. Další informace stáhněte si Excelové tabulky.
+Nejprve zkontrolujte popis výstrahy, abyste zjistili, která z výše uvedených tří typů detekce, že pracujete s. Další informace stáhněte si Excelové tabulky.
 
 1.  Skeleton Key – můžete zkontrolovat, pokud Skeleton Key ovlivnila řadičů domény s použitím [kontroly vytvořené týmem služby Azure ATP](https://gallery.technet.microsoft.com/Aorato-Skeleton-Key-24e46b73). Skener najde malware na 1 nebo více řadičů domény, jde o pravdivě pozitivní upozornění.
 
@@ -109,9 +109,9 @@ Nejprve zkontrolujte popis výstrahy, abyste zjistili, která z výše uvedenýc
 
   1. Zkontrolujte prostředek přistupuje tyto lístky, pokud je jeden prostředek, ke kterým všechny přistupují, ověřte ho, ujistěte se, že je platný prostředek, který se má přístup. Dále ověřte, jestli cílový prostředek podporuje metody silné šifrování. Můžete to zkontrolovat ve službě Active Directory tak, že zkontrolujete atribut msDS-SupportedEncryptionTypes, účet služby zdroje.
   
-  2. Zkontrolujte zdrojový počítač a účet, nebo pokud existuje více zdrojových počítačů a účtů kontrolovat, jestli se mají něco společné (například všechny marketingové pracovníky pomocí konkrétní aplikace, které by mohly způsobovat aktivovat upozornění). Existují případy, ve kterých je vlastní aplikaci, která se používá jen občas, ověřování pomocí nižší šifry šifrování. Zkontrolujte, jestli jsou na zdrojovém počítači těchto vlastních aplikací. Pokud ano, je pravděpodobně o neškodné pravdivě pozitivní upozornění a lze potlačit.
+  2. Zkontrolujte zdrojový počítač a účet, nebo při více zdrojových počítačů a účtů kontrolovat, jestli se mají něco společné. Například všechny pracovníky marketingu používat konkrétní aplikace, které by mohly způsobovat aktivovat upozornění. Existují případy, ve kterých je vlastní aplikaci, která se používá jen občas, ověřování pomocí nižší šifry šifrování. Zkontrolujte, jestli jsou na zdrojovém počítači těchto vlastních aplikací. Pokud ano, je pravděpodobně o neškodné pravdivě pozitivní upozornění a lze potlačit.
   
-  
+
 
 3.  Overpass-the-Hash – v excelové tabulce, přejděte na kartu se síťovou aktivitou. Uvidíte, že je pole relevantní sníženou příbuzností **šifrované typ šifrování časové razítko** a **typy šifrování podporované zdrojové počítače** obsahuje silnější metody šifrování.
 
@@ -120,7 +120,7 @@ Nejprve zkontrolujte popis výstrahy, abyste zjistili, která z výše uvedenýc
 
 **Náprava**
 
-1.  Kostru klíče – odebere malware. Další informace najdete v tématu [analýzy Malware Skeleton Key](https://www.secureworks.com/research/skeleton-key-malware-analysis) podle SecureWorks.
+1.  Kostru klíče – odebere malware. Další informace najdete v tématu [analýzy Malware Skeleton Key](https://www.virusbulletin.com/virusbulletin/2016/01/paper-digital-bian-lian-face-changing-skeleton-key-malware).
 
 2.  Zlatý lístek – postupujte podle pokynů [Golden Ticket](#golden-ticket) podezřelých aktivit.   
     Navíc vzhledem k tomu, že vytvoření Golden Ticket vyžaduje práva správce domény, implementovat [předání hodnoty hash doporučení](http://aka.ms/PtH).

@@ -2,10 +2,10 @@
 title: Požadavky Advanced Threat Analytics | Dokumentace Microsoftu
 description: Popisuje požadavky pro úspěšné nasazení ATA ve vašem prostředí.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 5/6/2018
+ms.date: 7/25/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: advanced-threat-analytics
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 90c4bcad1b5a2d6da06153706129d9670ad57e1c
-ms.sourcegitcommit: 321ff1af2c140f41600c4c42ac4d455b3cdb9440
+ms.openlocfilehash: 199830a6cd0b84cf897311cc80472a078f582b59
+ms.sourcegitcommit: 759e99f670c42c2dd60d07b2200d3de01ddf6055
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36233000"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39335907"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
@@ -129,7 +129,7 @@ Následující tabulka uvádí minimální porty, které musí být otevřené, 
 
 ### <a name="certificates"></a>Certifikáty
 
-K usnadnění instalace ATA můžete během instalace nainstalovat certifikáty podepsané jejich držiteli. Po nasazení byste měli vyměnit pomocí certifikátu z certifikační autority do komponenty ATA Center používat certifikát podepsaný svým držitelem.
+Při instalaci a rychlejší nasazení ATA, můžete během instalace nainstalovat certifikáty podepsané svým držitelem. Pokud jste se rozhodli použít certifikáty podepsané svým držitelem, po počátečním nasazení doporučujeme nahradit certifikáty podepsané svým držitelem certifikáty od certifikační autority používané komponenty ATA Center.
 
 
 Ujistěte se, že ATA Center a ATA Gateway mají přístup k seznamu odvolaných certifikátů distribučnímu bodu. Pokud nemají přístup k Internetu, postupujte podle [postup pro ruční import seznamu CRL](https://technet.microsoft.com/library/aa996972%28v=exchg.65%29.aspx), dbejte na to nainstalovat všechny seznamu CRL distribuční body pro celý řetězec.
@@ -139,6 +139,7 @@ Certifikát musí mít:
 -   Typ zprostředkovatele zprostředkovatele kryptografických služeb (CSP) nebo zprostředkovatele úložiště klíčů (KSP)
 -   Veřejný klíč o délce 2 048 bitů
 -   Nastavit hodnotu pro KeyEncipherment a ServerAuthentication příznaky použití
+-   Specifikace klíče (KeyNumber) hodnotu "Pro výměnu" (na\_pro výměnu). Všimněte si, že hodnota "Podpis" (na\_podpis) se nepodporuje. 
 
 Například můžete použít standardní **webový server** nebo **počítače** šablony.
 

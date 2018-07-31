@@ -2,10 +2,10 @@
 title: Co je nového v ochraně ATP v Azure | Dokumentace Microsoftu
 description: Popisuje nejnovější verze ochrany ATP v programu Azure a poskytuje informace o novinkách v jednotlivých verzích.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 7/21/2018
+ms.date: 7/29/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,17 +13,23 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: be3a4315384d5df03b1f04f0a71a960c66858b05
-ms.sourcegitcommit: 63a36cd96aec30e90dd77bee1d0bddb13d2c4c64
+ms.openlocfilehash: ebdae7617dd550631186ab87cba922758649fd45
+ms.sourcegitcommit: 759e99f670c42c2dd60d07b2200d3de01ddf6055
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39227219"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39335975"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
 
 # <a name="whats-new-in-azure-atp"></a>Co je nového v Azure ATP 
+
+## <a name="azure-atp-release-242"></a>Verze ochrany ATP v programu Azure 2,42
+
+Vydáno 29. července 2018
+
+- Tato verze obsahuje opravy a vylepšení pro několik problémů. 
 
 
 ## <a name="azure-atp-release-241"></a>Verze ochrany ATP v programu Azure 2.41
