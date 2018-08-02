@@ -1,6 +1,6 @@
 ---
-title: Konfigurace předávání událostí systému Windows v Azure Advanced Threat Protection | Microsoft Docs
-description: Popisuje možnosti konfigurace předávání událostí systému Windows s Azure ATP
+title: Konfigurace předávání událostí Windows ve službě Azure Advanced Threat Protection | Dokumentace Microsoftu
+description: Popisuje možnosti pro konfiguraci předávání událostí Windows pomocí služby Azure ATP
 keywords: ''
 author: rkarlin
 ms.author: rkarlin
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 3547519f-8d9c-40a9-8f0e-c7ba21081203
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: df06235de3a29051f9ffcd889bb95936ed9fc27d
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 1b37bcbfc304ee0ef71d80eb84f6298d64e50d3f
+ms.sourcegitcommit: eebf1156aaae199b6aaa7e431cd6372e572b1e9f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/21/2018
-ms.locfileid: "29446089"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39396413"
 ---
 *Platí pro: Azure Advanced Threat Protection verze 1.9*
 
@@ -27,79 +27,79 @@ ms.locfileid: "29446089"
 # <a name="configuring-windows-event-forwarding"></a>Konfigurace předávání událostí systému Windows
 
 > [!NOTE]
-> Senzor Azure ATP automaticky načte události místně, aniž by bylo nutné konfigurovat předávání událostí.
+> Senzoru služby Azure ATP automaticky načte události místně bez nutnosti konfigurace předávání událostí.
 
 
-K vylepšení možností detekce, Azure ATP vyžaduje následující události systému Windows: 4776, 4732, 4733, 4728, 4729, 4756, 4757 a 7045. Tyto může buď přečíst automaticky senzoru Azure ATP nebo v případě, že Azure ATP senzoru není nasazený, můžete přesměrovávají na samostatné senzoru Azure ATP v jednom ze dvou způsobů, tím nakonfigurujete senzoru samostatné Azure ATP tak, aby naslouchala událostem SIEM nebo configuri NG předávání událostí systému Windows.
+Kvůli vylepšení detekčních schopností potřebuje ochrany ATP v programu Azure následující události Windows: 4776, 4732, 4733, 4728, 4729, 4756, 4757 a 7045. Ty můžete buď automaticky číst senzoru služby Azure ATP nebo v případě, že není nasazený senzoru služby Azure ATP, může být přeposílán do samostatného senzoru služby Azure ATP v jednom ze dvou způsobů, tím nakonfigurujete samostatný senzor ochrany ATP v programu Azure tak, aby naslouchala událostem SIEM nebo configuri NG předávání událostí Windows.
 
 > [!NOTE]
-> Zkontrolujte, že řadič domény je správně nakonfigurován, aby požadované události.
+> Zkontrolujte, že je řadič domény správně nakonfigurovaný na zachycování požadované události.
 
-### <a name="wef-configuration-for-azure-atp-standalone-sensors-with-port-mirroring"></a>Konfigurace WEF pro Azure ATP samostatné senzoru při zrcadlení portů
+### <a name="wef-configuration-for-azure-atp-standalone-sensors-with-port-mirroring"></a>Konfigurace WEF pro služby Azure ATP samostatného senzoru se zrcadlením portů
 
-Po dokončení konfigurace zrcadlení portů z řadičů domény na samostatné senzoru Azure ATP konfigurace předávání událostí systému Windows pomocí iniciované zdroj konfigurace následujících pokynů. Je to jedna z možných konfigurací pro předávání událostí systému Windows. 
+Po dokončení konfigurace zrcadlení portů z řadičů domény do samostatného senzoru služby Azure ATP postupujte podle následujících pokynů a nakonfigurujte předávání událostí Windows pomocí konfigurace spuštěno zdrojem. Je to jedna z možných konfigurací pro předávání událostí systému Windows. 
 
 **Krok 1: Přidejte účet síťových služeb do skupiny Event Log Readers domény.** 
 
-V tomto scénáři předpokládat, že samostatné senzoru Azure ATP je členem domény.
+V tomto scénáři předpokládá, že služby Azure ATP samostatný senzor je členem domény.
 
-1.  Otevřete Active Directory Users and Computers, přejděte **BuiltIn** složku a dvojím kliknutím **Event Log Readers**. 
+1.  Otevření Active Directory Users and Computers, přejděte **BuiltIn** složky a dvojím kliknutím **Event Log Readers**. 
 2.  Vyberte možnost **Členové**.
 4.  Pokud **Síťová služba** není uvedená, klikněte na **Přidat** a do pole **Zadejte názvy objektů k výběru** zadejte **Síťová služba**. Potom klikněte na **Zkontrolovat jména** a dvakrát klikněte na **OK**. 
 
-Po přidání **síťové služby** k **Event Log Readers** skupině, restartování řadiče domény pro změna se projeví.
+Po přidání **síťová služba** k **Event Log Readers** skupině, restartování řadiče domény se změna projevila.
 
 **Krok 2: Vytvořte zásadu pro řadiče domény, abyste nastavili možnost Nakonfigurovat cílového správce odběrů.** 
 > [!Note] 
-> Můžete vytvořit pro tato nastavení zásady skupiny a použití zásad skupiny pro každý řadič domény, který je monitorován pomocí samostatné senzoru Azure ATP. Následující kroky upravit místní zásady řadiče domény.     
+> Můžete vytvořit zásady skupiny pro tato nastavení a použití zásad skupiny na každý řadič domény služby Azure ATP samostatný senzor monitoruje. Následující postup upravuje místní zásady řadiče domény.     
 
 1.  Na každém řadiči domény spusťte následující příkaz: *winrm quickconfig*.
 2.  Do příkazového řádku zadejte *gpedit.msc*.
 3.  Rozbalte položku **Konfigurace počítače > Šablony pro správu > Součásti systému Windows > Předávání událostí**.
 
- ![Obrázek editoru skupiny místních zásad](media/wef 1 local group policy editor.png)
+ ![Obrázek editoru skupiny místních zásad](media/wef%201%20local%20group%20policy%20editor.png)
 
-4.  Klikněte dvakrát na **cíl konfigurovat odběr Manager**.
+4.  Dvakrát klikněte na panel **nakonfigurovat cílového správce odběrů**.
    
     1.  Vyberte **Povoleno**.
     2.  V části **možnosti**, klikněte na tlačítko **zobrazit**.
-    3.  V části **SubscriptionManagers**, zadejte následující hodnotu a klikněte na **OK**: *Server = http: / /<fqdnATPSensor>: 5985 nebo wsman/SubscriptionManager/WEC, aktualizace = 10* () For example: Server = http://atpsensor9.contoso.com:5985 nebo wsman/SubscriptionManager/WEC, aktualizace = 10)
+    3.  V části **SubscriptionManagers**, zadejte následující hodnotu a klikněte na **OK**: *Server=http://<fqdnATPSensor>: 5985/wsman/SubscriptionManager/WEC, aktualizace=10* (For example: Server=http://atpsensor9.contoso.com:5985/wsman/SubscriptionManager/WEC,aktualizujte=10)
  
-   ![Obrázek konfigurace cílového odběru](media/wef 2 config target sub manager.png)
+   ![Obrázek konfigurace cílového odběru](media/wef%202%20config%20target%20sub%20manager.png)
    
     5.  Klikněte na **OK**.
     6.  Do příkazového řádku se zvýšenými oprávněními zadejte *gpupdate /force*. 
 
-**Krok 3: Proveďte následující kroky na samostatné senzoru Azure ATP** 
+**Krok 3: Proveďte následující kroky na samostatného senzoru služby Azure ATP** 
 
 1.  Otevřete příkazový řádek se zvýšenými oprávněními a zadejte příkaz *wecutil qc*.
 2.  Otevřete **Prohlížeč událostí**. 
-3.  Klikněte pravým tlačítkem na **odběry** a vyberte **vytvořit odběr**. 
+3.  Klikněte pravým tlačítkem na **předplatná** a vyberte **vytvořit odběr**. 
 
    1.   Zadejte název a popis odběru. 
-   2.   Pro **cílové protokolu**, ujistěte se, že **předávaných událostí ty** je vybrána. Pro Azure ATP číst události, musí být v cílovém protokolu **předávaných událostí**. 
+   2.   Pro **cílový protokol**, ujistěte se, že **předané události** zaškrtnuto. Pro služby Azure ATP mohlo události číst, musí být cílovým protokolem **předané události**. 
    3.   Vyberte **Spuštěno zdrojovým počítačem** a klikněte na **Vybrat skupiny počítačů**.
         1.  Klikněte na **Přidat počítač domény**.
         2.  Do pole **Zadejte název objektu k výběru** zadejte název řadiče domény. Potom klikněte na **Zkontrolovat jména** a nakonec na **OK**. 
        
-        ![Obrázek Prohlížeče událostí](media/wef3 event viewer.png)
+        ![Obrázek Prohlížeče událostí](media/wef3%20event%20viewer.png)
    
         
         3.  Klikněte na **OK**.
    4.   Klikněte na **Vybrat události**.
 
         1. Klikněte na **Podle protokolu** a vyberte **Zabezpečení**.
-        2. Do pole **Zahrne nebo vyloučí ID události** zadejte číslo události a klikněte na **OK**. Zadejte 4776, jako je například následující ukázka:
+        2. Do pole **Zahrne nebo vyloučí ID události** zadejte číslo události a klikněte na **OK**. Zadejte 4776, jako je například v následujícím příkladu:
 
  ![Obrázek filtru dotazu](media/wef-4-query-filter.png)
 
-   5.   Klikněte pravým tlačítkem na vytvořený odběr a vyberte **běhový stav** zda jsou všechny problémy se stavem. 
-   6.   Po několika minutách zkontrolujte události nastavit na předají se zobrazuje, protože v událostech předávaných na samostatné senzoru Azure ATP.
+   5.   Klikněte pravým tlačítkem na vytvořený odběr a vyberte **stav Runtime** jestli jsou všechny problémy se stavem. 
+   6.   Po několika minutách zkontrolujte události nastavit na předat dál, zobrazují mezi předanými událostmi v samostatného senzoru služby Azure ATP.
 
 
 Další informace najdete v tématu: [konfigurace počítačů pro předání a shromáždění událostí](https://technet.microsoft.com/library/cc748890)
 
 ## <a name="see-also"></a>Viz také
 
-- [Nainstalovat Azure ATP](install-atp-step1.md)
-- [Podívejte se na fórum ATP!](https://aka.ms/azureatpcommunity)
+- [Instalace služby Azure ATP](install-atp-step1.md)
+- [Podívejte se na fórum ochrany ATP v programu.](https://aka.ms/azureatpcommunity)

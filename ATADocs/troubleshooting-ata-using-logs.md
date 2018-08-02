@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: b8ad5511-8893-4d1d-81ee-b9a86e378347
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 9f00d01d7986b6a04c4ba69f25e5c84259c66f99
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: b2b00342c3c13615386fa1c16d98d28fbbf1d121
+ms.sourcegitcommit: eebf1156aaae199b6aaa7e431cd6372e572b1e9f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30010352"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39396379"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
@@ -30,7 +30,7 @@ Protokoly ATA poskytují přehled o tom, co jednotlivé komponenty ATA v libovol
 ## <a name="ata-gateway-logs"></a>Protokoly ATA Gateway
 V této části všechny odkazy na ATA Gateway platí také pro ATA Lightweight Gateway. 
 
-Protokoly ATA Gateway jsou umístěné v podsložce s názvem **Protokoly** v místě, kde je služba ATA nainstalovaná. Výchozí umístění je **C:\Program Files\Microsoft Advanced Threat Analytics\**. Ve výchozí instalaci ji najdete tady: **C:\Program Files\Microsoft Advanced Threat Analytics\Gateway\Logs**.
+Protokoly ATA Gateway jsou umístěné v podsložce s názvem **protokoly** kde je služba ATA nainstalovaná; výchozí umístění je: **C:\Program Files\Microsoft Advanced Threat Analytics\\**. Ve výchozí instalaci ji najdete tady: **C:\Program Files\Microsoft Advanced Threat Analytics\Gateway\Logs**.
 
 ATA Gateway využívá tyto protokoly:
 
@@ -42,7 +42,7 @@ ATA Gateway využívá tyto protokoly:
 
 -   **Microsoft.Tri.Gateway-ExceptionStatistics.log** – V tomto protokolu jsou seskupeny všechny podobné chyby a výjimky a je zjištěn jejich počet.
     Tento protokol je při každém spuštění služby ATA Gateway prázdný a aktualizuje se každou minutu. Nejčastěji se využívá ke zjištění, jestli v komponentě ATA Gateway dochází k nějakým novým chybám nebo problémům (vzhledem k tomu, že chyby jsou seskupené, jsou přehlednější a je jednodušší zjistit, jestli dochází k nějakým novým problémům).
--   **Microsoft.Tri.Gateway.Updater.log** – tento protokol se používá pro proces aktualizační brány, který je zodpovědný za aktualizace ATA Gateway, pokud je tak nakonfigurovaný automaticky. V případě ATA Lightweight Gateway je aktualizační proces také odpovědný za omezení prostředků ATA Lightweight Gateway.
+-   **Microsoft.Tri.Gateway.Updater.log** – tento protokol se používá pro aktualizační proces brány, který je zodpovědný za automatickou aktualizaci ATA Gateway, pokud k tomu automaticky nakonfigurované. V případě ATA Lightweight Gateway je aktualizační proces také odpovědný za omezení prostředků ATA Lightweight Gateway.
 -   **Microsoft.Tri.Gateway.Updater-ExceptionStatistics.log** – V tomto protokolu jsou seskupeny všechny podobné chyby a výjimky a je zjištěn jejich počet. Tento protokol je při každém spuštění služby ATA Updater prázdný a aktualizuje se každou minutu. Umožňuje zjistit, jestli ve službě ATA Updater nedošlo k novým chybám nebo problémům. Chyby jsou seskupené, jsou přehlednější a je jednodušší zjistit, jestli došlo k chybám nebo problémům nového typu.
 
 > [!NOTE]
@@ -62,7 +62,7 @@ ATA Center využívá tyto protokoly:
 -   **Microsoft.Tri.Center-Errors.log** – Tento protokol obsahuje jenom chyby, které zachytila komponenta ATA Center. Nejčastěji se využívá k provádění kontroly stavu a zkoumání příčin problémů, které je potřeba časově zařadit.
 
 -   **Microsoft.Tri.Center-ExceptionStatistics.log** – V tomto protokolu jsou seskupeny všechny podobné chyby a výjimky a je zjištěn jejich počet.
-    Tento protokol je při každém spuštění služby ATA Center prázdný a aktualizuje se každou minutu. Nejčastěji se využívá ke zjištění, pokud existují nějakým novým chybám nebo problémům s ATA Center – vzhledem k tomu, že chyby jsou seskupené je snazší rychle pochopit, pokud je nový chybě nebo problému.
+    Tento protokol je při každém spuštění služby ATA Center prázdný a aktualizuje se každou minutu. Nejčastěji se ke zjištění, pokud existují nějakým novým chybám nebo problémům ve službě ATA Center – vzhledem k tomu, že chyby jsou seskupené, je jednodušší rychle zjistit, pokud je nové chybě nebo problému.
 
 > [!NOTE]
 > První tři soubory protokolů mají maximální velikost až 50 MB. Při dosažení této velikosti se otevře nový soubor protokolu a předchozí je přejmenován na &lt;původní název souboru&gt;-Archived-00000 (číslo při každém přejmenování zvětší). Pokud již existuje více než 10 souborů stejného typu, budou nejstarší z nich ve výchozím nastavení odstraněny.
