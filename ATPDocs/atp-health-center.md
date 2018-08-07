@@ -1,11 +1,11 @@
 ---
-title: Sledování stavu systému Azure Advanced Threat Protection a událostí | Microsoft Docs
-description: Použití Azure ATP prostoru health center zkontrolujte, jak funguje služba Azure ATP a upozorňuje na potenciální problémy a zobrazení události systému v prohlížeči událostí.
+title: Monitorování stavu systému Azure Advanced Threat Protection a událostí | Dokumentace Microsoftu
+description: Health center pracovní prostor ochrany ATP v programu Azure použít ke kontrole, jak funguje služba ochrany ATP v programu Azure a upozorní vás na potenciální problémy a zobrazit systémové události v prohlížeči událostí.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 8/05/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,50 +13,50 @@ ms.technology: ''
 ms.assetid: 1b7e72c3-a538-443f-981c-398ffafa5ab8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 86eb90f452d5aee2504e525e64bfc62c22207880
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 5fb4acaca989922ad894cee4a799378bb912643d
+ms.sourcegitcommit: 14c05a210ae92d35100c984ff8c6d171db7c3856
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/21/2018
-ms.locfileid: "29446019"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39567980"
 ---
-*Platí pro: Azure Advanced Threat Protection*
+*Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
 
-# <a name="working-with-azure-atp-workspace-health-and-events"></a>Práce s Azure ATP prostoru stavu a události
+# <a name="working-with-azure-atp-workspace-health-and-events"></a>Práce s události a stav pracovního prostoru služby Azure ATP
 
-## <a name="azure-atp-workspace-health-center"></a>Azure ATP prostoru health center 
+## <a name="azure-atp-workspace-health-center"></a>Centrum stavu pracovního prostoru Azure ochrany ATP v programu 
 
-Azure ATP prostoru health center vás informuje, jaký je výkon pracovního prostoru Azure ATP a problémů, když dochází k problémům.
+Health center pracovní prostor ochrany ATP v programu Azure vám umožňuje vědět, jaký je výkon vašeho pracovního prostoru ochrana ATP v programu Azure a vás upozorní, když dochází k problémům.
 
-## <a name="working-with-the-azure-atp-workspace-health-center"></a>Práce s Azure ATP prostoru health center
+## <a name="working-with-the-azure-atp-workspace-health-center"></a>Práce s health center pracovní prostor služby Azure ATP
 
-Azure ATP prostoru health center umožňuje vědět, že je problém zobrazením výstrahy (červené tečky) nad ikonou Health Center v řádku nabídek.
+Health center pracovní prostor ochrany ATP v programu Azure vám umožňuje vědět, že dojde k problému zobrazením výstrahy (červené tečky) nad ikonou Health Center v řádku nabídek.
 
-![Azure ATP prostoru health center červené tečky panelu nástrojů](media/atp-health-bar.png)
+![Ochrana ATP v programu pracovní prostor health center červená tečka nástrojů webu Azure](media/atp-health-bar.png)
 
-### <a name="managing-azure-atp-workspace-health"></a>Správa stavu prostoru Azure ATP
-Pokud chcete zkontrolovat na celkový stav pracovního prostoru, klikněte na ikonu Health Center v řádku nabídek ![Ikona health center Azure ATP pracovního prostoru](media/atp-red-dot.png)
+### <a name="managing-azure-atp-workspace-health"></a>Správa stavu pracovního prostoru služby Azure ATP
+Pokud chcete zkontrolovat celkový stav pracovního prostoru, klikněte na ikonu Health Center v řádku nabídek ![Ikona stavu centra Azure ochrany ATP v programu pracovního prostoru](media/atp-red-dot.png)
 
--   Všechny otevřené problémy lze spravovat jejich nastavením na **Zavřít**, nebo **potlačit**, kliknutím na tlačítko se třemi tečkami v horním rohu výstrahy a provedením váš výběr.
+-   Všechny otevřené problémy můžete spravovat jejich nastavením na **Zavřít**, nebo **potlačit**, kliknutím na tři tečky v pravém rohu výstrahy a zvolení požadované možnosti.
 
 -   **Open** (Otevřeno): V tomto seznamu se zobrazí všechny nové podezřelé aktivity.
 
--   **Zavřít**: slouží ke sledování podezřelých aktivit, které určili, prozkoumali a opravili omezeny.
+-   **Zavřít**: slouží ke sledování podezřelých aktivit, které identifikovali, prozkoumali a opravili zmírnit.
 
     > [!NOTE]
-    > Azure ATP může znovu otevřít uzavřenou aktivitu, pokud se stejná aktivita zjistí během krátké doby znovu.
-    > Každý pracovní prostor má svou vlastní health center.
+    > Ochrana ATP v programu Azure může znovu otevřít uzavřené aktivitu, pokud se stejná aktivita zjistí během krátké doby znovu.
+    > Každý pracovní prostor má svůj vlastní stav centra.
 
--   **Suppressed** (Potlačeno): Potlačení aktivity znamená, že ji chcete prozatím ignorovat a upozornění chcete zobrazit, jenom pokud se bude jednat o novou instanci. Pokud je o podobnou výstrahu jako Azure ATP nepodporuje ho znovu otevřít. Ale pokud výstrahu zastaví sedm dní a potom je opět zobrazit, budete upozorněni znovu.
+-   **Suppressed** (Potlačeno): Potlačení aktivity znamená, že ji chcete prozatím ignorovat a upozornění chcete zobrazit, jenom pokud se bude jednat o novou instanci. Pokud je o podobnou výstrahu jako ochrana ATP v programu Azure nebude ho znovu otevřít. Ale pokud výstrahy po dobu sedmi dní zastaví a pak se znovu objeví, budete upozorněni znovu.
 
--   **Znovu otevřete**: Pokud zavřete nebo potlačit problém, můžete ho znovu otevřít tak, aby se otevřete v časové ose znovu.
+-   **Znovu otevřít**: aby se zobrazovala Open můžete znovu otevřít uzavřeného nebo Potlačené problém znovu na časové ose.
 - 
-- **Odstranit**: Z v rámci časové osy podezřelých aktivit, máte také možnost odstranit potíže se stavem. Pokud odstraníte výstrahu, odstraní se z pracovního prostoru a nebudete moci obnovit. Po kliknutí na možnost pro odstranění budete moct odstranit všechny podezřelé aktivity stejného typu.
+- **Odstranit**: Z v rámci časové osy podezřelých aktivit, máte také možnost odstranění problému se stavem. Pokud výstrahu odstraníte, odstraní se z pracovního prostoru a nebudete moci obnovit. Po kliknutí na možnost pro odstranění budete moct odstranit všechny podezřelé aktivity stejného typu.
 
 
 
-![Azure ATP prostoru health center problémy image](media/atp-health-issue.png)
+![Azure ochrany ATP v programu pracovní prostor health center problémy image](media/atp-health-issue.png)
 
 
 
@@ -66,4 +66,4 @@ Pokud chcete zkontrolovat na celkový stav pracovního prostoru, klikněte na ik
 ## <a name="see-also"></a>Viz také
 
 - [Práce s podezřelými aktivitami](working-with-suspicious-activities.md)
-- [Podívejte se na fórum ATP!](https://aka.ms/azureatpcommunity)
+- [Podívejte se na fórum ochrany ATP v programu.](https://aka.ms/azureatpcommunity)

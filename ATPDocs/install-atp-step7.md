@@ -1,66 +1,68 @@
 ---
-title: "Instalace Azure Advanced Threat Protection – krok 7 | Microsoft Docs"
-description: "V posledním kroku instalace Azure ATP konfiguraci uživatele Honeytokenu."
-keywords: 
-author: rkarlin
-ms.author: rkarlin
+title: Instalace Azure Advanced Threat Protection – krok 7 | Dokumentace Microsoftu
+description: V posledním kroku instalace služby Azure ATP konfiguraci uživatele Honeytokenu.
+keywords: ''
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 2/21/2017
+ms.date: 8/2/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: 1ad5e923-9bbd-4f56-839a-b11a9f387d4b
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: bef13d0f4799a4483eda6604a8ed96befaa13508
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 7b3c128f6e2b524d778d68af7bcea65476cae2b7
+ms.sourcegitcommit: 14c05a210ae92d35100c984ff8c6d171db7c3856
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39568014"
 ---
-*Platí pro: Azure Advanced Threat Protection*
+*Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
 
 
-# <a name="install-azure-atp---step-7"></a>Nainstalovat Azure ATP – krok 7
+# <a name="install-azure-atp---step-7"></a>Instalace služby Azure ATP – krok 7
 
 >[!div class="step-by-step"]
 [« Krok 6](install-atp-step6-vpn.md)
 [Krok 8 »](install-atp-step8-samr.md)
 
-## <a name="step-7-configure-detection-exclusions-and-honeytoken-user"></a>Krok 7: Konfigurace vyloučení detekce a uživatele honeytokenu
+## <a name="step-7-configure-detection-exclusions-and-honeytoken-accounts"></a>Krok 7: Konfigurace vyloučení detekcí a účty honeytoken
 
-Azure ATP umožňuje vyloučení určité IP adresy nebo uživatelé z několika detekce. 
+Ochrana ATP v programu Azure umožňuje vyloučení konkrétních IP adres nebo uživatelů z řady detekcí. 
 
-Například při **vyloučení DNS Reconnaissance** se může jednat o kontrolu zabezpečení, která jako mechanismus pro prohledávání používá službu DNS. Vyloučení pomáhá ignorovat takové skenery ATP Azure.  
+Například při **vyloučení DNS Reconnaissance** se může jednat o kontrolu zabezpečení, která jako mechanismus pro prohledávání používá službu DNS. Vyloučení pomáhá službě Azure ATP takové kontroly ignorovat.  
 
-Azure ATP taky umožňuje konfiguraci uživatele Honeytokenu, který se používá jako depeše nebezpečného actors – ověřování spojené s tímto účtem (obvykle spících) aktivuje výstrahu.
+Ochrana ATP v programu Azure také umožňuje konfigurovat účty honeytokenu, které se používají jako depeše pro útočníky – jakákoliv autorizace přidružená tyto účty honeytokenu (obvykle neaktivnímu), aktivuje výstrahu.
 
-To můžete nakonfigurovat, postupujte takto:
+Pokud chcete nakonfigurovat, postupujte podle těchto kroků:
 
-1.  Z portálu Azure ATP pracovního prostoru, klikněte na ikonu nastavení a vyberte **konfigurace**.
+1.  Z portálu pracovního prostoru ochrana ATP v programu Azure klikněte na ikonu nastavení a vyberte **konfigurace**.
 
-    ![Nastavení konfigurace Azure ATP](media/atp-config-menu.png)
+    ![Konfigurace nastavení služby Azure ATP](media/atp-config-menu.png)
 
-2.  V části **detekce**, klikněte na tlačítko **značek entit**.
+2.  V části **detekce**, klikněte na tlačítko **značky entit**.
 
-3. V části **účtů Honeytokenu** zadejte název účtu Honeytokenu a klikněte na tlačítko  **+**  přihlášení. Pole účtů Honeytokenu je prohledávat a entity se automaticky zobrazí ve vaší síti. Klikněte na **Uložit**.
+3. V části **účty Honeytokenu**, zadejte název účtu Honeytoken a klikněte na tlačítko **+** přihlašování. Pole účtu Honeytokenu lze prohledávat a automaticky zobrazí entity ve vaší síti. Klikněte na **Uložit**.
 
    ![Honeytoken](media/honeytoken-sensitive.png)
 
-4. Klikněte na **Vyloučení**. Pro jednotlivé typy hrozeb zadejte uživatelský účet nebo IP adresu, které mají být vyloučené z detekce těchto hrozeb, a klikněte na znaménko *plus*. Pole **Add entity** (Přidat entitu) (uživatele nebo počítač) je možné prohledávat a automaticky se vyplní entitami ve vaší síti. Další informace najdete v tématu [vyloučení entity z detekce](excluding-entities-from-detections.md) a [Průvodce podezřelou aktivitu](suspicious-activity-guide.md).
+4. Klikněte na **Vyloučení**. Zadejte uživatelský účet nebo IP adresy, které se mají vyloučit z detekce pro jednotlivé typy hrozeb. 
+5. Klikněte na tlačítko *plus* přihlašování. Pole **Add entity** (Přidat entitu) (uživatele nebo počítač) je možné prohledávat a automaticky se vyplní entitami ve vaší síti. Další informace najdete v tématu [vyloučení entit z detekce](excluding-entities-from-detections.md) a [Průvodce prošetřováním podezřelých aktivit](suspicious-activity-guide.md).
 
    ![Vyloučení](media/exclusions.png)
 
-5.  Klikněte na **Uložit**.
+6.  Klikněte na **Uložit**.
 
 
-Blahopřejeme, úspěšně jste nasadili Azure Advanced Threat Protection.
+Blahopřejeme, úspěšně jste nasadili rozšířené ochrany před internetovými útoky pro Azure.
 
 Zkontrolujte časovou osu útoků, abyste viděli zjištěné podezřelé aktivity a našli uživatele nebo počítače a zobrazili jejich profily.
 
-Azure ATP spustí vyhledávání podezřelých aktivit okamžitě. Některé detekce, jako je například neobvyklé úpravy skupiny, vyžadují dobou učení a nejsou k dispozici ihned po nasazení Azure ATP.
+Kontrola ochrany ATP v programu Azure pro podezřelé aktivity spustí okamžitě. Některé způsoby detekce, jako je například neobvyklých změny skupiny vyžadují období učení a nejsou k dispozici okamžitě po nasazení služby Azure ATP.
 
 
 
@@ -71,5 +73,5 @@ Azure ATP spustí vyhledávání podezřelých aktivit okamžitě. Některé det
 ## <a name="see-also"></a>Viz také
 - [Nástroje pro změnu velikosti Azure ATP](http://aka.ms/aatpsizingtool)
 - [Konfigurace shromažďování událostí](configure-event-collection.md)
-- [Požadavky Azure ATP](atp-prerequisites.md)
-- [Podívejte se na fórum ATP!](https://aka.ms/azureatpcommunity)
+- [Požadavky služby Azure ATP](atp-prerequisites.md)
+- [Podívejte se na fórum ochrany ATP v programu.](https://aka.ms/azureatpcommunity)

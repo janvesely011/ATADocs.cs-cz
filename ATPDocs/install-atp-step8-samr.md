@@ -2,10 +2,10 @@
 title: Konfigurace SAM-R povolit zjišťování cesty laterální pohyb v ochrany ATP v programu Azure | Dokumentace Microsoftu
 description: Popisuje postup konfigurace SAM-R povolení zjišťování cesty laterální pohyb v Azure ATP
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 7/17/2018
+ms.date: 7/31/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: b09adce3-0fbc-40e3-a53f-31f57fe79ca3
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a529c9751fc993ec0913a54772d46161f39199f6
-ms.sourcegitcommit: 8feb9b65dc0e1de0ace00aca11784e54f9852a15
+ms.openlocfilehash: 955051a93b017af2f1d97bccf32735e9ceaaf19f
+ms.sourcegitcommit: 14c05a210ae92d35100c984ff8c6d171db7c3856
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39098164"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39567844"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -30,9 +30,9 @@ ms.locfileid: "39098164"
 
 ## <a name="step-8-configure-sam-r-required-permissions"></a>Krok 8: Konfigurace SAM-R, vyžaduje oprávnění
 
-[Cesty laterální pohyb](use-case-lateral-movement-path.md) detekce spoléhá na dotazy, které identifikují místními správci na konkrétní počítače. Tyto dotazy se provádí pomocí protokolu SAM-R, prostřednictvím vytvořené v účtu služby Azure ATP [kroku 2. Připojení ke službě AD](install-atp-step2.md).
+[Cesty laterální pohyb](use-case-lateral-movement-path.md) detekce spoléhá na dotazy, které identifikují místními správci na konkrétní počítače. Tyto dotazy se provádí pomocí protokolu SAM-R, pomocí služby Azure ATP účet vytvořený [kroku 2. Připojení ke službě AD](install-atp-step2.md).
  
-K zajištění Windows klienty a servery povolit účet služby Azure ATP k provedení této operace SAM-R, úpravy **zásad skupiny** musí provést k přidání účtu služby Azure ATP kromě nakonfigurované účty uvedené v  **Přístup k síti** zásad.
+K zajištění Windows klienty a servery povolit váš účet služby Azure ATP provádět SAM-R, úpravy **zásad skupiny** přidání účtu služby Azure ATP kromě zobrazené v nakonfigurované účty se musí provádět  **Přístup k síti** zásad.
 
 1. Vyhledejte zásady:
 
@@ -45,9 +45,12 @@ K zajištění Windows klienty a servery povolit účet služby Azure ATP k prov
  
   ![Přidat službu](./media/samr-add-service.png)
 
-3. **AATP služby** (službu ochrany ATP v programu Azure vytvoří během instalace) teď má správná oprávnění k provedení SAMR v prostředí.
+3. **Služba AATP** (službu ochrany ATP v programu Azure vytvoří během instalace) má teď oprávnění potřebná k provedení SAM-R v prostředí.
 
-Další informace o SAM-R a tyto zásady skupiny, najdete v článku [přístup k síti: omezovat klienty moct vzdáleně volat SAM](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls).
+> [!NOTE]
+> Ještě před vynucením nové zásady, ujistěte se, že vaše prostředí zůstalo zabezpečené, aniž by to ovlivnilo vaše kompatibilita aplikací povolením a ověření navrhovaných změn v režimu auditování.
+
+Další informace o SAM-R a tyto zásady skupiny, najdete v článku [přístup do sítě: omezit klienti můžou vzdáleně volat SAM](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls).
 
 
 >[!div class="step-by-step"]

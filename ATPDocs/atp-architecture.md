@@ -2,10 +2,10 @@
 title: Architektura služby Azure Advanced Threat Protection | Dokumentace Microsoftu
 description: Popisuje architekturu z Azure Advanced Threat Analytics (ATP)
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 7/4/2018
+ms.date: 8/05/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,18 +13,18 @@ ms.technology: ''
 ms.assetid: 90f68f2c-d421-4339-8e49-1888b84416e6
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 3f99aff656f6eff67a4077817c761c7627511bb2
-ms.sourcegitcommit: 40dbce8045f689376a50275fb12e3c5c32ca8092
+ms.openlocfilehash: 8264799f3aad2fb27287f56513458f34a3a7b0c6
+ms.sourcegitcommit: 14c05a210ae92d35100c984ff8c6d171db7c3856
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37799192"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39567640"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
 
 # <a name="azure-atp-architecture"></a>Architektura služby Azure ATP
-Architektura rozšířené ochrany před internetovými útoky pro Azure je podrobně popsán v tomto diagramu:
+Architektura služby Azure Advanced Threat Protection:
 
 ![Diagram topologie architektury Azure ATP](media/atp-architecture-topology.png)
 
@@ -110,13 +110,13 @@ Při rozhodování o tom, kolik pracovních prostorů služby Azure ATP nasadit 
 
 ## <a name="azure-atp-sensor-and-azure-atp-standalone-sensor"></a>Azure senzor ochrany ATP v programu a samostatného senzoru služby Azure ATP
 
-**Senzoru služby Azure ATP** a **samostatného senzoru služby Azure ATP** obě mají stejné základní funkce:
+**Senzoru služby Azure ATP** a **samostatného senzoru služby Azure ATP** mají stejné základní funkce:
 
 -   Zachytávají a prošetřují síťový provoz na řadiči domény. Toto je provoz prostřednictvím zrcadlení portů pro služby Azure ATP samostatné senzory a místní provoz řadiče domény v Azure ATP senzory. 
 
 -   Příjem událostí Windows přímo z řadičů domény (pro senzory ochrany ATP v programu) nebo ze serverů SIEM nebo Syslog (pro samostatný senzory ochrany ATP v programu)
 
--  Zobrazí informace o monitorování účtů protokolu RADIUS od poskytovatele připojení VPN
+-   Zobrazí informace o monitorování účtů protokolu RADIUS od poskytovatele připojení VPN
 
 -   Získávají data o uživatelích a počítačích z domény Active Directory.
 
@@ -176,7 +176,7 @@ Pokud služby Active Directory potřebuje další výpočetní výkon, kvóta vy
 
 
 ## <a name="your-network-components"></a>Komponenty vaší sítě
-Aby bylo možné pracovat se službou ochrana ATP v programu Azure, ujistěte se, že chcete zkontrolovat, že následující komponenty jsou nastaveny.
+Ověřte, že následující komponenty jsou nastavena, chcete-li pracovat s Azure ATP.
 
 ### <a name="port-mirroring"></a>Zrcadlení portů
 Pokud použijete samostatný senzorů ochrany ATP v programu Azure, budete muset nastavit port zrcadlení pro řadiče domény, které se monitorují a nastavit samostatný senzor ochrany ATP v programu Azure jako cíle pomocí fyzických nebo virtuálních přepínačů. Další možností je použít síťové odposlouchávání. Ochrana ATP v programu Azure funguje v případě některých, ale ne všechny řadiče domény jsou monitorované, ale detekce budou méně účinné.

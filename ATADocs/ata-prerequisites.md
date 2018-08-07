@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 7/25/2018
+ms.date: 8/1/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: advanced-threat-analytics
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 199830a6cd0b84cf897311cc80472a078f582b59
-ms.sourcegitcommit: 759e99f670c42c2dd60d07b2200d3de01ddf6055
+ms.openlocfilehash: 6a51832f3dbff55ed2ad396307a487ad607b3a2b
+ms.sourcegitcommit: 14c05a210ae92d35100c984ff8c6d171db7c3856
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39335907"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39567657"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
@@ -49,7 +49,7 @@ Systém ATA funguje na hranici doménové struktury ve službě Active Directory
 ![Diagram architektury ATA](media/ATA-architecture-topology.jpg)
 
 ## <a name="before-you-start"></a>Než začnete
-V této části jsou uvedené informace, které byste měli získat, a účty a síťové entity, které byste měli mít před zahájením instalace ATA.
+Tato část uvádí informace, které byste měli získat, a také účty a síťové entity, které byste měli mít před zahájením instalace ATA.
 
 
 -   Uživatelský účet a heslo s oprávněním ke čtení pro všechny objekty v monitorovaném domén.
@@ -57,7 +57,7 @@ V této části jsou uvedené informace, které byste měli získat, a účty a 
     > [!NOTE]
     > Pokud jste pro různé organizační jednotky (OU) ve vaší doméně nastavili vlastní seznamy ACL, ujistěte se, že vybraný uživatel má pro tyto organizační jednotky oprávnění ke čtení.
 
--   Neinstalujte na ATA Gateway nebo Lightweight Gateway Microsoft Message Analyzer. Ovladač nástroje Message Analyzer koliduje s ovladači komponent ATA Gateway a Lightweight Gateway. Pokud na komponentě ATA Gateway spustíte Wireshark a následně zastavíte jeho zachytávání, budete muset restartovat službu Microsoft Advanced Threat Analytics Gateway. Pokud ne, brána přestane zachytávání provozu. Wireshark běžící na ATA Lightweight Gateway nijak nenarušuje ATA Lightweight Gateway.
+-   Neinstalujte na ATA Gateway nebo Lightweight Gateway Microsoft Message Analyzer. Message Analyzer ovladač je v konfliktu s ovladači komponent ATA Gateway a Lightweight Gateway. Pokud na komponentě ATA Gateway spustíte Wireshark a následně zastavíte jeho zachytávání, budete muset restartovat službu Microsoft Advanced Threat Analytics Gateway. Pokud ne, brána přestane zachytávání provozu. Wireshark běžící na ATA Lightweight Gateway nijak nenarušuje ATA Lightweight Gateway.
 
 -    Doporučené: Uživatel by měl mít oprávnění jen pro čtení kontejneru odstraněných objektů. To umožňuje ATA detekovat hromadné odstranění objektů v doméně. Informace o konfiguraci oprávnění jen pro čtení pro kontejner odstraněných objektů najdete v tématu **Změna oprávnění pro kontejner odstraněných objektů** tématu [zobrazení nebo nastavení oprávnění u objektu adresáře](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) článku.
 
@@ -117,7 +117,7 @@ Následující tabulka uvádí minimální porty, které musí být otevřené, 
 |**HTTPS**|TCP|443|Podniková síť a ATA Gateway|Příchozí|
 |**SMTP** (volitelné)|TCP|25|Server SMTP|Odchozí|
 |**SMTPS** (volitelné)|TCP|465|Server SMTP|Odchozí|
-|**Syslog** (volitelné)|TCP|514|Server syslog|Odchozí|
+|**Syslog** (volitelné)|Protokol TCP/UPS/TLS (Konfigurovat)|514 (výchozí)|Server syslog|Odchozí|
 |**LDAP**|TCP a UDP|389|Řadiče domény|Odchozí|
 |**LDAPS** (volitelné)|TCP|636|Řadiče domény|Odchozí|
 |**DNS**|TCP a UDP|53|Servery DNS|Odchozí|

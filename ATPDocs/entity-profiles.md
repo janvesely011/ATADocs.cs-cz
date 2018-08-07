@@ -1,11 +1,11 @@
 ---
-title: Práce s profily uživatelů na portálu Azure Advanced Threat Protection prostoru | Microsoft Docs
-description: Popisuje, jak prozkoumat uživatelé z obrazovky profily uživatelů na portálu Azure ATP pracovního prostoru
+title: Práce s profily uživatelů na portálu pro pracovní prostor rozšířené ochrany před internetovými útoky pro Azure | Dokumentace Microsoftu
+description: Popisuje, jak prozkoumat uživatelů z obrazovky profily uživatelů na portálu pro pracovní prostor služby Azure ATP
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 8/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,60 +13,60 @@ ms.technology: ''
 ms.assetid: 17458706-79fb-4c23-aa42-66979164a45f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 6ceefeeba6a52abf5da7ff44135cff55e9beab02
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: cd34be695a190c719f991f8cc4b374942363a7c1
+ms.sourcegitcommit: 14c05a210ae92d35100c984ff8c6d171db7c3856
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/21/2018
-ms.locfileid: "29446068"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39567878"
 ---
-*Platí pro: Azure Advanced Threat Protection*
+*Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
 
 
-# <a name="investigating-entity-profiles"></a>Zkoumání profily entit
+# <a name="understanding-entity-profiles"></a>Principy profily entit
 
-Profil entity poskytuje komplexní entity stránka s navržené pro úplné přímým – podrobnější prošetření uživatelů, počítačů, zařízení a prostředky, které mají přístup a jejich historii. Stránka profilu využívá výhod nového překladač logické aktivity Azure ATP, který můžete prohlížet skupinu aktivit, ke kterým dochází (agregované až několik minut) a seskupovat je do jedné logické aktivity umožňují lépe porozumět skutečné aktivity vaši uživatelé.
+Profil entity vám poskytne komplexní entity stránka s určená pro celý podrobný rozbor šetření uživatelů, počítačů, zařízení a prostředky, které mají přístup k a jejich historie. Na stránce Profil využívá výhod nových překladač logické aktivity ochrany ATP v programu Azure, který můžete podívat na skupinu aktivit, ke kterým dochází (agregované až minutu) a seskupovat je do jedné logické aktivity umožňují lépe pochopit skutečné aktivity vaši uživatelé.
 
-Pro přístup k stránku profil entity, klikněte na název entity, jako je například uživatelské jméno v časové osy podezřelých aktivit.
+Chcete-li získat přístup stránku profil entity, klikněte na název sady entit, jako je například uživatelské jméno na časové ose podezřelé aktivity.
 
-V levé nabídce poskytuje všechny služby Active Directory informace k dispozici u entity - e-mailovou adresu, domény, první zobrazené datum. Pokud je entita citlivé, zde zjistíte, proč. Například je uživatel označené jako velká a malá písmena nebo člen skupiny citlivé?
-Pokud je citlivé uživatel, zobrazí ikonu v části uživatelské jméno.
+V levé nabídce poskytuje všechny služby Active Directory informace k dispozici na entitu, e-mailovou adresu, domény, první zjištěný datum. Pokud subjektem rozlišuje velká a malá písmena, zjistíte, proč. Například uživatel označené jako citlivé nebo člen citlivou skupinu?
+Pokud je citlivé uživatele, zobrazí ikonu v části uživatelské jméno.
 
-## <a name="view-entity-activities"></a>Zobrazit entity aktivity
+## <a name="view-entity-activities"></a>Zobrazení entity aktivity
 
-Zobrazit všechny aktivity prováděné uživateli nebo provést s entitou, klikněte na **aktivity** kartě. 
+Zobrazit všechny aktivity prováděné uživateli, nebo provést u entity, klikněte na **aktivity** kartu. 
 
  ![aktivity profilu uživatele](media/user-profile-activities.png)
 
-Ve výchozím nastavení zobrazí hlavním podokně profilu entity termín entity aktivit s historii až šest měsíců zpět, ze kterého můžete také přejít dolů do entity přístupu uživatelem, nebo pro entity, uživatelé, kteří přístup entity.
+Ve výchozím nastavení zobrazí v hlavním podokně profil entity časová osa entity aktivity s historií až šest měsíců zpět, ze kterého můžete také přecházet do entity přistupovat uživatelem nebo pro entity, uživatelé, kteří přístup entity.
 
-V horní části můžete zobrazit souhrn dlaždice, které získáte rychlý přehled toho, co je potřeba pochopit v přehledu o entitě – kolik počítačů uživatel přihlášen do, kolik měla přístup k prostředkům a umístění, ze kterých přihlášený uživatel do sítě VPN (Pokud je nakonfigurováno) . 
+V horní části stránky můžete zobrazit souhrn dlaždic, které získáte rychlý přehled toho, co je potřeba pochopit v přehledu o vašich entitu, kolik počítačů uživatel přihlášen k získal přístup k tom, kolik prostředků a umístění, ze kterých přihlášený uživatel do sítě VPN (je-li konfigurováno) . 
 
-Pomocí **filtrovat podle** tlačítko výše časové ose aktivity můžete filtrovat aktivity podle typu aktivity. Můžete také filtrovat na konkrétní (aktivní) typ aktivity. To je užitečné pro šetření, když chcete pochopit základy toho, co je to entity v síti. Můžete také přejít na určité datum a aktivity můžete exportovat jako filtruje tak, aby aplikace Excel. Exportovaný soubor obsahuje na stránce pro změny directory services (věcí, které změnily ve službě Active Directory pro účet) a samostatné stránce pro aktivity. 
+Použití **filtrovat podle** tlačítko nad časové osy aktivity můžete filtrovat aktivity podle typu aktivity. Můžete také filtrovat konkrétní (hlučného) typu aktivity. To je užitečné k prošetření, když chcete pochopit základy toho, co dělá entity v síti. Můžete také přejít na konkrétní datum a jak jsou vyfiltrovaná do aplikace Excel můžete exportovat aktivity. Exportovaný soubor obsahuje stránky pro změny v adresáři služby (věci, které se změnily v Active Directory pro účet) a samostatnou stránku aktivity. 
 
 ## <a name="view-directory-data"></a>Zobrazení dat adresáře
 
-**Dat adresáře** karta poskytuje statické informace, které jsou k dispozici ze služby Active Directory, včetně příznaky zabezpečení ovládacích prvků přístupu uživatele. Azure ATP také zobrazuje členství ve skupinách pro uživatele tak, aby se dá zjistit, jestli má uživatel přímé členství nebo rekurzivní členství. Pro skupiny Azure ATP uvádí členy skupiny.
+**Data adresáře** karta obsahuje statické informace, které jsou k dispozici ze služby Active Directory, včetně příznaky zabezpečení ovládacích prvků přístupu uživatele. Ochrana ATP v programu Azure také zobrazí členství ve skupinách pro uživatele, takže můžete určit, zda uživatel má přímé členství nebo rekurzivní členství. Pro skupiny ochrany ATP v programu Azure uvádí členy skupiny.
 
- ![data uživatelského profilu adresáře](media/user-profile-dir-data.png)
+ ![adresář data uživatelského profilu](media/user-profile-dir-data.png)
 
-V **řízení přístupu uživatelů** část, nastavení zabezpečení povrchy Azure ATP, které může být nutné vaše attentions. Uvidíte důležité příznaky o uživateli, například můžete stiskněte klávesu uživatele zadejte obejít heslo, uživatel nemá heslo, které je platné stále atd. 
+V **řízení uživatelských účtů** části, nastavení zabezpečení zařízení Surface ochrany ATP v programu Azure, které může být nutné vaše attentions. Můžete zobrazit důležité příznaky informace o uživateli, jako je můžete uživatele stisknutím klávesy enter obejít heslo, uživatel nemá heslo, které je platné stále atd. 
 
-## <a name="view-lateral-movement-paths"></a>Zobrazení laterální pohyb cesty
+## <a name="view-lateral-movement-paths"></a>Zobrazení cesty taktiky Lateral Movement
 
-Kliknutím na kartu laterální pohyb cesty, můžete zobrazit plně dynamické a můžete kliknout mapování, které vám poskytne vizuální reprezentace cesty laterální pohyb do a z tohoto uživatele, který slouží k proniknout vaší sítě.
+Když kliknete na kartu cesty laterální pohyb, se zobrazí plně dynamického a kliknout, čímž mapu, která vám poskytne vizuální reprezentace cesty taktiky Lateral Movement do a z tohoto uživatele, které je možné na míru vaší sítě.
 
-Mapy vám poskytne seznam kolik směrování mezi počítačů nebo uživatelů útočník by mohl do a z tohoto uživatele k ohrožení citlivých účet, a pokud má uživatel zpřístupnění citlivých účtů, uvidíte kolik prostředky a účty jsou přímo připojené.
+Mapa vám poskytne přehled o tom, kolik segmentů směrování mezi počítače nebo uživatelé útočník by mohl do a z tohoto uživatele k ohrožení citlivých účtů, a pokud má uživatel citlivých účtů, můžete zobrazit, kolik prostředky a účty jsou přímo připojené.
 
-Pokud není zjištěna aktivita za poslední dva dny, už se zobrazí graf, ale [pomoci odhalit laterální pohyb cesta sestavy](reports.md) bude k dispozici pro poskytují informace o způsobech laterální pohyb za posledních 60 dní. 
+Pokud se zjistila aktivita za poslední dva dny grafu již nezobrazuje, ale [laterální pohyb cesta sestavy](reports.md) bude k dispozici k poskytování informací o cesty taktiky Lateral Movement za posledních 60 dní. 
 
-Další informace najdete v tématu [pomoci odhalit laterální pohyb cesty](use-case-lateral-movement-path.md). 
+Další informace najdete v tématu [laterální pohyb cesty](use-case-lateral-movement-path.md). 
 
- ![cesty laterální pohyb profilu uživatele](media/user-profile-lateral-movement-paths.png)
+ ![cesty taktiky Lateral Movement profilu uživatele](media/user-profile-lateral-movement-paths.png)
 
 
 ## <a name="see-also"></a>Viz také
 
-- [Prozkoumat laterální pohyb cesty s Azure ATP](use-case-lateral-movement-path.md)
-- [Podívejte se na fórum ATP!](https://aka.ms/azureatpcommunity)
+- [Prošetřování laterálních průnikových tras pomocí služby Azure ATP](use-case-lateral-movement-path.md)
+- [Podívejte se na fórum ochrany ATP v programu.](https://aka.ms/azureatpcommunity)

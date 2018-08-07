@@ -1,11 +1,11 @@
 ---
-title: Konfigurace SAM-R, aby se povolilo rozpoznání laterálního pohybu cestu v Advanced Threat Analytics | Microsoft Docs
-description: Popisuje postup konfigurace SAM-R, aby se povolilo rozpoznání laterálního pohybu cestu v Advanced Threat Analytics (ATA)
+title: Konfigurace SAM-R povolit zjišťování cesty laterální pohyb v Advanced Threat Analytics | Dokumentace Microsoftu
+description: Popisuje postup konfigurace SAM-R povolit zjišťování cesty laterální pohyb v Advanced Threat Analytics (ATA)
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 4/25/2018
+ms.date: 7/30/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: advanced-threat-analytics
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 7597ed25-87f5-472c-a496-d5f205c9c391
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 6e32f3ce59b049d0ced68a1330eefca7315bf49d
-ms.sourcegitcommit: 5c0f914b44bfb8e03485f12658bfa9a7cd3d8bbc
+ms.openlocfilehash: 65068251436b17aac9ad8efc3d4842c8e2a109cf
+ms.sourcegitcommit: 14c05a210ae92d35100c984ff8c6d171db7c3856
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "32298363"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39567963"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
@@ -27,26 +27,29 @@ ms.locfileid: "32298363"
 >[!div class="step-by-step"]
 [«Krok 8](install-ata-step7.md)
 
-## <a name="step-9-configure-sam-r-required-permissions"></a>Krok 9: Konfigurace SAM-R požadované oprávnění
+## <a name="step-9-configure-sam-r-required-permissions"></a>Krok 9: Konfigurace SAM-R, vyžaduje oprávnění
 
-[Laterální pohyb cesta](use-case-lateral-movement-path.md) detekce spoléhá na dotazy, které identifikují místní správci na konkrétní počítače. Tyto dotazy se provádí pomocí protokolu SAM-R, prostřednictvím účtu služby ATA vytvořené v [kroku 2. Připojení ke službě AD](install-ata-step2.md).
+[Cesty laterální pohyb](use-case-lateral-movement-path.md) detekce spoléhá na dotazy, které identifikují místními správci na konkrétní počítače. Tyto dotazy se provádí pomocí protokolu SAM-R, prostřednictvím vytvořené v účtu služby ATA [kroku 2. Připojení ke službě AD](install-ata-step2.md).
  
-K zajištění, že Windows klienty a servery povolit účet služby ATA k provedení této operace SAM-R změny vašeho **zásady skupiny** musí být provedeny, přidá účet služby ATA kromě nakonfigurované účty uvedené v **přístup k síti** zásad.
+K zajištění, že Windows klienty a servery povolit účet služby ATA k provedení této operace SAM-R, úpravy vaše **zásady skupiny** musí být provedeny, který přidá účet služby ATA kromě nakonfigurované účty uvedené v **přístup k síti** zásad.
 
 1. Vyhledejte zásady:
 
- - Název zásady: Přístup k síti – omezovat klienty povolit vzdálené volání SAM
- - Umístění: Konfigurace, nastavení systému Windows, nastavení zabezpečení, místní zásady zabezpečení možnosti
+ - Název zásady: Přístup k síti – omezovat klienty moct vzdáleně volat SAM
+ - Umístění: Konfigurace, nastavení Windows, nastavení zabezpečení, místní zásady zabezpečení možnosti
   
   ![Vyhledejte zásady](./media/samr-policy-location.png)
 
-2. Služba ATA přidejte do seznamu schválených účtů může k provedení této akce na vaše moderní systémy Windows.
+2. Služba ATA přidáte do seznamu schválených účtů schopen provést tuto akci do moderního systému Windows.
  
-  ![Přidání služby](./media/samr-add-service.png)
+  ![Přidat službu](./media/samr-add-service.png)
 
-3. **Služba ATA** (služba ATA vytvoří během instalace) teď má správná oprávnění k provedení SAMR v prostředí.
+3. **Služba ATA** (služba ATA vytvoří během instalace) teď má správná oprávnění k provedení SAM-R v prostředí.
 
-Další informace o SAM-R a tyto zásady skupiny, najdete v článku [přístup k síti: omezovat klienty povolit vzdálené volání SAM](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls).
+> [!NOTE]
+> Ještě před vynucením nové zásady, ujistěte se, že vaše prostředí zůstalo zabezpečené, aniž by to ovlivnilo kompatibilita aplikací umožňující a ověření vašich navrhovaných změn v režimu auditování. 
+
+ Další informace o SAM-R a zásadami skupiny, najdete v části [přístup do sítě: omezit klienti můžou vzdáleně volat SAM](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls).
 
 
 >[!div class="step-by-step"]
