@@ -43,7 +43,8 @@
 ## [Práce s podezřelými aktivitami](working-with-suspicious-activities.md)
 ## [Průvodce prošetřováním podezřelých aktivit](suspicious-activity-guide.md)
 ## [Prošetřování laterálních průnikových tras pomocí služby Azure ATP](use-case-lateral-movement-path.md)
-## [Prošetřování entit](entity-profiles.md)
+## [Prošetřování entit](investigate-entity.md)
+## [Principy profilů entit](entity-profiles.md)
 # Odstraňování potíží
 ## [Řešení známých problémů](troubleshooting-atp-known-issues.md)
 ## [Podpora a informace](atp-support.md)
