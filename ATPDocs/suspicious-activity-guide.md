@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4e6a7d90ad5670b3d1c01ba70d7b5a81e8808b5e
-ms.sourcegitcommit: 759e99f670c42c2dd60d07b2200d3de01ddf6055
+ms.openlocfilehash: 4667e13af4e86a18d1b50a2ea575f9c749f0c541
+ms.sourcegitcommit: ca6153d046d8ba225ee5bf92cf55d0bd57cf4765
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39335873"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39585233"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -101,7 +101,7 @@ Existují tři typy detekce:
 
 **Šetření**
 
-Nejprve zkontrolujte popis výstrahy, abyste zjistili, která z výše uvedených tří typů detekce, že pracujete s. Další informace stáhněte si Excelové tabulky.
+Nejprve zkontrolujte popis výstrahy, pokud chcete zobrazit, který tři typy detekce uvedených výše můžete pracujete s. Další informace stáhněte si Excelové tabulky.
 
 1.  Skeleton Key – můžete zkontrolovat, pokud Skeleton Key ovlivnila řadičů domény s použitím [kontroly vytvořené týmem služby Azure ATP](https://gallery.technet.microsoft.com/Aorato-Skeleton-Key-24e46b73). Skener najde malware na 1 nebo více řadičů domény, jde o pravdivě pozitivní upozornění.
 
@@ -191,7 +191,7 @@ Pass-the-Ticket je technika laterálního pohybu, kdy útočník získá lístek
 Útočníci s právy správce domény může ohrozit [účtu KRBTGT](https://technet.microsoft.com/library/dn745899(v=ws.11).aspx#Sec_KRBTGT). Pomocí účtu KRBTGT, můžete vytvořit lístek Kerberos udělující lístek (TGT), který poskytuje autorizaci k jakémukoli prostředku a nastavit dobu platnosti lístku do libovolného kdykoli. Tato falešných lístků TGT se nazývá "goldentTicket" a útočníkům umožňuje dosáhnout trvalého průniku do sítě.
 
 V této detekce se aktivuje upozornění, pokud je lístek Kerberos udělující lístek se používá pro více než povolená doba uvedená v [maximální doba života lístku uživatele](https://technet.microsoft.com/library/jj852169(v=ws.11).aspx), jde **čas anomálií**útok typu golden Ticket, nebo neexistující účet jde **neexistující účet** útok metodou golden ticket.
-zásady zabezpečení.
+
 
 **Šetření**
 
@@ -275,21 +275,6 @@ Ověřte následující oprávnění:
 Další informace najdete v tématu [udělení Active Directory Domain Services oprávnění k synchronizaci profilu v SharePoint serveru 2013](https://technet.microsoft.com/library/hh296982.aspx).
 Můžete využít [AD ACL Scanner](https://blogs.technet.microsoft.com/pfesweplat/2013/05/13/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool/) nebo vytvořit skript prostředí Windows PowerShell k určení, kdo v doméně tato oprávnění má.
 
-
-## <a name="password-exposed-in-cleartext-report"></a>Hesla v nešifrovaném textu sestavy
-
-**Popis**
-
-Některé služby posílají přihlašovací údaje účtu v prostém textu. To může nastat i pro účty uživatelů. Útočníci monitorování síťového provozu můžete zachytit a pak znovu použít tyto přihlašovací údaje ke škodlivým účelům. 
-
-**Šetření**
-
-Klikněte na stránce sestavy a stáhněte si hesla v nešifrovaném textu sestavy. Zobrazit v Excelové tabulce, které účty byly vystaveny.
-Obvykle je skript nebo starší verze aplikace na zdrojových počítačích, který používá jednoduché vazby LDAP.
-
-**Náprava**
-
-Ověřte konfiguraci na zdrojových počítačích a zajistěte, aby nepoužívaly jednoduchou vazbu protokolu LDAP. Namísto použití jednoduché vazby protokolu LDAP můžete použít LDAP SALS nebo LDAPS.
 
 ## <a name="privilege-escalation-using-forged-authorization-data"></a>Eskalace oprávnění prostřednictvím zfalšovaných dat autorizace
 

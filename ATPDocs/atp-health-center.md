@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 1b7e72c3-a538-443f-981c-398ffafa5ab8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 5fb4acaca989922ad894cee4a799378bb912643d
-ms.sourcegitcommit: 14c05a210ae92d35100c984ff8c6d171db7c3856
+ms.openlocfilehash: 75a0c9515f552c0ca18dbe2fd88cf27990fd59e1
+ms.sourcegitcommit: ca6153d046d8ba225ee5bf92cf55d0bd57cf4765
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39567980"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39584996"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -51,8 +51,8 @@ Pokud chcete zkontrolovat celkový stav pracovního prostoru, klikněte na ikonu
 -   **Suppressed** (Potlačeno): Potlačení aktivity znamená, že ji chcete prozatím ignorovat a upozornění chcete zobrazit, jenom pokud se bude jednat o novou instanci. Pokud je o podobnou výstrahu jako ochrana ATP v programu Azure nebude ho znovu otevřít. Ale pokud výstrahy po dobu sedmi dní zastaví a pak se znovu objeví, budete upozorněni znovu.
 
 -   **Znovu otevřít**: aby se zobrazovala Open můžete znovu otevřít uzavřeného nebo Potlačené problém znovu na časové ose.
-- 
-- **Odstranit**: Z v rámci časové osy podezřelých aktivit, máte také možnost odstranění problému se stavem. Pokud výstrahu odstraníte, odstraní se z pracovního prostoru a nebudete moci obnovit. Po kliknutí na možnost pro odstranění budete moct odstranit všechny podezřelé aktivity stejného typu.
+
+-   **Odstranit**: Z v rámci časové osy podezřelých aktivit, máte také možnost odstranění problému se stavem. Pokud výstrahu odstraníte, odstraní se z pracovního prostoru a nebudete moci obnovit. Po kliknutí na možnost pro odstranění budete moct odstranit všechny podezřelé aktivity stejného typu.
 
 
 

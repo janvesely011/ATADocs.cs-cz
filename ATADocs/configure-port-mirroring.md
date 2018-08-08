@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: cdaddca3-e26e-4137-b553-8ed3f389c460
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 9ed585d37363fbae2604fe0ea705a0ea30b9b283
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: 6f54967cfdbe7710168bf8f57a3280d5138923f1
+ms.sourcegitcommit: ca6153d046d8ba225ee5bf92cf55d0bd57cf4765
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30010291"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39585199"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
@@ -30,16 +30,16 @@ ms.locfileid: "30010291"
  
 Hlavní zdroj dat používaný ATA je hloubková kontrola paketů síťového provozu do a z řadičů domény. Aby bylo možné pomocí ATA sledovat síťový provoz, musíte buď konfigurovat zrcadlení portů, nebo použít síťové odposlouchávání.
 
-Pro zrcadlení portů nakonfigurujte **zrcadlení portů** u každého řadiče domény, který se má monitorovat jako **zdroj** síťového provozu. Obvykle musíte spolupracovat s týmem podpory sítí nebo virtualizace konfigurace zrcadlení portů.
-Další informace najdete v dokumentaci od dodavatele.
+Pro zrcadlení portů nakonfigurujte **zrcadlení portů** u každého řadiče domény, který se má monitorovat jako **zdroj** síťového provozu. Obvykle budete muset spolupracovat s týmem sítí nebo virtualizace ke konfiguraci zrcadlení portů.
+Další informace najdete v tématu v dokumentaci od výrobce.
 
-Řadiče domény a komponenty ATA Gateway můžou být buď fyzické, nebo virtuální. Níže jsou uvedeny běžné metody pro zrcadlení portů a některé aspekty. Další informace najdete v dokumentaci produktu přepínač nebo virtualizační server. Výrobce přepínače může používat odlišnou terminologii.
+Řadiče domény a komponenty ATA Gateway můžou být buď fyzické, nebo virtuální. Níže jsou uvedeny běžné metody pro zrcadlení portů a některé aspekty. Další informace naleznete v dokumentaci produktu přepínač nebo virtualizační server. Výrobce přepínače může používat odlišnou terminologii.
 
 **Switched Port Analyzer (SPAN)** – Kopíruje síťový provoz z jednoho nebo několika portů přepínače na jiný port v rámci stejného přepínače. ATA Gateway a řadič domény musí být připojené ke stejnému fyzickému přepínači.
 
 **Remote Switch Port Analyzer (RSPAN)** – Umožňuje sledovat síťový provoz ze zdrojových portů, které jsou rozložené přes víc fyzických přepínačů. RSPAN kopíruje zdrojový provoz do speciální sítě VLAN nakonfigurované pro RSPAN. Tato síť VLAN musí být propojená mezi zahrnutými přepínači kmenovým vedením. RSPAN pracuje na vrstvě 2.
 
-**Encapsulated Remote Switch Port Analyzer (ERSPAN)** – Jedná se o proprietární technologii Cisco pracující na vrstvě 3. ERSPAN umožňuje monitorování provozu přes různé přepínače bez nutnosti kmenových vedení sítě VLAN. ERSPAN používá ke kopírování monitorovaného síťového provozu protokol GRE (Generic Routing Encapsulation). ATA momentálně nemůže přímo přijímat provoz ERSPAN. Pro řešení ATA fungovat s provozu ERSPAN přepínač nebo směrovač, který provozem musí být nakonfigurován jako cíl ERSPAN, kde provoz se zrušeným zapouzdřením. Pak nakonfigurujte přepínač nebo směrovač pro přenos dat zrušeným zapouzdřením komponentě ATA Gateway metodou SPAN nebo RSPAN.
+**Encapsulated Remote Switch Port Analyzer (ERSPAN)** – Jedná se o proprietární technologii Cisco pracující na vrstvě 3. ERSPAN umožňuje monitorování provozu přes různé přepínače bez nutnosti kmenových vedení sítě VLAN. ERSPAN používá ke kopírování monitorovaného síťového provozu protokol GRE (Generic Routing Encapsulation). ATA momentálně nemůže přímo přijímat provoz ERSPAN. Řešení ATA fungovat s provozem ERSPAN je přepínač nebo směrovač, který provoz je potřeba nakonfigurovat jako cíl ERSPAN se dekódovat zapouzdřený provoz. Pak nakonfigurujte přepínač nebo směrovač směrovat dekódovat zapouzdřený provoz komponentě ATA Gateway metodou SPAN nebo RSPAN.
 
 > [!NOTE]
 > Pokud řadič domény se zrcadlením portů je připojený prostřednictvím linky WAN, zkontrolujte, že linka WAN dokáže zpracovat další zátěž provozu ERSPAN.
@@ -51,22 +51,23 @@ Další informace najdete v dokumentaci od dodavatele.
 |---------------|---------------------|------------------|
 |Virtuální|Virtuální na stejném hostiteli|Virtuální přepínač musí podporovat zrcadlení portů.<br /><br />Přesunutí jednoho z virtuálních počítačů do jiného hostitele může samo o sobě způsobit nefunkčnost zrcadlení portů.|
 |Virtuální|Virtuální na různých hostitelích|Zkontrolujte, že váš virtuální přepínač tento scénář podporuje.|
-|Virtuální|Fyzické|Vyžaduje vyhrazený síťový adaptér opačném případě ATA uvidí veškerý síťový provoz na příchozí i odchozí hostitele, dokonce i provoz, který odesílá do ATA Center.|
+|Virtuální|Fyzické|Vyžaduje vyhrazený síťový adaptér opačném případě ATA uvidí veškerý síťový provoz, příchozí i odchozí hostitele, dokonce i provoz, který odesílá do ATA Center.|
 |Fyzické|Virtuální|Ujistěte se, že virtuální přepínač podporuje tento scénář a konfiguraci zrcadlení portů na fyzických přepínačích v závislosti na scénáři:<br /><br />Pokud je virtuální hostitel na stejném fyzickém přepínači, budete muset nakonfigurovat span na úrovni přepínače.<br /><br />Pokud je virtuální hostitele na jiném přepínači, budete muset nakonfigurovat RSPAN nebo ERSPAN&#42;.|
 |Fyzické|Fyzický na stejném přepínači|Fyzický přepínač musí podporovat SPAN / zrcadlení portů.|
 |Fyzické|Fyzický na jiném přepínači|Vyžaduje fyzické přepínače podporující RSPAN nebo ERSPAN&#42;.|
+
 &#42; ERSPAN se podporuje jenom tehdy, pokud je před tím, než je provoz analyzován pomocí ATA, zrušeno zapouzdření.
 
 > [!NOTE]
-> Ujistěte se, že řadiče domény a komponenty ATA Gateway, ke kterým se připojují jsou časově synchronizované intervalu než pět minut.
+> Ujistěte se, že řadiče domény a komponenty ATA Gateway, ke kterým se připojují, jsou časově synchronizované do pěti minut od sebe navzájem.
 
 **Pokud pracujete s virtualizačními clustery:**
 
--   U každého řadiče domény spuštěného ve virtualizačním clusteru ve virtuálním počítači s ATA Gateway konfigurujte spřažení mezi řadičem domény a ATA Gateway. Tímto způsobem, pokud se řadič domény přesune na jiného hostitele v clusteru, ATA Gateway následujícího. To funguje dobře, pokud je jen několik řadičů domény.
+-   U každého řadiče domény spuštěného ve virtualizačním clusteru ve virtuálním počítači s ATA Gateway konfigurujte spřažení mezi řadičem domény a ATA Gateway. Tímto způsobem, pokud řadič domény přesune na jiného hostitele v clusteru, ATA Gateway ji následuje. To funguje dobře, pokud je jen několik řadičů domény.
 > [!NOTE]
 > Pokud vaše prostředí podporuje proces V2V (Virtual to Virtual) na různých hostitelích (RSPAN), nemusíte si dělat starosti se spřažením.
 > 
--   Abyste se ujistili, že komponenty ATA Gateway mají správnou velikost, aby mohly samy zpracovávat sledování všech řadičů domény, zkuste tuto možnost: Nainstalujte virtuální počítač na každého hostitele virtualizace a nainstalujte ATA Gateway na každého hostitele. Nakonfigurujte každou ATA Gateway ke sledování všech řadičů domény, které běží v clusteru. Tímto způsobem je monitorován libovolného hostitele, který běží na řadiče domény.
+-   Abyste se ujistili, že komponenty ATA Gateway mají správnou velikost, aby mohly samy zpracovávat sledování všech řadičů domény, zkuste tuto možnost: Nainstalujte virtuální počítač na každého hostitele virtualizace a nainstalujte ATA Gateway na každého hostitele. Nakonfigurujte každou ATA Gateway ke sledování všech řadičů domény, které běží v clusteru. Tímto způsobem se monitoruje všechny hostitele, které běží na řadiče domény.
 
 Po dokončení konfigurace zrcadlení portů a před instalací ATA Gateway ověřte, že zrcadlení portů funguje.
 

@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 2c8f67d0c8d9020eb0e7ae16e8410db473ace044
-ms.sourcegitcommit: 759e99f670c42c2dd60d07b2200d3de01ddf6055
+ms.openlocfilehash: 755450654d870ec0235232e08194c1094c22f030
+ms.sourcegitcommit: ca6153d046d8ba225ee5bf92cf55d0bd57cf4765
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "30010240"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39585084"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
@@ -56,15 +56,15 @@ Po přidání **síťová služba** k **Event Log Readers** skupině, restartov�
 2.  Do příkazového řádku zadejte *gpedit.msc*.
 3.  Rozbalte položku **Konfigurace počítače > Šablony pro správu > Součásti systému Windows > Předávání událostí**.
 
- ![Obrázek editoru skupiny místních zásad](media/wef 1 local group policy editor.png)
+![Obrázek editoru skupiny místních zásad](media/wef 1 local group policy editor.png)
 
 4.  Dvakrát klikněte na panel **nakonfigurovat cílového správce odběrů**.
    
     1.  Vyberte **Povoleno**.
     2.  V části **možnosti**, klikněte na tlačítko **zobrazit**.
-    3.  V části **SubscriptionManagers**, zadejte následující hodnotu a klikněte na **OK**: *Server=http://<fqdnATAGateway>: 5985/wsman/SubscriptionManager/WEC, aktualizace=10* (For example: Server=http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC,aktualizujte=10)
+    3.  V části **SubscriptionManagers**, zadejte následující hodnoty a klikněte na tlačítko **OK**: * Server =`http://<fqdnATAGateway>:5985/wsman/SubscriptionManager/WEC,Refresh=10*` (Příklad: Server =`http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10`)
  
-   ![Obrázek konfigurace cílového odběru](media/wef 2 config target sub manager.png)
+    ![Obrázek konfigurace cílového odběru](media/wef 2 config target sub manager.png)
    
     5.  Klikněte na **OK**.
     6.  Do příkazového řádku se zvýšenými oprávněními zadejte *gpupdate /force*. 
@@ -75,25 +75,25 @@ Po přidání **síťová služba** k **Event Log Readers** skupině, restartov�
 2.  Otevřete **Prohlížeč událostí**. 
 3.  Klikněte pravým tlačítkem na **předplatná** a vyberte **vytvořit odběr**. 
 
-   1.   Zadejte název a popis odběru. 
-   2.   Pro **cílový protokol**, ujistěte se, že **předané události** zaškrtnuto. Aby řešení ATA mohlo události číst, musí být cílovým protokolem **Předané události**. 
-   3.   Vyberte **Spuštěno zdrojovým počítačem** a klikněte na **Vybrat skupiny počítačů**.
+    1.  Zadejte název a popis odběru. 
+    2.  Pro **cílový protokol**, ujistěte se, že **předané události** zaškrtnuto. Aby řešení ATA mohlo události číst, musí být cílovým protokolem **Předané události**. 
+    3.  Vyberte **Spuštěno zdrojovým počítačem** a klikněte na **Vybrat skupiny počítačů**.
         1.  Klikněte na **Přidat počítač domény**.
         2.  Do pole **Zadejte název objektu k výběru** zadejte název řadiče domény. Potom klikněte na **Zkontrolovat jména** a nakonec na **OK**. 
-       
-        ![Obrázek Prohlížeče událostí](media/wef3 event viewer.png)
-   
-        
+ 
+    ![Obrázek Prohlížeče událostí](media/wef3 event viewer.png)
+ 
+ 
         3.  Klikněte na **OK**.
-   4.   Klikněte na **Vybrat události**.
+     4. Klikněte na **Vybrat události**.
 
         1. Klikněte na **Podle protokolu** a vyberte **Zabezpečení**.
         2. Do pole **Zahrne nebo vyloučí ID události** zadejte číslo události a klikněte na **OK**. Zadejte 4776, jako je například v následujícím příkladu.
 
- ![Obrázek filtru dotazu](media/wef 4 query filter.png)
+    ![Obrázek filtru dotazu](media/wef 4 query filter.png)
 
-   5.   Klikněte pravým tlačítkem na vytvořený odběr a vyberte **stav Runtime** jestli jsou všechny problémy se stavem. 
-   6.   Po několika minutách ověřte, že se události, jejichž předávání jste nastavili, zobrazují mezi předanými událostmi v komponentě ATA Gateway.
+    5.  Klikněte pravým tlačítkem na vytvořený odběr a vyberte **stav Runtime** jestli jsou všechny problémy se stavem. 
+    6.  Po několika minutách ověřte, že se události, jejichž předávání jste nastavili, zobrazují mezi předanými událostmi v komponentě ATA Gateway.
 
 
 Další informace najdete v tématu: [konfigurace počítačů pro předání a shromáždění událostí](https://technet.microsoft.com/library/cc748890)

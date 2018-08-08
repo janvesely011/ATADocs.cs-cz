@@ -2,10 +2,10 @@
 title: Zkoumání uživatelé a počítače pomocí ochrany ATP v programu Azure | Dokumentace Microsoftu
 description: Popisuje, jak prozkoumat podezřelé aktivity prováděné uživateli, entity, počítače nebo zařízení pomocí Azure Advanced Threat Protection (ATP)
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 5/6/2018
+ms.date: 8/6/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 43e57f87-ca85-4922-8ed0-9830139fe7cb
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 32f5ab58ba9e17d36761ce5b99f4711d0e390ff7
-ms.sourcegitcommit: 14c05a210ae92d35100c984ff8c6d171db7c3856
+ms.openlocfilehash: 722ef73fe2c039a567b4f3d807f97e4ede16dc67
+ms.sourcegitcommit: ca6153d046d8ba225ee5bf92cf55d0bd57cf4765
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39567861"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39585216"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -34,7 +34,7 @@ Na stránce komplexní entity navržena pro celý podrobný rozbor šetření u�
 
 Chcete-li získat přístup stránku profil entity, klikněte na název sady entit, jako je například uživatelské jméno na časové ose podezřelé aktivity. Zkrácené verze na stránce podezřelých aktivit profilu entity také zobrazí ukazatele myši na název entity.
 
-Profil entity umožňuje zobrazení entity aktivity, zobrazit data adresáře a zobrazení cesty taktiky Lateral Movement entity. Další informace najdete v tématu [zkoumání profily entit ](entity-profiles.md).
+Profil entity umožňuje zobrazení entity aktivity, zobrazit data adresáře a zobrazení cesty taktiky Lateral Movement entity. Další informace najdete v tématu [Principy profily entit ](entity-profiles.md).
 
 ## <a name="check-entity-tags"></a>Zaškrtněte značky entit
 
@@ -49,7 +49,7 @@ Ochrana ATP v programu Azure si vyžádá značky z Active Directory a poskytuj�
 
 ## <a name="look-at-the-user-account-control-flags"></a>Podívejte se na řídicí příznaky účtu uživatele
 
-Řídicí příznaky účtu uživatele budou importovány také ze služby Active Directory. Ochrana ATP v programu Azure zahrnuje 10 příznaky, které platí pro šetření: 
+Řídicí příznaky účtu uživatele budou importovány také ze služby Active Directory. Azure data adresáře ochrany ATP v programu entity obsahují 10 příznaky, které platí pro zkoumání: 
 - Platnost hesla nikdy nevyprší
 - Důvěryhodné pro delegaci
 - Vyžaduje se čipová karta
@@ -61,7 +61,7 @@ Ochrana ATP v programu Azure si vyžádá značky z Active Directory a poskytuj�
 - Předběžné ověření Kerberos se nevyžaduje
 - Zakázaný účet 
 
-Ochrana ATP v programu Azure vám umožňuje vědět, pokud jsou tyto příznaky zapnutí nebo vypnutí v Azure Active Directory. Barevné ikony označují příznak zapnutý v Active Directory. v níže uvedeném příkladu, pouze **zakázaný účet** nachází ve službě Active Directory.
+Ochrana ATP v programu Azure vám umožňuje vědět, pokud jsou tyto příznaky zapnutí nebo vypnutí v Azure Active Directory. Barevnými ikonami a odpovídající přepínač informací o stavu všech příznaků. V níže uvedeném příkladu, pouze **platnost hesla nikdy nevyprší** nachází ve službě Active Directory.
 
  ![příznaky ovládacích prvků uživatelského účtu](./media/user-access-flags.png)
 
