@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 8ae459ac-9fca-4923-9a1a-dc10d5c50b29
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 58e3b0d04b196f0c49b6e146952c1819c8413ee3
-ms.sourcegitcommit: eebf1156aaae199b6aaa7e431cd6372e572b1e9f
+ms.openlocfilehash: 281db5cfee9366babfcdf30e14a80122aa6d04c8
+ms.sourcegitcommit: 7ab273d1a4c05b457ee02f1631f642346d687b1e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "29977569"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39625604"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -30,7 +30,7 @@ Použijte v následujících zdrojích informací při další informace o nasaz
 
 |Provedete to tak...|...používat toto:|
 |----|----|
-|Projděte si naši dokumentaci nejoblíbenější|Přečtěte si pěti hlavních stránek:|- [Co je Azure Advanced Threat Protection?](what-is-atp.md)<br>- [Požadavky služby Azure ATP](atp-prerequisites.md)<br>- [Architektura služby Azure ATP](atp-architecture.md)<br>- [Plánování kapacity v Azure ATP](atp-capacity-planning.md)<br>- [Vytvoření pracovního prostoru](install-atp-step1.md)|
+|Projděte si naši dokumentaci nejoblíbenější|Přečtěte si pěti hlavních stránek:<br>- [Co je Azure Advanced Threat Protection?](what-is-atp.md)<br>- [Požadavky služby Azure ATP](atp-prerequisites.md)<br>- [Architektura služby Azure ATP](atp-architecture.md)<br>- [Plánování kapacity v Azure ATP](atp-capacity-planning.md)<br>- [Vytvoření pracovního prostoru](install-atp-step1.md)|
 |Spolupracujte s týmem a kolegy|Přejděte [technické komunitě](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection) Azure rozšířené ochrany před internetovými útoky.|
 |Zkontrolujte informace o předplatném a získání seznamu, které funkce jsou podporovány|Zobrazit [informace o předplatném](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) a [seznam funkcí](https://www.microsoft.com/cloud-platform/azure-information-protection-features) z webu rozšířené ochrany před internetovými útoky pro Azure.|
 
