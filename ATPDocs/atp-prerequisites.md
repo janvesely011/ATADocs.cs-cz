@@ -2,10 +2,10 @@
 title: Požadavky na Azure rozšířené ochrany před internetovými útoky | Dokumentace Microsoftu
 description: Popisuje požadavky pro úspěšné nasazení služby Azure ATP ve vašem prostředí
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 6/7/2018
+ms.date: 8/9/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 070062cccb26bd99be48614bf8d40bd781d7b240
-ms.sourcegitcommit: 37b9ff946aad31eed1c6eab5d55d44fce167e20a
+ms.openlocfilehash: 0a7cd9825f5b921b9dbe6cffe54e82d3249f10b7
+ms.sourcegitcommit: 583f2f144384a6a0cb9875d5f2b0fef7e7e3735d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34827481"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "39723272"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -143,11 +143,11 @@ Následující tabulka uvádí minimální porty, které vyžaduje samostatný s
 |Služba Netlogon (SMB, CIFS, SAM-R)|TCP a UDP|445|Všechna zařízení v síti|Odchozí|
 |Čas Windows|UDP|123|Řadiče domény|Odchozí|
 |DNS|TCP a UDP|53|Servery DNS|Odchozí|
-|NTLM přes RPC|TCP|135|Všechna zařízení v síti|Odchozí|
-|NetBIOS|UDP|137|Všechna zařízení v síti|Odchozí|
+|NTLM přes RPC|TCP|135|Všechna zařízení v síti|Obojí|
+|NetBIOS|UDP|137|Všechna zařízení v síti|Obojí|
 |Syslog (volitelné)|TCP/UDP|514, v závislosti na konfiguraci|Server SIEM|Příchozí|
 |POMOCÍ PROTOKOLU RADIUS|UDP|1813|POMOCÍ PROTOKOLU RADIUS|Příchozí|
-|PROTOKOL RDP|TCP|3389|Všechna zařízení v síti|Odchozí|
+|Protokol TLS pro protokol RDP|TCP|3389|Všechna zařízení v síti|Obojí|
 
 > [!NOTE]
 > - Pomocí uživatelského účtu služby adresáře, dotazuje senzor koncových bodů ve vaší organizaci pro použití SAM-R (přihlášení k síti) k vytvoření místního správce [grafu cesty laterální pohyb](use-case-lateral-movement-path.md). Další informace najdete v tématu [konfigurace SAM-R požadovaná oprávnění](install-atp-step8-samr.md).
@@ -203,11 +203,11 @@ Následující tabulka uvádí minimální porty, které vyžaduje senzoru služ
 |**Interní porty**|||||
 |DNS|TCP a UDP|53|Servery DNS|Odchozí|
 |NTLM přes RPC|TCP|135|Všechna zařízení v síti|Odchozí|
-|Služba Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|Všechna zařízení v síti|Odchozí|
-|NetBIOS|UDP|137|Všechna zařízení v síti|Odchozí|
+|Služba Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|Všechna zařízení v síti|Obojí|
+|NetBIOS|UDP|137|Všechna zařízení v síti|Obojí|
 |Syslog (volitelné)|TCP/UDP|514, v závislosti na konfiguraci|Server SIEM|Příchozí|
 |POMOCÍ PROTOKOLU RADIUS|UDP|1813|POMOCÍ PROTOKOLU RADIUS|Příchozí|
-|Protokol TLS pro RDP port|TCP|3389|Všechna zařízení v síti|Odchozí|
+|Protokol TLS pro RDP port|TCP|3389|Všechna zařízení v síti|Obojí|
 
 > [!NOTE]
 > - Pomocí uživatelského účtu služby adresáře, dotazuje senzor koncových bodů ve vaší organizaci pro použití SAM-R (přihlášení k síti) k vytvoření místního správce [grafu cesty laterální pohyb](use-case-lateral-movement-path.md). Další informace najdete v tématu [konfigurace SAM-R požadovaná oprávnění](install-atp-step8-samr.md).
