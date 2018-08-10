@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/1/2018
+ms.date: 8/9/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: advanced-threat-analytics
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 6a51832f3dbff55ed2ad396307a487ad607b3a2b
-ms.sourcegitcommit: 14c05a210ae92d35100c984ff8c6d171db7c3856
+ms.openlocfilehash: 04284a622aec1985e363bac7f0215cfd031d9854
+ms.sourcegitcommit: 1de2b047c0e9f92a106169f7634c480f694baf10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39567657"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "39723408"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
@@ -91,7 +91,7 @@ Pokud ATA Center spouštíte jako virtuální počítač, před vytvořením nov
 
 Při práci na fyzickém serveru databáze ATA vyžaduje, abyste v systému BIOS **zakázali** neuniformní přístup k paměti (NUMA). Systému se NUMA může označovat také jako prokládání uzlů v takovém případě budete muset **povolit** prokládání uzlů, abyste NUMA zakázali. Další informace najdete v dokumentaci k systému BIOS.<br>
 
-K zajištění optimálního výkonu nastavte **možnost napájení**  pro ATA Center na hodnotu **Vysoký výkon**.<br>
+K zajištění optimálního výkonu nastavte **možnost napájení** pro ATA Center na hodnotu **Vysoký výkon**.<br>
 Počet řadiče domény, kterou monitorujete a zatížení na jednotlivých řadičích určuje specifikace serveru potřeba. Další informace najdete v tématu [plánování kapacity ATA](ata-capacity-planning.md).
 
 
@@ -169,7 +169,7 @@ Informace o používání virtuálních počítačů se službou ATA Gateway naj
 > Vyžaduje se minimálně 5 GB volného místa, doporučuje se 10 GB. Zahrnuje to prostor potřebný pro binární soubory ATA, protokoly ATA, a [protokolování výkonu](troubleshooting-ata-using-perf-counters.md).
 
 ### <a name="server-specifications"></a>Specifikace serveru
-K zajištění optimálního výkonu nastavte **možnost napájení**  pro ATA Gateway na hodnotu **Vysoký výkon**.<br>
+K zajištění optimálního výkonu nastavte **možnost napájení** pro ATA Gateway na hodnotu **Vysoký výkon**.<br>
 ATA Gateway může podporovat monitorování několika řadičů domény, v závislosti na objemu síťových přenosů z a do řadičů domény.
 
 > [!NOTE] 
@@ -215,8 +215,8 @@ Následující tabulka uvádí minimální porty, u kterých ATA Gateway vyžadu
 |Služba Netlogon (SMB, CIFS, SAM-R)|TCP a UDP|445|Všechna zařízení v síti|Odchozí|
 |Čas Windows|UDP|123|Řadiče domény|Odchozí|
 |DNS|TCP a UDP|53|Servery DNS|Odchozí|
-|NTLM přes RPC|TCP|135|Všechna zařízení v síti|Odchozí|
-|NetBIOS|UDP|137|Všechna zařízení v síti|Odchozí|
+|NTLM přes RPC|TCP|135|Všechna zařízení v síti|Obojí|
+|NetBIOS|UDP|137|Všechna zařízení v síti|Obojí|
 |SSL|TCP|443|ATA Center|Odchozí|
 |Syslog (volitelné)|UDP|514|Server SIEM|Příchozí|
 
@@ -256,7 +256,7 @@ Během instalace se nainstaluje rozhraní .Net Framework 4.6.1 a může dojít k
 ### <a name="server-specifications"></a>Specifikace serveru
 
 ATA Lightweight Gateway vyžaduje nejméně 2 jádra a 6 GB paměti RAM nainstalované na řadiči domény.
-K zajištění optimálního výkonu nastavte **možnost napájení**  pro ATA Lightweight Gateway na hodnotu **Vysoký výkon**.
+K zajištění optimálního výkonu nastavte **možnost napájení** pro ATA Lightweight Gateway na hodnotu **Vysoký výkon**.
 Komponenta ATA Lightweight Gateway se dá nasadit na řadiče domény s různým zatížením i velikostí, v závislosti na objemu síťového přenosu dat do a z řadiče domény a na počtu prostředků, které jsou na příslušném řadiči domény nainstalované.
 
 > [!NOTE] 
@@ -282,8 +282,8 @@ Následující tabulka uvádí minimální porty, které ATA Lightweight Gateway
 |Protokol|Přenos|Port|Směr|Direction|
 |------------|-------------|--------|-----------|-------------|
 |DNS|TCP a UDP|53|Servery DNS|Odchozí|
-|NTLM přes RPC|TCP|135|Všechna zařízení v síti|Odchozí|
-|NetBIOS|UDP|137|Všechna zařízení v síti|Odchozí|
+|NTLM přes RPC|TCP|135|Všechna zařízení v síti|Obojí|
+|NetBIOS|UDP|137|Všechna zařízení v síti|Obojí|
 |SSL|TCP|443|ATA Center|Odchozí|
 |Syslog (volitelné)|UDP|514|Server SIEM|Příchozí|
 |Služba Netlogon (SMB, CIFS, SAM-R)|TCP a UDP|445|Všechna zařízení v síti|Odchozí|
