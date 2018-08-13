@@ -14,10 +14,10 @@ ms.assetid: 2a5b6652-2aef-464c-ac17-c7e5f12f920f
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: d8a8f5df37422f98f6ea3357c672297395907a8d
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.sourcegitcommit: 1de2b047c0e9f92a106169f7634c480f694baf10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 08/13/2018
 ms.locfileid: "30009740"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
@@ -51,17 +51,17 @@ Po instalaci komponenty ATA Gateway proveďte následující kroky a nakonfiguru
       - Nejméně jeden řadič domény v seznamu by měl být globální katalog. To umožňuje ATA překládat objekty počítačů a uživatelů v jiných doménách v doménové struktuře.
 
   - **Síťové adaptéry pro zachytávání** (povinné):
-  - Pro ATA Gateway na vyhrazeném serveru vyberte síťové adaptéry, které jsou nakonfigurované jako cílový port zrcadlení. Tyto přijímat zrcadlený provoz řadičů domén.
+  - Pro ATA Gateway na vyhrazeném serveru vyberte síťové adaptéry, které jsou nakonfigurované jako cílový port zrcadlení. Tyto příjem provozu řadiče domény zrcadlené.
   - V případě ATA Lightweight Gateway by to měly být všechny síťové adaptéry, které se používají ke komunikaci s ostatními počítači ve vaší organizaci.
 
 
-  - **Kandidát na synchronizátora domény**: Za synchronizaci mezi ATA a doménou Active Directory může být zodpovědná libovolná ATA Gateway, která je nastavená jako kandidát na synchronizátora domény. V závislosti na velikosti domény počáteční synchronizace může chvíli trvat a je náročná. Ve výchozím nastavení jsou jako kandidáti na synchronizátora domény nastavené jenom ATA Gateway.
-   Doporučuje se zakázat všechny vzdálené lokality komponenty ATA Gateway nebudou kandidáti na synchronizátora domény.
+  - **Kandidát na synchronizátora domény**: Za synchronizaci mezi ATA a doménou Active Directory může být zodpovědná libovolná ATA Gateway, která je nastavená jako kandidát na synchronizátora domény. Počáteční synchronizace v závislosti na velikosti domény může nějakou dobu trvat a je náročná. Ve výchozím nastavení jsou jako kandidáti na synchronizátora domény nastavené jenom ATA Gateway.
+   Doporučuje se, že zakážete všechny vzdálené lokality komponenty ATA Gateway nebudou kandidáti na synchronizátora domény.
    Pokud je řadič domény jen pro čtení, nenastavujte ho jako kandidáta na synchronizátora domény. Další informace najdete v části [Architektura ATA](ata-architecture.md#ata-lightweight-gateway-features).
 
   > [!NOTE] 
   > První spuštění služby ATA Gateway po instalaci bude trvat několik minut, protože sestavuje mezipaměť analyzátorů zachytávání dat ze sítě.
-  > Změny konfigurace platí pro ATA Gateway na příští plánované synchronizaci mezi ATA Gateway a ATA Center.
+  > Změny konfigurace jsou použity v ATA Gateway při příští plánované synchronizaci mezi ATA Gateway a ATA Center.
 
 3. Volitelně můžete nastavit [Syslog listener and Windows Event Forwarding Collection](configure-event-collection.md) (Naslouchací proces syslog a kolekce předávání událostí systému Windows). 
 4. Povolit **aktualizaci ATA Gateway automaticky** tak, že ve vydání příštích verzí při aktualizaci komponenty ATA Center, tato komponenta ATA Gateway se automaticky aktualizuje.
@@ -70,7 +70,7 @@ Po instalaci komponenty ATA Gateway proveďte následující kroky a nakonfiguru
 
 
 ## <a name="validate-installations"></a>Ověření instalací
-Chcete-li ověřit, že ATA Gateway je úspěšně nasazená, zkontrolujte následující kroky:
+Chcete-li ověřit, že ATA Gateway byla úspěšně nasazena, zkontrolujte následující kroky:
 
 1.  Zkontrolujte, že je služba **Microsoft Advanced Threat Analytics Gateway** spuštěná. Po uložení nastavení ATA Gateway může trvat několik minut, než se služba spustí.
 
@@ -93,7 +93,7 @@ Chcete-li ověřit, že ATA Gateway je úspěšně nasazená, zkontrolujte násl
 
 ## <a name="related-videos"></a>Související videa
 - [Přehled nasazení ATA](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATA-Deployment-in-10-Minutes)
-- [Výběr správné typu ATA Gateway](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
+- [Volba správného typu komponenty ATA Gateway](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
 
 ## <a name="see-also"></a>Viz také

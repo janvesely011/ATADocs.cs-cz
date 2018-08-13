@@ -14,10 +14,10 @@ ms.assetid: 27b139e5-12b9-4953-8f53-eb58e8ce0038
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 47a8b5c52bf978d5e07007a3402a567be39e2157
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.sourcegitcommit: 1de2b047c0e9f92a106169f7634c480f694baf10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 08/13/2018
 ms.locfileid: "24018554"
 ---
 # <a name="whats-new-in-ata-version-16"></a>Novinky ATA verze 1.6
@@ -121,7 +121,7 @@ Pokud se zobrazí některá z těchto chyb, spusťte následující alternativn�
     2.  Microsoft Advanced Threat Analytics Center
 7.  Zkontrolujte protokoly a ověřte, že produkt běží bez chyb.
 8.  [Stažení](http://aka.ms/ataremoveduplicateprofiles "Stáhněte") nástroj RemoveDuplicateProfiles.exe a zkopírujte ho do hlavní instalační cesty (%ProgramFiles%\Microsoft Advanced Threat Analytics\Center).
-9.  Z příkazového řádku se zvýšenými oprávněními spusťte `RemoveDuplicateProfiles.exe` a počkejte, dokud nebude úspěšně dokončen.
+9.  Z příkazového řádku se zvýšenými oprávněními spusťte `RemoveDuplicateProfiles.exe` a počkejte, dokud nebude úplně zrušená.
 10. Z adresáře …\Microsoft Advanced Threat Analytics\Center\MongoDB\bin pro **Mongo ATA** zadejte následující příkaz:
 
           db.SuspiciousActivities.remove({ "_t" : "RemoteExecutionSuspiciousActivity", "DetailsRecords" : { "$elemMatch" : { "ReturnCode" : null } } }, { "_id" : 1 });
@@ -133,7 +133,7 @@ Měla by se vrátit `WriteResult({ "nRemoved" : XX })` kde "XX" je počet podez�
 
 ### <a name="net-framework-461-requires-restarting-the-server"></a>Net Framework 4.6.1 vyžaduje restartování serveru
 
-V některých případech může instalace rozhraní .Net Framework 4.6.1 vyžadovat restartování serveru. Všimněte si, že kliknete na OK v **Microsoft Advanced Threat Analytics Center – instalace** dialogové okno automaticky restartuje server. To je důležité hlavně při instalaci ATA Lightweight Gateway na řadiči domény, protože před instalací můžete chtít naplánovat časové období údržby.
+V některých případech může instalace rozhraní .Net Framework 4.6.1 vyžadovat restartování serveru. Všimněte si, že kliknete na OK v **Microsoft Advanced Threat Analytics Center – instalace** dialogové okno se automaticky restartuje server. To je důležité hlavně při instalaci ATA Lightweight Gateway na řadiči domény, protože před instalací můžete chtít naplánovat časové období údržby.
     ![Restartování rozhraní .Net Framework](media/ata-net-framework-restart.png)
 
 ### <a name="historical-network-activities-no-longer-migrated"></a>Historické síťové aktivity se už nemigrují

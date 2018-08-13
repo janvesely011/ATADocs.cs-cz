@@ -14,10 +14,10 @@ ms.assetid: 14cb7513-5dc8-49cb-b3e0-94f469c443dd
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 0b4d783d55d38d2a50c651ba47c584fed8bcee50
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.sourcegitcommit: 1de2b047c0e9f92a106169f7634c480f694baf10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 08/13/2018
 ms.locfileid: "30010138"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
@@ -28,7 +28,7 @@ ms.locfileid: "30010138"
 ATA vás může upozornit, když zjistí podezřelou aktivitu, a to buď e-mailem, nebo pomocí funkce předávání událostí ATA a předáním události na váš server SIEM/syslog. Před výběrem oznámení, která chcete dostávat, musíte [nastavit svůj e-mailový server a server Syslog](setting-syslog-email-server-settings.md).
 
 > [!NOTE]
-> -   E-mailová oznámení zahrnují odkaz, který přebírá uživatele přímo k podezřelé aktivitě, která byla zjištěna. Část názvu hostitele v odkazu je převzatá z nastavení adresy URL konzoly ATA na stránce ATA Center. Ve výchozím nastavení adresa URL konzoly ATA je IP adresa vybraná při instalaci ATA Center. Pokud chcete nakonfigurovat e-mailová oznámení, se doporučuje použít jako adresu URL konzoly ATA plně kvalifikovaný název domény.
+> -   E-mailová oznámení zahrnují odkaz, který uživatele přímo k podezřelé aktivitě, která byla zjištěna. Část názvu hostitele v odkazu je převzatá z nastavení adresy URL konzoly ATA na stránce ATA Center. Ve výchozím nastavení adresa URL konzoly ATA je IP adresa vybraná při instalaci ATA Center. Pokud chcete nakonfigurovat e-mailová oznámení, doporučujeme použít jako adresu URL konzoly ATA plně kvalifikovaný název domény.
 > -   Oznámení se z ATA Center posílají na server SMTP, nebo na server Syslog.
 
 
@@ -43,7 +43,7 @@ Pokud chcete dostávat oznámení, nastavte následující parametry:
 3. V části **Mail notifications** (Oznámení e-mailem) zadejte, která oznámení se mají posílat e-mailem – nové podezřelé aktivity a nové problémy v oblasti stavu. Můžete nastavit oddělené e-mailové adresy, na které se mají odesílat informace o podezřelých aktivitách a výstrahy týkající se stavu samostatně tak, aby například analytik zabezpečení dostával oznámení o podezřelých aktivitách a správce IT oznámení týkající se stavu.
 >   [!NOTE]
 >   E-mailové výstrahy pro podezřelé aktivity se odesílají jenom při vytvoření podezřelé aktivity.
-3. V části **oznámení Syslog**, určete oznámení, která se mají odesílat na váš server Syslog - nové podezřelé aktivity, aktualizované podezřelé aktivity a nové problémy v oblasti stavu.
+3. V části **oznámení Syslogu**, určete oznámení, která se mají odesílat na váš server Syslog – nové podezřelé aktivity, aktualizované podezřelé aktivity a nové problémy v oblasti stavu.
 5. Klikněte na **Uložit**.
 
 ![Obrázek nastavení e-mailových upozornění ATA](media/ata-mail-notification-settings.png)
