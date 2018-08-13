@@ -13,10 +13,10 @@ ms.assetid: 279d79f2-962c-4c6f-9702-29744a5d50e2
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 5fafa4e8e9644c870a92c1684fa5165ef68b31a7
-ms.sourcegitcommit: ca6153d046d8ba225ee5bf92cf55d0bd57cf4765
+ms.sourcegitcommit: 1de2b047c0e9f92a106169f7634c480f694baf10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/07/2018
+ms.lasthandoff: 08/13/2018
 ms.locfileid: "39585102"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
@@ -128,7 +128,7 @@ ATA Lightweight Gateway může podporovat monitorování jednoho řadiče domén
 > [!NOTE]   
 > -   Pokud řadič domény nemá prostředky, které ATA Lightweight Gateway vyžaduje, výkon řadiče domény to neovlivní, ale ATA Lightweight Gateway nemusí fungovat podle očekávání.
 > -   Pokud se spustí jako dynamická paměť virtuálního počítače nebo libovolná jiná paměť, funkce rozšiřování rozsahů stránek se nepodporuje.
-> -   K zajištění optimálního výkonu nastavte **možnost napájení**  pro ATA Lightweight Gateway na hodnotu **Vysoký výkon**.
+> -   K zajištění optimálního výkonu nastavte **možnost napájení** pro ATA Lightweight Gateway na hodnotu **Vysoký výkon**.
 > -   Minimálně 5 GB místa je povinný a doporučuje 10 GB včetně místa potřebného pro binární soubory ATA, [protokoly ATA](troubleshooting-ata-using-logs.md), a [protokolování výkonu](troubleshooting-ata-using-perf-counters.md).
 
 
@@ -164,7 +164,7 @@ Aspekty zrcadlení portů můžou vyžadovat, abyste pro datové centrum nebo po
 
 > [!NOTE] 
 > -   Dynamická paměť se nepodporuje.
-> -   K zajištění optimálního výkonu nastavte **možnost napájení**  pro ATA Gateway na hodnotu **Vysoký výkon**.
+> -   K zajištění optimálního výkonu nastavte **možnost napájení** pro ATA Gateway na hodnotu **Vysoký výkon**.
 > -   Minimálně 5 GB místa je povinný a doporučuje 10 GB včetně místa potřebného pro binární soubory ATA, [protokoly ATA](troubleshooting-ata-using-logs.md), a [protokolování výkonu](troubleshooting-ata-using-perf-counters.md).
 
 
