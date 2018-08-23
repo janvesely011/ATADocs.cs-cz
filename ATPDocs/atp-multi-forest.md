@@ -2,10 +2,10 @@
 title: Podpora vícenásobného doménovými strukturami Azure rozšířené ochrany před internetovými útoky | Dokumentace Microsoftu
 description: Jak nastavit podporu několika doménových struktur služby Active Directory do služby Azure ATP.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 7/20/2018
+ms.date: 8/20/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: effca0f2-fcae-4fca-92c1-c37306decf84
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a48bf96bd6a71282455d932a35aac23ba4c8193a
-ms.sourcegitcommit: 7909deafdd9323f074d0ff2f590e307bcfaaabad
+ms.openlocfilehash: 2a3460c39d6428831cc34231321fff745dbe0701
+ms.sourcegitcommit: 121c49d559e71741136db1626455b065e8624ff9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39202128"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "41734736"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -29,14 +29,14 @@ ms.locfileid: "39202128"
 
 ## <a name="step-9--set-up-azure-advanced-threat-protection-multi-forest-support"></a>Krok 9:  Nastavte podporu více doménovými strukturami rozšířené ochrany před internetovými útoky pro Azure
 
-Ochrana ATP v programu Azure může podporovat organizace s víc doménovými strukturami, které poskytuje možnost monitorování aktivity a profily uživatelů napříč doménovými strukturami. 
+Ochrana ATP v programu Azure může podporovat organizace s více doménovými strukturami, které umožňuje snadno monitorovat aktivity a profily uživatelů napříč doménovými strukturami z podokně ze skla. 
 
-Podnikové organizace může mít několik doménových struktur služby Active Directory – často používají pro různé účely, třeba zastaralou infrastrukturu z podnikové fúze a akvizice, zeměpisné distribuce a hranice zabezpečení (červená doménové struktury). Může chránit několik doménových struktur pomocí služby Azure ATP, všechna data pro generování sestav do jednoho, primární pracovní prostor poskytuje možnost monitorovat a prozkoumávat prostřednictvím podokně ze skla.
+Organizace obvykle mívají několik doménových struktur služby Active Directory – často používají pro různé účely, třeba zastaralou infrastrukturu z podnikové fúze a akvizice, zeměpisné distribuce a hranice zabezpečení (červená doménové struktury). Může chránit několik doménových struktur pomocí služby Azure ATP, poskytne vám umožňuje monitorovat a prozkoumávat prostřednictvím podokně ze skla.
 
 Schopnost podporují více doménových struktur služby Active Directory umožňuje následující:
--   Můžete zobrazit a prozkoumat aktivity prováděné uživateli napříč více doménovými strukturami z podokně ze skla. 
--   Podpora více doménovými strukturami zvyšuje zjišťování a snižuje počet falešně pozitivních výsledků tím, že poskytuje pokročilé integrace služby Active Directory a účet řešení. 
--   Vzhledem k tomu, že podpora více foresst eliminuje potřebu víc pracovních prostorů, budete mít větší kontrolu a snazší nasazení řadiče domény jsou všechny centrálně monitorovat z jedné služby Azure ATP konzola, která poskytuje lepší monitorování výstrahy a vytváření sestav pro pokrytí napříč organizací.
+-   Zobrazení a prošetřování aktivity prováděné uživateli napříč více doménovými strukturami z podokně ze skla. 
+-   Vylepšený detekční a nižší počet falešných poplachů tím, že poskytuje pokročilé řešení integrace a účet služby Active Directory. 
+-   Jednodušší nasazení a větší kontrolu. Vylepšené výstrahy monitorování a vytváření sestav pro pokrytí napříč organizací, když všechny řadiče domény jsou monitorované z jediné konzoly ochrany ATP v programu Azure.
 
 
 ## <a name="how-azure-atp-detects-activities-across-multiple-forests"></a>Jak služby Azure ATP detekuje aktivity napříč více doménovými strukturami 
@@ -48,7 +48,7 @@ Ke zjištění aktivity mezi doménovými strukturami, senzory ochrany ATP v pro
 > - Uživatel, který konfigurujete v konzole služby Azure ATP v **adresářové služby** musí důvěřovat ve všech dalších doménových struktur.
 
 
-Pokud máte doménových struktur, na které žádné služby Azure ATP jsou nainstalované senzory, můžete zobrazit a sledovat aktivity pocházející z těchto doménových strukturách stále ochrany ATP v programu Azure. Senzorů ochrany ATP v programu nainstalovat se můžete dotazovat řadiče domény všechny připojené vzdálené doménové struktuře řešení uživatelů a počítačů a vytvořit profily pro každý z nich. 
+Pokud máte doménových struktur, na které žádné služby Azure ATP jsou nainstalované senzory, můžete zobrazit a sledovat aktivity pocházející z těchto doménových strukturách stále ochrany ATP v programu Azure. Senzorů ochrany ATP v programu nainstalovat se můžete dotazovat řadiče domény všechny připojené vzdálené doménové struktuře řešení uživatelů, počítačů a vytvořit profily pro každý z nich. 
 
 ## <a name="installation-requirements"></a>Požadavky na instalaci 
 
@@ -76,7 +76,7 @@ Ochrana ATP v programu Azure maps vaší doménové struktury, využívá proces
 -   Po spuštění senzoru služby Azure ATP dotazuje vzdálených doménových strukturách služby Active Directory a načte seznam uživatelů a počítačů data pro vytvoření profilu.
 -   Každých 5 minut, každý senzoru služby Azure ATP dotazuje jeden řadič domény v každé doméně, v každé doménové struktuře, mapovat všechny doménové struktury v síti.
 -   Každý senzoru služby Azure ATP mapuje pomocí objektu "trustedDomain" ve službě Active Directory, přihlášení a kontrola typu vztahu důvěryhodnosti doménové struktury.
--   Může také zobrazit ad-hoc provoz při ochrany ATP v programu senzor zachytí aktivity napříč doménovou strukturu. Když k tomu dojde, senzory ochrany ATP v programu pošle dotaz LDAP na příslušných řadičích domény v pořadí načtení entity informace. 
+-   Může také zobrazit ad-hoc provoz při ochrany ATP v programu senzor zachytí aktivity napříč doménovou strukturu. V tomto případě senzorů ochrany ATP v programu bude odesílat dotaz LDAP na příslušných řadičích domény získat informace o entitě. 
 
 ## <a name="known-limitations"></a>Známá omezení
 -   Interaktivní prováděného uživateli v jedné doménové struktuře pro přístup k prostředkům v jiné doménové struktuře nejsou zobrazeny v řídicím panelu služby Azure ATP.
@@ -87,8 +87,8 @@ Ochrana ATP v programu Azure maps vaší doménové struktury, využívá proces
 
 
 ## <a name="see-also"></a>Viz také
-- [Nástroje pro změnu velikosti ATA](http://aka.ms/aatpsizingtool)
-- [Architektura ATA](atp-architecture.md)
-- [Instalace ATA](install-atp-step1.md)
+- [Nástroje pro změnu velikosti ochrany ATP v programu](http://aka.ms/aatpsizingtool)
+- [Architektura ochrany ATP v programu](atp-architecture.md)
+- [Instalace ochrany ATP v programu](install-atp-step1.md)
 - [Podívejte se na fórum ochrany ATP v programu.](https://aka.ms/azureatpcommunity)
 

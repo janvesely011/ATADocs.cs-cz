@@ -2,10 +2,10 @@
 title: Azure osobní údaje zásady rozšířené ochrany před internetovými útoky | Dokumentace Microsoftu
 description: Obsahuje odkazy na informace o tom, jak odstranit soukromé informace a osobní data ze služby Azure ATP.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 6/26/2018
+ms.date: 8/15/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 224e629a-0e82-458c-bb03-b67070a9241d
 ms.reviewer: ophirp
 ms.suite: ems
-ms.openlocfilehash: d64cc0d40acc31e2187305c38a625924a91db06b
-ms.sourcegitcommit: 7d025a2518ce63f38ce609dc21d8c3bacdd6a8e7
+ms.openlocfilehash: e4aad8af65c27f351185808585aea37a8a67de42
+ms.sourcegitcommit: 121c49d559e71741136db1626455b065e8624ff9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36948927"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "41734750"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -30,24 +30,24 @@ ms.locfileid: "36948927"
 
 V rozšířené ochrany před internetovými útoky pro Azure můžete zobrazit identifikovatelné osobní údaje [portálu pracovního prostoru](workspace-portal.md) pomocí [vyhledávacího](workspace-portal.md#search-bar). 
 
-Můžete vyhledat konkrétního uživatele nebo počítače a kliknete na entitu vás přivedou k uživateli nebo počítači [stránku profilu](entity-profiles.md). Profil, který vám poskytne komplexní podrobnosti o entitě ze služby Active Directory, včetně síťové aktivity související s touto entitou a jeho historie.
+Vyhledat konkrétního uživatele nebo počítače a klikněte na některou entitu, aby vám uživatele nebo počítače [stránku profilu](entity-profiles.md). Profil, který vám poskytne komplexní podrobnosti o entitě ze služby Active Directory, včetně síťové aktivity související s touto entitou a jeho historie.
 
 Azure ATP osobních údajů je získané ze služby Active Directory pomocí senzoru služby Azure ATP a uloženy v databázi back-endu.
 
 ## <a name="update-personal-data"></a>Aktualizovat osobní údaje 
 
-Protože osobní údaje uživatelů ochrany ATP v programu Azure je odvozen z objektu uživatele ve službě Active Directory organizace, všechny změny provedené v profilu uživatele v AD se projeví v ochrany ATP v programu Azure.
+Azure ATP osobní uživatelské data jsou odvozena z objektu uživatele ve službě Active Directory organizace. Proto se projeví změny provedené v profilu uživatele v organizaci AD v ochrany ATP v programu Azure.
 
 
 ## <a name="delete-personal-data"></a>Odstranění osobních údajů 
 
 Po odstranění uživatele ze služby Active Directory organizace ochrany ATP v programu Azure automaticky odstraní profil uživatele a všechny související síťové aktivity v roce. Můžete také [odstranit](working-with-suspicious-activities.md#review-suspicious-activities-on-the-attack-time-line) všechny výstrahy zabezpečení, které obsahují osobní údaje. 
 
-## <a name="export-personal-data"></a>Export osobních údajů 
+## <a name="export-personal-data"></a>Export osobních dat 
 
-V ochraně ATP v Azure máte možnost [exportovat](working-with-suspicious-activities.md#review-suspicious-activities-on-the-attack-time-line) informace o výstrahách zabezpečení do aplikace Excel. To se také exportovat osobní údaje. 
+V ochraně ATP v Azure máte možnost [exportovat](working-with-suspicious-activities.md#review-suspicious-activities-on-the-attack-time-line) informace o výstrahách zabezpečení do aplikace Excel. Tato funkce zároveň exportuje osobní údaje. 
  
-## <a name="audit-personal-data"></a>Osobní data auditu
+## <a name="audit-personal-data"></a>Audit osobních dat
 
 Ochrana ATP v programu Azure implementuje auditu změn osobní údaje, včetně, odstraňování a export záznamů osobní údaje. Doba uchování záznamu pro audit je 90 dní. Auditování v ochrany ATP v programu Azure je funkce back-end a není k dispozici zákazníkům.
  

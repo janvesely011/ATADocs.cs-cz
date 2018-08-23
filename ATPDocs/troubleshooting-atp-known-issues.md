@@ -2,10 +2,10 @@
 title: Řešení potíží – známé problémy ochrany ATP v Azure | Dokumentace Microsoftu
 description: Popisuje, jak můžete řešit problémy v ochrany ATP v programu Azure.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 5/21/2018
+ms.date: 8/13/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 23386e36-2756-4291-923f-fa8607b5518a
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d460a57d82f3eb233192235067e116f5ede5f5df
-ms.sourcegitcommit: b218f60b42a25fe486d774d97719590e6fa74e10
+ms.openlocfilehash: 986dc057127e8de1e26a78dd7a138b02efeebf99
+ms.sourcegitcommit: dc56b9e9533db1a2dc314b199e90191bb25adaba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34760052"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "41734749"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -28,7 +28,7 @@ ms.locfileid: "34760052"
 
 ## <a name="deployment-log-location"></a>Umístění protokolu nasazení
  
-Protokoly nasazení služby Azure ATP jsou umístěné v adresáři temp uživatele, který příslušný produkt nainstaloval. Ve výchozím umístění instalace, najdete ho na: C:\Users\Administrator\AppData\Local\Temp (nebo jednomu adresáři % temp %).
+Protokoly nasazení služby Azure ATP jsou umístěné v adresáři temp uživatele, který příslušný produkt nainstaloval. Ve výchozím umístění instalace, najdete ho na: C:\Users\Administrator\AppData\Local\Temp (nebo jednomu adresáři % temp %). Další informace najdete v tématu [analytických řešení potíží pomocí protokolů](troubleshooting-atp-using-logs.md)
 
 ## <a name="proxy-authentication-problem-presents-as-licensing-error"></a>Problém s ověřováním proxy prezentuje jako chyba licencování
 

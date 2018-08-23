@@ -1,11 +1,11 @@
 ---
-title: Značka citlivé účty s Azure ATP | Microsoft Docs
-description: Popisuje, jak k označování citlivé účty pomocí Azure Advanced Threat Protection (ATP)
+title: Označit citlivých účtů pomocí služby Azure ATP | Dokumentace Microsoftu
+description: Popisuje, jak k označování citlivých účtů pomocí Azure Advanced Threat Protection (ATP)
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 8/12/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,22 +13,22 @@ ms.technology: ''
 ms.assetid: 43e57f87-ca85-4922-8ed0-9830139fe7cb
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4270ebda76309e19518f9d49b72bbce7f9bb5f32
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 8f1a78e8ce6005c58dc98171a4bf4d049ff60d8f
+ms.sourcegitcommit: dc56b9e9533db1a2dc314b199e90191bb25adaba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/21/2018
-ms.locfileid: "29446054"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "41734815"
 ---
-*Platí pro: Azure Advanced Threat Protection verze 1.9*
+*Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
 
 
-# <a name="working-with-sensitive-accounts"></a>Práce s citlivé účty
+# <a name="working-with-sensitive-accounts"></a>Práce s citlivými účty
 
 ## <a name="sensitive-groups"></a>Citlivé skupiny
 
-Následující seznam skupin se považují za citlivé Azure ATP. Za citlivou se považuje každá entita, která je členem těchto skupin:
+Následující seznam skupin se považují za citlivé ochrany ATP v programu Azure. Za citlivou se považuje každá entita, která je členem těchto skupin:
 
 -   Administrators
 -   Power Users
@@ -44,24 +44,24 @@ Následující seznam skupin se považují za citlivé Azure ATP. Za citlivou se
 -   Domain Controllers
 -   Group Policy Creator Owners 
 -   Řadiče domény jen pro čtení 
--   Řadiče domény jen pro čtení Enterprise 
+-   Enterprise Read-only Domain Controllers 
 -   Schema Admins 
 -   Enterprise Admins
 
 
-## <a name="tagging-sensitive-accounts"></a>Označování citlivé účty
+## <a name="tagging-sensitive-accounts"></a>Označování citlivých účtů
 
-Kromě těchto skupin můžete ručně označit skupiny nebo účty jako citlivé pro zlepšení detekce. To je důležité, protože využívají detekce, některá ATP Azure, jako je detekce úpravy citlivou skupinu a laterální pohyb cestu, na které skupiny a účty se považují za citlivé. Můžete ručně označit jiné uživatele nebo skupiny jako písmena, například členové Rady, vedení společnosti, ředitel prodeje, atd., a Azure ATP je považuje za citlivé.
+Kromě těchto skupin můžete ručně označit skupiny nebo účty jako citlivé vylepšit detekce. To je důležité, protože využívají některé služby Azure ATP detekce, jako je například zjišťování úpravy citlivých skupin a cesty laterální pohyb, které skupiny a účty se považují za citlivé. Můžete ručně označit jiné uživatele nebo skupiny jako citlivé, jako je například členů vedení společnosti, ředitel pro prodej, atd., a ochrana ATP v programu Azure je považuje za citlivé.
 
-1.  Na portálu Azure ATP pracovního prostoru klikněte **konfigurace** ozubené kolo v panelu nabídek.
+1.  Na portálu ochrany ATP v programu Azure pracovní prostor, klikněte na tlačítko **konfigurace** ozubeného kola v panelu nabídek.
 
-2.  V části **detekce** klikněte na tlačítko **značek entit**.
+2.  V části **detekce** klikněte na tlačítko **značky entit**.
 
-    ![Azure značek entit ATP](media/entity-tags.png)
+    ![Značky entit Azure ATP](media/entity-tags.png)
 
-3.  V **citlivé** části, zadejte název **citlivé účty** a **citlivých skupin** a pak klikněte na  **+**  Přihlaste se do je přidejte.
+3.  V **citlivé** části, zadejte název **citlivých účtů** a **citlivých skupin** a potom klikněte na tlačítko **+** podpis je přidat.
 
-    ![Ukázka zpřístupnění citlivých účtů Azure ATP](media/sensitive-account-sample.png)
+    ![Ukázkový k citlivým účtům Azure ATP](media/sensitive-account-sample.png)
 
 4. Klikněte na **Uložit**.
 
@@ -69,4 +69,4 @@ Kromě těchto skupin můžete ručně označit skupiny nebo účty jako citliv�
 ## <a name="see-also"></a>Viz také
 
 - [Práce s podezřelými aktivitami](working-with-suspicious-activities.md)
-- [Podívejte se na fórum ATP!](https://aka.ms/azureatpcommunity)
+- [Podívejte se na fórum ochrany ATP v programu.](https://aka.ms/azureatpcommunity)

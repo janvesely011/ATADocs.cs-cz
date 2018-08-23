@@ -1,11 +1,11 @@
 ---
-title: Nejčastější dotazy k Azure Advanced Threat Protection | Microsoft Docs
-description: Obsahuje seznam nejčastějších dotazů týkajících se Azure ATP a související odpovědi
+title: Nejčastější dotazy k Azure Advanced Threat Protection | Dokumentace Microsoftu
+description: Obsahuje seznam nejčastější dotazy týkající se ochrany ATP v programu Azure a související odpovědi
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 3/13/2018
+ms.date: 8/13/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,140 +13,142 @@ ms.technology: ''
 ms.assetid: 6a9b5273-eb26-414e-9cdd-f64406e24ed8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d7f7f4841c40fb78dc06bae1c06e3c57d2e7f7ee
-ms.sourcegitcommit: c77e378d18e654bea4b4af4f24cc941a6659ce99
+ms.openlocfilehash: 6550f6b6575af56eab7de911b22b1e4f27cff0f3
+ms.sourcegitcommit: 121c49d559e71741136db1626455b065e8624ff9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "29883946"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "41734751"
 ---
-*Platí pro: Azure Advanced Threat Protection*
+*Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
 # <a name="azure-atp-frequently-asked-questions"></a>Nejčastější dotazy k Azure ATP
-Tento článek obsahuje seznam nejčastějších dotazů týkajících Azure ATP a poskytuje podrobné informace a odpovědi.
+Tento článek obsahuje seznam nejčastější dotazy týkající se ochrany ATP v programu Azure a poskytuje podrobné informace a odpovědi.
 
 
-## <a name="where-can-i-get-a-license-for-azure-advanced-threat-protection-atp"></a>Kde lze získat licenci pro Azure Advanced Threat Protection (ATP)?
+## <a name="where-can-i-get-a-license-for-azure-advanced-threat-protection-atp"></a>Kde získám licenci pro Azure Advanced Threat Protection (ATP)?
 
-Můžete získat licenci pro Enterprise Mobility + Security (EMS E5) 5 přímo prostřednictvím [portál Office 365](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-pricing) nebo prostřednictvím licenčním modelu cloudové řešení partnera (CSP).                  
+Licence můžete získat pro Enterprise Mobility + Security (EMS E5) 5 přímo prostřednictvím [portál služeb Office 365](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-pricing) nebo prostřednictvím licenčního modelu partnera CSP (Cloud Solution).                  
 
-## <a name="what-should-i-do-if-the-azure-atp-sensor-or-standalone-sensor-doesnt-start"></a>Co je třeba udělat, pokud se nespustí senzor Azure ATP nebo samostatné senzor?
-Podívejte se na poslední chybu v aktuálním protokolu chyb (kde ATP Azure je nainstalován ve složce "Protokoly").
+## <a name="what-should-i-do-if-the-azure-atp-sensor-or-standalone-sensor-doesnt-start"></a>Co mám dělat, když ochrana ATP v programu Azure nebo samostatný senzor nespustí?
+Podívejte se na poslední chyba aktuální chybě [protokolu](troubleshooting-atp-using-logs.md) (kde služby Azure ATP je nainstalována ve složce "Protokoly").
 
-## <a name="how-can-i-test-azure-atp"></a>Jak můžete otestovat Azure ATP?
-Spuštěním následujícího příkazu můžete simulovat podezřelé aktivity jako test začátku do konce:
+## <a name="how-can-i-test-azure-atp"></a>Jak můžu otestovat ochrany ATP v programu Azure?
+Začátku do konce testu můžete simulovat podezřelé aktivity. V následujícím scénáři se simuluje rekognoskace DNS:
 
--  Rekognoskace DNS s využitím Nslookup.exe
+1.  Ověření ochrany ATP v programu Azure senzorů jsou nainstalovaná a nakonfigurovaná na řadičích domény (nebo samostatné senzory a související zrcadlení portů jsou nainstalované a nakonfigurované)
+2.  Otevřít CMD
+3.  Spusťte následující příkaz: nslookup –<DC iP address>
+    1.  Stisknutím klávesy enter
+    2.  Typu: Je -d <FQDN>
+    3.  V závislosti na konfiguraci vašeho prostředí se odpovědi liší z "Bylo odmítnuto dotazu" na seznam záznamů DNS. 
+4. Zobrazte výstrahy související s Simulovaná rekognoskace DNS v konzole služby Azure ATP. 
+
+## <a name="does-azure-atp-work-with-encrypted-traffic"></a>Služba Ochrana ATP v programu Azure funguje při šifrovaném provozu?
+Ochrana ATP v programu Azure spoléhá na analýzu více síťových protokolů, událostí shromážděných ze systému SIEM nebo prostřednictvím předávání událostí Windows.  Síťové protokoly s šifrovaný provoz (například LDAPS nebo IPSEC) nejsou dešifrovat, ale jsou analyzovány.
 
 
-To je potřeba spustit vzdáleně nikoli z senzoru samostatné Azure ATP ale nad monitorovaným řadičem domény.
+## <a name="does-azure-atp-work-with-kerberos-armoring"></a>Služba Ochrana ATP v programu Azure funguje s obranou protokolu Kerberos?
+Povolení obrany protokolu Kerberos, označované také jako FAST Flexible Authentication Secure Tunneling (), je podporována ochrana ATP v programu, s výjimkou pass typu over-pass-the hash detekce, což nefunguje s obranou protokolu Kerberos.
 
+## <a name="how-many-azure-atp-sensors-do-i-need"></a>Počet senzorů ochrany ATP v programu Azure budu potřebovat?
 
-## <a name="does-azure-atp-work-with-encrypted-traffic"></a>Pracuje Azure ATP při šifrovaném provozu?
-Azure ATP spoléhá na analýze více síťových protokolů, jakož i událostí shromážděných ze systému SIEM nebo pomocí předávání událostí systému Windows. Detekce podle síťové protokoly s šifrovaný provoz (Příklad: LDAPS a protokolu IPSEC) nejsou analyzovány.
-
-
-## <a name="does-azure-atp-work-with-kerberos-armoring"></a>Funguje s obranou protokolu Kerberos Azure ATP?
-Povolení obrany protokolu Kerberos, také známé jako FAST Flexible Authentication Secure Tunneling (), je podporována ATP, s výjimkou over-pass detekci hash, která nefunguje s obranou protokolu Kerberos.
-
-## <a name="how-many-azure-atp-sensors-do-i-need"></a>Kolik senzorů Azure ATP potřebuji?
-
-Každý řadič domény v prostředí měly být pokryté komponentami ATP senzoru nebo samostatné senzor. Další informace najdete v tématu [Azure ATP senzor Změna velikosti](atp-capacity-planning.md#sizing). 
+Každý řadič domény v prostředí měly být pokryté komponentami ochrany ATP v programu nebo samostatného senzoru. Další informace najdete v tématu [senzoru služby Azure ATP velikosti](atp-capacity-planning.md#sizing). 
 
 
 ## <a name="why-are-certain-accounts-considered-sensitive"></a>Proč se některé účty považují za citlivé?
-To se stane, když je účet členem skupiny, které jsou určeny jako velká a malá písmena (například: "Domain Admins").
+To se stane, když je účet členem skupiny, které jsou určené jako citlivé (například: "Domain Admins").
 
 Pokud chcete pochopit, proč je účet citlivý, můžete zkontrolovat jeho členství ve skupinách a zjistit, do kterých citlivých skupin patří (skupina, do které patří, může být citlivá také kvůli jiné skupině, takže je potřeba celý proces opakovat tak dlouho, až zjistíte citlivou skupinu nejvyšší úrovně). Můžete také [značky jako citlivé účty ručně](sensitive-accounts.md).
 
-## <a name="how-do-i-monitor-a-virtual-domain-controller-using-azure-atp"></a>Jak můžu monitorování virtuálního řadiče domény pomocí Azure ATP?
-Většina virtuálních řadičů domény se dá pokrýt komponentami Azure ATP senzoru, chcete-li zjistit, zda Azure ATP senzor je vhodné pro vaše prostředí, najdete v části [plánování kapacity ATP Azure](atp-capacity-planning.md).
+## <a name="how-do-i-monitor-a-virtual-domain-controller-using-azure-atp"></a>Jak můžu monitorovat virtuální řadič domény pomocí ochrany ATP v programu Azure?
+Většina virtuálních řadičů domény dají pokrýt komponentami senzoru služby Azure ATP, chcete-li zjistit, zda služby Azure ATP senzor je vhodné pro vaše prostředí [plánování kapacity ochrany ATP v programu Azure](atp-capacity-planning.md).
 
-Pokud se virtuální řadič domény nedá pokrýt komponentou senzoru Azure ATP, jak je popsáno v může mít buď virtuální nebo fyzická Azure ATP samostatné senzoru [konfigurace zrcadlení portů](configure-port-mirroring.md).  <br />Nejjednodušší je mít virtuální senzor samostatné Azure ATP na každém hostiteli, kde existují virtuální řadiče domény.<br />Pokud virtuální řadiče domény přesunují mezi hostiteli, je třeba provést jednu z následujících kroků:
+Pokud se virtuální řadič domény nedá pokrýt komponentou senzoru služby Azure ATP, jak je popsáno v může mít buď virtuální nebo fyzická ochrana ATP v programu Azure samostatný senzor [konfigurace zrcadlení portů](configure-port-mirroring.md).  <br />Nejjednodušší je mít virtuální samostatný senzor ochrany ATP v programu Azure na každém hostiteli, kde existují virtuální řadič domény.<br />Pokud virtuální řadiče domény přesunují mezi hostiteli, je třeba provést jednu z následujících kroků:
 
--   Pokud se virtuální řadič domény přesune na jiného hostitele, předem nakonfigurujte senzor samostatné Azure ATP na tomto hostiteli příjem provozu z nedávno přesunutého virtuálního řadiče domény.
--   Ujistěte se, že jste přidružili virtuální senzoru samostatné Azure ATP s virtuálního řadiče domény tak, že pokud se přesune, senzoru samostatné Azure ATP přesune s ním.
+-   Pokud se virtuální řadič domény přesune na jiného hostitele, předem nakonfigurujte samostatný senzor ochrany ATP v programu Azure v tomto hostiteli příjem provozu z nedávno přesunutého virtuálního řadiče domény.
+-   Ujistěte se, že jste přidružili virtuální samostatný senzor ochrany ATP v programu Azure pomocí virtuálního řadiče domény tak, že pokud se přesune, samostatného senzoru služby Azure ATP se přesune s ním.
 -   Některé virtuální přepínače mohou odesílat provoz mezi hostiteli.
 
 
-## <a name="what-can-azure-atp-detect"></a>Co dokáže rozpoznat Azure ATP?
+## <a name="what-can-azure-atp-detect"></a>Co dokáže ochrana ATP v programu Azure?
 
-Azure ATP detekuje známé nebezpečné útoky a techniky, problémy zabezpečení a rizika.
-Úplný seznam detekce Azure ATP najdete v tématu [jaké detekce Azure ATP provádět?](suspicious-activity-guide.md).
+Ochrana ATP v programu Azure zjistí známé nebezpečné útoky a techniky, problémy se zabezpečením a rizika.
+Úplný seznam detekcí ochrany ATP v programu Azure najdete v tématu [jaké detekce ochrany ATP v programu Azure provádí?](suspicious-activity-guide.md).
 
-## <a name="how-many-nics-does-the-azure-atp-standalone-sensor-require"></a>Kolik síťových karet senzoru samostatné Azure ATP vyžaduje?
-Senzor samostatné Azure ATP vyžaduje minimálně dva síťové adaptéry:<br>1. Síťový adaptér pro připojení k interní síti a cloudové služby Azure ATP<br>2. Síťovou kartu, která se používá k zachycení síťového provozu řadiče domény prostřednictvím zrcadlení portů.<br>* To neplatí pro senzor Azure ATP, která nativně využívá všechny síťové adaptéry, které řadič domény používá.
+## <a name="how-many-nics-does-the-azure-atp-standalone-sensor-require"></a>Kolik síťových adaptérů vyžaduje samostatný senzor ochrany ATP v programu Azure?
+Samostatný senzor ochrany ATP v programu Azure vyžaduje minimálně dva síťové adaptéry:<br>1. Síťovou kartu pro připojení k interní síti a cloudové služby Azure ATP<br>2. Síťové rozhraní, který se používá k zachycení síťového provozu na řadiči domény prostřednictvím zrcadlení portů.<br>* To neplatí pro senzoru služby Azure ATP, která nativně využívá všechny síťové adaptéry využívané řadičem domény.
 
-## <a name="what-kind-of-integration-does-azure-atp-have-with-siems"></a>Se systémy Siem jaký druh integrace má Azure ATP?
-Azure ATP má obousměrnou integraci se systémy Siem následujícím způsobem:
+## <a name="what-kind-of-integration-does-azure-atp-have-with-siems"></a>Jaký druh integrace ochrany ATP v programu Azure má se systémy Siem?
+Ochrana ATP v programu Azure má obousměrnou integraci se systémy Siem následujícím způsobem:
 
-1. Azure ATP může být nakonfigurován pro odesílání výstrahy Syslog na libovolný server SIEM s využitím formátu CEF, pro stavu výstrahy, když se detekuje podezřelá aktivita.
-2. Azure ATP dá nakonfigurovat příjem zpráv pro události systému Windows z [těchto systémů Siem](configure-event-collection.md).
+1. Ochrana ATP v programu Azure lze nakonfigurovat na odesílání výstrahy Syslog na libovolný server SIEM pomocí formátu CEF pro výstrahy týkající se stavu a když zjistí podezřelou aktivitu.
+2. Dá se ochrana ATP v programu Azure pro příjem zprávy Syslog pro události Windows z [těchto systémů Siem](configure-event-collection.md).
 
-## <a name="how-do-i-configure-the-azure-atp-sensors-to-communicate-with-azure-atp-cloud-service-when-i-have-a-proxy"></a>Konfigurování snímače Azure ATP ke komunikaci s Azure ATP cloudové služby, pokud proxy server
+## <a name="how-do-i-configure-the-azure-atp-sensors-to-communicate-with-azure-atp-cloud-service-when-i-have-a-proxy"></a>Jak nakonfigurovat senzorů ochrany ATP v programu Azure komunikovat s cloudovou službou ochrany ATP v programu Azure, pokud proxy server?
 
-Pro řadiče domény ke komunikaci s cloudovou službou, je nutné otevřít: *. atp.azure.com port 443 brány firewall nebo proxy serveru. Pokyny o tom, jak to udělat najdete v tématu [konfigurace proxy serveru nebo brány firewall tak, aby komunikace snímači Azure ATP](configure-proxy.md).
+Pro řadiče domény ke komunikaci s cloudovou službou, je nutné otevřít: *. atp.azure.com port 443 v brány firewall a proxy. Pokyny, jak to udělat, najdete v části [konfigurace proxy serveru nebo brány firewall k umožnění komunikace s Azure ATP senzorů](configure-proxy.md).
  
 
-## <a name="can-azure-atp-monitor-domain-controllers-virtualized-on-your-iaas-solution"></a>Můžete monitorovat Azure ATP ve vašem řešení IaaS virtualizovaného řadiče domény?
-Ano, můžete Azure ATP senzoru k monitorování řadičů domény, které jsou v libovolném řešení IaaS.
+## <a name="can-azure-atp-monitor-domain-controllers-virtualized-on-your-iaas-solution"></a>Ochrana ATP v programu Azure můžete monitorovat řadiče domény virtualizované ve vašem řešení IaaS?
+Senzoru služby Azure ATP Ano, můžete použít k monitorování řadičů domény, které jsou v libovolném řešení IaaS.
 
 ## <a name="is-this-going-to-be-a-part-of-azure-active-directory-or-on-premises-active-directory"></a>Bude součástí Azure Active Directory nebo místní služby Active Directory?
-Toto řešení je aktuálně samostatné nabídky. Není součástí Azure Active Directory, nebo místní služby Active Directory.
+Toto řešení je momentálně samostatné nabídky. Není součástí Azure Active Directory nebo místní služby Active Directory.
 
 ## <a name="do-you-have-to-write-your-own-rules-and-create-a-thresholdbaseline"></a>Je potřeba psát vlastní pravidla a určovat prahové nebo základní hodnoty?
-S Azure Advanced Threat Protection je potřeba vytvořit pravidla, prahové hodnoty nebo směrné plány a jejich následné vyladění. Analyzuje chování uživatelů, zařízení a prostředky Azure ATP – i jejich vzájemných vztazích – dokáže rychle detekovat podezřelé aktivity a známé útoky rychlé. Tři týdny po nasazení Azure ATP začne detekovat behaviorálně podezřelé aktivity. Na druhé straně Azure ATP se spustí hned po nasazení detekuje známé útoky se zlými úmysly a problémy se zabezpečením.
+S Azure Advanced Threat Protection není nutné k vytváření pravidel ani prahových nebo standardní hodnoty a jejich následné vyladění. Ochrana ATP v programu Azure analyzuje chování uživatelů, zařízení a prostředků, a také jejich vzájemných vztazích – a dokáže detekovat podezřelé aktivity a známé útoky se rychle. Tři týdny po nasazení služby Azure ATP začne detekovat behaviorálně podezřelé aktivity. Na druhé straně ochrany ATP v programu Azure začne okamžitě po nasazení detekuje známé útoky se zlými úmysly a problémy se zabezpečením.
 
 ## <a name="does-this-only-leverage-traffic-from-active-directory"></a>Využívají se přitom jenom přenosy služby Active Directory?
-Kromě analýzy provozu služby Active Directory pomocí technologie hloubkové kontroly paketů, Azure ATP taky shromažďuje relevantní události ze Security Information and Event Management (SIEM) a vytváří profily entit na základě informací ze služby Active Directory Domain Services. Pokud používáte Azure ATP senzoru, extrahuje tyto události automaticky. Předávání událostí systému Windows můžete použít k odesílání těchto událostí na samostatné senzoru Azure ATP. Azure ATP také podporuje přijímající monitorování účtů protokolu RADIUS VPN protokoly od různých dodavatelů (Microsoft, Cisco, F5 a kontrolního bodu).
+Kromě analýzy provozu služby Active Directory s využitím technologie kontrolu paketů na služby Azure ATP taky shromažďuje relevantní události ze informace o zabezpečení a správu událostí (SIEM) a vytváří profily entit na základě informací ze služby Active Directory Domain Services. Pokud používáte senzoru služby Azure ATP, extrahuje tyto události automaticky. Předávání událostí Windows můžete použít k odesílání tyto události do samostatného senzoru služby Azure ATP. Ochrana ATP v programu Azure podporuje také přijímající monitorování účtů protokolu RADIUS sítě VPN protokolů od různých dodavatelů (Microsoft, Cisco, F5 a kontrolního bodu).
 
 ## <a name="what-is-port-mirroring"></a>Co je zrcadlení portů?
 Zrcadlení portů, které se taky označuje jako SPAN (Switched Port Analyzer), je metoda monitorování síťových aktivit. Pokud je zrcadlení portů povolené, přepínač odešle kopii všech síťových paketů zjištěných na jednom portu (nebo v celé síti VLAN) na jiný port, kde se tyto pakety dají analyzovat.
 
-## <a name="does-azure-atp-monitor-only-domain-joined-devices"></a>Azure ATP monitorovat pouze zařízení připojená k doméně?
-Ne. Azure ATP monitoruje všechna zařízení v síti, která zpracovávají požadavky ověřování a autorizace pro službu Active Directory, včetně jiný systém než Windows a mobilní zařízení.
+## <a name="does-azure-atp-monitor-only-domain-joined-devices"></a>Ochrany ATP v programu Azure monitorovat pouze zařízení připojená k doméně?
+Ne. Ochrana ATP v programu Azure monitoruje všechna zařízení v síti, která zpracovávají požadavky ověřování a autorizace s Active Directory, včetně mimo Windows a mobilní zařízení.
 
-## <a name="does-azure-atp-monitor-computer-accounts-as-well-as-user-accounts"></a>Azure ATP monitorování účtů počítačů a také uživatelské účty?
-Ano. Vzhledem k tomu, že počítač účty (stejně jako ostatní entity) slouží k provádění škodlivých aktivit, Azure ATP monitoruje chování všech účtů počítačů a všechny ostatní entity v prostředí.
+## <a name="does-azure-atp-monitor-computer-accounts-as-well-as-user-accounts"></a>Monitorování ochrany ATP v programu Azure účty počítačů a také uživatelské účty?
+Ano. Protože počítače účty (stejně jako ostatní entity) lze použít k provádění škodlivých aktivit, ochrana ATP v programu Azure monitoruje chování všech účtů počítačů a všechny ostatní entity v příslušném prostředí.
 
-## <a name="can-azure-atp-support-multi-domain-and-multi-forest"></a>Azure ATP může podporovat několik domén a doménových struktur?
-Azure Advanced Threat Protection podporuje prostředí s více doménami v rámci stejné hranice doménové struktury. Několik doménových struktur vyžadují pracovní prostor služby Azure ATP pro jednotlivé doménové struktury.
+## <a name="can-azure-atp-support-multi-domain-and-multi-forest"></a>Ochrana ATP v programu Azure může podporovat víc domén a doménových struktur?
+Azure Advanced Threat Protection podporuje prostředí s více doménami a několik doménových struktur. Tato funkce je aktuálně ve verzi public preview. Další informace a známých omezeních najdete v tématu [podporu více doménovými strukturami](atp-multi-forest.md).
 
 ## <a name="can-you-see-the-overall-health-of-the-deployment"></a>Dá se zjistit celkový stav nasazení?
-Ano, můžete zobrazit celkový stav nasazení a taky konkrétní problémy související s konfigurací, možnostmi připojení atd se zobrazí výstraha, když k nim dojde.
+Ano, můžete zobrazit celkový stav nasazení a také konkrétní problémy související s konfigurací, připojení atd. kde se zobrazí výstraha při jejich výskytu.
 
-## <a name="what-data-does-azure-atp-collect"></a>Jaká data Azure ATP shromáždit? 
-Azure ATP shromažďuje a ukládá informace z vašeho nakonfigurované servery (řadiče domény, členské servery atd.) v databázi specifické pro službu pro správu, sledování a vytváření sestav pro účely. Informace shromážděné zahrnuje síťový provoz do a z řadiče domény (například ověřování protokolem Kerberos, ověřování NTLM, dotazy DNS), protokoly zabezpečení (například události zabezpečení systému Windows), informace služby Active Directory (struktura, podsítě, weby), a entity informace (například názvy, e-mailových adres a telefonních čísel). 
+## <a name="what-data-does-azure-atp-collect"></a>Jaká data shromažďuje nástroj ochrany ATP v programu Azure? 
+Ochrana ATP v programu Azure shromažďuje a ukládá informace od nakonfigurované servery (řadiče domény, členské servery atd.) v databázi specifické pro službu pro správu, sledování a generování sestav. Mezi shromažďované informace patří síťový provoz do a z řadiče domény (jako je například ověřování protokolem Kerberos, ověřování protokolem NTLM, dotazy DNS), protokoly zabezpečení (například události zabezpečení Windows), údajům služby Active Directory (struktura, podsítí, serverů), a informací o entitách (jako je například jména, e-mailové adresy a telefonní čísla). 
 
 Společnost Microsoft používá tato data: 
 
 -   Aktivně Identifikujte indikátory útoku (IOAs) ve vaší organizaci 
 -   Generovat výstrahy, pokud byl zjištěn možný útok 
--   Zadejte vaše operace zabezpečení se zobrazením do entity související threat signály z vaší sítě umožňuje prozkoumat a prozkoumejte přítomnost bezpečnostní hrozby v síti. 
+-   Zadejte operací zabezpečení pohled na entity související signály před internetovými útoky ze sítě, která vám umožní prozkoumat a prozkoumejte přítomnost bezpečnostní hrozby v síti. 
 
-Microsoft, ne já data pro inzerování nebo k jiným účelům než poskytování služby. 
+Microsoft není dolovat data pro reklamní účely nebo k jiným účelům než poskytováním služby. 
 
-## <a name="do-i-have-the-flexibility-to-select-where-to-store-my-data"></a>Jsou možnost vyberte, kam chcete uložit svá data? 
+## <a name="do-i-have-the-flexibility-to-select-where-to-store-my-data"></a>Je nutné možnost vyberte, kam chcete uložit Moje data? 
 
-Při vytváření pracovního prostoru Azure ATP, které můžete ukládat data, můžete k ukládání dat v datových centrech Microsoft Azure v USA a Evropě. Po nakonfigurování nelze změnit umístění, kde jsou uložené vaše data. Microsoft nebude přenést data ze zadaného umístění. 
+Při vytváření pracovního prostoru ochrana ATP v programu Azure, které můžete ukládat data, můžete k ukládání dat v datových center Microsoft Azure v USA nebo Evropa. Po nakonfigurování nejde změnit umístění, kde se vaše data jsou uložená. Microsoft nebude přenášet data ze zadaného umístění. 
 
-## <a name="is-my-data-isolated-from-other-customer-data"></a>Jsou má data izolované od ostatních zákazníků dat? 
+## <a name="is-my-data-isolated-from-other-customer-data"></a>Jsou moje data nezávisle ostatní zákaznická data? 
 
-Ano, vaše data jsou izolované prostřednictvím ověřování přístupu k a logické oddělení podle identifikátor zákazníka. Každý zákazník může přístup jenom k data shromážděná z vlastní organizace a obecná data, která společnost Microsoft poskytuje. 
+Ano, vaše data jsou izolované na základě ověřování přístupu a logické oddělení podle identifikátoru zákazníka. Každý zákazník přístupná pouze data shromážděná z vlastní organizace a obecná data, která poskytuje Microsoft. 
 
-## <a name="how-does-microsoft-prevent-malicious-insider-activities-and-abuse-of-high-privilege-roles"></a>Jak Microsoft zabraňuje zevnitř aktivity a zneužití vysoká oprávnění rolí? 
+## <a name="how-does-microsoft-prevent-malicious-insider-activities-and-abuse-of-high-privilege-roles"></a>Jak Microsoft zabránit aktivity zlými úmysly a zneužití vysoká oprávnění rolí? 
 
-Vývojáři a správci, návrh mít dostatečná oprávnění k provádění svých povinností pro provoz a momentální službu. Microsoft nasadí kombinace prevence, detektiv a reaktivní ovládací prvky, včetně následujících mechanismů, kvůli ochraně před neoprávněným vývojáře nebo aktivita správy: 
+Microsoft vývojářům a správcům, podle návrhu, mít dostatečná oprávnění k provedení jejich přiřazené povinnosti, aby provoz a umožněte vývoj služby. Microsoft nasazuje kombinací preventivní detektiv a reaktivní ovládacích prvků, včetně následujících mechanismů a pomáhá chránit před neoprávněným pro vývojáře a/nebo aktivita správy: 
 
 -   Ovládací prvek úzkou přístup k citlivým datům 
--   Kombinace ovládacích prvků, které výrazně zvýšit nezávislé odhalování škodlivých aktivit 
--   Více úrovní sledování, protokolování a vytváření sestav 
+-   Kombinací ovládacích prvků, které může to výrazně zvýšit nezávislé odhalování škodlivých aktivit 
+-   Více úrovní monitorování, protokolování a vytváření sestav 
 
-Kromě toho společnost Microsoft provádí ověřovací kontroly na určité operace pracovníky a omezuje přístup k aplikacím, systémy a síťové infrastruktury v poměru k úroveň ověřování pozadí. Operace pracovníky podle formální proces vyžádání přístup k účtu zákazníka nebo související informace ve výkonu jejich funkce. 
+Kromě toho Microsoft provádí kontroly podstupovaly ověřování u správců osobní prověrku určité operace a omezuje přístup k aplikacím, systémy a síťovou infrastrukturu výkonový zisk úroveň ověřování probíhá na pozadí. Operace pracovníky postupujte podle formální proces, když jsou potřeba pro přístup k účtu zákazníka nebo související informace v plnění jejich úkolů. 
 
 ## <a name="see-also"></a>Viz také
 - [Požadavky služby Azure ATP](atp-prerequisites.md)
 - [Plánování kapacity v Azure ATP](atp-capacity-planning.md)
 - [Konfigurace shromažďování událostí](configure-event-collection.md)
 - [Konfigurace předávání událostí systému Windows](configure-event-forwarding.md#configuring-windows-event-forwarding)
-- [Podívejte se na fórum ATP!](https://aka.ms/azureatpcommunity)
+- [Podívejte se na fórum ochrany ATP v programu.](https://aka.ms/azureatpcommunity)

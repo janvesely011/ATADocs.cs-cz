@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 7/24/2018
+ms.date: 8/20/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4667e13af4e86a18d1b50a2ea575f9c749f0c541
-ms.sourcegitcommit: ca6153d046d8ba225ee5bf92cf55d0bd57cf4765
+ms.openlocfilehash: 4aa58228ea23f58ea37b10f941467e9dc076992f
+ms.sourcegitcommit: f534a318be71b840aecb6a84744d8cd1f251a7aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39585233"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "41734834"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -200,7 +200,7 @@ V této detekce se aktivuje upozornění, pokud je lístek Kerberos udělující
    2.   Je senzoru služby Azure ATP zahrnutých v této výstraze virtuálního počítače? Pokud ano, ji nedávno pokračovat od uloženého stavu? Pokud ano, tuto výstrahu zavřete.
    3.   Pokud je odpověď na otázky uvedené výše předpokládají Ne, to se zlými úmysly.
 
-- **Neexistující účet** (Preview)
+- **Neexistující účet**
    1.   Odpovědět na tyto otázky:
          - Je, že uživatel je uživatelem domény známé a platný? Pokud ano, pak zavřete výstrahu (bylo falešně pozitivní).
          - Uživatel byl nedávno přidán? Pokud ano, pak zavřete výstrahu, změna nemusí mít nebyly synchronizovány.
@@ -454,7 +454,7 @@ Tato detekce se aktivuje upozornění, když došlo k mnoha chyb ověřování p
 
 [Složitá a dlouhá hesla](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) poskytují nezbytnou první úroveň zabezpečení před útoky hrubou silou.
 
-## <a name="suspicious-domain-controller-promotion-potential-dcshadow-attack---preview"></a>Podezřelé zvýšení úrovně řadiče domény (možný útok DCShadow) – Preview
+## <a name="suspicious-domain-controller-promotion-potential-dcshadow-attack---new"></a>Povýšení řadiče domény podezřelé (možný útok DCShadow) – nové
 
 **Popis**
 
@@ -489,10 +489,11 @@ Další informace najdete v tématu [udělení Active Directory Domain Services 
 
 Můžete využít [AD ACL Scanner](https://blogs.technet.microsoft.com/pfesweplat/2013/05/13/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool/) nebo vytvořit skript prostředí Windows PowerShell k určení, kdo v doméně tato oprávnění má.
  
+> [!NOTE]
+> Detekce povýšení (možný útok DCShadow) řadiče domény podezřelé jsou podporovány pouze senzorů ochrany ATP v programu. 
 
 
-
-## <a name="suspicious-replication-request-potential-dcshadow-attack---preview"></a>Podezřelá žádost o replikaci (možný útok DCShadow) – Preview
+## <a name="suspicious-replication-request-potential-dcshadow-attack---new"></a>Podezřelá replikace požadavku (možný útok DCShadow) – nové
 
 **Popis** 
 
@@ -519,6 +520,9 @@ Kontrola, kdo ve vaší organizaci tato oprávnění:
 
 K tomuto účelu můžete využít [AD ACL Scanner](https://blogs.technet.microsoft.com/pfesweplat/2013/05/13/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool/) nebo vytvořit skript prostředí Windows PowerShell k určení, kdo v doméně tato oprávnění má.
 
+> [!NOTE]
+> Podezřelá replikace požadavku (možný útok DCShadow) detekcí jsou podporovány pouze senzorů ochrany ATP v programu. 
+
 
 ## <a name="suspicious-service-creation"></a>Podezřelé vytvoření služby
 
@@ -542,7 +546,7 @@ Podezřelé služba je vytvořená na řadiči domény ve vaší organizaci. Tat
 
 - Implementace méně privilegovaný přístup v doméně počítače povolit jenom konkrétní uživatelé práva k vytvoření nové služby.
 
-## Podezřelé připojení k síti VPN – Preview<a name="suspicious-vpn-detection"></a>
+## Podezřelé připojení k síti VPN <a name="suspicious-vpn-detection"></a>
 
 **Popis**
 

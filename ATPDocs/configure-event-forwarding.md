@@ -2,10 +2,10 @@
 title: Konfigurace předávání událostí Windows ve službě Azure Advanced Threat Protection | Dokumentace Microsoftu
 description: Popisuje možnosti pro konfiguraci předávání událostí Windows pomocí služby Azure ATP
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 02/21/2018
+ms.date: 08/12/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,14 +13,14 @@ ms.technology: ''
 ms.assetid: 3547519f-8d9c-40a9-8f0e-c7ba21081203
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 1b37bcbfc304ee0ef71d80eb84f6298d64e50d3f
-ms.sourcegitcommit: eebf1156aaae199b6aaa7e431cd6372e572b1e9f
+ms.openlocfilehash: 730ff2e96da8dc6329cf4855e9e7d279ef5a067d
+ms.sourcegitcommit: 845b8c0b6e0ec2d2e882672fd9f17ed573fafa56
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39396413"
+ms.lasthandoff: 08/17/2018
+ms.locfileid: "41734711"
 ---
-*Platí pro: Azure Advanced Threat Protection verze 1.9*
+*Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
 
 
@@ -63,12 +63,12 @@ Po přidání **síťová služba** k **Event Log Readers** skupině, restartov�
    
     1.  Vyberte **Povoleno**.
     2.  V části **možnosti**, klikněte na tlačítko **zobrazit**.
-    3.  V části **SubscriptionManagers**, zadejte následující hodnotu a klikněte na **OK**: *Server=http://<fqdnATPSensor>: 5985/wsman/SubscriptionManager/WEC, aktualizace=10* (For example: Server=http://atpsensor9.contoso.com:5985/wsman/SubscriptionManager/WEC,aktualizujte=10)
- 
-   ![Obrázek konfigurace cílového odběru](media/wef%202%20config%20target%20sub%20manager.png)
-   
-    5.  Klikněte na **OK**.
-    6.  Do příkazového řádku se zvýšenými oprávněními zadejte *gpupdate /force*. 
+    3.  V části **SubscriptionManagers**, zadejte následující hodnoty a klikněte na tlačítko **OK**: * Server =`http://<fqdnATPSensor>:5985/wsman/SubscriptionManager/WEC,Refresh=10*` (Příklad: Server =`http://atpsensor9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10`)
+    
+    ![Obrázek konfigurace cílového odběru](media/wef%202%20config%20target%20sub%20manager.png)
+    
+5.  Klikněte na **OK**.
+6.  Do příkazového řádku se zvýšenými oprávněními zadejte *gpupdate /force*. 
 
 **Krok 3: Proveďte následující kroky na samostatného senzoru služby Azure ATP** 
 
@@ -91,7 +91,7 @@ Po přidání **síťová služba** k **Event Log Readers** skupině, restartov�
         1. Klikněte na **Podle protokolu** a vyberte **Zabezpečení**.
         2. Do pole **Zahrne nebo vyloučí ID události** zadejte číslo události a klikněte na **OK**. Zadejte 4776, jako je například v následujícím příkladu:
 
- ![Obrázek filtru dotazu](media/wef-4-query-filter.png)
+        ![Obrázek filtru dotazu](media/wef-4-query-filter.png)
 
    5.   Klikněte pravým tlačítkem na vytvořený odběr a vyberte **stav Runtime** jestli jsou všechny problémy se stavem. 
    6.   Po několika minutách zkontrolujte události nastavit na předat dál, zobrazují mezi předanými událostmi v samostatného senzoru služby Azure ATP.

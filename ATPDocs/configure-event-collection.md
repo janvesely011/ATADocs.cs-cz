@@ -1,11 +1,11 @@
 ---
-title: Nainstalovat Azure Advanced Threat Protection | Microsoft Docs
-description: V tomto kroku instalace ATP nakonfigurujete datové zdroje.
+title: Nainstalovat Azure Advanced Threat Protection | Dokumentace Microsoftu
+description: V tomto kroku instalace ochrany ATP v programu můžete nakonfigurovat datové zdroje.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 3/28/2018
+ms.date: 8/15/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,58 +13,56 @@ ms.technology: ''
 ms.assetid: 88692d1a-45a3-4d54-a549-4b5bba6c037b
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 2c2a8e6d70d937c559c110a18feec4afc75271e9
-ms.sourcegitcommit: 45d0108d0cbf8fe7550d13486d3d9c06c1e58506
+ms.openlocfilehash: 8f52a8e5851cee9fc0ff15d97cd39e98695f9a83
+ms.sourcegitcommit: 121c49d559e71741136db1626455b065e8624ff9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30213978"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "41734744"
 ---
-*Platí pro: Azure Advanced Threat Protection*
+*Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
 
 
-# <a name="install-azure-atp"></a>Nainstalovat Azure ATP
+# <a name="configure-event-collection"></a>Konfigurace shromažďování událostí
 
-## <a name="configure-event-collection"></a>Konfigurace shromažďování událostí
-
-K vylepšení možností detekce, Azure ATP vyžaduje následující události systému Windows: 4776, 4732, 4733, 4728, 4729, 4756, 4757 a 7045. Tyto může buď přečíst automaticky senzoru Azure ATP nebo v případě, že Azure ATP senzoru není nasazený, můžete přesměrovávají na samostatné senzoru Azure ATP v jednom ze dvou způsobů, tím nakonfigurujete senzoru samostatné Azure ATP tak, aby naslouchala událostem SIEM nebo [Konfigurace předávání událostí systému Windows](configure-event-forwarding.md).
+Kvůli vylepšení detekčních schopností potřebuje ochrany ATP v programu Azure následující události Windows: 4776, 4732, 4733, 4728, 4729, 4756, 4757 a 7045. Ty můžete buď automaticky číst senzoru služby Azure ATP nebo v případě, že není nasazený senzoru služby Azure ATP, může být přeposílán do samostatného senzoru služby Azure ATP v jednom ze dvou způsobů, tím nakonfigurujete samostatný senzor ochrany ATP v programu Azure tak, aby naslouchala událostem SIEM nebo [Konfigurace předávání událostí Windows](configure-event-forwarding.md).
 
 > [!NOTE]
-> Je důležité, abyste spustili ATA před konfigurací shromažďování událostí auditování skriptu zajistit, že řadiče domény jsou správně nakonfigurovány, aby záznam nezbytné události. 
+> Je důležité, abyste spustili ATA, než nakonfigurujete shromažďování událostí auditování skript k zajištění, že řadiče domény jsou správně nakonfigurovány, aby záznam nezbytné události. 
 
-Kromě shromažďování a analýzy síťových přenosů do a z řadičů domény, Azure ATP slouží k dalšímu vylepšení detekce útoků události systému Windows. Událost 4776 používá pro protokol NTLM, což zlepšuje různé detekce a události 4732, 4733, 4728, 4729, 4756, 4757 a 7045 pro zlepšení detekce citlivou skupinu úpravy a vytvoření služby. Tyto události může přijímat buď od svého systému SIEM, nebo tak, že si nastavíte předávání událostí systému Windows ze svého řadiče domény. Shromážděné události poskytují Azure ATP společně s dalšími informacemi, které nejsou dostupné prostřednictvím síťových přenosů řadičů domény.
+Kromě shromažďování a analýzy síťového provozu do a z řadičů domény, můžete ochrany ATP v programu Azure dál vylepšit detekce pomocí událostí Windows. Využívá událost 4776 protokolu NTLM, která vylepšuje různé detekce a události 4732, 4733, 4728, 4729, 4756, 4757 a 7045 detekci úprav citlivých skupin a tvorby služby. Tyto události může přijímat buď od svého systému SIEM, nebo tak, že si nastavíte předávání událostí systému Windows ze svého řadiče domény. Shromážděné události poskytují ochrany ATP v programu Azure společně s dalšími informacemi, které nejsou k dispozici prostřednictvím síťový provoz na řadiči domény.
 
-### <a name="siemsyslog"></a>SIEM/Syslog
-Pro Azure ATP moct využívat data ze serveru Syslog musíte provést následující kroky:
+## <a name="siemsyslog"></a>SIEM/Syslog
+Pro služby Azure ATP mohli zpracovat data ze serveru Syslog je třeba provést následující kroky:
 
--   Konfiguraci serverů senzor Azure ATP a naslouchání na akceptovat události, které jsou předávány ze serveru SIEM/Syslog.
+-   Konfigurace serverů senzoru služby Azure ATP pro poslouchat a přijímat události, které jsou předávány ze serveru SIEM/Syslog.
 
  > [!NOTE]
- > Azure ATP naslouchá jenom na IPv4 a IPv6 není. 
+ > Ochrana ATP v programu Azure naslouchá jenom na IPv4 a IPv6 není. 
 
--   Nakonfigurujte server SIEM/Syslog aby předával určité události do Azure ATP senzoru.
+-   Nakonfigurujte server SIEM/Syslog, aby předávání určitých událostí na senzoru služby Azure ATP.
 
 > [!IMPORTANT]
-> -   Nepředávat všechna data Syslog na Azure ATP senzoru.
-> -   Azure ATP podporuje přenosy protokolem UDP ze serveru SIEM/Syslog.
+> -   Nepřeposílat všechna data Syslogu na senzoru služby Azure ATP.
+> -   Ochrana ATP v programu Azure podporuje přenosy protokolem UDP ze serveru SIEM/Syslog.
 
 Informace o konfiguraci předávání určitých událostí na jiný server najdete v dokumentaci k produktu pro server SIEM/Syslog. 
 
 > [!NOTE]
->Pokud nepoužíváte server SIEM/Syslog, můžete nakonfigurovat své řadiče domény Windows předávat všechny požadované události shromažďovat a analyzovat ATP.
+>Pokud je velmi riskantní používat server SIEM/Syslog, můžete nakonfigurovat řadiče domény Windows předávat všechny požadované události se shromažďují a analyzují pomocí ochrany ATP v programu.
 
-### <a name="configuring-the-azure-atp-sensor-to-listen-for-siem-events"></a>Konfigurace senzoru Azure ATP tak, aby naslouchala událostem SIEM
+## <a name="configuring-the-azure-atp-sensor-to-listen-for-siem-events"></a>Konfigurace senzoru služby Azure ATP tak, aby naslouchala událostem SIEM
 
-1.  V konfiguraci ATP Azure v části **zdroje dat** klikněte na tlačítko **SIEM** a zapněte **Syslog** a klikněte na tlačítko **Uložit**.
+1.  V konfiguraci ochrany ATP v programu Azure v rámci **zdroje dat** klikněte na tlačítko **SIEM** a zapněte **Syslog** a klikněte na tlačítko **Uložit**.
 
     ![Obrázek povolení UDP naslouchacího procesu Syslog](media/atp-siem-config.png)
 
-2.  Nakonfigurujte server SIEM nebo Syslog předávat všechny požadované události na IP adresu jednoho ze senzorů Azure ATP. Další informace o konfiguraci vašeho systému SIEM najdete v online nápovědě SIEM nebo možnosti technické podpory pro speciální požadavky formátování pro každý server SIEM.
+2.  Nakonfigurujte server Syslog nebo SIEM předávat všechny požadované události na IP adresu jedné ze senzorů ochrany ATP v programu Azure. Další informace o konfiguraci vašeho systému SIEM najdete v online nápovědě SIEM nebo možnosti technické podpory pro speciální požadavky formátování pro každý server SIEM.
 
-Azure ATP podporuje události SIEM v následujících formátech:  
+Ochrana ATP v programu Azure podporuje události SIEM v následujících formátech:  
 
-### <a name="rsa-security-analytics"></a>RSA Security Analytics
+## <a name="rsa-security-analytics"></a>RSA Security Analytics
 &lt;Hlavička Syslog&gt;RsaSA\n2015-May-19 09:07:09\n4776\nMicrosoft-Windows-Security-Auditing\nSecurity\XXXXX.subDomain.domain.org.il\nYYYYY$\nMMMMM \n0x0
 
 -   Hlavička Syslog je nepovinná.
@@ -75,7 +73,7 @@ Azure ATP podporuje události SIEM v následujících formátech:
 
     1.  Konstanta RsaSA (musí být uvedena).
 
-    2.  Časové razítko skutečné události (ujistěte se, že není časové razítko přijetí do systému SIEM nebo odeslání do ATP). Pokud možno na milisekundy, to je důležité.
+    2.  Časové razítko skutečné události (ujistěte se, že to není časové razítko přijetí do systému SIEM nebo odeslání do ochrany ATP v programu). Pokud možno na milisekundy, to je důležité.
 
     3.  ID události Windows
 
@@ -93,7 +91,7 @@ Azure ATP podporuje události SIEM v následujících formátech:
 
 -   Pořadí je důležité a nic jiného by ve zprávě nemělo být zahrnuto.
 
-### <a name="hp-arcsight"></a>HP Arcsight
+## <a name="hp-arcsight"></a>HP Arcsight
 CEF:0|Microsoft|Microsoft Windows||Microsoft-Windows-Security-Auditing:4776|Řadič domény se pokusil ověřit pověření účtu.|Low| externalId=4776 cat=Security rt=1426218619000 shost=KKKKKK dhost=YYYYYY.subDomain.domain.com duser=XXXXXX cs2=Security cs3=Microsoft-Windows-Security-Auditing cs4=0x0 cs3Label=EventSource cs4Label=Reason or Error Code
 
 -   Musí být v souladu s definicí protokolu.
@@ -106,7 +104,7 @@ CEF:0|Microsoft|Microsoft Windows||Microsoft-Windows-Security-Auditing:4776|Řad
 
     -   externalId = ID události Windows
 
-    -   RT = časové razítko skutečné události (ujistěte se, že není časové razítko přijetí do systému SIEM nebo odeslání do ATP). Pokud možno na milisekundy, to je důležité.
+    -   RT = časové razítko skutečné události (ujistěte se, že to není časové razítko přijetí do systému SIEM nebo odeslání do ochrany ATP v programu). Pokud možno na milisekundy, to je důležité.
 
     -   cat = Název protokolu událostí Windows
 
@@ -124,7 +122,7 @@ CEF:0|Microsoft|Microsoft Windows||Microsoft-Windows-Security-Auditing:4776|Řad
 
     -   Reason or Error Code = Kód výsledku NTLM
 
-### <a name="splunk"></a>Splunk
+## <a name="splunk"></a>Splunk
 &lt;Hlavička Syslog&gt;\r\nEventCode=4776\r\nLogfile=Security\r\nSourceName=Microsoft-Windows-Security-Auditing\r\nTimeGenerated=20150310132717.784882-000\r\ComputerName=YYYYY\r\nMessage=
 
 Počítač se pokusil o ověření přihlašovacích údajů pro účet.
@@ -151,7 +149,7 @@ Kód chyby:         0x0
 
     -   SourceName = Název zprostředkovatele událostí Windows
 
-    -   TimeGenerated = časové razítko skutečné události (ujistěte se, že není časové razítko přijetí do systému SIEM nebo odeslání do ATP). Formát by měl odpovídat yyyyMMddHHmmss.FFFFFF, pokud možno na milisekundy, to je důležité.
+    -   TimeGenerated = časové razítko skutečné události (ujistěte se, že to není časové razítko přijetí do systému SIEM nebo odeslání do ochrany ATP v programu). Formát by měl odpovídat yyyyMMddHHmmss.FFFFFF, pokud možno na milisekundy, to je důležité.
 
     -   ComputerName = Název hostitele zdroje
 
@@ -161,8 +159,8 @@ Kód chyby:         0x0
 
 -   Pořadí není pro dvojice klíč=hodnota důležité.
 
-### <a name="qradar"></a>QRadar
-QRadar umožňuje shromažďování událostí prostřednictvím agenta. Pokud se data shromažďují pomocí agenta, formát času se shromažďuje bez údajů o milisekundách. Protože Azure ATP vyžaduje údaje o milisekundách, je nutné nastavit Qradaru bez agentů shromažďování událostí Windows. Další informace najdete v tématu [ http://www-01.ibm.com/support/docview.wss?uid=swg21700170 ] (http://www-01.ibm.com/support/docview.wss?uid=swg21700170 "QRadar: Agentless kolekce událostí systému Windows pomocí protokolu MSRPC").
+## <a name="qradar"></a>QRadar
+QRadar umožňuje shromažďování událostí prostřednictvím agenta. Pokud se data shromažďují pomocí agenta, formát času se shromažďuje bez údajů o milisekundách. Protože ochrany ATP v programu Azure vyžaduje údajů o milisekundách, je nutné nastavit Qradaru bez agentů shromažďování událostí Windows. Další informace najdete v tématu [ http://www-01.ibm.com/support/docview.wss?uid=swg21700170 ] (http://www-01.ibm.com/support/docview.wss?uid=swg21700170 "QRadar: Agentless Windows shromažďování událostí pomocí protokolu MSRPC").
 
     <13>Feb 11 00:00:00 %IPADDRESS% AgentDevice=WindowsLog AgentLogFile=Security Source=Microsoft-Windows-Security-Auditing Computer=%FQDN% User= Domain= EventID=4776 EventIDCode=4776 EventType=8 EventCategory=14336 RecordNumber=1961417 TimeGenerated=1456144380009 TimeWritten=1456144380009 Message=The computer attempted to validate the credentials for an account. Authentication Package: MICROSOFT_AUTHENTICATION_PACKAGE_V1_0 Logon Account: Administrator Source Workstation: HOSTNAME Error Code: 0x0
 
@@ -174,7 +172,7 @@ Potřebná pole:
 - Plně kvalifikovaný název domény pro řadič domény
 - ID události Windows
 
-TimeGenerated je časové razítko skutečné události (ujistěte se, že není časové razítko přijetí do systému SIEM nebo odeslání do ATP). Formát by měl odpovídat yyyyMMddHHmmss.FFFFFF, pokud možno na milisekundy, to je důležité.
+TimeGenerated je časové razítko skutečné události (ujistěte se, že to není časové razítko přijetí do systému SIEM nebo odeslání do ochrany ATP v programu). Formát by měl odpovídat yyyyMMddHHmmss.FFFFFF, pokud možno na milisekundy, to je důležité.
 
 Message je původní text události z události Windows.
 
@@ -188,6 +186,6 @@ Nezapomeňte použít oddělit páry klíč=hodnota pomocí \t.
 
 ## <a name="see-also"></a>Viz také
 - [Nástroje pro změnu velikosti Azure ATP](http://aka.ms/aatpsizingtool)
-- [Odkazy na Azure protokol ATP SIEM](cef-format-sa.md)
+- [Referenční informace k protokolům Azure ATP SIEM](cef-format-sa.md)
 - [Požadavky služby Azure ATP](atp-prerequisites.md)
-- [Podívejte se na fórum ATP!](https://aka.ms/azureatpcommunity)
+- [Podívejte se na fórum ochrany ATP v programu.](https://aka.ms/azureatpcommunity)

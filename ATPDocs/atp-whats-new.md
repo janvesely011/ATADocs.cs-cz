@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/06/2018
+ms.date: 8/20/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,16 +13,40 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0062fc22df357e338d8eaf446688ea8bba56019c
-ms.sourcegitcommit: 14c05a210ae92d35100c984ff8c6d171db7c3856
+ms.openlocfilehash: 83b7b88d2b1ba61a2ae2733f1401d98b341ad3bd
+ms.sourcegitcommit: 121c49d559e71741136db1626455b065e8624ff9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39567946"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "41734789"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
 # <a name="whats-new-in-azure-atp"></a>Co je nového v Azure ATP 
+
+
+## <a name="azure-atp-release-245"></a>Verze ochrany ATP v programu Azure 2.45
+
+Vydáno 19. srpna 2018
+
+- **Ochrana ATP v programu Azure přidá jako zdroj dalších dat trasování událostí pro Windows (ETW)**  <br> Trasování událostí pro Windows (ETW) přidat jako zdroj dalších dat kromě existující síťový provoz a události Windows. Trasování událostí pro Windows poskytuje detekci další podezřelé aktivity, včetně: povýšení řadiče domény podezřelé a pro replikaci řadiče domény podezřelé žádosti (obojí jsou napadení DCShadow). <br>
+Pouze ochrany ATP v programu senzorů nainstalovaná na řadičích domény podpory trasování událostí pro Windows na základě detekce. Detekce trasování událostí pro Windows nepodporuje senzorů samostatné ochrany ATP v programu. <br>  
+
+- **Čtyři nové detekce, nyní ve všeobecné dostupnosti** <br>
+  - Podezřelé připojení k síti VPN
+  - Protokol Kerberos Golden Ticket – neexistující účet 
+  - Povýšení řadiče domény podezřelé (možný útok DcShadow) – zjišťování, k dispozici pouze s senzorů ochrany ATP v programu na základě trasování událostí pro Windows 
+  - Žádost o replikaci řadiče domény podezřelé (možný útok DcShadow) – zjišťování, k dispozici pouze s senzorů ochrany ATP v programu na základě trasování událostí pro Windows
+
+- Tato verze rovněž obsahuje opravy a vylepšení pro několik problémů.
+
+
+## <a name="azure-atp-release-244"></a>Verze ochrany ATP v programu Azure 2.44
+
+Vydáno 12. srpna 2018
+
+- Tato verze obsahuje opravy a vylepšení pro několik problémů.
+- Soubory protokolu na počítači senzoru už vytvořili protokol "Statistiky výjimky".
 
 
 ## <a name="azure-atp-release-243"></a>Verze ochrany ATP v programu Azure 2.43

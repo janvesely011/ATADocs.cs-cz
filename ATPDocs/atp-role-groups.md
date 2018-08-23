@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: effca0f2-fcae-4fca-92c1-c37306decf84
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 8e7af3846d31031b645c65c7550b696fe4738e5d
-ms.sourcegitcommit: a9b8bc26d3cb5645f21a68dc192b4acef8f54895
+ms.openlocfilehash: a6b4f668533ab3169c10cfc9b194b8bd392db6d1
+ms.sourcegitcommit: 121c49d559e71741136db1626455b065e8624ff9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/16/2018
-ms.locfileid: "39064062"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "41734787"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -31,14 +31,14 @@ Ochrana ATP v programu Azure nabízí zabezpečení na základě rolí na trhu p
 
 [!INCLUDE [Handle personal data](../includes/gdpr-intro-sentence.md)]
 
-Skupiny rolí umožňují správu přístupu pro služby Azure ATP. Pomocí skupin rolí můžete oddělit úlohy v rámci týmu zabezpečení a udělit přístup pouze v takovém rozsahu, který uživatelé potřebují ke své práci. Tento článek vysvětluje správu přístupu a autorizaci rolí ochrany ATP v programu Azure a pomůže vám začít pracovat se skupinami rolí v ochrany ATP v programu.
+Skupiny rolí umožňují správu přístupu pro služby Azure ATP. Pomocí skupin rolí můžete oddělit úlohy v rámci týmu zabezpečení a udělit přístup pouze v takovém rozsahu, který uživatelé potřebují ke své práci. Tento článek vysvětluje správu přístupu, role ověřování ochrana ATP v programu Azure a pomůže vám začít pracovat se skupinami rolí v ochrany ATP v programu.
 
 > [!NOTE]
 > Všechny globální správce nebo správce zabezpečení do vašeho tenanta Azure Active Directory je automaticky správcem služby Azure ATP.
 
-## <a name="accessing-the-workspace-management-portal"></a>Přístup k portálu pro správu pracovního prostoru
+## <a name="accessing-the-management-portal"></a>Přístup k portálu pro správu
 
-Přístup k portálu pro správu pracovního prostoru (portal.atp.azure.com) můžete udělat jenom uživatele Azure AD, který má role adresáře globální správce nebo správce zabezpečení. Jakmile zadáte na portál, můžete vytvořit různé pracovní prostory. Za každý pracovní prostor, službě ochrana ATP v programu Azure vytvoří tři skupiny zabezpečení ve vašem tenantovi Azure Active Directory: správci, uživatelé, prohlížeče. 
+Přístup k portálu pro správu (portal.atp.azure.com) můžete udělat jenom uživatele Azure AD, který má role adresáře globální správce nebo správce zabezpečení. Po zadání na portálu, můžete vytvořit pracovní prostor. Služba Ochrana ATP v programu Azure vytvoří tři skupiny zabezpečení ve vašem tenantovi Azure Active Directory: správci, uživatelé, prohlížeče. 
 
 > [!NOTE]
 > Přístup k portálu pracovního prostoru ochrana ATP v programu Azure poskytována pouze pro uživatele v rámci skupiny zabezpečení Azure AD pro tento pracovní prostor a globální správci a správci zabezpečení.
