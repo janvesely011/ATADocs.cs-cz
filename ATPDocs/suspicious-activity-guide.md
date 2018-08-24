@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4aa58228ea23f58ea37b10f941467e9dc076992f
-ms.sourcegitcommit: f534a318be71b840aecb6a84744d8cd1f251a7aa
+ms.openlocfilehash: f382c5a7625ff29303ad92d05ec703c9ef1d72e3
+ms.sourcegitcommit: 04ec22abdfa571ec0e6e036e809f4e108a5c6f3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41734834"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42709772"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -200,7 +200,7 @@ V této detekce se aktivuje upozornění, pokud je lístek Kerberos udělující
    2.   Je senzoru služby Azure ATP zahrnutých v této výstraze virtuálního počítače? Pokud ano, ji nedávno pokračovat od uloženého stavu? Pokud ano, tuto výstrahu zavřete.
    3.   Pokud je odpověď na otázky uvedené výše předpokládají Ne, to se zlými úmysly.
 
-- **Neexistující účet**
+- **Neexistující účet – nové** 
    1.   Odpovědět na tyto otázky:
          - Je, že uživatel je uživatelem domény známé a platný? Pokud ano, pak zavřete výstrahu (bylo falešně pozitivní).
          - Uživatel byl nedávno přidán? Pokud ano, pak zavřete výstrahu, změna nemusí mít nebyly synchronizovány.
@@ -476,7 +476,7 @@ V této detekce se aktivuje upozornění, když počítače v síti se pokouší
    3. Běží počítači operační systém Windows Server (nebo Windows/Linux)? Počítač jiného typu než server by nemělo replikovat data.
 Pokud jste nepovolili integraci ochrany ATP v programu Windows Defender, klikněte na možnost ochrana ATP v programu Windows Defender Odznáček ![ochrany ATP v programu Windows Defender oznámení "BADGE"](./media/wd-badge.png) k hlubšímu prošetření je počítač. V programu Windows Defender ATP uvidíte, které procesy a výstrahy došlo k přibližně v době výstrahy.
 
-4. Podívejte se na Prohlížeč událostí zobrazíte [události služby Active Directory, které zaznamenává v adresáři protokolu služeb](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/cc961809(v=technet.10)). V protokolu můžete použít ke sledování změn ve službě Active Directory. Ve výchozím nastavení, služby Active Directory zaznamená pouze kritické chybové události, ale pokud tento upozornění recurrs, povolte tento audit na řadiči domény relevantní pro další zkoumání.
+4. Podívejte se na Prohlížeč událostí zobrazíte [události služby Active Directory, které zaznamenává v adresáři protokolu služeb](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/cc961809(v=technet.10)). V protokolu můžete použít ke sledování změn ve službě Active Directory. Ve výchozím nastavení služby Active Directory zaznamená pouze kritické chybové události, ale pokud se tato výstraha se opakuje, povolte tento audit na řadiči domény relevantní pro další zkoumání.
 
 **Opravit**
 
@@ -510,7 +510,7 @@ V této detekce se aktivuje upozornění při generování podezřelá replikace
    2.  Mají uživatelé k těmto prostředkům přístup?
    3. Běží počítači operační systém Windows Server (nebo Windows/Linux)? Počítač jiného typu než server by nemělo replikovat data.
 Pokud jste nepovolili integraci ochrany ATP v programu Windows Defender, klikněte na možnost ochrana ATP v programu Windows Defender Odznáček ![ochrany ATP v programu Windows Defender oznámení "BADGE"](./media/wd-badge.png) k hlubšímu prošetření je počítač. V programu Windows Defender ATP uvidíte, které procesy a výstrahy došlo k přibližně v době výstrahy.
-1. Podívejte se na Prohlížeč událostí zobrazíte [události služby Active Directory, které zaznamenává v adresáři protokolu služeb](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/cc961809(v=technet.10)). V protokolu můžete použít ke sledování změn ve službě Active Directory. Ve výchozím nastavení, služby Active Directory zaznamená pouze kritické chybové události, ale pokud tento upozornění recurrs, povolte tento audit na řadiči domény relevantní pro další zkoumání.
+1. Podívejte se na Prohlížeč událostí zobrazíte [události služby Active Directory, které zaznamenává v adresáři protokolu služeb](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/cc961809(v=technet.10)). V protokolu můžete použít ke sledování změn ve službě Active Directory. Ve výchozím nastavení služby Active Directory zaznamená pouze kritické chybové události, ale pokud se tato výstraha se opakuje, povolte tento audit na řadiči domény relevantní pro další zkoumání.
 
 **Náprava**
 
@@ -546,7 +546,8 @@ Podezřelé služba je vytvořená na řadiči domény ve vaší organizaci. Tat
 
 - Implementace méně privilegovaný přístup v doméně počítače povolit jenom konkrétní uživatelé práva k vytvoření nové služby.
 
-## Podezřelé připojení k síti VPN <a name="suspicious-vpn-detection"></a>
+
+## Podezřelé připojení k síti VPN – nové <a name="suspicious-vpn-detection"></a>
 
 **Popis**
 
