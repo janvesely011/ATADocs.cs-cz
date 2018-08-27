@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 2a5b6652-2aef-464c-ac17-c7e5f12f920f
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: d8a8f5df37422f98f6ea3357c672297395907a8d
-ms.sourcegitcommit: 1de2b047c0e9f92a106169f7634c480f694baf10
+ms.openlocfilehash: 1c75b9c74e1b53f81b5f957d9e78a8b425b6b28e
+ms.sourcegitcommit: ad83eaba24d5a6af465351291ba0e423319f78d3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "30009740"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42903919"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
@@ -46,9 +46,9 @@ Po instalaci komponenty ATA Gateway proveďte následující kroky a nakonfiguru
   - **Popis**: Zadejte popis pro ATA Gateway (volitelné).
   - **Řadiče domény zrcadlené portem (FQDN)** (požadováno pro ATA Gateway, nastavení nelze změnit pro ATA Lightweight Gateway): Zadejte úplný název FQDN řadiče domény a kliknutím na symbol plus ho přidejte do seznamu. Například **dc01.contoso.com**.
 
-      Následující informace platí pro servery, které zadáte do seznamu **Řadiče domény**:
-      - Všechny řadiče domény, jejichž provoz ATA Gateway monitoruje přes zrcadlení portů, musí být uvedené v seznamu **Řadiče domény**. Pokud řadič domény není uvedený v seznamu **Řadiče domény**, detekce podezřelých aktivit nemusí fungovat podle očekávání.
-      - Nejméně jeden řadič domény v seznamu by měl být globální katalog. To umožňuje ATA překládat objekty počítačů a uživatelů v jiných doménách v doménové struktuře.
+    Následující informace platí pro servery, které zadáte do seznamu **Řadiče domény**:
+    - Všechny řadiče domény, jejichž provoz ATA Gateway monitoruje přes zrcadlení portů, musí být uvedené v seznamu **Řadiče domény**. Pokud řadič domény není uvedený v seznamu **Řadiče domény**, detekce podezřelých aktivit nemusí fungovat podle očekávání.
+    - Nejméně jeden řadič domény v seznamu by měl být globální katalog. To umožňuje ATA překládat objekty počítačů a uživatelů v jiných doménách v doménové struktuře.
 
   - **Síťové adaptéry pro zachytávání** (povinné):
   - Pro ATA Gateway na vyhrazeném serveru vyberte síťové adaptéry, které jsou nakonfigurované jako cílový port zrcadlení. Tyto příjem provozu řadiče domény zrcadlené.

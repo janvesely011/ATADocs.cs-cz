@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 14cb7513-5dc8-49cb-b3e0-94f469c443dd
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 0b4d783d55d38d2a50c651ba47c584fed8bcee50
-ms.sourcegitcommit: 1de2b047c0e9f92a106169f7634c480f694baf10
+ms.openlocfilehash: 60e02ef1aff6b16bc56b12b8883ca2f5ed4a1f74
+ms.sourcegitcommit: ad83eaba24d5a6af465351291ba0e423319f78d3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "30010138"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42903902"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
@@ -36,17 +36,17 @@ Pokud chcete dostávat oznámení, nastavte následující parametry:
 
 
 1. V konzole ATA vyberte na panelu nástrojů možnost nastavení a vyberte **Konfigurace**.
-
-![Ikona nastavení konfigurace ATA](media/ATA-config-icon.png)
-
-2. V části **Notifications & Reports (Oznámení a sestavy)** vyberte **Notifications** (Oznámení).
-3. V části **Mail notifications** (Oznámení e-mailem) zadejte, která oznámení se mají posílat e-mailem – nové podezřelé aktivity a nové problémy v oblasti stavu. Můžete nastavit oddělené e-mailové adresy, na které se mají odesílat informace o podezřelých aktivitách a výstrahy týkající se stavu samostatně tak, aby například analytik zabezpečení dostával oznámení o podezřelých aktivitách a správce IT oznámení týkající se stavu.
->   [!NOTE]
->   E-mailové výstrahy pro podezřelé aktivity se odesílají jenom při vytvoření podezřelé aktivity.
-3. V části **oznámení Syslogu**, určete oznámení, která se mají odesílat na váš server Syslog – nové podezřelé aktivity, aktualizované podezřelé aktivity a nové problémy v oblasti stavu.
-5. Klikněte na **Uložit**.
-
-![Obrázek nastavení e-mailových upozornění ATA](media/ata-mail-notification-settings.png)
+    
+    ![Ikona nastavení konfigurace ATA](media/ATA-config-icon.png)
+    
+1. V části **Notifications & Reports (Oznámení a sestavy)** vyberte **Notifications** (Oznámení).
+1. V části **Mail notifications** (Oznámení e-mailem) zadejte, která oznámení se mají posílat e-mailem – nové podezřelé aktivity a nové problémy v oblasti stavu. Můžete nastavit oddělené e-mailové adresy, na které se mají odesílat informace o podezřelých aktivitách a výstrahy týkající se stavu samostatně tak, aby například analytik zabezpečení dostával oznámení o podezřelých aktivitách a správce IT oznámení týkající se stavu.
+    >   [!NOTE]
+    >   E-mailové výstrahy pro podezřelé aktivity se odesílají jenom při vytvoření podezřelé aktivity.
+1. V části **oznámení Syslogu**, určete oznámení, která se mají odesílat na váš server Syslog – nové podezřelé aktivity, aktualizované podezřelé aktivity a nové problémy v oblasti stavu.
+1. Klikněte na **Uložit**.
+    
+    ![Obrázek nastavení e-mailových upozornění ATA](media/ata-mail-notification-settings.png)
 
 
 
