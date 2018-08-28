@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/15/2018
+ms.date: 8/26/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 74fea95d0cfdcca96eba1f77b6dbd81a101b3782
-ms.sourcegitcommit: 121c49d559e71741136db1626455b065e8624ff9
+ms.openlocfilehash: f1c9e4bc90289e7c7bfb90710ecbc83beb368ba8
+ms.sourcegitcommit: 56886d06abd25035ffc9885c69aca9b0ebf14abc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2018
-ms.locfileid: "41734798"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038979"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -125,7 +125,7 @@ Samostatný senzor ochrany ATP v programu Azure vyžaduje minimálně jeden adap
 
     > [!IMPORTANT]
     > -   Nakonfigurujte zrcadlení portů pro adaptér pro zachytávání jako cíl síťového provozu řadiče domény. Další informace najdete v tématu [konfigurace zrcadlení portů](configure-port-mirroring.md). Obvykle budete muset spolupracovat s týmem sítí nebo virtualizace ke konfiguraci zrcadlení portů.
-    > -   Nakonfigurujte nesměrovatelných statickou IP adresu pro vaše prostředí se žádný senzor výchozí a adresy serveru DNS. Příklad: 1.1.1.1/32. Tím se zajistí, že síťový adaptér pro zachytávání může zachytit maximální objem přenášených dat a že síťový adaptér pro správu se používá k odesílání a příjmu požadované síťové komunikace.
+    > -   Konfigurace statické IP adresy nesměrovatelných (s /32 maska) pro vaše prostředí bez výchozí brány ze senzorů a adresy serveru DNS. Například 10.10.0.10/32. Tím se zajistí, že síťový adaptér pro zachytávání může zachytit maximální objem přenášených dat a že síťový adaptér pro správu se používá k odesílání a příjmu požadované síťové komunikace.
 
 ### <a name="ports"></a>Porty
 Následující tabulka uvádí minimální porty, které vyžaduje samostatný senzor ochrany ATP v programu Azure nakonfigurovaná na adaptéru pro správu:

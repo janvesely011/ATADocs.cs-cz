@@ -2,10 +2,10 @@
 title: Architektura Advanced Threat Analytics | Dokumentace Microsoftu
 description: Popisu architektury Microsoft Advanced Threat Analytics (ATA)
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 3/21/2018
+ms.date: 8/26/2018
 ms.topic: article
 ms.prod: ''
 ms.service: advanced-threat-analytics
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 892b16d2-58a6-49f9-8693-1e5f69d8299c
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: fa2b5fa5da1d73f90cac6937bef71fd239e498fc
-ms.sourcegitcommit: ca6153d046d8ba225ee5bf92cf55d0bd57cf4765
+ms.openlocfilehash: f2ae9948f6865480797b4a2a8b761c12553728b9
+ms.sourcegitcommit: 56886d06abd25035ffc9885c69aca9b0ebf14abc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39585048"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43039015"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
@@ -179,7 +179,7 @@ Kvůli vylepšení detekce předání hodnoty hash (Pass-the-Hash), hrubé síly
 
 -   Konfigurace komponenty ATA Gateway pro naslouchání událostem SIEM <br>Nakonfigurujte SIEM pro předávání určitých událostí systému Windows bráně ATA Gateway. ATA podporuje několik poskytovatelů SIEM. Další informace najdete v tématu [Konfigurace sběru událostí](configure-event-collection.md).
 
--   Konfigurace předávání událostí systému Windows<br>Jiným způsobem, jak může ATA získávat události, je konfigurace řadičů domén tak, aby předával události Windows 4776, 4732, 4733, 4728, 4729, 4756 a 4757 komponentě ATA Gateway. To je obzvláště užitečné, pokud nemáte server SIEM nebo pokud ATA váš server SIEM v současnosti nepodporuje. Další informace o předávání událostí systému Windows v ATA najdete v tématu [Konfigurace předávání událostí systému Windows](configure-event-collection.md#configuring-windows-event-forwarding). Platí jen pro fyzické komponenty ATA Gateway, nikoli pro ATA Lightweight Gateway.
+-   Konfigurace předávání událostí systému Windows<br>Jiným způsobem, jak může ATA získávat události, je konfigurace řadičů domén tak, aby předával události Windows 4776, 4732, 4733, 4728, 4729, 4756 a 4757 komponentě ATA Gateway. To je obzvláště užitečné, pokud nemáte server SIEM nebo pokud ATA váš server SIEM v současnosti nepodporuje. K dokončení vaší konfigurace předávání událostí Windows v ATA najdete v článku [předávání událostí Windows konfigurace](configure-event-collection.md#configuring-windows-event-forwarding). Platí jen pro fyzické komponenty ATA Gateway, nikoli pro ATA Lightweight Gateway.
 
 ## <a name="related-videos"></a>Související videa
 - [Volba správného typu komponenty ATA Gateway](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)

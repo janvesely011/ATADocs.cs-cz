@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 90f68f2c-d421-4339-8e49-1888b84416e6
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a6cb3ca9b4f9498caa0810cec129c24b0f2e587b
-ms.sourcegitcommit: 121c49d559e71741136db1626455b065e8624ff9
+ms.openlocfilehash: c7fda04658dc70406fc7c0d543286e46da4cfa86
+ms.sourcegitcommit: 56886d06abd25035ffc9885c69aca9b0ebf14abc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2018
-ms.locfileid: "41734713"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43039075"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -91,9 +91,6 @@ Pracovní prostor ochrany ATP v programu Azure umožňuje spravovat následujíc
 
 |||
 |-|-|
-|Příjem entit|Tato funkce přijímá dávky entit ze všech ochrany ATP v programu Azure senzory a senzory samostatné ochrany ATP v programu Azure.|
-|Procesor síťové aktivity|Zpracovává všechny síťové aktivity v rámci každé přijaté dávky. Například přiřazování mezi různými kroky ověřování Kerberos prováděnými z potenciálně různých počítačů.|
-|Profilování entit|Profiluje všechny jedinečné entity podle událostí a provozu. Ochrana ATP v programu Azure například aktualizuje seznam přihlášených počítačů pro každý uživatelský profil.|
 |Portál pro správu Azure ATP|Spravuje váš pracovní prostor služby Azure ATP.|
 |Azure portal pracovní prostor ochrany ATP v programu|Pracovní prostor ochrany ATP v programu Azure slouží ke konfiguraci ochrany ATP v programu Azure a monitorování podezřelých aktivit ve vaší síti zjištěno službou ochrany ATP v programu Azure. Pracovní prostor ochrany ATP v programu Azure není závislá na senzoru služby Azure ATP a běží i v případě, že je zastavena služba sensor ochrany ATP v programu Azure. |
 |Detektory|Detektory pomocí algoritmů machine learningu a deterministických pravidel vyhledávají podezřelé aktivity a nestandardní chování uživatelů ve vaší síti.|
