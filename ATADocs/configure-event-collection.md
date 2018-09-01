@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 755450654d870ec0235232e08194c1094c22f030
-ms.sourcegitcommit: ca6153d046d8ba225ee5bf92cf55d0bd57cf4765
+ms.openlocfilehash: e337c56730e1672ce1a4382a49bb16dab7b3a95d
+ms.sourcegitcommit: d8ee6c236dc91802a8315fb97a9dc0ac501861cf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39585084"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43353092"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
@@ -79,11 +79,8 @@ Po přidání **síťová služba** k **Event Log Readers** skupině, restartov�
     2.  Pro **cílový protokol**, ujistěte se, že **předané události** zaškrtnuto. Aby řešení ATA mohlo události číst, musí být cílovým protokolem **Předané události**. 
     3.  Vyberte **Spuštěno zdrojovým počítačem** a klikněte na **Vybrat skupiny počítačů**.
         1.  Klikněte na **Přidat počítač domény**.
-        2.  Do pole **Zadejte název objektu k výběru** zadejte název řadiče domény. Potom klikněte na **Zkontrolovat jména** a nakonec na **OK**. 
- 
-    ![Obrázek Prohlížeče událostí](media/wef3 event viewer.png)
- 
- 
+        2.  Do pole **Zadejte název objektu k výběru** zadejte název řadiče domény. Potom klikněte na **Zkontrolovat jména** a nakonec na **OK**.  
+          ![Obrázek prohlížeče událostí](media/wef3 event viewer.png)  
         3.  Klikněte na **OK**.
      4. Klikněte na **Vybrat události**.
 
