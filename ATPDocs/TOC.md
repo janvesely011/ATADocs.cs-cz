@@ -45,7 +45,9 @@
 ## [Prošetřování laterálních průnikových tras pomocí služby Azure ATP](use-case-lateral-movement-path.md)
 ## [Prošetřování entit](investigate-entity.md)
 ## [Principy profilů entit](entity-profiles.md)
-# Odstraňování potíží
+# Řešení problémů
+## [Kontrola pokročilých zásad auditu](atp-advanced-audit-policy.md)
 ## [Řešení známých problémů](troubleshooting-atp-known-issues.md)
+## [Řešení potíží pomocí protokolů](troubleshooting-atp-using-logs.md)
 ## [Podpora a informace](atp-support.md)
 ## [Plán připravenosti na Azure ATP](atp-resources.md)
