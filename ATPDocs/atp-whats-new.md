@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/26/2018
+ms.date: 8/30/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,18 +13,29 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: b4a72c4dbde37a415797c467afac2c7c2636bfec
-ms.sourcegitcommit: 56886d06abd25035ffc9885c69aca9b0ebf14abc
+ms.openlocfilehash: 657a3488e967979555c5d5e5d48ac02b6cc32a04
+ms.sourcegitcommit: 93a133430ac85d6db7afad5f6f2583b3a39c423a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43039034"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43469623"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
 # <a name="whats-new-in-azure-atp"></a>Co je nového v Azure ATP 
 
+## <a name="azure-atp-release-247"></a>Verze ochrany ATP v programu Azure 2.47
+Vydáno 2. září 2018
 
+- **Rozšířená Kontrola zásad auditu Azure ATP**
+<br> Azure Advanced Threat Protection teď zkontroluje řadič domény existujících pokročilé zásady auditu a doporučuje změny zásad zajistit maximální pokrytí služeb ochrany ATP v programu Azure pro vaši organizaci. <br> 
+**Tato nová kontrola vám umožní:**
+  -  Určení události z protokolů událostí Windows, které jsou aktuálně vyloučené z pokrytí ochrany ATP v programu Azure chybí.
+  -  Ověřte ideální nastavení a proveďte změny na základě stavu výstrah doporučení, které jsou k dispozici.
+  -  Upozornění stavu jednoho agregované něhož budou vydány pro všechny řadiče domény včetně nápravy návrhy (if /, je potřeba).
+
+Kontrola jak [nakonfigurovat pokročilé zásady auditu](atp-advanced-audit-policy.md)pro váš systém správně nakonfigurovaná. 
+- Tato verze rovněž obsahuje opravy a vylepšení pro několik problémů.
 
 ## <a name="azure-atp-release-246"></a>Verze ochrany ATP v programu Azure 2.46
 

@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: a06004bd-9f77-4e8e-a0e5-4727d6651a0f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 7caae52ff7402fdc8cb18ce1a01bba469c2d649b
-ms.sourcegitcommit: f61616a8269d27a8fcde6ecf070a00e2c56481ac
+ms.openlocfilehash: 4cf099faae920f23eeeaacdc8f10129005fdc896
+ms.sourcegitcommit: 93a133430ac85d6db7afad5f6f2583b3a39c423a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35259204"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43469664"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -53,7 +53,7 @@ Každá podezřelá aktivita obsahuje následující informace:
 
 ## Detekce ve verzi Preview<a name="preview-detections"></a>
 
-Výzkumným týmem služby Azure ATP neustále pracuje na implementaci nové detekce pro nově zjištěné útoky. Protože ochrany ATP v programu Azure je Cloudová služba, není možné uvolnit tyto nové detekce rychle tak, aby zákazníci služby Azure ATP těžit z nové detekce co nejdříve.
+Výzkumným týmem služby Azure ATP neustále pracuje na implementaci nové detekce pro nově zjištěné útoky. Protože ochrany ATP v programu Azure je Cloudová služba, nové detekce, jsou vydávány rychle tak, aby zákazníci služby Azure ATP těžit z nové detekce co nejdříve.
 
 Tyto detekce jsou označené náhled odznáčku, které vám pomohou identifikovat nové detekce a vědět, že jsou v produktu novinkami. Pokud vypnete detekce ve verzi preview, se nezobrazí v konzole služby Azure ATP – není na časové ose nebo profily entit – a nové výstrahy se neotevře.
 
@@ -67,7 +67,7 @@ Chcete-li zakázat detekce ve verzi preview:
 2. V nabídce vlevo v verzi Preview, klikněte na tlačítko **detekce**.
 3. Pomocí posuvníku zapnutí a vypnutí detekce ve verzi preview.
  
-![detekce ve verzi Preview](./media/preview-detections.png) 
+![Detekce ve verzi Preview](./media/preview-detections.png) 
 
 
 ## <a name="filter-suspicious-activities-list"></a>Filtrování seznamu podezřelých aktivit

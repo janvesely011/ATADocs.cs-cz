@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: de15c920-8904-4124-8bdc-03abd9f667cf
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 730cf886f199c101ea14a09f177d7682238c2b7e
-ms.sourcegitcommit: 14c05a210ae92d35100c984ff8c6d171db7c3856
+ms.openlocfilehash: 270b84c24ef8b52565ee97c2c15374645eb54a2c
+ms.sourcegitcommit: 93a133430ac85d6db7afad5f6f2583b3a39c423a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39567708"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43469647"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -28,7 +28,7 @@ ms.locfileid: "39567708"
 Laterální pohyb je, když útočník pomocí tohoto počtu účtů pro přístup k citlivým účtům. To lze provést pomocí metod popsaných v [Průvodce prošetřováním podezřelých aktivit](suspicious-activity-guide.md). Laterální pohyb je útočníci k identifikaci a získat přístup k citlivým účtům a počítačů v síti pomocí tohoto počtu účtů, které sdílejí uložená pověření přihlášení v účtů, skupin a počítačů. Jakmile útočník získal přístup, útočník můžete také využít data na řadiče domény.
 
 
-## <a name="discovery-your-at-risk-sensitive-accounts"></a>Zjišťování rizikové citlivé účty
+## <a name="discover-your-at-risk-sensitive-accounts"></a>Objevte své rizikové citlivé účty
 
 Chcete-li zjistit, které citlivé účty ve vaší síti jsou přístupné z důvodu jejich připojení k tohoto počtu účtů, skupin a počítačů, postupujte takto. 
 
