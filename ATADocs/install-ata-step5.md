@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 2a5b6652-2aef-464c-ac17-c7e5f12f920f
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 1c75b9c74e1b53f81b5f957d9e78a8b425b6b28e
-ms.sourcegitcommit: ad83eaba24d5a6af465351291ba0e423319f78d3
+ms.openlocfilehash: 50a46bad5f138344cc3e62a3fca236e98e71f904
+ms.sourcegitcommit: 6f1406f28c4c2af6a36bc691ebaf4e819adc6b4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42903919"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43675164"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
@@ -53,8 +53,7 @@ Po instalaci komponenty ATA Gateway proveďte následující kroky a nakonfiguru
   - **Síťové adaptéry pro zachytávání** (povinné):
   - Pro ATA Gateway na vyhrazeném serveru vyberte síťové adaptéry, které jsou nakonfigurované jako cílový port zrcadlení. Tyto příjem provozu řadiče domény zrcadlené.
   - V případě ATA Lightweight Gateway by to měly být všechny síťové adaptéry, které se používají ke komunikaci s ostatními počítači ve vaší organizaci.
-
-
+  
   - **Kandidát na synchronizátora domény**: Za synchronizaci mezi ATA a doménou Active Directory může být zodpovědná libovolná ATA Gateway, která je nastavená jako kandidát na synchronizátora domény. Počáteční synchronizace v závislosti na velikosti domény může nějakou dobu trvat a je náročná. Ve výchozím nastavení jsou jako kandidáti na synchronizátora domény nastavené jenom ATA Gateway.
    Doporučuje se, že zakážete všechny vzdálené lokality komponenty ATA Gateway nebudou kandidáti na synchronizátora domény.
    Pokud je řadič domény jen pro čtení, nenastavujte ho jako kandidáta na synchronizátora domény. Další informace najdete v části [Architektura ATA](ata-architecture.md#ata-lightweight-gateway-features).

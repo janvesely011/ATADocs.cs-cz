@@ -2,10 +2,10 @@
 title: Export a import konfigurace Advanced Threat Analytics | Dokumentace Microsoftu
 description: Postup exportu a importu konfigurace ATA
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 3/21/2018
+ms.date: 9/04/2018
 ms.topic: article
 ms.prod: ''
 ms.service: advanced-threat-analytics
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 1d27dba8-fb30-4cce-a68a-f0b1df02b977
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: edbf553bf48d984f4864264643d197362c3d6042
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: f8847d8ca3671f765a1d101121eefad62073f60f
+ms.sourcegitcommit: 6f1406f28c4c2af6a36bc691ebaf4e819adc6b4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30010495"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43675147"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
@@ -26,7 +26,7 @@ ms.locfileid: "30010495"
 
 # <a name="export-and-import-the-ata-configuration"></a>Export a import konfigurace ATA
 Konfigurace ATA je uložená v databázi v kolekci SystemProfile.
-Tato kolekce se zálohuje každou hodinu službou ATA Center pro soubory: **SystemProfile_*časové razítko*.json**. Ukládá se 10 posledních verzí.
+Tato kolekce se zálohuje každé 4 hodiny ve službě ATA Center do souboru s názvem: **SystemProfile_*časové razítko*.json**. Jsou uloženy 300 nejnovější verze.
 Tento soubor je umístěný v podsložce s názvem **zálohování**. Ve výchozím umístění instalace ATA se nachází tady: *C:\Program Files\Microsoft Advanced Threat Analytics\Center\Backup\SystemProfile_* časové-razítko *.json*. 
 
 **Poznámka:** Doporučujeme, abyste si tento soubor někam zazálohovali, pokud v ATA provádíte velké změny.
