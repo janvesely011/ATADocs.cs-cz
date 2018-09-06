@@ -2,10 +2,10 @@
 title: Advanced Threat Analytics osobních údajů zásad | Dokumentace Microsoftu
 description: Obsahuje odkazy na informace o tom, jak odstranit soukromé informace a osobní dat z ATA.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 6/26/2018
+ms.date: 9/04/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: advanced-threat-analytics
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 1b2d185c-62cd-45f0-b0dd-687b51317f32
 ms.reviewer: ophirp
 ms.suite: ems
-ms.openlocfilehash: 34c758cf96b583c32ad19aa2f8deab7a3bb96392
-ms.sourcegitcommit: 7d025a2518ce63f38ce609dc21d8c3bacdd6a8e7
+ms.openlocfilehash: 831fceafe3672d916d18801eb1273a62a81c84cd
+ms.sourcegitcommit: f9400ae27d22607e4146dc9b8a0b9ba6f61fdd38
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36948944"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43743327"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
@@ -52,7 +52,7 @@ Pomocí skriptu databáze ATA GDPR odstranění entit a odstraňování dat enti
 
 Tato akce trvale odstraní entitu z databáze ATA. Ke spuštění tohoto příkazu, zadejte název příkazu `deleteAccount`a `SamName`, `UpnName` nebo `GUID` počítače nebo uživatelské jméno, které chcete odstranit. Příklad: 
 
-`C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\mongo.exe" ATA --eval “var params= deleteAccount,admin1@contoso.com;” GDPR.js `
+`"C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\mongo.exe" ATA --eval "var params='deleteAccount,admin1@contoso.com';" GDPR.js`
 
 Spuštěnou úplně odebere entita s hlavní název uživatele admin1@contoso.com z databáze spolu s všech aktivit a výstrahy zabezpečení přidružené k entitě. 
 
@@ -64,7 +64,7 @@ Ke spuštění tohoto příkazu, zadejte název příkazu `deleteOldData`a poče
 
 Příklad: 
 
-`C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\mongo.exe" ATA --eval “var params= deleteOldData,30;” GDPR.js`
+`"C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\mongo.exe" ATA --eval "var params='deleteOldData,30';" GDPR.js`
 
 Tento skript odebere všechna data pro všechny entity aktivit a výstrahy zabezpečení z databáze, která jsou starší než 30 dní. Zachová pouze data posledních 30 dní.
 

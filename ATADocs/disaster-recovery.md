@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/20/2018
+ms.date: 9/05/2018
 ms.topic: article
 ms.prod: ''
 ms.service: advanced-threat-analytics
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 7620e171-76d5-4e3f-8b03-871678217a3a
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 5e6fac695e1dc51a1a0afcf20330918be82c75e9
-ms.sourcegitcommit: 121c49d559e71741136db1626455b065e8624ff9
+ms.openlocfilehash: dea1d1b936344121c2f1cd3132ed6bd0f2cccaba
+ms.sourcegitcommit: f9400ae27d22607e4146dc9b8a0b9ba6f61fdd38
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2018
-ms.locfileid: "41734762"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43743378"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
@@ -32,7 +32,7 @@ Tento článek popisuje postup rychlého zotavení komponenty ATA Center a obnov
 
 ## <a name="back-up-your-ata-center-configuration"></a>Zazálohování konfigurace ATA Center
 
-1. Konfigurace ATA Center se každou hodinu zálohuje do souboru. Vyhledejte nejnovější záložní kopii konfigurace ATA Center a uložte ji na oddělený počítač. Úplné vysvětlení postupu vyhledání těchto souborů najdete v části [Export a import konfigurace ATA](ata-configuration-file.md). 
+1. Konfigurace ATA Center se zálohuje do souboru každé 4 hodiny. Vyhledejte nejnovější záložní kopii konfigurace ATA Center a uložte ji na oddělený počítač. Úplné vysvětlení postupu vyhledání těchto souborů najdete v části [Export a import konfigurace ATA](ata-configuration-file.md). 
 2. Vyexportujte certifikát ATA Center.
     1. Ve správci certifikátů přejděte na **Certifikáty (místní)** -> **Osobní** ->**Certifikáty** a vyberte **ATA Center**.
     2. Klikněte pravým tlačítkem na **ATA Center** a vyberte **všechny úkoly** následovaný **exportovat**. 
