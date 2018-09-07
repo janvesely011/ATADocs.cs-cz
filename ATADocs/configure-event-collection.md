@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: e337c56730e1672ce1a4382a49bb16dab7b3a95d
-ms.sourcegitcommit: d8ee6c236dc91802a8315fb97a9dc0ac501861cf
+ms.openlocfilehash: a20353d8db038ccdeef81390631f7ea84557b13d
+ms.sourcegitcommit: d9e7c108bd2e070eec583cd57cb5d45d19e4a0f4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43353092"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44045943"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
@@ -56,7 +56,7 @@ Po přidání **síťová služba** k **Event Log Readers** skupině, restartov�
 2.  Do příkazového řádku zadejte *gpedit.msc*.
 3.  Rozbalte položku **Konfigurace počítače > Šablony pro správu > Součásti systému Windows > Předávání událostí**.
 
-![Obrázek editoru skupiny místních zásad](media/wef 1 local group policy editor.png)
+![Obrázek editoru skupiny místních zásad](media/wef%201%20local%20group%20policy%20editor.png)
 
 4.  Dvakrát klikněte na panel **nakonfigurovat cílového správce odběrů**.
    
@@ -64,7 +64,7 @@ Po přidání **síťová služba** k **Event Log Readers** skupině, restartov�
     2.  V části **možnosti**, klikněte na tlačítko **zobrazit**.
     3.  V části **SubscriptionManagers**, zadejte následující hodnoty a klikněte na tlačítko **OK**: * Server =`http://<fqdnATAGateway>:5985/wsman/SubscriptionManager/WEC,Refresh=10*` (Příklad: Server =`http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10`)
  
-    ![Obrázek konfigurace cílového odběru](media/wef 2 config target sub manager.png)
+    ![Obrázek konfigurace cílového odběru](media/wef%202%20config%20target%20sub%20manager.png)
    
     5.  Klikněte na **OK**.
     6.  Do příkazového řádku se zvýšenými oprávněními zadejte *gpupdate /force*. 
