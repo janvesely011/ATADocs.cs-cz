@@ -6,19 +6,19 @@ author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: 7fb024e6-297a-4ad9-b962-481bb75a0ba3
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 879d0e0617f74da2a6098c8d0dedc80b9a713674
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: f48360b1760ecdd9be8565f869af50bc83d7add8
+ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30010172"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44126242"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
@@ -31,9 +31,9 @@ ms.locfileid: "30010172"
 [Krok 4 »](install-ata-step4.md)
 
 ## <a name="step-3-download-the-ata-gateway-setup-package"></a>Krok 3: Stažení instalačního balíčku ATA Gateway
-Po konfiguraci nastavení připojení k doméně si můžete stáhnout instalační balíček ATA Gateway. ATA Gateway se dá nainstalovat na vyhrazený server nebo na řadič domény. Pokud musíte jej nainstalovat na řadič domény, je nainstalována jako ATA Lightweight Gateway. Další informace o ATA Lightweight Gateway najdete v tématu [Architektura ATA](ata-architecture.md). 
+Po konfiguraci nastavení připojení k doméně si můžete stáhnout instalační balíček ATA Gateway. ATA Gateway se dá nainstalovat na vyhrazený server nebo na řadič domény. Pokud nainstalujete ho na řadič domény, nainstaluje se jako ATA Lightweight Gateway. Další informace o ATA Lightweight Gateway najdete v tématu [Architektura ATA](ata-architecture.md). 
 
-Klikněte na tlačítko **stáhnout instalační program brány** seznam kroků uvedených v horní části stránky přejít na **brány** stránky.
+Klikněte na tlačítko **stáhnout instalační program brány** v seznamu kroků uvedených v horní části stránky a přejděte tak **brány** stránky.
 
 ![Nastavení konfigurace ATA Gateway](media/ATA_1.7-welcome-download-gateway.PNG)
 
@@ -59,7 +59,7 @@ Soubor zip obsahuje následující soubory:
 
 ## <a name="related-videos"></a>Související videa
 - [Přehled nasazení ATA](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATA-Deployment-in-10-Minutes)
-- [Výběr správné typu ATA Gateway](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
+- [Volba správného typu komponenty ATA Gateway](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
 ## <a name="see-also"></a>Viz také
 - [Průvodce nasazením ATA POC](http://aka.ms/atapoc)

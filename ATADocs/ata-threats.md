@@ -1,24 +1,24 @@
 ---
-title: Jaké hrozby Advanced Threat Analytics detekuje? | Dokumentace Microsoftu
+title: Jaké hrozby Advanced Threat Analytics detekuje? | Dokumenty Microsoft
 description: Uvádí hrozby, které ATA detekuje
 keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: 283e7b4e-996a-4491-b7f6-ff06e73790d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 2d5d5769f4016b09f899ff09c4d1888698d81819
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: 03529e05bfd0a061108a63200d10d86af5aa6369
+ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30009417"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44166096"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
@@ -26,12 +26,12 @@ ms.locfileid: "30009417"
 
 ATA zajišťuje detekci pro následující fáze pokročilých útoků: rekognoskace, zneužití přihlašovacích údajů, laterální pohyb, zvýšení úrovně oprávnění, dominance v doméně a další. Tyto detekce jsou zaměřené na zjišťování pokročilých útoků a vnitřních hrozeb ještě předtím, než mohou ve vaší organizaci způsobit škody.
 Výsledkem detekce v jednotlivých fázích je několik podezřelých aktivit relevantních pro danou fázi. Každá podezřelá aktivita je v korelaci s různými charakteristikami možných útoků.
-Tato fáze v řetězu událostí, kde ATA aktuálně poskytuje detekce jsou vyznačené na následujícím obrázku:
+Na následujícím obrázku jsou zvýrazněné fáze v řetězci úkonů útočníka, kde ATA aktuálně poskytuje detekci:
 
 ![Zaměření řešení ATA na postranní aktivity v řetězci úkonů útočníka](media/attack-kill-chain-small.jpg)
 
 
-Další informace najdete v tématu [práce s podezřelými aktivitami](working-with-suspicious-activities.md) a [Průvodce podezřelé aktivity ATA](suspicious-activity-guide.md).
+Další informace najdete v tématu [práce s podezřelými aktivitami](working-with-suspicious-activities.md) a [Průvodce prošetřováním podezřelých aktivit ATA](suspicious-activity-guide.md).
 
 
 ## <a name="whats-next"></a>Co dál?

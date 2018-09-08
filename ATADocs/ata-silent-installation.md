@@ -6,19 +6,19 @@ author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 44002cc41abc39f3c70b7a2f5ff131604fd703ba
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: fb77d47e7dcdad120958bac7ae996bddedc55f08
+ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30009832"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44126395"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
@@ -30,11 +30,11 @@ Tento článek poskytuje podrobné pokyny k bezobslužné instalaci ATA.
 
 ATA verze 1.8 vyžaduje instalaci rozhraní Microsoft .NET Framework 4.6.1. 
 
-Když instalujete nebo aktualizujete ATA, rozhraní .net Framework 4.6.1 je automaticky nainstalován jako součást nasazení Microsoft ATA.
+Když instalujete nebo aktualizujete ATA, .net Framework 4.6.1 je automaticky nainstalován jako součást nasazení Microsoft ATA.
 
 > [!Note] 
 > Instalace rozhraní .Net Framework 4.6.1 může vyžadovat restartování serveru. Když instalujete ATA Gateway na řadiče domény, zvažte naplánování časového období údržby pro tyto řadiče.
-Při použití metody bezobslužné instalace ATA je instalační program nakonfigurovaný tak, aby po ukončení instalace (v případě potřeby) automaticky restartoval server. Z důvodu chyby Instalační služby systému Windows norestart příznak nelze použít spolehlivě a ujistěte se, že se server nerestartuje, tak zajistěte, aby běžela jenom tichou instalaci během časového období údržby.
+Při použití metody bezobslužné instalace ATA je instalační program nakonfigurovaný tak, aby po ukončení instalace (v případě potřeby) automaticky restartoval server. Z důvodu chyb Instalační služby systému Windows abyste měli jistotu, že se server nerestartuje, nelze spolehlivě použít příznak norestart proto nezapomeňte běžet jenom tichá instalace během časového období údržby.
 
 Pokud chcete sledovat průběh nasazení, monitorujte instalační protokoly ATA, které jsou umístěny v **%AppData%\Local\Temp**.
 
@@ -69,7 +69,7 @@ K instalaci komponenty ACA Center použijte následující příkaz:
 |CenterPort|CenterPort=<CenterPort>|Ano|Nastaví síťový port služby ATA Center.|
 |CenterCertificateThumbprint|CenterCertificateThumbprint="<CertThumbprint>"|Ne|Nastaví kryptografický otisk certifikátu pro službu ATA Center. Tento certifikát slouží k zabezpečení komunikace mezi komponentami ATA Center a ATA Gateway. Pokud není sada, instalace vytvoří certifikát podepsaný svým držitelem.|
 |ConsoleIpAddress|ConsoleIpAddress=<ConsoleIPAddress>|Ano|Nastaví IP adresu konzoly ATA.|
-|ConsoleCertificateThumbprint|ConsoleCertificateThumbprint="<CertThumbprint >"|Ne|Nastaví kryptografický otisk certifikátu pro konzolu ATA. Tento certifikát se používá k ověření identity webu konzoly ATA. Pokud není zadaný, instalace vytvoří certifikát podepsaný svým držitelem|
+|ConsoleCertificateThumbprint|ConsoleCertificateThumbprint="<CertThumbprint >"|Ne|Nastaví kryptografický otisk certifikátu pro konzolu ATA. Tento certifikát slouží k ověření identity webu konzoly ATA. Pokud není zadán, instalace vytvoří certifikát podepsaný svým držitelem|
 
 **Příklady**: Instalace komponenty ATA Center s výchozími instalačními cestami a jednou IP adresou:
 
@@ -137,7 +137,7 @@ K provedení bezobslužné odinstalace komponenty ATA Center použijte následuj
 ## <a name="ata-gateway-silent-installation"></a>Bezobslužná instalace ATA Gateway
 
 > [!NOTE]
-> Při bezobslužné nasazení ATA Lightweight Gateway přes System Center Configuration Manager nebo jiné systémy nasazení softwaru, se doporučuje vytvořit dva balíčky pro nasazení:</br>-Net Framework 4.6.1 včetně restartování řadiče domény</br>-ATA Gateway. </br>Balíček ATA Gateway, aby závislé na nasazení .net Framework – nasazení balíčku. </br>Získat [rozhraní .net Framework 4.6.1 offline nasazení balíčku](https://www.microsoft.com/download/details.aspx?id=49982). 
+> Při tiché nasazení ATA Lightweight Gateway přes System Center Configuration Manager nebo jiného systému pro nasazení softwaru, doporučuje se vytvořit dva balíčky pro nasazení:</br>-Net Framework 4.6.1 včetně restartování řadiče domény</br>-ATA Gateway. </br>Ujistěte se, instalačního balíčku ATA Gateway závisí na nasazení rozhraní .net Framework nasazení balíčku. </br>Získejte [rozhraní .net Framework 4.6.1 balíček pro offline nasazení](https://www.microsoft.com/download/details.aspx?id=49982). 
 
 
 K bezobslužné instalaci komponenty ACA Gateway použijte následující příkaz:
@@ -169,7 +169,7 @@ K bezobslužné instalaci komponenty ACA Gateway použijte následující přík
 |ConsoleAccountName|ConsoleAccountName="<AccountName>"|Ano|Nastaví název uživatelského účtu (user@domain.com), který se použije k registraci komponenty ATA Gateway ve službě ATA Center.|
 |ConsoleAccountPassword|ConsoleAccountPassword="<AccountPassword>"|Ano|Nastaví heslo uživatelského účtu (user@domain.com), který se použije k registraci komponenty ATA Gateway ve službě ATA Center.|
 
-**Příklady**: K bezobslužné instalaci ATA Gateway, přihlaste se k doméně připojený k počítači pomocí přihlašovacích údajů správce ATA tak, že není potřeba zadat přihlašovací údaje jako součást instalace. V opačném případě použijte k registraci v ATA Center uvedené přihlašovací údaje:
+**Příklady**: bezobslužná instalace komponenty ATA Gateway, přihlaste se k doméně připojené k počítači pomocí přihlašovacích údajů správce ATA, takže není potřeba zadat přihlašovací údaje jako součást instalace. V opačném případě použijte k registraci v ATA Center uvedené přihlašovací údaje:
 
     "Microsoft ATA Gateway Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" 
     ConsoleAccountName="user@contoso.com" ConsoleAccountPassword="userpwd"

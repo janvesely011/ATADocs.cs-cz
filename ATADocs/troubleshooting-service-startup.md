@@ -1,41 +1,42 @@
 ---
-title: Řešení potíží s spuštění služby Advanced Threat Analytics | Microsoft Docs
-description: Popisuje, jak můžete potíže ATA spuštění
+title: Řešení potíží se spuštěním služby Advanced Threat Analytics | Dokumentace Microsoftu
+description: Popisuje, jak můžete řešit problémy s ATA
 keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: 5a65285c-d1de-4025-9bb4-ef9c20b13cfa
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 87d3f1de8167c1198e6b334826f90df83cc96780
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: 637f26736a520def329ba8599c3927079fdf354d
+ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30009264"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44165911"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
 
 
-# <a name="troubleshooting-service-startup"></a>Řešení potíží s spuštění služby
+# <a name="troubleshooting-service-startup"></a>Řešení potíží se spuštěním služby
 
 ## <a name="troubleshooting-ata-center-service-startup"></a>Řešení potíží se spuštěním služby ATA Center
 
-Pokud ATA Center se nespustí, proveďte následující postup řešení potíží:
+Pokud ATA Center nespustí, proveďte následující postup řešení potíží:
 
-1.  Spusťte následující příkaz prostředí Windows PowerShell: `Get-Service Pla | Select Status` a ujistěte se, je spuštěna služba čítače výkonu. Pokud není, jedná se o problém platformy a vy musíte zajistit opětovné spuštění této služby.
-2.  Pokud byl spuštěn, pokusí se ji restartovat a zobrazí, pokud se tím problém nevyřeší: `Restart-Service Pla`
+1.  Spuštěním následujícího příkazu Windows Powershellu: `Get-Service Pla | Select Status`
+    Ujistěte se, že je spuštěna služba čítače výkonu. Pokud není, jedná se o problém platformy a vy musíte zajistit opětovné spuštění této služby.
+2.  Pokud byl spuštěn, zkuste ji restartovat a jestli řešení problému: `Restart-Service Pla`
 3.  Zkuste vytvořit ručně nový kolektor dat (bude stačit jakýkoliv, třeba jenom procesor počítače pro sběr dat).
-Pokud můžete spustit, je pravděpodobně poškozena platformu. Pokud ne, je stále problém platformy.
+Pokud se dá spustit, je platforma pravděpodobně v pořádku. V opačném případě se stále o problém platformy.
 
-4.  Zkuste znovu vytvořit ručně ATA kolekcí dat, pomocí řádku se zvýšenými oprávněními, spuštění těchto příkazů:
+4.  Zkuste znovu vytvořit ručně kolektor dat ATA, pomocí řádku se zvýšenými oprávněními spuštěním těchto příkazů:
 
         sc stop ATACenter
         logman stop "Microsoft ATA Center"
@@ -45,22 +46,23 @@ Pokud můžete spustit, je pravděpodobně poškozena platformu. Pokud ne, je st
         logman start "Microsoft ATA Center"
         sc start ATACenter
 
-## <a name="troubleshooting-ata-lightweight-gateway-startup"></a>Řešení potíží s ATA Lightweight Gateway spuštění
+## <a name="troubleshooting-ata-lightweight-gateway-startup"></a>Řešení potíží se spuštěním ATA Lightweight Gateway
 
-**Příznaky**
+**Příznak**
 
-ATA Gateway se nespustí a se tato chyba:<br></br>
-*System.Net.Http.HttpRequestException: Stavový kód odpovědi není indikuje úspěšné provedení: 500 (vnitřní chyba serveru)*
+ATA Gateway se nespustí a zobrazí tato chyba:<br></br>
+*System.Net.Http.HttpRequestException: Stavový kód odpovědi neoznačuje Úspěch: 500 (vnitřní chyba serveru)*
 
 **Popis**
 
-K tomu dochází, protože jako součást procesu instalace Lightweight Gateway, ATA přiděluje procesoru prahovou hodnotu, která umožňuje Lightweight Gateway pro využití procesoru s vyrovnávací paměť % 15. Pokud jste nastavili nezávisle prahovou hodnotu pomocí klíče registru: Tento konflikt zabrání Lightweight Gateway spuštění. 
+K tomu dochází, protože jako součást procesu instalace Lightweight Gateway, ATA přiděluje prahová hodnota využití procesoru umožňuje Lightweight Gateway pro využití procesoru s vyrovnávací pamětí 15 %. Pokud jste nastavili nezávisle na sobě prahové hodnoty pomocí klíče registru: Tento konflikt zabrání Lightweight Gateway spuštění. 
 
 **Řešení**
 
-1. V registru klíče, pokud je hodnota DWORD názvem **zakázat čítače výkonu** zkontrolujte, zda je nastavena na **0**:  `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfOS\Performance\` `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfProc\Performance`
+1. V registru názvem klíče, pokud je hodnota DWORD **zakažte čítače výkonu** Ujistěte se, že je nastavena na **0**: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfOS\Performance\`
+    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfProc\Performance`
  
-2. Potom restartujte službu Pla. ATA Lightweight Gateway automaticky rozpozná změny a restartujte službu.
+2. Restartujte službu service Pla. ATA Lightweight Gateway bude automaticky rozpoznávat změny a restartujte službu.
 
 
 ## <a name="see-also"></a>Viz také

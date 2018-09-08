@@ -6,19 +6,19 @@ author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: 1bf264d9-9697-44b5-9533-e1c498da4f07
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 2ecffce7d692a9f1ecea8d8c5220ce3b2dbf848e
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: 021a8dba5e750d76e14caa3d0c58862f254499eb
+ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30009849"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44166744"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
@@ -28,10 +28,10 @@ ms.locfileid: "30009849"
 
 Konzolu ATA použijte k monitorování a reakci na podezřelé aktivity, které detekuje ATA.
 
-Zadáním `?` klíč poskytuje klávesové zkratky pro usnadnění portálu ATA. 
+Psát `?` klíč poskytuje klávesové zkratky pro přístupnost portálu ATA. 
 
 ## <a name="enabling-access-to-the-ata-console"></a>Povolení přístupu ke konzole ATA
-Chcete-li úspěšně přihlásit ke konzole ATA, budete muset přihlásit jako uživatel, který byl přiřazen správné roli ATA přístup ke konzole ATA. Další informace o řízení přístupu na základě role (RBAC) v ATA najdete v tématu [práce se skupinami role ATA](ata-role-groups.md).
+Chcete-li úspěšně přihlášení ke konzole ATA, budete muset přihlásit jako uživatel, který byl přiřazen správné roli ATA pro přístup ke konzole ATA. Další informace o řízení přístupu na základě role (RBAC) v ATA najdete v tématu [práce se skupinami rolí ATA](ata-role-groups.md).
 
 ## <a name="logging-into-the-ata-console"></a>Přihlášení ke konzole ATA
 
@@ -45,12 +45,12 @@ Chcete-li úspěšně přihlásit ke konzole ATA, budete muset přihlásit jako 
  >[!NOTE]
  > Můžete také otevřít prohlížeč z komponenty ATA Center nebo ATA Gateway a vyhledat IP adresu, kterou jste při instalaci komponenty ATA Center nakonfigurovali pro konzolu ATA.    
 
-2.  Pokud počítač, na kterém je nainstalován ATA Center a počítači, ze kterého se pokoušíte získat přístup ke konzole ATA jsou obě domény připojený, ATA podporuje jednotné přihlašování v integraci s ověřováním systému Windows – Pokud jste již přihlášeni k počítači, ATA používá Tento token pro přihlášení ke konzole ATA. K přihlášení můžete použít také čipovou kartu. Vaše oprávnění v ATA odpovídají s vaší [role správce](ata-role-groups.md).
+2.  Pokud počítač, na kterém je nainstalovaná na ATA Center a počítače, ze kterého se pokoušíte získat přístup ke konzole ATA se obě domény připojený, podporuje ATA jednotné přihlašování integrované s ověřováním Windows – Pokud jste již přihlášení k počítači, ATA využívá Tento token pro přihlášení ke konzole ATA. K přihlášení můžete použít také čipovou kartu. Vaše oprávnění v ATA odpovídat vaší [role správce](ata-role-groups.md).
 
  > [!NOTE]
- > Ujistěte se, že jste přihlášení k počítači, ze kterého mají být přístup ke konzole ATA pomocí ATA správce uživatelského jména a hesla. Alternativně můžete spustit prohlížeč jako jiný uživatel nebo se odhlásit z Windows a přihlásit se jako uživatel s rolí správce ATA. K konzoly ATA na požádat o přihlašovací údaje, přístup ke konzole pomocí IP adresy a výzva k zadání přihlašovacích údajů.
+ > Ujistěte se, že pro přihlášení k počítači, ze kterého chcete získat přístup ke konzole ATA pomocí ATA uživatelské jméno správce a hesla. Alternativně můžete spustit prohlížeč jako jiný uživatel nebo se odhlásit z Windows a přihlásit se jako uživatel s rolí správce ATA. Výzvy konzoly ATA, chcete-li požádat o přihlašovací údaje, přístup ke konzole IP adres zobrazí se výzva k zadání přihlašovacích údajů.
 
-3. K přihlášení pomocí jednotného přihlašování, ujistěte se, web konzoly ATA je definován jako web místního intranetu v prohlížeči a přístup pomocí shortname nebo localhost.
+3. K přihlášení pomocí jednotného přihlašování, ujistěte se, že web konzoly ATA je definován jako místní intranetový server v prohlížeči a přístup shortname nebo místním hostiteli.
 
 > [!NOTE]
 > Kromě protokolování všech podezřelých aktivit a upozornění na stav se každá změna konfigurace, kterou uděláte v konzole ATA, audituje v protokolu událostí Windows na počítači s komponentou ATA Center, a to v oblasti **Protokoly aplikací a služeb** > **Microsoft ATA**. Stejně tak se audituje každé přihlášení ke konzole ATA.<br></br>  Do protokolu událostí Windows na počítači s komponentou ATA Gateway se protokoluje také konfigurace, která tuto komponentu ovlivňuje. 
@@ -66,7 +66,7 @@ Toto jsou klíčové prvky konzoly ATA.
 
 ### <a name="attack-time-line"></a>Časová osa útoků
 
-Toto je výchozí cílová stránka, která se vám zobrazí po přihlášení ke konzole ATA. Ve výchozím nastavení jsou všechny otevřené podezřelé aktivity zobrazené na časové ose útoků. Můžete filtrovat a zobrazit všechny časové ose útoků otevřít, Suppressed nebo zamítnuté podezřelé aktivity. Můžete také zjistit závažnost, která se jednotlivým aktivitám přiřadila.
+Toto je výchozí cílová stránka, která se vám zobrazí po přihlášení ke konzole ATA. Ve výchozím nastavení jsou všechny otevřené podezřelé aktivity zobrazené na časové ose útoků. Můžete filtrovat na časové ose útoku a zobrazit všechny, otevřít, zamítnuté nebo Suppressed podezřelých aktivit. Můžete také zjistit závažnost, která se jednotlivým aktivitám přiřadila.
 
 ![Obrázek časové osy útoku ATA](media/ATA-Suspicious-Activity-Timeline.jpg)
 
@@ -74,13 +74,13 @@ Další informace najdete v tématu [Práce s podezřelými aktivitami](working-
 
 ### <a name="notification-bar"></a>Oznamovací pruh
 
-Když se detekuje nová podezřelá aktivita, oznamovací pruh se automaticky otevře na pravé straně. Pokud byly od posledního přihlášení zjištěné nové podezřelé aktivity, oznamovací pruh se otevře hned po vašem úspěšném přihlášení. Oznamovací pruh můžete kdykoli vyvolat kliknutím na šipku napravo.
+Když se zjistí nové podezřelé aktivity, oznamovací pruh se automaticky otevře na pravé straně. Pokud byly od posledního přihlášení zjištěné nové podezřelé aktivity, oznamovací pruh se otevře hned po vašem úspěšném přihlášení. Oznamovací pruh můžete kdykoli vyvolat kliknutím na šipku napravo.
 
 ![Obrázek oznamovacího pruhu ATA](media/notification-bar-1.7.png)
 
 ### <a name="whats-new"></a>Co je nového
 
-Po vydání nové verze ATA, **co je nového** okno se zobrazí v horní pravé umožnit vám vědět, co byl přidán v nejnovější verzi. Je také poskytuje odkaz na stažení verze.
+Po vydání nové verze ATA se **novinky** okno se zobrazí v horní pravé dali vám vědět, co bylo přidáno v nejnovější verzi. Také poskytuje vám s odkazem na stažení verze.
 
 ### <a name="filtering-panel"></a>Panel filtrování
 
@@ -88,7 +88,7 @@ Na základě stavu a závažnosti umožňuje filtrovat, které podezřelé aktiv
 
 ### <a name="search-bar"></a>Panel hledání
 
-Panel hledání můžete najít v horní nabídce. Můžete hledat konkrétního uživatele, počítače nebo skupiny v ATA. Pokud si ho chcete vyzkoušet, stačí začít psát.
+V horní nabídce můžete najít panelu hledání. Můžete vyhledat konkrétního uživatele, počítače nebo skupin v ATA. Pokud si ho chcete vyzkoušet, stačí začít psát.
 
 ![Obrázek hledání na konzole ATA](media/ATA-console-search.png)
 
@@ -98,7 +98,7 @@ Health Center zobrazuje výstrahy, pokud v nasazení ATA něco nefunguje tak, ja
 
 ![Obrázek ATA Health Center](media/ATA-Health-Issue.jpg)
 
-Kdykoli váš systém narazí na problém, třeba Chyba připojení nebo odpojení komponenty ATA Gateway, ikona Health Center umožňuje upozorní zobrazením červené tečky. ![Obrázek červené tečky ATA Health Center](media/ATA-Health-Center-Alert-red-dot.png)
+Kdykoli váš systém narazí na problém, jako je například Chyba připojení nebo odpojení komponenty ATA Gateway, ikona Health Center vám umožní upozorní zobrazením červené tečky. ![Obrázek červené tečky ATA Health Center](media/ATA-Health-Center-Alert-red-dot.png)
 
 ### <a name="sensitive-groups"></a>Citlivé skupiny
 
@@ -126,7 +126,7 @@ Následující seznam skupin považuje ATA za **citlivé**. Za citlivou se pova�
 
 ### <a name="mini-profile"></a>Miniprofil
 
-Pokud umístěte ukazatel myši nad entity, kdekoli v konzole níž se nachází prezentuje jedna entita, například uživatele nebo počítač, miniprofil automaticky spustí, pokud je k dispozici zobrazí následující informace:
+Pokud myší najedete myší entity, kdekoli v konzole níž se nachází jedna entita, například uživatele nebo počítač, zobrazí mini profil se automaticky otevře zobrazení následující informace, pokud je k dispozici:
 
 ![Obrázek miniprofilu ATA](media/ATA-mini-profile.jpg)
 

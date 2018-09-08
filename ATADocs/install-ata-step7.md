@@ -1,23 +1,24 @@
 ---
-title: Instalace Advanced Threat Analytics - krok 8 | Microsoft Docs
-description: "V posledním kroku instalace ATA nakonfigurujete uživatele honeytokenu."
-keywords: 
+title: Instalace Advanced Threat Analytics – krok 8 | Dokumentace Microsoftu
+description: V posledním kroku instalace ATA nakonfigurujete uživatele honeytokenu.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 3/21/2018
-ms.topic: get-started-article
-ms.prod: 
+ms.date: 6/14/2018
+ms.topic: conceptual
+ms.prod: ''
 ms.service: advanced-threat-analytics
-ms.technology: 
+ms.technology: ''
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 8d7d53222c4eb98fba554b59f14d8728a88c9d95
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: f15f897539f2f41941675960e425f669cba2c878
+ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44126021"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
@@ -34,17 +35,17 @@ ATA umožňuje vyloučit z řady detekcí konkrétní IP adresy nebo uživatele.
 
 Například při **vyloučení DNS Reconnaissance** se může jednat o kontrolu zabezpečení, která jako mechanismus pro prohledávání používá službu DNS. Vyloučení pomáhá službě ATA takové kontroly ignorovat. Příkladem vyloučení *Pass-the-Ticket* je zařízení NAT.    
 
-ATA taky umožňuje konfiguraci uživatele Honeytokenu, který se používá jako depeše nebezpečného actors – ověřování spojené s tímto účtem (obvykle spících) aktivuje výstrahu.
+ATA také umožňuje konfiguraci uživatele Honeytokenu, který slouží jako past pro útočníky – jakákoliv autorizace přidružená tomuto účtu (obvykle neaktivnímu) spustí výstrahu.
 
-To můžete nakonfigurovat, postupujte takto:
+Pokud chcete nastavit tuto konfiguraci, postupujte podle těchto kroků:
 
 1.  V konzole ATA klikněte na ikonu nastavení a vyberte **Konfigurace**.
 
     ![Nastavení konfigurace ATA](media/ATA-config-icon.png)
 
-2.  V části **Detekce** klikněte na **Obecné**.
+2.  V části **detekce**, klikněte na tlačítko **značky entit**.
 
-2. V části **Účty honeytokenu** zadejte název účtu honeytokenu. Pole účtů Honeytokenu je prohledávat a entity se automaticky zobrazí ve vaší síti.
+2. V části **Účty honeytokenu** zadejte název účtu honeytokenu. Pole účtu Honeytokenu lze prohledávat a automaticky zobrazí entity ve vaší síti.
 
    ![Honeytoken](media/honeytoken.png)
 
@@ -59,7 +60,7 @@ Blahopřejeme, úspěšně jste nasadili Microsoft Advanced Threat Analytics.
 
 Zkontrolujte časovou osu útoků, abyste viděli zjištěné podezřelé aktivity a našli uživatele nebo počítače a zobrazili jejich profily.
 
-ATA spustí vyhledávání podezřelých aktivit okamžitě. Některé aktivity, například některé aktivity podezřelého chování, není k dispozici, až ATA bude mít čas vytvořit profily chování (nejméně tři týdny).
+ATA spustí vyhledávání podezřelých aktivit okamžitě. Některé aktivity, jako jsou třeba konkrétní aktivity podezřelého chování, není k dispozici, dokud ATA má určitá čas vytvořit profily chování (nejméně tři týdny).
 
 Pokud chcete zkontrolovat, jestli je ATA v provozu a odchytává průniky do vaší sítě, můžete vyzkoušet [scénář simulace útoku ATA](https://docs.microsoft.com/enterprise-mobility-security/solutions/ata-attack-simulation-playbook).
 
@@ -71,7 +72,7 @@ Pokud chcete zkontrolovat, jestli je ATA v provozu a odchytává průniky do va�
 
 ## <a name="related-videos"></a>Související videa
 - [Přehled nasazení ATA](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATA-Deployment-in-10-Minutes)
-- [Výběr správné typu ATA Gateway](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
+- [Volba správného typu komponenty ATA Gateway](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
 
 ## <a name="see-also"></a>Viz také

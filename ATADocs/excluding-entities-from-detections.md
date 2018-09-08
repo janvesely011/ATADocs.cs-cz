@@ -6,26 +6,26 @@ author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: 344c0f33-45e1-42e2-a051-f722a4504531
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 21b1d8a4537bb77de120dac4b2f15bc785161749
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: e15a4ab34b0389b2c69d8cdf2e5ac04771a24fc9
+ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30010257"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44165775"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
 
 
 # <a name="excluding-entities-from-detections"></a>Vyloučení entit z detekce
-Tento článek vysvětluje, jak z aktivován výstrahy, aby bylo možné minimalizovat true neškodné pozitivních, ale ve stejnou dobu, zkontrolujte, zda že catch true pozitivních vyloučit entity. Chcete-li zachovat ATA nebudou aktivní o aktivitách, které z konkrétní uživatele, může být součástí vašeho normální tempo, jakým firmy, můžete quiet – nebo vyloučit - konkrétní entity z vyvolání výstrahy.
+Tento článek vysvětluje, jak vyloučení entit, která aktivuje upozornění, pokud chcete minimalizovat neškodné pravdivě pozitivní, ale ve stejnou dobu, ujistěte se, že při zachycení pravdivě pozitivní. Aby služba ATA nebudou hlučného o aktivitách, které určitých uživatelů, může být součástí vaší běžné podnikové činnosti, můžete potlačit – nebo vyloučit – konkrétní entity nemají vyvolávat výstrahy.
 
 Pokud máte například kontrolu zabezpečení, která provádí rekognoskaci DNS, nebo správce, který spouští na dálku skripty na řadiči domény – a jedná se o schválené aktivity, které se provádí jako součást běžného provozu IT ve vaší organizaci.
 
@@ -33,11 +33,11 @@ Vyloučení entit, které nemají vyvolávat výstrahy v rámci služby ATA:
 
 Existují dva způsoby, jak vyloučit entity – v rámci samotné podezřelé aktivity nebo na kartě **Exclusions** (Vyloučení) na stránce **Configuration** (Konfigurace).
 
-- **Z podezřelé aktivity**: V podezřelé aktivity ose, když obdrží výstrahu u aktivit pro uživatele nebo počítače nebo IP adresu, která může provádět konkrétní aktivity a může provádět tak často, klikněte pravým tlačítkem na tři tečky na konci řádku pro podezřelé aktivity na tuto entitu a vyberte **zavřete a vyloučení**. <br></br>Tím přidáte uživatele, počítače nebo IP adresu do seznamu vyloučení pro podezřelé aktivity. Toto okno zavře podezřelé aktivity a je už uvedené v **otevřete** události seznamu v **časová osa podezřelých aktivit**.
+- **V rámci podezřelé aktivity**: V časové ose podezřelé aktivity, když obdržíte výstrahu týkající se aktivity uživatele nebo počítače nebo IP adresu, kterou smí provádět určitou aktivitu a můžou Uděláte to tak často, klikněte pravým tlačítkem na tři tečky na konci řádku pro podezřelé aktivity dané entity a vyberte **zavřít a vyloučit**. <br></br>Tím přidáte uživatele, počítače nebo IP adresu do seznamu vyloučení pro podezřelé aktivity. Zavře podezřelé aktivity a už nejsou uvedení v **otevřít** v seznamu událostí **časová osa podezřelých aktivit**.
 
     ![Vyloučení entity](./media/exclude-in-sa.png)
 
-- **Na stránce konfigurace**: můžete zkontrolovat nebo změnit jakékoli vyloučení: v části **konfigurace**, klikněte na tlačítko **vyloučení** a pak vyberte podezřelé aktivity, jako například  **Zpřístupnění citlivých účtů přihlašovací údaje jsou zveřejněné**.
+- **Na stránce konfigurace**: Kontrola nebo úprava jakékoli vyloučení: v části **konfigurace**, klikněte na tlačítko **vyloučení** a pak vyberte podezřelou aktivitu, jako je například  **Přihlašovací údaje k účtu vystavený**.
 
     ![Konfigurace vyloučení](./media/exclusions-config-page.png)
 
@@ -50,9 +50,9 @@ Doporučujeme přidat vyloučení k detekcím až po přijetí upozornění na t
 
 U některých detekcí jsou k dispozici tipy, které vám pomohou se rozhodnout, co chcete vyloučit. 
 
-Každý vyloučení závisí na kontextu, v některých můžete nastavit uživatelé, zatímco ostatní uživatelé můžete nastavit počítače nebo IP adresy. 
+Každé vyloučení závisí na kontextu, v některých můžete nastavit uživatele a pro ostatní uživatele můžete nastavit počítače nebo IP adresy. 
 
-Až budete mít možnost vyloučit IP adresu nebo počítač, můžete vyloučit jeden z nich - nemusíte zadat obě.
+Až budete mít možnost vyloučit IP adresu nebo počítač, můžete vyloučit jednu z nich – nemusíte zadávat obě dvě.
 
 > [!NOTE]
 > Konfigurační stránky můžou upravovat jenom správci ATA.

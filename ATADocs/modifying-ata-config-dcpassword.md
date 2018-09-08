@@ -6,19 +6,19 @@ author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: 4a25561b-a5ed-44aa-9b72-366976b3c72a
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 47bd7e9cdd97d8343202be86954e82e69948afed
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: a8a07fd1db2eb0e3797d4330d37fe2059b35f13f
+ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30009305"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44165724"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
@@ -29,9 +29,9 @@ ms.locfileid: "30009305"
 
 
 ## <a name="change-the-domain-connectivity-password"></a>Změna hesla připojení k doméně
-Pokud změníte heslo připojení k doméně, ujistěte se, že je zadané heslo správné. Pokud není, služba ATA Gateway zastaví na ATA Gateway.
+Pokud změníte heslo připojení k doméně, ujistěte se, že je zadané heslo správné. Pokud není, služba ATA Gateway se zastaví na komponenty ATA Gateway.
 
-Pokud máte podezření, že se to stalo na ATA Gateway, podívejte se na v souboru Microsoft.Tri.Gateway-Errors.log k následujícím chybám: `The supplied credential is invalid.`
+Pokud máte podezření, že se to stalo v komponentě ATA Gateway, vyhledejte v souboru Microsoft.Tri.Gateway-Errors.log následující chyby: `The supplied credential is invalid.`
 
 Když to chcete opravit, podle následujícího postupu aktualizujte na ATA Center heslo připojení k doméně:
 
@@ -47,7 +47,7 @@ Když to chcete opravit, podle následujícího postupu aktualizujte na ATA Cent
 
 4.  V části **Heslo** změňte heslo.
 
-    Pokud ATA Center má připojení k doméně, použijte **Test připojení** tlačítko ověřit přihlašovací údaje
+    Pokud ATA Center připojená k doméně, použijte **Test připojení** tlačítko ověřit přihlašovací údaje
 
 5.  Klikněte na **Uložit**.
 

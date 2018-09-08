@@ -6,19 +6,19 @@ author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 01/23/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: a0d64aff-ca9e-4300-b3f8-eb3c8b8ae045
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: a00a555c0dc4590043f93abcd650f6e38d719e6c
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: 0639a1732d542f570b988402d2de72e2519cedcb
+ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2017
-ms.locfileid: "24018265"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44165860"
 ---
 # <a name="whats-new-in-ata-version-15"></a>Novinky ATA verze 1.5
 Tyto poznámky k verzi obsahují informace o známých problémech v této verzi Advanced Threat Analytics.
@@ -48,13 +48,13 @@ Po aktualizaci nasazení ATA na verzi 1.5 se při instalaci nové ATA Gateway zo
 
 ![Chyba ATA GS](media/ata-install-error.png)
 
-<b>Alternativní řešení:</b> Odešlete e-mail na adresu <ataeval@microsoft.com> se žádostí o kroky alternativního řešení.
+<b>Alternativní řešení:</b> odeslat e-mailu <ataeval@microsoft.com> se žádost o kroky alternativního řešení.
 ### <a name="deployment"></a>nasazení
 Složka zadaná pro cestu k datům databáze a cestu k deníku databáze musí být prázdná (bez souborů a podsložek).
-Pokud není prázdná, není průběhu nasazení.
+Pokud není prázdná, nepostupuje nasazení.
 
 ### <a name="installation-from-zip-file"></a>Instalace ze souboru zip
-Při instalaci ATA Gateway se ujistěte, že jste extrahovali soubory ze souboru zip do místního adresáře a odtud provádíte instalaci. Neinstalujte ATA Gateway přímo ze souboru zip nebo instalace se nezdaří.
+Při instalaci ATA Gateway se ujistěte, že jste extrahovali soubory ze souboru zip do místního adresáře a odtud provádíte instalaci. Neinstalujte ATA Gateway přímo v souboru zip nebo instalace se nezdaří.
 
 ### <a name="configuration"></a>Konfigurace
 Po nastavení konfigurace služby ATA Gateway při jejím prvním spuštění se bude zobrazovat zpráva, že neproběhla synchronizace, dokud se služba úplně nespustí. To může při prvním spuštění služby trvat až 10 minut.

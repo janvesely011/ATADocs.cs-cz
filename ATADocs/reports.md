@@ -6,19 +6,19 @@ author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/27/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: 38ea49b5-cd5e-43e5-bc39-5071f759633b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 9a113d8d090c5a90a07043a0ef75e1be0fc840c3
-ms.sourcegitcommit: 158bf048d549342f2d4689f98ab11f397d9525a2
+ms.openlocfilehash: 1802a278a8d125f0d1b86eb8bead3918ef1586e6
+ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30202251"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44166116"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
@@ -30,13 +30,13 @@ ms.locfileid: "30202251"
 Pokud chcete získat přístup na stránku sestav, klikněte na ikonu sestav na řádku nabídek: ![ikona sestav](./media/ata-report-icon.png).
 Dostupné sestavy: 
 
-- **Souhrnná sestava**: Souhrnná sestava uvede řídicí panel stavu systému. Můžete zobrazit tři karty – **Summary** (Souhrn) se souhrnnými informacemi o tom, co bylo zjištěno ve vaší síti, **Open suspicious activities** (Otevřít podezřelé aktivity) s informacemi o podezřelých aktivitách, kterým byste měli věnovat pozornost, a **Open health issues** (Otevřené problémy se stavem), kde najdete seznam problémů se stavem služby ATA, kterým byste měli věnovat pozornost. Podezřelé aktivity, které jsou uvedené, jsou rozdělené podle typu, stejně jako problémy se stavem. 
+- **Souhrnná sestava**: Souhrnná sestava představuje řídicí panel stavu systému. Můžete zobrazit tři karty – **Summary** (Souhrn) se souhrnnými informacemi o tom, co bylo zjištěno ve vaší síti, **Open suspicious activities** (Otevřít podezřelé aktivity) s informacemi o podezřelých aktivitách, kterým byste měli věnovat pozornost, a **Open health issues** (Otevřené problémy se stavem), kde najdete seznam problémů se stavem služby ATA, kterým byste měli věnovat pozornost. Podezřelé aktivity, které jsou uvedené, jsou rozdělené podle typu, stejně jako problémy se stavem. 
 
-- **Úprava citlivých skupin**: Tato sestava obsahuje seznam pokaždé, když změny do citlivých skupin (například admins).
+- **Úprava citlivých skupin**: Tato sestava obsahuje seznam pokaždé, když změny citlivých skupin (např. admins).
 
-- **Hesla, které jsou zveřejněné jako nezašifrovaný text**: Některé služby používat nezabezpečené protokolu LDAP k odesílání přihlašovací údaje účtu ve formátu prostého textu. Tomu může dojít i pro citlivé účty. Útočníci monitorování síťového provozu můžete zachytit a pak znovu použít tyto přihlašovací údaje zlými úmysly. Tato sestava obsahuje seznam všech zdrojového počítače a účtu hesel, která ATA zjistil, že je odesláno jako nezašifrovaný text. 
+- **Hesla odhalená v nešifrovaném textu**: Některé služby používat nezabezpečené protokolu LDAP k odesílání přihlašovací údaje k účtu v prostém textu. To může nastat i pro citlivé účty. Útočníci monitorování síťového provozu můžete zachytit a pak znovu použít tyto přihlašovací údaje ke škodlivým účelům. Tato sestava uvádí všechny počítače a účtu hesla zdroje, které ATA zjistilo, že se odesílají ve formátu prostého textu. 
 
-- **Pomoci odhalit laterální pohyb cesty k citlivým účtům**: Tato sestava obsahuje seznam citlivé účty, které jsou zveřejňovány prostřednictvím cesty laterální pohyb. Další informace najdete v tématu [pomoci odhalit laterální pohyb cesty](use-case-lateral-movement-path.md)
+- **Laterální pohyb cesty k citlivým účtům**: Tato sestava obsahuje citlivé účty, které jsou zveřejňovány prostřednictvím cesty taktiky Lateral Movement. Další informace najdete v tématu [laterální pohyb cesty](use-case-lateral-movement-path.md)
 
 Existují dva způsoby, jak vygenerovat sestavu: na vyžádání nebo na základě naplánování pravidelného odesílání sestav e-mailem.
 
@@ -44,7 +44,7 @@ Vygenerování sestavy na vyžádání:
 
 1. Na řádku nabídek na konzole ATA klikněte na ikonu sestav: ![ikona sestav](./media/ata-report-icon.png).
 
-2. V části buď typ vašeho vybranou sestavu, nastavit **z** a **k** kalendářních dat a klikněte na tlačítko **Stáhnout**. 
+2. V části Typ vybranou sestavu, nastavit **z** a **k** kalendářních dat a klikněte na tlačítko **Stáhnout**. 
  ![sestavy](./media/reports.png)
 
 Nastavení naplánované sestavy:
@@ -54,15 +54,15 @@ Nastavení naplánované sestavy:
    ![Plánování sestav](./media/ata-sched-reports.png)
 
   > [!NOTE]
-  > Denní zprávy jsou navrženy pro odeslání krátce po půlnoci času UTC.
+  > Denní sestavy jsou určeny k odeslány brzy po půlnoci UTC.
 
-2. Klikněte na tlačítko **plán** vedle vašeho typu vybranou sestavu, nastavit četnost a e-mailovou adresu pro doručení sestavy, a klikněte na znaménko plus vedle e-mailové adresy je přidat, a klikněte na **Uložit**.
+2. Klikněte na tlačítko **plán** vedle vašeho typu vybranou sestavu, nastavit četnost a e-mailovou adresu pro doručení sestav a klikněte na znaménko plus vedle e-mailové adresy je přidat, a klikněte na **Uložit**.
 
    ![Naplánování četnosti sestav a e-mailů](./media/sched-report1.png)
 
 
 > [!NOTE]
-> Naplánované sestavy jsou doručovány prostřednictvím e-mailu a může odeslat pouze pokud jste již nakonfigurovali e-mailový server v části **konfigurace** a pak v části **oznámení a sestavy**, vyberte **e-mailu Server**.
+> Naplánované sestavy jsou doručovány e-mailem a může odeslat pouze pokud jste už nakonfigurovali e-mailový server v části **konfigurace** a pak v části **oznámení a sestavy**vyberte **e-mailu Server**.
 
 
 ## <a name="see-also"></a>Viz také

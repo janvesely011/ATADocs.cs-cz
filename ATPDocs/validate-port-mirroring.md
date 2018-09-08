@@ -1,40 +1,40 @@
 ---
-title: Ověření zrcadlení portů v Azure Advanced Threat Protection | Microsoft Docs
+title: Ověření zrcadlení portů v rozšířené ochrany před internetovými útoky pro Azure | Dokumentace Microsoftu
 description: Popisuje, jak ověřit, že je zrcadlení portů nakonfigurované správně v Azure ATP
 keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 5/22/2018
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: 0a56cf27-9eaa-4ad0-ae6c-9d0484c69094
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: b3d9d35d31eee7ae46800e0547f18330d66e90cc
-ms.sourcegitcommit: 324dc941282f2948366afa5a919bda0b029bd59d
+ms.openlocfilehash: a799d87c2657836594e290812ac6cd6e08f09042
+ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34444588"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44125919"
 ---
-*Platí pro: Azure Advanced Threat Protection*
+*Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
 
 
 # <a name="validate-port-mirroring"></a>Ověření zrcadlení portů
 > [!NOTE] 
-> Tento článek se týká pouze pokud nasazujete nasadit Azure ATP samostatné senzor místo senzor ATP Azure. Pokud chcete zjistit, pokud budete muset použít snímač ATP Azure, najdete v části [výběr správné senzoru pro vaše nasazení](atp-capacity-planning.md#choosing-the-right-sensor-type-for-your-deployment).
+> Tento článek je relevantní pouze pokud nasazujete nasadit samostatný senzor ochrany ATP v programu Azure místo senzor ochrany ATP v programu Azure. Pokud chcete zjistit, pokud budete muset použít snímač ochrany ATP v programu Azure, najdete v článku [výběr správné senzor pro vaše nasazení](atp-capacity-planning.md#choosing-the-right-sensor-type-for-your-deployment).
  
-Následující kroky vás provedou procesem ověření, že je zrcadlení portů správně nakonfigurované. Pro Azure ATP fungovalo správně musí být samostatné senzoru Azure ATP moci zobrazit provoz do a z řadiče domény. Hlavní zdroj dat používá Azure ATP je hloubková kontrola paketů síťového provozu do a z řadičů domény. Pro Azure ATP sledovat síťový provoz zrcadlení portů je potřeba nakonfigurovat. Zrcadlení portů kopíruje provoz z jednoho portu (zdrojový port) na jiný port (cílový port).
+Následující kroky vás provedou procesem ověření, že je zrcadlení portů správně nakonfigurované. Pro služby Azure ATP fungovalo správně musí mít možnost sledovat provoz do a z řadiče domény samostatného senzoru služby Azure ATP. Hlavní zdroj dat používají ochrany ATP v programu Azure je hloubková kontrola paketů síťového provozu do a z řadičů domény. Pro služby Azure ATP zobrazíte síťový provoz zrcadlení portů je potřeba nakonfigurovat. Zrcadlení portů kopíruje provoz z jednoho portu (zdrojový port) na jiný port (cílový port).
 
 ## <a name="validate-port-mirroring-using-net-mon"></a>Ověření zrcadlení portů pomocí Net Mon
-1.  Nainstalujte [Microsoft Network Monitor 3.4](http://www.microsoft.com/download/details.aspx?id=4865) na samostatné senzor ATP, který chcete ověřit.
+1.  Nainstalujte [Microsoft Network Monitor 3.4](http://www.microsoft.com/download/details.aspx?id=4865) na samostatný senzor ochrany ATP v programu, který chcete ověřit.
 
     > [!IMPORTANT]
-    > Pokud si zvolíte-li ověření zrcadlení portů, nainstalujte Wireshark, restartujte službu Azure ATP samostatné senzor po ověření.
+    > Pokud se rozhodnete nainstalovat Wireshark, aby ověření zrcadlení portů, restartujte službu ochrany ATP v programu Azure samostatný senzor po ověření.
 
 2.  Otevřete Sledování sítě a vytvořte novou kartu zachycení.
 
@@ -58,10 +58,10 @@ Následující kroky vás provedou procesem ověření, že je zrcadlení portů
     > Je důležité se ujistit, že vidíte provoz do a z řadičů domény.
     
 
-5.  Pokud se zobrazí jenom přenosy v jednom směru, pracujete s týmům sítě nebo virtualizace pomoct řešit problémy s konfigurací zrcadlení portů.
+5.  Pokud se zobrazí pouze provoz v jednom směru, pracujete s vaší sítí nebo virtualizace týmům vyřešit potíže s konfigurací zrcadlení portů.
 
 ## <a name="see-also"></a>Viz také
 
 - [Konfigurace předávání událostí](configure-event-forwarding.md)
 - [Konfigurace zrcadlení portů](configure-port-mirroring.md)
-- [Podívejte se na fórum ATP!](https://aka.ms/azureatpcommunity)
+- [Podívejte se na fórum ochrany ATP v programu.](https://aka.ms/azureatpcommunity)

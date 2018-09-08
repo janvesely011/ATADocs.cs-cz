@@ -6,19 +6,19 @@ author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: 3715b69e-e631-449b-9aed-144d0f9bcee7
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 3fdee9a98adaaacfa354a4ce95ad45c12b9be548
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: b9779476187d22e8fdd35c0958b52de527b3830c
+ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30010189"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44126514"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
@@ -27,14 +27,14 @@ ms.locfileid: "30010189"
 
 # <a name="ata-role-groups"></a>Skupiny rolí ATA
 
-Role skupiny umožňují správu přístupu k ATA. Pomocí skupin rolí můžete oddělit úlohy v rámci týmu zabezpečení a udělit přístup pouze v takovém rozsahu, který uživatelé potřebují ke své práci. Tento článek vysvětluje správu přístupu a autorizaci rolí ATA a ulehčí vám uvedení skupin rolí v ATA co nejdříve do provozu.
+Skupiny rolí umožňují správu přístupu pro ATA. Pomocí skupin rolí můžete oddělit úlohy v rámci týmu zabezpečení a udělit přístup pouze v takovém rozsahu, který uživatelé potřebují ke své práci. Tento článek vysvětluje správu přístupu a autorizaci rolí ATA a ulehčí vám uvedení skupin rolí v ATA co nejdříve do provozu.
 
 > [!NOTE]
 > Každý místní správce v komponentě ATA Center je automaticky správcem Microsoft Advanced Threat Analytics.
 
 ## <a name="types-of-ata-role-groups"></a>Typy skupin rolí ATA 
 
-ATA zavádí tři typy Role skupiny: Správci ATA, ATA uživatelů a prohlížeče ATA. Následující tabulka popisuje typ přístupu v ATA, který je dostupný pro určitou roli. Podle toho, jakou roli můžete přiřadit různé obrazovky a nabídce Možnosti v ATA nejsou k dispozici, následujícím způsobem:
+ATA zavádí tři typy skupin rolí: Správci ATA, uživatelé ATA a čtenáři ATA. Následující tabulka popisuje typ přístupu v ATA, který je dostupný pro určitou roli. V závislosti na roli, které můžete přiřadit různé obrazovky a nabídky Možnosti v ATA nejsou k dispozici, následujícím způsobem:
 
 |Aktivita |Správci Microsoft Advanced Threat Analytics|Uživatelé Microsoft Advanced Threat Analytics|Čtenáři Microsoft Advanced Threat Analytics|
 |----|----|----|----|
@@ -51,7 +51,7 @@ ATA zavádí tři typy Role skupiny: Správci ATA, ATA uživatelů a prohlíže�
 |Zobrazení výstrah a podezřelých aktivit|K dispozici|K dispozici|K dispozici|
 
 
-Uživatelé se pokusí přistoupit ke stránce, která není k dispozici pro jejich role skupiny, je přesměrován na stránku neoprávněným ATA. 
+Když se uživatelé pokusí získat přístup na stránku, která není k dispozici pro jejich skupinu rolí, bude přesměrován na stránku ATA pro neoprávněné. 
 
 ## <a name="add--remove-users---ata-role-groups"></a>Přidávání a odebírání uživatelů – skupiny rolí ATA 
 

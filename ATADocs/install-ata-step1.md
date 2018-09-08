@@ -6,19 +6,19 @@ author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 27a016fe71d08dd8e8852fc44d5dea142f914d9e
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: 028b27b36ed483338f73c30551b9f0296731a87e
+ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30010087"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44126208"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
@@ -28,10 +28,10 @@ ms.locfileid: "30010087"
 >[!div class="step-by-step"]
 [Krok 2 »](install-ata-step2.md)
 
-Tento postup instalace obsahuje pokyny pro novou instalaci ATA 1.8. Informace o aktualizaci stávajícího nasazení ATA ze starší verze najdete v tématu [Průvodci migrací ATA pro verzi 1.9](ata-update-1.9-migration-guide.md).
+Tento postup instalace obsahuje pokyny pro novou instalaci ATA 1.8. Informace o aktualizaci stávajícího nasazení ATA ze starší verze najdete v tématu [Průvodci migrací ATA pro verze 1.9](ata-update-1.9-migration-guide.md).
 
 > [!IMPORTANT] 
-> Pokud používáte Windows 2012 R2, aktualizaci KB2934520 můžete nainstalovat na server ATA Center a na servery ATA Gateway před zahájením instalace, jinak instalace ATA tuto aktualizaci nainstaluje a vyžaduje restart uprostřed instalace ATA.
+> Pokud používáte Windows 2012 R2, aktualizaci KB2934520 můžete nainstalovat na server ATA Center a na serverech ATA Gateway před začátkem instalace, jinak instalace ATA tuto aktualizaci nainstaluje a vyžaduje restart uprostřed instalace ATA.
 
 ## <a name="step-1-download-and-install-the-ata-center"></a>Krok 1: Stažení a instalace ATA Center
 Po ověření, že server splňuje požadavky, můžete pokračovat v instalaci ATA Center.
@@ -43,7 +43,7 @@ Na serveru ATA Center proveďte tento postup.
 
 1.  Stáhněte si ATA z webu [Microsoft Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx), [TechNet Evaluation Center](http://www.microsoft.com/evalcenter/) nebo [MSDN](https://msdn.microsoft.com/subscriptions/downloads).
 
-2.  Přihlaste se k počítači, na kterém instalujete ATA Center jako uživatel, který je členem místní skupiny administrators.
+2.  Přihlaste se k počítači, do kterého instalujete ATA Center jako uživatel, který je členem místní skupiny administrators.
 
 3.  Spusťte **Microsoft ATA Center Setup.EXE** a postupujte podle pokynů průvodce instalací.
 
@@ -53,12 +53,12 @@ Na serveru ATA Center proveďte tento postup.
 4.  Pokud není nainstalované rozhraní Microsoft .net Framework, zobrazí se výzva k jeho instalaci, když spustíte instalaci. Po dokončení instalace rozhraní .NET Framework se může zobrazit výzva k restartování.
 5.  Na **Vítejte** vyberte jazyk, který chcete použít pro instalační obrazovky ATA, a klikněte na tlačítko **Další**.
 
-6.  Přečtěte si licenční podmínky pro Software společnosti Microsoft a pokud s podmínkami souhlasíte, klikněte na zaškrtávací políčko a pak klikněte na tlačítko **Další**.
+6.  Přečtěte si licenční podmínky pro Software společnosti Microsoft a pokud souhlasíte s podmínkami, klikněte na zaškrtávací políčko a potom klikněte na tlačítko **Další**.
 
-7.  Doporučuje se nastavit řešení ATA tak, aby se aktualizovalo automaticky. Pokud není Windows to udělat v počítači, můžete získat **použít službu Microsoft Update zajistit, aby byl počítač zabezpečen a aktuální** obrazovky. 
+7.  Doporučuje se nastavit řešení ATA tak, aby se aktualizovalo automaticky. Pokud Windows není nastavená k tomu ve vašem počítači, můžete získat **použít službu Microsoft Update zajistit, aby byl váš počítač, zabezpečené a aktuální** obrazovky. 
     ![Obrázek zajištění aktuálnosti ATA](media/ata_ms_update.png)
 
-8. Vyberte **Při vyhledávání aktualizací použít službu Microsoft Update (doporučeno)**. To se upraví nastavení Windows tak, aby povolovala aktualizace pro ostatní produkty Microsoftu (včetně ATA), zde. 
+8. Vyberte **Při vyhledávání aktualizací použít službu Microsoft Update (doporučeno)**. To upraví nastavení Windows tak, aby povolovala aktualizace pro ostatní produkty Microsoftu (včetně ATA), zde. 
 
     ![Obrázek automatické aktualizace Windows](media/ata_installupdatesautomatically.png)
 
@@ -66,9 +66,9 @@ Na serveru ATA Center proveďte tento postup.
 
     |Pole|Popis|Komentáře|
     |---------|---------------|------------|
-    |Instalační cesta|Toto je umístění, kde je nainstalován ATA Center. Ve výchozím nastavení to je %programfiles%\Microsoft Advanced Threat Analytics\Center.|Ponechte výchozí hodnotu.|
-    |Cesta k datům databáze|Toto je umístění, kde jsou umístěny soubory databáze MongoDB. Ve výchozím nastavení to je %programfiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data.|Změňte umístění na místo, kde existuje místo pro růst v závislosti na vaší velikosti. **Poznámka:** <ul><li>V produkčních prostředích byste měli používat jednotku, která má dostatek místa na základě plánování kapacity.</li><li>U rozsáhlých nasazení by měla být databáze umístěná na samostatném fyzickém disku.</li></ul>Informace o velikosti najdete v tématu [Plánování kapacity ATA](ata-capacity-planning.md).|
-    |Certifikát SSL služby Center|To je certifikát, který je používán službou konzole ATA a ATA Center.|Klikněte na ikonu klíče a vyberte nainstalovaný certifikát, nebo při nasazení v testovacím prostředí zaškrtněte certifikát podepsaný svým držitelem. Máte možnost vytvořit certifikát podepsaný svým držitelem.|
+    |Instalační cesta|Toto je umístění, kde je nainstalován na ATA Center. Ve výchozím nastavení to je %programfiles%\Microsoft Advanced Threat Analytics\Center.|Ponechte výchozí hodnotu.|
+    |Cesta k datům databáze|Toto je umístění, kde jsou uložené soubory databáze MongoDB. Ve výchozím nastavení to je %programfiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data.|Změňte umístění na místo, kde existuje místo pro růst v závislosti na vaší velikosti. **Poznámka:** <ul><li>V produkčním prostředí měli používat jednotku, která má dostatek místa na základě plánování kapacity.</li><li>U rozsáhlých nasazení by měla být databáze umístěná na samostatném fyzickém disku.</li></ul>Informace o velikosti najdete v tématu [Plánování kapacity ATA](ata-capacity-planning.md).|
+    |Certifikát SSL služby Center|Jedná se o certifikát, který je používán službou konzole ATA a komponenty ATA Center.|Klikněte na ikonu klíče a vyberte nainstalovaný certifikát, nebo při nasazení v testovacím prostředí zaškrtněte certifikát podepsaný svým držitelem. Máte možnost vytvořit certifikát podepsaný svým držitelem.|
         
     ![Obrázek konfigurace ATA Center](media/ATA-Center-Configuration.png)
 
@@ -84,17 +84,17 @@ Na serveru ATA Center proveďte tento postup.
     -   Certifikáty podepsané svým držitelem (pokud došlo k výběru během instalace)
 
 11.  Po dokončení instalace otevřete kliknutím na **Spustit** konzolu ATA a dokončete instalaci na stránce **Konfigurace**.
-V tomto okamžiku jste bude automaticky přejít na **Obecné** stránka nastavení, chcete-li pokračovat konfiguraci a nasazení komponent ATA Gateway.
-Vzhledem k tomu, že se přihlašujete do lokality pomocí IP adresy, zobrazí se upozornění související s certifikátem. to je normální a měli byste kliknout na **pokračovat na tento web**.
+V tuto chvíli vás bude automaticky přejít na **Obecné** stránku nastavení a pokračovat v konfiguraci a nasazení komponent ATA Gateway.
+Vzhledem k tomu, že se přihlašujete na web pomocí IP adresy, zobrazí se upozornění související s certifikátem, to je normální a měli byste kliknout na **pokračovat na tento web**.
 
 ### <a name="validate-installation"></a>Ověření instalace
 
 1.  Zkontrolujte, že je služba **Microsoft Advanced Threat Analytics Center** spuštěná.
 2.  Na ploše klikněte na zástupce **Microsoft Advanced Threat Analytics** a připojte se ke konzole ATA. Přihlaste se pomocí stejných přihlašovacích údajů, které jste použili k instalaci ATA Center.
 
-### <a name="set-anti-virus-exclusions"></a>Nastavte antivirový výjimky
+### <a name="set-anti-virus-exclusions"></a>Nastavte antivirový program výjimky
 
-Po instalaci ATA Center má být vyloučena adresář databáze MongoDB z nepřetržitě skenovaných antivirový aplikací. Výchozí umístění v databázi je: **C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data**.
+Po instalaci komponenty ATA Center má být vyloučena adresář databáze MongoDB z je průběžně skenovalo antivirové aplikace. Výchozím umístěním databáze je: **C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data**.
 
 
 
@@ -103,7 +103,7 @@ Po instalaci ATA Center má být vyloučena adresář databáze MongoDB z nepře
 [Krok 2 »](install-ata-step2.md)
 
 ## <a name="related-videos"></a>Související videa
-- [Výběr správné typu ATA Gateway](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
+- [Volba správného typu komponenty ATA Gateway](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 - [Přehled nasazení ATA](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATA-Deployment-in-10-Minutes)
 
 

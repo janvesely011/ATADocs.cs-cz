@@ -6,19 +6,19 @@ author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 1/23/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: be9ee613-4eb3-40f1-8973-e7f0a707ff57
 ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: 7bbca4eeb6ad8c5b9cf161f60144bbd27ca3c8d2
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: 73b62edd2a03001998a5fdcef75a14a71177d1d7
+ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2017
-ms.locfileid: "24018214"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44166523"
 ---
 # <a name="whats-new-in-ata-version-17"></a>Novinky ATA verze 1.7
 Tyto poznámky k verzi obsahují informace o známých problémech v této verzi Advanced Threat Analytics.
@@ -105,14 +105,14 @@ Pokud chcete tento problém vyřešit, přejděte na příkazovém řádku se zv
 ### <a name="export-suspicious-activity-details-to-excel-may-fail"></a>Export podrobností o podezřelých aktivitách do Excelu se nemusí podařit
 Při pokusu o export podrobností o podezřelých aktivitách do souboru Excelu se nemusí tato operace podařit a může se zobrazit tato chybová zpráva: *Chyba [BsonClassMapSerializer`1] System.FormatException: Při deserializaci vlastnosti Activity třídy Microsoft.Tri.Common.Data.NetworkActivities.SuspiciousActivityActivitydošlo k chybě: Prvek 'ResourceIdentifier' neodpovídá žádnému poli nebo vlastnosti třídy Microsoft.Tri.Common.Data.EventActivities.NtlmEvent. ---> System.FormatException: Prvek 'ResourceIdentifier' neodpovídá žádnému poli nebo vlastnosti třídy Microsoft.Tri.Common.Data.EventActivities.NtlmEvent.*
 
-Chcete-li vyřešit tento problém, z příkazového řádku se zvýšenými oprávněními, přejděte do následujícího umístění: **%ProgramFiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin** a spusťte následující příkazy:
-1.  `Mongo.exe ATA`(ATA musí být velkými písmeny)
+Chcete-li vyřešit tento problém, z příkazového řádku se zvýšenými oprávněními přejděte do následujícího umístění: **%ProgramFiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin** a spusťte následující příkazy:
+1.  `Mongo.exe ATA` (ATA musí být velkými písmeny)
 2.  `db.SuspiciousActivityActivity.update({ "Activity._t": "NtlmEvent" },{$unset: {"Activity.ResourceIdentifier": ""}}, {multi: true});`
 
 ## <a name="minor-changes"></a>Menší změny
 
 - ATA teď pro konzolu ATA používá OWIN místo IIS.
-- Pokud služba ATA Center je vypnutý, nebude možné získat konzole ATA.
+- Pokud má služba ATA Center je vypnutý, nelze přístup ke konzole ATA.
 - Podsítě pro krátkodobé zapůjčení už nejsou potřebné z důvodu změn v ATA NNR.
 
 ## <a name="see-also"></a>Viz také

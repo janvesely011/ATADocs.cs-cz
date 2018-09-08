@@ -1,95 +1,95 @@
 ---
-title: Plánování nasazení Azure Advanced Threat Protection | Microsoft Docs
-description: Pomůže vám naplánovat nasazení a rozhodnout, kolik serverů Azure ATP bude potřeba k podpoře vaší sítě.
+title: Plánování nasazení rozšířené ochrany před internetovými útoky pro Azure | Dokumentace Microsoftu
+description: Pomůže vám naplánovat nasazení a rozhodnout, kolik serverů ochrany ATP v programu Azure bude potřeba k podpoře vaší sítě.
 keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 5/22/2018
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.service: azure-advanced-threat-protection
 ms.prod: ''
 ms.assetid: da0ee438-35f8-4097-b3a1-1354ad59eb32
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 35d3495585cce321adccb05f202fd664356db37f
-ms.sourcegitcommit: 324dc941282f2948366afa5a919bda0b029bd59d
+ms.openlocfilehash: 3426829c0c3b9b52ec1c0fb2c7f19e5a0944bfdf
+ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34444786"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44126361"
 ---
-*Platí pro: Azure Advanced Threat Protection*
+*Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
 
 
 # <a name="azure-atp-capacity-planning"></a>Plánování kapacity v Azure ATP
-Tento článek vám pomůže určit kolik Azure ATP senzory a samostatné senzory potřebujete.
+Tento článek pomůže určit, kolik ochrany ATP v programu Azure senzory a samostatné senzory, které potřebujete.
 
 > [!NOTE] 
-> Nástroj pro změnu velikosti má dva listy – jeden pro ATA a jeden pro Azure ATP. Ujistěte se, že jste na správné listu.
+> Nástroj pro změnu velikosti má dvě tabulky – jeden pro ATA a jeden pro služby Azure ATP. Ujistěte se, že jste na správné listu.
 
 ## <a name="using-the-sizing-tool"></a>Použití nástroje pro změnu velikosti
-Doporučený a nejjednodušší způsob jak určit kapacitu pro vaše nasazení Azure ATP, je použít [nástroje pro změnu velikosti ATP Azure](http://aka.ms/aatpsizingtool). Spusťte nástroj pro změnu velikosti ATP Azure a z výsledků v Excelovém souboru pomocí následujících polí určete paměti a procesoru používaného senzoru:
+Doporučený a nejjednodušší způsob, jak určit kapacitu pro vaše nasazení služby Azure ATP, je použít [nástroje pro změnu velikosti ochrany ATP v programu Azure](http://aka.ms/aatpsizingtool). Spusťte nástroj pro změnu velikosti ochrany ATP v programu Azure a z výsledků v Excelovém souboru, použijte následující pole k určení paměti a procesoru, který používá senzor:
 
-- Azure senzor ATP: shodu **zaneprázdněn paketů za sekundu** v tabulce senzor Azure ATP v souboru výsledků s **PAKETŮ za SEKUNDU** pole [Azure ATP samostatné senzor tabulky](#azure-atp-sensor-sizing)nebo [tabulky Azure ATP senzor](#azure-atp-standalone-sensor-sizing), v závislosti na [zvoleného typu senzor](#choosing-the-right-sensor-type-for-your-deployment).
+- Senzoru služby Azure ATP: shoda **zaneprázdněný Packets/sec** v tabulce senzoru služby Azure ATP v souboru výsledků s **PAKETŮ za SEKUNDU** pole [ochrany ATP v programu Azure samostatný senzor tabulky](#azure-atp-sensor-sizing)nebo [tabulky senzoru služby Azure ATP](#azure-atp-standalone-sensor-sizing), v závislosti na [zvoleného typu senzor](#choosing-the-right-sensor-type-for-your-deployment).
 
 
 ![Ukázkový nástroj plánování kapacity](media/capacity-tool.png)
 
 
-Pokud z nějakého důvodu nemůžete použít nástroj pro změnu velikosti ATP Azure, ručně shromážděte informace z čítače paketů za sekundu ze všech řadičů domény po dobu 24 hodin s malým intervalem sběru hodnot (přibližně 5 sekund). Pak u každého řadiče domény musíte vypočítat denní průměr a průměr za nejvytíženější období (15 minut).
+Pokud z nějakého důvodu nemůžete použít nástroj pro změnu velikosti ochrany ATP v programu Azure, ručně shromažďujte údaje čítače paketů za sekundu ze všech řadičů domény po dobu 24 hodin s malým intervalem sběru hodnot (přibližně 5 sekund). Pak u každého řadiče domény musíte vypočítat denní průměr a průměr za nejvytíženější období (15 minut).
 Následující části uvádějí pokyny, jak shromáždit čítač paketů za sekundu z jednoho řadiče domény.
 
-## Výběr typu správné senzor pro vaše nasazení<a name="choosing-the-right-sensor-type-for-your-deployment"></a>
-V nasazení služby Azure ATP je podporováno libovolnou kombinaci typů sensor samostatné Azure ATP:
+## Výběr správné senzor typu nasazení<a name="choosing-the-right-sensor-type-for-your-deployment"></a>
+Nasazení služby Azure ATP libovolnou kombinaci typů ochrany ATP v programu Azure samostatný senzor je podporována:
 
-- Jenom Azure ATP samostatné senzorů
-- Jenom Azure ATP senzor
+- Pouze senzorů samostatné služby Azure ATP
+- Pouze senzoru služby Azure ATP
 - Kombinace obojího
 
-Při rozhodování o typu nasazení senzor, vezměte v úvahu následující výhody:
+Při určování typu nasazení ze senzorů, vezměte v úvahu následující výhody:
 
 |typ snímače|Výhody|Náklady|Topologie nasazení|Použití řadiče domény|
 |----|----|----|----|-----|
-|Azure senzor samostatné ATP|Nasazení mimo IP síť znesnadňuje útočníkům rozpoznání že ATP Azure je k dispozici|Vyšší|Instaluje se ve spojení s řadičem domény (mimo IP síť).|Podporuje až 100 000 paketů za sekundu|
-|Azure senzor ATP|Nevyžaduje vyhrazený server a konfiguraci zrcadlení portů.|Nižší|Instaluje se na řadiči domény.|Podporuje až 100 000 paketů za sekundu|
+|Azure ATP samostatný senzor|Nasazení mimo IP síť znesnadňuje útočníkům že ochrany ATP v programu Azure je k dispozici|Vyšší|Instaluje se ve spojení s řadičem domény (mimo IP síť).|Podporuje až 100 000 paketů za sekundu|
+|Senzoru služby Azure ATP|Nevyžaduje vyhrazený server a konfiguraci zrcadlení portů.|Nižší|Instaluje se na řadiči domény.|Podporuje až 100 000 paketů za sekundu|
 
-Při rozhodování o tom, kolik senzorů samostatné Azure ATP k nasazení, zvažte následující problémy.
+Zvažte následující skutečnosti při rozhodování o tom, kolik senzorů samostatné ochrany ATP v programu Azure k nasazení.
 
 -   **Doménové struktury a domény služby Active Directory**<br>
-    Azure ATP může monitorovat provoz z několika domén v rámci jedné doménové struktury služby Active Directory pro každý pracovní prostor, který vytvoříte. Monitorování více doménových struktur, musíte vytvořit několik pracovních prostorů. 
+    Ochrana ATP v programu Azure může monitorovat provoz z několika domén v rámci jedné doménové struktury služby Active Directory pro každý pracovní prostor, který vytvoříte. Monitorování více doménových struktur, musíte vytvořit víc pracovních prostorů. 
 
 -   **Zrcadlení portů**<br>
-Úvahy o zrcadlení portů může vyžadovat nasazení více senzorů samostatné Azure ATP za datové centrum nebo pobočku lokality.
+Úvahy o zrcadlení portů může vyžadovat nasazení více senzorů samostatné ochrany ATP v programu Azure na datové centrum nebo pobočku Web.
 
 -   **Kapacita**<br>
-    Azure ATP samostatné senzor může podporovat monitorování několika řadičů domény, v závislosti na objemu síťových přenosů monitorovaných řadičů domény. 
+    Samostatný senzor ochrany ATP v programu Azure může podporovat monitorování několika řadičů domény, v závislosti na objemu síťových přenosů monitorovaných řadičů domény. 
 
 
-## Azure senzor ATP a samostatné senzor velikosti <a name="sizing"></a>
+## Azure senzor ochrany ATP v programu a velikosti samostatný senzor <a name="sizing"></a>
 
-Azure ATP senzor může podporovat monitorování jednoho řadiče domény založené na objem síťového provozu, který generuje řadičem domény. V následující tabulce je odhad, konečné množství, které analyzuje senzoru je závisí na množství provozu a distribuci přenosů. 
+Senzoru služby Azure ATP může podporovat monitorování jednoho řadiče domény na základě objemu síťového provozu, který tento řadič generuje. V následující tabulce je odhad, finální částku, která analyzuje senzor je závislá na dobu provozu a distribuci provozu. 
 > [!NOTE]
-> Následující kapacity procesoru a paměti odkazuje na spotřebu senzoru vlastní – není kapacity řadiče domény.
+> Následující kapacitu procesoru a paměti odkazuje na senzoru vlastní spotřeba – ne kapacity řadiče domény.
 
-|Pakety za sekundu. *|Procesor (jádra)|Paměť (GB)|
+|Paketů za sekundu *|Procesor (jádra)|Paměť (GB)|
 |----|----|-----|
-|0-1 kB|0.25|2.50|
-|1 tisíc - 5k|0.75|6.00|
-|tisíc 5-10 TIS|1.00|6.50|
-|10 tisíc - 20k|2.00|9,00|
-|20k – 50 tisíc|3.50|9.50|
-|50 tisíc - 75k |3.50|9.50|
-|75 tisíc - 100k|3.50 |9.50|
+|0 – 1 tis.|0.25|2.50|
+|1-5 tis.|0.75|6.00|
+|5-10 tis.|1.00|6.50|
+|10-20 tis.|2.00|9,00|
+|20 – 50 tis.|3.50|9.50|
+|50-75 tis. |3.50|9.50|
+|75 100 tis.|3.50 |9.50|
 
 > [!NOTE]
-> - Celkový počet jader, která bude používán službou senzoru.<br>Doporučuje se nemáte spolupráci s jádra typu hyper.
-> - Celková velikost paměti, který bude používán službou senzoru.
-> -   Pokud řadič domény nemá prostředků vyžaduje Azure ATP senzoru, nemá vliv výkon řadiče domény, ale senzoru Azure ATP nemusí fungovat podle očekávání.
+> - Celkový počet jader, která bude používat služba sensor.<br>Doporučuje se, že nechcete pracovat jádra typu hyper.
+> - Celkové množství paměti, která bude používat služba sensor.
+> -   Pokud řadič domény nemá prostředky, které senzoru služby Azure ATP vyžaduje, výkon řadiče domény nemá vliv, ale senzoru služby Azure ATP nemusí fungovat podle očekávání.
 > -   Pokud se spustí jako dynamická paměť virtuálního počítače nebo libovolná jiná paměť, funkce rozšiřování rozsahů stránek se nepodporuje.
-> -   Pro zajištění optimálního výkonu nastavte **možnost napájení** snímače Azure ATP k **vysoký výkon**.
-> -   Je vyžadován nejméně 2 jádra a 6 GB místa a 10 GB se doporučuje, včetně prostor potřebný pro Azure ATP binární soubory a protokoly.
+> -   Pro zajištění optimálního výkonu nastavte **možnost vypnutí** senzoru služby Azure ATP k **vysoký výkon**.
+> -   Je vyžadováno nejméně 2 jádra a 6 GB místa a doporučuje 10 GB včetně místa potřebného pro binární soubory ochrany ATP v programu Azure a protokoly.
 
 
 ## <a name="domain-controller-traffic-estimation"></a>Odhad provozu řadiče domény
@@ -125,11 +125,11 @@ Pokud chcete určit počet paketů za sekundu, proveďte na každém řadiči do
 
     ![Obrázek přidání čítačů výkonu](media/atp-traffic-estimation-7.png)
 
-8.  Změna **ukázkového intervalu** k **pět sekund**.
+8.  Změnit **interval vzorkování** k **pět sekund**.
 
 9. Nastavte umístění, kam chcete data uložit.
 
-10. V části **vytvořit sadu kolekcí dat**, vyberte **spustit tuto sadu kolekcí dat**a klikněte na tlačítko **Dokončit**.
+10. V části **vytvořit sadu kolekcí dat**vyberte **spustit tuto sadu kolekcí dat**a klikněte na tlačítko **Dokončit**.
 
     Nyní byste měli vidět vytvořenou sadu kolekcí dat se zeleným trojúhelníkem, který označuje, že je funkční.
 
@@ -149,4 +149,4 @@ Pokud chcete určit počet paketů za sekundu, proveďte na každém řadiči do
 - [Nástroje pro změnu velikosti Azure ATP](http://aka.ms/aatpsizingtool)
 - [Požadavky služby Azure ATP](atp-prerequisites.md)
 - [Architektura služby Azure ATP](atp-architecture.md)
-- [Podívejte se na fórum ATP!](https://aka.ms/azureatpcommunity)
+- [Podívejte se na fórum ochrany ATP v programu.](https://aka.ms/azureatpcommunity)

@@ -1,133 +1,133 @@
 ---
-title: Odkaz na ID událostí ATA | Microsoft Docs
-description: Obsahuje seznam událostí ATA ID a jejich popisy.
+title: Referenční informace o události ID ATA | Dokumentace Microsoftu
+description: Poskytuje seznam události ID ATA a jejich popisy.
 keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: 5d639e84-2e37-43a9-9667-49be6c4fa8b7
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: e9147f4333f481eaec4967dd32846bd123866941
-ms.sourcegitcommit: 49c3e41714a5a46ff2607cbced50a31ec90fc90c
+ms.openlocfilehash: 0c37024719a9037cb0522ba40115714a35a399b2
+ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "30009349"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44166432"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
 
-# <a name="ata-event-id-reference"></a>Odkaz na ID událostí ATA
+# <a name="ata-event-id-reference"></a>ATA referenční informace o ID události
 
-V prohlížeči událostí ATA Center protokoluje události pro ATA. Tento článek obsahuje seznam ID událostí a jejich popis.
+V prohlížeči událostí komponenty ATA Center protokoluje události pro ATA. Tento článek obsahuje seznam ID událostí a popis jednotlivých.
 
-Události naleznete zde:
+Události najdete tady:
 
-![umístění ID událostí](./media/event-id-location.png)
+![umístění ID události](./media/event-id-location.png)
 
 ## <a name="ata-health-events"></a>Události stavu ATA
 
-1001 – ATA Center databázových dat jednotka výstraha stavu volného místa 
+1001 – jednotky databázových dat ATA Center upozornění na stav volného místa 
 
-1003 – výstraha stavu přetížené ATA Center 
+1003 – upozornění na přetížení stav ATA Center 
 
-1004 – výstraha stavu vypršení platnosti certifikátu 
+1004 – upozornění na stav vypršení platnosti certifikátu 
 
-1005 – výstraha odpojeném stavu databáze center 
+1005 – upozornění na stav odpojení databáze System center 
 
-1006 – ATA Gateway directory services klienta účtu heslo vypršení platnosti stavu výstrahy 
+1006 – ATA Gateway adresář služby klienta účtu heslo vypršení platnosti upozornění na stav 
 
-1007 – výstraha stavu není přiřazen synchronizátor domény ATA Gateway 
+1007 – upozornění na stav nepřiřazený synchronizátor domény ATA Gateway 
 
-1008 – ATA Gateway zachycení síťový adaptér chybný stav výstrahy 
+1008 – ATA Gateway Zachytávání síťových adaptéru chybovém stavu výstrahy 
 
-1009 – síťový adaptér chybějící výstraha stavu zaznamenání ATA Gateway 
+1009 – ATA Gateway zaznamenat upozornění na chybějící stav sítě adaptéru 
 
-1010 – ATA Gateway directory services klienta připojení stavu výstrahy 
+1010 – ATA Gateway adresář služby klienta připojení stavu výstrahy 
 
-1011 – výstraha odpojeném stavu ATA Gateway 
+1011 – upozornění na stav odpojení ATA Gateway 
 
-1012 – výstraha stavu aktivity událostí přetížený ATA Gateway 
+1012 – upozornění na stav aktivity události přetížené ATA Gateway 
 
-1013 – výstraha stavu aktivity síť přetížená ATA Gateway 
+1013 – ATA Gateway přetížené síti upozornění na stav aktivity 
 
-1014 – výstraha stavu center e-mailu 
+1014 – upozornění na stav e-mailu System center 
 
-1015 – výstraha stavu center Syslog 
+1015 – upozornění na stav Syslog System center 
 
-1016 – výstraha komponenty ATA Gateway zastaralé stavu 
+1016 – upozornění na zastaralý stav komponenty ATA Gateway 
 
-1017 – center nepřijaté provoz stavu výstrahy 
+1017 – System center není příjem upozornění na stav provozu 
 
-1018 – výstraha stavu selhání spuštění ATA Gateway 
+1018 – upozornění na stav selhání spuštění ATA Gateway 
 
-1019 – výstraha stavu nedostatku paměti ATA Gateway 
+1019 – upozornění na stav nedostatku paměti ATA Gateway 
 
-1020 – výstraha stavu naslouchací proces protokolu RADIUS ATA Gateway událostí 
+1020 – upozornění na stav naslouchací proces události ATA Gateway RADIUS 
 
-1021 – výstraha stavu naslouchací proces ATA Gateway Syslog událostí 
+1021 – upozornění na stav naslouchací proces události ATA Gateway Syslog 
 
-1022 – ATA Center externí IP adresu řešení stavu výstraha při selhání 
+1022 – ATA Center externích IP adres řešení selhání upozornění na stav 
  
-## <a name="ata-suspicious-activity-events"></a>Události podezřelé aktivity ATA
+## <a name="ata-suspicious-activity-events"></a>Události podezřelých aktivit ATA
 
-2001 – podezřelé aktivity neobvyklé chování 
+2001 – podezřelá aktivita neobvyklé chování 
 
-2002 – neobvyklé protokol podezřelé aktivity 
+2002 – podezřelá aktivita neobvyklý protokol 
 
-2003 – podezřelé aktivity účtu výčet 
+2003 – podezřelá aktivita výčtu účtů 
 
 2004 – LDAP hrubou vynutit podezřelé aktivity 
 
-2006 – directory services replikace podezřelé aktivity 
+2006 – adresářových služeb replikace podezřelé aktivity 
 
-2007 – DNS rekognoskace podezřelé aktivity 
+2007 – podezřelé aktivity rekognoskace DNS 
 
-2008 – podezřelé aktivity přechod na starší verzi šifrování 
+2008 – podezřelá aktivita snížení úrovně šifrování 
 
 2012 – výčet relací podezřelé aktivity 
 
-2013 – forged PAC podezřelé aktivity 
+2013 – falešný certifikát PAC podezřelé aktivity 
 
-2014 – Honeytokenu aktivity podezřelé aktivity 
+2014 – podezřelá aktivita Honeytokenu aktivita 
 
-2016 – masivní objekt odstranění podezřelé aktivity 
+2016 – podezřelá aktivita odstranění objekt 
 
-2017 – předat hodnotu hash podezřelé aktivity 
+2017 – předání hodnoty hash podezřelé aktivity 
 
-2018 – předat lístku podezřelé aktivity 
+2018 – předání lístku podezřelé aktivity 
 
-2019 – vzdálené spuštění podezřelé aktivity 
+2019 – vzdálené spuštění podezřelých aktivit 
 
-2020 – načtení dat ochrany zálohování klíče podezřelé aktivity 
+2020 – načíst data protection zálohování klíče podezřelé aktivity 
 
-2021 – SAMR rekognoskace podezřelé aktivity 
+2021 – podezřelé aktivity rekognoskace SAMR 
 
-2022 – zlatý lístek podezřelé aktivity 
+2022 – podezřelá aktivita zlatý lístek 
 
-2023 – hrubou silou podezřelé aktivity 
+2023 – útok hrubou silou podezřelé aktivity 
 
-2024 - neobvyklé citlivou skupinu členství změnu podezřelé aktivity  
+2024 - neobvyklé citlivou skupinu členství změnit podezřelé aktivity  
 
-## <a name="ata-auditing-events"></a>Auditování událostí ATA
+## <a name="ata-auditing-events"></a>Události auditu ATA
 
-3001 – změňte konfiguraci ATA 
+3001 – změna konfigurace ATA 
 
-3002 – ATA Gateway přidán
+3002 – přidání ATA Gateway
 
-3003 – ATA Gateway odstranit
+3003 – odstranit ATA Gateway
 
-3004 - aktivovat licence ATA
+3004 - aktivovat licenci ATA
 
 3005 – Přihlaste se ke konzole ATA
 
-3006 – ruční změna stavu aktivity 
+3006 – ručně prováděné změny stavu aktivity 
 
 3007 – ruční změna stavu podezřelé aktivity 
 

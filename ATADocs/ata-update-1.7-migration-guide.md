@@ -6,19 +6,19 @@ author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 01/23/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: 8eefcd45-7a4b-4074-ac5b-1ffc48e6654a
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 891ba71bcb8c1ee362b92be2404c65c7b5158055
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: b8190552b91aa240b303bbe1a81e68086d19ded7
+ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2017
-ms.locfileid: "24019234"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44166378"
 ---
 # <a name="ata-update-to-17-migration-guide"></a>Průvodce migrací pro aktualizaci ATA na verzi 1.7
 Aktualizace ATA na verzi 1.7 přináší vylepšení v následujících oblastech:
@@ -31,9 +31,9 @@ Aktualizace ATA na verzi 1.7 přináší vylepšení v následujících oblastec
 ## <a name="updating-ata-to-version-17"></a>Aktualizace ATA na verzi 1.7
 
 > [!NOTE] 
-> Pokud ve vašem prostředí neexistuje instalace ATA, stáhněte si úplnou verzi ATA, která zahrnuje verzi 1.7 a použijte standardní postup instalace popsaný v [instalace ATA](install-ata-step1.md).
+> Pokud ve vašem prostředí neexistuje instalace ATA, stáhněte si úplnou verzi ATA, která zahrnuje verzi 1.7 a postupujte podle pokynů standardní postup instalace popsaný v [instalace ATA](install-ata-step1.md).
 
-Pokud již máte ATA verze 1.6 nasazen, tento postup vás provede kroky potřebnými k aktualizaci vašeho nasazení.
+Pokud již máte nasazení ATA verze 1.6, tento postup vás provede kroky potřebnými k aktualizaci vašeho nasazení.
 
 > [!NOTE] 
 > ATA verze 1.7 se nedá instalovat přímo přes ATA verze 1.4 nebo 1.5. Je nutné nejdřív instalovat ATA verze 1.6. 
@@ -54,7 +54,7 @@ V této verzi se k instalaci nového nasazení ATA a upgradu stávajících nasa
 
 1.  Zazálohujte svou databázi: (volitelné)
 
-    -   Pokud ATA Center běží jako virtuální počítač a chcete pořídit kontrolní bod, nejprve vypnout virtuální počítač.
+    -   Pokud ATA Center běží jako virtuální počítač a chcete pořídit kontrolní bod, nejdřív vypnout virtuální počítač.
 
     -   Pokud ATA Center běží na fyzickém serveru, postupujte podle doporučeného postupu [zálohování MongoDB](https://docs.mongodb.org/manual/core/backups/).
 
@@ -62,11 +62,11 @@ V této verzi se k instalaci nového nasazení ATA a upgradu stávajících nasa
 
     -  Na stránce **Vítejte** vyberte svůj jazyk a klikněte na **Další**.
 
-    -  Pokud povolíte nebylo automatické aktualizace ve verzi 1.6, zobrazí se výzva k nastavení použít službu Microsoft Update pro ATA k zajištění aktuálnosti ATA.  Na stránce služby Microsoft Update zaškrtněte **Při kontrole aktualizací použít službu Microsoft Update (doporučeno)**.
-    ![Zachovat aktuální obrázek ATA](media/ata_ms_update.png) to upraví nastavení Windows tak, aby povolovala aktualizace pro ostatní produkty Microsoftu (včetně ATA), zde. 
+    -  Pokud jste nepovolili automatické aktualizace ve verzi 1.6, zobrazí se výzva, abyste používali službu Microsoft Update k zajištění aktuálnosti ATA.  Na stránce služby Microsoft Update zaškrtněte **Při kontrole aktualizací použít službu Microsoft Update (doporučeno)**.
+    ![Zachovat aktuální obrázek ATA](media/ata_ms_update.png) tím upraví nastavení Windows tak, aby povolovala aktualizace pro ostatní produkty Microsoftu (včetně ATA), zde. 
      ![Obrázek automatické aktualizace Windows](media/ata_installupdatesautomatically.png)
 
-    -  Na obrazovce **Migrace dat** určete, jestli chcete provést migraci všech dat nebo jejich části. Pokud budete chtít migrovat pouze částečná data, nepřesunou se dříve zaznamenané síťové přenosy a profily chování. To znamená, že trvá tři týdny před detekce neobvyklého chování má dokončení profil, aby se povolilo rozpoznání neobvyklé aktivity. Během těchto tří týdnů všechny ostatní ATA detekuje fungovat správně. **Částečná** migrace dat trvá mnohem kratší dobu. Pokud si vyberete **úplnou** migraci dat, může dokončení instalace trvat podstatně déle. Odhadovaná doba a požadované místo na disku, které jsou uvedeny na obrazovce **Migrace dat**, závisí na objemu dříve zaznamenaného síťového provozu uloženého v předchozích verzích ATA. Před výběrem **Částečné** nebo **Úplné** migrace zkontrolujte tyto požadavky.  
+    -  Na obrazovce **Migrace dat** určete, jestli chcete migrovat všechna data nebo částečná data. Pokud budete chtít migrovat pouze částečná data, nepřesunou se dříve zaznamenané síťové přenosy a profily chování. To znamená, že bude trvat tři týdny, než detekce neobvyklého chování obsahuje kompletní profil, který umožní zjišťování neobvyklé aktivity. Během těchto tří týdnů všechny ostatní detekce ATA fungovat správně. **Částečná** migrace dat trvá mnohem kratší dobu. Pokud si vyberete **úplnou** migraci dat, může dokončení instalace trvat podstatně déle. Odhadovaná doba a požadované místo na disku, které jsou uvedeny na obrazovce **Migrace dat**, závisí na objemu dříve zaznamenaného síťového provozu uloženého v předchozích verzích ATA. Před výběrem **Částečné** nebo **Úplné** migrace zkontrolujte tyto požadavky.  
     
     ![Migrace dat ATA](media/migration-data-migration17.png)
 
@@ -75,7 +75,7 @@ V této verzi se k instalaci nového nasazení ATA a upgradu stávajících nasa
 4.  Po úspěšném dokončení aktualizace ATA Center klikněte na tlačítko **Spustit** a na konzole ATA pro komponenty ATA Gateway otevřete obrazovku **Aktualizace**.
     ![Obrazovka úspěšné aktualizace](media/migration-center-success17.png)
 
-5.  V **aktualizace** obrazovky, pokud jste již nastavili vašich komponent ATA Gateway k automatické aktualizaci, jejich aktualizace v tomto okamžiku, v opačném případě klikněte na tlačítko **aktualizace** vedle každé komponenty ATA Gateway.
+5.  V **aktualizace** obrazovky, pokud jste již nastavili automatické aktualizace ATA Gateway se aktualizace v tomto okamžiku, v opačném případě klikněte na tlačítko **aktualizovat** vedle každé ATA Gateway.
   ![Obrázek aktualizace bran](media/migration-update-gw-17.png)
 
   

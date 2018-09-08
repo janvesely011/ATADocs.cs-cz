@@ -6,19 +6,19 @@ author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 01/23/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: 0756ef64-3aef-4a69-8981-24fa8f285c6a
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: c1be20cc147e88f55d227818331f06d409dd08e7
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: f3507b344d41fd5ba4cc2fff8195178bd735b6e4
+ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2017
-ms.locfileid: "24018180"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44166472"
 ---
 # <a name="ata-update-to-16-migration-guide"></a>Průvodce migrací pro aktualizaci ATA na verzi 1.6
 Aktualizace ATA na verzi 1.6 přináší vylepšení v následujících oblastech:
@@ -39,12 +39,12 @@ Aktualizace ATA na verzi 1.6 přináší vylepšení v následujících oblastec
 
 ## <a name="updating-ata-to-version-16"></a>Aktualizace ATA na verzi 1.6
 > [!NOTE] 
-> Pokud ve vašem prostředí neexistuje instalace ATA, stáhněte si úplnou verzi ATA, která zahrnuje verzi 1.6 a použijte standardní postup instalace popsaný v [instalace ATA](install-ata-step1.md).
+> Pokud ve vašem prostředí neexistuje instalace ATA, stáhněte si úplnou verzi ATA, která zahrnuje verzi 1.6 a postupujte podle pokynů standardní postup instalace popsaný v [instalace ATA](install-ata-step1.md).
 
 Pokud již máte nasazení ATA verze 1.5, tento postup vás provede kroky potřebnými k aktualizaci vašeho nasazení.
 
 > [!NOTE] 
-> ATA verze 1.6 se nedá instalovat přímo přes ATA verze 1.4. Je nutné nejdřív instalovat ATA verze 1.5. Pokud se omylem pokusíte nainstalovat ATA 1.6 bez instalace ATA 1.5, dojde k chybě, o tom, že **na váš počítač je již nainstalovaná novější verze.** I když instalace se nezdařila - před instalací ATA verze 1.5 musíte odinstalovat zbytky ATA 1.6, které zůstávají v počítači.
+> ATA verze 1.6 se nedá instalovat přímo přes ATA verze 1.4. Je nutné nejdřív instalovat ATA verze 1.5. Pokud se omylem pokusíte nainstalovat ATA 1.6 bez instalace ATA 1.5, zobrazí se chyba o tom, že **na vašem počítači je již nainstalovaná novější verze.** I když instalace se nezdařila - před instalací ATA verze 1.5 musíte odinstalovat zbytky ATA 1.6, které zůstávají ve vašem počítači.
 
 Podle těchto kroků provedete aktualizaci ATA na verzi 1.6:
 
@@ -66,26 +66,26 @@ V této verzi se k instalaci nového nasazení ATA a upgradu stávajících nasa
 
 1.  Zazálohujte svou databázi: (volitelné)
 
-    -   Pokud ATA Center běží jako virtuální počítač a chcete pořídit kontrolní bod, nejprve vypnout virtuální počítač.
+    -   Pokud ATA Center běží jako virtuální počítač a chcete pořídit kontrolní bod, nejdřív vypnout virtuální počítač.
 
     -   Pokud ATA Center běží na fyzickém serveru, postupujte podle doporučeného postupu [zálohování MongoDB](https://docs.mongodb.org/manual/core/backups/).
 
 2.  Spusťte instalační soubor Microsoft ATA Center Setup.exe a nainstalujte aktualizaci podle pokynů na obrazovce.
 
-    1.  ATA 1.6 vyžaduje instalaci rozhraní .Net Framework 4.6.1. Pokud ještě není nainstalován, instalace ATA nainstaluje rozhraní .net Framework 4.6.1 jako součást instalace.
+    1.  ATA 1.6 vyžaduje instalaci rozhraní .Net Framework 4.6.1. Pokud ještě není nainstalované, instalace ATA nainstaluje rozhraní .net Framework 4.6.1 jako součást instalace.
     
         > [!NOTE] 
         > Instalace rozhraní .Net Framework 4.6.1 může vyžadovat restartování serveru. Instalace ATA bude pokračovat až po restartování serveru.
     
     2.  Na stránce **Vítejte** vyberte svůj jazyk a klikněte na **Další**.
 
-    3.  Přečtěte si licenční smlouvou s koncovým uživatelem a pokud souhlasíte s podmínkami, klikněte na **Další**.
+    3.  Přečtěte si licenční smlouvou s koncovým uživatelem a pokud souhlasíte s podmínkami, klikněte na tlačítko **Další**.
 
     4.  Teď je k zajištění aktuálnosti ATA možné použít službu Microsoft Update.  Na stránce služby Microsoft Update zaškrtněte **Při kontrole aktualizací použít službu Microsoft Update (doporučeno)**.
-    ![Zachovat aktuální obrázek ATA](media/ata_ms_update.png) to upraví nastavení Windows tak, aby povolovala aktualizace pro ostatní produkty Microsoftu (včetně ATA), zde. 
+    ![Zachovat aktuální obrázek ATA](media/ata_ms_update.png) tím upraví nastavení Windows tak, aby povolovala aktualizace pro ostatní produkty Microsoftu (včetně ATA), zde. 
      ![Obrázek automatické aktualizace Windows](media/ata_installupdatesautomatically.png)
 
-    5.  Před zahájením instalace ATA provede kontrolu připravenosti. Zkontrolujte výsledky kontroly a ověřte, zda požadované součásti jsou správně nainstalované a že jsou alespoň minimální množství místa na disku. 
+    5.  Před zahájením instalace ATA provede kontrolu připravenosti. Zkontrolovat výsledky kontroly a ujistěte se, že požadované součásti jsou správně a že máte alespoň minimální množství místa na disku. 
     ![Obrázek kontroly připravenosti ATA](media/ata_install_readinesschecks.png)
 
     6.  Klikněte na **Aktualizovat**. Po klepnutí na Aktualizovat bude ATA až do dokončení aktualizace offline.
@@ -132,7 +132,7 @@ Soubor zip obsahuje následující soubory:
 > [!NOTE] 
 > Po úspěšné aktualizaci ATA Gateway zastaralé oznámení pro konkrétní ATA Gateway zmizí.
 
-Víte, že všechny komponenty ATA Gateway se úspěšně aktualizovaly při všechny komponenty ATA Gateway ohlásí, že jsou úspěšně synchronizované a zpráva, že je k dispozici aktualizovaný balíček ATA Gateway zmizí.
+Víte, že všechny komponenty ATA Gateway se úspěšně aktualizovaly při všechny komponenty ATA Gateway hlásit, že jsou úspěšně synchronizované a zpráva, že je k dispozici aktualizovaný balíček ATA Gateway zmizí.
 
 ![Obrázek aktualizovaných bran](media/ATA-gw-updated.png)
 

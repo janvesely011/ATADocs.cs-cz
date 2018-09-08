@@ -1,39 +1,40 @@
 ---
-title: "Instalace Azure Advanced Threat Protection – krok 6 | Microsoft Docs"
-description: "V tomto kroku instalace ATP integrovat vaši síť VPN."
-keywords: 
+title: Instalace Azure Advanced Threat Protection – krok 6 | Dokumentace Microsoftu
+description: V tomto kroku instalace ochrany ATP v programu můžete integrovat vaši síť VPN.
+keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
-ms.date: 2/14/2018
-ms.topic: get-started-article
-ms.prod: 
+ms.date: 6/14/2018
+ms.topic: conceptual
+ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: 
+ms.technology: ''
 ms.assetid: 0d9d2a1d-6c76-4909-b6f9-58523df16d4f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d29210983f3f9f879b462ef760d0b3fe6e53cd5d
-ms.sourcegitcommit: 03e959b7ce4b6df421297e1872e028793c967302
+ms.openlocfilehash: 4923056f72147b327ca85f842acf328d6d8ef6f3
+ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44126123"
 ---
-*Platí pro: Azure Advanced Threat Protection*
+*Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
 
 
-# <a name="install-azure-atp---step-6"></a>Nainstalovat Azure ATP – krok 6
+# <a name="install-azure-atp---step-6"></a>Instalace služby Azure ATP – krok 6
 
 >[!div class="step-by-step"]
 [« Krok 5](install-atp-step5.md)
 [Krok 7 »](install-atp-step7.md)
 
-## <a name="step-6-integrate-vpn"></a>Krok 6: Integrovat sítě VPN
+## <a name="step-6-integrate-vpn"></a>Krok 6: Integrace sítě VPN
 
-Azure Advanced Threat Protection (ATP) může shromažďovat informace o monitorování účtů z řešení sítě VPN. Při konfiguraci, stránka profil uživatele obsahuje informace z připojení k síti VPN, jako je například IP adresy a umístění, kde připojení vytvořena. To doplňuje procesu šetření tím, že poskytuje další informace na aktivity uživatelů, jakož i nové detekce neobvyklé připojení k síti VPN. Volání přeložit externí IP adresu na umístění jsou anonymní. Žádné osobní identifikátor se odešlou v toto volání.
+Azure Advanced Threat Protection (ATP) z řešení sítě VPN můžete shromažďovat informace o monitorování účtů. Při konfiguraci, uživatelského profilu obsahovat informace z připojení VPN, jako je například IP adresy a umístění, původu připojení. To doplňuje procesu šetření tím, že poskytuje další informace na aktivity uživatelů, jakož i nové zjišťování pro nestandardní připojení k síti VPN. Volání překládat externí IP adresu na umístění je anonymní. Žádné osobní identifikátor se posílá ve toto volání.
 
-Azure ATP se integruje s řešení sítě VPN prostřednictvím naslouchání události monitorování účtů protokolu RADIUS předávány snímače Azure ATP. Tento mechanismus je založen na standardní monitorování účtů protokolu RADIUS ([RFC 2866](https://tools.ietf.org/html/rfc2866)), a jsou podporovány následující dodavatelů VPN:
+Ochrana ATP v programu Azure integruje řešení sítě VPN prostřednictvím naslouchání událostech monitorování účtů protokolu RADIUS předávaných do senzorů ochrany ATP v programu Azure. Tento mechanismus je založen na standardní monitorování účtů protokolu RADIUS ([RFC 2866](https://tools.ietf.org/html/rfc2866)), a podporují těchto dodavatelů VPN:
 
 -   Microsoft
 -   F5
@@ -42,49 +43,49 @@ Azure ATP se integruje s řešení sítě VPN prostřednictvím naslouchání ud
 
 ## <a name="prerequisites"></a>Požadavky
 
-Chcete-li povolit integraci VPN, nezapomeňte nastavit následující parametry:
+Povolení integrace sítě VPN, ujistěte se, že můžete nastavit následující parametry:
 
--   Otevřete port UDP 1813 na Azure ATP samostatné senzory a senzor Azure ATP.
+-   Otevřete port UDP 1813 ochrany ATP v programu Azure samostatné senzory a senzoru služby Azure ATP.
 
 
-Následující příklad používá Microsoft Routing a vzdálený přístup (RRAS) do popisují proces konfigurace sítě VPN.
+Následující příklad používá Microsoft Routing a Server pro vzdálený přístup (RRAS) k popisu proces konfigurace sítě VPN.
 
 Pokud používáte řešení VPN jiných výrobců, si projděte jejich dokumentaci pokyny o tom, jak povolit monitorování účtů protokolu RADIUS.
 
-## <a name="configure-radius-accounting-on-the-vpn-system"></a>Nakonfigurujte monitorování účtů protokolu RADIUS na serveru sítě VPN
+## <a name="configure-radius-accounting-on-the-vpn-system"></a>Nakonfigurujte monitorování účtů protokolu RADIUS sítě VPN systému
 
 Proveďte následující kroky na serveru RRAS.
  
 1.  Otevřete konzolu pro směrování a vzdálený přístup.
 2.  Klikněte pravým tlačítkem na název serveru a klikněte na tlačítko **vlastnosti**.
-3.  V **zabezpečení** v části **zprostředkovatele monitorování účtů**, vyberte **monitorování účtů protokolu RADIUS** a klikněte na tlačítko **konfigurace**.
+3.  V **zabezpečení** ve skupině **zprostředkovatel účtování**vyberte **monitorování účtů protokolu RADIUS** a klikněte na tlačítko **konfigurovat**.
 
-    ![Instalační program protokolu RADIUS](./media/radius-setup.png)
+    ![Nastavení protokolu RADIUS](./media/radius-setup.png)
 
-4.  V **přidat Server RADIUS** okno, zadejte **název serveru** nejbližší senzor samostatné Azure ATP nebo Azure ATP senzoru. V části **Port**, zkontrolujte, že je nakonfigurované výchozí 1813. Klikněte na tlačítko **změnu** a zadejte nový sdílený tajný řetězec alfanumerické znaky, které si pamatujete. Je třeba vyplnit později ve vaší konfiguraci ATP Azure. Zkontrolujte **zprávy odesílat účet protokolu RADIUS na a monitorování účtů Off** pole a pak klikněte na **OK** na všechna otevřená dialogová okna.
+4.  V **přidat Server protokolu RADIUS** okno, zadejte **název serveru** nejbližší samostatný senzor ochrany ATP v programu Azure nebo senzoru služby Azure ATP. V části **Port**, ujistěte se, že je nakonfigurovaný výchozí 1813. Klikněte na tlačítko **změnu** a zadejte nový sdílený tajný řetězec alfanumerických znaků, které si zapamatujete. Je potřeba vyplnit později v konfiguraci ochrany ATP v programu Azure. Zkontrolujte **zprávy odesílat účtu RADIUS On a vypnutém** pole a potom klikněte na tlačítko **OK** na všechna otevřená dialogová okna.
  
-     ![Nastavení virtuální privátní sítě](./media/vpn-set-accounting.png)
+     ![Nastavení sítě VPN](./media/vpn-set-accounting.png)
      
-### <a name="configure-vpn-in-atp"></a>Konfigurace sítě VPN v ATP
+### <a name="configure-vpn-in-atp"></a>Konfigurace sítě VPN v ochrany ATP v programu
 
-Azure ATP shromažďuje data sítě VPN, která pomáhá profil umístění, ze které počítače připojit k síti a jako dokáže detekovat nestandardní připojení k síti VPN.
+Ochrana ATP v programu Azure shromažďuje data sítě VPN, která pomáhá profilu umístění, ze které počítače připojit k síti a aby byla schopna odhalit podezřelé připojení k síti VPN.
 
-Konfigurace sítě VPN data v ATP:
+Data sítě VPN nakonfigurujete v ochrany ATP v programu:
 
-1.  Na portálu Azure ATP pracovního prostoru klikněte na ikonu konfigurace a potom **VPN**.
+1.  Na portálu ochrany ATP v programu Azure pracovní prostor, klikněte na ikonu konfigurace a pak **VPN**.
  
 
-2.  Zapnout **monitorování účtů protokolu Radius**a zadejte **sdílený tajný klíč** jste nakonfigurovali dříve na serveru RRAS VPN. Potom klikněte na **Uložit**.
+2.  Zapnout **monitorování účtů protokolu Radius**a zadejte **sdílený tajný klíč** jste dříve nakonfigurovali na serveru RRAS VPN. Potom klikněte na **Uložit**.
  
 
   ![Konfigurovat síť VPN Azure ATP](./media/atp-vpn-radius.png)
 
 
-Po je tato možnost povolena, všechny Azure ATP samostatné senzory a snímače naslouchání na portu 1813 pro události monitorování účtů protokolu RADIUS. 
+Poté, co je tato možnost povolena, všechny služby Azure ATP samostatné senzory a senzory naslouchání na portu 1813 pro události monitorování účtů protokolu RADIUS. 
 
-Vaše instalace je dokončena. 
+Vaše instalace byla dokončena. 
 
-Po senzoru Azure ATP přijímá VPN události a odesílá je ke cloudové službě Azure ATP pro zpracování, profil entity označí odlišné používaná umístění sítě VPN a aktivity v profilu označí umístění.
+Poté, co senzoru služby Azure ATP přijímá události VPN a odesílá je ke cloudové službě ochrana ATP v programu Azure pro zpracování, profil entity označí odlišné navštívená umístění VPN a aktivity v profilu označí umístění.
 
 
 
@@ -98,5 +99,5 @@ Po senzoru Azure ATP přijímá VPN události a odesílá je ke cloudové služb
 ## <a name="see-also"></a>Viz také
 - [Nástroje pro změnu velikosti Azure ATP](http://aka.ms/aatpsizingtool)
 - [Konfigurace shromažďování událostí](configure-event-collection.md)
-- [Požadavky Azure ATP](atp-prerequisites.md)
-- [Podívejte se na fórum ATP!](https://aka.ms/azureatpcommunity)
+- [Požadavky služby Azure ATP](atp-prerequisites.md)
+- [Podívejte se na fórum ochrany ATP v programu.](https://aka.ms/azureatpcommunity)

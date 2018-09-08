@@ -6,19 +6,19 @@ author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 5/6/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: a7d378ec-68ed-4a7b-a0db-f5e439c3e852
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: f372b4b85c240079da157052e2c20c46801398be
-ms.sourcegitcommit: 39a1ddeb6c9dd0817f92870b711627350b7f6f03
+ms.openlocfilehash: c28783170764c117a07fa19946c83638f24dc1a6
+ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33913303"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44166489"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
@@ -46,16 +46,16 @@ To je potřeba spustit vzdáleně nikoli z komponenty ATA Gateway, ale nad monit
 
 ## <a name="which-ata-build-corresponds-to-each-version"></a>Které sestavení ATA odpovídá jednotlivým verzím?
 
-Verze upgradu informace najdete v tématu [ATA upgradu](upgrade-path.md).
+Informace o upgradu verzi, naleznete v tématu [Cesta upgradu ATA](upgrade-path.md).
 
 ## <a name="what-version-should-i-use-to-upgrade-my-current-ata-deployment-to-the-latest-version"></a>Jakou verzi mám použít k upgradu aktuálního nasazení ATA na nejnovější verzi?
 
-Upgrade matice verze ATA najdete v části [ATA upgradu](upgrade-path.md).
+Tabulka upgradu verzí ATA, naleznete v tématu [Cesta upgradu ATA](upgrade-path.md).
 
 
-## <a name="how-does-the-ata-center-update-its-latest-signatures"></a>Jak ATA Center aktualizovat své nejnovější podpisy?
+## <a name="how-does-the-ata-center-update-its-latest-signatures"></a>Jak komponenty ATA Center aktualizovat své nejnovější podpisy?
 
-Tento mechanismus detekce ATA je lepší, pokud se nainstaluje se nová verze v ATA Center. Centru můžete upgradovat pomocí Microsoft Update (MU) nebo ručně stažením nové verze ze služby Stažení softwaru nebo svazek licence webu.
+Při instalaci nové verze v komponentě ATA Center je vylepšená mechanismus detekce ATA. System Center můžete upgradovat pomocí webu Microsoft Update (MU) nebo ručně stáhněte si novou verzi ze služby Stažení softwaru nebo svazek licence webu.
 
 ## <a name="how-do-i-verify-windows-event-forwarding"></a>Jak ověřím předávání událostí systému Windows?
 Do souboru můžete vložit tento kód a pak jej z příkazového řádku v adresáři: **\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin** můžete spustit následovně:
@@ -71,7 +71,7 @@ mongo.exe název souboru ATA
         });
 
 ## <a name="does-ata-work-with-encrypted-traffic"></a>Funguje ATA při šifrovaném provozu?
-ATA využívá analýzu více síťových protokolů, jakož i událostí shromážděných ze systému SIEM nebo pomocí předávání událostí systému Windows. Detekce podle síťové protokoly s šifrovaný provoz (Příklad: LDAPS a protokolu IPSEC) se nebude analyzovat.
+ATA se spoléhá na analýzu více síťových protokolů, událostí shromážděných ze systému SIEM nebo prostřednictvím předávání událostí Windows. Detekce založené na síťové protokoly s šifrovaný provoz (například LDAPS nebo IPSEC) nebude analyzováno.
 
 
 ## <a name="does-ata-work-with-kerberos-armoring"></a>Funguje ATA s obranou protokolu Kerberos?
@@ -90,12 +90,12 @@ Dojde k tomu, když je účet členem konkrétních skupin, které označujeme j
 
 Pokud chcete pochopit, proč je účet citlivý, můžete zkontrolovat jeho členství ve skupinách a zjistit, do kterých citlivých skupin patří (skupina, do které patří, může být citlivá také kvůli jiné skupině, takže je potřeba celý proces opakovat tak dlouho, až zjistíte citlivou skupinu nejvyšší úrovně). 
 
-Kromě toho můžete ručně označit uživatele, skupiny nebo počítače jako důvěrné. Další informace najdete v tématu [značky citlivé účty](tag-sensitive-accounts.md).
+Kromě toho můžete ručně označit uživatele, skupiny nebo počítače jako citlivé. Další informace najdete v tématu [označit citlivých účtů](tag-sensitive-accounts.md).
 
 ## <a name="how-do-i-monitor-a-virtual-domain-controller-using-ata"></a>Jak můžu ATA využít k monitorování virtuálního řadiče domény?
 Většina virtuálních řadičů domény se dá pokrýt komponentami ATA Lightweight Gateway. K určení, jestli je komponenta ATA Lightweight Gateway pro vaše prostředí vhodná, použijte informace v tématu [Plánování kapacity ATA](ata-capacity-planning.md).
 
-Pokud se virtuální řadič domény nedá pokrýt komponentou ATA Lightweight Gateway, může mít buď virtuální nebo fyzická ATA Gateway, jak je popsáno v [konfigurace zrcadlení portů](configure-port-mirroring.md).  <br />Nejjednodušší je mít virtuální ATA Gateway na každém hostiteli, kde existují virtuální řadiče domény.<br />Pokud virtuální řadiče domény přesunují mezi hostiteli, je třeba provést jednu z následujících kroků:
+Pokud se virtuální řadič domény nedá pokrýt komponentou ATA Lightweight Gateway, jak je popsáno v může mít buď virtuálním nebo fyzickém ATA Gateway [konfigurace zrcadlení portů](configure-port-mirroring.md).  <br />Nejjednodušší je mít virtuální ATA Gateway na každém hostiteli, kde existují virtuální řadiče domény.<br />Pokud virtuální řadiče domény přesunují mezi hostiteli, je třeba provést jednu z následujících kroků:
 
 -   Pokud se virtuální řadič domény přesune na jiného hostitele, pro ATA Gateway na tomto hostiteli předem nakonfigurujte příjem provozu z nedávno přesunutého virtuálního řadiče domény.
 -   Zkontrolujte, že jste virtuální ATA Gateway přidružili k virtuálnímu řadiči domény, takže pokud se přesune, ATA Gateway se přesune s ním.
@@ -113,15 +113,15 @@ ATA rozpoznává známé nebezpečné útoky a techniky, problémy zabezpečení
 Úplný seznam detekcí ATA najdete v tématu [Jaké detekce ATA provádí?](ata-threats.md).
 
 ## <a name="what-kind-of-storage-do-i-need-for-ata"></a>Jaký druh úložiště budu pro ATA potřebovat?
-Doporučujeme rychlé úložiště (disků 7200 ot. není doporučeno) s nízkou latencí přístup k disku (méně než 10 ms). Konfigurace RAID vy měla podporovat velkou zátěž při zápisu (nikoli RAID-5/6 nebo odvozené konfigurace).
+Doporučujeme rychlé úložiště (disky s 7200 ot. / min se nedoporučuje) s diskem s nízkou latencí (méně než 10 ms). Konfigurace RAID vy měla podporovat velkou zátěž při zápisu (nikoli RAID-5/6 nebo odvozené konfigurace).
 
 ## <a name="how-many-nics-does-the-ata-gateway-require"></a>Kolik síťových karet ATA Gateway vyžaduje?
-ATA Gateway vyžaduje minimálně dva síťové adaptéry:<br>1. Síťovou kartu pro připojení k interní síti a komponentě ATA Center<br>2. Síťovou kartu, která se používá k zachycení síťového provozu řadiče domény prostřednictvím zrcadlení portů.<br>* To neplatí pro komponentu ATA Lightweight Gateway, která nativně využívá všechny síťové adaptéry využívané řadičem domény.
+ATA Gateway vyžaduje minimálně dva síťové adaptéry:<br>1. Síťovou kartu pro připojení k interní síti a komponentě ATA Center<br>2. Síťové rozhraní, který se používá k zachycení síťového provozu na řadiči domény prostřednictvím zrcadlení portů.<br>* To neplatí pro komponentu ATA Lightweight Gateway, která nativně využívá všechny síťové adaptéry využívané řadičem domény.
 
 ## <a name="what-kind-of-integration-does-ata-have-with-siems"></a>Jaký druh integrace se systémy SIEM ATA využívá?
 Se systémy SIEM ATA využívá obousměrnou integraci:
 
-1. ATA se dá nakonfigurovat odesílání výstrahy Syslog, na libovolný server SIEM s využitím formátu CEF, když se zjistí podezřelou aktivitu.
+1. ATA lze nakonfigurovat odesílání výstrahy Syslog na libovolný server SIEM pomocí formátu CEF, když zjistí podezřelou aktivitu.
 2. ATA lze nakonfigurovat tak, aby se z těchto [serverů SIEM](install-ata-step6.md) přijímaly zprávy Syslog pro události Windows.
 
 ## <a name="can-ata-monitor-domain-controllers-virtualized-on-your-iaas-solution"></a>Může ATA monitorovat řadiče domény virtualizované ve vašem řešení IaaS?
@@ -136,7 +136,7 @@ Toto řešení se v současnosti nabízí samostatně. Není součástí Azure A
 ## <a name="do-you-have-to-write-your-own-rules-and-create-a-thresholdbaseline"></a>Je potřeba psát vlastní pravidla a určovat prahové nebo základní hodnoty?
 Microsoft Advanced Threat Analytics nevyžaduje vytváření pravidel ani prahových nebo základních hodnot a jejich následné vyladění. ATA analyzuje chování uživatelů, zařízení a prostředků a také jejich vzájemné vztahy. Dokáže rychle detekovat podezřelé aktivity a známé útoky. Tři týdny po nasazení ATA začne detekovat behaviorálně podezřelé aktivity. Naproti tomu známé útoky se zlými úmysly a problémy zabezpečení začne ATA detekovat bezprostředně po nasazení.
 
-## <a name="if-you-are-already-breached-can-microsoft-advanced-threat-analytics-identify-abnormal-behavior"></a>Pokud jste již nedodržení, Microsoft Advanced Threat Analytics identifikovat neobvyklé chování
+## <a name="if-you-are-already-breached-can-microsoft-advanced-threat-analytics-identify-abnormal-behavior"></a>Pokud jsou již nedodržení, Microsoft Advanced Threat Analytics identifikovat neobvyklé chování
 Ano, i když se ATA nainstaluje až po porušení zabezpečení, dokáže rozpoznat podezřelé aktivity hackerů. ATA nejenom zkoumá chování uživatelů, ale současně se taky dívá na ostatní uživatele v organizační mapě zabezpečení. Pokud je chování útočníka během počáteční analýzy nestandardní, je identifikovaný jako „outlier“ a ATA bude toto nestandardní chování dál hlásit. ATA může dál detekovat podezřelou aktivitu, pokud se hacker pokusí ukrást přihlašovací údaje jiných uživatelů, třeba Pass-the-Ticket, nebo se pokusí provést vzdálené spuštění na jednom z řadičů domény.
 
 ## <a name="does-this-only-leverage-traffic-from-active-directory"></a>Využívají se přitom jenom přenosy služby Active Directory?
@@ -149,13 +149,13 @@ Zrcadlení portů, které se taky označuje jako SPAN (Switched Port Analyzer), 
 Ne. ATA monitoruje všechna zařízení v síti, která zpracovávají požadavky ověřování a autorizace pro službu Active Directory, včetně zařízení s jiným systémem než Windows a mobilních zařízení.
 
 ## <a name="does-ata-monitor-computer-accounts-as-well-as-user-accounts"></a>Monitoruje ATA jak účty počítačů, tak uživatelské účty?
-Ano. Vzhledem k tomu, že počítač účty (stejně jako ostatní entity) slouží k provádění škodlivých aktivit, ATA monitoruje chování všech účtů počítačů a všechny ostatní entity v prostředí.
+Ano. Protože počítače účty (stejně jako ostatní entity) lze použít k provádění škodlivých aktivit, ATA monitoruje chování všech účtů počítačů a všechny ostatní entity v příslušném prostředí.
 
 ## <a name="can-ata-support-multi-domain-and-multi-forest"></a>Může ATA podporovat několik domén a doménových struktur?
 Microsoft Advanced Threat Analytics podporuje prostředí s více doménami v rámci stejné doménové struktury. Více doménových struktur vyžaduje nasazení ATA pro každou doménovou strukturu.
 
 ## <a name="can-you-see-the-overall-health-of-the-deployment"></a>Dá se zjistit celkový stav nasazení?
-Ano, můžete zobrazit celkový stav nasazení a taky konkrétní problémy související s konfigurací, možnostmi připojení atd se zobrazí výstraha, když k nim dojde.
+Ano, můžete zobrazit celkový stav nasazení a také konkrétní problémy související s konfigurací, připojení atd. kde se zobrazí výstraha při jejich výskytu.
 
 
 ## <a name="see-also"></a>Viz také

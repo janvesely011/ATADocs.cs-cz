@@ -6,19 +6,19 @@ author: rkarlin
 ms.author: rkarlin
 manager: mbaldwin
 ms.date: 9/03/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: 9592d413-df0e-4cec-8e03-be1ae00ba5dc
 ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: 71e7f723d02b4e86f1799e5a92998363766de7a2
-ms.sourcegitcommit: 4d2ac5b02c682840703edb0661be09055d57d728
+ms.openlocfilehash: 4d8000f7a50b4847f647a9bcc10843786aeb1285
+ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2017
-ms.locfileid: "24019047"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44166639"
 ---
 # <a name="whats-new-in-ata-version-18"></a>Novinky ATA verze 1.8
 
@@ -77,12 +77,12 @@ Tato zpráva k vydání verze obsahuje informace o aktualizacích, nových funkc
 
 - Z podezřelých aktivit byla odebrána možnost přidávat poznámky.
 - Z časové osy podezřelých aktivit byla odebrána doporučení pro jejich zmírnění.
-- Od verze ATA verze 1.8 komponenty ATA Gateway a Lightweight Gateway spravujete vlastní certifikáty a potřebovat zásahu správce spravovat.
+- Od verze ATA verze 1.8 komponenty ATA Gateway a Lightweight Gateway spravujete své vlastní certifikáty a potřebujete zásah správce spravovat.
 
 ## <a name="known-issues"></a>Známé problémy
 
 > [!WARNING]
-> Chcete-li vyhnout tyto známé problémy prosím aktualizaci nebo nasadit pomocí 1.8 aktualizací 1.
+> Aby bylo možné vyhnout těchto známých problémů prosím aktualizaci nebo nasazení můžete použít aktualizace 1.8 1.
 
 ### <a name="ata-gateway-on-windows-server-core"></a>ATA Gateway na jádru Windows Serveru
 
@@ -128,13 +128,13 @@ Na jádru Windows Serveru 2016 se chyba nemusí zobrazit, ale proces se při pok
 
 **Alternativní řešení**: Vypněte používání proxy serveru v účtu služby ATA Gateway. Tento problém bude odstraněn aktualizací v budoucí verzi.
 
-### <a name="report-settings-reset"></a>Resetování nastavení sestav
+### <a name="report-settings-reset"></a>Obnovení nastavení sestavy
 
-**Příznaky**: všechna nastavení, které byly provedeny plánované sestavy jsou vymazány při aktualizaci 1,8 update 1.
+**Příznaky**: všechna nastavení, které byly provedeny naplánované sestavy jsou vymazány při aktualizaci 1,8 update 1.
 
-**Popis**: aktualizace na 1,8 aktualizací 1 z 1,8 resetování sestavy nastavení plánu.
+**Popis**: aktualizace 1,8 update 1 z 1.8 resetování sestavy nastavení plánu.
 
-**Alternativní řešení**: před aktualizací k 1,8 update 1, vytvořte kopii nastavení sestavy a zadejte je znovu, to může být také pomocí skriptu pro další informace najdete v tématu [exportu a importu konfigurace ATA](ata-configuration-file.md).
+**Alternativní řešení**: před aktualizací na 1.8 update 1, vytvořte kopii sestavy nastavení a zadejte je znovu, může jít prostřednictvím skriptu, další informace najdete v tématu [Export a Import konfigurace ATA](ata-configuration-file.md).
 
 
 ## <a name="see-also"></a>Viz také
