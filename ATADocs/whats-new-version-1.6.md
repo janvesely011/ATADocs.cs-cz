@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 27b139e5-12b9-4953-8f53-eb58e8ce0038
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 81cbe1d2952bfe57266f084cb1fc05b5558415c5
-ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
+ms.openlocfilehash: 48123c7eab69f40423142e2368c4c37b3b74172b
+ms.sourcegitcommit: 625b56f8069038ea3e45a91f9d449bd7f39f06b8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44166863"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44326250"
 ---
 # <a name="whats-new-in-ata-version-16"></a>Novinky ATA verze 1.6
 Tyto poznámky k verzi obsahují informace o známých problémech v této verzi Advanced Threat Analytics.
@@ -43,26 +43,27 @@ Aktualizace ATA na verzi 1.6 přináší vylepšení v následujících oblastec
 ### <a name="new-detections"></a>Nové detekce
 
 
-- **Škodlivý požadavek na soukromé informace přes Data Protection** Data Protection API (DPAPI) je služba ochrany dat založená na heslech. Tuto službu ochrany používají různé aplikace, které ukládají tajné údaje uživatelů, jako jsou hesla k webům a přihlašovací údaje ke sdíleným složkám. Při ztrátě hesla mohou uživatelé dešifrovat chráněná data pomocí obnovovacího klíče, který nezahrnuje jejich heslo. V doménovém prostředí útočníci mohou vzdáleně ukrást obnovovací klíč a použít ho k dešifrování chráněných dat ve všech počítačích připojených k doméně.
+- **Škodlivý požadavek na soukromé informace přes Data Protection** Data Protection API (DPAPI) je služba ochrany dat založená na heslech. Tuto službu ochrany používají různé aplikace, které ukládají tajné údaje uživatelů, jako jsou hesla k webům a přihlašovací údaje ke sdíleným složkám. Za účelem podpory při ztrátě hesla mohou uživatelé dešifrovat chráněná data pomocí obnovovacího klíče, který nezahrnuje jejich heslo. V doménovém prostředí útočníci mohou vzdáleně ukrást obnovovací klíč a použít ho k dešifrování chráněných dat ve všech počítačích připojených k doméně.
 
 
-- **Výčet síťových relací** Rekognoskace je klíčovou fází v rámci rozšířeného řetězu událostí útoku. Řadiče domén (DC) fungují pro účely distribuce objektů zásad skupiny jako souborové servery. Využívají přitom protokol SMB (Server Message Block). V rámci fáze rekognoskace se útočníci mohou dotazovat řadiče domény na všechny aktivní relace SMB na serveru, což jim umožní získat přístup ke všem IP adresám a uživatelům, kteří jsou k těmto relacím SMB přidružení. Výčet relací SMB potom útočníci mohou využít k cílení na citlivé účty a následně k laterálnímu pohybu napříč sítí.
+- **Výčet síťových relací** Rekognoskace je klíčovou fází v rámci rozšířeného řetězu událostí útoku. Řadiče domén (DC) fungují pro účely distribuce objektů zásad skupiny jako souborové servery. Využívají přitom protokol SMB (Server Message Block). V rámci fáze rekognoskace se útočníci mohou dotazovat řadiče domény na všechny aktivní relace SMB na serveru. To mu umožní získat přístup ke všem uživatelům a IP adresy přidružené k těmto relacím SMB přidružení. Výčet relací SMB potom útočníci mohou využít k cílení na citlivé účty a následně k laterálnímu pohybu napříč sítí.
 
 
-- **Požadavky na škodlivou replikaci** V prostředí Active Directory dochází k pravidelné replikaci mezi řadiči domény. Útočník může zfalšovat požadavek na replikaci Active Directory (někdy zosobněním řadiče domény). To mu umožní načíst dat uložená ve službě Active Directory, včetně hodnot hash hesel, aniž by musel využívat rušivější techniky, jako je třeba služba Stínová kopie svazku.
+- **Požadavky na škodlivou replikaci** V prostředí Active Directory dochází k pravidelné replikaci mezi řadiči domény. Útočník může zfalšovat požadavek replikace služby Active Directory (někdy zosobněním řadiče domény). Tato falešného umožňuje umožní načíst dat uložená ve službě Active Directory, včetně hodnot hash hesel, aniž by musel využívat rušivější techniky, jako je stínová kopie svazku.
 
 
-- **Detekce chyby zabezpečení MS11-013** V protokolu Kerberos existuje chyba zabezpečení zvýšení oprávnění, která umožňuje falšování konkrétních aspektů lístků služby Kerberos. Kyberzločinec nebo útočník, který tuto chybu zabezpečení úspěšně zneužije, může získat token se zvýšenými oprávněními na řadiči domény.
+- **Detekce chyby zabezpečení MS11-013**  
+Je zvýšení privilegií v protokolu Kerberos, který umožňuje konkrétních aspektů lístků služby Kerberos zfalšovat. Kyberzločinec nebo útočník, který tuto chybu zabezpečení úspěšně zneužije, může získat token se zvýšenými oprávněními na řadiči domény.
 
 
-- **Neobvyklá implementace protokolu**Požadavky na ověření (Kerberos nebo NTLM) se obvykle zpracovávají pomocí standardní sady metod a protokolů. K zajištění úspěšného ověření ale stačí, aby požadavek splňoval konkrétní sadu požadavků. Útočníci mohou implementovat tyto protokoly s malými odchylkami od standardní implementace v daném prostředí. Tyto odchylky mohou signalizovat přítomnost útočníka, který se pokouší realizovat útoky typu pass-the-hash, útoky hrubou silou a další.
+- **Neobvyklá implementace protokolu**Požadavky na ověření (Kerberos nebo NTLM) se obvykle zpracovávají pomocí standardní sady metod a protokolů. K zajištění úspěšného ověření ale stačí, aby požadavek splňoval konkrétní sadu požadavků. Útočníci mohou implementovat tyto protokoly s malými odchylkami od standardní implementace v daném prostředí. Tyto odchylky mohou signalizovat přítomnost útočníka pokusu o provedení útoku, třeba technikou Pass-The-Hash, útoky hrubou silou a další.
 
 
 ### <a name="improvements-to-existing-detections"></a>Vylepšení stávajících detekcí
-ATA 1.6 zahrnuje vylepšenou detekční logiku, která omezuje falešně pozitivní i falešně negativní scénáře pro již existující detekce, jako je zlatý lístek, honeytoken, útok hrubou silou nebo vzdálené spuštění.
+ATA 1.6 zahrnuje vylepšenou detekční logiku, která omezuje falešně pozitivní i falešně negativní scénáře pro již existující detekce, jako je zlatý lístek, Honeytoken, útok hrubou silou a vzdálené spuštění.
 
 ### <a name="the-ata-lightweight-gateway"></a>ATA Lightweight Gateway
-Tato verze ATA zavádí nové možnosti nasazení pro ATA Gateway, které umožňují instalovat tuto komponentu přímo na řadič domény. Tato možnost nasazení odebere méně důležité funkce ATA Gateway a na základě prostředků dostupných na řadiči domény zavede dynamickou správu prostředků, která zajistí, že stávající operace řadiče domény nebudou ovlivněny. ATA Lightweight Gateway snižuje náklady na nasazení ATA. Současně usnadňuje nasazení v pobočkách, které mají omezenou kapacitu hardwarových prostředků nebo nemohou nastavit podporu pro zrcadlení portů.
+Tato verze ATA zavádí nové možnosti nasazení pro ATA Gateway, které umožňují instalovat tuto komponentu přímo na řadič domény. Tato možnost nasazení odebere méně důležité funkce ATA Gateway a na základě prostředků dostupných na řadiči domény zavede dynamickou správu prostředků, která zajistí, že stávající operace řadiče domény nebudou ovlivněny. ATA Lightweight Gateway snižuje náklady na nasazení ATA. Ve stejnou dobu, usnadňuje nasazení v pobočkách, ve kterých je omezenou kapacitu hardwarových prostředků nebo nemohou nastavit podporu pro zrcadlení portů nahoru.
 Další informace o ATA Lightweight Gateway najdete v tématu [Architektura ATA](ata-architecture.md#ata-gateway-and-ata-lightweight-gateway).
 
 Další informace o aspektech nasazení a volbě vhodného typu brány najdete v tématu [Plánování kapacity ATA](ata-capacity-planning.md#choosing-the-right-gateway-type-for-your-deployment).
@@ -77,14 +78,14 @@ Nižší databázové zatížení a efektivnější způsob spouštění detekc�
 ATA 1.6 potřebuje ke spuštění databáze ATA výrazně menší prostor úložiště. V současnosti vyžaduje jenom 20 % prostoru úložiště v porovnání s předchozími verzemi.
 
 ### <a name="support-for-ibm-qradar"></a>Podpora IBM QRadar
-ATA nyní může přijímat události z řešení QRadar SIEM společnosti IBM (kromě už dříve podporovaných řešení SIEM).
+ATA může přijímat události z řešení QRadar SIEM společnosti IBM, kromě dříve podporovaných řešení SIEM.
 
 ## <a name="known-issues"></a>Známé problémy
 V této verzi existují následující známé problémy.
 
 ### <a name="failure-to-recognize-new-path-in-manually-moved-databases"></a>Nerozpoznání nových cest u ručně přesunutých databází
 
-V nasazeních ATA, ve kterých je cesta k databázi ručně přesunutá, se pro aktualizaci nepoužije nová cesta k databázi. Může to způsobit následující problémy:
+V nasazeních ATA, ve kterých je cesta k databázi ručně přesunutá, se pro aktualizaci nepoužije nová cesta k databázi. Přesunout ručně, že cesta k databázi, může způsobit následující problémy:
 
 
 - ATA může využít veškeré volné místo na systémové jednotce komponenty ATA Center, bez pravidelného odstraňování starých síťových aktivit.
@@ -92,9 +93,10 @@ V nasazeních ATA, ve kterých je cesta k databázi ručně přesunutá, se pro 
 
 - Aktualizace ATA na verzi 1.6 může způsobit, že selžou kontroly připravenosti spouštěné před aktualizací, jak ukazuje následující obrázek.
     ![Selhání kontroly připravenosti](media/ata_failed_readinesschecks.png)
-    >[!Important]
-Před aktualizací ATA na verzi 1.6 aktualizujte následující klíč registru a použijte správnou cestu k databázi:  `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Advanced Threat Analytics\Center\DatabaseDataPath`
-
+    
+    > [!IMPORTANT]
+    > Před aktualizací ATA na verzi 1.6 aktualizujte následující klíč registru správnou cestu k databázi: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Advanced Threat Analytics\Center\DatabaseDataPath`
+    
 ### <a name="migration-failure-when-updating-from-ata-15"></a>Selhání migrace při aktualizaci z ATA 1.5
 Při aktualizaci na ATA 1.6 může proces aktualizace selhat s následujícím kódem chyby:
 
@@ -133,12 +135,11 @@ Měla by se vrátit `WriteResult({ "nRemoved" : XX })` kde "XX" je počet podez�
 
 ### <a name="net-framework-461-requires-restarting-the-server"></a>Net Framework 4.6.1 vyžaduje restartování serveru
 
-V některých případech může instalace rozhraní .Net Framework 4.6.1 vyžadovat restartování serveru. Všimněte si, že kliknete na OK v **Microsoft Advanced Threat Analytics Center – instalace** dialogové okno se automaticky restartuje server. To je důležité hlavně při instalaci ATA Lightweight Gateway na řadiči domény, protože před instalací můžete chtít naplánovat časové období údržby.
-    ![Restartování rozhraní .Net Framework](media/ata-net-framework-restart.png)
+![Restartování rozhraní .Net Framework](media/ata-net-framework-restart.png)
 
 ### <a name="historical-network-activities-no-longer-migrated"></a>Historické síťové aktivity se už nemigrují
 Tato verze ATA poskytuje vylepšený detekční modul, který zajišťuje přesnější detekci a omezuje řadu falešně pozitivních scénářů, hlavně pro útoky typu pass-the-hash.
-Nový a vylepšený detekční modul využívá vloženou detekční technologii, která umožňuje detekci bez přístupu k historickým síťovým aktivitám. To výrazně zvyšuje výkon komponenty ATA Center. A také to znamená, že během procesu aktualizace už není potřeba migrovat historické síťové aktivity.
+Nový a vylepšený detekční modul využívá vloženou detekční technologii, která umožňuje detekci bez přístupu k historickým síťovým aktivitám, výrazně zvýšit výkon komponenty ATA Center. Zároveň to znamená, že je potřeba migrovat historické síťové aktivity během procesu aktualizace.
 ATA při aktualizaci vyexportuje tato data do složky `<Center Installation Path>\Migration` jako soubor JSON pro případ, že byste je v budoucnu potřebovali.
 
 ## <a name="see-also"></a>Viz také
