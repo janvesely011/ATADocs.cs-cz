@@ -2,10 +2,10 @@
 title: Konfigurace proxy serveru nebo brány firewall k umožnění komunikace služby Azure ATP s daným senzorem | Dokumentace Microsoftu
 description: Popisuje, jak nastavit brány firewall nebo proxy a povolit komunikaci mezi ochrany ATP v programu Azure cloudové služby a služby Azure ATP senzorů
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 5/29/2018
+ms.date: 9/12/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 9c173d28-a944-491a-92c1-9690eb06b151
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 7aadacc98daa5ff259a4eb14fcd81c1cab9e5acd
-ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
+ms.openlocfilehash: 2e8a4cdccad7f371601941e20ede20000aeef5ec
+ms.sourcegitcommit: a5823d0dfc48783ab990a99ca3f65b614fb49e75
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44126497"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44697187"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -71,8 +71,8 @@ Pokud proxy server nebo brána firewall blokuje veškerý provoz ve výchozím n
 
 
 Můžete také posílit ochranu firewall nebo proxy pravidla pro konkrétní pracovní prostor, že kterou jste vytvořili, tak, že vytvoříte pravidlo pro následující záznamy DNS:
-- < název pracovního prostoru >. atp.azure.com – pro připojení konzoly. Například contosoATP.atp.azure.com
-- < název pracovního prostoru > sensorapi.atp.azure.com – senzorů připojení. Například contosoATPsensorapi.atp.azure.com
+- \<váš název pracovního prostoru >. atp.azure.com – pro připojení konzoly. Například "Contoso-corp.atp.azure.com"
+- \<váš název pracovního prostoru > sensorapi.atp.azure.com – senzorů připojení. Například "contoso-corpsensorapi.atp.azure.com"
 
  
 > [!NOTE]

@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 50d23f23432305c47ff14b8a1d68e204de9e32d7
-ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
+ms.openlocfilehash: 0a939f36a86e1ad6cd275a16a4dd4468defa7a76
+ms.sourcegitcommit: a5823d0dfc48783ab990a99ca3f65b614fb49e75
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44125800"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44697204"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
@@ -80,14 +80,14 @@ Po přidání **síťová služba** k **Event Log Readers** skupině, restartov�
     3.  Vyberte **Spuštěno zdrojovým počítačem** a klikněte na **Vybrat skupiny počítačů**.
         1.  Klikněte na **Přidat počítač domény**.
         2.  Do pole **Zadejte název objektu k výběru** zadejte název řadiče domény. Potom klikněte na **Zkontrolovat jména** a nakonec na **OK**.  
-          ![Obrázek prohlížeče událostí](media/wef3 event viewer.png)  
+          ![Obrázek prohlížeče událostí](media/wef3%20event%20viewer.png)  
         3.  Klikněte na **OK**.
      4. Klikněte na **Vybrat události**.
 
         1. Klikněte na **Podle protokolu** a vyberte **Zabezpečení**.
         2. Do pole **Zahrne nebo vyloučí ID události** zadejte číslo události a klikněte na **OK**. Zadejte 4776, jako je například v následujícím příkladu.
 
-    ![Obrázek filtru dotazu](media/wef 4 query filter.png)
+        ![Obrázek filtru dotazu](media/wef%204%20query%20filter.png)
 
     5.  Klikněte pravým tlačítkem na vytvořený odběr a vyberte **stav Runtime** jestli jsou všechny problémy se stavem. 
     6.  Po několika minutách ověřte, že se události, jejichž předávání jste nastavili, zobrazují mezi předanými událostmi v komponentě ATA Gateway.

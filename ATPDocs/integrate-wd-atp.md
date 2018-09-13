@@ -2,10 +2,10 @@
 title: Integrace Azure Advanced Threat Protection s ochrany ATP v programu Windows Defender | Dokumentace Microsoftu
 description: Integrace rozšířené ochrany před internetovými útoky pro Azure pomocí ochrany ATP v programu Windows Defender pro úplné ohrožení rozsahu zjišťování
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 6/5/2018
+ms.date: 9/12/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: f6f3ed75-d6bb-4966-a9a7-5339c4f3ebac
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 097769c53eefd1c6e5242086cd56d47b89b36e68
-ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
+ms.openlocfilehash: f2f211dd5882b1a671904d3d241eaf21b2fe3133
+ms.sourcegitcommit: a5823d0dfc48783ab990a99ca3f65b614fb49e75
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44126259"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44697221"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -59,13 +59,9 @@ Pokud chcete povolit tuto funkci, potřebujete licenci pro služby Azure ATP a o
 
 ## <a name="how-to-integrate-azure-atp-with-windows-defender-atp"></a>Postup při integraci služby Azure ATP s ochrany ATP v programu Windows Defender
 
-1. Nastavit pracovní prostor má být integrován jako **primární**. Jenom jeden pracovní prostor může být primární pracovní prostor a pouze primární pracovní prostor můžete integrovat s dalšími službami. Potřebujete, v určitém okamžiku v budoucnu, by měl provádět tento pracovní prostor už primárním pracovním prostorem, budete nejdřív muset odebrat tuto integraci, než budete moct nastavit jako jiné než primární.
+1. Klikněte na tlačítko **konfigurace**a v části **zdroje dat** vyberte **ochrany ATP v programu Windows Defender**. Pak klikněte na odkaz na **Správa pracovních prostorů**. To je k dispozici pouze v případě, že máte licenci pro ochrany ATP v programu Windows Defender a jste už provedli procesu zavádění pro ochrany ATP v programu Windows Defender. 
 
- ![primární pracovní prostor](./media/primary-workspace.png)
-
-2. Klikněte na tlačítko **konfigurace**a v části **zdroje dat** vyberte **ochrany ATP v programu Windows Defender**. Pak klikněte na odkaz na **Správa pracovních prostorů**. To je k dispozici pouze v případě, že máte licenci pro ochrany ATP v programu Windows Defender a jste už provedli procesu zavádění pro ochrany ATP v programu Windows Defender. 
-
-3. V primárním pracovním prostorem klikněte na ikonu nastavení.
+2. V pracovním prostoru klikněte na ikonu nastavení.
 
  ![integrace pracovní prostor](./media/edit-workspace.png)
  

@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/06/2018
+ms.date: 9/12/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 603d9e09-a07d-4357-862f-d5682c8bc3dd
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 8dce45be6b1e4fa383eea3993f120fa504239f34
-ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
+ms.openlocfilehash: 8a6481070abf1188507f31dbd01b26f7221b2e36
+ms.sourcegitcommit: a5823d0dfc48783ab990a99ca3f65b614fb49e75
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44125715"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44697238"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -28,7 +28,9 @@ Je nezbytné k zajištění aktuálnosti nejlepší možné ochranu pro vaši or
 
 Služba Ochrana ATP v programu Azure se aktualizuje několikrát za měsíc s opravy chyb a vylepšení výkonu, nové detekce. V některých těchto aktualizací vyžadují odpovídající aktualizaci ke snímačům. 
 
-Pokud nechcete aktualizovat vaše senzory, se nebudou moct komunikovat s cloudovou službou ochrany ATP v programu Azure, což může způsobit snížení služby.
+Pokud nechcete aktualizovat vaše senzory, se nebudou moct komunikovat s cloudovou službou ochrany ATP v programu Azure, což může způsobit snížení služby. 
+
+Ověřování mezi vaší senzory a cloudové služby Azure využívá silné a na základě certifikátů vzájemného ověřování. 
 
 Každá aktualizace je otestovali a ověřili na všech podporovaných operačních systémech způsobí minimálním dopadem na operace a síť.
 

@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ab1e8dd9-a6c2-4c68-89d5-343b8ec56142
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 8889d04063ce4e165104639281322b32178b93ec
-ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
+ms.openlocfilehash: d7207388702c659a08258862326ee89a49ae3ac2
+ms.sourcegitcommit: f3f80c5d3e2e5c1bcf975ae0cbae1469da7ab74d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44126086"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44515504"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -32,7 +32,7 @@ Aby bylo snazší a ověřit aktuální stav každé ze zásad auditu Advanced �
 ![Upozornění na stav zásad auditu Upřesnit](media/atp-health-alert-audit-policy.png)
 
 
-Pokročilé zásady auditu zabezpečení je povolené prostřednictvím zásad skupiny. Tyto auditování, události se zaznamenávají v řadiči domény Windows události. Tato možnost by měla být povolena v **výchozí zásada řadičů domény** ve službě Active Directory.
+Pokročilé zásady auditu zabezpečení povolená přes **výchozí zásada řadičů domény** objektu zásad skupiny. Tyto auditování, události se zaznamenávají v řadiči domény Windows události. 
 
 <br>Upravte zásady auditu Upřesnit vaše řadiče domény pomocí následujících pokynů:
 
@@ -50,7 +50,7 @@ Pokročilé zásady auditu zabezpečení je povolené prostřednictvím zásad s
 
     ![Ověřování přihlašovacích údajů](media/atp-advanced-audit-policy-check-step-3.png)
 
-6. Přejděte k přihlášení k účtu, dvakrát klikněte na **Auditovat správu skupiny zabezpečení** a vyberte **konfigurovat následující události auditu** pro události úspěchy a chyby.
+6. Přejděte na správu účtů, dvakrát klikněte na **Auditovat správu skupiny zabezpečení** a vyberte **konfigurovat následující události auditu** pro události úspěchy a chyby.
 
     ![Auditovat správu skupiny zabezpečení](media/atp-advanced-audit-policy-check-step-4.png)
 
