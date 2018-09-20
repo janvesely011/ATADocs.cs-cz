@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 6bbc50c3-bfa8-41db-a2f9-56eed68ef5d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 6f6324877ea42547d526be56ae2676f8d36cd25d
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 886b044725976559a35ee40e461e455320cb2200
+ms.sourcegitcommit: 9f02f0f6669b25f39b616bb0885bb55b8c4f050b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133703"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46362455"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
@@ -82,7 +82,7 @@ Na serveru ATA Gateway proveďte tento postup.
     -   Microsoft Visual C++ 2013 Redistributable
     -   Vlastní sada kolekcí dat Sledování výkonu
 
-5.  Po dokončení instalace pro ATA Gateway kliknutím na **Spustit** otevřete prohlížeč a přihlaste se ke konzole ATA. V případě ATA Lightweight Gateway klikněte na **Dokončit**.
+6.  Po dokončení instalace pro ATA Gateway kliknutím na **Spustit** otevřete prohlížeč a přihlaste se ke konzole ATA. V případě ATA Lightweight Gateway klikněte na **Dokončit**.
 
 
 >[!div class="step-by-step"]
