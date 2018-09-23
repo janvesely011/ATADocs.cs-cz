@@ -7,18 +7,18 @@ ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
 ms.topic: conceptual
-ms.prod: ''
-ms.service: advanced-threat-analytics
+ms.prod: advanced-threat-analytics
+ms.service: ''
 ms.technology: ''
 ms.assetid: 14cb7513-5dc8-49cb-b3e0-94f469c443dd
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 808268a10a4de0bb4d3a1655064ee3c6b08b0943
-ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
+ms.openlocfilehash: 444fd71f4c343619ceeea4056fbe98dce4f06b6a
+ms.sourcegitcommit: 9f02f0f6669b25f39b616bb0885bb55b8c4f050b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44166727"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46362438"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
@@ -42,8 +42,8 @@ Pokud chcete dostávat oznámení, nastavte následující parametry:
 1. V části **Notifications & Reports (Oznámení a sestavy)** vyberte **Notifications** (Oznámení).
 1. V části **Mail notifications** (Oznámení e-mailem) zadejte, která oznámení se mají posílat e-mailem – nové podezřelé aktivity a nové problémy v oblasti stavu. Můžete nastavit oddělené e-mailové adresy, na které se mají odesílat informace o podezřelých aktivitách a výstrahy týkající se stavu samostatně tak, aby například analytik zabezpečení dostával oznámení o podezřelých aktivitách a správce IT oznámení týkající se stavu.
     
-    >   [!NOTE]
-    >   E-mailové výstrahy pro podezřelé aktivity se odesílají jenom při vytvoření podezřelé aktivity.
+  > [!NOTE]
+  > E-mailové výstrahy pro podezřelé aktivity se odesílají jenom při vytvoření podezřelé aktivity.
 
 1. V části **oznámení Syslogu**, určete oznámení, která se mají odesílat na váš server Syslog – nové podezřelé aktivity, aktualizované podezřelé aktivity a nové problémy v oblasti stavu.
 1. Klikněte na **Uložit**.

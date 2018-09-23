@@ -7,18 +7,18 @@ ms.author: rkarlin
 manager: mbaldwin
 ms.date: 3/21/2018
 ms.topic: conceptual
-ms.prod: ''
-ms.service: advanced-threat-analytics
+ms.prod: advanced-threat-analytics
+ms.service: ''
 ms.technology: ''
 ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 0a939f36a86e1ad6cd275a16a4dd4468defa7a76
-ms.sourcegitcommit: a5823d0dfc48783ab990a99ca3f65b614fb49e75
+ms.openlocfilehash: 37d3234694b92c988fcd1153c79d37dbba371aaa
+ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44697204"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46133595"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
@@ -62,7 +62,7 @@ Po přidání **síťová služba** k **Event Log Readers** skupině, restartov�
    
     1.  Vyberte **Povoleno**.
     2.  V části **možnosti**, klikněte na tlačítko **zobrazit**.
-    3.  V části **SubscriptionManagers**, zadejte následující hodnoty a klikněte na tlačítko **OK**: * Server =`http://<fqdnATAGateway>:5985/wsman/SubscriptionManager/WEC,Refresh=10*` (Příklad: Server =`http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10`)
+    3.  V části **SubscriptionManagers**, zadejte následující hodnoty a klikněte na tlačítko **OK**: \*Server =`http://<fqdnATAGateway>:5985/wsman/SubscriptionManager/WEC,Refresh=10*` (Příklad: Server =`http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10`)
  
     ![Obrázek konfigurace cílového odběru](media/wef%202%20config%20target%20sub%20manager.png)
    
