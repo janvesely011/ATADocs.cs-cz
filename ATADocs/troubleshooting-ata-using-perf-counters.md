@@ -2,10 +2,10 @@
 title: Řešení potíží s Advanced Threat Analytics pomocí čítačů výkonu | Dokumentace Microsoftu
 description: Popisuje, jak se čítače výkonu dají použít k řešení potíží s ATA.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 3/21/2018
+ms.date: 9/25/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.service: ''
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: df162a62-f273-4465-9887-94271f5000d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: c7a0ded6092740f92c12fbd7c57100293bf735c2
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 455e66b286916f125fcc34d61b167b86ccc59740
+ms.sourcegitcommit: caaa864708ec631ca4903f6270ad0012951ceef1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46134122"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47114455"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
@@ -108,7 +108,7 @@ Tady je seznam hlavních čítačů výkonu komponenty ATA Center, kterým je po
 |-----------|---------------|-------------|-------------------|
 |Velikost bloku dávky entit Microsoft ATA Center\EntityReceiver|Počet dávek entit, které komponenta ATA Center zařadila do fronty|Hodnota by měla být menší než maximum-1 (výchozí maximum je 10000).|Zkontrolujte, jestli některá komponenta nedosáhla své maximální velikosti a neblokuje předchozí komponenty až ke komponentě NetworkListener.  Odkazovat na předchozí **proces komponent ATA**.<br /><br />Zkontrolujte, jestli nejsou potíže s procesorem nebo pamětí.|
 |Velikost bloku síťových aktivit Microsoft ATA Center\NetworkActivityProcessor|Počet síťových aktivit (NA) zařazených do fronty pro zpracování|Hodnota by měla být menší než maximum-1 (výchozí maximum je 50000).|Zkontrolujte, jestli některá komponenta nedosáhla své maximální velikosti a neblokuje předchozí komponenty až ke komponentě NetworkListener. Odkazovat na předchozí **proces komponent ATA**.<br /><br />Zkontrolujte, jestli nejsou potíže s procesorem nebo pamětí.|
-|Velikost bloku síťových aktivit Microsoft ATA Center\EntityProfiler|Počet síťových aktivit (NA) zařazených do fronty pro profilování|Hodnota by měla být menší než maximum-1 (výchozí maximum je 10000).|Zkontrolujte, jestli některá komponenta nedosáhla své maximální velikosti a neblokuje předchozí komponenty až ke komponentě NetworkListener. Odkazovat na předchozí **proces komponent ATA**.<br /><br />Zkontrolujte, jestli nejsou potíže s procesorem nebo pamětí.|
+|Velikost bloku síťových aktivit Microsoft ATA Center\EntityProfiler|Počet síťových aktivit (NA) zařazených do fronty pro profilování|Hodnota by měla být menší než maximum-1 (výchozí maximum je 100000).|Zkontrolujte, jestli některá komponenta nedosáhla své maximální velikosti a neblokuje předchozí komponenty až ke komponentě NetworkListener. Odkazovat na předchozí **proces komponent ATA**.<br /><br />Zkontrolujte, jestli nejsou potíže s procesorem nebo pamětí.|
 |Microsoft ATA Center\Database &#42; velikost bloku|Počet síťových aktivit konkrétního typu zařazených do fronty pro zápis do databáze|Hodnota by měla být menší než maximum-1 (výchozí maximum je 50000).|Zkontrolujte, jestli některá komponenta nedosáhla své maximální velikosti a neblokuje předchozí komponenty až ke komponentě NetworkListener. Odkazovat na předchozí **proces komponent ATA**.<br /><br />Zkontrolujte, jestli nejsou potíže s procesorem nebo pamětí.|
 
 

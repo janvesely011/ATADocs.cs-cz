@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 37d3234694b92c988fcd1153c79d37dbba371aaa
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 20360658a310feb4553077b460ee013e268f9239
+ms.sourcegitcommit: 8e80f59409c65e7d8d60ec7de8b96b621795699a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133595"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47168582"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
@@ -44,7 +44,7 @@ V tomto scénáři se předpokládá, že ATA Gateway členem domény.
 
 1.  Otevření Active Directory Users and Computers, přejděte **BuiltIn** složky a dvojím kliknutím **Event Log Readers**. 
 2.  Vyberte možnost **Členové**.
-4.  Pokud **Síťová služba** není uvedená, klikněte na **Přidat** a do pole **Zadejte názvy objektů k výběru** zadejte **Síťová služba**. Potom klikněte na **Zkontrolovat jména** a dvakrát klikněte na **OK**. 
+3.  Pokud **Síťová služba** není uvedená, klikněte na **Přidat** a do pole **Zadejte názvy objektů k výběru** zadejte **Síťová služba**. Potom klikněte na **Zkontrolovat jména** a dvakrát klikněte na **OK**. 
 
 Po přidání **síťová služba** k **Event Log Readers** skupině, restartování řadiče domény se změna projevila.
 
@@ -62,7 +62,9 @@ Po přidání **síťová služba** k **Event Log Readers** skupině, restartov�
    
     1.  Vyberte **Povoleno**.
     2.  V části **možnosti**, klikněte na tlačítko **zobrazit**.
-    3.  V části **SubscriptionManagers**, zadejte následující hodnoty a klikněte na tlačítko **OK**: \*Server =`http://<fqdnATAGateway>:5985/wsman/SubscriptionManager/WEC,Refresh=10*` (Příklad: Server =`http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10`)
+    3.  V části **SubscriptionManagers**, zadejte následující hodnoty a klikněte na tlačítko **OK**: *Server = http: / /<fqdnATAGateway>: 5985 nebo wsman/SubscriptionManager/WEC, obnovení = 10* 
+    
+        *(Příklad: Server =http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC, aktualizujte = 10)*
  
     ![Obrázek konfigurace cílového odběru](media/wef%202%20config%20target%20sub%20manager.png)
    

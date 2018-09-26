@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/30/2018
+ms.date: 9/25/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ab1e8dd9-a6c2-4c68-89d5-343b8ec56142
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d7207388702c659a08258862326ee89a49ae3ac2
-ms.sourcegitcommit: f3f80c5d3e2e5c1bcf975ae0cbae1469da7ab74d
+ms.openlocfilehash: d54bfa71c2f587450fe7c68aaca1e721356c11d7
+ms.sourcegitcommit: 8e80f59409c65e7d8d60ec7de8b96b621795699a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44515504"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47168531"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -33,6 +33,8 @@ Aby bylo snazší a ověřit aktuální stav každé ze zásad auditu Advanced �
 
 
 Pokročilé zásady auditu zabezpečení povolená přes **výchozí zásada řadičů domény** objektu zásad skupiny. Tyto auditování, události se zaznamenávají v řadiči domény Windows události. 
+
+
 
 <br>Upravte zásady auditu Upřesnit vaše řadiče domény pomocí následujících pokynů:
 
@@ -53,6 +55,9 @@ Pokročilé zásady auditu zabezpečení povolená přes **výchozí zásada řa
 6. Přejděte na správu účtů, dvakrát klikněte na **Auditovat správu skupiny zabezpečení** a vyberte **konfigurovat následující události auditu** pro události úspěchy a chyby.
 
     ![Auditovat správu skupiny zabezpečení](media/atp-advanced-audit-policy-check-step-4.png)
+
+> [!NOTE]
+> - Pokud se rozhodnete použít místní zásady, nezapomeňte přidat **přihlášení k účtu** a **správu účtů** protokoly v místních zásad auditu. Pokud konfigurujete zásady auditu pokročilé, ujistěte se, že chcete vynutit [podkategorie zásad auditu](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/audit-force-audit-policy-subcategory-settings-to-override).
 
 7. Po použití pomocí objektu zásad skupiny, nové události jsou viditelné v rámci vaší **protokoly událostí Windows**.
 

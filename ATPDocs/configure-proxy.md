@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 9/12/2018
+ms.date: 9/25/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 9c173d28-a944-491a-92c1-9690eb06b151
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 2e8a4cdccad7f371601941e20ede20000aeef5ec
-ms.sourcegitcommit: a5823d0dfc48783ab990a99ca3f65b614fb49e75
+ms.openlocfilehash: fa6bb10b029649a158d7733b10fec51c52acb9f7
+ms.sourcegitcommit: 8e80f59409c65e7d8d60ec7de8b96b621795699a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44697187"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47168548"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -45,15 +45,15 @@ Statické proxy je možné konfigurovat pomocí registru. Konfigurace proxy serv
 
 1.   Ujistěte se, že k zálohování klíčů registru, před jejich úpravou.
 
-2. V registru, vyhledejte hodnotu `DefaultConnectionSetting` jako REG_BINARY v klíči registru `HKCU\Software\Microsoft\Windows\CurrentVersion\InternetSetting\Connections\DefaultConnectionSetting` a zkopírujte ho.
+2. V registru, vyhledejte hodnotu `DefaultConnectionSettings` jako REG_BINARY v klíči registru `HKCU\Software\Microsoft\Windows\CurrentVersion\InternetSetting\Connections\DefaultConnectionSettings` a zkopírujte ho.
  
-2.  Pokud LocalSystem nemá žádné nastavení proxy serveru správná (buď nejsou nakonfigurovány nebo jsou odlišné od Current_User), zkopírujte nastavení z Current_User k systému LocalSystem proxy serveru. V klíči registru `HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\InternetSetting\Connections\DefaultConnectionSetting`.
+2.  Pokud LocalSystem nemá žádné nastavení proxy serveru správná (buď nejsou nakonfigurovány nebo jsou odlišné od Current_User), zkopírujte nastavení z Current_User k systému LocalSystem proxy serveru. V klíči registru `HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\InternetSetting\Connections\DefaultConnectionSettings`.
 
-3.  Vložte hodnotu z Current_user `DefaultConnectionSetting` jako REG_BINARY.
+3.  Vložte hodnotu z Current_user `DefaultConnectionSettings` jako REG_BINARY.
 
-4.  Pokud LocalService nemá žádné nastavení proxy serveru správná, zkopírujte nastavení z Current_User do LocalService proxy serveru. V klíči registru `HKU\S-1-5-19\Software\Microsoft\Windows\CurrentVersion\InternetSetting\Connections\DefaultConnectionSetting`.
+4.  Pokud LocalService nemá žádné nastavení proxy serveru správná, zkopírujte nastavení z Current_User do LocalService proxy serveru. V klíči registru `HKU\S-1-5-19\Software\Microsoft\Windows\CurrentVersion\InternetSetting\Connections\DefaultConnectionSettings`.
 
-5.  Vložte hodnotu z Current_User `DefaultConnectionSetting` jako REG_BINARY.
+5.  Vložte hodnotu z Current_User `DefaultConnectionSettings` jako REG_BINARY.
 
 > [!NOTE]
 > To ovlivní všechny aplikace, včetně služby Windows, které používají rozhraní WinINET s LocalService, LocalSytem kontextu.

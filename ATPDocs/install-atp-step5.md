@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/12/2018
+ms.date: 9/25/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: d7c95f8c-04f8-4946-9bae-c27ed362fcb0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 353845c3fb03d5bd4af18ea467fceea57010f33e
-ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
+ms.openlocfilehash: 03aa84b4288e4155b579acc12f03b7ecdb55b160
+ms.sourcegitcommit: 8e80f59409c65e7d8d60ec7de8b96b621795699a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44126004"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47168599"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -32,7 +32,7 @@ ms.locfileid: "44126004"
 
 
 ## <a name="step-5-configure-the-azure-atp-sensor-settings"></a>Krok 5: Konfigurace nastavení senzoru služby Azure ATP
-Po instalaci senzoru služby Azure ATP, proveďte následující postup pro konfiguraci nastavení pro senzoru služby Azure ATP.
+Po dokončení instalace senzoru služby Azure ATP proveďte následující postup pro konfiguraci nastavení senzoru služby Azure ATP.
 
 1.  Na portálu ochrany ATP v programu Azure pracovní prostor, přejděte na **konfigurace** a v části **systému**vyberte **senzor**.
    
@@ -51,12 +51,15 @@ Po instalaci senzoru služby Azure ATP, proveďte následující postup pro konf
       - Nejméně jeden řadič domény v seznamu by měl být globální katalog. To umožňuje ochrany ATP v programu Azure k vyřešení objekty počítačů a uživatelů v jiných doménách v doménové struktuře.
 
   - **Síťové adaptéry pro zachytávání** (povinné):
-     - Pro Azure ATP samostatný senzor na vyhrazeném serveru vyberte síťové adaptéry, které jsou nakonfigurované jako cílový port zrcadlení. Tyto příjem provozu řadiče domény zrcadlené.
+   
      - Pro senzoru služby Azure ATP to mělo být všechny síťové adaptéry, které se používají ke komunikaci s dalšími počítači ve vaší organizaci.
+    - Pro Azure ATP samostatný senzor na vyhrazeném serveru vyberte síťové adaptéry, které jsou nakonfigurované jako cílový port zrcadlení. Tyto příjem provozu řadiče domény zrcadlené.
 
-    - **Kandidát na synchronizátora domény**: Any ochrany ATP v programu Azure samostatný senzor je nastavená na kandidát na synchronizátora domény může být zodpovědná za synchronizaci mezi ochrany ATP v programu Azure a vaší domény služby Active Directory. Počáteční synchronizace v závislosti na velikosti domény může nějakou dobu trvat a je náročná. Ve výchozím nastavení jsou pouze samostatné senzorů ochrany ATP v programu Azure nastavené jako kandidáti na synchronizátora domény.
-   Doporučuje se, že zakážete žádnému senzoru služby Azure ATP vzdálené lokality nebudou kandidáti na synchronizátora domény.
-   Pokud je řadič domény jen pro čtení, nenastavujte ho jako kandidáta na synchronizátora domény. Další informace najdete v tématu [architektura služby Azure ATP](atp-architecture.md#azure-atp-sensor-features).
+    - **Kandidát na synchronizátora domény**: ve výchozím nastavení, senzory ochrany ATP v programu Azure nejsou kandidáti na synchronizátora domény, jsou samostatné senzorů ochrany ATP v programu Azure. Chcete-li vybrat ručně senzoru služby Azure ATP jako kandidát syncronizer domény, přepněte **kandidát na synchronizátora domény** přepněte možnost **ON** na obrazovce konfigurace. 
+    
+        Synchronizátor domény je zodpovědná za synchronizaci mezi ochrany ATP v programu Azure a vaší domény služby Active Directory. Počáteční synchronizace v závislosti na velikosti domény může nějakou dobu trvat a je náročná. 
+   Doporučuje se, že zakážete všechny vzdálené lokality (čidly služby Azure ATP) nebudou kandidáti na synchronizátora domény.
+   Pokud je řadič domény jen pro čtení, nenastavujte ho jako kandidáta na synchronizátora domény. Další informace o synchronizaci služby Azure ATP domény najdete v tématu [architektura služby Azure ATP](atp-architecture.md#azure-atp-sensor-features)
   
 4. Klikněte na **Uložit**.
 
