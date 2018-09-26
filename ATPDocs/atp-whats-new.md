@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 9/05/2018
+ms.date: 9/16/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,16 +13,32 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f6f291ebed680278391498361737e0f8be5ea710
-ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
+ms.openlocfilehash: f9959f1b517890b725845f8dd01156f9a3e8198b
+ms.sourcegitcommit: 5ff50807f855db1051b977a64eb6e90487ea196c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44166676"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45750550"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
 # <a name="whats-new-in-azure-atp"></a>Co je nového v Azure ATP 
+
+## <a name="azure-atp-release-248"></a>Verze ochrany ATP v programu Azure 2.48
+Vydáno 16. září 2018
+- **Výstraha zabezpečení:** dotazů služby Rekognoskace pomocí adresáře
+
+  Tato výstraha zabezpečení teď vylepšili infografiky a doklady. 
+
+- **Vyloučení entit z detekce** 
+
+  Pokud chcete snížit počet falešně pozitivních výsledků, teď můžete vyloučit entity z následujících detekcí: 
+  - Podezřelé připojení k síti VPN (vyloučení uživatele)
+  - Povýšení řadiče domény podezřelé (možný útok DcShadow)
+  - Podezřelá replikace požadavku (možný útok DcShadow)
+
+- Tato verze rovněž obsahuje opravy a vylepšení pro několik problémů.
+
 
 ## <a name="azure-atp-release-247"></a>Verze ochrany ATP v programu Azure 2.47
 Vydáno 2. září 2018

@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: f6f3ed75-d6bb-4966-a9a7-5339c4f3ebac
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f2f211dd5882b1a671904d3d241eaf21b2fe3133
-ms.sourcegitcommit: a5823d0dfc48783ab990a99ca3f65b614fb49e75
+ms.openlocfilehash: 4dca942b6c7b066cfec44e51aaad0f1e003da6ec
+ms.sourcegitcommit: 5ff50807f855db1051b977a64eb6e90487ea196c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44697221"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45750414"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -91,7 +91,8 @@ Vyberete-li u odznáčku, budete přesměrováni na portál ochrany ATP v progra
 
 Na portálu ochrany ATP v programu Windows Defender po kliknutí na koncový bod, můžete zobrazit výstrahy služby Azure ATP. Pokud kliknete na upozornění pro tuto entitu v ochrany ATP v programu Windows Defender, otevře se stránka profil entity v ochrany ATP v programu Azure. 
  
- > ! [POZNÁMKA] V současné době podporuje integraci služby Azure ATP s ochrany ATP v programu Windows Defender pouze uživatelé a počítače z místní AD. Uživatele z Azure AD a nebude se zobrazovat virtuální počítače, které jsou spravované v Azure jako součást Integrace 
+ > [!NOTE]
+ > V současné době podporuje integraci služby Azure ATP s ochrany ATP v programu Windows Defender pouze uživatelé a počítače z místní AD. Uživatele z Azure AD a nebude se zobrazovat virtuální počítače, které jsou spravované v Azure jako součást Integrace 
 
 ![Oznámení ochrany ATP v programu Windows Defender](./media/wd-atp-alerts.png)
 

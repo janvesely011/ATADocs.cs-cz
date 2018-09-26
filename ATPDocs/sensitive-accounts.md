@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 43e57f87-ca85-4922-8ed0-9830139fe7cb
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: b8b48b8090e109c9fc23c52b05f986b34e2549eb
-ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
+ms.openlocfilehash: ccb87ab6b3fabed5edaf7c32324701c74259f098
+ms.sourcegitcommit: 5ff50807f855db1051b977a64eb6e90487ea196c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44165877"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45750433"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -37,7 +37,6 @@ Následující seznam skupin se považují za citlivé ochrany ATP v programu Az
 -   Print Operators
 -   Backup Operators
 -   Replicators
--   Remote Desktop Users 
 -   Network Configuration Operators 
 -   Incoming Forest Trust Builders
 -   Domain Admins
@@ -48,6 +47,8 @@ Následující seznam skupin se považují za citlivé ochrany ATP v programu Az
 -   Schema Admins 
 -   Enterprise Admins
 
+ > [!NOTE]
+ > . Září 2018 Remote Desktop Users byly také automaticky považují za citlivé pomocí služby Azure ATP. Vzdálené plochy entity nebo přidat po tohoto data již nebude automaticky označené jako citlivé při vzdálené plochy entity nebo skupiny přidat před tímto datem může zůstat označeno jako citlivé. Toto citlivá nastavení lze změnit teď ručně.  
 
 ## <a name="tagging-sensitive-accounts"></a>Označování citlivých účtů
 

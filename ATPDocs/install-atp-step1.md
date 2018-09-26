@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 15ee7d0b-9a0c-46b9-bc71-98d0b4619ed0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 6f44bbf50cff2e983a7ddb1ef1cf54ebaf928741
-ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
+ms.openlocfilehash: 6874c8a23372950dacdf328b1e885b7d039c8433
+ms.sourcegitcommit: 5ff50807f855db1051b977a64eb6e90487ea196c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44126225"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45750499"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -51,7 +51,7 @@ Po ověření, že senzor požadavkům vaší sítě můžete vytvořit pracovn�
 
 1. Klikněte na tlačítko **vytvořit pracovní prostor**.
 
-2. V **vytvořit nový pracovní prostor** dialogové okno, zadejte název pracovního prostoru a vyberte **informace o zeměpisné poloze** pro vaše datové centrum. Jenom jeden pracovní prostor je možné nastavit jako primární. Nastavení pracovního prostoru jako primární ovlivňuje integrace – můžete pouze integrovat služby Azure ATP ochrany ATP v programu Windows Defender pro váš primární pracovní prostor. Můžete změnit, který pracovní prostor je primární později, ale aby bylo možné provést, je třeba odstranit všechny integrace pro aktuální primární pracovní prostor již nastaven.
+2. V **vytvořit nový pracovní prostor** dialogové okno, zadejte název pracovního prostoru a vyberte **informace o zeměpisné poloze** pro vaše datové centrum. Jeden pracovní prostor je možné nastavit jako primární. Nastavení pracovního prostoru jako primární ovlivňuje integrace – můžete pouze integrovat služby Azure ATP ochrany ATP v programu Windows Defender pro váš primární pracovní prostor. Můžete změnit, který pracovní prostor je primární později, ale aby bylo možné provést, je třeba odstranit všechny integrace pro aktuální primární pracovní prostor již nastaven.
  > [!NOTE]
  > Po výběru informace o zeměpisné poloze už ho nelze změnit.
     ![Pracovní prostor Azure ATP](media/create-workspace.png)
@@ -65,7 +65,7 @@ Po ověření, že senzor požadavkům vaší sítě můžete vytvořit pracovn�
 
     ![Pracovní prostory Azure ATP](media/atp-workspaces.png)
 
-- Jenom primární pracovní prostor se dá upravit. Provádět změny jiných pracovních prostorů, můžete je odstranit a znovu přidat. Pokud chcete odstranit primární pracovní prostor, musíte vypnout integrace a nastavit pracovní prostor tak, aby nebyl **primární** dřív, než bude možné odstranit.
+- Jenom primární pracovní prostor se dá upravit. Pokud chcete odstranit primární pracovní prostor, musíte vypnout integrace a nastavit pracovní prostor tak, aby nebyl **primární** dřív, než bude možné odstranit.
 - Upravit primární pracovní prostor, musíte nejdřív vypnout existující integrace v pracovním prostoru.
 
 - Uchovávání dat – odstraněný pracovní prostory se nezobrazí v uživatelském rozhraní. Další informace o uchovávání dat ochrany ATP v programu Azure najdete v tématu [ochrany ATP v programu Azure dat zabezpečení a ochrana osobních údajů](atp-privacy-compliance.md).
