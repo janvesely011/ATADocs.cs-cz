@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 20360658a310feb4553077b460ee013e268f9239
-ms.sourcegitcommit: 8e80f59409c65e7d8d60ec7de8b96b621795699a
+ms.openlocfilehash: 512e7fa979a6fd5e140d65836b533b720a6dc03b
+ms.sourcegitcommit: 1b23381ca4551a902f6343428d98f44480077d30
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47168582"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47403212"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
@@ -27,16 +27,16 @@ ms.locfileid: "47168582"
 # <a name="configuring-windows-event-forwarding"></a>Konfigurace předávání událostí systému Windows
 
 > [!NOTE]
-> U ATA verze 1.8 a vyšších se u komponent ATA Lightweight Gateway shromažďování událostí už nemusí konfigurovat. ATA Lightweight Gateway teď dokáže číst události místně bez nutnosti konfigurace předávání událostí.
-
+> U ATA verze 1.8 a vyšších se u komponent ATA Lightweight Gateway shromažďování událostí už nemusí konfigurovat. ATA Lightweight Gateway teď číst události místně bez nutnosti konfigurace předávání událostí.
 
 Kvůli vylepšení detekčních schopností potřebuje ATA následující události Windows: 4776, 4732, 4733, 4728, 4729, 4756, 4757, 7045. Ty můžete buď automaticky číst ATA Lightweight Gateway nebo v případě ATA Lightweight Gateway není nasazená, může být přeposílán komponentě ATA Gateway jedním ze dvou způsobů, konfigurací komponenty ATA Gateway tak, aby naslouchala událostem SIEM, nebo tím, že nakonfigurujete události Windows Předávání.
 
-
+> [!NOTE]
+> Pokud používáte Server Core [wecutil](https://docs.microsoft.com/windows-server/administration/windows-commands/wecutil) umožňuje vytvářet a spravovat odběry událostí, které jsou předávané ze vzdálených počítačů.
 
 ### <a name="wef-configuration-for-ata-gateways-with-port-mirroring"></a>Konfigurace WEF pro ATA Gateway se zrcadlením portů
 
-Po dokončení konfigurace zrcadlení portů z řadičů domény do komponenty ATA Gateway postupujte podle následujících pokynů a nakonfigurujte předávání událostí Windows pomocí konfigurace spuštěno zdrojem. Je to jedna z možných konfigurací pro předávání událostí systému Windows. 
+Po dokončení konfigurace zrcadlení portů z řadičů domény do komponenty ATA Gateway, použijte následující pokyny ke konfiguraci předávání událostí Windows pomocí konfigurace spuštěno zdrojem. Je to jedna z možných konfigurací pro předávání událostí systému Windows. 
 
 **Krok 1: Přidejte účet síťových služeb do skupiny Event Log Readers domény.** 
 

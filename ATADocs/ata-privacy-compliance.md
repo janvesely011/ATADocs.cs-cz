@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 9/04/2018
+ms.date: 9/27/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.service: ''
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 1b2d185c-62cd-45f0-b0dd-687b51317f32
 ms.reviewer: ophirp
 ms.suite: ems
-ms.openlocfilehash: 0f4a7546b6231fb263d1734b731f6be3cae7570a
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 08876085e3fe5d86c8219c6b0ad7beb8c44c700a
+ms.sourcegitcommit: 1b23381ca4551a902f6343428d98f44480077d30
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133989"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47403229"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
@@ -44,7 +44,7 @@ Pokud budete pro trvalé odstranění uživatelská data z databáze ATA, postup
 
 1. [Stáhněte si](https://aka.ms/ata-gdpr-script) skript MongoDB (gdpr.js).  
 
-2. Zkopírujte skript do počítače, komponenty ATA Center a spusťte následující příkaz z počítače ATA Center: 
+2. Zkopírujte skript do složky ATA (umístěný ve `"C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB` a spuštěním následujícího příkazu z počítače ATA Center: 
 
 Pomocí skriptu databáze ATA GDPR odstranění entit a odstraňování dat entity aktivity, jak je popsáno v následujících částech.
 
