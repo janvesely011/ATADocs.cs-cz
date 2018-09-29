@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ae8a95f0-278c-4a12-ae69-14282364fba1
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: b2f83da3192770ddde05b04bed46a558a4491290
-ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
+ms.openlocfilehash: 45c1ddfc80c481549ceb08ed45f535ca029b9626
+ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44125885"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47453829"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -26,9 +26,9 @@ ms.locfileid: "44125885"
 
 # <a name="install-azure-atp---step-2"></a>Instalace služby Azure ATP – krok 2
 
->[!div class="step-by-step"]
-[« Krok 1](install-atp-step1.md)
-[Krok 3 »](install-atp-step3.md)
+> [!div class="step-by-step"]
+> [« Krok 1](install-atp-step1.md)
+> [Krok 3 »](install-atp-step3.md)
 
 ## <a name="step-2-provide-a-username-and-password-to-connect-to-your-active-directory-forest"></a>Krok 2: Zadejte uživatelské jméno a heslo pro připojení k vaší doménové struktury služby Active Directory
 
@@ -51,9 +51,9 @@ Při prvním otevření pracovního prostoru portálu ochrany ATP v programu Azu
 3. Na portálu pracovního prostoru klikněte na tlačítko **stáhnout instalaci senzoru a nainstalovat první senzor** pokračujte.
 
 
->[!div class="step-by-step"]
-[« Krok 1](install-atp-step1.md)
-[Krok 3 »](install-atp-step3.md)
+> [!div class="step-by-step"]
+> [« Krok 1](install-atp-step1.md)
+> [Krok 3 »](install-atp-step3.md)
 
 
 ## <a name="see-also"></a>Viz také

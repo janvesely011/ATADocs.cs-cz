@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 95bb4ec1-841f-41b7-92fe-fbd144085724
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f10dd0714b2574ff9e1e476bc1865b1a0ed337b8
-ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
+ms.openlocfilehash: 96d459bd00d39bb21ce363d079b5b24ceca4ace7
+ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44125902"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47454016"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -26,9 +26,9 @@ ms.locfileid: "44125902"
 
 # <a name="install-azure-atp---step-3"></a>Instalace služby Azure ATP – krok 3
 
->[!div class="step-by-step"]
-[« Krok 2](install-atp-step2.md)
-[Krok 4 »](install-atp-step4.md)
+> [!div class="step-by-step"]
+> [« Krok 2](install-atp-step2.md)
+> [Krok 4 »](install-atp-step4.md)
 
 ## <a name="step-3-download-the-azure-atp-sensor-setup-package"></a>Krok 3: Stažení instalačního balíčku senzoru služby Azure ATP
 Po dokončení konfigurace nastavení připojení k doméně, můžete stáhnout instalační balíček senzoru služby Azure ATP. Instalačního balíčku senzoru služby Azure ATP můžete nainstalovat na vyhrazený server nebo na řadič domény. Při instalaci přímo na řadiče domény, je nainstalována jako senzoru služby Azure ATP při instalaci na vyhrazeném serveru a pomocí zrcadlení portů, je nainstalován jako samostatný senzor ochrany ATP v programu Azure. Další informace o senzoru služby Azure ATP najdete v tématu [Architektura ochrany ATP v programu Azure](atp-architecture.md). 
@@ -52,9 +52,9 @@ Soubor zip obsahuje následující soubory:
 -   Soubor nastavení konfigurace s požadovanými informacemi pro připojení ke cloudové službě ochrana ATP v programu Azure
 
 
->[!div class="step-by-step"]
-[« Krok 2](install-atp-step2.md)
-[Krok 4 »](install-atp-step4.md)
+> [!div class="step-by-step"]
+> [« Krok 2](install-atp-step2.md)
+> [Krok 4 »](install-atp-step4.md)
 
 
 ## <a name="see-also"></a>Viz také

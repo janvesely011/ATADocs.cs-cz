@@ -13,20 +13,20 @@ ms.technology: ''
 ms.assetid: 15ee7d0b-9a0c-46b9-bc71-98d0b4619ed0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 6874c8a23372950dacdf328b1e885b7d039c8433
-ms.sourcegitcommit: 5ff50807f855db1051b977a64eb6e90487ea196c
+ms.openlocfilehash: c9fc833a315c5e2259080d922c24e6a64de98905
+ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45750499"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47453812"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
 
 # <a name="creating-a-workspace-in-the-azure-atp-workspace-management-portal---step-1"></a>Vytvoření pracovního prostoru na portálu ochrany ATP v programu Azure pracovní prostor Správa – krok 1
 
->[!div class="step-by-step"]
-[Krok 2 »](install-atp-step2.md)
+> [!div class="step-by-step"]
+> [Krok 2 »](install-atp-step2.md)
 
 Tento instalační postup uvádí pokyny k vytváření a správa vaší instance služby Azure ATP. Informace o architektuře ochrany ATP v programu Azure najdete v tématu [architektura služby Azure ATP](atp-architecture.md).
 
@@ -71,9 +71,9 @@ Po ověření, že senzor požadavkům vaší sítě můžete vytvořit pracovn�
 - Uchovávání dat – odstraněný pracovní prostory se nezobrazí v uživatelském rozhraní. Další informace o uchovávání dat ochrany ATP v programu Azure najdete v tématu [ochrany ATP v programu Azure dat zabezpečení a ochrana osobních údajů](atp-privacy-compliance.md).
 
 
->[!div class="step-by-step"]
-[« Předinstalace](configure-port-mirroring.md)
-[Krok 2 »](install-atp-step2.md)
+> [!div class="step-by-step"]
+> [« Předinstalace](configure-port-mirroring.md)
+> [Krok 2 »](install-atp-step2.md)
 
 
 ## <a name="see-also"></a>Viz také

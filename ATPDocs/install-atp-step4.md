@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 51911e39-76c7-4dcd-bc0b-ec6235d0403f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9eaa6b37d56c3d8b18c3f5d015581cf7975d6e93
-ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
+ms.openlocfilehash: 87a2b47261293fffffe9d822d698b551a332a481
+ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44126316"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47454135"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -26,9 +26,9 @@ ms.locfileid: "44126316"
 
 # <a name="install-azure-atp---step-4"></a>Instalace služby Azure ATP – krok 4
 
->[!div class="step-by-step"]
-[« Krok 3](install-atp-step3.md)
-[Krok 5 »](install-atp-step5.md)
+> [!div class="step-by-step"]
+> [« Krok 3](install-atp-step3.md)
+> [Krok 5 »](install-atp-step5.md)
 
 ## <a name="step-4-install-the-azure-atp-sensor"></a>Krok 4: Instalace senzoru služby Azure ATP
 
@@ -89,9 +89,9 @@ Proveďte následující kroky na serveru senzoru služby Azure ATP nebo řadič
 8.  Po dokončení instalace klikněte na tlačítko **spuštění** otevřete prohlížeč a přihlaste se k portálu pracovního prostoru služby Azure ATP.
 
 
->[!div class="step-by-step"]
-[« Krok 3](install-atp-step3.md)
-[Krok 5 »](install-atp-step5.md)
+> [!div class="step-by-step"]
+> [« Krok 3](install-atp-step3.md)
+> [Krok 5 »](install-atp-step5.md)
 
 
 ## <a name="see-also"></a>Viz také

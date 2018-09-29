@@ -13,19 +13,19 @@ ms.technology: ''
 ms.assetid: effca0f2-fcae-4fca-92c1-c37306decf84
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a6ba913710d5158c2e39105061acbebd566c5f13
-ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
+ms.openlocfilehash: ad120cfe3e736935a557f66417794cd531fa5b2e
+ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44126191"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47454084"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
 # <a name="install-azure-atp---step-9"></a>Instalace služby Azure ATP - kroku 9
 
->[!div class="step-by-step"]
-[«Krok 8](install-atp-step8-samr.md)
+> [!div class="step-by-step"]
+> [«Krok 8](install-atp-step8-samr.md)
 
 ## <a name="step-9--set-up-azure-advanced-threat-protection-multi-forest-support"></a>Krok 9:  Nastavte podporu více doménovými strukturami rozšířené ochrany před internetovými útoky pro Azure
 
@@ -82,8 +82,8 @@ Ochrana ATP v programu Azure maps vaší doménové struktury, využívá proces
 -   Interaktivní prováděného uživateli v jedné doménové struktuře pro přístup k prostředkům v jiné doménové struktuře nejsou zobrazeny v řídicím panelu služby Azure ATP.
 
 
->[!div class="step-by-step"]
-[«Krok 8](install-atp-step8-samr.md)
+> [!div class="step-by-step"]
+> [«Krok 8](install-atp-step8-samr.md)
 
 
 ## <a name="see-also"></a>Viz také

@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: d7c95f8c-04f8-4946-9bae-c27ed362fcb0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 03aa84b4288e4155b579acc12f03b7ecdb55b160
-ms.sourcegitcommit: 8e80f59409c65e7d8d60ec7de8b96b621795699a
+ms.openlocfilehash: 15e3639aa08e48a40ae65bf229964ae589ce1ba8
+ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47168599"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47454067"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -26,9 +26,9 @@ ms.locfileid: "47168599"
 
 # <a name="install-azure-atp---step-5"></a>Instalace služby Azure ATP – krok 5
 
->[!div class="step-by-step"]
-[« Krok 4](install-atp-step4.md)
-[Krok 6 »](install-atp-step6-vpn.md)
+> [!div class="step-by-step"]
+> [« Krok 4](install-atp-step4.md)
+> [Krok 6 »](install-atp-step6-vpn.md)
 
 
 ## <a name="step-5-configure-the-azure-atp-sensor-settings"></a>Krok 5: Konfigurace nastavení senzoru služby Azure ATP
@@ -78,9 +78,9 @@ Pokud chcete ověřit, že se úspěšně nasadil senzoru služby Azure ATP, zko
 
 
 
->[!div class="step-by-step"]
-[« Krok 4](install-atp-step4.md)
-[Krok 6 »](install-atp-step6-vpn.md)
+> [!div class="step-by-step"]
+> [« Krok 4](install-atp-step4.md)
+> [Krok 6 »](install-atp-step6-vpn.md)
 
 
 ## <a name="see-also"></a>Viz také

@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 0d9d2a1d-6c76-4909-b6f9-58523df16d4f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4923056f72147b327ca85f842acf328d6d8ef6f3
-ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
+ms.openlocfilehash: 9ce1bbbda96cc8a10b026f2f422ac79b1b2bae55
+ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44126123"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47454101"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -26,9 +26,9 @@ ms.locfileid: "44126123"
 
 # <a name="install-azure-atp---step-6"></a>Instalace služby Azure ATP – krok 6
 
->[!div class="step-by-step"]
-[« Krok 5](install-atp-step5.md)
-[Krok 7 »](install-atp-step7.md)
+> [!div class="step-by-step"]
+> [« Krok 5](install-atp-step5.md)
+> [Krok 7 »](install-atp-step7.md)
 
 ## <a name="step-6-integrate-vpn"></a>Krok 6: Integrace sítě VPN
 
@@ -91,9 +91,9 @@ Poté, co senzoru služby Azure ATP přijímá události VPN a odesílá je ke c
 
 
 
->[!div class="step-by-step"]
-[«Krok 6](install-atp-step5.md)
-[krok 7»](install-atp-step7.md)
+> [!div class="step-by-step"]
+> [«Krok 6](install-atp-step5.md)
+> [krok 7»](install-atp-step7.md)
 
 
 ## <a name="see-also"></a>Viz také

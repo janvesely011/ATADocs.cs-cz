@@ -13,19 +13,19 @@ ms.technology: ''
 ms.assetid: 7597ed25-87f5-472c-a496-d5f205c9c391
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: df128b4f8258a7d937934795db92cf8fb89fb214
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 7fae5fa320aab6a2ad6db4695b0087eab72344e8
+ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133393"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47453948"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
 # <a name="install-ata---step-9"></a>Instalace ATA – krok 9
 
->[!div class="step-by-step"]
-[«Krok 8](install-ata-step7.md)
+> [!div class="step-by-step"]
+> [«Krok 8](install-ata-step7.md)
 
 ## <a name="step-9-configure-sam-r-required-permissions"></a>Krok 9: Konfigurace SAM-R, vyžaduje oprávnění
 
@@ -52,8 +52,8 @@ K zajištění, že Windows klienty a servery povolit účet služby ATA k prove
  Další informace o SAM-R a zásadami skupiny, najdete v části [přístup do sítě: omezit klienti můžou vzdáleně volat SAM](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls).
 
 
->[!div class="step-by-step"]
-[«Krok 8](install-ata-step7.md)
+> [!div class="step-by-step"]
+> [«Krok 8](install-ata-step7.md)
 
 ## <a name="see-also"></a>Viz také
 - [Průvodce nasazením ATA POC](http://aka.ms/atapoc)

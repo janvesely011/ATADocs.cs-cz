@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 6bbc50c3-bfa8-41db-a2f9-56eed68ef5d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 886b044725976559a35ee40e461e455320cb2200
-ms.sourcegitcommit: 9f02f0f6669b25f39b616bb0885bb55b8c4f050b
+ms.openlocfilehash: 0973554e0fba448bc48526d1499768b2a2c864b1
+ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46362455"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47453846"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
@@ -26,9 +26,9 @@ ms.locfileid: "46362455"
 
 # <a name="install-ata---step-4"></a>Instalace ATA – krok 4
 
->[!div class="step-by-step"]
-[« Krok 3](install-ata-step3.md)
-[Krok 5 »](install-ata-step5.md)
+> [!div class="step-by-step"]
+> [« Krok 3](install-ata-step3.md)
+> [Krok 5 »](install-ata-step5.md)
 
 ## <a name="step-4-install-the-ata-gateway"></a>Krok 4: Instalace ATA Gateway
 
@@ -85,9 +85,9 @@ Na serveru ATA Gateway proveďte tento postup.
 6.  Po dokončení instalace pro ATA Gateway kliknutím na **Spustit** otevřete prohlížeč a přihlaste se ke konzole ATA. V případě ATA Lightweight Gateway klikněte na **Dokončit**.
 
 
->[!div class="step-by-step"]
-[« Krok 3](install-ata-step3.md)
-[Krok 5 »](install-ata-step5.md)
+> [!div class="step-by-step"]
+> [« Krok 3](install-ata-step3.md)
+> [Krok 5 »](install-ata-step5.md)
 
 
 ## <a name="related-videos"></a>Související videa
