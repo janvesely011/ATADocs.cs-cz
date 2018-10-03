@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 9c173d28-a944-491a-92c1-9690eb06b151
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: fa6bb10b029649a158d7733b10fec51c52acb9f7
-ms.sourcegitcommit: 8e80f59409c65e7d8d60ec7de8b96b621795699a
+ms.openlocfilehash: a007a277641835be292ae6ab0b3004f154dad753
+ms.sourcegitcommit: 0634dda829699edf8bfd984eb9f896a67c5b15e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47168548"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48039358"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -29,10 +29,10 @@ ms.locfileid: "47168548"
 Každý ze senzorů Azure Advanced Threat Protection (ATP) vyžaduje připojení k Internetu ke cloudové službě ochrana ATP v programu Azure správně fungovala. V některých organizacích řadiče domény nejsou připojené přímo k Internetu, ale jsou připojené prostřednictvím připojení k proxy serveru webových. Každý senzoru služby Azure ATP vyžaduje používat konfiguraci proxy serveru Microsoft Windows Internet (WinINET) na data ze senzorů sestavy a komunikovat se službou ochrana ATP v programu Azure. Pokud používáte konfiguraci proxy serveru WinHTTP, stále potřebujete ke konfiguraci proxy nastavení prohlížeče Internet Windows (WinINet) pro komunikaci mezi senzorem a cloudové službě ochrana ATP v programu Azure.
 
 
-Při konfiguraci proxy serveru, budete muset vědět, že vložené službu sensor ochrany ATP v programu Azure běží v kontextu systému pomocí **LocalService** účet a službu Updater senzor ochrany ATP v programu Azure běží v kontextu systému pomocí **LocalSystem** účtu. 
+Při konfiguraci proxy serveru, budete muset vědět, že vložené službu sensor ochrany ATP v programu Azure běží v kontextu systému pomocí **LocalService** účet a službu Updater senzor ochrany ATP v programu Azure běží v kontextu systému pomocí  **LocalSystem** účtu. 
 
 > [!NOTE]
-> Pokud používáte transparentní proxy server nebo WPAD v topologii vaší sítě, není potřeba konfigurovat WinINET pro váš proxy server.
+> Pokud používáte transparentní proxy server nebo WPAD v topologii vaší sítě, není nutné konfigurovat WinINET pro váš proxy server.
 
 ## <a name="configure-the-proxy"></a>Konfigurace proxy serveru 
 
@@ -45,13 +45,13 @@ Statické proxy je možné konfigurovat pomocí registru. Konfigurace proxy serv
 
 1.   Ujistěte se, že k zálohování klíčů registru, před jejich úpravou.
 
-2. V registru, vyhledejte hodnotu `DefaultConnectionSettings` jako REG_BINARY v klíči registru `HKCU\Software\Microsoft\Windows\CurrentVersion\InternetSetting\Connections\DefaultConnectionSettings` a zkopírujte ho.
+2. V registru, vyhledejte hodnotu `DefaultConnectionSettings` jako REG_BINARY v klíči registru `HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Connections\DefaultConnectionSettings` a zkopírujte ho.
  
-2.  Pokud LocalSystem nemá žádné nastavení proxy serveru správná (buď nejsou nakonfigurovány nebo jsou odlišné od Current_User), zkopírujte nastavení z Current_User k systému LocalSystem proxy serveru. V klíči registru `HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\InternetSetting\Connections\DefaultConnectionSettings`.
+2.  Pokud LocalSystem nemá žádné nastavení proxy serveru správná (buď nejsou nakonfigurovány nebo jsou odlišné od Current_User), zkopírujte nastavení z Current_User k systému LocalSystem proxy serveru. V klíči registru `HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Connections\DefaultConnectionSettings`.
 
 3.  Vložte hodnotu z Current_user `DefaultConnectionSettings` jako REG_BINARY.
 
-4.  Pokud LocalService nemá žádné nastavení proxy serveru správná, zkopírujte nastavení z Current_User do LocalService proxy serveru. V klíči registru `HKU\S-1-5-19\Software\Microsoft\Windows\CurrentVersion\InternetSetting\Connections\DefaultConnectionSettings`.
+4.  Pokud LocalService nemá žádné nastavení proxy serveru správná, zkopírujte nastavení z Current_User do LocalService proxy serveru. V klíči registru `HKU\S-1-5-19\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Connections\DefaultConnectionSettings`.
 
 5.  Vložte hodnotu z Current_User `DefaultConnectionSettings` jako REG_BINARY.
 

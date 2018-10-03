@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 9/04/2018
+ms.date: 9/25/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 15ee7d0b-9a0c-46b9-bc71-98d0b4619ed0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c9fc833a315c5e2259080d922c24e6a64de98905
-ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
+ms.openlocfilehash: b30c9df27deed308c9c725ff1d6d193329721135
+ms.sourcegitcommit: 0634dda829699edf8bfd984eb9f896a67c5b15e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47453812"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48039375"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -51,7 +51,7 @@ Po ověření, že senzor požadavkům vaší sítě můžete vytvořit pracovn�
 
 1. Klikněte na tlačítko **vytvořit pracovní prostor**.
 
-2. V **vytvořit nový pracovní prostor** dialogové okno, zadejte název pracovního prostoru a vyberte **informace o zeměpisné poloze** pro vaše datové centrum. Jeden pracovní prostor je možné nastavit jako primární. Nastavení pracovního prostoru jako primární ovlivňuje integrace – můžete pouze integrovat služby Azure ATP ochrany ATP v programu Windows Defender pro váš primární pracovní prostor. Můžete změnit, který pracovní prostor je primární později, ale aby bylo možné provést, je třeba odstranit všechny integrace pro aktuální primární pracovní prostor již nastaven.
+2. V **vytvořit nový pracovní prostor** dialogové okno, zadejte název pracovního prostoru a vyberte **informace o zeměpisné poloze** pro vaše datové centrum. Váš pracovní prostor je **primární** ve výchozím nastavení. 
  > [!NOTE]
  > Po výběru informace o zeměpisné poloze už ho nelze změnit.
     ![Pracovní prostor Azure ATP](media/create-workspace.png)
@@ -61,14 +61,13 @@ Po ověření, že senzor požadavkům vaší sítě můžete vytvořit pracovn�
  > [!NOTE]
  > Na úspěšně přihlášení do služby Azure ATP, budete muset přihlásit jako uživatel, který byl přiřazen správné roli ochrany ATP v programu Azure pro přístup k portálu ochrany ATP v programu Azure pracovní prostor. Další informace o řízení přístupu na základě role (RBAC) v ochrany ATP v programu Azure najdete v tématu [práce se skupinami rolí služby Azure ATP](atp-role-groups.md).
 
-4. Klikněte na název nového pracovního prostoru pro přístup k portálu ochrany ATP v programu Azure pracovní prostor pro tento pracovní prostor.
+4. Klikněte na název pracovního prostoru pro přístup k portálu ochrany ATP v programu Azure pracovní prostor.
 
     ![Pracovní prostory Azure ATP](media/atp-workspaces.png)
 
-- Jenom primární pracovní prostor se dá upravit. Pokud chcete odstranit primární pracovní prostor, musíte vypnout integrace a nastavit pracovní prostor tak, aby nebyl **primární** dřív, než bude možné odstranit.
-- Upravit primární pracovní prostor, musíte nejdřív vypnout existující integrace v pracovním prostoru.
+- Jenom primární pracovní prostor se dá upravit. Pokud chcete odstranit aktivního pracovního prostoru, je nutné nejprve vypnout integrace dřív, než bude možné odstranit.
 
-- Uchovávání dat – odstraněný pracovní prostory se nezobrazí v uživatelském rozhraní. Další informace o uchovávání dat ochrany ATP v programu Azure najdete v tématu [ochrany ATP v programu Azure dat zabezpečení a ochrana osobních údajů](atp-privacy-compliance.md).
+- Uchovávání dat – dříve odstraněné pracovní prostory se nezobrazí v uživatelském rozhraní. Další informace o uchovávání dat ochrany ATP v programu Azure najdete v tématu [ochrany ATP v programu Azure dat zabezpečení a ochrana osobních údajů](atp-privacy-compliance.md).
 
 
 > [!div class="step-by-step"]
