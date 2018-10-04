@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 15ee7d0b-9a0c-46b9-bc71-98d0b4619ed0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: b30c9df27deed308c9c725ff1d6d193329721135
-ms.sourcegitcommit: 0634dda829699edf8bfd984eb9f896a67c5b15e7
+ms.openlocfilehash: 8a6238b6d3cd05c3896b88701c15d17404db43cf
+ms.sourcegitcommit: 04ed0b9faf72d82cd10bf84efd9dc5aa525be212
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48039375"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48245345"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -30,7 +30,7 @@ ms.locfileid: "48039375"
 
 Tento instalační postup uvádí pokyny k vytváření a správa vaší instance služby Azure ATP. Informace o architektuře ochrany ATP v programu Azure najdete v tématu [architektura služby Azure ATP](atp-architecture.md).
 
-V ochraně ATP v Azure budete mít jeden pracovní prostor nebo instance vám umožní spravovat více doménových struktur v podokně ze skla. 
+V ochraně ATP v Azure budete mít jeden pracovní prostor nebo instance umožňuje spravovat několik doménových struktur v podokně ze skla. 
 
 > [!NOTE]
 > V současné době datová centra ochrany ATP v programu Azure se nasazují do Evropy a Asie a Severní Amerika/střední Amerika/Karibská oblast.
@@ -70,9 +70,10 @@ Po ověření, že senzor požadavkům vaší sítě můžete vytvořit pracovn�
 - Uchovávání dat – dříve odstraněné pracovní prostory se nezobrazí v uživatelském rozhraní. Další informace o uchovávání dat ochrany ATP v programu Azure najdete v tématu [ochrany ATP v programu Azure dat zabezpečení a ochrana osobních údajů](atp-privacy-compliance.md).
 
 
-> [!div class="step-by-step"]
-> [« Předinstalace](configure-port-mirroring.md)
-> [Krok 2 »](install-atp-step2.md)
+>[!div class="step-by-step"]
+[« Předinstalace](atp-prerequisites.md)
+[Krok 2 »](install-atp-step2.md)
+
 
 
 ## <a name="see-also"></a>Viz také

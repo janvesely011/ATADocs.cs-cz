@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/2/2018
+ms.date: 10/3/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 6a9b5273-eb26-414e-9cdd-f64406e24ed8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 33493463eeb4ed23e33d81c9eb60b17c23285649
-ms.sourcegitcommit: 0634dda829699edf8bfd984eb9f896a67c5b15e7
+ms.openlocfilehash: 34a9b1deb9c5d2d709e333e78e87ded09fff134a
+ms.sourcegitcommit: 04ed0b9faf72d82cd10bf84efd9dc5aa525be212
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48039392"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48245379"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -49,7 +49,7 @@ Společnost Microsoft používá tato data:
 Microsoft není dolovat data pro reklamní účely nebo k jiným účelům než poskytováním služby. 
 
 ### <a name="does-azure-atp-only-leverage-traffic-from-active-directory"></a>Využívat ochrany ATP v programu Azure jenom přenosy služby Active Directory?
-Kromě analýzy provozu služby Active Directory s využitím technologie kontrolu paketů na služby Azure ATP taky shromažďuje relevantní události ze informace o zabezpečení a správu událostí (SIEM) a vytváří profily entit na základě informací ze služby Active Directory Domain Services. Pokud používáte senzoru služby Azure ATP, extrahuje tyto události automaticky. Předávání událostí Windows můžete použít k odesílání tyto události do samostatného senzoru služby Azure ATP. Ochrana ATP v programu Azure podporuje také přijímající monitorování účtů protokolu RADIUS sítě VPN protokolů od různých dodavatelů (Microsoft, Cisco, F5 a kontrolního bodu).
+Kromě analýzy provozu služby Active Directory s využitím technologie kontrolu paketů na služby Azure ATP taky shromažďuje relevantní události Windows z řadiče domény a vytváří profily entit na základě informací ze služby Active Directory Domain Services. Ochrana ATP v programu Azure podporuje také přijímající monitorování účtů protokolu RADIUS sítě VPN protokolů od různých dodavatelů (Microsoft, Cisco, F5 a kontrolního bodu).
 
 ### <a name="does-azure-atp-monitor-only-domain-joined-devices"></a>Ochrany ATP v programu Azure monitorovat pouze zařízení připojená k doméně?
 Ne. Ochrana ATP v programu Azure monitoruje všechna zařízení v síti, která zpracovávají požadavky ověřování a autorizace s Active Directory, včetně mimo Windows a mobilní zařízení.
@@ -89,7 +89,7 @@ Kromě toho Microsoft provádí kontroly podstupovaly ověřování u správců 
 Každý řadič domény v prostředí měly být pokryté komponentami ochrany ATP v programu nebo samostatného senzoru. Další informace najdete v tématu [senzoru služby Azure ATP velikosti](atp-capacity-planning.md#sizing). 
 
 ### <a name="does-azure-atp-work-with-encrypted-traffic"></a>Služba Ochrana ATP v programu Azure funguje při šifrovaném provozu?
-Ochrana ATP v programu Azure spoléhá na analýzu více síťových protokolů, událostí shromážděných ze systému SIEM nebo prostřednictvím předávání událostí Windows.  Síťové protokoly s šifrovaný provoz (například LDAPS nebo IPSEC) nejsou dešifrovat, ale jsou analyzovány.
+Síťové protokoly s šifrovaný provoz (například LDAPS nebo IPSEC) nejsou dešifrovat, ale jsou analyzovány senzory.
 
 ### <a name="does-azure-atp-work-with-kerberos-armoring"></a>Služba Ochrana ATP v programu Azure funguje s obranou protokolu Kerberos?
 Povolení obrany protokolu Kerberos, označované také jako FAST Flexible Authentication Secure Tunneling (), je podporována ochrana ATP v programu, s výjimkou pass typu over-pass-the hash detekce, což nefunguje s obranou protokolu Kerberos.
@@ -119,10 +119,7 @@ Ano, můžete zobrazit celkový stav nasazení a také konkrétní problémy sou
 ## <a name="operation"></a>Operace
 
 ### <a name="what-kind-of-integration-does-azure-atp-have-with-siems"></a>Jaký druh integrace ochrany ATP v programu Azure má se systémy Siem?
-Ochrana ATP v programu Azure má obousměrnou integraci se systémy Siem následujícím způsobem:
-
-1. Ochrana ATP v programu Azure lze nakonfigurovat na odesílání výstrahy Syslog na libovolný server SIEM pomocí formátu CEF pro výstrahy týkající se stavu a když zjistí podezřelou aktivitu.
-2. Dá se ochrana ATP v programu Azure pro příjem zprávy Syslog pro události Windows z [těchto systémů Siem](configure-event-collection.md).
+Ochrana ATP v programu Azure lze nakonfigurovat na odesílání výstrahy Syslog na libovolný server SIEM pomocí formátu CEF pro výstrahy týkající se stavu a když se detekuje výstraha zabezpečení. Zobrazit [referenční informace k protokolům SIEM](cef-format-sa.md) Další informace.
 
 ### <a name="why-are-certain-accounts-considered-sensitive"></a>Proč se některé účty považují za citlivé?
 To se stane, když je účet členem skupiny, které jsou určené jako citlivé (například: "Domain Admins").
