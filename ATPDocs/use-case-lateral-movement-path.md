@@ -1,11 +1,11 @@
 ---
-title: Prošetření útoků v cesty laterální pohyb pomocí služby Azure ATP | Dokumentace Microsoftu
-description: Tento článek popisuje, jak detekovat útoky cesty laterální pohyb s Azure Advanced Threat Protection (ATP).
+title: Prošetření útoků v laterálního pohybu pomocí služby Azure ATP | Dokumentace Microsoftu
+description: Tento článek popisuje, jak detekovat útoky taktiky Lateral Movement s Azure Advanced Threat Protection (ATP).
 keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/05/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: de15c920-8904-4124-8bdc-03abd9f667cf
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0fcdfdbeaeed7e42aff9d63f4f88300346c73465
-ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
+ms.openlocfilehash: e6a223405f4aa1e8daa1d393428db43c4e692daa
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44165571"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783487"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -32,7 +32,7 @@ Laterální pohyb je, když útočník pomocí tohoto počtu účtů pro příst
 
 Chcete-li zjistit, které citlivé účty ve vaší síti jsou přístupné z důvodu jejich připojení k tohoto počtu účtů, skupin a počítačů, postupujte takto. 
 
-1. V portálu nabídce pracovního prostoru ochrana ATP v programu Azure klikněte na ikonu sestav ![Ikona sestav](./media/atp-report-icon.png).
+1. V nabídce ochrany ATP v programu Azure portal klikněte na ikonu sestav ![Ikona sestav](./media/atp-report-icon.png).
 
 2. V části **laterální pohyb cesty k citlivým účtům**, pokud neexistují žádné potenciální cesty taktiky Lateral Movement nalezen, je sestava zobrazena šedě. Pokud neexistují potenciální cesty taktiky Lateral Movement, sestavy automaticky provede předvýběr první datum, kdy je relevantní data. Sestava cesty laterální pohyb poskytuje data po dobu 60 dnů.
 
@@ -47,7 +47,7 @@ Chcete-li zjistit, které citlivé účty ve vaší síti jsou přístupné z d�
 
 
 
-1. Na portálu ochrany ATP v programu Azure pracovní prostor vyhledejte laterální pohyb oznámení "BADGE", který je přidán na profil entity, když je entita v cesty laterální pohyb ![laterální ikonu](./media/lateral-movement-icon.png) nebo ![Ikona cesty](./media/paths-icon.png). Všimněte si, že oznámení se zobrazí pouze pokud taktiky Lateral Movement za posledních 48 hodin. 
+1. Na portálu ochrany ATP v programu Azure vyhledejte laterální pohyb oznámení "BADGE", který je přidán na profil entity, když je entita v cesty laterální pohyb ![laterální ikonu](./media/lateral-movement-icon.png) nebo ![Ikona cesty](./media/paths-icon.png). Všimněte si, že oznámení se zobrazí pouze pokud taktiky Lateral Movement za posledních 48 hodin. 
 
 2. Na stránce profilu uživatele, které se otevře, klikněte na tlačítko **laterální pohyb cesty** kartu. 
 
@@ -73,6 +73,6 @@ Chcete-li zjistit, které citlivé účty ve vaší síti jsou přístupné z d�
 
 ## <a name="see-also"></a>Viz také
 
-- [Konfigurace SAM-R, vyžaduje oprávnění](install-atp-step8-samr.md)
-- [Práce s podezřelými aktivitami](working-with-suspicious-activities.md)
-- [Podívejte se na fórum ochrany ATP v programu.](https://aka.ms/azureatpcommunity)
+- [Konfigurace ochrany ATP v programu Azure k vzdáleně volat SAM](install-atp-step8-samr.md)
+- [Práce s výstrahami zabezpečení](working-with-suspicious-activities.md)
+- [Podívejte se na fórum služby Azure ATP.](https://aka.ms/azureatpcommunity)

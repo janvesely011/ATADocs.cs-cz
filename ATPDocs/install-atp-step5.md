@@ -1,11 +1,11 @@
 ---
-title: Instalace Azure Advanced Threat Protection – krok 5 | Dokumentace Microsoftu
+title: Nainstalovat Azure Advanced Threat Protection | Dokumentace Microsoftu
 description: Krok 5 instalace ochrany ATP v programu Azure vám pomůže nakonfigurovat nastavení pro samostatný senzor vaší ochrany ATP v programu Azure.
 keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 9/25/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: d7c95f8c-04f8-4946-9bae-c27ed362fcb0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 15e3639aa08e48a40ae65bf229964ae589ce1ba8
-ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
+ms.openlocfilehash: 6f65b3af56e683a385f7128a989170c8c4073b3e
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47454067"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783861"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -27,14 +27,14 @@ ms.locfileid: "47454067"
 # <a name="install-azure-atp---step-5"></a>Instalace služby Azure ATP – krok 5
 
 > [!div class="step-by-step"]
-> [« Krok 4](install-atp-step4.md)
-> [Krok 6 »](install-atp-step6-vpn.md)
+> [«Krok 4](install-atp-step4.md)
+
 
 
 ## <a name="step-5-configure-the-azure-atp-sensor-settings"></a>Krok 5: Konfigurace nastavení senzoru služby Azure ATP
 Po dokončení instalace senzoru služby Azure ATP proveďte následující postup pro konfiguraci nastavení senzoru služby Azure ATP.
 
-1.  Na portálu ochrany ATP v programu Azure pracovní prostor, přejděte na **konfigurace** a v části **systému**vyberte **senzor**.
+1.  Na portálu ochrany ATP v programu Azure, přejděte na **konfigurace** a v části **systému**vyberte **senzor**.
    
      ![Nakonfigurovat senzor nastavení image](media/atp-sensor-config.png)
 
@@ -72,15 +72,15 @@ Pokud chcete ověřit, že se úspěšně nasadil senzoru služby Azure ATP, zko
 2.  Pokud služba nespustí, zkontrolujte soubor "Microsoft.Tri.sensor-Errors.log" umístěný v následující výchozí složce "%programfiles%\Azure rozšířené ochrany před internetovými útoky sensor\Version X\Logs".
  
  >[!NOTE]
- > Verze služby Azure ATP aktualizace často, zkontrolujte nejnovější verzi, na portálu ochrany ATP v programu Azure síti na pracovišti, přejděte na **konfigurace** a potom **o**. 
+ > Verze služby Azure ATP aktualizace často, zkontrolujte nejnovější verzi portálu ochrany ATP v programu Azure, přejděte na **konfigurace** a potom **o**. 
 
-3.  Přejděte na adresu URL vašeho pracovního prostoru. Na portálu pro pracovní prostor něco vyhledejte v panelu vyhledávání, například uživatele nebo skupinu ve vaší doméně.
+3.  Přejděte na adresu URL vašeho pracovního prostoru. Na portálu ochrany ATP v programu Azure něco vyhledejte v panelu vyhledávání, například uživatele nebo skupinu ve vaší doméně.
 
 
 
 > [!div class="step-by-step"]
-> [« Krok 4](install-atp-step4.md)
-> [Krok 6 »](install-atp-step6-vpn.md)
+> [«Krok 4](install-atp-step4.md)
+
 
 
 ## <a name="see-also"></a>Viz také
@@ -88,4 +88,4 @@ Pokud chcete ověřit, že se úspěšně nasadil senzoru služby Azure ATP, zko
 - [Nástroje pro změnu velikosti Azure ATP](http://aka.ms/aatpsizingtool)
 - [Konfigurace shromažďování událostí](configure-event-collection.md)
 - [Požadavky služby Azure ATP](atp-prerequisites.md)
-- [Podívejte se na fórum ochrany ATP v programu.](https://aka.ms/azureatpcommunity)
+- [Podívejte se na fórum služby Azure ATP.](https://aka.ms/azureatpcommunity)

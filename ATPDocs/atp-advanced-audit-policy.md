@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 9/25/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ab1e8dd9-a6c2-4c68-89d5-343b8ec56142
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d54bfa71c2f587450fe7c68aaca1e721356c11d7
-ms.sourcegitcommit: 8e80f59409c65e7d8d60ec7de8b96b621795699a
+ms.openlocfilehash: d2d7027a53d6bbc26d037ceeef4c5083865bb7e7
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47168531"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783096"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -65,4 +65,4 @@ Pokročilé zásady auditu zabezpečení povolená přes **výchozí zásada řa
 - [Požadavky služby Azure ATP](atp-prerequisites.md)
 - [Konfigurace shromažďování událostí](configure-event-collection.md)
 - [Konfigurace předávání událostí systému Windows](configure-event-forwarding.md#configuring-windows-event-forwarding)
-- [Podívejte se na fórum ochrany ATP v programu.](https://aka.ms/azureatpcommunity)
+- [Podívejte se na fórum služby Azure ATP.](https://aka.ms/azureatpcommunity)

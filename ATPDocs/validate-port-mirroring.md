@@ -2,22 +2,22 @@
 title: Ověření zrcadlení portů v rozšířené ochrany před internetovými útoky pro Azure | Dokumentace Microsoftu
 description: Popisuje, jak ověřit, že je zrcadlení portů nakonfigurované správně v Azure ATP
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 5/22/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.service: ''
 ms.technology: ''
 ms.assetid: 0a56cf27-9eaa-4ad0-ae6c-9d0484c69094
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 15e53ef145b9d7bbbc980730acec6c3b92c1a0fa
-ms.sourcegitcommit: e0b9252c770b3a3695af1642b76e3304f3df15d4
+ms.openlocfilehash: 0d9e2bcbbe2635765f1bcce9ee1367c1d3895080
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46566600"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783436"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -63,4 +63,4 @@ Následující kroky vás provedou procesem ověření, že je zrcadlení portů
 
 - [Konfigurace předávání událostí](configure-event-forwarding.md)
 - [Konfigurace zrcadlení portů](configure-port-mirroring.md)
-- [Podívejte se na fórum ochrany ATP v programu.](https://aka.ms/azureatpcommunity)
+- [Podívejte se na fórum služby Azure ATP.](https://aka.ms/azureatpcommunity)

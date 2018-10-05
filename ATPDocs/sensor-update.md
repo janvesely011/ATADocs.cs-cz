@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 9/12/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 603d9e09-a07d-4357-862f-d5682c8bc3dd
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 8a6481070abf1188507f31dbd01b26f7221b2e36
-ms.sourcegitcommit: a5823d0dfc48783ab990a99ca3f65b614fb49e75
+ms.openlocfilehash: e478fc1a2ae955d66d00b3d87bd5f782354c766d
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44697238"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783759"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -60,7 +60,7 @@ Obvykle senzorů automaticky aktualizovat při aktualizaci cloudové službě oc
 To vám umožňuje vybrat konkrétní senzory, na kterých nasazení aktualizace automaticky a aktualizujte zbytek vašeho senzory na zpoždění, až poté, co vidíte plynule nepovedlo počáteční aktualizace.
 
 > [!NOTE]
-> Pokud dojde k chybě a snímače se neaktualizuje, otevřete lístek podpory.
+> Pokud dojde k chybě a snímače se neaktualizuje, otevřete lístek podpory. Další posílení zabezpečení váš proxy server pouze komunikaci pomocí pracovního prostoru, najdete v článku [konfiguraci proxy serveru](configure-proxy.md)
 
 Nastavení senzoru zpožděné aktualizace:
 
@@ -87,7 +87,7 @@ Každých několik minut, senzory ochrany ATP v programu Azure zkontrolujte, jes
   7. Snímač přijímá odbavení z cloudové služby Azure. Můžete to ověřit v **aktualizace** stránky.
   8. Další senzor zahájí proces aktualizace. 
 
-4. Po 24 hodinách od služby Azure ATP cloudovou službu aktualizovat, senzory vybraných pro ** aktualizace zpoždění spuštění procesu aktualizace.
+4. Po 24 hodinách od služby Azure ATP cloudovou službu aktualizovat, senzory vybraná **zpožděné aktualizace** zahájíte proces aktualizace.
 
 ![aktualizace ze senzorů](./media/sensor-update.png)
 
@@ -101,4 +101,4 @@ V případě selhání Pokud senzor nedokončil proces aktualizace relevantní m
 
 - [Konfigurace předávání událostí](configure-event-forwarding.md)
 - [Požadavky služby Azure ATP](atp-prerequisites.md)
-- [Podívejte se na fórum ochrany ATP v programu.](https://aka.ms/azureatpcommunity)
+- [Podívejte se na fórum služby Azure ATP.](https://aka.ms/azureatpcommunity)

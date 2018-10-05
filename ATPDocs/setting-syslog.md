@@ -2,10 +2,10 @@
 title: Nastavení e-mailových oznámení v rozšířené ochrany před internetovými útoky pro Azure | Dokumentace Microsoftu
 description: Popisuje, jak máte služby Azure ATP upozornění (e-mailem nebo předáváním událostí služby Azure ATP) při zjištění podezřelých aktivit
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 2/21/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: a2d29c9c-7ecb-4804-b74b-fde899b28648
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 399773b174f52cfc26888fcaa9923de4f258e897
-ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
+ms.openlocfilehash: 18f6d38f871539cf0701b697c9d0c5d9d96a27e4
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44166880"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783538"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -26,7 +26,7 @@ ms.locfileid: "44166880"
 
 # <a name="integrate-with-syslog"></a>Integrace se Syslogem
 
-Ochrana ATP v programu Azure může upozornit, pokud detekuje podezřelé aktivity a upozornění na stav zasláním oznámení na váš server Syslog. Pokud povolíte upozornění pro Syslog, můžete pro ně nastavit následující parametry.
+Ochrana ATP v programu Azure může upozornit při zjištění podezřelých aktivit a výstrahy zabezpečení problémy, stejně jako upozornění na stav zasláním oznámení na váš server Syslog. Pokud povolíte upozornění pro Syslog, můžete nastavit následující:
 
 1.  Před konfigurací upozornění pro Syslog zjistěte ve spolupráci s vaším správcem systému SIEM následující informace:
 
@@ -38,7 +38,7 @@ Ochrana ATP v programu Azure může upozornit, pokud detekuje podezřelé aktivi
 
     -   Formát odesílání dat: RFC 3164 nebo 5424
 
-2.  Zadejte pracovní prostor portál adresy URL.
+2.  Zadejte adresu URL pracovního prostoru.
 
 3.  Zadejte svoje služby Azure Active Directory uživatelské jméno a heslo a klikněte na tlačítko **přihlášení**.
 
@@ -63,4 +63,4 @@ Ochrana ATP v programu Azure může upozornit, pokud detekuje podezřelé aktivi
 ## <a name="see-also"></a>Viz také
 
 - [Práce s citlivými účty](sensitive-accounts.md)
-- [Podívejte se na fórum ochrany ATP v programu.](https://aka.ms/azureatpcommunity)
+- [Podívejte se na fórum služby Azure ATP.](https://aka.ms/azureatpcommunity)

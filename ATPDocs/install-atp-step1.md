@@ -1,11 +1,11 @@
 ---
-title: Instalace Azure Advanced Threat Protection – krok 1 | Dokumentace Microsoftu
+title: Nainstalovat Azure Advanced Threat Protection | Dokumentace Microsoftu
 description: Prvním krokem k instalaci služby Azure ATP zahrnuje vytvoření instance pro nasazení služby Azure ATP.
 keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 9/25/2018
+ms.date: 10/4/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,29 +13,29 @@ ms.technology: ''
 ms.assetid: 15ee7d0b-9a0c-46b9-bc71-98d0b4619ed0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 8a6238b6d3cd05c3896b88701c15d17404db43cf
-ms.sourcegitcommit: 04ed0b9faf72d82cd10bf84efd9dc5aa525be212
+ms.openlocfilehash: 97cce3de3a1cbe049523c54901ecbc9228aaee53
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48245345"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783006"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
 
-# <a name="creating-a-workspace-in-the-azure-atp-workspace-management-portal---step-1"></a>Vytvoření pracovního prostoru na portálu ochrany ATP v programu Azure pracovní prostor Správa – krok 1
+# <a name="creating-your-azure-atp-instance-in-the-portal---step-1"></a>Vytvoření instance vaší ochrany ATP v programu Azure na portálu – krok 1
 
 > [!div class="step-by-step"]
 > [Krok 2 »](install-atp-step2.md)
 
-Tento instalační postup uvádí pokyny k vytváření a správa vaší instance služby Azure ATP. Informace o architektuře ochrany ATP v programu Azure najdete v tématu [architektura služby Azure ATP](atp-architecture.md).
+Tento instalační postup uvádí pokyny k vytváření a správa vaší instance služby Azure ATP nebo pracovního prostoru. Informace o architektuře ochrany ATP v programu Azure najdete v tématu [architektura služby Azure ATP](atp-architecture.md).
 
-V ochraně ATP v Azure budete mít jeden pracovní prostor nebo instance umožňuje spravovat několik doménových struktur v podokně ze skla. 
+Ochrana ATP v programu Azure, budete mít v jedné instance nebo pracovní prostor umožňuje spravovat několik doménových struktur v podokně ze skla. 
 
 > [!NOTE]
 > V současné době datová centra ochrany ATP v programu Azure se nasazují do Evropy a Asie a Severní Amerika/střední Amerika/Karibská oblast.
 
-## <a name="step-1-enter-the-management-portal"></a>Krok 1: Zadejte na portálu pro správu
+## <a name="step-1-enter-the-azure-atp-portal"></a>Krok 1: Zadejte ochrany ATP v programu Azure portal
 
 Po ověření, že senzor požadavkům vaší sítě můžete vytvořit pracovní prostor služby Azure ATP.
 
@@ -59,13 +59,13 @@ Po ověření, že senzor požadavkům vaší sítě můžete vytvořit pracovn�
 3. Můžete kliknout **role uživatel spravovat Azure ATP** odkaz pro přímý přístup k [centra pro správu Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles-azure-portal) a spravovat skupiny rolí.
 
  > [!NOTE]
- > Na úspěšně přihlášení do služby Azure ATP, budete muset přihlásit jako uživatel, který byl přiřazen správné roli ochrany ATP v programu Azure pro přístup k portálu ochrany ATP v programu Azure pracovní prostor. Další informace o řízení přístupu na základě role (RBAC) v ochrany ATP v programu Azure najdete v tématu [práce se skupinami rolí služby Azure ATP](atp-role-groups.md).
+ > Na úspěšně přihlášení do služby Azure ATP, budete muset přihlásit jako uživatel, který byl přiřazen správné roli ochrany ATP v programu Azure pro přístup k portálu ochrany ATP v programu Azure. Další informace o řízení přístupu na základě role (RBAC) v ochrany ATP v programu Azure najdete v tématu [práce se skupinami rolí služby Azure ATP](atp-role-groups.md).
 
-4. Klikněte na název pracovního prostoru pro přístup k portálu ochrany ATP v programu Azure pracovní prostor.
+4. Klikněte na název pracovního prostoru pro přístup k portálu ochrany ATP v programu Azure.
 
     ![Pracovní prostory Azure ATP](media/atp-workspaces.png)
 
-- Jenom primární pracovní prostor se dá upravit. Pokud chcete odstranit aktivního pracovního prostoru, je nutné nejprve vypnout integrace dřív, než bude možné odstranit.
+- Jenom primární pracovní prostor se dá upravit. Pokud chcete odstranit primární pracovní prostor, je nutné nejprve vypnout integrace dřív, než bude možné odstranit.
 
 - Uchovávání dat – dříve odstraněné pracovní prostory se nezobrazí v uživatelském rozhraní. Další informace o uchovávání dat ochrany ATP v programu Azure najdete v tématu [ochrany ATP v programu Azure dat zabezpečení a ochrana osobních údajů](atp-privacy-compliance.md).
 
@@ -80,4 +80,4 @@ Po ověření, že senzor požadavkům vaší sítě můžete vytvořit pracovn�
 - [Nástroje pro změnu velikosti Azure ATP](http://aka.ms/aatpsizingtool)
 - [Konfigurace shromažďování událostí](configure-event-collection.md)
 - [Požadavky služby Azure ATP](atp-prerequisites.md)
-- [Podívejte se na fórum ochrany ATP v programu.](https://aka.ms/azureatpcommunity)
+- [Podívejte se na fórum služby Azure ATP.](https://aka.ms/azureatpcommunity)

@@ -5,20 +5,20 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/15/2018
-ms.topic: conceptual
+ms.date: 10/04/2018
+ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
 ms.technology: ''
 ms.assetid: 88692d1a-45a3-4d54-a549-4b5bba6c037b
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 91e3caf8e15313069e4c2cec194a11855fd45c24
-ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
+ms.openlocfilehash: eaf798149c828b641ba037ffbb6854ca07c6732a
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44126174"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783589"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -29,7 +29,7 @@ ms.locfileid: "44126174"
 Kvůli vylepšení detekčních schopností potřebuje ochrany ATP v programu Azure následující události Windows: 4776, 4732, 4733, 4728, 4729, 4756, 4757 a 7045. Ty můžete buď automaticky číst senzoru služby Azure ATP nebo v případě, že není nasazený senzoru služby Azure ATP, může být přeposílán do samostatného senzoru služby Azure ATP v jednom ze dvou způsobů, tím nakonfigurujete samostatný senzor ochrany ATP v programu Azure tak, aby naslouchala událostem SIEM nebo [Konfigurace předávání událostí Windows](configure-event-forwarding.md).
 
 > [!NOTE]
-> Je důležité, abyste spustili ATA, než nakonfigurujete shromažďování událostí auditování skript k zajištění, že řadiče domény jsou správně nakonfigurovány, aby záznam nezbytné události. 
+> Je důležité, abyste spustili Azure ATP, než nakonfigurujete shromažďování událostí auditování skript k zajištění, že řadiče domény jsou správně nakonfigurovány, aby záznam nezbytné události. 
 
 Kromě shromažďování a analýzy síťového provozu do a z řadičů domény, můžete ochrany ATP v programu Azure dál vylepšit detekce pomocí událostí Windows. Využívá událost 4776 protokolu NTLM, která vylepšuje různé detekce a události 4732, 4733, 4728, 4729, 4756, 4757 a 7045 detekci úprav citlivých skupin a tvorby služby. Tyto události může přijímat buď od svého systému SIEM, nebo tak, že si nastavíte předávání událostí systému Windows ze svého řadiče domény. Shromážděné události poskytují ochrany ATP v programu Azure společně s dalšími informacemi, které nejsou k dispozici prostřednictvím síťový provoz na řadiči domény.
 
@@ -50,7 +50,7 @@ Pro služby Azure ATP mohli zpracovat data ze serveru Syslog je třeba provést 
 Informace o konfiguraci předávání určitých událostí na jiný server najdete v dokumentaci k produktu pro server SIEM/Syslog. 
 
 > [!NOTE]
->Pokud je velmi riskantní používat server SIEM/Syslog, můžete nakonfigurovat řadiče domény Windows předávat všechny požadované události se shromažďují a analyzují pomocí ochrany ATP v programu.
+>Pokud je velmi riskantní používat server SIEM/Syslog, můžete nakonfigurovat řadiče domény Windows předávat všechny požadované události se shromažďují a analyzují pomocí služby Azure ATP.
 
 ## <a name="configuring-the-azure-atp-sensor-to-listen-for-siem-events"></a>Konfigurace senzoru služby Azure ATP tak, aby naslouchala událostem SIEM
 
@@ -160,7 +160,7 @@ Kód chyby:         0x0
 -   Pořadí není pro dvojice klíč=hodnota důležité.
 
 ## <a name="qradar"></a>QRadar
-QRadar umožňuje shromažďování událostí prostřednictvím agenta. Pokud se data shromažďují pomocí agenta, formát času se shromažďuje bez údajů o milisekundách. Protože ochrany ATP v programu Azure vyžaduje údajů o milisekundách, je nutné nastavit Qradaru bez agentů shromažďování událostí Windows. Další informace najdete v tématu [ http://www-01.ibm.com/support/docview.wss?uid=swg21700170 ] (http://www-01.ibm.com/support/docview.wss?uid=swg21700170 "QRadar: Agentless Windows shromažďování událostí pomocí protokolu MSRPC").
+QRadar umožňuje shromažďování událostí prostřednictvím agenta. Pokud se data shromažďují pomocí agenta, formát času se shromažďuje bez údajů o milisekundách. Protože ochrany ATP v programu Azure vyžaduje údajů o milisekundách, je nutné nastavit Qradaru bez agentů shromažďování událostí Windows. Další informace najdete v tématu [http://www-01.ibm.com/support/docview.wss?uid=swg21700170](http://www-01.ibm.com/support/docview.wss?uid=swg21700170 "QRadar: Agentless Windows shromažďování událostí pomocí protokolu MSRPC").
 
     <13>Feb 11 00:00:00 %IPADDRESS% AgentDevice=WindowsLog AgentLogFile=Security Source=Microsoft-Windows-Security-Auditing Computer=%FQDN% User= Domain= EventID=4776 EventIDCode=4776 EventType=8 EventCategory=14336 RecordNumber=1961417 TimeGenerated=1456144380009 TimeWritten=1456144380009 Message=The computer attempted to validate the credentials for an account. Authentication Package: MICROSOFT_AUTHENTICATION_PACKAGE_V1_0 Logon Account: Administrator Source Workstation: HOSTNAME Error Code: 0x0
 
@@ -188,4 +188,4 @@ Nezapomeňte použít oddělit páry klíč=hodnota pomocí \t.
 - [Nástroje pro změnu velikosti Azure ATP](http://aka.ms/aatpsizingtool)
 - [Referenční informace k protokolům Azure ATP SIEM](cef-format-sa.md)
 - [Požadavky služby Azure ATP](atp-prerequisites.md)
-- [Podívejte se na fórum ochrany ATP v programu.](https://aka.ms/azureatpcommunity)
+- [Podívejte se na fórum služby Azure ATP.](https://aka.ms/azureatpcommunity)

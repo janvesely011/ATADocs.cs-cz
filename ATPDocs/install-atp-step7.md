@@ -1,11 +1,11 @@
 ---
-title: Instalace Azure Advanced Threat Protection – krok 7 | Dokumentace Microsoftu
-description: V posledním kroku instalace služby Azure ATP konfiguraci uživatele Honeytokenu.
+title: Azure Advanced Threat Protection konfigurovat vyloučení detekcí a účty honeytoken | Dokumentace Microsoftu
+description: Konfigurace vyloučení detekcí a uživatelské účty honeytokenu.
 keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/2/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,16 +13,19 @@ ms.technology: ''
 ms.assetid: 1ad5e923-9bbd-4f56-839a-b11a9f387d4b
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9252e47978a4adc0e2059a3111b362ff2b042daf
-ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
+ms.openlocfilehash: a538ce4596da106d11646e27aa65131bb47380d2
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47453795"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48782977"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
 
+<<<<<<< HEAD
+# <a name="configure-detection-exclusions-and-honeytoken-accounts"></a>Konfigurace vyloučení detekcí a účty honeytoken
+=======
 
 # <a name="install-azure-atp---step-7"></a>Instalace služby Azure ATP – krok 7
 
@@ -31,6 +34,7 @@ ms.locfileid: "47453795"
 > [Krok 8 »](install-atp-step8-samr.md)
 
 ## <a name="step-7-configure-detection-exclusions-and-honeytoken-accounts"></a>Krok 7: Konfigurace vyloučení detekcí a účty honeytoken
+>>>>>>> 209d7e7162816a4c9e6e0ec0ff8d02f771e12d04
 
 Ochrana ATP v programu Azure umožňuje vyloučení konkrétních IP adres nebo uživatelů z řady detekcí. 
 
@@ -40,7 +44,7 @@ Ochrana ATP v programu Azure také umožňuje konfigurovat účty honeytokenu, k
 
 Pokud chcete nakonfigurovat, postupujte podle těchto kroků:
 
-1.  Z portálu pracovního prostoru ochrana ATP v programu Azure klikněte na ikonu nastavení a vyberte **konfigurace**.
+1.  Z ochrany ATP v programu Azure portal, klikněte na ikonu nastavení a vyberte **konfigurace**.
 
     ![Konfigurace nastavení služby Azure ATP](media/atp-config-menu.png)
 
@@ -65,13 +69,16 @@ Zkontrolujte časovou osu útoků, abyste viděli zjištěné podezřelé aktivi
 Kontrola ochrany ATP v programu Azure pro podezřelé aktivity spustí okamžitě. Některé způsoby detekce, jako je například neobvyklých změny skupiny vyžadují období učení a nejsou k dispozici okamžitě po nasazení služby Azure ATP.
 
 
+<a name="-head"></a><<<<<<< HEAD
+=======
 
 > [!div class="step-by-step"]
 > [« Krok 6](install-atp-step6-vpn.md)
 > [Krok 8 »](install-atp-step8-samr.md)
 
+>>>>>>> 209d7e7162816a4c9e6e0ec0ff8d02f771e12d04
 ## <a name="see-also"></a>Viz také
 - [Nástroje pro změnu velikosti Azure ATP](http://aka.ms/aatpsizingtool)
 - [Konfigurace shromažďování událostí](configure-event-collection.md)
 - [Požadavky služby Azure ATP](atp-prerequisites.md)
-- [Podívejte se na fórum ochrany ATP v programu.](https://aka.ms/azureatpcommunity)
+- [Podívejte se na fórum zure ochrany ATP v programu.](https://aka.ms/azureatpcommunity)

@@ -1,11 +1,11 @@
 ---
-title: Principy portálu pracovního prostoru rozšířené ochrany před internetovými útoky pro Azure | Dokumentace Microsoftu
-description: Popisuje, jak pro přihlášení na portál ochrany ATP v programu Azure pracovní prostor a součásti portálu pracovního prostoru
+title: Principy rozšířené ochrany před internetovými útoky pro Azure portal | Dokumentace Microsoftu
+description: Popisuje, jak se přihlásit na portál ochrany ATP v programu Azure a její komponenty. na portálu
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 5/22/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,45 +13,45 @@ ms.technology: ''
 ms.assetid: 4ba46d60-3a74-480e-8f0f-9a082d62f343
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0fa8c1e19fde1ec779699b3a2c5411dea0908451
-ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
+ms.openlocfilehash: c4a437055c2fec0d242fe9de62ac9220ed2b66e6
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44166286"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783793"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
 
 
-# <a name="working-with-the-azure-atp-workspace-portal"></a>Práce s portálem pracovní prostor služby Azure ATP
+# <a name="working-with-the-azure-atp-portal"></a>Práce s portálem Azure ATP
 
-Pomocí portálu Azure ATP pracovního prostoru pro monitorování a reakce na podezřelé aktivity detekovaných službou ochrany ATP v programu.
+Pomocí ochrany ATP v programu Azure portal k monitorování a reakce na podezřelé aktivity detekovaných službou ochrany ATP v programu.
 
-Psát `?` klíč poskytuje klávesové zkratky pro přístupnost portálu ochrany ATP v programu Azure pracovní prostor. 
+Psát `?` klíč poskytuje klávesové zkratky pro přístupnost portálu ochrany ATP v programu Azure. 
 
-Na portálu ochrany ATP v programu Azure pracovní prostor poskytuje rychlý přehled o všech podezřelých aktivit v chronologickém pořadí. Umožňuje přejít k podrobnostem libovolné aktivity a provádět akce založené na těchto aktivitách. Na portálu pracovního prostoru se také zobrazí výstrahy a oznámení, abyste měli na očích problémů zjištěných ochrany ATP v programu Azure nebo nové aktivity, které se považují za podezřelé.
+Ochrana ATP v programu Azure portal poskytuje rychlý přehled o všech podezřelých aktivit v chronologickém pořadí. Umožňuje přejít k podrobnostem libovolné aktivity a provádět akce založené na těchto aktivitách. Na portálu ochrany ATP v programu Azure také zobrazuje výstrahy a oznámení, abyste měli na očích problémů zjištěných ochrany ATP v programu Azure nebo nové aktivity, které se považují za podezřelé.
 
-Tento článek popisuje, jak pracovat s klíčové prvky z portálu pracovního prostoru služby Azure ATP.
-
-
-## <a name="enabling-access-to-the-azure-atp-workspace-portal"></a>Povolení přístupu k portálu pracovního prostoru služby Azure ATP
-Úspěšně přihlásit na portál ochrany ATP v programu Azure pracovní prostor, budete muset přihlásit jako uživatel, který byl přiřazen správné skupině zabezpečení Azure Active Directory pro přístup k portálu ochrany ATP v programu Azure pracovní prostor. Další informace o řízení přístupu na základě role (RBAC) v ochrany ATP v programu Azure najdete v tématu [práce se skupinami rolí služby Azure ATP](atp-role-groups.md).
-
-## <a name="logging-into-the-azure-atp-workspace-portal"></a>Přihlášení k portálu pracovního prostoru služby Azure ATP
-
-1. Na portálu pracovního prostoru můžete zadat buď po přihlášení k portálu pro správu pracovního prostoru [ https://portal.atp.azure.com ](https://portal.atp.azure.com) a potom výběrem příslušné pracovní nebo přechodu na adresu URL pracovního prostoru: [https:// *workspacename*. atp.azure.com](https://*workspacename*.atp.azure.com).
+Tento článek popisuje, jak pracovat s klíčové prvky ochrany ATP v programu Azure portal.
 
 
-2.  Azure ATP podporuje jednotné přihlašování integrované s ověřováním Windows – Pokud jste již přihlášení k počítači, ochrana ATP v programu Azure používá tento token pro přihlášení na portál ochrany ATP v programu Azure pracovní prostor. K přihlášení můžete použít také čipovou kartu. Vaše oprávnění v Azure ATP odpovídají vaše [role správce](atp-role-groups.md).
+## <a name="enabling-access-to-the-azure-atp-portal"></a>Povolení přístupu k portálu služby Azure ATP
+Chcete-li úspěšně přihlásit na portál ochrany ATP v programu Azure, budete muset přihlásit jako uživatel, kterým je přiřazená do skupiny zabezpečení služby Azure Active Directory přístup k portálu ochrany ATP v programu Azure. Další informace o řízení přístupu na základě role (RBAC) v ochrany ATP v programu Azure najdete v tématu [práce se skupinami rolí služby Azure ATP](atp-role-groups.md).
+
+## <a name="logging-into-the-azure-atp-portal"></a>Přihlášení k portálu služby Azure ATP
+
+1. Ochrana ATP v programu Azure portal můžete zadat buď po přihlášení k portálu [ https://portal.atp.azure.com ](https://portal.atp.azure.com) a výběrem příslušné pracovní nebo přechodu na adresu URL pracovního prostoru: [https://*workspacename* . atp.azure.com](https://*workspacename*.atp.azure.com).
+
+
+2.  Azure ATP podporuje jednotné přihlašování integrované s ověřováním Windows – Pokud jste již přihlášení k počítači, ochrana ATP v programu Azure používá tento token pro přihlášení na portál ochrany ATP v programu Azure. K přihlášení můžete použít také čipovou kartu. Vaše oprávnění v Azure ATP odpovídají vaše [role správce](atp-role-groups.md).
 
  > [!NOTE]
- > Ujistěte se, že pro přihlášení k počítači, ze kterého chcete získat přístup k portálu pracovního prostoru ochrana ATP v programu Azure pomocí služby Azure ATP uživatelské jméno správce a hesla. Alternativně můžete spustit prohlížeč jako jiný uživatel nebo se odhlásit z Windows a protokolu se uživatel s rolí správce vaší služby Azure ATP. 
+ > Ujistěte se, že pro přihlášení k počítači, ze kterého chcete získat přístup k portálu ochrany ATP v programu Azure pomocí služby Azure ATP uživatelské jméno správce a hesla. Alternativně můžete spustit prohlížeč jako jiný uživatel nebo se odhlásit z Windows a protokolu se uživatel s rolí správce vaší služby Azure ATP. 
 
 
 ### <a name="attack-time-line"></a>Časová osa útoků
 
-Toto je výchozí cílová stránka, kterou budete přesměrováni na přihlášení k portálu ochrany ATP v programu Azure pracovní prostor. Ve výchozím nastavení jsou všechny otevřené podezřelé aktivity zobrazené na časové ose útoků. Můžete filtrovat na časové ose útoku a zobrazit všechny, otevřít, zamítnuté nebo Suppressed podezřelých aktivit. Můžete také zjistit závažnost, která se jednotlivým aktivitám přiřadila.
+Na časové ose útoku, toto je výchozí cílová stránka, kterou budete přesměrováni na přihlášení k portálu ochrany ATP v programu Azure pracovní prostor. Ve výchozím nastavení jsou všechny otevřené podezřelé aktivity zobrazené na časové ose útoků. Můžete filtrovat na časové ose útoku a zobrazit všechny, otevřít, zamítnuté nebo Suppressed podezřelých aktivit. Můžete také zjistit závažnost, která se jednotlivým aktivitám přiřadila.
 
 ![Obrázek časové osy útoku Azure ATP](media/atp-sa-timeline.png)
 
@@ -69,7 +69,7 @@ Na základě stavu a závažnosti umožňuje filtrovat, které podezřelé aktiv
 
 V horní nabídce můžete najít panelu hledání. Můžete vyhledat konkrétního uživatele, počítače nebo skupiny v Azure ATP. Pokud si ho chcete vyzkoušet, stačí začít psát. V dolní části panelu hledání je označeno počet nalezených výsledků hledání. 
 
-![Azure image vyhledávání v portálu ochrany ATP v programu pracovního prostoru](media/atp-workspace-portal-search.png)
+![Vyhledávání v portálu imagí Azure ATP](media/atp-workspace-portal-search.png)
 
 Pokud kliknete číslo, dostanete stránka výsledků hledání, ve kterém můžete filtrovat výsledky podle typu entity pro další zkoumání.
 
@@ -87,7 +87,7 @@ Kdykoli váš systém narazí na problém, jako je například Chyba připojení
 
 ### <a name="sensitive-groups"></a>Citlivé skupiny
 
-Informace o citlivých skupin v ochrany ATP v programu, najdete v části [práce s citlivých skupin](sensitive-accounts.md).
+Informace o citlivých skupin v Azure ATP, naleznete v tématu [práce s citlivých skupin](sensitive-accounts.md).
 
 ### <a name="mini-profile"></a>Miniprofil
 
@@ -115,4 +115,4 @@ Pokud myší najetí myší na entitu, kdekoli na portálu pro pracovní prostor
 ## <a name="see-also"></a>Viz také
 
 - [Vytváření pracovních prostorů služby Azure ATP](install-atp-step1.md)
-- [Podívejte se na fórum ochrany ATP v programu.](https://aka.ms/azureatpcommunity)
+- [Podívejte se na fórum služby Azure ATP.](https://aka.ms/azureatpcommunity)

@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/7/2017
+ms.date: 10/04/2017
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 24eca4c6-c949-42ea-97b9-41ef0fb611f1
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 363400531fe2b4e2634fa80ec1f65ad80923606f
-ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
+ms.openlocfilehash: e15884d46227c9dce32ee48f30d546eab6868116
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44125783"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783385"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -58,7 +58,7 @@ Použijte následující příkaz k provedení plně tiché instalace senzoru sl
    
 
 > [!NOTE]
-> Zkopírovat přístupový klíč z portálu pracovního prostoru v části **konfigurace** a potom **senzor**.
+> Zkopírovat přístupový klíč z portálu ochrany ATP v programu Azure v rámci **konfigurace** a potom **senzor**.
 
 
 **Možnosti instalace**:
@@ -131,6 +131,7 @@ Použijte následující příkaz k provedení bezobslužné odinstalace senzoru
 
 ## <a name="see-also"></a>Viz také
 
-- [Konfigurace předávání událostí](configure-event-forwarding.md)
 - [Požadavky služby Azure ATP](atp-prerequisites.md)
-- [Podívejte se na fórum ochrany ATP v programu.](https://aka.ms/azureatpcommunity)
+- [Instalace senzoru služby Azure ATP](install-atp-step4.md)
+- [Konfigurace senzoru služby Azure ATP](install-atp-step5.md)
+- [Podívejte se na fórum služby Azure ATP.](https://aka.ms/azureatpcommunity)

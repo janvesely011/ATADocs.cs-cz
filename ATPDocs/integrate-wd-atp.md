@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 9/12/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,16 +13,16 @@ ms.technology: ''
 ms.assetid: f6f3ed75-d6bb-4966-a9a7-5339c4f3ebac
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4dca942b6c7b066cfec44e51aaad0f1e003da6ec
-ms.sourcegitcommit: 5ff50807f855db1051b977a64eb6e90487ea196c
+ms.openlocfilehash: a888cbb80bba74d920e236b04c353008c7b56daf
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45750414"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783657"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
-# <a name="integrating-azure-atp-with-windows-defender-atp"></a>Integrace ochrany ATP v programu Azure s programem Windows Defender ATP
+# <a name="integrate-azure-atp-with-windows-defender-atp"></a>Integrace ochrany ATP v programu Azure s programem Windows Defender ATP
 
 Azure Advanced Threat Protection umožňuje integrovat ochrany ATP v programu Azure s Windows Defender ATP pro ještě podrobnější řešení ochrany před hrozbami. Během ochrany ATP v programu Azure monitoruje provoz na řadičích domény, ochrana ATP v programu Windows Defender monitoruje vaše koncové body společně poskytuje tak jednotné rozhraní, ze kterého budete moci chránit vaše prostředí.
 
@@ -73,11 +73,11 @@ Pokud chcete povolit tuto funkci, potřebujete licenci pro služby Azure ATP a o
 
  ![Povolení integrace ochrany ATP v programu Windows Defender](./media/wd-atp-enable.png)
 
-5. Chcete-li zkontrolovat stav integrace na portálu ochrany ATP v programu Azure pracovní prostor, přejděte na **nastavení** a potom **integrace ochrany ATP v programu Windows Defender**. Zobrazí se stav integrace; Pokud se něco stalo, že se zobrazí chyba. Můžete také zobrazit, který pracovní prostor je integrovaná s ochrany ATP v programu Windows Defender.
+5. Chcete-li zkontrolovat stav integrace portálu ochrany ATP v programu Azure, přejděte na **nastavení** a potom **integrace ochrany ATP v programu Windows Defender**. Zobrazí se stav integrace; Pokud se něco stalo, že se zobrazí chyba. Můžete také zobrazit, který pracovní prostor je integrovaná s ochrany ATP v programu Windows Defender.
 
 ## <a name="how-it-works"></a>Jak to funguje
 
-Po ochrany ATP v programu Azure a ochrana ATP v programu Windows Defender jsou plně integrované, na portálu ochrany ATP v programu Azure pracovní prostor, v místní nabídce miniprofilu a na stránce profil entity, každá entita, která existuje v ochrany ATP v programu Windows Defender zahrnuje oznámení "BADGE" k zobrazení, že je integrovaná s Windows Ochrana ATP v programu Defender. 
+Po ochrany ATP v programu Azure a ochrana ATP v programu Windows Defender jsou plně integrované, na portálu ochrany ATP v programu Azure, v místní nabídce miniprofilu a na stránce profil entity obsahuje každá entita, která existuje v programu Windows Defender ATP oznámení "BADGE" k zobrazení, že je integrovaná s ochrany ATP v programu Windows Defender. 
 
  ![Oznámení ochrany ATP v programu Windows Defender](./media/profile-alerts-wd.png)
 
@@ -103,5 +103,5 @@ Na portálu ochrany ATP v programu Windows Defender po kliknutí na koncový bod
 - [Nástroje pro změnu velikosti Azure ATP](http://aka.ms/aatpsizingtool)
 - [Architektura služby Azure ATP](atp-architecture.md)
 - [Instalace ochrany ATP v programu](install-atp-step1.md)
-- [Podívejte se na fórum ochrany ATP v programu.](https://aka.ms/azureatpcommunity)
+- [Podívejte se na fórum služby Azure ATP.](https://aka.ms/azureatpcommunity)
 

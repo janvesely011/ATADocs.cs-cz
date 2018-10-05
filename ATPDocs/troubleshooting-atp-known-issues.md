@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/13/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 23386e36-2756-4291-923f-fa8607b5518a
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a56845c619e93ed2fae0e10876a4d49a49e23e7d
-ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
+ms.openlocfilehash: e65133fdd09f821c633a3095ae419df01da98b16
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44166276"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783708"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -30,9 +30,9 @@ ms.locfileid: "44166276"
  
 Protokoly nasazení služby Azure ATP jsou umístěné v adresáři temp uživatele, který příslušný produkt nainstaloval. Ve výchozím umístění instalace, najdete ho na: C:\Users\Administrator\AppData\Local\Temp (nebo jednomu adresáři % temp %). Další informace najdete v tématu [analytických řešení potíží pomocí protokolů](troubleshooting-atp-using-logs.md)
 
-## <a name="proxy-authentication-problem-presents-as-licensing-error"></a>Problém s ověřováním proxy prezentuje jako chyba licencování
+## <a name="proxy-authentication-problem-presents-as-a-licensing-error"></a>Problém s ověřováním proxy prezentuje jako chybu licencování
 
-Během instalace senzoru se zobrazí následující chyba: **zaregistrovat kvůli problémům s licencováním se senzor nepovedlo.**
+Pokud během instalace senzoru se zobrazí následující chyba: **zaregistrovat kvůli problémům s licencováním se senzor nepovedlo.**
 
 Položky protokolu nasazení: [1C 60: 1AA8] [2018-03-24T23:59:13] i000: 2018-03-25 02:59:13.1237 informace InteractiveDeploymentManager ValidateCreateSensorAsync vrátil [\[] validateCreateSensorResult = LicenseInvalid [\]] [1 c 60 : 1AA8] [2018-03-24T23:59:56] i000: 2018-03-25 02:59:56.4856 informace InteractiveDeploymentManager ValidateCreateSensorAsync vrátil [\[] validateCreateSensorResult = LicenseInvalid [\]] [1 C 60: 1AA8] [2018-03-25T00:27:56] i000: 2018-03-25 03:27:56.7399 ladění SensorBootstrapperApplication Engine.Quit [\[] deploymentResultStatus = 1602 isRestartRequired = False [\]] [1 C 60: 15B8] [2018-03-25T00:27:56] i500: vypíná, ukončovací kód: 0x642
 
@@ -52,7 +52,7 @@ Ujistěte se, že senzor můžete přejít na *. atp.azure.com pomocí nakonfigu
 
 Pokud se pokusíte nainstalovat senzor ochrany ATP v programu na počítači nakonfigurované s adaptérem seskupování síťových adaptérů, obdržíte chybu instalace. Pokud chcete nainstalovat na počítač nakonfigurovaný pomocí seskupování síťových adaptérů senzor ochrany ATP v programu, postupujte podle těchto pokynů:
 
-Pokud jste se nenainstaloval senzor ještě:
+Pokud jste ještě nenainstalovali senzor:
 
 1.  Stáhněte si Npcap z [ https://nmap.org/npcap/ ](https://nmap.org/npcap/).
 2.  WinPcap, odinstalujte, pokud byla nainstalována.
@@ -69,7 +69,7 @@ Pokud jste již nainstalovali senzor:
 
 ## <a name="windows-defender-atp-integration-issue"></a>Problémy s integrací ochrany ATP v programu Windows Defender
 
-Azure Advanced Threat Protection umožňuje integrovat Azure ATP s ochrany ATP v programu Windows Defender. 
+Azure Advanced Threat Protection umožňuje integrovat Azure ATP s ochrany ATP v programu Windows Defender. Zobrazit [integrace služby Azure ATP s ochrany ATP v programu Windows Defender](integrate-wd-atp.md) Další informace. 
 
 ## <a name="vmware-virtual-machine-sensor-issue"></a>Problém senzor virtuálního počítače VMware
 
@@ -88,4 +88,4 @@ Nastavte následující nastavení na **0** nebo **zakázané** v konfiguraci s�
 - [Plánování kapacity v Azure ATP](atp-capacity-planning.md)
 - [Konfigurace shromažďování událostí](configure-event-collection.md)
 - [Konfigurace předávání událostí systému Windows](configure-event-forwarding.md#configuring-windows-event-forwarding)
-- [Podívejte se na fórum ochrany ATP v programu.](https://aka.ms/azureatpcommunity)
+- [Podívejte se na fórum služby Azure ATP.](https://aka.ms/azureatpcommunity)

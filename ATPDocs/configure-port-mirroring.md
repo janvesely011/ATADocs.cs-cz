@@ -2,10 +2,10 @@
 title: Konfigurace zrcadlení portů při nasazování rozšířené ochrany před internetovými útoky pro Azure | Dokumentace Microsoftu
 description: Popisuje možnosti zrcadlení portů a způsob jejich konfigurace pro služby Azure ATP
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 7/4/2018
+ms.date: 10/4/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 9ec7eb4c-3cad-4543-bbf0-b951d8fc8ffe
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9ac3c584f5eb73b33415c6c1250eee4c41a12763
-ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
+ms.openlocfilehash: 5ca24df927bc91383449926bdcd67a1c29585618
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44125987"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783572"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -26,7 +26,7 @@ ms.locfileid: "44125987"
 
 # <a name="configure-port-mirroring"></a>Konfigurace zrcadlení portů
 > [!NOTE] 
-> Tento článek je relevantní pouze v případě, že nasazení služby Azure ATP samostatný senzor místo senzoru služby Azure ATP. Pokud chcete zjistit, pokud je potřeba pomocí služby Azure ATP samostatný senzor, naleznete v tématu [výběr správné senzory pro funkce nasazení](atp-capacity-planning.md#choosing-the-right-sensor-type-for-your-deployment).
+> Tento článek je relevantní pouze v případě, že nasazení služby Azure ATP samostatné senzorů místo senzorů ochrany ATP v programu Azure. Pokud chcete zjistit, pokud musíte použít samostatné senzorů ochrany ATP v programu Azure, najdete v článku [výběr správné senzory pro funkce nasazení](atp-capacity-planning.md#choosing-the-right-sensor-type-for-your-deployment).
  
 Hlavní zdroj dat používají ochrany ATP v programu Azure je hloubková kontrola paketů síťového provozu do a z řadičů domény. Pro služby Azure ATP zobrazíte síťový provoz musí buď konfigurovat zrcadlení portů nebo použít síťové ODPOSLOUCHÁVÁNÍ.
 
@@ -74,4 +74,4 @@ Po dokončení konfigurace zrcadlení portů, ověřte, že zrcadlení portů fu
 
 ## <a name="see-also"></a>Viz také
 - [Konfigurace předávání událostí](configure-event-forwarding.md)
-- [Podívejte se na fórum ochrany ATP v programu.](https://aka.ms/azureatpcommunity)
+- [Podívejte se na fórum služby Azure ATP.](https://aka.ms/azureatpcommunity)

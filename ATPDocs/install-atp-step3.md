@@ -1,24 +1,24 @@
 ---
-title: Instalace Azure Advanced Threat Protection – krok 3 | Dokumentace Microsoftu
-description: Třetí krok instalace ochrany ATP v programu Azure umožňuje stáhnout instalační balíček služby Azure ATP samostatného senzoru.
+title: Nainstalovat Azure Advanced Threat Protection | Dokumentace Microsoftu
+description: Třetí krok instalace ochrany ATP v programu Azure umožňuje stáhnout instalační balíček senzoru služby Azure ATP.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 2/21/2017
-ms.topic: conceptual
+ms.date: 10/04/2018
+ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
 ms.technology: ''
 ms.assetid: 95bb4ec1-841f-41b7-92fe-fbd144085724
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 96d459bd00d39bb21ce363d079b5b24ceca4ace7
-ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
+ms.openlocfilehash: 5a9eea9550af90577ad1763384a134f5889edc5f
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47454016"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783776"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -42,7 +42,7 @@ Klikněte na tlačítko **Stáhnout** v seznamu kroků uvedených v horní čás
 
 1.  Klikněte na tlačítko **senzor**.
 2.  Uložte balíček místně.
-3.  Kopírovat **přístupový klíč**. Přístupový klíč se vyžaduje senzoru služby Azure ATP pro připojení k vašemu pracovnímu prostoru služby Azure ATP. Přístupový klíč je jednoho heslem pro nasazení ze senzorů, po jejímž uplynutí veškerá komunikace se provádí pomocí certifikátů pro ověřování a šifrování TLS. Použití **znovu vygenerovat** tlačítko Pokud byste zas někdy potřebovali obnovit nový přístupový klíč, můžete, a to nebude mít vliv na všechny dříve nasazené senzorů, protože se používá jenom pro první registraci senzoru.
+3.  Kopírovat **přístup** **klíč**. Přístupový klíč se vyžaduje senzoru služby Azure ATP pro připojení k vašemu pracovnímu prostoru služby Azure ATP. Přístupový klíč je jednoho heslem pro nasazení ze senzorů, po jejímž uplynutí veškerá komunikace se provádí pomocí certifikátů pro ověřování a šifrování TLS. Použití **znovu vygenerovat** tlačítko Pokud byste zas někdy potřebovali obnovit nový přístupový klíč, můžete, a to nebude mít vliv na všechny dříve nasazené senzorů, protože se používá jenom pro první registraci senzoru.
 4.  Zkopírujte balíček na vyhrazený server nebo řadič domény, na který instalujete senzoru služby Azure ATP. Alternativně můžete otevřít na portálu ochrany ATP v programu Azure pracovní prostor ze vyhrazený server nebo řadič domény a tento krok přeskočit.
 
 Soubor zip obsahuje následující soubory:
@@ -65,4 +65,4 @@ Soubor zip obsahuje následující soubory:
 
 - [Požadavky služby Azure ATP](atp-prerequisites.md)
 
-- [Podívejte se na fórum ochrany ATP v programu.](https://aka.ms/azureatpcommunity)
+- [Podívejte se na fórum služby Azure ATP.](https://aka.ms/azureatpcommunity)

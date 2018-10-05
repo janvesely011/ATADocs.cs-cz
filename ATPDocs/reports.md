@@ -2,10 +2,10 @@
 title: Práce se sestavami ochrany ATP v programu Azure | Dokumentace Microsoftu
 description: Popisuje, jak můžete generovat sestavy služby Azure ATP pro monitorování vaší sítě.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 2/27/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,19 +13,19 @@ ms.technology: ''
 ms.assetid: 2c2d6b1a-fc8c-4ff7-b07d-64ce6159f84d
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: eb1a29038d8afb47328970ff7179f0e1ff01614d
-ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
+ms.openlocfilehash: 367ad07bd1d0be80486bfc10c2b70546d360805c
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44165928"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783181"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
 
 # <a name="azure-atp-reports"></a>Sestavy služby Azure ATP
 
-Část sestavy ochrany ATP v programu Azure na portálu pro pracovní prostor umožňuje generovat sestavy, které vám poskytnou informace o stavu systému, stavu systému a sestavu o podezřelých aktivitách zjištěných ve vašem prostředí.
+Část sestavy ochrany ATP v programu Azure na portálu ochrany ATP v programu Azure umožňuje generovat sestavy, které vám poskytnou informace o stavu systému, stavu systému a sestavu o podezřelých aktivitách zjištěných ve vašem prostředí.
 
 
 Pokud chcete získat přístup na stránku sestav, klikněte na ikonu sestav na řádku nabídek: ![ikona sestav](./media/atp-report-icon.png).
@@ -43,7 +43,7 @@ Existují dva způsoby, jak vygenerovat sestavu: na vyžádání nebo na základ
 
 Vygenerování sestavy na vyžádání:
 
-1. V řádku nabídek portálu ochrany ATP v programu Azure pracovní prostor klikněte na ikonu sestav na řádku nabídek: ![ikona sestav](./media/atp-report-icon.png).
+1. V řádku nabídek portálu ochrany ATP v programu Azure klikněte na ikonu sestav na řádku nabídek: ![ikona sestav](./media/atp-report-icon.png).
 
 2. V části Typ vybranou sestavu, nastavit **z** a **k** kalendářních dat a klikněte na tlačítko **Stáhnout**. 
  ![sestavy](./media/reports.png)
@@ -67,4 +67,4 @@ Nastavení naplánované sestavy:
 - [Plánování kapacity v Azure ATP](atp-capacity-planning.md)
 - [Konfigurace shromažďování událostí](configure-event-collection.md)
 - [Konfigurace předávání událostí systému Windows](configure-event-forwarding.md#configuring-windows-event-forwarding)
-- [Podívejte se na fórum ochrany ATP v programu.](https://aka.ms/azureatpcommunity)
+- [Podívejte se na fórum služby Azure ATP.](https://aka.ms/azureatpcommunity)

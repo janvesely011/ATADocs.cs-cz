@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/20/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: effca0f2-fcae-4fca-92c1-c37306decf84
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ad120cfe3e736935a557f66417794cd531fa5b2e
-ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
+ms.openlocfilehash: 84ec02cb1aa999d70808f6eaf76bb28cba9d2110
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47454084"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783351"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -55,7 +55,7 @@ Pokud máte doménových struktur, na které žádné služby Azure ATP jsou nai
 -   Pokud samostatný senzorů ochrany ATP v programu Azure jsou nainstalovány na samostatné počítače, nikoli přímo na řadiče domény, ujistěte se, že počítače jsou povoleny pro komunikaci se všemi vzdálené doménové struktuře řadičů domény pomocí protokolu LDAP. 
 - Uživatel, který konfigurujete v konzole služby Azure ATP v **adresářové služby** musí důvěřovat ve všech dalších doménových struktur a musí mít alespoň oprávnění ke čtení jenom k provádění dotazů LDAP řadiče domény.
 
-- Aby Azure ochrany ATP v programu předat ochrany ATP v programu senzory a ochrana ATP v programu samostatné senzorů otevřete následující porty na každý Machine, na kterém jsou nainstalované senzory ochrany ATP v programu:
+- Aby ochrany ATP v programu Azure ke komunikaci s Azure ATP senzory a senzorů samostatné zure ochrany ATP v programu otevřete následující porty na každý Machine, na kterém jsou nainstalované senzory ochrany ATP v programu Azure:
 
  
   |Protokol|Přenos|Port|Směr|Direction|
@@ -76,7 +76,7 @@ Ochrana ATP v programu Azure maps vaší doménové struktury, využívá proces
 -   Po spuštění senzoru služby Azure ATP dotazuje vzdálených doménových strukturách služby Active Directory a načte seznam uživatelů a počítačů data pro vytvoření profilu.
 -   Každých 5 minut, každý senzoru služby Azure ATP dotazuje jeden řadič domény v každé doméně, v každé doménové struktuře, mapovat všechny doménové struktury v síti.
 -   Každý senzoru služby Azure ATP mapuje pomocí objektu "trustedDomain" ve službě Active Directory, přihlášení a kontrola typu vztahu důvěryhodnosti doménové struktury.
--   Může také zobrazit ad-hoc provoz při ochrany ATP v programu senzor zachytí aktivity napříč doménovou strukturu. V tomto případě senzorů ochrany ATP v programu bude odesílat dotaz LDAP na příslušných řadičích domény získat informace o entitě. 
+-   Může také zobrazit ad-hoc provoz, když zjistí aktivitu napříč doménovou strukturu senzoru služby Azure ATP. Když k tomu dojde, senzorů ochrany ATP v programu Azure pošle dotaz LDAP na příslušných řadičích domény získat informace o entitě. 
 
 ## <a name="known-limitations"></a>Známá omezení
 -   Interaktivní prováděného uživateli v jedné doménové struktuře pro přístup k prostředkům v jiné doménové struktuře nejsou zobrazeny v řídicím panelu služby Azure ATP.
@@ -87,8 +87,8 @@ Ochrana ATP v programu Azure maps vaší doménové struktury, využívá proces
 
 
 ## <a name="see-also"></a>Viz také
-- [Nástroje pro změnu velikosti ochrany ATP v programu](http://aka.ms/aatpsizingtool)
-- [Architektura ochrany ATP v programu](atp-architecture.md)
-- [Instalace ochrany ATP v programu](install-atp-step1.md)
-- [Podívejte se na fórum ochrany ATP v programu.](https://aka.ms/azureatpcommunity)
+- [Nástroje pro změnu velikosti Azure ATP](http://aka.ms/aatpsizingtool)
+- [Architektura služby Azure ATP](atp-architecture.md)
+- [Instalace služby Azure ATP](install-atp-step1.md)
+- [Podívejte se na fórum služby Azure ATP.](https://aka.ms/azureatpcommunity)
 

@@ -2,10 +2,10 @@
 title: Principy Azure ochrany ATP v programu Sledování výstrah | Dokumentace Microsoftu
 description: Popisuje, jak můžete k řešení potíží pomocí protokolů služby Azure ATP
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 4/15/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,30 +13,30 @@ ms.technology: ''
 ms.assetid: d0551e91-3b21-47d5-ad9d-3362df6d47c0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 7cffaef77a80b5c1c9bb33694ef2c7a73ef80ee0
-ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
+ms.openlocfilehash: eed1509cb31885bccdfcc40505284dbdbdfc4cca
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44166914"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783878"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
 # <a name="understanding-azure-atp-sensor-and-standalone-sensor-monitoring-alerts"></a>Principy senzoru služby Azure ATP a samostatný senzor výstrah monitorování
 
-Health Center ochrany ATP v programu Azure vám umožňuje vědět, že dojde k nějakému problému s libovolnou z vašich pracovních prostorů služby Azure ATP vyvoláním monitorovacího upozornění. Tento článek popisuje všechna monitorovací upozornění jednotlivých komponent včetně příčiny a postupu vedoucího k vyřešení problému.
+Health Center ochrany ATP v programu Azure vám umožňuje vědět, že dojde k nějakému problému s váš pracovní prostor služby Azure ATP vyvoláním monitorovacího upozornění. Tento článek popisuje všechna monitorovací upozornění jednotlivých komponent včetně příčiny a postupu vedoucího k vyřešení problému.
 
 ## <a name="read-only-user-password-to-expire-shortly"></a>Brzy vyprší platnost hesla uživatele jen pro čtení
 
 |Výstraha|Popis|Řešení|Závažnost|
 |----|----|----|----|
-|Platnost hesla uživatele jen pro čtení, který se používá k rozpoznávání entit ve službě Active Directory, vyprší za méně než 30 dnů.|Pokud heslo pro tohoto uživatele vyprší, zastaví všechny služby Azure ATP senzory a shromažďovat žádná nová data.|[Změna hesla připojení k doméně](modifying-atp-config-dcpassword.md) a pak aktualizujte heslo v konzole Azure ochrany ATP v programu.|Střední|
+|Platnost hesla uživatele jen pro čtení, který se používá k rozpoznávání entit ve službě Active Directory, vyprší za méně než 30 dnů.|Pokud heslo pro tohoto uživatele vyprší, zastaví všechny služby Azure ATP senzory a shromažďovat žádná nová data.|[Změna hesla připojení k doméně](modifying-atp-config-dcpassword.md) a pak aktualizujte heslo na portálu ochrany ATP v programu Azure.|Střední|
 
 ## <a name="read-only-user-password-expired"></a>Vypršení platnosti hesla uživatele jen pro čtení
 
 |Výstraha|Popis|Řešení|Závažnost|
 |----|----|----|----|
-|Platnost hesla uživatele jen pro čtení, který se používá k získání dat z adresáře, vypršela.|Zastaví všechny senzory ochrany ATP v programu Azure (nebo se zastaví brzy) a shromažďovat žádná nová data.|[Změna hesla připojení k doméně](modifying-atp-config-dcpassword.md) a pak aktualizujte heslo v konzole Azure ochrany ATP v programu.|Vysoká|
+|Platnost hesla uživatele jen pro čtení, který se používá k získání dat z adresáře, vypršela.|Zastaví všechny senzory ochrany ATP v programu Azure (nebo se zastaví brzy) a shromažďovat žádná nová data.|[Změna hesla připojení k doméně](modifying-atp-config-dcpassword.md) a pak aktualizujte heslo na portálu ochrany ATP v programu Azure.|Vysoká|
 
 ## <a name="domain-synchronizer-not-assigned"></a>Nepřiřazený synchronizátor domény
 
@@ -110,4 +110,4 @@ Health Center ochrany ATP v programu Azure vám umožňuje vědět, že dojde k 
 - [Plánování kapacity v Azure ATP](atp-capacity-planning.md)
 - [Konfigurace shromažďování událostí](configure-event-collection.md)
 - [Konfigurace předávání událostí systému Windows](configure-event-forwarding.md#configuring-windows-event-forwarding)
-- [Podívejte se na fórum ochrany ATP v programu.](https://aka.ms/azureatpcommunity)
+- [Podívejte se na fórum služby Azure ATP.](https://aka.ms/azureatpcommunity)

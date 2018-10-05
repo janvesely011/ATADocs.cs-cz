@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 9/16/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f9959f1b517890b725845f8dd01156f9a3e8198b
-ms.sourcegitcommit: 5ff50807f855db1051b977a64eb6e90487ea196c
+ms.openlocfilehash: bbc0717d6224b3f4173d697f0c751f6bdd1bb062
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45750550"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783946"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -286,8 +286,8 @@ Vydáno 11. března 2018
  -  Senzor infrastruktury služby Azure ATP byla vylepšena z hlediska výkonu: agregovaná zobrazení provozu povolí optimalizaci CPU a paketů kanálu a opětovně používá sockets k řadičům domény, chcete-li minimalizovat relace protokolu SSL řadiči domény.
 
 ## <a name="see-also"></a>Viz také
+- [Co je Azure Advanced Threat Protection?](what-is-atp.md)
+- [Nejčastější dotazy](atp-technical-faq.md)
 - [Požadavky služby Azure ATP](atp-prerequisites.md)
-- [Plánování kapacity v Azure ATP](atp-capacity-planning.md)
-- [Konfigurace shromažďování událostí](configure-event-collection.md)
-- [Konfigurace předávání událostí systému Windows](configure-event-forwarding.md#configuring-windows-event-forwarding)
-- [Podívejte se na fórum ochrany ATP v programu.](https://aka.ms/azureatpcommunity)
+- [Plánování kapacity v Azure ATP](atp-capacity-planning.md) (configure-event-forwarding.md#configuring-windows-event-forwarding)
+- [Podívejte se na fórum služby Azure ATP.](https://aka.ms/azureatpcommunity)

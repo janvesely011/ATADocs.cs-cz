@@ -1,11 +1,11 @@
 ---
-title: Instalace Azure Advanced Threat Protection – krok 4 | Dokumentace Microsoftu
-description: Čtvrtý krok instalace ochrany ATP v programu Azure vám pomůže s instalací samostatného senzoru služby Azure ATP.
+title: Nainstalovat Azure Advanced Threat Protection | Dokumentace Microsoftu
+description: Čtvrtý krok instalace ochrany ATP v programu Azure vám pomůže s instalací senzoru služby Azure ATP.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 3/25/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 51911e39-76c7-4dcd-bc0b-ec6235d0403f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 87a2b47261293fffffe9d822d698b551a332a481
-ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
+ms.openlocfilehash: 52ffbac6acd762d4cf2898c170d7a026d2a37826
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47454135"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783725"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -32,13 +32,10 @@ ms.locfileid: "47454135"
 
 ## <a name="step-4-install-the-azure-atp-sensor"></a>Krok 4: Instalace senzoru služby Azure ATP
 
-Před instalací služby Azure ATP samostatný senzor na vyhrazený server ověřte, že je zrcadlení portů správně nakonfigurované a že samostatného senzoru služby Azure ATP vidí provoz do a z řadičů domény. 
-
-
 > [!IMPORTANT]
 >Ujistěte se, že rozhraní .net Framework 4.7 je nainstalovaná na počítači. Pokud je rozhraní .net Framework 4.7 není nainstalovaná Instalační balíček senzoru služby Azure ATP ho nainstaluje, která vyžaduje restartování serveru.
 
-Proveďte následující kroky na serveru senzoru služby Azure ATP nebo řadič domény.
+Proveďte následující kroky na řadiči domény.
 
 1. Ověřte, zda je počítač připojen k relevantní koncový bod cloudu služby ochrany ATP v programu Azure:
   - https://triprd1wceuw1sensorapi.atp.azure.com (pro Evropa)  
@@ -73,7 +70,7 @@ Proveďte následující kroky na serveru senzoru služby Azure ATP nebo řadič
 
       - Instalační cesta: Toto je umístění, kde je nainstalován samostatného senzoru služby Azure ATP. Ve výchozím nastavení to je %programfiles%\Azure Advanced Threat Protection senzoru. Nechte nastavenou výchozí hodnotu.
 
-      - Přístupový klíč: to je načten z portálu pracovního prostoru v předchozím kroku.
+      - Přístupový klíč: to je načten z ochrany ATP v programu Azure portal v předchozím kroku.
     
 7. Klikněte na tlačítko **Nainstalovat**. Následující komponenty jsou nainstalovaná a nakonfigurovaná v průběhu instalace senzoru služby Azure ATP:
 
@@ -86,7 +83,7 @@ Proveďte následující kroky na serveru senzoru služby Azure ATP nebo řadič
     -   Azure službu sensor ochrany ATP v programu a službu updater senzoru služby Azure ATP
     -   Microsoft Visual C++ 2013 Redistributable
 
-8.  Po dokončení instalace klikněte na tlačítko **spuštění** otevřete prohlížeč a přihlaste se k portálu pracovního prostoru služby Azure ATP.
+8.  Po dokončení instalace klikněte na tlačítko **spuštění** otevřete prohlížeč a přihlaste se k portálu ochrany ATP v programu Azure.
 
 
 > [!div class="step-by-step"]
@@ -102,4 +99,4 @@ Proveďte následující kroky na serveru senzoru služby Azure ATP nebo řadič
 
 - [Požadavky služby Azure ATP](atp-prerequisites.md)
 
-- [Podívejte se na fórum ochrany ATP v programu.](https://aka.ms/azureatpcommunity)
+- [Podívejte se na fórum služby Azure ATP.](https://aka.ms/azureatpcommunity)

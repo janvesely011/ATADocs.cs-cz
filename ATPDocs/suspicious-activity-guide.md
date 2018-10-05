@@ -1,11 +1,11 @@
 ---
-title: Průvodce prošetřováním podezřelých aktivit Azure ochrany ATP v programu | Dokumentace Microsoftu
-d|Description: This article provides a list of the suspicious activities Azure ATP can detect and steps for remediation.
+title: Azure Průvodce výstrah zabezpečení ochrany ATP v programu | Dokumentace Microsoftu
+d|Description: This article provides a list of the security alerts issued by Azure ATP and steps for remediation.
 keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/20/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,19 +13,19 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 7146c9830a6d3e4f9f655020aa2711e8aeeba40d
-ms.sourcegitcommit: 7f3ded32af35a433d4b407009f87cfa6099f8edf
+ms.openlocfilehash: af2c7302f97ef8e2d9fca5862246a1b7507c0433
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44126446"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783929"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
 
-# <a name="azure-advanced-threat-protection-suspicious-activity-guide"></a>Průvodce prošetřováním podezřelých aktivit Azure Advanced Threat Protection
+# <a name="azure-advanced-threat-protection-security-alert-guide"></a>Azure Advanced Threat Protection výstrah Příručka zabezpečení
 
-Po správném šetření dají považovat za podezřelé aktivity:
+Po správném šetření můžete všechny výstrahy zabezpečení služby Azure ATP klasifikováno jako:
 
 -   **Pravdivě pozitivní upozornění**: škodlivá akce zjištěná službou ochrany ATP v programu Azure.
 
@@ -33,7 +33,7 @@ Po správném šetření dají považovat za podezřelé aktivity:
 
 -   **Falešně pozitivní**: alarm hodnotu false, to znamená aktivity neměli stát.
 
-Další informace o tom, jak pracovat s výstrahami ochrany ATP v programu Azure najdete v tématu [práce s podezřelými aktivitami](working-with-suspicious-activities.md).
+Další informace o tom, jak pracovat s výstrahami zabezpečení služby Azure ATP najdete v tématu [práce s výstrahami zabezpečení](working-with-suspicious-activities.md).
 
 
 ## <a name="abnormal-sensitive-group-modification"></a>Neobvyklá úprava citlivých skupin
@@ -41,7 +41,7 @@ Další informace o tom, jak pracovat s výstrahami ochrany ATP v programu Azure
 
 **Popis**
 
-Útočníci přidání uživatelů do skupiny s vysokou úrovní oprávnění. Učiní tak získat přístup k více prostředkům a k získání průniku do sítě. Tato detekce spoléhá na profilaci aktivity Změna skupiny uživatelů a upozorní při viděli doplněk neobvyklé citlivých skupin. Profilace se provádí nepřetržitě pomocí ochrany ATP v programu. Minimální dobu, než může být výstraha je jeden měsíc na každém řadiči domény.
+Útočníci přidání uživatelů do skupiny s vysokou úrovní oprávnění. Učiní tak získat přístup k více prostředkům a k získání průniku do sítě. Tato detekce spoléhá na profilaci aktivity Změna skupiny uživatelů a upozorní při viděli doplněk neobvyklé citlivých skupin. Profilace se neustále provádí pomocí služby Azure ATP. Minimální dobu, než může být výstraha je jeden měsíc na každém řadiči domény.
 
 Definice citlivých skupin v Azure ATP, naleznete v tématu [práce s citlivými účty](sensitive-accounts.md).
 
@@ -604,9 +604,9 @@ Oprava všech počítačů, zejména použití aktualizací zabezpečení.
 
 
 > [!NOTE]
-> Pokud chcete zakázat podezřelé aktivity, obraťte se na podporu.
+> Pokud chcete zakázat výstrahu zabezpečení, obraťte se na podporu.
 
 
 ## <a name="see-also"></a>Viz také
 - [Práce s podezřelými aktivitami](working-with-suspicious-activities.md)
-- [Podívejte se na fórum ochrany ATP v programu.](https://aka.ms/azureatpcommunity)
+- [Podívejte se na fórum služby Azure ATP.](https://aka.ms/azureatpcommunity)

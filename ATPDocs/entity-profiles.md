@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/06/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 17458706-79fb-4c23-aa42-66979164a45f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: b4353de9d004358ddcdc929271fd96665e1c7322
-ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
+ms.openlocfilehash: 357973698d9d53936c3fa308bc0021ae1cd98f60
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44165843"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783504"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -51,7 +51,7 @@ Použití **filtrovat podle** tlačítko nad časové osy aktivity můžete filt
 
  ![adresář data uživatelského profilu](media/user-profile-dir-data.png)
 
-V **řízení uživatelských účtů** části, nastavení zabezpečení zařízení Surface ochrany ATP v programu Azure, které může být nutné vaše attentions. Můžete zobrazit důležité příznaky informace o uživateli, jako je můžete uživatele stisknutím klávesy enter obejít heslo, uživatel nemá heslo, které je platné stále atd. 
+V **řízení uživatelských účtů** části, nastavení zabezpečení zařízení Surface ochrany ATP v programu Azure, které může být nutné vaše attentions. Můžete zobrazit důležité příznaky informace o uživateli, například když na uživatele můžete stisknutím klávesy enter obejít heslo, a pokud má uživatel heslo, které je platné stále atd. 
 
 ## <a name="view-lateral-movement-paths"></a>Zobrazení cesty taktiky Lateral Movement
 
@@ -59,7 +59,7 @@ Když kliknete na kartu cesty laterální pohyb, se zobrazí plně dynamického 
 
 Mapa vám poskytne přehled o tom, kolik segmentů směrování mezi počítače nebo uživatelé útočník by mohl do a z tohoto uživatele k ohrožení citlivých účtů, a pokud má uživatel citlivých účtů, můžete zobrazit, kolik prostředky a účty jsou přímo připojené.
 
-Pokud se zjistila aktivita za poslední dva dny grafu již nezobrazuje, ale [laterální pohyb cesta sestavy](reports.md) bude k dispozici k poskytování informací o cesty taktiky Lateral Movement za posledních 60 dní. 
+Pokud se zjistila aktivita za poslední dva dny grafu již nezobrazuje, ale [laterální pohyb cesta sestavy](reports.md) je k dispozici pro poskytování informací o cesty taktiky Lateral Movement, které existovaly za posledních 60 dní. 
 
 Další informace najdete v tématu [laterální pohyb cesty](use-case-lateral-movement-path.md). 
 
@@ -69,4 +69,4 @@ Další informace najdete v tématu [laterální pohyb cesty](use-case-lateral-m
 ## <a name="see-also"></a>Viz také
 
 - [Prošetřování laterálních průnikových tras pomocí služby Azure ATP](use-case-lateral-movement-path.md)
-- [Podívejte se na fórum ochrany ATP v programu.](https://aka.ms/azureatpcommunity)
+- [Podívejte se na fórum služby Azure ATP.](https://aka.ms/azureatpcommunity)

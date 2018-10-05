@@ -2,10 +2,10 @@
 title: Podpora ochrany ATP v programu Azure | Dokumentace Microsoftu
 description: Popisuje proces pro získání nápovědy podpory pro služby Azure ATP.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 3/18/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 8ae459ac-9fca-4923-9a1a-dc10d5c50b29
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: fa4577377c32562e0441014958e9702cbbb7399b
-ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
+ms.openlocfilehash: 2c4f82ce7bf4e8ba7bf9e6ae56198ca1f6e4aefb
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44166406"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783232"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -66,7 +66,7 @@ Pokud chcete zobrazit stav systému pro ochrany ATP v programu Azure, přejděte
 
 #### <a name="on-demand-videos"></a>Videa na vyžádání
 
-- Relace Microsoft Ignite 2017 [rozšířené ochrany před internetovými útoky pro Azure](https://myignite.microsoft.com/sessions/53476?source=sessions).
+- Relace Microsoft Ignite 2018 pro [rozšířené ochrany před internetovými útoky pro Azure](https://myignite.techcommunity.microsoft.com/sessions?t=%257B%2522from%2522%253A%25222018-09-23T08%253A00%253A00-04%253A00%2522%252C%2522to%2522%253A%25222018-09-28T19%253A00%253A00-04%253A00%2522%257D&q=azure%2520advanced%2520threat%2520protection#ignite-html-anchor).
 
 Odstraňování problémů:
 
@@ -76,8 +76,8 @@ Odstraňování problémů:
 
 - Pokud máte Windows Defender ATP nasazené ve vašem prostředí a chcete ji integrovat s Azure Advanced Threat Protection najdete v tématu [integrací se službami ochrany ATP v programu Windows Defender](integrate-wd-atp.md).
 
-- Informace týkající se šetření podezřelé aktivity, najdete v článku [Průvodce prošetřováním podezřelých aktivit](suspicious-activity-guide.md).
+- Informace týkající se šetření výstrahy zabezpečení, najdete v článku [Průvodce výstrah zabezpečení](suspicious-activity-guide.md).
 
 ### <a name="community-resources"></a>Zdroje informací a materiály z komunity
 
-Doporučujeme, abyste [pro rozšířené ochrany před internetovými útoky pro Azure](https://www.yammer.com/AskIPTeam). Tento prostředek poskytuje přímé odpovědi od týmu Azure Advanced Threat Protection kromě výhodu sdílených zkušeností a znalostí od jiných správců a konzultantů.
+Doporučujeme, abyste [skupiny Yammeru pro službu Azure Advanced Threat Protection](https://www.yammer.com/AskIPTeam). Tento prostředek poskytuje přímé odpovědi od týmu Azure Advanced Threat Protection kromě výhodu sdílených zkušeností a znalostí od jiných správců a konzultantů.

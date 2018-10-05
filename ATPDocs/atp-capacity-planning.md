@@ -2,22 +2,22 @@
 title: Plánování nasazení rozšířené ochrany před internetovými útoky pro Azure | Dokumentace Microsoftu
 description: Pomůže vám naplánovat nasazení a rozhodnout, kolik serverů ochrany ATP v programu Azure bude potřeba k podpoře vaší sítě.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 5/22/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.service: azure-advanced-threat-protection
 ms.prod: ''
 ms.assetid: da0ee438-35f8-4097-b3a1-1354ad59eb32
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e894422e7264650186c6f4eea28d5a9099ca7914
-ms.sourcegitcommit: 56065ee43dac299203871cd6f025315520750b3b
+ms.openlocfilehash: 9f2b8f31f88c14f67c8a03b748ac3d2fb6179a62
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47233894"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783453"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -26,11 +26,11 @@ ms.locfileid: "47233894"
 # <a name="azure-atp-capacity-planning"></a>Plánování kapacity v Azure ATP
 Tento článek pomůže určit, kolik ochrany ATP v programu Azure senzory a samostatné senzory, které potřebujete.
 
-> [!NOTE] 
-> Nástroj pro změnu velikosti má dvě tabulky – jeden pro ATA a jeden pro služby Azure ATP. Ujistěte se, že jste na správné listu.
-
 ## <a name="using-the-sizing-tool"></a>Použití nástroje pro změnu velikosti
 Doporučený a nejjednodušší způsob, jak určit kapacitu pro vaše nasazení služby Azure ATP, je použít [nástroje pro změnu velikosti ochrany ATP v programu Azure](http://aka.ms/aatpsizingtool). Spusťte nástroj pro změnu velikosti ochrany ATP v programu Azure a z výsledků v Excelovém souboru, použijte následující pole k určení paměti a procesoru, který používá senzor:
+
+> [!NOTE] 
+> Nástroj pro změnu velikosti má dvě tabulky – jeden pro ATA a jeden pro služby Azure ATP. Ujistěte se, že používáte správné list.
 
 - Senzoru služby Azure ATP: shoda **zaneprázdněný Packets/sec** v tabulce senzoru služby Azure ATP v souboru výsledků s **PAKETŮ za SEKUNDU** pole [ochrany ATP v programu Azure samostatný senzor tabulky](#azure-atp-sensor-sizing)nebo [tabulky senzoru služby Azure ATP](#azure-atp-standalone-sensor-sizing), v závislosti na [zvoleného typu senzor](#choosing-the-right-sensor-type-for-your-deployment).
 
@@ -42,10 +42,10 @@ Pokud z nějakého důvodu nemůžete použít nástroj pro změnu velikosti och
 Následující části uvádějí pokyny, jak shromáždit čítač paketů za sekundu z jednoho řadiče domény.
 
 ## Výběr správné senzor typu nasazení<a name="choosing-the-right-sensor-type-for-your-deployment"></a>
-Nasazení služby Azure ATP libovolnou kombinaci typů ochrany ATP v programu Azure samostatný senzor je podporována:
+V nasazení služby Azure ATP libovolnou kombinaci typů senzoru služby Azure ATP podporované:
 
+- Jenom ochrana ATP v programu Azure senzorů
 - Pouze senzorů samostatné služby Azure ATP
-- Pouze senzoru služby Azure ATP
 - Kombinace obojího
 
 Při určování typu nasazení ze senzorů, vezměte v úvahu následující výhody:
@@ -61,7 +61,7 @@ Zvažte následující skutečnosti při rozhodování o tom, kolik senzorů sam
     Ochrana ATP v programu Azure může monitorovat provoz z několika domén v rámci více doménových struktur služby Active Directory pro každý pracovní prostor, který vytvoříte. 
 
 -   **Zrcadlení portů**<br>
-Úvahy o zrcadlení portů může vyžadovat nasazení více senzorů samostatné ochrany ATP v programu Azure na datové centrum nebo pobočku Web.
+    Úvahy o zrcadlení portů může vyžadovat nasazení více senzorů samostatné ochrany ATP v programu Azure na datové centrum nebo pobočku Web.
 
 -   **Kapacita**<br>
     Samostatný senzor ochrany ATP v programu Azure může podporovat monitorování několika řadičů domény, v závislosti na objemu síťových přenosů monitorovaných řadičů domény. 
@@ -149,4 +149,4 @@ Pokud chcete určit počet paketů za sekundu, proveďte na každém řadiči do
 - [Nástroje pro změnu velikosti Azure ATP](http://aka.ms/aatpsizingtool)
 - [Požadavky služby Azure ATP](atp-prerequisites.md)
 - [Architektura služby Azure ATP](atp-architecture.md)
-- [Podívejte se na fórum ochrany ATP v programu.](https://aka.ms/azureatpcommunity)
+- [Podívejte se na fórum služby Azure ATP.](https://aka.ms/azureatpcommunity)

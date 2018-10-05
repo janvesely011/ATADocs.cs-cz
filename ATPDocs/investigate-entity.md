@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/6/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 43e57f87-ca85-4922-8ed0-9830139fe7cb
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0c0558dbe0b4eba849adb635a84bc934e406e56f
-ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
+ms.openlocfilehash: 72e26d9cdc539da168d1bc7c274971526eec61d1
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44166557"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783300"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -26,13 +26,13 @@ ms.locfileid: "44166557"
 
 # <a name="investigate-an-entity-with-azure-atp"></a>Prozkoumat entity pomocí služby Azure ATP
 
-Tento článek popisuje proces pro zkoumání entit, poté, co detekovaly podezřelé aktivity s Azure Advanced Threat Protection (ATP). Po zobrazení na časové ose podezřelé aktivity, můžete procházet entity účastnili aktivity a použít následující parametry a podrobnosti o další informace o co se stalo a co je potřeba dělat pro zmírnění rizik.
+Tento článek popisuje proces pro zkoumání entit, poté, co detekovaly podezřelé aktivity s Azure Advanced Threat Protection (ATP). Po zobrazení výstrahy zabezpečení na časové ose, můžete přejít na entity účastnící se upozornění a použít následující parametry a podrobnosti se dozvíte více o co se stalo a co je potřeba dělat pro zmírnění rizika.
 
 ## <a name="look-at-the-entity-profile"></a>Podívejte se na profil entity
 
 Na stránce komplexní entity navržena pro celý podrobný rozbor šetření uživatelů, počítačů, zařízení a prostředky, ke kterým mají přístup k spolu s jejich historie vám poskytne profil entity. Na stránce Profil využívá výhod nových překladač logické aktivity ochrany ATP v programu Azure, který můžete podívat na skupinu aktivit, ke kterým dochází (agregované až minutu) a seskupovat je do jedné logické aktivity umožňují lépe pochopit skutečné aktivity vaši uživatelé.
 
-Chcete-li získat přístup stránku profil entity, klikněte na název sady entit, jako je například uživatelské jméno na časové ose podezřelé aktivity. Zkrácené verze na stránce podezřelých aktivit profilu entity také zobrazí ukazatele myši na název entity.
+Chcete-li získat přístup stránku profil entity, klikněte na název sady entit, jako je například uživatelské jméno na časové ose výstrah zabezpečení. Uvidíte také zkrácenou verzi profil entity na stránce výstrah zabezpečení podržením ukazatele nad název entity.
 
 Profil entity umožňuje zobrazení entity aktivity, zobrazit data adresáře a zobrazení cesty taktiky Lateral Movement entity. Další informace najdete v tématu [Principy profily entit ](entity-profiles.md).
 
@@ -112,4 +112,4 @@ Teprve potom přejděte vaše šetření je důležité vědět, jestli je entit
 ## <a name="see-also"></a>Viz také
 
 - [Práce s podezřelými aktivitami](working-with-suspicious-activities.md)
-- [Podívejte se na fórum ochrany ATP v programu.](https://aka.ms/azureatpcommunity)
+- [Podívejte se na fórum služby Azure ATP.](https://aka.ms/azureatpcommunity)

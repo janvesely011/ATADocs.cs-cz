@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/3/2018
+ms.date: 10/4/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 6a9b5273-eb26-414e-9cdd-f64406e24ed8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 34a9b1deb9c5d2d709e333e78e87ded09fff134a
-ms.sourcegitcommit: 04ed0b9faf72d82cd10bf84efd9dc5aa525be212
+ms.openlocfilehash: 839a21dab3962831e4c62dd4c9c2018e81bd7014
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48245379"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783685"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -86,13 +86,13 @@ Kromě toho Microsoft provádí kontroly podstupovaly ověřování u správců 
 ## <a name="deployment"></a>nasazení
 ### <a name="how-many-azure-atp-sensors-do-i-need"></a>Počet senzorů ochrany ATP v programu Azure budu potřebovat?
 
-Každý řadič domény v prostředí měly být pokryté komponentami ochrany ATP v programu nebo samostatného senzoru. Další informace najdete v tématu [senzoru služby Azure ATP velikosti](atp-capacity-planning.md#sizing). 
+Každý řadič domény v prostředí měly být pokryté komponentami ochrany ATP v programu nebo samostatného senzoru. Další informace najdete v tématu [velikosti senzoru služby Azure ATP](atp-capacity-planning.md#sizing). 
 
 ### <a name="does-azure-atp-work-with-encrypted-traffic"></a>Služba Ochrana ATP v programu Azure funguje při šifrovaném provozu?
 Síťové protokoly s šifrovaný provoz (například LDAPS nebo IPSEC) nejsou dešifrovat, ale jsou analyzovány senzory.
 
 ### <a name="does-azure-atp-work-with-kerberos-armoring"></a>Služba Ochrana ATP v programu Azure funguje s obranou protokolu Kerberos?
-Povolení obrany protokolu Kerberos, označované také jako FAST Flexible Authentication Secure Tunneling (), je podporována ochrana ATP v programu, s výjimkou pass typu over-pass-the hash detekce, což nefunguje s obranou protokolu Kerberos.
+Povolení obrany protokolu Kerberos, označované také jako FAST Flexible Authentication Secure Tunneling (), podporuje zure ochrany ATP v programu, s výjimkou pass typu over-pass-the hash detekce, což nefunguje s obranou protokolu Kerberos.
 
 ### <a name="how-do-i-monitor-a-virtual-domain-controller-using-azure-atp"></a>Jak můžu monitorovat virtuální řadič domény pomocí ochrany ATP v programu Azure?
 Většina virtuálních řadičů domény dají pokrýt komponentami senzoru služby Azure ATP, chcete-li zjistit, zda služby Azure ATP senzor je vhodné pro vaše prostředí [plánování kapacity ochrany ATP v programu Azure](atp-capacity-planning.md).
@@ -142,7 +142,7 @@ Začátku do konce testu můžete simulovat podezřelé aktivity. V následujíc
     -   Stisknutím klávesy enter
     -   Typu: Je -d <FQDN>
     -   V závislosti na konfiguraci vašeho prostředí se odpovědi liší z "Bylo odmítnuto dotazu" na seznam záznamů DNS. 
-4. Zobrazte výstrahy související s Simulovaná rekognoskace DNS v konzole služby Azure ATP. 
+4. Zobrazte výstrahy související s Simulovaná rekognoskace DNS na portálu ochrany ATP v programu Azure. 
 
 ## <a name="see-also"></a>Viz také
 - [Požadavky služby Azure ATP](atp-prerequisites.md)
@@ -150,4 +150,4 @@ Začátku do konce testu můžete simulovat podezřelé aktivity. V následujíc
 - [Konfigurace shromažďování událostí](configure-event-collection.md)
 - [Konfigurace předávání událostí systému Windows](configure-event-forwarding.md#configuring-windows-event-forwarding)
 - [Řešení potíží](troubleshooting-atp-known-issues.md)
-- [Podívejte se na fórum ochrany ATP v programu.](https://aka.ms/azureatpcommunity)
+- [Podívejte se na fórum služby Azure ATP.](https://aka.ms/azureatpcommunity)

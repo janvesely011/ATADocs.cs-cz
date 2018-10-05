@@ -1,11 +1,11 @@
 ---
-title: Co je Azure Advanced Threat Protection (ATP)? | Dokumenty Microsoft
-description: Vysvětluje, je Azure Advanced Threat Protection (ATP) a jaké druhy podezřelých aktivit může zjistit
+title: Co je Azure Advanced Threat Protection (služby Azure ATP)? | Dokumenty Microsoft
+description: Vysvětluje, co Azure Advanced Threat Protection (služby Azure ATP) je a jaké druhy podezřelých aktivit může zjistit
 keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 9/16/2018
+ms.date: 10/04/2018
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 2d14d0e9-1b03-4bcc-ae97-8fd41526ffc5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f3e03f5307a9a09ffb2a62e7313be4629f4bc060
-ms.sourcegitcommit: 5ff50807f855db1051b977a64eb6e90487ea196c
+ms.openlocfilehash: 80038b04a95d09c25baf1e2b5d216796cb12c9f6
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45750466"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48783674"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -33,7 +33,7 @@ Azure Protection pokročilé před internetovými útoky (ATP) je řešení clou
 Ochrana ATP v programu Azure monitoruje a analyzuje aktivit uživatelů a informací v síti, jako jsou oprávnění a členství ve skupině, vytváření chování směrný plán pro každého uživatele. Ochrana ATP v programu Azure pak identifikuje anomálie díky integrovaných inteligentním funkcím Adaptivní, získáte přehled o podezřelých aktivitách a událostech, odhalení důmyslné hrozby, ohrožených uživatelů a vnitřních hrozeb pro organizaci. Azure ATP proprietární senzorů monitorování řadičů domény organizace, poskytuje komplexní přehled pro všechny aktivity uživatelů ze všech zařízení. 
  
 ## <a name="protect-user-identities-and-reduce-the-attack-surface"></a>Ochrana identit uživatelů a omezení možností útoku   
-Ochrana ATP v programu Azure obsahuje nedocenitelné insights konfigurace identity a osvědčené postupy zabezpečení pro navrhovaná. Prostřednictvím zprávy o zabezpečení a analýzy chování uživatelů profilu ochrany ATP v programu Azure pomáhá výrazně snížit vaše organizace útoku, kvůli tomu je těžší ohrozit přihlašovací údaje uživatele a přejděte k útoku. Vaší ochrany ATP v programu visual cesty laterální Lateral Movement vám pomůžou rychle porozumět přesně jak útočník může následně k laterálnímu pohybu uvnitř vaší organizace k ohrožení citlivých účtů a sestavit předem brání těmto rizikům. Další zprávy o zabezpečení ochrany ATP v programu vám pomohou identifikovat uživatele a zařízení, které se ověřují pomocí hesla prostého textu a poskytování dalších přehledů zlepšit stav zabezpečení organizace a zásady.  
+Ochrana ATP v programu Azure obsahuje nedocenitelné insights konfigurace identity a osvědčené postupy zabezpečení pro navrhovaná. Prostřednictvím zprávy o zabezpečení a analýzy chování uživatelů profilu ochrany ATP v programu Azure pomáhá výrazně snížit vaše organizace útoku, kvůli tomu je těžší ohrozit přihlašovací údaje uživatele a přejděte k útoku. Azure ATP visual cesty laterální Lateral Movement vám pomůžou rychle porozumět přesně jak útočník může následně k laterálnímu pohybu uvnitř vaší organizace k ohrožení citlivých účtů a sestavit předem brání těmto rizikům. Další zprávy o zabezpečení služby Azure ATP vám pomohou identifikovat uživatele a zařízení, které se ověřují pomocí hesla prostého textu a poskytování dalších přehledů zlepšit stav zabezpečení organizace a zásady.  
  
 ## <a name="identify-suspicious-activities-and-advanced-attacks-across-the-attack-kill-chain"></a>Identifikovat podezřelé aktivity a pokročilé útoky přes řetězu událostí útoku. 
 Obvykle útoky jsou spouštěny proti jakémukoli subjektu přístupné, jako je například uživatel s nízkým oprávněním a potom rychle následně k laterálnímu pohybu dokud útočník získá přístup k cenným prostředků – například citlivých účtů, správci domény a vysoce citlivá data. Ochrana ATP v programu Azure identifikuje tyto pokročilé hrozby ve zdrojovém kódu v celém řetězu událostí útoku. 
@@ -70,7 +70,7 @@ Doporučujeme nasadit Azure ATP v 3 fáze:
 
 ### <a name="phase-1"></a>Fáze 1
 
-1. Nastavení ochrany ATP v programu Azure k ochraně vašich primární prostředí. Model rychlé nasazení Azure ATP můžete začít chránit vaše organizace ještě dnes. [Instalace ochrany ATP v programu](install-atp-step1.md)  
+1. Nastavení ochrany ATP v programu Azure k ochraně vašich primární prostředí. Model rychlé nasazení Azure ATP můžete začít chránit vaše organizace ještě dnes. [Instalace služby Azure ATP](install-atp-step1.md)  
 2. Nastavte [citlivých účtů](sensitive-accounts.md) a [účty honeytokenu](install-atp-step7.md).   
 3. Prohlížet si sestavy a [laterální pohyb cesty](use-case-lateral-movement-path.md).  
 
@@ -89,4 +89,4 @@ Doporučujeme nasadit Azure ATP v 3 fáze:
 ## <a name="see-also"></a>Viz také
 - [Nejčastější dotazy k Azure ATP](atp-technical-faq.md)
 - [Práce s výstrahami zabezpečení](working-with-suspicious-activities.md)
-- [Podívejte se na fórum ochrany ATP v programu.](https://aka.ms/azureatpcommunity)
+- [Podívejte se na fórum služby Azure ATP.](https://aka.ms/azureatpcommunity)

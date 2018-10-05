@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 8/05/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 1b7e72c3-a538-443f-981c-398ffafa5ab8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 033d338e9c1e5e85673e362069ff0a815cda127c
-ms.sourcegitcommit: 5ad28d7b0607c7ea36d795b72928769c629fb80a
+ms.openlocfilehash: 8fdaa7311d39680ed8e9389f5dc9b7cdeca73197
+ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44165588"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48782892"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -46,8 +46,7 @@ Pokud chcete zkontrolovat celkový stav pracovního prostoru, klikněte na ikonu
 
     > [!NOTE]
     > Ochrana ATP v programu Azure může znovu otevřít uzavřené aktivitu, pokud se stejná aktivita zjistí během krátké doby znovu.
-    > Každý pracovní prostor má svůj vlastní stav centra.
-
+    
 -   **Suppressed** (Potlačeno): Potlačení aktivity znamená, že ji chcete prozatím ignorovat a upozornění chcete zobrazit, jenom pokud se bude jednat o novou instanci. Pokud je o podobnou výstrahu jako ochrana ATP v programu Azure nebude ho znovu otevřít. Ale pokud výstrahy po dobu sedmi dní zastaví a pak se znovu objeví, budete upozorněni znovu.
 
 -   **Znovu otevřít**: aby se zobrazovala Open můžete znovu otevřít uzavřeného nebo Potlačené problém znovu na časové ose.
@@ -56,7 +55,7 @@ Pokud chcete zkontrolovat celkový stav pracovního prostoru, klikněte na ikonu
 
 
 
-![Azure ochrany ATP v programu pracovní prostor health center problémy image](media/atp-health-issue.png)
+![Azure problémy obrázek ochrany ATP v programu health center](media/atp-health-issue.png)
 
 
 
@@ -66,4 +65,4 @@ Pokud chcete zkontrolovat celkový stav pracovního prostoru, klikněte na ikonu
 ## <a name="see-also"></a>Viz také
 
 - [Práce s podezřelými aktivitami](working-with-suspicious-activities.md)
-- [Podívejte se na fórum ochrany ATP v programu.](https://aka.ms/azureatpcommunity)
+- [Podívejte se na fórum služby Azure ATP.](https://aka.ms/azureatpcommunity)
