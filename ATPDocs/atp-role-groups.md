@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 10/07/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: effca0f2-fcae-4fca-92c1-c37306decf84
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 2a5bc4ca940eef36911480b821e99b46749e1379
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: 7ae3f0adca3137664f0a89c15e8feee71d0cd915
+ms.sourcegitcommit: c4978be196e0039c7a5d5887bec4cbc5c01d64f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783606"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48848609"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -46,20 +46,25 @@ Přístup k portálu ochrany ATP v programu Azure (portal.atp.azure.com) můžet
 
 ## <a name="types-of-azure-atp-security-groups"></a>Typy skupin zabezpečení služby Azure ATP 
 
-Zavádí tři typy skupiny zabezpečení, ochrany ATP v programu Azure: ochrana ATP v programu Azure *(název pracovního prostoru)* Administrators, ochrana ATP v programu Azure *(název pracovního prostoru)* uživatele a služby Azure ATP *(název pracovního prostoru)* Prohlížeče. Následující tabulka popisuje typ přístupu na portálu ochrany ATP v programu Azure pro každou roli k dispozici. V závislosti na jakou roli můžete přiřadit různé obrazovky a možnosti nabídky v ochrany ATP v programu Azure portal nejsou k dispozici, následujícím způsobem:
+Ochrana ATP v programu Azure nabízí tři typy skupin zabezpečení: ochrana ATP v programu Azure *(název pracovního prostoru)* Administrators, ochrana ATP v programu Azure *(název pracovního prostoru)* uživatele a služby Azure ATP *(název pracovního prostoru)* Prohlížeče. Následující tabulka popisuje typ přístupu na portálu ochrany ATP v programu Azure k dispozici pro jednotlivé role. V závislosti na roli, které přiřadíte, různé obrazovky a možnosti nabídky v ochrany ATP v programu Azure portal nejsou k dispozici pro uživatele, následujícím způsobem:
 
 |Aktivita |Ochrana ATP v programu Azure *(název pracovního prostoru)* správci|Ochrana ATP v programu Azure *(název pracovního prostoru)* uživatelů|Ochrana ATP v programu Azure *(název pracovního prostoru)* prohlížeče|
 |----|----|----|----|
 |Přihlášení|K dispozici|K dispozici|K dispozici|
-|Změna stavu výstrah zabezpečení|K dispozici|K dispozici|Není k dispozici|
-|Sdílení a Export výstrahy zabezpečení prostřednictvím e-mailu nebo odkazu|K dispozici|K dispozici|K dispozici|
+|Změna stavu výstrah zabezpečení (potlačení znovu otevřete, zavřete, vyloučení)|K dispozici|K dispozici|Není k dispozici|
+|Sdílení a Export výstrahy zabezpečení (e-mailem, získejte odkaz, stáhněte si podrobnosti)|K dispozici|K dispozici|K dispozici|
+|Stažení sestavy|K dispozici|K dispozici|K dispozici|
 |Změna stavu výstrah monitorování|K dispozici|Není k dispozici|Není k dispozici|
-|Aktualizace konfigurace ochrany ATP v programu Azure|K dispozici|Není k dispozici|Není k dispozici|
-|Snímač – přidat|K dispozici|Není k dispozici|Není k dispozici|
-|Snímač – odstranit |K dispozici|Není k dispozici|Není k dispozici|
-|Monitorované DC – přidání |K dispozici|Není k dispozici|Není k dispozici|
-|Monitorované DC – odstranění|K dispozici|Není k dispozici|Není k dispozici|
-|Zobrazení výstrah a výstrahy zabezpečení|K dispozici|K dispozici|K dispozici|
+|Aktualizace konfigurace ochrany ATP v programu Azure - senzorů (stáhnout, znovu vygenerovat klíč, konfigurace a odstranění)|K dispozici|Není k dispozici|Není k dispozici|
+|Aktualizace konfigurace Azure ATP – zdroje dat (adresářové služby, SIEM, VPN WD – ochrana ATP v programu)|K dispozici|Není k dispozici|Není k dispozici|
+|Aktualizace konfigurace ochrany ATP v programu –|K dispozici|Není k dispozici|Není k dispozici|
+|Aktualizace konfigurace ochrany ATP v programu-Naplánované sestavy|K dispozici|K dispozici|Není k dispozici|
+|Aktualizace konfigurace ochrany ATP v programu – značky entit (citlivé a honeytoken)|K dispozici|K dispozici|Není k dispozici|
+|Aktualizace konfigurace ochrany ATP v programu-vyloučení|K dispozici|K dispozici|Není k dispozici|
+|Aktualizace konfigurace ochrany ATP v programu – jazyk|K dispozici|K dispozici|Není k dispozici|
+|Aktualizace konfigurace ochrany ATP v programu – upozornění (e-mailu a syslog)|K dispozici|K dispozici|Není k dispozici|
+|Aktualizace konfigurace ochrany ATP v programu – ve verzi Preview detekce|K dispozici|K dispozici|Není k dispozici|
+|Zobrazit výstrahy zabezpečení a profily entit|K dispozici|K dispozici|K dispozici|
 
 
 Uživatelé se pokusí otevřít stránku, která není k dispozici pro jejich skupinu rolí, je přesměrován na stránku neoprávněné ochrany ATP v programu Azure. 

@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 10/07/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 3547519f-8d9c-40a9-8f0e-c7ba21081203
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 43582a95ac1619aaa9ef85b0c662481184a1b98b
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: 90de9f0f02fa1b87fd2d741349a1d81e089b6fb1
+ms.sourcegitcommit: bbbe808c08ce703a314c82b46aedaae79ab256a3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783368"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48848520"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -45,7 +45,7 @@ V tomto scénáři předpokládá, že služby Azure ATP samostatný senzor je �
 
 1.  Otevření Active Directory Users and Computers, přejděte **BuiltIn** složky a dvojím kliknutím **Event Log Readers**. 
 2.  Vyberte možnost **Členové**.
-4.  Pokud **Síťová služba** není uvedená, klikněte na **Přidat** a do pole **Zadejte názvy objektů k výběru** zadejte **Síťová služba**. Potom klikněte na **Zkontrolovat jména** a dvakrát klikněte na **OK**. 
+3.  Pokud **Síťová služba** není uvedená, klikněte na **Přidat** a do pole **Zadejte názvy objektů k výběru** zadejte **Síťová služba**. Potom klikněte na **Zkontrolovat jména** a dvakrát klikněte na **OK**. 
 
 Po přidání **síťová služba** k **Event Log Readers** skupině, restartování řadiče domény se změna projevila.
 
@@ -63,7 +63,7 @@ Po přidání **síťová služba** k **Event Log Readers** skupině, restartov�
    
     1.  Vyberte **Povoleno**.
     2.  V části **možnosti**, klikněte na tlačítko **zobrazit**.
-    3.  V části **SubscriptionManagers**, zadejte následující hodnoty a klikněte na tlačítko **OK**: *Server=`http://<fqdnATPSensor>:5985/wsman/SubscriptionManager/WEC,Refresh=10*` (Příklad: Server=`http://atpsensor9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10`)
+    3.  V části **SubscriptionManagers**, zadejte následující hodnoty a klikněte na tlačítko **OK**: * Server =`http://<fqdnATPSensor>:5985/wsman/SubscriptionManager/WEC,Refresh=10*` * (Příklad: Server =`http://atpsensor9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10`)
     
     ![Obrázek konfigurace cílového odběru](media/wef%202%20config%20target%20sub%20manager.png)
     
@@ -81,18 +81,11 @@ Po přidání **síťová služba** k **Event Log Readers** skupině, restartov�
    3.   Vyberte **Spuštěno zdrojovým počítačem** a klikněte na **Vybrat skupiny počítačů**.
         1.  Klikněte na **Přidat počítač domény**.
         2.  Do pole **Zadejte název objektu k výběru** zadejte název řadiče domény. Potom klikněte na **Zkontrolovat jména** a nakonec na **OK**. 
-       
-        ![Obrázek Prohlížeče událostí](media/wef3%20event%20viewer.png)
-   
-        
         3.  Klikněte na **OK**.
+        ![Obrázek prohlížeče událostí](media/wef3%20event%20viewer.png)     
    4.   Klikněte na **Vybrat události**.
-
         1. Klikněte na **Podle protokolu** a vyberte **Zabezpečení**.
-        2. Do pole **Zahrne nebo vyloučí ID události** zadejte číslo události a klikněte na **OK**. Zadejte 4776, jako je například v následujícím příkladu:
-
-        ![Obrázek filtru dotazu](media/wef-4-query-filter.png)
-
+        2. Do pole **Zahrne nebo vyloučí ID události** zadejte číslo události a klikněte na **OK**. Zadejte 4776, například jako v následujícím příkladu: ![obrázek filtru dotazu](media/wef-4-query-filter.png)
    5.   Klikněte pravým tlačítkem na vytvořený odběr a vyberte **stav Runtime** jestli jsou všechny problémy se stavem. 
    6.   Po několika minutách zkontrolujte události nastavit na předat dál, zobrazují mezi předanými událostmi v samostatného senzoru služby Azure ATP.
 

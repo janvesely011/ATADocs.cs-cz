@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: af2c7302f97ef8e2d9fca5862246a1b7507c0433
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: f0c9dd0572d0b522346d88c09225e426ca412bfb
+ms.sourcegitcommit: c4978be196e0039c7a5d5887bec4cbc5c01d64f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783929"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48848677"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -453,6 +453,24 @@ Tato detekce se aktivuje upozornění, když došlo k mnoha chyb ověřování p
 **Náprava**
 
 [Složitá a dlouhá hesla](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) poskytují nezbytnou první úroveň zabezpečení před útoky hrubou silou.
+
+## <a name="suspicious-communication-over-dns---preview"></a>Podezřelá komunikace přes DNS – preview
+
+**Popis**
+
+Protokol DNS ve většině organizací je obvykle není monitorovat a zřídka blokované před škodlivými aktivitami. To umožňuje útočníkovi na napadeném počítači zneužívání protokolu DNS. Škodlivý komunikace prostřednictvím DNS je možné pro průsak dat ven, příkaz a ovládací prvek a/nebo omezení úmyslem vyhnout podnikové sítě.
+
+**Šetření**
+> [!NOTE]
+> *Podezřelá komunikace prostřednictvím DNS* výstrahy zabezpečení seznamu podezřelých domény. Nové domény nebo domény nedávno přidali, které nejsou dosud známé nebo rozpoznávaných ochrany ATP v programu Azure, ale jsou známé nebo součástí vaší organizaci se dá zavřít. 
+
+
+1.  Některé legitimní společnosti používají službu DNS pro pravidelné komunikace. Zkontrolujte, pokud patří doména registrovaný dotaz pro důvěryhodného zdroje, jako je například poskytovatele antivirového softwaru.
+3.   Pokud domény registrovaný dotaz není důvěryhodný, identifikujte proces vytváření žádosti na zdrojovém počítači. Použití [monitorování procesu](https://docs.microsoft.com/en-us/sysinternals/downloads/procmon) jako pomoc s touto úlohou.
+4.  Určuje, kdy podezřelou aktivitu začít? Programy byly některé nové nasazení nebo nainstalovaná (AV?) v organizaci? Existují další výstrahy z současně?
+5.  Klikněte na zdrojový počítač pro přístup k jeho stránku profilu. Zkontrolujte, co se stalo v době dotazu DNS hledání neobvyklých aktivit, jako je například kdo byl přihlášen, a které prostředky byly použity. Pokud jste nepovolili integraci ochrany ATP v programu Windows Defender, klikněte na možnost ochrana ATP v programu Windows Defender odznáčku ![Oznámení "BADGE" ochrany ATP v programu Windows Defender](./media/wd-badge.png) aby to prověřili počítače. Pomocí ochrany ATP v programu Windows Defender můžete zobrazit výstrahy a procesů došlo k přibližně v době výstrahy.
+
+**Náprava** Pokud domény registrovaný dotaz není po šetření důvěryhodný, doporučujeme blokování na cílovou doménu, aby všechny budoucí komunikaci. 
 
 ## <a name="suspicious-domain-controller-promotion-potential-dcshadow-attack---new"></a>Povýšení řadiče domény podezřelé (možný útok DCShadow) – nové
 

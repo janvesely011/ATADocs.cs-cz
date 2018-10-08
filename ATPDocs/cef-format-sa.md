@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 3261155c-3c72-4327-ba29-c113c63a4e6d
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 1d01f9cc5024404975b01445f9d379dea4d3d0a4
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: 754b0860e050cca7bd455e948bda911950012dab
+ms.sourcegitcommit: c4978be196e0039c7a5d5887bec4cbc5c01d64f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783912"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48848660"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -107,7 +107,10 @@ Priority:
 02 – 21 – 2018 16:20:06 Auth.Warning 192.168.0.220 1 2018-02-21T14:19:54.254930 + 00:00 CENTER CEF 6076 MaliciousServiceCreationSecurity ï» ¿0 | Microsoft | Ochrana ATP v programu Azure | 2.22.4228.22540 | MaliciousServiceCreationSecurityAlert | Podezřelé vytvoření služby | 5 | start = 2018-02-21T14:19:41.7897808Z aplikace = ServiceInstalledEvent shost = CLIENT1 msg = user1 vytvořili MaliciousService mohl spustit potenciálně škodlivé příkazy na počítači CLIENT1. externalId = 2026 cs1Label = url cs1 =https://contoso-corp.atp.azure.com/securityAlert/179229b6-b791-4895-b5aa-fdf3747a325c
 
 ### <a name="pass-the-ticket"></a>Pass-the-ticket
-02 – 21 – 2018 17:04:47 Auth.Error 192.168.0.220 1 2018-02-21T15:04:33.537583 + 00:00 CENTER CEF 6076 PassTheTicketSecurityAlert ï» ¿0 | Microsoft | Ochrana ATP v programu Azure | 2.22.4228.22540 | PassTheTicketSecurityAlert | Krádež identity pomocí útoku Pass-the-Ticket | 10 | start = 2018-02-21T15:02:22.2577465Z aplikace = Kerberos suser = msg Eugene Jenkins = Kerberos Eugene Jenkins (softwarový inženýr) pro lístky byly odcizeny z Admin-PC do Victim-PC a používá pro přístup k účtu krbtgt/Doména1. TEST. MÍSTNÍ. externalId = 2017 cs1Label = url cs1 =https://contoso-corp.eng.atp.azure.com/securityAlert/511f1487-2915-477d-be2e-04cfba702ccd
+02 – 21 – 2018 17:04:47 Auth.Error 192.168.0.220 1 2018-02-21T15:04:33.537583 + 00:00 CENTER CEF 6076 PassTheTicketSecurityAlert ï» ¿0 | Microsoft | Ochrana ATP v programu Azure | 2.22.4228.22540 | PassTheTicketSecurityAlert | Krádež identity pomocí útoku Pass-the-Ticket | 10 | start = 2018-02-21T15:02:22.2577465Z aplikace = Kerberos suser = msg Eugene Jenkins = Kerberos Eugene Jenkins (softwarový inženýr) pro lístky byly odcizeny z Admin-PC do Victim-PC a používá pro přístup k účtu krbtgt/Doména1. TEST. MÍSTNÍ. externalId = 2017 cs1Label = url cs1 =https://contoso-corp.atp.azure.com/securityAlert/511f1487-2915-477d-be2e-04cfba702ccd
+
+### <a name="suspicious-communication-over-dns--preview"></a>Podezřelá komunikace prostřednictvím DNS – preview
+10-04-2018 14:49:38 Auth.Warning 192.168.0.202 1 2018-10-04T11:49:25.954059 + 00:00 DC3 CEF 3604 DnsSuspiciousCommunicationSecuri ï» ¿0 | Microsoft | Ochrana ATP v programu Azure | 2.49.5589.58606 | DnsSuspiciousCommunicationSecurityAlert | [PREVIEW] Podezřelá komunikace prostřednictvím DNS | 5 | start = 2018-10-04T11:49:11.0822077Z aplikace DnsEvent dhost = suspiciousdomainname msg = CLIENT1 odeslané podezřelých dotazů DNS řešení suspiciousdomainname externalId = 2031 cs1Label = = url cs1 =https://contoso-corp.atp.azure.com/securityAlert/0fc77777-49ca-40b3-a7ba-7644f355539e 
 
 ### <a name="suspicious-vpn-connection"></a>Připojení k síti VPN podezřelé
 07-03-2018 13:13:12 Auth.Warning 192.168.0.200 1 2018-07-03T10:13:06.187834 + 00:00 DC1 CEF 2520 AbnormalVpnSecurityAlert ï» ¿0 | Microsoft | Ochrana ATP v programu Azure | 2.39.0.0 | AbnormalVpnSecurityAlert | Podezřelé připojení VPN | 5 | start = 2018-06-30T15:34:05.3887333Z aplikace připojení VpnConnection suser = user1 msg = = uzivatel1 připojené k síti VPN pomocí počítače se 3 ze 3 míst.     externalId = 2025 cs1Label = url cs1 =https://contoso-corp.eng.atp.azure.com:13000/securityAlert/88c46b0e-372f-4c06-9935-67bd512c4f68

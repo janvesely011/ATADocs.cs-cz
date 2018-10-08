@@ -1,6 +1,6 @@
 ---
 title: Podpora vícenásobného doménovými strukturami Azure rozšířené ochrany před internetovými útoky | Dokumentace Microsoftu
-description: Jak nastavit podporu několika doménových struktur služby Active Directory do služby Azure ATP.
+description: Podpora několika doménových struktur služby Active Directory do služby Azure ATP.
 keywords: ''
 author: mlottner
 ms.author: mlottner
@@ -13,21 +13,19 @@ ms.technology: ''
 ms.assetid: effca0f2-fcae-4fca-92c1-c37306decf84
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 84ec02cb1aa999d70808f6eaf76bb28cba9d2110
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: 40bd468226f3c8db17663d02aed561b77cc2a128
+ms.sourcegitcommit: bbbe808c08ce703a314c82b46aedaae79ab256a3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783351"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48848486"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
-# <a name="install-azure-atp---step-9"></a>Instalace služby Azure ATP - kroku 9
+# <a name="azure-advanced-threat-protection-multi-forest-support"></a>Podpora více doménovými strukturami Azure Advanced Threat Protection
 
-> [!div class="step-by-step"]
-> [«Krok 8](install-atp-step8-samr.md)
 
-## <a name="step-9--set-up-azure-advanced-threat-protection-multi-forest-support"></a>Krok 9:  Nastavte podporu více doménovými strukturami rozšířené ochrany před internetovými útoky pro Azure
+## <a name="multi-forest-support-set-up"></a>Podpora více doménovými strukturami nastavení 
 
 Ochrana ATP v programu Azure může podporovat organizace s více doménovými strukturami, které umožňuje snadno monitorovat aktivity a profily uživatelů napříč doménovými strukturami z podokně ze skla. 
 
@@ -81,9 +79,6 @@ Ochrana ATP v programu Azure maps vaší doménové struktury, využívá proces
 ## <a name="known-limitations"></a>Známá omezení
 -   Interaktivní prováděného uživateli v jedné doménové struktuře pro přístup k prostředkům v jiné doménové struktuře nejsou zobrazeny v řídicím panelu služby Azure ATP.
 
-
-> [!div class="step-by-step"]
-> [«Krok 8](install-atp-step8-samr.md)
 
 
 ## <a name="see-also"></a>Viz také

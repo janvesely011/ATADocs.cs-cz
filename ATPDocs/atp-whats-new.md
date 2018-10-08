@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 10/07/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,16 +13,36 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: bbc0717d6224b3f4173d697f0c751f6bdd1bb062
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: dc008506e7b19a8d6eafd455a4414b1513608811
+ms.sourcegitcommit: c4978be196e0039c7a5d5887bec4cbc5c01d64f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783946"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48848626"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
 # <a name="whats-new-in-azure-atp"></a>Co je nového v Azure ATP 
+
+## <a name="azure-atp-release-249"></a>Verze ochrany ATP v programu Azure 2.49
+Vydáno 7. října 2018
+-   **Nové detekce: podezřelá komunikace DNS** (preview)<br>Nové detekce přidán k ochraně před útoky komunikace podezřelé DNS:
+
+    -   Tato detekce pomáhá odhalit útoky na protokolu DNS. Ve většině organizací není protokol DNS monitorovat a zřídka blokované před škodlivými aktivitami. To umožňuje útočníkovi na napadeném počítači zneužívání protokolu DNS. Škodlivý komunikace prostřednictvím DNS je možné pro průsak dat ven, příkaz a ovládací prvek a/nebo omezení úmyslem vyhnout podnikové sítě.
+
+- **Nové funkce** <br>Ochrana ATP v programu Azure **role uživatele** vylepšen o následující funkce:
+  - Změna stavu výstrah zabezpečení (potlačení znovu otevřete, zavřete, vyloučení)
+  - Nastavit plánované sestavy
+  - Nastavit značky entit (citlivé a honeytoken)
+  - Vyloučení detekce
+  - Změnit jazyk
+  - Nastavení oznámení prostřednictvím e-mailu nebo protokolu syslog
+
+
+- Bude častěji docházet **Rekognoskace adresáře pomocí dotazů služby** výstrahy zabezpečení, ke kterým došlo v 09/16/2018 se identifikovat a vyřešit. 
+
+- Tato verze rovněž obsahuje opravy a vylepšení pro několik problémů.
+
 
 ## <a name="azure-atp-release-248"></a>Verze ochrany ATP v programu Azure 2.48
 Vydáno 16. září 2018

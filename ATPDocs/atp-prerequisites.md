@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/4/2018
+ms.date: 10/7/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 127d7ad5717837c8723c71de167e04f2fdd7ddde
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: e3cf97c4bd95a1fefc0aef29009f644cd5ef907d
+ms.sourcegitcommit: bbbe808c08ce703a314c82b46aedaae79ab256a3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783895"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48848537"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -33,10 +33,9 @@ Tento článek popisuje požadavky pro úspěšné nasazení služby Azure ATP v
 
 Ochrana ATP v programu Azure se skládá z cloudové službě ochrana ATP v programu Azure, který se skládá z ochrany ATP v programu Azure portal, senzoru služby Azure ATP a/nebo samostatného senzoru služby Azure ATP. Další informace o jednotlivých součástech ochrany ATP v programu Azure najdete v tématu [architektura služby Azure ATP](atp-architecture.md).
 
-Každá instance služby Azure ATP podporuje více hranice doménové struktury služby Active Directory a doménovou strukturu funkční úroveň (ffl) v systémech Windows 2003 a novějších. 
+K vytvoření instance služby Azure ATP, budete potřebovat minimálně jeden globální zabezpečení a správce tenanta služby AAD. Každá instance služby Azure ATP podporuje více hranice doménové struktury služby Active Directory a doménovou strukturu funkční úroveň (ffl) v systémech Windows 2003 a novějších. 
 
 Tato příručka požadovaných součástí je rozdělen do následujících částí k zajištění, že máte všechno, co potřebujete k úspěšnému nasazení služby Azure ATP. 
-
 
 [Než začnete](#before-you-start): jsou uvedené informace ke shromáždění a účty a síťové entity, je potřeba mít před zahájením instalace.
 
@@ -49,6 +48,8 @@ Tato příručka požadovaných součástí je rozdělen do následujících č�
 ## <a name="before-you-start"></a>Než začnete
 Tato část obsahuje informace, které byste měli získat a účty a síťové entity, které byste měli mít před zahájením instalace služby Azure ATP.
 
+- Získat licenci pro Enterprise Mobility + Security (EMS E5) 5 přímo prostřednictvím [portál služeb Office 365](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-pricing) nebo prostřednictvím licenčního modelu partnera CSP (Cloud Solution).  
+
 - Ověřte, že počet řadičů domény, které máte v úmyslu nainstalovat senzorů ochrany ATP v programu Azure jste připojení k Internetu ke cloudové službě ochrana ATP v programu Azure. Senzoru služby Azure ATP podporují použití proxy serveru. Další informace o konfiguraci proxy serveru najdete v tématu [konfiguraci proxy serveru pro služby Azure ATP](configure-proxy.md).  
 
 -   **Místní** AD uživatelský účet a heslo s oprávněním ke čtení pro všechny objekty v monitorovaném domén.
@@ -60,14 +61,14 @@ Tato část obsahuje informace, které byste měli získat a účty a síťové 
 
 - Pokud se pokusíte instalace senzoru služby Azure ATP do počítače nakonfigurované s adaptérem seskupování síťových adaptérů, obdržíte chybu instalace. Pokud chcete nainstalovat na počítač nakonfigurován s funkcí seskupování síťových adaptérů senzoru služby Azure ATP naleznete v tématu [senzoru služby Azure ATP seskupování problém NIC](troubleshooting-atp-known-issues.md#nic-teaming).
 
--    Doporučené: Uživatel by měl mít oprávnění jen pro čtení kontejneru odstraněných objektů. To umožňuje ochrany ATP v programu Azure detekovat hromadné odstranění objektů v doméně. Informace o konfiguraci oprávnění jen pro čtení pro kontejner odstraněných objektů najdete v tématu **Změna oprávnění pro kontejner odstraněných objektů** tématu [zobrazení nebo nastavení oprávnění u objektu adresáře](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) článku.
+-    Doporučené: Uživatel by měl mít oprávnění jen pro čtení kontejneru odstraněných objektů. To umožňuje Azure ATP pro detekci odstranění uživatele ze služby Active Directory. Informace o konfiguraci oprávnění jen pro čtení pro kontejner odstraněných objektů najdete v tématu **Změna oprávnění pro kontejner odstraněných objektů** tématu [zobrazení nebo nastavení oprávnění u objektu adresáře](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) článku.
 
 -   Volitelné: Uživatelský účet uživatele, který nemá žádné síťové aktivity. Tento účet je nakonfigurovaný jako uživatel Honeytokenu ochrany ATP v programu Azure. Další informace najdete v tématu [konfigurovat vyloučení a uživatele Honeytokenu](install-atp-step7.md).
 
 -   Volitelné: Když nasazujete samostatný senzor, je nezbytné k předávání událostí Windows 4776, 4732, 4733, 4728, 4729, 4756, 4757 a 7045 zure ochrany ATP v programu dál vylepšit Azure ATP Pass-the-Hash, útoky hrubou silou, úpravy citlivých skupin a Honeytokenů detekce a vytvoření škodlivé služby. Tyto události přijímá Azure senzor ochrany ATP v programu automaticky. V Azure ATP samostatný senzor mohou přijímat tyto události ze služby SIEM nebo nastavením předávání událostí Windows z řadiče domény. Shromážděné události poskytují ochrany ATP v programu Azure společně s dalšími informacemi, které nejsou k dispozici prostřednictvím síťový provoz na řadiči domény.
 
-## <a name="azure-atp-workspace-management-portal-and-workspace-portal-requirements"></a>Ochrana ATP v programu pracovního prostoru správy portálu a pracovního prostoru portálu požadavky služby Azure
-Přístup na portál ochrany ATP v programu Azure pracovní prostor a portálu pro správu pracovního prostoru ochrana ATP v programu Azure je prostřednictvím prohlížeče. podporují následující prohlížeče a nastavení:
+## <a name="azure-atp-portal-requirements"></a>Portálu požadavky služby Azure ATP
+Přístup k portálu ochrany ATP v programu Azure je prostřednictvím prohlížeče. podporují následující prohlížeče a nastavení:
 -   Microsoft Edge
 -   Internet Explorer verze 10 a novější
 -   Google Chrome 4.0 a vyšší

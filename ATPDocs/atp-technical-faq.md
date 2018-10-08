@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 6a9b5273-eb26-414e-9cdd-f64406e24ed8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 839a21dab3962831e4c62dd4c9c2018e81bd7014
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: 07c5d67804eb4c74df678e8752a2516af5c52cc7
+ms.sourcegitcommit: bbbe808c08ce703a314c82b46aedaae79ab256a3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783685"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48848503"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -107,7 +107,7 @@ Pokud se virtuální řadič domény nedá pokrýt komponentou senzoru služby A
 
 Pro řadiče domény ke komunikaci s cloudovou službou, je nutné otevřít: *. atp.azure.com port 443 v brány firewall a proxy. Pokyny, jak to udělat, najdete v části [konfigurace proxy serveru nebo brány firewall k umožnění komunikace s Azure ATP senzorů](configure-proxy.md).
 
-### <a name="can-azure-atp-monitor-domain-controllers-virtualized-on-your-iaas-solution"></a>Ochrana ATP v programu Azure můžete monitorovat řadiče domény virtualizované ve vašem řešení IaaS?
+### <a name="can-azure-atp-monitor-domain-controllers-be-virtualized-on-your-iaas-solution"></a>Je možné Virtualizovat řadiče domény monitorování ochrany ATP v programu Azure ve vašem řešení IaaS?
 Senzoru služby Azure ATP Ano, můžete použít k monitorování řadičů domény, které jsou v libovolném řešení IaaS.
 
 ### <a name="can-azure-atp-support-multi-domain-and-multi-forest"></a>Ochrana ATP v programu Azure může podporovat víc domén a doménových struktur?
