@@ -64,7 +64,7 @@ Po přidání **síťová služba** k **Event Log Readers** skupině, restartov�
     2.  V části **možnosti**, klikněte na tlačítko **zobrazit**.
     3.  V části **SubscriptionManagers**, zadejte následující hodnoty a klikněte na tlačítko **OK**: *Server = http: / /<fqdnATAGateway>: 5985 nebo wsman/SubscriptionManager/WEC, obnovení = 10* 
     
-        *(Příklad: Server =http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC, aktualizujte = 10)*
+        *(Příklad: Server = http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC, aktualizujte = 10)*
  
     ![Obrázek konfigurace cílového odběru](media/wef%202%20config%20target%20sub%20manager.png)
    
