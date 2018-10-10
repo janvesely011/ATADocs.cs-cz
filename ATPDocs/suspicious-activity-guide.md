@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 10/09/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f0c9dd0572d0b522346d88c09225e426ca412bfb
-ms.sourcegitcommit: c4978be196e0039c7a5d5887bec4cbc5c01d64f9
+ms.openlocfilehash: 5151d2ccad994fabfa8bda224a8e5197abe1e01d
+ms.sourcegitcommit: 02a4d7a0d44817da8e40580c5fe97f8839a7941f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48848677"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48876541"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -36,30 +36,6 @@ Po správném šetření můžete všechny výstrahy zabezpečení služby Azure
 Další informace o tom, jak pracovat s výstrahami zabezpečení služby Azure ATP najdete v tématu [práce s výstrahami zabezpečení](working-with-suspicious-activities.md).
 
 
-## <a name="abnormal-sensitive-group-modification"></a>Neobvyklá úprava citlivých skupin
-
-
-**Popis**
-
-Útočníci přidání uživatelů do skupiny s vysokou úrovní oprávnění. Učiní tak získat přístup k více prostředkům a k získání průniku do sítě. Tato detekce spoléhá na profilaci aktivity Změna skupiny uživatelů a upozorní při viděli doplněk neobvyklé citlivých skupin. Profilace se neustále provádí pomocí služby Azure ATP. Minimální dobu, než může být výstraha je jeden měsíc na každém řadiči domény.
-
-Definice citlivých skupin v Azure ATP, naleznete v tématu [práce s citlivými účty](sensitive-accounts.md).
-
-
-Tato detekce spoléhá na [události se auditují na řadiče domény](configure-event-collection.md).
-Abyste měli jistotu, vaše doména auditu řadiče potřebné události.
-
-**Šetření**
-
-1. Úpravy skupiny je legitimní? </br>Úpravy legitimní skupiny zřídka dojít a nebyly zjistili, jako je "normální", může dojít k upozornění, která může být považovaná za neškodné pravdivě pozitivní upozornění.
-
-2. Pokud byl přidaný objekt uživatelský účet, zkontrolujte akce, které trvalo uživatelský účet po přidání do skupiny správců. Přejděte na stránku uživatele v Azure ATP, chcete-li získat podrobnější přehled. Tam byli jakýkoli jiný podezřelé aktivity, které jsou přidružené k účtu před nebo po přidání konal úplně? Stáhnout **úpravy citlivých skupin** sestavu, abyste viděli, jaké další změny byly provedeny a kým stejného časového období.
-
-**Náprava**
-
-Minimalizujte počet uživatelů, kteří mají oprávnění upravit citlivých skupin.
-
-Nastavit [Privileged Access Management pro službu Active Directory](https://docs.microsoft.com/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services) Pokud je k dispozici.
 
 
 ## <a name="brute-force-attack-using-ldap-simple-bind"></a>Útok hrubou silou pomocí jednoduché vazby LDAP.
@@ -406,7 +382,7 @@ V této detekce se aktivuje upozornění při provádění výčet relací SMB p
 
 Použití [Net ukončí nástroj](https://gallery.technet.microsoft.com/Net-Cease-Blocking-Net-1e8dcb5b) Posilte zabezpečení vašeho prostředí vůči útoku.
 
-## <a name="remote-execution-attempt"></a>Pokus o vzdálené spuštění
+## <a name="remote-code-execution-attempt"></a>Pokus o spuštění vzdáleného kódu
 
 **Popis**
 
@@ -472,7 +448,7 @@ Protokol DNS ve většině organizací je obvykle není monitorovat a zřídka b
 
 **Náprava** Pokud domény registrovaný dotaz není po šetření důvěryhodný, doporučujeme blokování na cílovou doménu, aby všechny budoucí komunikaci. 
 
-## <a name="suspicious-domain-controller-promotion-potential-dcshadow-attack---new"></a>Povýšení řadiče domény podezřelé (možný útok DCShadow) – nové
+## <a name="suspicious-domain-controller-promotion-potential-dcshadow-attack"></a>Povýšení řadiče domény podezřelé (možný útok DCShadow)
 
 **Popis**
 
@@ -510,8 +486,33 @@ Můžete využít [AD ACL Scanner](https://blogs.technet.microsoft.com/pfeswepla
 > [!NOTE]
 > Detekce povýšení (možný útok DCShadow) řadiče domény podezřelé jsou podporovány pouze senzorů ochrany ATP v programu. 
 
+## <a name="suspicious-modification-of-sensitive-groups"></a>Podezřelé úprava citlivých skupin
 
-## <a name="suspicious-replication-request-potential-dcshadow-attack---new"></a>Podezřelá replikace požadavku (možný útok DCShadow) – nové
+**Popis**
+
+Útočníci přidání uživatelů do skupiny s vysokou úrovní oprávnění. Učiní tak získat přístup k více prostředkům a k získání průniku do sítě. Tato detekce spoléhá na profilaci aktivity Změna skupiny uživatelů a upozorní při viděli doplněk neobvyklé citlivých skupin. Profilace se neustále provádí pomocí služby Azure ATP. Minimální dobu, než může být výstraha je jeden měsíc na každém řadiči domény.
+
+Definice citlivých skupin v Azure ATP, naleznete v tématu [práce s citlivými účty](sensitive-accounts.md).
+
+
+Tato detekce spoléhá na [události se auditují na řadiče domény](configure-event-collection.md).
+Abyste měli jistotu, vaše doména auditu řadiče potřebné události.
+
+**Šetření**
+
+1. Úpravy skupiny je legitimní? </br>Úpravy legitimní skupiny zřídka dojít a nebyly zjistili, jako je "normální", může dojít k upozornění, která může být považovaná za neškodné pravdivě pozitivní upozornění.
+
+2. Pokud byl přidaný objekt uživatelský účet, zkontrolujte akce, které trvalo uživatelský účet po přidání do skupiny správců. Přejděte na stránku uživatele v Azure ATP, chcete-li získat podrobnější přehled. Tam byli jakýkoli jiný podezřelé aktivity, které jsou přidružené k účtu před nebo po přidání konal úplně? Stáhnout **úpravy citlivých skupin** sestavu, abyste viděli, jaké další změny byly provedeny a kým stejného časového období.
+
+**Náprava**
+
+Minimalizujte počet uživatelů, kteří mají oprávnění upravit citlivých skupin.
+
+Nastavit [Privileged Access Management pro službu Active Directory](https://docs.microsoft.com/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services) Pokud je k dispozici.
+
+
+
+## <a name="suspicious-replication-request-potential-dcshadow-attack"></a>Podezřelá replikace požadavku (možný útok DCShadow) 
 
 **Popis** 
 
@@ -565,7 +566,7 @@ Podezřelé služba je vytvořená na řadiči domény ve vaší organizaci. Tat
 - Implementace méně privilegovaný přístup v doméně počítače povolit jenom konkrétní uživatelé práva k vytvoření nové služby.
 
 
-## Podezřelé připojení k síti VPN – nové <a name="suspicious-vpn-detection"></a>
+## Podezřelé připojení k síti VPN <a name="suspicious-vpn-detection"></a>
 
 **Popis**
 

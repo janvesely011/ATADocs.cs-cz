@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2017
+ms.date: 10/09/2017
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 24eca4c6-c949-42ea-97b9-41ef0fb611f1
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e15884d46227c9dce32ee48f30d546eab6868116
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: 23d92b207c9bcfeb38afa67bdd5e4911b1a16aa4
+ms.sourcegitcommit: 02a4d7a0d44817da8e40580c5fe97f8839a7941f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783385"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48876575"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -46,7 +46,7 @@ Můžete sledovat průběh nasazení, monitorujte instalační protokoly ochrany
 ## <a name="azure-atp-sensor-silent-installation"></a>Ochrana ATP v programu senzor tiché instalace služby Azure
 
 > [!NOTE]
-> Při tiché nasazení senzoru služby Azure ATP přes System Center Configuration Manager nebo jiného systému pro nasazení softwaru, doporučuje se vytvořit dva balíčky pro nasazení:</br>-Net frameworkem 4.7 včetně restartování řadiče domény</br>– Snímač azure ochrany ATP v programu. </br>Ujistěte se, balíčku senzoru služby Azure ATP závisí na nasazení rozhraní .net Framework nasazení balíčku. </br>Získejte [rozhraní .net Framework 4.7 balíček pro offline nasazení](https://www.microsoft.com/download/details.aspx?id=49982). 
+> Při tiché nasazení senzoru služby Azure ATP přes System Center Configuration Manager nebo jiného systému pro nasazení softwaru, doporučuje se vytvořit dva balíčky pro nasazení:</br>-Net frameworkem 4.7 včetně restartování řadiče domény</br>– Snímač azure ochrany ATP v programu. </br>Ujistěte se, balíčku senzoru služby Azure ATP závisí na nasazení rozhraní .net Framework nasazení balíčku. </br>Získejte [rozhraní .net Framework 4.7 balíček pro offline nasazení](https://support.microsoft.com/help/3186497/the-net-framework-4-7-offline-installer-for-windows). 
 
 
 Použijte následující příkaz k provedení plně tiché instalace senzoru služby Azure ATP:
