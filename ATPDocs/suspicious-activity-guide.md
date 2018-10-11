@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/09/2018
+ms.date: 10/10/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 5151d2ccad994fabfa8bda224a8e5197abe1e01d
-ms.sourcegitcommit: 02a4d7a0d44817da8e40580c5fe97f8839a7941f
+ms.openlocfilehash: ca22fc6430556d49a6709be2f46c0c0b8746fa38
+ms.sourcegitcommit: 0c05308c832e4b03ea3945788de39feabfdb5671
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48876541"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48914498"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -441,7 +441,7 @@ Protokol DNS ve většině organizací je obvykle není monitorovat a zřídka b
 > *Podezřelá komunikace prostřednictvím DNS* výstrahy zabezpečení seznamu podezřelých domény. Nové domény nebo domény nedávno přidali, které nejsou dosud známé nebo rozpoznávaných ochrany ATP v programu Azure, ale jsou známé nebo součástí vaší organizaci se dá zavřít. 
 
 
-1.  Některé legitimní společnosti používají službu DNS pro pravidelné komunikace. Zkontrolujte, pokud patří doména registrovaný dotaz pro důvěryhodného zdroje, jako je například poskytovatele antivirového softwaru.
+1.  Některé legitimní společnosti používají službu DNS pro pravidelné komunikace. Zkontrolujte, pokud patří doména registrovaný dotaz pro důvěryhodného zdroje, jako je například poskytovatele antivirového softwaru. Pokud je známé a důvěryhodné domény a dotazy DNS jsou povolené, upozornění se dá zavřít a doména může být [vyloučené](excluding-entities-from-detections.md) odběr budoucích upozornění. 
 3.   Pokud domény registrovaný dotaz není důvěryhodný, identifikujte proces vytváření žádosti na zdrojovém počítači. Použití [monitorování procesu](https://docs.microsoft.com/en-us/sysinternals/downloads/procmon) jako pomoc s touto úlohou.
 4.  Určuje, kdy podezřelou aktivitu začít? Programy byly některé nové nasazení nebo nainstalovaná (AV?) v organizaci? Existují další výstrahy z současně?
 5.  Klikněte na zdrojový počítač pro přístup k jeho stránku profilu. Zkontrolujte, co se stalo v době dotazu DNS hledání neobvyklých aktivit, jako je například kdo byl přihlášen, a které prostředky byly použity. Pokud jste nepovolili integraci ochrany ATP v programu Windows Defender, klikněte na možnost ochrana ATP v programu Windows Defender odznáčku ![Oznámení "BADGE" ochrany ATP v programu Windows Defender](./media/wd-badge.png) aby to prověřili počítače. Pomocí ochrany ATP v programu Windows Defender můžete zobrazit výstrahy a procesů došlo k přibližně v době výstrahy.
