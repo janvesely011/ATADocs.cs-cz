@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: f6f3ed75-d6bb-4966-a9a7-5339c4f3ebac
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a888cbb80bba74d920e236b04c353008c7b56daf
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: c0bda95fb789225cf7d05616974f9a333f3c8e4f
+ms.sourcegitcommit: 30d874808cfeafd46ee8fbbf34e0bbcb337f6544
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783657"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49089351"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -69,7 +69,7 @@ Pokud chcete povolit tuto funkci, potřebujete licenci pro služby Azure ATP a o
 
  ![povolení integrace](./media/enable-integration.png)
 
-4. V [portál ochrany ATP v programu Windows Defender](https://beta.securitycenter.windows.com/preferences/advanced), přejděte na stránku **nastavení**, **pokročilé funkce** a nastavte **integrace služby Azure ATP** k  **DÁLE**. 
+4. V [portál ochrany ATP v programu Windows Defender](https://securitycenter.windows.com/preferences/advanced), přejděte na stránku **nastavení**, **pokročilé funkce** a nastavte **integrace služby Azure ATP** k  **DÁLE**. 
 
  ![Povolení integrace ochrany ATP v programu Windows Defender](./media/wd-atp-enable.png)
 
