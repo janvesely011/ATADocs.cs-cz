@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 10/14/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,28 +13,17 @@ ms.technology: ''
 ms.assetid: 1ad5e923-9bbd-4f56-839a-b11a9f387d4b
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a538ce4596da106d11646e27aa65131bb47380d2
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: 9202ba7c2519de0c7cd2eb3103578159dc437e83
+ms.sourcegitcommit: 58c75026e5ec4dcab3b0852a41f9f0a0ad6f22eb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48782977"
+ms.lasthandoff: 10/14/2018
+ms.locfileid: "49315740"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
 
-<<<<<<< HEAD
 # <a name="configure-detection-exclusions-and-honeytoken-accounts"></a>Konfigurace vyloučení detekcí a účty honeytoken
-=======
-
-# <a name="install-azure-atp---step-7"></a>Instalace služby Azure ATP – krok 7
-
-> [!div class="step-by-step"]
-> [« Krok 6](install-atp-step6-vpn.md)
-> [Krok 8 »](install-atp-step8-samr.md)
-
-## <a name="step-7-configure-detection-exclusions-and-honeytoken-accounts"></a>Krok 7: Konfigurace vyloučení detekcí a účty honeytoken
->>>>>>> 209d7e7162816a4c9e6e0ec0ff8d02f771e12d04
 
 Ochrana ATP v programu Azure umožňuje vyloučení konkrétních IP adres nebo uživatelů z řady detekcí. 
 
@@ -69,14 +58,6 @@ Zkontrolujte časovou osu útoků, abyste viděli zjištěné podezřelé aktivi
 Kontrola ochrany ATP v programu Azure pro podezřelé aktivity spustí okamžitě. Některé způsoby detekce, jako je například neobvyklých změny skupiny vyžadují období učení a nejsou k dispozici okamžitě po nasazení služby Azure ATP.
 
 
-<a name="-head"></a><<<<<<< HEAD
-=======
-
-> [!div class="step-by-step"]
-> [« Krok 6](install-atp-step6-vpn.md)
-> [Krok 8 »](install-atp-step8-samr.md)
-
->>>>>>> 209d7e7162816a4c9e6e0ec0ff8d02f771e12d04
 ## <a name="see-also"></a>Viz také
 - [Nástroje pro změnu velikosti Azure ATP](http://aka.ms/aatpsizingtool)
 - [Konfigurace shromažďování událostí](configure-event-collection.md)

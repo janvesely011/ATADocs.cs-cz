@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 6a9b5273-eb26-414e-9cdd-f64406e24ed8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 07c5d67804eb4c74df678e8752a2516af5c52cc7
-ms.sourcegitcommit: bbbe808c08ce703a314c82b46aedaae79ab256a3
+ms.openlocfilehash: 13fbc33c1f6aa525382644a48418dceabbb9b652
+ms.sourcegitcommit: 58c75026e5ec4dcab3b0852a41f9f0a0ad6f22eb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48848503"
+ms.lasthandoff: 10/14/2018
+ms.locfileid: "49315723"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -28,7 +28,7 @@ Tento článek obsahuje seznam častých otázek a odpovědí týkajících se o
 - [Licencování a ochrany osobních údajů](#Licensing-and-privacy)
 - [Nasazení](#Deployment)
 - [Operace](#Operations)
-- [Řešení potíží](#Troubleshooting)
+- [Poradce při potížích](#Troubleshooting)
 
 ## <a name="what-is-azure-atp"></a>Co je ochrana ATP v programu Azure?
 
@@ -92,7 +92,7 @@ Každý řadič domény v prostředí měly být pokryté komponentami ochrany A
 Síťové protokoly s šifrovaný provoz (například LDAPS nebo IPSEC) nejsou dešifrovat, ale jsou analyzovány senzory.
 
 ### <a name="does-azure-atp-work-with-kerberos-armoring"></a>Služba Ochrana ATP v programu Azure funguje s obranou protokolu Kerberos?
-Povolení obrany protokolu Kerberos, označované také jako FAST Flexible Authentication Secure Tunneling (), podporuje zure ochrany ATP v programu, s výjimkou pass typu over-pass-the hash detekce, což nefunguje s obranou protokolu Kerberos.
+Povolení obrany protokolu Kerberos, označované také jako FAST Flexible Authentication Secure Tunneling (), je podporována ochrana ATP v programu Azure, s výjimkou pass typu over-pass-the hash detekce, což nefunguje s obranou protokolu Kerberos.
 
 ### <a name="how-do-i-monitor-a-virtual-domain-controller-using-azure-atp"></a>Jak můžu monitorovat virtuální řadič domény pomocí ochrany ATP v programu Azure?
 Většina virtuálních řadičů domény dají pokrýt komponentami senzoru služby Azure ATP, chcete-li zjistit, zda služby Azure ATP senzor je vhodné pro vaše prostředí [plánování kapacity ochrany ATP v programu Azure](atp-capacity-planning.md).
@@ -149,5 +149,5 @@ Začátku do konce testu můžete simulovat podezřelé aktivity. V následujíc
 - [Plánování kapacity v Azure ATP](atp-capacity-planning.md)
 - [Konfigurace shromažďování událostí](configure-event-collection.md)
 - [Konfigurace předávání událostí systému Windows](configure-event-forwarding.md#configuring-windows-event-forwarding)
-- [Řešení potíží](troubleshooting-atp-known-issues.md)
+- [Poradce při potížích](troubleshooting-atp-known-issues.md)
 - [Podívejte se na fórum služby Azure ATP.](https://aka.ms/azureatpcommunity)

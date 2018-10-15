@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: a06004bd-9f77-4e8e-a0e5-4727d6651a0f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 72ed08a941b5927599aa39b196634ffc21ac6395
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: 59bc8cdb995b1f7473efb7c0e601aca50a9ccafe
+ms.sourcegitcommit: 58c75026e5ec4dcab3b0852a41f9f0a0ad6f22eb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783810"
+ms.lasthandoff: 10/14/2018
+ms.locfileid: "49315825"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -119,5 +119,5 @@ Chcete-li to provést, klikněte na tlačítko tří teček v pravém horním ro
 
 ## <a name="see-also"></a>Viz také
 
-- [Práce s portálem pracovních prostorů služby Azure ATP](workspace-portal.md)
+- [Práce s portálem Azure ATP](workspace-portal.md)
 - [Podívejte se na fórum služby Azure ATP.](https://aka.ms/azureatpcommunity)

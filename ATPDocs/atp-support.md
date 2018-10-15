@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 10/14/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 8ae459ac-9fca-4923-9a1a-dc10d5c50b29
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 2c4f82ce7bf4e8ba7bf9e6ae56198ca1f6e4aefb
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: a5d6693aa44fd82d10654ebd40533100e8834627
+ms.sourcegitcommit: 58c75026e5ec4dcab3b0852a41f9f0a0ad6f22eb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783232"
+ms.lasthandoff: 10/14/2018
+ms.locfileid: "49315757"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -62,7 +62,7 @@ O dalších možnostech podpory se můžete dozvědět, když se zeptáte svojí
 
 #### <a name="system-status-page"></a>Stránka stavu systému 
 
-Pokud chcete zobrazit stav systému pro ochrany ATP v programu Azure, přejděte [ **stav systému** ](https://health.atp.azure.com/) stránky. Tato stránka poskytuje informace o tom, zda je na portálu pro správu pracovního prostoru a aktivní, pokud dojde k problémům s detekcí a pokud senzor je možné směrovat provoz do cloudu. Můžete přistupovat **stav systému** z řádku nabídek služby Azure ATP.
+Pokud chcete zobrazit stav systému pro ochrany ATP v programu Azure, přejděte [ **stav systému** ](https://health.atp.azure.com/) stránky. Tato stránka poskytuje informace o tom, zda je na portálu ochrany ATP v programu Azure a aktivní, pokud dojde k problémům s detekcí a pokud senzor je možné směrovat provoz do cloudu. Můžete přistupovat **stav systému** z řádku nabídek služby Azure ATP.
 
 #### <a name="on-demand-videos"></a>Videa na vyžádání
 
