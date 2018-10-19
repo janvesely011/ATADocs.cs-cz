@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/7/2018
+ms.date: 10/18/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e3cf97c4bd95a1fefc0aef29009f644cd5ef907d
-ms.sourcegitcommit: bbbe808c08ce703a314c82b46aedaae79ab256a3
+ms.openlocfilehash: f959176ddca045f421af416d5ce9dc3a777cc43a
+ms.sourcegitcommit: fdff488c79729035f89897c2ea0771a45b4c3ecf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48848537"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49401908"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -46,7 +46,7 @@ Tato příručka požadovaných součástí je rozdělen do následujících č�
 [Azure ATP samostatný senzor](#azure-atp-sensor-requirements): uvádí služby Azure ATP samostatný senzor hardwaru, požadavky na software, jakož i nastavení, která musíte nakonfigurovat na serverech služby Azure ATP samostatného senzoru.
 
 ## <a name="before-you-start"></a>Než začnete
-Tato část obsahuje informace, které byste měli získat a účty a síťové entity, které byste měli mít před zahájením instalace služby Azure ATP.
+Tato část obsahuje informace, které byste měli získat, a také účty a síťové entity informace, které byste měli mít před zahájením instalace služby Azure ATP.
 
 - Získat licenci pro Enterprise Mobility + Security (EMS E5) 5 přímo prostřednictvím [portál služeb Office 365](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-pricing) nebo prostřednictvím licenčního modelu partnera CSP (Cloud Solution).  
 
@@ -65,7 +65,7 @@ Tato část obsahuje informace, které byste měli získat a účty a síťové 
 
 -   Volitelné: Uživatelský účet uživatele, který nemá žádné síťové aktivity. Tento účet je nakonfigurovaný jako uživatel Honeytokenu ochrany ATP v programu Azure. Další informace najdete v tématu [konfigurovat vyloučení a uživatele Honeytokenu](install-atp-step7.md).
 
--   Volitelné: Když nasazujete samostatný senzor, je nezbytné k předávání událostí Windows 4776, 4732, 4733, 4728, 4729, 4756, 4757 a 7045 zure ochrany ATP v programu dál vylepšit Azure ATP Pass-the-Hash, útoky hrubou silou, úpravy citlivých skupin a Honeytokenů detekce a vytvoření škodlivé služby. Tyto události přijímá Azure senzor ochrany ATP v programu automaticky. V Azure ATP samostatný senzor mohou přijímat tyto události ze služby SIEM nebo nastavením předávání událostí Windows z řadiče domény. Shromážděné události poskytují ochrany ATP v programu Azure společně s dalšími informacemi, které nejsou k dispozici prostřednictvím síťový provoz na řadiči domény.
+-   Volitelné: Když nasazujete samostatný senzor, je nezbytné, aby předávaly události Windows 4776, 4732, 4733, 4728, 4729, 4756, 4757 a 7045 ochrany ATP v programu Azure dál vylepšit Azure ATP Pass-the-Hash, útoky hrubou silou, úpravy citlivých skupin a Honeytokenů detekce a vytvoření škodlivé služby. Tyto události přijímá Azure senzor ochrany ATP v programu automaticky. V Azure ATP samostatný senzor mohou přijímat tyto události ze služby SIEM nebo nastavením předávání událostí Windows z řadiče domény. Shromážděné události poskytují ochrany ATP v programu Azure společně s dalšími informacemi, které nejsou k dispozici prostřednictvím síťový provoz na řadiči domény.
 
 ## <a name="azure-atp-portal-requirements"></a>Portálu požadavky služby Azure ATP
 Přístup k portálu ochrany ATP v programu Azure je prostřednictvím prohlížeče. podporují následující prohlížeče a nastavení:
