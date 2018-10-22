@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 10/18/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: f6f3ed75-d6bb-4966-a9a7-5339c4f3ebac
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c0bda95fb789225cf7d05616974f9a333f3c8e4f
-ms.sourcegitcommit: 30d874808cfeafd46ee8fbbf34e0bbcb337f6544
+ms.openlocfilehash: 52445e15a4465f0fa4b399cf99ccf6620db7a572
+ms.sourcegitcommit: 59ed430fa0cd8ac34a70609026ec5fc2f5972f57
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49089351"
+ms.lasthandoff: 10/21/2018
+ms.locfileid: "49480680"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -30,15 +30,15 @@ Prostřednictvím integrace ochrany ATP v programu Windows Defender do ochrany A
 
 - Azure ATP senzory a samostatné senzorů: může být umístěn souběžně přímo na řadiče domény nebo zrcadlení portů z řadičů domény do ochrany ATP v programu, k zachycení a parsování síťového provozu různých protokolů (například Kerberos, DNS, RPC, NTLM a další) pro ověřování autorizaci a shromažďování informací. 
 
--   Senzory chování koncového bodu: vložená ve Windows 10, tyto senzory shromažďovat a zpracovávat chování signály od operačního systému (například proces, registr, souboru a síťovou komunikaci) a odešle tato data ze senzorů do izolovaného, vašeho privátního cloudu instance ochrany ATP v programu Windows Defender.
+-   Senzory chování koncového bodu: vložený ve Windows 10, tyto senzory shromažďovat a zpracovávat chování signály od operačního systému (například proces, registr, souboru a síťovou komunikaci) a odesílat tato data ze senzorů do izolovaného, vašeho privátního cloudu instance ochrany ATP v programu Windows Defender.
 
 - Analýzy zabezpečení v cloudu: využití velkých objemů dat, machine learning a jedinečný Microsoft zobrazení v ekosystému Windows (například [nástroj pro odstranění škodlivého softwaru Microsoft](https://www.microsoft.com/download/malicious-software-removal-tool-details.aspx)), cloudové produkty enterprise (např. Office 365) a online prostředků (jako je Bing a adresu URL SmartScreen urs) chování signály přeložit na přehledy, detekce a doporučuje pokročilé hrozby.
 
-- Hrozeb: generovaný myslivci Microsoft teams zabezpečení a rozšířen o analýzy hrozeb, které jsou k dispozici od partnerů, threat intelligence umožňuje programu Windows Defender ATP identifikovat útočník nástroje, techniky a postupy, a generovat upozornění pro případ Tyto jsou dodržovány v datech shromážděných senzoru.
+- Hrozeb: generovaný myslivci Microsoft teams zabezpečení a rozšířen o analýzy hrozeb, které jsou k dispozici od partnerů, threat intelligence umožňuje programu Windows Defender ATP identifikovat útočník nástroje, technik, postupy a generování upozornění pro případ Tyto aktivity jsou dodržovány v datech shromážděných senzoru.
 
 Technologie ochrany ATP v programu Azure detekuje různé podezřelé aktivity, zaměřuje se na několik fází v řetězci kill internetového útoku včetně:
 
-- Rekognoskace, během které útočníci shromáždit informace o tom, jak je sestavená prostředí, jaké různé formáty jsou a entit, které neexistuje. Se připravují si plán pro další fáze útoku.
+- Rekognoskace, během které útočníci shromáždit informace o tom, jak je sestavená prostředí, jaké různé formáty jsou a entit, které neexistuje. Obvykle vytváří si plán pro další fáze útoku v tomto poli.
 
 - Cyklus laterálního pohybu, během kterého útočník investuje čas a úsilí do rozšíření prostoru pro útoky uvnitř vaší sítě.
 
@@ -50,7 +50,7 @@ Ve stejnou dobu ochrana ATP v programu Windows Defender využívá technologie M
 
 - Bohaté časovou osu pro forenzní šetření a zmírnění distribuovaných útoků<br></br>Snadno prozkoumejte rozsahu porušení nebo podezřelé chování na jakýkoli počítač pomocí časové osy bohaté počítače. Soubor, adresy URL a inventáře síťové připojení přes síť. Získejte další informace, pomocí hluboké shromažďování a analýze ("výbuchu") pro kterýkoli soubor nebo adresy URL.
 
-- Součástí jedinečný threat intelligence znalostní báze<br></br>Bezkonkurenční hrozeb optická poskytuje podrobnosti objektu actor a záměru kontext pro každé platformy intel detekce hrozeb – kombinace první a třetí strany řady zdrojů.
+- Součástí jedinečný threat intelligence znalostní báze<br></br>Zjišťování – kombinace první a třetí strany intelligence zdroje na základě bezkonkurenční hrozeb optická poskytuje podrobnosti objektu actor a záměru kontextu pro každý analýzy hrozeb.
 
 ## <a name="prerequisites"></a>Požadavky
 
@@ -59,21 +59,19 @@ Pokud chcete povolit tuto funkci, potřebujete licenci pro služby Azure ATP a o
 
 ## <a name="how-to-integrate-azure-atp-with-windows-defender-atp"></a>Postup při integraci služby Azure ATP s ochrany ATP v programu Windows Defender
 
-1. Klikněte na tlačítko **konfigurace**a v části **zdroje dat** vyberte **ochrany ATP v programu Windows Defender**. Pak klikněte na odkaz na **Správa pracovních prostorů**. To je k dispozici pouze v případě, že máte licenci pro ochrany ATP v programu Windows Defender a jste už provedli procesu zavádění pro ochrany ATP v programu Windows Defender. 
+1. Na portálu ochrany ATP v programu Azure otevřete **konfigurace**. 
 
-2. V pracovním prostoru klikněte na ikonu nastavení.
+    ![Nabídka Azure Konfigurace ochrany ATP v programu](./media/atp-configuration-wd.png)
+2. Vyberte v seznamu konfigurací **ochrany ATP v programu Windows Defender** a nastavte přepínač integrace na **na**. 
 
- ![integrace pracovní prostor](./media/edit-workspace.png)
- 
-3. Nastavení integrace **na**. 
+    ![Povolení integrace Windows Defender](./media/enable-integration.png)
 
- ![povolení integrace](./media/enable-integration.png)
 
-4. V [portál ochrany ATP v programu Windows Defender](https://securitycenter.windows.com/preferences/advanced), přejděte na stránku **nastavení**, **pokročilé funkce** a nastavte **integrace služby Azure ATP** k  **DÁLE**. 
+3. V [portál ochrany ATP v programu Windows Defender](https://securitycenter.windows.com/preferences/advanced), přejděte na stránku **nastavení**, **pokročilé funkce** a nastavte **integrace služby Azure ATP** k  **DÁLE**. 
 
- ![Povolení integrace ochrany ATP v programu Windows Defender](./media/wd-atp-enable.png)
+    ![Povolení integrace ochrany ATP v programu Windows Defender](./media/wd-atp-enable.png)
 
-5. Chcete-li zkontrolovat stav integrace portálu ochrany ATP v programu Azure, přejděte na **nastavení** a potom **integrace ochrany ATP v programu Windows Defender**. Zobrazí se stav integrace; Pokud se něco stalo, že se zobrazí chyba. Můžete také zobrazit, který pracovní prostor je integrovaná s ochrany ATP v programu Windows Defender.
+4. Chcete-li zkontrolovat stav integrace portálu ochrany ATP v programu Azure, přejděte na **nastavení** > **integrace ochrany ATP v programu Windows Defender**. Zobrazí se stav integrace a pokud se něco stalo, zobrazí se chyba. 
 
 ## <a name="how-it-works"></a>Jak to funguje
 
@@ -89,7 +87,7 @@ Vyberete-li u odznáčku, budete přesměrováni na portál ochrany ATP v progra
 
  ![Šedé ochrany ATP v programu Windows Defender](./media/wd-grey.png)
 
-Na portálu ochrany ATP v programu Windows Defender po kliknutí na koncový bod, můžete zobrazit výstrahy služby Azure ATP. Pokud kliknete na upozornění pro tuto entitu v ochrany ATP v programu Windows Defender, otevře se stránka profil entity v ochrany ATP v programu Azure. 
+Z portálu ochrany ATP v programu Windows Defender klikněte na koncový bod chcete-li zobrazit výstrahy služby Azure ATP. Pokud kliknete na upozornění pro tuto entitu v ochrany ATP v programu Windows Defender, otevře se stránka profil entity v ochrany ATP v programu Azure. 
  
  > [!NOTE]
  > V současné době podporuje integraci služby Azure ATP s ochrany ATP v programu Windows Defender pouze uživatelé a počítače z místní AD. Uživatele z Azure AD a nebude se zobrazovat virtuální počítače, které jsou spravované v Azure jako součást Integrace 

@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: ddbcd8877ca36afe9e56e9bc6febee19ff9957ff
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 5069fdda7c27a54705a17da79dbb536d412c4113
+ms.sourcegitcommit: 59ed430fa0cd8ac34a70609026ec5fc2f5972f57
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133476"
+ms.lasthandoff: 10/21/2018
+ms.locfileid: "49480629"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
@@ -79,7 +79,7 @@ Tato část podrobně popisuje možné chyby v nasazení ATA a kroky potřebné 
 |Problém|Popis|Řešení|
 |-------------|----------|---------|
 |Z řadiče domény se nepřijímá žádný provoz, jsou ale pozorována monitorovací upozornění|    Z řadiče domény nebyl pomocí zrcadlení portů přes ATA Gateway přijat žádný provoz|U síťové karty pro zachytávání na ATA Gateway zakažte v oblasti **Upřesnit nastavení** tyto funkce:<br></br>Slučování příjmových segmentů (IPv4)<br></br>Slučování příjmových segmentů (IPv6)|
-|Zobrazí se toto monitorovací upozornění: **některý síťový provoz se neanalyzuje**|Pokud máte ATA Gateway a Lightweight Gateway na virtuálních počítačích VMware, může se zobrazit toto monitorovací upozornění. K tomu dochází kvůli neshodě v konfiguraci ve VMware.|Nastavte následující nastavení na **0** nebo **zakázané** v konfiguraci síťové karty virtuálního počítače: TsoEnable, LargeSendOffload, TSO Offload a Giant TSO Offload|Protokol TLS 1.0 je zakázaný v komponentě ATA Gateway, ale rozhraní .net je nastavené na použití protokolu TLS 1.2|
+|Zobrazí se toto monitorovací upozornění: **některý síťový provoz se neanalyzuje**|Pokud máte ATA Gateway a Lightweight Gateway na virtuálních počítačích VMware, může se zobrazit toto monitorovací upozornění. K tomu dochází kvůli neshodě v konfiguraci ve VMware.|Nastavte následující nastavení na **0** nebo **zakázané** v konfiguraci síťové karty virtuálního počítače: TsoEnable, LargeSendOffload, TSO Offload a Giant TSO Offload|Protokol TLS 1.0 je zakázaný v komponentě ATA Gateway, ale rozhraní .net je nastavené na použití protokolu TLS 1.2|<!-- line contains 5 vertical lines -->
 
 
 

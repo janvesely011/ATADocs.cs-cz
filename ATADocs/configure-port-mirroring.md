@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: cdaddca3-e26e-4137-b553-8ed3f389c460
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: e9d5ea1dfce5a162c0bf4642f2159b13a5b0f169
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: b8b9f3b1eeb36e3a4af949d7165ce0a46225b858
+ms.sourcegitcommit: 59ed430fa0cd8ac34a70609026ec5fc2f5972f57
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46134139"
+ms.lasthandoff: 10/21/2018
+ms.locfileid: "49480646"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
@@ -64,9 +64,10 @@ Další informace najdete v tématu v dokumentaci od výrobce.
 **Pokud pracujete s virtualizačními clustery:**
 
 -   U každého řadiče domény spuštěného ve virtualizačním clusteru ve virtuálním počítači s ATA Gateway konfigurujte spřažení mezi řadičem domény a ATA Gateway. Tímto způsobem, pokud řadič domény přesune na jiného hostitele v clusteru, ATA Gateway ji následuje. To funguje dobře, pokud je jen několik řadičů domény.
+
 > [!NOTE]
 > Pokud vaše prostředí podporuje proces V2V (Virtual to Virtual) na různých hostitelích (RSPAN), nemusíte si dělat starosti se spřažením.
-> 
+
 -   Abyste se ujistili, že komponenty ATA Gateway mají správnou velikost, aby mohly samy zpracovávat sledování všech řadičů domény, zkuste tuto možnost: Nainstalujte virtuální počítač na každého hostitele virtualizace a nainstalujte ATA Gateway na každého hostitele. Nakonfigurujte každou ATA Gateway ke sledování všech řadičů domény, které běží v clusteru. Tímto způsobem se monitoruje všechny hostitele, které běží na řadiče domény.
 
 Po dokončení konfigurace zrcadlení portů a před instalací ATA Gateway ověřte, že zrcadlení portů funguje.
