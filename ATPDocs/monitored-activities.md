@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 37d1a032-65e7-4a89-be0b-c3f9cc2bacdb
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 2e33426cf33b95cb3d1c9a2c58fab75b950b41ac
-ms.sourcegitcommit: 59ed430fa0cd8ac34a70609026ec5fc2f5972f57
+ms.openlocfilehash: 9209d48206e1f8da182f8ded50672362211dafe2
+ms.sourcegitcommit: 8ecb76ddfbf48c361d3637d15bd48313a3e68685
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/21/2018
-ms.locfileid: "49480799"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49634762"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -57,7 +57,7 @@ Informace sledováno ochrany ATP v programu Azure se zobrazí ve formuláři akt
 |Provedení změny účtu vyžaduje čipovou kartu  |Změny účtu budou muset uživatelé přihlásit k zařízení pomocí čipové karty.|
 |Podporované typy šifrování změnit účet |Typy šifrování podporované protokolem Kerberos se změnila (typy: Des, AES 129, AES 256)|
 |Změnit členství ve skupině  |Uživatel byl, přidání nebo odebrání, z ní, jiným uživatelem nebo samy o sobě.|
-|Účet UpnName změnit  |Hlavní název uživatele byl změněn.|
+|Změnit hlavní uživatelské jméno účtu  |Hlavní název uživatele byl změněn.|
 
 ## <a name="monitored-user-activities-ad-service-principal-operations"></a>Monitoruje aktivity uživatelů: operace instančního objektu služby AD
 
