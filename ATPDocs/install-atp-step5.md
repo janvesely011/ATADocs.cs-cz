@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: d7c95f8c-04f8-4946-9bae-c27ed362fcb0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 6f65b3af56e683a385f7128a989170c8c4073b3e
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: b7ddaca0f0c5691c90873cef9af6cef13fa9650a
+ms.sourcegitcommit: e783df4c9d928fedf6dc3c65d58d9b530cdd2ff2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783861"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49800032"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -27,7 +27,8 @@ ms.locfileid: "48783861"
 # <a name="install-azure-atp---step-5"></a>Instalace služby Azure ATP – krok 5
 
 > [!div class="step-by-step"]
-> [«Krok 4](install-atp-step4.md)
+> [« Krok 4](install-atp-step4.md)
+> [Krok 6 »](install-atp-step6-vpn.md)
 
 
 
@@ -61,7 +62,7 @@ Po dokončení instalace senzoru služby Azure ATP proveďte následující post
    Doporučuje se, že zakážete všechny vzdálené lokality (čidly služby Azure ATP) nebudou kandidáti na synchronizátora domény.
    Pokud je řadič domény jen pro čtení, nenastavujte ho jako kandidáta na synchronizátora domény. Další informace o synchronizaci služby Azure ATP domény najdete v tématu [architektura služby Azure ATP](atp-architecture.md#azure-atp-sensor-features)
   
-4. Klikněte na **Uložit**.
+3. Klikněte na **Uložit**.
 
 
 ## <a name="validate-installations"></a>Ověření instalací
@@ -79,7 +80,8 @@ Pokud chcete ověřit, že se úspěšně nasadil senzoru služby Azure ATP, zko
 
 
 > [!div class="step-by-step"]
-> [«Krok 4](install-atp-step4.md)
+> [« Krok 4](install-atp-step4.md)
+> [Krok 6 »](install-atp-step6-vpn.md)
 
 
 
