@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 37d1a032-65e7-4a89-be0b-c3f9cc2bacdb
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9209d48206e1f8da182f8ded50672362211dafe2
-ms.sourcegitcommit: 8ecb76ddfbf48c361d3637d15bd48313a3e68685
+ms.openlocfilehash: 5424c997de43ac186564b929ab50c7668333ed06
+ms.sourcegitcommit: 63ec9181f71edce6a950f5cc0d69428405436c48
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "49634762"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49963297"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -33,7 +33,8 @@ V případě platných hrozeb nebo **pravdivě pozitivní upozornění**, ochran
 Informace sledováno ochrany ATP v programu Azure se zobrazí ve formuláři aktivit. Ochrana ATP v programu Azure v současné době podporuje monitorování následující typy aktivit:
 
 > [!NOTE] 
-> Tento článek je relevantní pro všechny typy senzoru služby Azure ATP.
+> - Tento článek je relevantní pro všechny typy senzoru služby Azure ATP.
+>- Na stránce profilu počítače i uživatele se zobrazí Azure ochrany ATP v programu monitorovat aktivity. 
  
 
 ## <a name="monitored-user-activities-user-account-ad-attribute-changes"></a>Monitoruje aktivity uživatelů: atribut změny uživatelského účtu AD
@@ -59,7 +60,7 @@ Informace sledováno ochrany ATP v programu Azure se zobrazí ve formuláři akt
 |Změnit členství ve skupině  |Uživatel byl, přidání nebo odebrání, z ní, jiným uživatelem nebo samy o sobě.|
 |Změnit hlavní uživatelské jméno účtu  |Hlavní název uživatele byl změněn.|
 
-## <a name="monitored-user-activities-ad-service-principal-operations"></a>Monitoruje aktivity uživatelů: operace instančního objektu služby AD
+## <a name="monitored-user-activities-ad-security-principal-operations"></a>Monitoruje aktivity uživatelů: operace instančního objektu zabezpečení AD
 
 |Monitorovaných aktivit|Popis|
 |---------------------|------------------|
