@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 2a5b6652-2aef-464c-ac17-c7e5f12f920f
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: f43503bb64ab79280782c1fc81a4821a8b905ff7
-ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
+ms.openlocfilehash: 0fbd15aa61983a62313f0f1ef89f688046474b9d
+ms.sourcegitcommit: 2916d6f8d6e6f754d7fb8a5d31b255a46aa35ecd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47454050"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50132652"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
@@ -46,7 +46,7 @@ Po instalaci komponenty ATA Gateway proveďte následující kroky a nakonfiguru
   - **Popis**: Zadejte popis pro ATA Gateway (volitelné).
   - **Řadiče domény zrcadlené portem (FQDN)** (požadováno pro ATA Gateway, nastavení nelze změnit pro ATA Lightweight Gateway): Zadejte úplný název FQDN řadiče domény a kliknutím na symbol plus ho přidejte do seznamu. Například **dc01.contoso.com**.
 
-    Následující informace platí pro servery, které zadáte do seznamu **Řadiče domény**:
+Následující informace platí pro servery, které zadáte do seznamu **Řadiče domény**:
     - Všechny řadiče domény, jejichž provoz ATA Gateway monitoruje přes zrcadlení portů, musí být uvedené v seznamu **Řadiče domény**. Pokud řadič domény není uvedený v seznamu **Řadiče domény**, detekce podezřelých aktivit nemusí fungovat podle očekávání.
     - Nejméně jeden řadič domény v seznamu by měl být globální katalog. To umožňuje ATA překládat objekty počítačů a uživatelů v jiných doménách v doménové struktuře.
 

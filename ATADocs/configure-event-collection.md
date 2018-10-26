@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 512e7fa979a6fd5e140d65836b533b720a6dc03b
-ms.sourcegitcommit: 1b23381ca4551a902f6343428d98f44480077d30
+ms.openlocfilehash: 6e15f09ff03402e7aed499e032bac018999ab538
+ms.sourcegitcommit: 2916d6f8d6e6f754d7fb8a5d31b255a46aa35ecd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47403212"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50132601"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
@@ -63,13 +63,13 @@ Po přidání **síťová služba** k **Event Log Readers** skupině, restartov�
     1.  Vyberte **Povoleno**.
     2.  V části **možnosti**, klikněte na tlačítko **zobrazit**.
     3.  V části **SubscriptionManagers**, zadejte následující hodnoty a klikněte na tlačítko **OK**: *Server = http: / /<fqdnATAGateway>: 5985 nebo wsman/SubscriptionManager/WEC, obnovení = 10* 
-    
-        *(Příklad: Server = http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC, aktualizujte = 10)*
- 
-    ![Obrázek konfigurace cílového odběru](media/wef%202%20config%20target%20sub%20manager.png)
-   
-    5.  Klikněte na **OK**.
-    6.  Do příkazového řádku se zvýšenými oprávněními zadejte *gpupdate /force*. 
+      
+         *(Příklad: Server = http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC, aktualizujte = 10)*
+      
+         ![Obrázek konfigurace cílového odběru](media/wef%202%20config%20target%20sub%20manager.png)
+      
+    4.  Klikněte na **OK**.
+    5.  Do příkazového řádku se zvýšenými oprávněními zadejte *gpupdate /force*. 
 
 **Krok 3: V ATA Gateway proveďte následující postup.** 
 

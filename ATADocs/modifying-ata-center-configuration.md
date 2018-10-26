@@ -12,12 +12,12 @@ ms.service: ''
 ms.technology: ''
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 80f96966a1ba9e62b23311cc19ed8fc5a8210bba
-ms.sourcegitcommit: 56065ee43dac299203871cd6f025315520750b3b
+ms.openlocfilehash: b1b8b1fb9c1bf5a11c8a05daf3567f4a25c35c3f
+ms.sourcegitcommit: 2916d6f8d6e6f754d7fb8a5d31b255a46aa35ecd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47233860"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50132686"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
@@ -54,6 +54,7 @@ Adresa URL se používá v následujících scénářích:
 3. Vyčkat, než komponenty ATA Gateway k synchronizaci. Tito uživatelé teď mají dvě potenciální adresy URL, pomocí kterého je možné získat přístup ke konzole ATA. Tak dlouho, dokud se komponenta ATA Gateway můžete připojit pomocí původní adresu URL, nepokusí novou.
 
 4. Po všechny komponenty ATA Gateway synchronizovaly s aktualizovanou konfigurací, na stránce konfigurace System Center, klikněte **aktivovat** tlačítko aktivovat novou adresu URL. Po aktivaci nové adresy URL komponenty ATA Gateway použije pro přístup ke komponentě ATA Center nyní nové adresy URL Po připojení ke službě ATA Center, ATA Gateway stáhne nejnovější konfiguraci a bude obsahovat pouze nové adresy URL pro konzolu ATA. 
+
 5. 
  ![Aktivovat certifikát](media/center-activation.png)
 

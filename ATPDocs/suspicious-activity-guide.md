@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 3edcde9466ade71afe22a735256f3cb84f88df17
-ms.sourcegitcommit: 58c75026e5ec4dcab3b0852a41f9f0a0ad6f22eb
+ms.openlocfilehash: 5843d007eb89c1aae14b466e5b06dd4bddee447b
+ms.sourcegitcommit: 2916d6f8d6e6f754d7fb8a5d31b255a46aa35ecd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/14/2018
-ms.locfileid: "49315859"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50132703"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -83,25 +83,25 @@ Nejprve zkontrolujte popis výstrahy, pokud chcete zobrazit, který tři typy de
 
 2.  Zlatý lístek – v excelové tabulce, přejděte na kartu se síťovou aktivitou. Uvidíte, že je pole relevantní sníženou příbuzností **typ šifrování lístku žádosti**, a **typy šifrování podporované zdrojové počítače** obsahuje silnější metody šifrování.
 
-  1. Zkontrolujte prostředek přistupuje tyto lístky, pokud je jeden prostředek, ke kterým všechny přistupují, ověřte ho, ujistěte se, že je platný prostředek, který se má přístup. Dále ověřte, jestli cílový prostředek podporuje metody silné šifrování. Můžete to zkontrolovat ve službě Active Directory tak, že zkontrolujete atribut msDS-SupportedEncryptionTypes, účet služby zdroje.
+  a. Zkontrolujte prostředek přistupuje tyto lístky, pokud je jeden prostředek, ke kterým všechny přistupují, ověřte ho, ujistěte se, že je platný prostředek, který se má přístup. Dále ověřte, jestli cílový prostředek podporuje metody silné šifrování. Můžete to zkontrolovat ve službě Active Directory tak, že zkontrolujete atribut msDS-SupportedEncryptionTypes, účet služby zdroje.
   
-  2. Zkontrolujte zdrojový počítač a účet, nebo při více zdrojových počítačů a účtů kontrolovat, jestli se mají něco společné. Například všechny pracovníky marketingu používat konkrétní aplikace, které by mohly způsobovat aktivovat upozornění. Existují případy, ve kterých je vlastní aplikaci, která se používá jen občas, ověřování pomocí nižší šifry šifrování. Zkontrolujte, jestli jsou na zdrojovém počítači těchto vlastních aplikací. Pokud ano, je pravděpodobně o neškodné pravdivě pozitivní upozornění a lze potlačit.
+  b. Zkontrolujte zdrojový počítač a účet, nebo při více zdrojových počítačů a účtů kontrolovat, jestli se mají něco společné. Například všechny pracovníky marketingu používat konkrétní aplikace, které by mohly způsobovat aktivovat upozornění. Existují případy, ve kterých je vlastní aplikaci, která se používá jen občas, ověřování pomocí nižší šifry šifrování. Zkontrolujte, jestli jsou na zdrojovém počítači těchto vlastních aplikací. Pokud ano, je pravděpodobně o neškodné pravdivě pozitivní upozornění a lze potlačit.
   
 
 
 3.  Overpass-the-Hash – v excelové tabulce, přejděte na kartu se síťovou aktivitou. Uvidíte, že je pole relevantní sníženou příbuzností **šifrované typ šifrování časové razítko** a **typy šifrování podporované zdrojové počítače** obsahuje silnější metody šifrování.
 
-  1. Existují případy, ve kterých může aktivuje toto upozornění, když uživatel přihlásí pomocí čipové karty, pokud byla nedávno změnila konfigurace čipové karty. Zaškrtněte, pokud došlo ke změně tímto způsobem pro účty používané. Pokud ano, to je pravděpodobně o neškodné pravdivě pozitivní upozornění a lze potlačit.
-  2. Zkontrolujte prostředek přistupuje tyto lístky, pokud je jeden prostředek, ke kterým všechny přistupují, ověřte ho, ujistěte se, že je platný prostředek, který se má přístup. Dále ověřte, jestli cílový prostředek podporuje metody silné šifrování. Můžete to zkontrolovat ve službě Active Directory tak, že zkontrolujete atribut msDS-SupportedEncryptionTypes, účet služby zdroje.
+  a. Existují případy, ve kterých může aktivuje toto upozornění, když uživatel přihlásí pomocí čipové karty, pokud byla nedávno změnila konfigurace čipové karty. Zaškrtněte, pokud došlo ke změně tímto způsobem pro účty používané. Pokud ano, to je pravděpodobně o neškodné pravdivě pozitivní upozornění a lze potlačit.
+  b. Zkontrolujte prostředek přistupuje tyto lístky, pokud je jeden prostředek, ke kterým všechny přistupují, ověřte ho, ujistěte se, že je platný prostředek, který se má přístup. Dále ověřte, jestli cílový prostředek podporuje metody silné šifrování. Můžete to zkontrolovat ve službě Active Directory tak, že zkontrolujete atribut msDS-SupportedEncryptionTypes, účet služby zdroje.
 
 **Náprava**
 
 1.  Kostru klíče – odebere malware. Další informace najdete v tématu [analýzy Malware Skeleton Key](https://www.virusbulletin.com/virusbulletin/2016/01/paper-digital-bian-lian-face-changing-skeleton-key-malware).
 
-2.  Zlatý lístek – postupujte podle pokynů [Golden Ticket](#golden-ticket) podezřelých aktivit.   
-    Navíc vzhledem k tomu, že vytvoření Golden Ticket vyžaduje práva správce domény, implementovat [předání hodnoty hash doporučení](https://www.microsoft.com/download/details.aspx?id=36036).
+2.  Zlatý lístek – postupujte podle pokynů [Golden Ticket](#golden-ticket) podezřelých aktivit.   
+    Navíc vzhledem k tomu, že vytvoření Golden Ticket vyžaduje práva správce domény, implementovat [předání hodnoty hash doporučení](https://www.microsoft.com/download/details.aspx?id=36036).
 
-3.  Overpass-the-Hash – Pokud je potřebný účet není citlivé, poté resetujte heslo daného účtu. To zabrání útočník vytváření nových lístky protokolu Kerberos z hodnoty hash hesla, i když existující lístky je stále možné až do vypršení jejich platnosti. Pokud je citlivý účet, měli byste zvážit, obnovení účtu KRBTGT dvakrát jako podezřelá aktivita zlatého lístku. Obnovení účtu KRBTGT dvakrát zruší platnost všech protokolu Kerberos, takže Plánujte lístky v této doméně než to uděláte. Přečtěte si pokyny v [KRBTGT účet skriptů pro resetování hesla nyní k dispozici pro zákazníky, kteří](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/). Viz také pomocí [resetování nástroj hesla/klíčů účtu KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Protože to je technika laterálního pohybu, postupujte podle osvědčené postupy z [předání hodnoty hash doporučení](https://www.microsoft.com/download/details.aspx?id=36036).
+3.  Overpass-the-Hash – Pokud je potřebný účet není citlivé, poté resetujte heslo daného účtu. To zabrání útočník vytváření nových lístky protokolu Kerberos z hodnoty hash hesla, i když existující lístky je stále možné až do vypršení jejich platnosti. Pokud je citlivý účet, měli byste zvážit, obnovení účtu KRBTGT dvakrát jako podezřelá aktivita zlatého lístku. Obnovení účtu KRBTGT dvakrát zruší platnost všech protokolu Kerberos, takže Plánujte lístky v této doméně než to uděláte. Přečtěte si pokyny v [KRBTGT účet skriptů pro resetování hesla nyní k dispozici pro zákazníky, kteří](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/). Viz také pomocí [resetování nástroj hesla/klíčů účtu KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Protože to je technika laterálního pohybu, postupujte podle osvědčené postupy z [předání hodnoty hash doporučení](https://www.microsoft.com/download/details.aspx?id=36036).
 
 ## <a name="honeytoken-activity"></a>Aktivita Honeytokenu
 
@@ -140,7 +140,7 @@ Hodnota hash použil z počítače, že cílový uživatel vlastní, nebo pravid
 
 1. Pokud není potřebný účet citlivé, resetujte heslo daného účtu. To zabrání útočník vytváření nových lístky protokolu Kerberos z hodnoty hash hesla, i když existující lístky je stále možné až do vypršení jejich platnosti. 
 
-2. Pokud je citlivý účet, měli byste zvážit, obnovení účtu KRBTGT dvakrát jako podezřelá aktivita zlatého lístku. Obnovení účtu KRBTGT dvakrát zruší platnost všech protokolu Kerberos, takže Plánujte lístky v této doméně než to uděláte. Přečtěte si pokyny v [KRBTGT účet skriptů pro resetování hesla nyní dostupný pro zákazníky se](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), také naleznete pomocí [resetování nástroj hesla/klíčů účtu KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Protože to je technika laterálního pohybu, postupujte podle osvědčené postupy z [předání hodnoty hash doporučení](https://www.microsoft.com/download/details.aspx?id=36036).
+2. Pokud je citlivý účet, měli byste zvážit, obnovení účtu KRBTGT dvakrát jako podezřelá aktivita zlatého lístku. Obnovení účtu KRBTGT dvakrát zruší platnost všech protokolu Kerberos, takže Plánujte lístky v této doméně než to uděláte. Přečtěte si pokyny v [KRBTGT účet skriptů pro resetování hesla nyní dostupný pro zákazníky se](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), také naleznete pomocí [resetování nástroj hesla/klíčů účtu KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Protože to je technika laterálního pohybu, postupujte podle osvědčené postupy z [předání hodnoty hash doporučení](https://www.microsoft.com/download/details.aspx?id=36036).
 
 ## <a name="identity-theft-using-pass-the-ticket-attack"></a>Krádež identity pomocí útoku Pass-the-Ticket
 
@@ -158,7 +158,7 @@ Pass-the-Ticket je technika laterálního pohybu, kdy útočník získá lístek
 
 1. Pokud není potřebný účet citlivé, resetujte heslo daného účtu. To zabrání útočník vytváření nových lístky protokolu Kerberos z hodnoty hash hesla, i když existující lístky je stále možné až do vypršení jejich platnosti.  
 
-2. Pokud je citlivý účet, měli byste zvážit, obnovení účtu KRBTGT dvakrát jako podezřelá aktivita zlatého lístku. Obnovení účtu KRBTGT dvakrát zruší platnost všech protokolu Kerberos, takže Plánujte lístky v této doméně než to uděláte. Přečtěte si pokyny v [KRBTGT účet skriptů pro resetování hesla nyní dostupný pro zákazníky se](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), také naleznete pomocí [resetování nástroj hesla/klíčů účtu KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).  Protože to je technika laterálního pohybu, postupujte podle osvědčených postupů v [předání hodnoty hash doporučení](https://www.microsoft.com/download/details.aspx?id=36036).
+2. Pokud je citlivý účet, měli byste zvážit, obnovení účtu KRBTGT dvakrát jako podezřelá aktivita zlatého lístku. Obnovení účtu KRBTGT dvakrát zruší platnost všech protokolu Kerberos, takže Plánujte lístky v této doméně než to uděláte. Přečtěte si pokyny v [KRBTGT účet skriptů pro resetování hesla nyní dostupný pro zákazníky se](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), také naleznete pomocí [resetování nástroj hesla/klíčů účtu KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).  Protože to je technika laterálního pohybu, postupujte podle osvědčených postupů v [předání hodnoty hash doporučení](https://www.microsoft.com/download/details.aspx?id=36036).
 
 ## Protokol Kerberos golden ticket<a name="golden-ticket"></a>
 
@@ -217,7 +217,7 @@ V této detekce se aktivuje upozornění při použití neúspěšně pokusil na
 
 **Náprava**
 
-Použití rozhraní DPAPI, potřebuje útočník práva správce domény. Implementace [předání hodnoty hash doporučení](https://www.microsoft.com/download/details.aspx?id=36036).
+Použití rozhraní DPAPI, potřebuje útočník práva správce domény. Implementace [předání hodnoty hash doporučení](https://www.microsoft.com/download/details.aspx?id=36036).
 
 ## <a name="malicious-replication-of-directory-services"></a>Škodlivá replikace adresářových služeb
 
@@ -244,12 +244,12 @@ V této detekce se aktivuje upozornění, když se spustí požadavek replikace 
 
 Ověřte následující oprávnění: 
 
-- Replikace změn adresáře   
+- Replikace změn adresáře   
 
 - Replikovat všechny změny v adresáři  
 
-Další informace najdete v tématu [udělení Active Directory Domain Services oprávnění k synchronizaci profilu v SharePoint serveru 2013](https://technet.microsoft.com/library/hh296982.aspx).
-Můžete využít [AD ACL Scanner](https://blogs.technet.microsoft.com/pfesweplat/2013/05/13/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool/) nebo vytvořit skript prostředí Windows PowerShell k určení, kdo v doméně tato oprávnění má.
+Další informace najdete v tématu [udělení Active Directory Domain Services oprávnění k synchronizaci profilu v SharePoint serveru 2013](https://technet.microsoft.com/library/hh296982.aspx).
+Můžete využít [AD ACL Scanner](https://blogs.technet.microsoft.com/pfesweplat/2013/05/13/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool/) nebo vytvořit skript prostředí Windows PowerShell k určení, kdo v doméně tato oprávnění má.
 
 
 ## <a name="privilege-escalation-using-forged-authorization-data"></a>Eskalace oprávnění prostřednictvím zfalšovaných dat autorizace
@@ -270,7 +270,7 @@ Známé chyby zabezpečení ve starších verzích Windows serveru umožňují �
 
 **Náprava**
 
-Zajistěte, aby na všech řadičích domény s operačním systémem až do verze Windows Server 2012 R2 byla nainstalovaná aktualizace [KB3011780](https://support.microsoft.com/help/2496930/ms11-013-vulnerabilities-in-kerberos-could-allow-elevation-of-privilege) a na všech členských serverech a řadičích domény až do verze 2012 R2 byla nainstalovaná aktualizace KB2496930. Další informace najdete v článku [Stříbrný certifikát PAC](https://technet.microsoft.com/library/security/ms11-013.aspx) a [Zfalšovaný certifikát PAC](https://technet.microsoft.com/library/security/ms14-068.aspx).
+Ujistěte se, že všechny řadiče domény s operačním systémem až do systému Windows Server 2012 R2 se instalují s [KB3011780](https://support.microsoft.com/help/2496930/ms11-013-vulnerabilities-in-kerberos-could-allow-elevation-of-privilege) a všech členských serverech a řadičích domény až 2012 R2 jsou aktuální s KB2496930. Další informace najdete v tématu [stříbrný certifikát PAC](https://technet.microsoft.com/library/security/ms11-013.aspx) a [podobě zfalšovaných certifikátů PAC](https://technet.microsoft.com/library/security/ms14-068.aspx).
 
 ## <a name="reconnaissance-using-account-enumeration"></a>Rekognoskace pomocí výčtu účtů
 
@@ -353,7 +353,7 @@ Protokol DNS obsahuje několik typů dotazů. Ochrana ATP v programu Azure detek
 **Náprava**
 
 Interní server DNS lze proti rekognoskaci pomocí DNS zabezpečit zakázáním nebo omezením přenosů zóny jen na konkrétní IP adresy. Další informace o omezení přenosů zóny najdete v tématu [omezení přenosů zóny](https://technet.microsoft.com/library/ee649273(v=ws.10).aspx).
-Úprava přenosů zóny je jedním z úkolů na kontrolním seznamu, která by měla být určena pro [zabezpečení před útoky interních i externích serverů DNS](https://technet.microsoft.com/library/cc770432(v=ws.11).aspx).
+Úprava přenosů zóny je jedním z úkolů na kontrolním seznamu, která by měla být určena pro [zabezpečení před útoky interních i externích serverů DNS](https://technet.microsoft.com/library/cc770432(v=ws.11).aspx).
 
 ## <a name="reconnaissance-using-smb-session-enumeration"></a>Rekognoskace pomocí výčtu relací SMB
 
@@ -404,7 +404,7 @@ Použití [Net ukončí nástroj](https://gallery.technet.microsoft.com/Net-Ceas
 
 1. Zakažte vzdálený přístup k řadičům domény z počítačů, které nejsou ve vrstvě 0.
 
-2. Implementace [privilegovaný přístup](https://technet.microsoft.com/windows-server-docs/security/securing-privileged-access/securing-privileged-access) povolit jen počítačům s posíleným zabezpečením pro připojení k řadiči domény pro správce.
+2. Implementace [privilegovaný přístup](https://technet.microsoft.com/windows-server-docs/security/securing-privileged-access/securing-privileged-access) povolit jen počítačům s posíleným zabezpečením pro připojení k řadiči domény pro správce.
 
 ## <a name="suspicious-authentication-failures"></a>Podezřelé chyby ověřování
 
@@ -500,7 +500,7 @@ Abyste měli jistotu, vaše doména auditu řadiče potřebné události.
 
 **Šetření**
 
-1. Úpravy skupiny je legitimní? </br>Úpravy legitimní skupiny zřídka dojít a nebyly zjistili, jako je "normální", může dojít k upozornění, která může být považovaná za neškodné pravdivě pozitivní upozornění.
+1. Úpravy skupiny je legitimní? </br>Úpravy legitimní skupiny zřídka dojít a nebyly zjistili, jako je "normální", může dojít k upozornění, která může být považovaná za neškodné pravdivě pozitivní upozornění.
 
 2. Pokud byl přidaný objekt uživatelský účet, zkontrolujte akce, které trvalo uživatelský účet po přidání do skupiny správců. Přejděte na stránku uživatele v Azure ATP, chcete-li získat podrobnější přehled. Tam byli jakýkoli jiný podezřelé aktivity, které jsou přidružené k účtu před nebo po přidání konal úplně? Stáhnout **úpravy citlivých skupin** sestavu, abyste viděli, jaké další změny byly provedeny a kým stejného časového období.
 
