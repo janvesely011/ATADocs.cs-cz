@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 10/28/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,23 +13,23 @@ ms.technology: ''
 ms.assetid: 2c2d6b1a-fc8c-4ff7-b07d-64ce6159f84d
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 367ad07bd1d0be80486bfc10c2b70546d360805c
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: 9e35761c229e011cc1c48b705daa196e1e61ed58
+ms.sourcegitcommit: 3ab48f180aa0276f4e19cf7cd567581c7b4324cc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783181"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50202367"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
 
 # <a name="azure-atp-reports"></a>Sestavy služby Azure ATP
 
-Část sestavy ochrany ATP v programu Azure na portálu ochrany ATP v programu Azure umožňuje generovat sestavy, které vám poskytnou informace o stavu systému, stavu systému a sestavu o podezřelých aktivitách zjištěných ve vašem prostředí.
+Část sestavy ochrany ATP v programu Azure na portálu ochrany ATP v programu Azure umožňuje naplánovat nebo okamžitě vygenerování a stažení sestavy, které vám poskytnou informace o stavu systému. Z funkce sestavy můžete vytvořit sestavy o stavu systému a podezřelých aktivitách zjištěných ve vašem prostředí.
 
 
 Pokud chcete získat přístup na stránku sestav, klikněte na ikonu sestav na řádku nabídek: ![ikona sestav](./media/atp-report-icon.png).
-Dostupné sestavy: 
+Jsou k dispozici sestavy: 
 
 - **Souhrnná sestava**: Souhrnná sestava představuje řídicí panel stavu systému. Můžete zobrazit tři karty – **Souhrn** co bylo zjištěno ve vaší síti **otevřené podezřelé aktivity** , který obsahuje seznam podezřelých aktivit, které byste měli věnovat pozornost, a **otevřete stavu problémy s** , že seznamy můžete problémy se stavem služby Azure ATP byste měli věnovat pozornost. Podezřelé aktivity, které jsou uvedené, jsou rozdělené podle typu, stejně jako problémy se stavem. 
 
@@ -55,7 +55,7 @@ Nastavení naplánované sestavy:
    ![Plánování sestav](./media/atp-sched-reports.png)
  
  > [!NOTE]
- > Denní sestavy jsou určeny k odeslány brzy po půlnoci UTC.
+ > Ve výchozím nastavení denními sestavami jsou určeny k odeslány brzy po půlnoci UTC. Můžete si vyberte vlastní čas pomocí možnosti Výběr času. 
 
 2. Klikněte na tlačítko **plán** vedle vašeho typu vybranou sestavu, nastavit četnost a e-mailovou adresu pro doručení sestav a klikněte na znaménko plus vedle e-mailové adresy je přidat, a klikněte na **Uložit**.
 

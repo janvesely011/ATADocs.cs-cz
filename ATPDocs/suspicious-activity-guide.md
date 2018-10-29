@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 5843d007eb89c1aae14b466e5b06dd4bddee447b
-ms.sourcegitcommit: 2916d6f8d6e6f754d7fb8a5d31b255a46aa35ecd
-ms.translationtype: MT
+ms.openlocfilehash: 41cad261722090a5097df949559674c5aa887776
+ms.sourcegitcommit: 3ab48f180aa0276f4e19cf7cd567581c7b4324cc
+ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50132703"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50202418"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -382,11 +382,11 @@ V této detekce se aktivuje upozornění při provádění výčet relací SMB p
 
 Použití [Net ukončí nástroj](https://gallery.technet.microsoft.com/Net-Cease-Blocking-Net-1e8dcb5b) Posilte zabezpečení vašeho prostředí vůči útoku.
 
-## <a name="remote-code-execution-attempt"></a>Pokus o spuštění vzdáleného kódu
+## <a name="remote-code-execution-attempt---enhanced"></a>Pokus o spuštění vzdáleného kódu – rozšířené
 
 **Popis**
 
-Útočníci, kteří ohrozit přihlašovacími údaji správce, nebo použijte před zneužitím nultého dne může na vašem řadiči domény spouštět vzdálené příkazy. Toho mohou využít k trvalému průniku do sítě, shromažďování informací, útokům DoS (Denial of Service) nebo z jakéhokoli jiného důvodu. Ochrana ATP v programu Azure zjistí PSexec a WMI vzdáleného připojení.
+Útočníci, kteří ohrozit přihlašovacími údaji správce, nebo použijte před zneužitím nultého dne může na vašem řadiči domény spouštět vzdálené příkazy. Toho mohou využít k trvalému průniku do sítě, shromažďování informací, útokům DoS (Denial of Service) nebo z jakéhokoli jiného důvodu. Ochrana ATP v programu Azure zjistí připojení PSexec, vzdáleného rozhraní WMI a Powershellu.
 
 **Šetření**
 

@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/21/2018
+ms.date: 10/28/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,16 +13,37 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: bf620fd9eb3ee750f19a4fe69aa3efea16b9385a
-ms.sourcegitcommit: 59ed430fa0cd8ac34a70609026ec5fc2f5972f57
+ms.openlocfilehash: 21bc112da963fe883f601258ff38062f0243a47d
+ms.sourcegitcommit: 3ab48f180aa0276f4e19cf7cd567581c7b4324cc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/21/2018
-ms.locfileid: "49480663"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50202384"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
 # <a name="whats-new-in-azure-atp"></a>Co je nového v Azure ATP 
+
+### <a name="azure-atp-release-252"></a>Verze ochrany ATP v programu Azure 2.5.2
+Vydáno 8. října 2018
+
+
+- **Vylepšení upozornění zabezpečení: Pokus o vzdálené spuštění kódu**<br>
+Azure ATP [upozornění na zabezpečení. pokus o vzdálené spuštění kódu](suspicious-activity-guide.md) nyní zahrnuje monitorování podezřelých pokusy o spuštění vzdáleného kódu Powershellu v řadičích domény. Je běžné metody pro provádění platné příkazy pro správu vzdáleného prostředí PowerShell, ale se často používá speciálně při pokusu o spuštění skriptů na vzdálené koncové body. 
+
+- **Vylepšení funkce: nastavit plánování sestav**
+<br>Teď můžete nastavit jenom konkrétní hodiny naplánování sestav pomocí služby Azure ATP [sestavy](reports.md#) funkce. 
+
+- **Přidání konfigurace: Tenanta řízení přístupu na základě role (RBAC)**
+<br>Konfigurování rolí zabezpečení vašeho tenanta v Centru pro správu Azure Active Directory (AAD) přímo z nové propojení správce portálu ochrany ATP v programu Azure. 
+
+- **Dokumentace k revidované struktuře a obsahu**
+<br>Nedávné změny obsahu dokumentace ke službě ochrana ATP v programu Azure zahrnují nových článků, za předpokladu, že úplný seznam všech ochrany ATP v programu Azure monitoruje aktivity, filtrování pokyny pro činnost, jakož i verzí struktury webu Dokumentace pro lepší použitelnost:
+  - [Ochrana ATP v programu Sledování aktivitách v Azure](monitored-activities.md) 
+  - [Azure ATP aktivity filtrování](atp-activities-search.md) 
+  - [Dokumentace ke službě Azure ATP](https://docs.microsoft.com/azure-advanced-threat-protection/)  
+
+- Tato verze také zahrnuje vylepšení a opravy chyb pro interní senzor infrastruktury.
 
 ## <a name="azure-atp-release-251"></a>Azure ATP verze 2.5.1
 Vydáno 21. října 2018
