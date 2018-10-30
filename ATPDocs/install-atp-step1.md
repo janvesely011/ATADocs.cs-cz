@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 15ee7d0b-9a0c-46b9-bc71-98d0b4619ed0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 97cce3de3a1cbe049523c54901ecbc9228aaee53
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: 7a7bdd045a0964c4ed4ccc4ebe2315b3c3465be2
+ms.sourcegitcommit: c10a1c5d1e5408b5473a31485346915908688680
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783006"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50208098"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -69,10 +69,9 @@ Po ověření, že senzor požadavkům vaší sítě můžete vytvořit pracovn�
 
 - Uchovávání dat – dříve odstraněné pracovní prostory se nezobrazí v uživatelském rozhraní. Další informace o uchovávání dat ochrany ATP v programu Azure najdete v tématu [ochrany ATP v programu Azure dat zabezpečení a ochrana osobních údajů](atp-privacy-compliance.md).
 
-
->[!div class="step-by-step"]
-[« Předinstalace](atp-prerequisites.md)
-[Krok 2 »](install-atp-step2.md)
+> [!div class="step-by-step"]
+> [« Předinstalace](atp-prerequisites.md)
+> [Krok 2 »](install-atp-step2.md)
 
 
 

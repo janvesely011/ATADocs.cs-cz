@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/10/2018
+ms.date: 10/28/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 41cad261722090a5097df949559674c5aa887776
-ms.sourcegitcommit: 3ab48f180aa0276f4e19cf7cd567581c7b4324cc
-ms.translationtype: HT
+ms.openlocfilehash: 47adb120cebe068f974d61891b843e276a0f52c0
+ms.sourcegitcommit: c10a1c5d1e5408b5473a31485346915908688680
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50202418"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50208166"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -406,6 +406,9 @@ Použití [Net ukončí nástroj](https://gallery.technet.microsoft.com/Net-Ceas
 
 2. Implementace [privilegovaný přístup](https://technet.microsoft.com/windows-server-docs/security/securing-privileged-access/securing-privileged-access) povolit jen počítačům s posíleným zabezpečením pro připojení k řadiči domény pro správce.
 
+> [!NOTE]
+> Upozornění pokus o spuštění vzdáleného kódu jsou podporovány pouze senzorů ochrany ATP v programu. 
+
 ## <a name="suspicious-authentication-failures"></a>Podezřelé chyby ověřování
 
 **Popis**
@@ -484,7 +487,7 @@ Další informace najdete v tématu [udělení Active Directory Domain Services 
 Můžete využít [AD ACL Scanner](https://blogs.technet.microsoft.com/pfesweplat/2013/05/13/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool/) nebo vytvořit skript prostředí Windows PowerShell k určení, kdo v doméně tato oprávnění má.
  
 > [!NOTE]
-> Detekce povýšení (možný útok DCShadow) řadiče domény podezřelé jsou podporovány pouze senzorů ochrany ATP v programu. 
+> Výstrahy povýšení (možný útok DCShadow) řadiče domény podezřelé jsou podporovány pouze senzorů ochrany ATP v programu. 
 
 ## <a name="suspicious-modification-of-sensitive-groups"></a>Podezřelé úprava citlivých skupin
 
@@ -540,7 +543,7 @@ Kontrola, kdo ve vaší organizaci tato oprávnění:
 K tomuto účelu můžete využít [AD ACL Scanner](https://blogs.technet.microsoft.com/pfesweplat/2013/05/13/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool/) nebo vytvořit skript prostředí Windows PowerShell k určení, kdo v doméně tato oprávnění má.
 
 > [!NOTE]
-> Podezřelá replikace požadavku (možný útok DCShadow) detekcí jsou podporovány pouze senzorů ochrany ATP v programu. 
+> Upozornění na podezřelé replikace žádosti (možný útok DCShadow) jsou podporovány pouze senzorů ochrany ATP v programu. 
 
 
 ## <a name="suspicious-service-creation"></a>Podezřelé vytvoření služby

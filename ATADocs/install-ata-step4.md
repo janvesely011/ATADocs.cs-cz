@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 6bbc50c3-bfa8-41db-a2f9-56eed68ef5d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 0973554e0fba448bc48526d1499768b2a2c864b1
-ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
+ms.openlocfilehash: 1ce4673b6fa071ebd74bf1d15cbbaa88ec9c0872
+ms.sourcegitcommit: c10a1c5d1e5408b5473a31485346915908688680
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47453846"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50208115"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
@@ -59,7 +59,7 @@ Na serveru ATA Gateway proveďte tento postup.
     > [!NOTE] 
     > Pokud řadič domény nebo vyhrazený server nesplňuje minimální požadavky na hardware pro instalaci, zobrazí se upozornění. Přesto můžete kliknout na tlačítko **Další** a pokračovat v instalaci. To může být správná volba pro instalaci ATA v testovacím prostředí malé lab, ve kterém není třeba tolik místa pro ukládání dat. V případě provozních prostředí důrazně doporučujeme pracovat s průvodcem pro [plánování kapacity](ata-capacity-planning.md) ATA, ve kterém zjistíte, jestli řadiče domény nebo vyhrazené servery splňují nezbytné požadavky.
 
-4.  V části **Configure the Gateway** (Konfigurace Gateway) zadejte následující informace podle daného prostředí:
+5.  V části **Configure the Gateway** (Konfigurace Gateway) zadejte následující informace podle daného prostředí:
 
     ![Obrázek konfigurace ATA Gateway](media/ata-gw-configure.png)
 
@@ -70,7 +70,7 @@ Na serveru ATA Gateway proveďte tento postup.
 
    - Instalační cesta: Toto je umístění, kde je nainstalován ATA Gateway. Ve výchozím nastavení je to %programfiles%\Microsoft Advanced Threat Analytics\Gateway. Nechte nastavenou výchozí hodnotu.
     
-5. Klikněte na tlačítko **Nainstalovat**. Během instalace ATA Gateway se instalují a konfigurují následující komponenty:
+6. Klikněte na tlačítko **Nainstalovat**. Během instalace ATA Gateway se instalují a konfigurují následující komponenty:
 
     -   KB 3047154 (pouze pro Windows Server 2012 R2)
 
@@ -82,7 +82,7 @@ Na serveru ATA Gateway proveďte tento postup.
     -   Microsoft Visual C++ 2013 Redistributable
     -   Vlastní sada kolekcí dat Sledování výkonu
 
-6.  Po dokončení instalace pro ATA Gateway kliknutím na **Spustit** otevřete prohlížeč a přihlaste se ke konzole ATA. V případě ATA Lightweight Gateway klikněte na **Dokončit**.
+7.  Po dokončení instalace pro ATA Gateway kliknutím na **Spustit** otevřete prohlížeč a přihlaste se ke konzole ATA. V případě ATA Lightweight Gateway klikněte na **Dokončit**.
 
 
 > [!div class="step-by-step"]
