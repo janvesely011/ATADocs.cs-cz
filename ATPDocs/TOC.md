@@ -37,6 +37,7 @@
 ## [Sestavy služby Azure ATP](reports.md)
 ## [Principy profilů entit](entity-profiles.md)
 ## [Monitorované aktivity](monitored-activities.md)
+### [Hledání a filtrování monitorovaných aktivit](atp-activities-search.md)
 ## [Správa citlivých účtů](sensitive-accounts.md)
 ## [Vyloučení entit z detekce](excluding-entities-from-detections.md)
 ## [Vyloučení a účty honeytoken](install-atp-step7.md)
