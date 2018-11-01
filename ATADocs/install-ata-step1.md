@@ -2,10 +2,10 @@
 title: Instalace Advanced Threat Analytics – krok 1 | Dokumentace Microsoftu
 description: První krok instalace ATA představuje stažení a instalaci ATA Center na vybraný server.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 3/21/2018
+ms.date: 10/31/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.service: ''
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: ea20c87fe7990542ad68de7ae6dfeefad062e378
-ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
+ms.openlocfilehash: 04a25e6f0a73e45b4358566f15f38c20d291a153
+ms.sourcegitcommit: 1b914a85cfa33dc0c5005f9dc68e6ea08a0164ac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47454152"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50411625"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
@@ -28,7 +28,7 @@ ms.locfileid: "47454152"
 > [!div class="step-by-step"]
 > [Krok 2 »](install-ata-step2.md)
 
-Tento postup instalace obsahuje pokyny pro novou instalaci ATA 1.8. Informace o aktualizaci stávajícího nasazení ATA ze starší verze najdete v tématu [Průvodci migrací ATA pro verze 1.9](ata-update-1.9-migration-guide.md).
+Tento instalační postup uvádí pokyny pro novou instalaci ATA 1.9. Informace o aktualizaci stávajícího nasazení ATA ze starší verze najdete v tématu [Průvodci migrací ATA pro verze 1.9](ata-update-1.9-migration-guide.md).
 
 > [!IMPORTANT] 
 > Pokud používáte Windows 2012 R2, aktualizaci KB2934520 můžete nainstalovat na server ATA Center a na serverech ATA Gateway před začátkem instalace, jinak instalace ATA tuto aktualizaci nainstaluje a vyžaduje restart uprostřed instalace ATA.
