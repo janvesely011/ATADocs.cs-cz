@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: a2d29c9c-7ecb-4804-b74b-fde899b28648
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 18f6d38f871539cf0701b697c9d0c5d9d96a27e4
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: 30ce04565611852d289883935004b5f90cb36c90
+ms.sourcegitcommit: 034d5cbd077a0dd18638d27aabbcf7b735993b08
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783538"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50748914"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -58,6 +58,9 @@ Ochrana ATP v programu Azure může upozornit při zjištění podezřelých akt
  ![Obrázek nastavení serveru Azure ochrany ATP v programu Syslog](media/atp-syslog.png)
 
 6. Můžete vybrat, které události odesílat na váš server Syslog. V části **oznámení Syslogu**, určete oznámení, která se mají odesílat na váš server Syslog – nové výstrahy zabezpečení, výstrah zabezpečení se aktualizovalo a nové problémy v oblasti stavu.
+
+> [!NOTE]
+> Pokud budete chtít vytvořit automatizace nebo skriptů pro protokolů SIEM ochrany ATP v programu Azure, doporučujeme použít **externalId** pole k identifikaci typu výstrahy místo názvu upozornění pro tento účel. Upozornění názvy mohou být občas upravit, zatímco **externalId** jednotlivých výstrah je trvalá. Další informace najdete v tématu [referenční informace k protokolům SIEM ochrany ATP v programu Azure](cef-format-sa.md). 
 
 
 ## <a name="see-also"></a>Viz také

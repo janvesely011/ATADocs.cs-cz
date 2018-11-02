@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f959176ddca045f421af416d5ce9dc3a777cc43a
-ms.sourcegitcommit: fdff488c79729035f89897c2ea0771a45b4c3ecf
+ms.openlocfilehash: 4b72d112a39b9fd7448ecfe2aa5c1808752d32a8
+ms.sourcegitcommit: 034d5cbd077a0dd18638d27aabbcf7b735993b08
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49401908"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50748999"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -114,7 +114,7 @@ Servery a řadiče domény, na kterých jsou nainstalované senzory, musí být 
 ### <a name="network-adapters"></a>Síťové adaptéry
 
 Senzoru služby Azure ATP monitoruje místní provoz na všech síťových adaptérech příslušného řadiče domény. <br>
-Po nasazení můžete použít portálu pracovního prostoru ochrana ATP v programu Azure, pokud chcete změnit, které síťové adaptéry se monitorují.
+Po nasazení můžete použít portál ochrany ATP v programu Azure, pokud chcete změnit, které síťové adaptéry se monitorují.
 
 Senzor se nepodporuje v doméně, řadiče se systémem Windows 2008 R2 pomocí seskupování síťových adaptérů Broadcom povolena.
 

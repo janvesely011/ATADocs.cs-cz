@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/24/2018
+ms.date: 11/01/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,34 +13,39 @@ ms.technology: ''
 ms.assetid: 3261155c-3c72-4327-ba29-c113c63a4e6d
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 143002db7b45868e5b78c7da1cdc77c569d3a3dd
-ms.sourcegitcommit: 63ec9181f71edce6a950f5cc0d69428405436c48
+ms.openlocfilehash: 574606cfd172b9885534095be5ebbc266b1c8004
+ms.sourcegitcommit: 034d5cbd077a0dd18638d27aabbcf7b735993b08
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49963314"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50748982"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
 
 # <a name="azure-atp-siem-log-reference"></a>Referenční informace k protokolům Azure ATP SIEM
 
-Ochrana ATP v programu Azure může předat o podezřelých aktivitách a událostech výstrah do vašeho systému SIEM monitorování. Události podezřelých aktivit jsou ve formátu CEF. Tento referenční článek obsahuje ukázky protokolů podezřelých aktivit odesílaných do vašeho systému SIEM.
+Ochrana ATP v programu Azure můžete dál zabezpečení výstrahy a monitorování výstrahy události do vašeho systému SIEM. Výstrahy a události jsou ve formátu CEF. Tento referenční článek obsahuje ukázky protokolů odeslané do vašeho systému SIEM.
 
-## <a name="sample-azure-atp-suspicious-activities-in-cef-format"></a>Ukázky služby Azure ATP podezřelé aktivity ve formátu CEF
+## <a name="sample-azure-atp-security-alerts-in-cef-format"></a>Ukázka služby Azure ATP výstrah zabezpečení ve formátu CEF
 Do systému SIEM se předávají následující pole a jejich hodnoty:
 
--   Start – počáteční čas výstrahy
--   suser – účet (obvykle uživatelský účet) účastnící se upozornění
--   shost – zdrojový počítač výstrahy
--   výsledek – Pokud je to relevantní, úspěch nebo neúspěch podezřelých aktivit ve výstraze  
--   msg – popis výstrahy
--   CNT – pro výstrahy, které mají počet, kolikrát, aktivity, ke kterým došlo (například útok hrubou silou má určité množství uhodnutí hesel)
--   App – protokol použitý ve výstraze
--   externalId – typ události ID Azure ATP zapíše do protokolu událostí, která odpovídá pro každý typ výstrahy
--   cs #label & cs # – povoleny zákazníka řetězce ve formátu CEF, kde cs #label je název nového pole a cs # je hodnota, například: cs1Label = url cs1 =https://192.168.0.220/suspiciousActivity/5909ae198ca1ec04d05e65fa
+|Podrobnosti|Vysvětlení|
+|---------|---------------|
+|Spuštění|Počáteční čas výstrahy|
+|suser|účet (obvykle uživatelský účet) účastnící se upozornění|
+|shost|účet (obvykle uživatelský účet) účastnící se upozornění|
+|Výsledek|Pokud je to relevantní, úspěch nebo neúspěch podezřelých aktivit ve výstraze|
+|msg|popis výstrahy|
+|CNT|pro výstrahy, které mají počet, kolikrát, aktivity, ke kterým došlo (například útok hrubou silou má určité množství uhodnutí hesel)|
+|Aplikace |protokol použitý ve výstraze|
+|externalId|Typ události ID Azure ATP zapíše do protokolu událostí, která odpovídá pro každý typ výstrahy|
+|cs #label|řetězce zákazníků, které jsou povoleny ve formátu CEF, kde cs #label je název nového pole |
+|cs #|povolené ve formátu CEF, kde cs # je hodnota řetězce zákazníků.|
+|
 
-    V tomto příkladu je cs1 pole s adresou URL výstrahy.
+Například: cs1Label = url cs1 =https://192.168.0.220/suspiciousActivity/5909ae198ca1ec04d05e65fa
+<br> V tomto příkladu je cs1 pole výstrah adresy URL. 
 
 > [!NOTE]
 > Pokud budete chtít vytvořit automatizace nebo skriptů pro protokolů SIEM ochrany ATP v programu Azure, doporučujeme použít **externalId** pole k identifikaci typu výstrahy místo názvu upozornění pro tento účel. Upozornění názvy mohou být občas upravit, zatímco **externalId** jednotlivých výstrah je trvalá.  
