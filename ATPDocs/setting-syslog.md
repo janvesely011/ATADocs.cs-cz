@@ -1,11 +1,11 @@
 ---
-title: Nastavení e-mailových oznámení v rozšířené ochrany před internetovými útoky pro Azure | Dokumentace Microsoftu
+title: Nastavení protokolu syslog v rozšířené ochrany před internetovými útoky pro Azure | Dokumentace Microsoftu
 description: Popisuje, jak máte služby Azure ATP upozornění (e-mailem nebo předáváním událostí služby Azure ATP) při zjištění podezřelých aktivit
 keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 11/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: a2d29c9c-7ecb-4804-b74b-fde899b28648
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 30ce04565611852d289883935004b5f90cb36c90
-ms.sourcegitcommit: 034d5cbd077a0dd18638d27aabbcf7b735993b08
+ms.openlocfilehash: ac01e5ae534fc5df5da70a8d1c47c11c1c455c98
+ms.sourcegitcommit: 03b1949beaf2f78a3cdf9396356a96488ea2e127
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50748914"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "50983085"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 

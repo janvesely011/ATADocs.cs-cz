@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/28/2018
+ms.date: 11/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,19 +13,31 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 21bc112da963fe883f601258ff38062f0243a47d
-ms.sourcegitcommit: 3ab48f180aa0276f4e19cf7cd567581c7b4324cc
+ms.openlocfilehash: 3c453ad2fce37986811903693c27761c5ea79d40
+ms.sourcegitcommit: 03b1949beaf2f78a3cdf9396356a96488ea2e127
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50202384"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "50983136"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
 # <a name="whats-new-in-azure-atp"></a>Co je nového v Azure ATP 
 
-### <a name="azure-atp-release-252"></a>Verze ochrany ATP v programu Azure 2.5.2
-Vydáno 8. října 2018
+
+## <a name="azure-atp-release-253"></a>Verze ochrany ATP v programu Azure 2.5.3
+Vydáno 4. listopadu 2018
+
+- **Vylepšení upozornění zabezpečení: podezřelé chyby ověřování**<br>
+Azure ATP [podezřelé chyby ověřování zabezpečení upozornění](suspicious-activity-guide.md) teď obsahuje monitorování pro detekci hesla hrubou zařízení vynutit útoky.
+V typické **heslo zařízení** útoku, útočníci po úspěšně výčet seznamu platní uživatelé z řadiče domény, zkuste jedno heslo pečlivě vytvořené pro všechny známé uživatelské účty (jedno heslo na více účtů) . Při počáteční heslo zařízení neproběhne úspěšně, bude snaží znovu, využívají jiné heslo pečlivě vytvořený, obvykle po uplynutí 30 minut mezi pokusy. Doba čekání útočníkům umožňuje, aby neměl spouštět nejčastěji podle času účet uzamčení prahové hodnoty. Heslo zařízení se rychle stal oblíbenou technikou útočník a testery pera. Heslo zařízení útoky ukázaly na zajistit efektivitu při získávání počáteční základnu v organizaci a pro následné laterální přesuny pokouší o zvýšení oprávnění. 
+
+- **Vylepšení funkce: odeslat testovací zprávu Syslog**<br>   Nová možnost odeslat testovací zpráva Syslogu během procesu instalace systému SIEM. Zobrazit [integrace se Syslogem](setting-syslog.md), další informace. 
+
+- Tato verze také zahrnuje vylepšení a opravy chyb pro interní senzor infrastruktury.
+
+## <a name="azure-atp-release-252"></a>Verze ochrany ATP v programu Azure 2.5.2
+Vydáno 28. října 2018
 
 
 - **Vylepšení upozornění zabezpečení: Pokus o vzdálené spuštění kódu**<br>

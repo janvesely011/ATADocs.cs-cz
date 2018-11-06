@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 47adb120cebe068f974d61891b843e276a0f52c0
-ms.sourcegitcommit: c10a1c5d1e5408b5473a31485346915908688680
+ms.openlocfilehash: daeb998f6e97bc4ebdf290d4430fec8fcef40313
+ms.sourcegitcommit: 03b1949beaf2f78a3cdf9396356a96488ea2e127
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50208166"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "50983153"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -81,18 +81,18 @@ Nejprve zkontrolujte popis výstrahy, pokud chcete zobrazit, který tři typy de
 
 1.  Skeleton Key – můžete zkontrolovat, pokud Skeleton Key ovlivnila řadičů domény s použitím [kontroly vytvořené týmem služby Azure ATP](https://gallery.technet.microsoft.com/Aorato-Skeleton-Key-24e46b73). Skener najde malware na 1 nebo více řadičů domény, jde o pravdivě pozitivní upozornění.
 
-2.  Zlatý lístek – v excelové tabulce, přejděte na kartu se síťovou aktivitou. Uvidíte, že je pole relevantní sníženou příbuzností **typ šifrování lístku žádosti**, a **typy šifrování podporované zdrojové počítače** obsahuje silnější metody šifrování.
+2.  Zlatý lístek – v excelové tabulce, otevřete kartu se síťovou aktivitou. Je relevantní sníženou příbuzností pole **typ šifrování lístku žádosti**, a **typy šifrování podporované zdrojové počítače** má silnější metody šifrování.
 
-  a. Zkontrolujte prostředek přistupuje tyto lístky, pokud je jeden prostředek, ke kterým všechny přistupují, ověřte ho, ujistěte se, že je platný prostředek, který se má přístup. Dále ověřte, jestli cílový prostředek podporuje metody silné šifrování. Můžete to zkontrolovat ve službě Active Directory tak, že zkontrolujete atribut msDS-SupportedEncryptionTypes, účet služby zdroje.
+  1. Zkontrolujte prostředek přistupuje tyto lístky, pokud je jeden prostředek, ke kterým všechny přistupují, ověřte ho, ujistěte se, že je platný prostředek, který se má přístup. Dále ověřte, jestli cílový prostředek podporuje metody silné šifrování. Můžete to zkontrolovat ve službě Active Directory tak, že zkontrolujete atribut msDS-SupportedEncryptionTypes, účet služby zdroje.
   
-  b. Zkontrolujte zdrojový počítač a účet, nebo při více zdrojových počítačů a účtů kontrolovat, jestli se mají něco společné. Například všechny pracovníky marketingu používat konkrétní aplikace, které by mohly způsobovat aktivovat upozornění. Existují případy, ve kterých je vlastní aplikaci, která se používá jen občas, ověřování pomocí nižší šifry šifrování. Zkontrolujte, jestli jsou na zdrojovém počítači těchto vlastních aplikací. Pokud ano, je pravděpodobně o neškodné pravdivě pozitivní upozornění a lze potlačit.
+  2. Zkontrolujte zdrojový počítač a účet, nebo při více zdrojových počítačů a účtů kontrolovat, jestli se mají něco společné. Například všechny pracovníky marketingu používat konkrétní aplikace, které by mohly způsobovat aktivovat upozornění. Existují případy, ve kterých je vlastní aplikaci, která se používá jen občas, ověřování pomocí nižší šifry šifrování. Zkontrolujte, jestli jsou na zdrojovém počítači těchto vlastních aplikací. Pokud ano, je pravděpodobně o neškodné pravdivě pozitivní upozornění a lze potlačit.
   
 
 
 3.  Overpass-the-Hash – v excelové tabulce, přejděte na kartu se síťovou aktivitou. Uvidíte, že je pole relevantní sníženou příbuzností **šifrované typ šifrování časové razítko** a **typy šifrování podporované zdrojové počítače** obsahuje silnější metody šifrování.
 
-  a. Existují případy, ve kterých může aktivuje toto upozornění, když uživatel přihlásí pomocí čipové karty, pokud byla nedávno změnila konfigurace čipové karty. Zaškrtněte, pokud došlo ke změně tímto způsobem pro účty používané. Pokud ano, to je pravděpodobně o neškodné pravdivě pozitivní upozornění a lze potlačit.
-  b. Zkontrolujte prostředek přistupuje tyto lístky, pokud je jeden prostředek, ke kterým všechny přistupují, ověřte ho, ujistěte se, že je platný prostředek, který se má přístup. Dále ověřte, jestli cílový prostředek podporuje metody silné šifrování. Můžete to zkontrolovat ve službě Active Directory tak, že zkontrolujete atribut msDS-SupportedEncryptionTypes, účet služby zdroje.
+  1. Existují případy, ve kterých může aktivuje toto upozornění, když uživatelé přihlášení pomocí čipové karty, pokud byla nedávno změnila konfigurace čipové karty. Zaškrtněte, pokud došlo ke změně tímto způsobem pro účty používané. Pokud ano, to je pravděpodobně o neškodné pravdivě pozitivní upozornění a lze potlačit.
+  2. Zkontrolujte prostředek přistupuje tyto lístky, pokud je jeden prostředek, ke kterým všechny přistupují, ověřte ho, ujistěte se, že je platný prostředek, který se má přístup. Dále ověřte, jestli cílový prostředek podporuje metody silné šifrování. Můžete to zkontrolovat ve službě Active Directory tak, že zkontrolujete atribut msDS-SupportedEncryptionTypes, účet služby zdroje.
 
 **Náprava**
 
@@ -110,7 +110,7 @@ Nejprve zkontrolujte popis výstrahy, pokud chcete zobrazit, který tři typy de
 
 Návnada účty nastavené tak identifikovat a sledovat škodlivou aktivitu, která zahrnuje tyto účty jsou účty Honeytokenu. Honeytokenové účty by měla zůstat nevyužité, přitom má atraktivní název k navést útočníci (například SQL-Admin). Všechny aktivity z nich může znamenat škodlivého chování.
 
-Další informace o honeytokenové účty, najdete v části [instalace služby Azure ATP – krok 7](install-atp-step7.md).
+Další informace o honey token účty, najdete v části [instalace služby Azure ATP – krok 7](install-atp-step7.md).
 
 **Šetření**
 
@@ -134,7 +134,7 @@ Pass-the-Hash je technika laterálního pohybu, kdy útočník získá NTLM hash
 
 **Šetření**
 
-Hodnota hash použil z počítače, že cílový uživatel vlastní, nebo pravidelně používá? Pokud ano, jde o falešně pozitivní upozornění. V opačném případě se pravděpodobně o pravdivě pozitivní upozornění.
+Zjistěte, jestli hodnota hash byla použita na počítači, který cílový uživatel vlastní, nebo pravidelně používá? Pokud ano, jde o falešně pozitivní upozornění a pokud ne, pravděpodobně se jedná o pravdivě pozitivní upozornění.
 
 **Náprava**
 
@@ -178,7 +178,7 @@ V této detekce se aktivuje upozornění, pokud je lístek Kerberos udělující
 
 - **Neexistující účet – nové** 
    1.   Odpovědět na tyto otázky:
-         - Je, že uživatel je uživatelem domény známé a platný? Pokud ano, pak zavřete výstrahu (bylo falešně pozitivní).
+         - Uživatel je známé a platná doména uživatel? Pokud ano, pak zavřete výstrahu (bylo falešně pozitivní).
          - Uživatel byl nedávno přidán? Pokud ano, pak zavřete výstrahu, změna nemusí mít nebyly synchronizovány.
          - Uživatel byl nedávno odstraněn z AD? Pokud ano, pak zavřete výstrahu.
    2.   Pokud je odpověď na otázky uvedené výše předpokládají Ne, to se zlými úmysly.
@@ -187,10 +187,10 @@ V této detekce se aktivuje upozornění, pokud je lístek Kerberos udělující
 
 2.  Jsou všichni uživatelé, které se připojily k počítači, by měl být přihlášení? Jaké jsou jejich oprávnění? 
 
-3.  Tito uživatelé mají mít přístup k těmto prostředkům?<br>
-Pokud jste nepovolili integraci ochrany ATP v programu Windows Defender, klikněte na možnost ochrana ATP v programu Windows Defender Odznáček ![WD oznámení "BADGE"](./media/wd-badge.png).
+3.  Uživatelé, kteří jsou přihlášení mají mít přístup k těmto prostředkům?<br>
+Pokud jste nepovolili integraci ochrany ATP v programu Windows Defender, klikněte na oznámení ochrany ATP v programu Windows Defender.
  
- 4. Aby to prověřili počítače, v programu Windows Defender ATP, zkontrolujte, které procesy a výstrahy došlo k chybě v době výskytu výstrahy.
+ 4. K hlubšímu prošetření je počítač, zkontrolujte, které procesy a výstrahy došlo k chybě v době výskytu výstrahy v ochrany ATP v programu Windows Defender.
 
 **Náprava**
 
@@ -237,7 +237,7 @@ V této detekce se aktivuje upozornění, když se spustí požadavek replikace 
 2.  Dotyčný počítač by měl být replikaci dat ze služby Active Directory? Například Azure AD Connect nebo v síti monitorování výkonu zařízení. Pokud ano, **zavřít a vyloučit** podezřelou aktivitu.
 3. Je IP adresa, ze které byl odeslán požadavek na replikaci NAT nebo proxy server? Pokud ano, zkontrolujte, jestli je nový řadič domény za zařízení, nebo pokud z něj došlo k jiné podezřelých aktivit. 
 
-4. Klikněte na zdrojový počítač nebo účet, přejděte na stránku jeho profil. Zkontrolujte, co se stalo v době replikace, hledání neobvyklých aktivit, jako například: kdo byl přihlášen, které prostředky tam, kde získat přístup. Pokud jste nepovolili integraci ochrany ATP v programu Windows Defender, klikněte na možnost ochrana ATP v programu Windows Defender odznáčku ![Oznámení "BADGE" ochrany ATP v programu Windows Defender](./media/wd-badge.png) aby to prověřili počítače. V programu Windows Defender ATP uvidíte, které procesy a výstrahy došlo k přibližně v době výstrahy. 
+4. Klikněte na zdrojový počítač nebo účet, přejděte na stránku jeho profil. Zkontrolujte, co se stalo v době replikace, hledání neobvyklých aktivit, jako například: kdo byl přihlášen, které prostředky tam, kde získat přístup. Pokud jste nepovolili integraci ochrany ATP v programu Windows Defender, klikněte na možnost ochrana ATP v programu Windows Defender odznáčku ![Oznámení "BADGE" ochrany ATP v programu Windows Defender](./media/wd-badge.png) aby to prověřili počítače. V programu Windows Defender ATP zobrazí se výstrahy a procesů došlo k přibližně v době výstrahy. 
 
 
 **Náprava**
@@ -256,7 +256,7 @@ Můžete využít [AD ACL Scanner](https://blogs.technet.microsoft.com/pfeswepl
 
 **Popis**
 
-Známé chyby zabezpečení ve starších verzích Windows serveru umožňují útočníkům manipulovat s certifikát PAC (Privileged Attribute), pole v lístku protokolu Kerberos, která obsahuje data autorizace uživatelů (ve službě Active Directory je to členství ve skupině), poskytování Útočníci další oprávnění.
+Známé chyby zabezpečení ve starších verzích Windows serveru umožňují útočníkům manipulovat s certifikát PAC (Privileged Attribute). Certifikát PAC je pole v lístku protokolu Kerberos, která obsahuje data autorizace uživatelů (ve službě Active Directory je to členství ve skupině), poskytování útočníci další oprávnění.
 
 **Šetření**
 
@@ -348,7 +348,7 @@ Protokol DNS obsahuje několik typů dotazů. Ochrana ATP v programu Azure detek
 
 2. Zdrojový počítač je spuštěný kontrolu zabezpečení? Pokud ano, **vyloučit entity** v ochrany ATP v programu, buď přímo pomocí **zavřít a vyloučit** nebo prostřednictvím **vyloučení** stránky (v části **konfigurace** – k dispozici pro správce služby Azure ATP).
 
-3. Pokud odpověď je pro všechny předchozí otázky Ne, ponechat zkoumání zaměření na zdrojovém počítači. Klikněte na zdrojovém počítači přejděte na stránku jeho profil. Zkontrolujte, co se stalo v době požadavku hledání neobvyklých aktivit, jako například: kdo byl přihlášen, které prostředky tam, kde získat přístup. Pokud jste nepovolili integraci ochrany ATP v programu Windows Defender, klikněte na možnost ochrana ATP v programu Windows Defender odznáčku ![Oznámení "BADGE" ochrany ATP v programu Windows Defender](./media/wd-badge.png) aby to prověřili počítače. V programu Windows Defender ATP uvidíte, které procesy a výstrahy došlo k přibližně v době výstrahy. 
+3. Pokud odpověď je pro všechny předchozí otázky Ne, ponechat zkoumání zaměření na zdrojovém počítači. Klikněte na zdrojovém počítači přejděte na stránku jeho profil. Zkontrolujte, co se stalo v době požadavku hledání neobvyklých aktivit, jako například: kdo byl přihlášen, které prostředky tam, kde získat přístup. Pokud jste nepovolili integraci ochrany ATP v programu Windows Defender, klikněte na možnost ochrana ATP v programu Windows Defender odznáčku ![Oznámení "BADGE" ochrany ATP v programu Windows Defender](./media/wd-badge.png) aby to prověřili počítače. V programu Windows Defender ATP zobrazí se výstrahy a procesů došlo k přibližně v době výstrahy. 
 
 **Náprava**
 
@@ -409,25 +409,28 @@ Použití [Net ukončí nástroj](https://gallery.technet.microsoft.com/Net-Ceas
 > [!NOTE]
 > Upozornění pokus o spuštění vzdáleného kódu jsou podporovány pouze senzorů ochrany ATP v programu. 
 
-## <a name="suspicious-authentication-failures"></a>Podezřelé chyby ověřování
+## <a name="suspicious-authentication-failures--enhanced"></a>Podezřelé chyby ověřování-rozšířené
 
 **Popis**
 
-V rámci útoku hrubou silou se útočník pokusí ověření pomocí mnoha různých hesel pro různé účty, dokud nebude nalezen správné heslo pro alespoň jeden účet. Jednou najde, útočník může přihlásit pomocí tohoto účtu.
+V rámci útoku hrubou silou se útočník pokusí ověřit více hesel na různé účty, dokud nebude nalezen správné heslo nebo pomocí jednoho hesla v ve formě heslo velkého rozsahu, který pracuje pro alespoň jeden účet. Jednou najde, útočník přihlásí pomocí ověření účtu.
 
-Tato detekce se aktivuje upozornění, když došlo k mnoha chyb ověřování pomocí protokolu Kerberos nebo NTLM, napříč mnoha uživatelů; to může být buď vodorovně s menší skupinou hesel nebo svisle s velkým nastavte hesel pouze několik uživatelů. nebo libovolnou kombinaci těchto dvou možností. Minimální dobu, než může být výstraha je jeden týden.
+V této detekce se aktivuje upozornění, když dojít mnoho chyb ověřování pomocí protokolu Kerberos nebo NTLM nebo využívání ve formě heslo se detekuje. Pomocí protokolu Kerberos nebo NTLM, tento útok je obvykle buď vodorovně, pomocí malé sady hesel v mnoha uživateli; nebo svislé s rozsáhlou sadou hesla na několik uživatelů. nebo libovolné kombinaci obou. Heslo zařízení po úspěšně výčet seznamu platní uživatelé z řadiče domény, útočníci zkuste jedno heslo pečlivě vytvořené pro všechny známé uživatelské účty (jedno heslo na více účtů). Pokud selže počáteční heslo zařízení, zkuste to znovu, využívají jiné heslo pečlivě vytvořený, obvykle po uplynutí 30 minut mezi pokusy. Doba čekání útočníkům umožňuje, aby neměl spouštět nejčastěji podle času účet uzamčení prahové hodnoty. Heslo zařízení se rychle stal oblíbenou technikou útočník a testery pera. Heslo zařízení útoky ukázaly na zajistit efektivitu při získávání počáteční základnu v organizaci a pro následné laterální přesuny pokouší o zvýšení oprávnění. 
+
+**Období učení** minimální dobu, než tento typ upozornění se dá spouštět je jeden týden.
 
 **Šetření**
 
-1.  Klikněte na tlačítko **stáhnout podrobnosti o** zobrazíte úplné informace v Excelové tabulce. Můžete získat následující informace: 
+1.  Klikněte na tlačítko **stáhnout podrobnosti o** zobrazíte úplné informace v Excelové tabulce. Je k dispozici následující informace: 
    -    Seznam napadené účty
    -    Seznam odhadnuté účty v které pokusů o přihlášení, bylo dokončeno s úspěšné ověření
-   -    Pokud byly provedeny pokusy o ověření, pomocí protokolu NTLM, zobrazí se příslušné události aktivit 
+   -    Pokud byly provedeny pokusy o ověření, pomocí protokolu NTLM, zobrazí se vám relevantní události aktivit 
    -    Pokud byly provedeny pokusy o ověření, pomocí protokolu Kerberos, zobrazí se příslušné síťové aktivity
+   -  Pokud pokusy o ověření použít heslo zařízení, zobrazí se příslušné síťové aktivity
 
-2.  Klikněte na zdrojovém počítači přejděte na stránku jeho profil. Zkontrolujte, co se stalo v době těchto pokusů o přihlášení, hledání neobvyklých aktivit, jako například: kdo byl přihlášen, které prostředky tam, kde získat přístup. Pokud jste nepovolili integraci ochrany ATP v programu Windows Defender, klikněte na možnost ochrana ATP v programu Windows Defender odznáčku ![Oznámení "BADGE" ochrany ATP v programu Windows Defender](./media/wd-badge.png) aby to prověřili počítače. V programu Windows Defender ATP uvidíte, které procesy a výstrahy došlo k přibližně v době výstrahy. 
+2.  Klikněte na zdrojovém počítači přejděte na stránku jeho profil. Zkontrolujte, co se stalo v době těchto pokusů o přihlášení, hledání neobvyklých aktivit, jako například: kdo byl přihlášen, které prostředky tam, kde získat přístup. Pokud jste nepovolili integraci ochrany ATP v programu Windows Defender, klikněte na možnost ochrana ATP v programu Windows Defender odznáčku ![Oznámení "BADGE" ochrany ATP v programu Windows Defender](./media/wd-badge.png) aby to prověřili počítače. V programu Windows Defender ATP zobrazí se výstrahy a procesů došlo k přibližně v době výstrahy. 
 
-3.  Pokud se provádí ověřování pomocí protokolu NTLM a objeví se, že výstrahy v mnoha případech a není dostatek informací o serveru, které na zdrojovém počítači se pokusili získat přístup, měli byste povolit **auditování protokolu NTLM** na řadiče domény zahrnuté. K tomuto účelu zapněte události 8004. Toto je událost ověřování NTLM, která obsahuje informace o zdrojovém počítači, uživatelský účet a **server** které na zdrojovém počítači se pokusili získat přístup. Až budete vědět, které server odeslal ověření ověřování, které byste měli prozkoumat serveru tak, že zkontrolujete jeho události, jako je 4624 pro lepší pochopení procesu ověřování. 
+3.  Pokud se provádí ověřování pomocí protokolu NTLM a uvidíte, že výstraha vyskytuje v mnoha případech a není dostatek informací o serveru, který zdrojový počítač se pokusil získat přístup, povolte **auditování protokolu NTLM** na zúčastněných řadiče domény. K tomuto účelu zapněte události 8004. Toto je událost ověřování NTLM, která obsahuje informace o zdrojovém počítači, uživatelský účet a **server** které na zdrojovém počítači se pokusili získat přístup. Až budete vědět, které server odeslal ověření ověřování, prozkoumejte serveru tak, že zkontrolujete jeho události, jako je 4624 pro lepší pochopení procesu ověřování. 
 
 **Náprava**
 
@@ -471,7 +474,7 @@ V této detekce se aktivuje upozornění, když počítače v síti se pokouší
    1. Jsou všichni uživatelé, které se připojily k počítači, by měl být přihlášení? Jaké jsou jejich oprávnění? Mají oprávnění ke zvýšení úrovně serveru na řadič domény? (jsou domain admins)?
    2. Mají uživatelé k těmto prostředkům přístup?
    3. Běží počítači operační systém Windows Server (nebo Windows/Linux)? Počítač jiného typu než server by nemělo replikovat data.
-Pokud jste nepovolili integraci ochrany ATP v programu Windows Defender, klikněte na možnost ochrana ATP v programu Windows Defender Odznáček ![ochrany ATP v programu Windows Defender oznámení "BADGE"](./media/wd-badge.png) k hlubšímu prošetření je počítač. V programu Windows Defender ATP uvidíte, které procesy a výstrahy došlo k přibližně v době výstrahy.
+Pokud jste nepovolili integraci ochrany ATP v programu Windows Defender, klikněte na možnost ochrana ATP v programu Windows Defender Odznáček ![ochrany ATP v programu Windows Defender oznámení "BADGE"](./media/wd-badge.png) k hlubšímu prošetření je počítač. V programu Windows Defender ATP zobrazí se výstrahy a procesů došlo k přibližně v době výstrahy.
 
 4. Podívejte se na Prohlížeč událostí zobrazíte [události služby Active Directory, které zaznamenává v adresáři protokolu služeb](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/cc961809(v=technet.10)/). V protokolu můžete použít ke sledování změn ve službě Active Directory. Ve výchozím nastavení služby Active Directory zaznamená pouze kritické chybové události, ale pokud se tato výstraha se opakuje, povolte tento audit na řadiči domény relevantní pro další zkoumání.
 
@@ -531,7 +534,7 @@ V této detekce se aktivuje upozornění při generování podezřelá replikace
    1.  Jsou všichni uživatelé, které se připojily k počítači, by měl být přihlášení? Jaké jsou jejich oprávnění? Mají oprávnění k provedení akce replikace (jsou domain admins)?
    2.  Mají uživatelé k těmto prostředkům přístup?
    3. Běží počítači operační systém Windows Server (nebo Windows/Linux)? Počítač jiného typu než server by nemělo replikovat data.
-Pokud jste nepovolili integraci ochrany ATP v programu Windows Defender, klikněte na možnost ochrana ATP v programu Windows Defender Odznáček ![ochrany ATP v programu Windows Defender oznámení "BADGE"](./media/wd-badge.png) k hlubšímu prošetření je počítač. V programu Windows Defender ATP uvidíte, které procesy a výstrahy došlo k přibližně v době výstrahy.
+Pokud jste nepovolili integraci ochrany ATP v programu Windows Defender, klikněte na možnost ochrana ATP v programu Windows Defender Odznáček ![ochrany ATP v programu Windows Defender oznámení "BADGE"](./media/wd-badge.png) k hlubšímu prošetření je počítač. V programu Windows Defender ATP zobrazí se výstrahy a procesů došlo k přibližně v době výstrahy.
 1. Podívejte se na Prohlížeč událostí zobrazíte [události služby Active Directory, které zaznamenává v adresáři protokolu služeb](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/cc961809(v=technet.10)/). V protokolu můžete použít ke sledování změn ve službě Active Directory. Ve výchozím nastavení služby Active Directory zaznamená pouze kritické chybové události, ale pokud se tato výstraha se opakuje, povolte tento audit na řadiči domény relevantní pro další zkoumání.
 
 **Náprava**
@@ -610,7 +613,7 @@ Pokud chcete zjistit, zda se jedná o útok WannaCry, proveďte následující k
 
 2. Pokud se nenajdou žádné nástroje útoku, zkontrolujte, zda zdrojovém počítači běží aplikace, která implementuje vlastní zásobník protokolu NTLM nebo podepisování SMB.
 
-3. Klikněte na zdrojovém počítači přejděte na stránku jeho profil. Zkontrolujte, co se stalo v době výskytu výstrahy, hledání neobvyklých aktivit, jako například: kdo byl přihlášen, které prostředky tam, kde získat přístup. Pokud jste nepovolili integraci ochrany ATP v programu Windows Defender, klikněte na možnost ochrana ATP v programu Windows Defender odznáčku ![oznámení "BADGE" WD](./media/wd-badge.png) aby to prověřili počítače. V programu Windows Defender ATP uvidíte, které procesy a výstrahy došlo k přibližně v době výstrahy.
+3. Klikněte na zdrojovém počítači přejděte na stránku jeho profil. Zkontrolujte, co se stalo v době výskytu výstrahy, hledání neobvyklých aktivit, jako například: kdo byl přihlášen, které prostředky tam, kde získat přístup. Pokud jste nepovolili integraci ochrany ATP v programu Windows Defender, klikněte na možnost ochrana ATP v programu Windows Defender odznáčku ![oznámení "BADGE" WD](./media/wd-badge.png) aby to prověřili počítače. V programu Windows Defender ATP zobrazí se výstrahy a procesů došlo k přibližně v době výstrahy.
 
 
 
