@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 3547519f-8d9c-40a9-8f0e-c7ba21081203
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 931ea6e4c122ad159e16450546d241c67249b321
-ms.sourcegitcommit: 63ec9181f71edce6a950f5cc0d69428405436c48
+ms.openlocfilehash: d8b1730da0f5ab74dff39b8331fb78c293d57db3
+ms.sourcegitcommit: 1a5880de35422d050fc1bc7a918dedc4180c45ad
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49963331"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51265709"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -87,8 +87,8 @@ Po přidání **síťová služba** k **Event Log Readers** skupině, restartov�
         1. Klikněte na **Podle protokolu** a vyberte **Zabezpečení**.
         2. Do pole **Zahrne nebo vyloučí ID události** zadejte číslo události a klikněte na **OK**. Zadejte 4776, jako je například v následujícím příkladu:<br/>
         ![Obrázek filtru dotazu](media/wef-4-query-filter.png)
-   5. Klikněte pravým tlačítkem na vytvořený odběr a vyberte **stav Runtime** jestli jsou všechny problémy se stavem. 
-   6. Po několika minutách zkontrolujte události nastavit na předat dál, zobrazují mezi předanými událostmi v samostatného senzoru služby Azure ATP.
+    5. Klikněte pravým tlačítkem na vytvořený odběr a vyberte **stav Runtime** jestli jsou všechny problémy se stavem. 
+    6. Po několika minutách zkontrolujte události nastavit na předat dál, zobrazují mezi předanými událostmi v samostatného senzoru služby Azure ATP.
 
 
 Další informace najdete v tématu: [konfigurace počítačů pro předání a shromáždění událostí](https://technet.microsoft.com/library/cc748890)
