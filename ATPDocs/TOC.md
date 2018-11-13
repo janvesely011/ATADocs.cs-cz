@@ -50,6 +50,7 @@
 ## [Centrum stavu služby Azure ATP](atp-health-center.md)
 ## [Správa upozornění na stav služby Azure ATP](monitoring-alerts.md)
 ## [Řešení známých problémů](troubleshooting-atp-known-issues.md)
-### [Řešení potíží pomocí protokolů](troubleshooting-atp-using-logs.md)
+## [Řešení potíží pomocí protokolů](troubleshooting-atp-using-logs.md)
+## [Známé problémy služby Azure ATP](known-issues.md)
 ## [Podpora a informace](atp-support.md)
 ## [Plán připravenosti na Azure ATP](atp-resources.md)

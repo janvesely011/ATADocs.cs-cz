@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 11/11/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,39 +13,45 @@ ms.technology: ''
 ms.assetid: cae3ed45-8fbc-4f25-ba24-3cc407c6ea93
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 432f55891440975e511ab5cd3e2972a1c7a33f37
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: 0a27d87f758940e25b463d2514031c5c342a3114
+ms.sourcegitcommit: 2afc1486b40431f442d51a53df06e289796de87e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48782926"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51560673"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
 
 
 # <a name="excluding-entities-from-detections"></a>Vyloučení entit z detekce
-Tento článek vysvětluje, jak vyloučit entity z aktivace za účelem minimalizace neškodné pravdivě pozitivní během provádění, je možné zachytit pravdivě pozitivní upozornění. Aby bylo možné zachovat ochrany ATP v programu Azure nebudou hlučného o aktivitách, které určitých uživatelů, může být součástí vaší běžné podnikové činnosti, můžete potlačit – nebo vyloučit – konkrétní entity nemají vyvolávat výstrahy.
+Tento článek vysvětluje, jak vyloučení entit, která aktivuje upozornění. Některé entity budou vyloučeny, chcete-li minimalizovat neškodné pravdivě pozitivní během provádění, je možné zachytit pravdivě pozitivní. Pokud chcete zabránit vytvoření šumu o aktivitách, které určitých uživatelů, může být součástí vaší běžné podnikové činnosti ochrany ATP v programu Azure, můžete potlačit – nebo vyloučit – konkrétní entity nemají vyvolávat výstrahy. Kromě toho jsou vyloučeny některé oblíbené entity ve výchozím nastavení. 
 
-Pokud máte například kontrolu zabezpečení, která provádí rekognoskaci DNS, nebo správce, který spouští na dálku skripty na řadiči domény – a jedná se o schválené aktivity, které se provádí jako součást běžného provozu IT ve vaší organizaci. Další informace o zjištění ochrany ATP v programu Azure vám pomohou rozhodnout entit, které chcete vyloučit, najdete v článku [Průvodce podezřelými aktivitami](suspicious-activity-guide.md).
+Například pokud máte kontrolu zabezpečení, která provádí rekognoskaci DNS, nebo správce, který spouští na dálku skripty na řadiči domény – a jedná se o schválené aktivity, jehož cílem je součástí normálního provozu IT ve vaší organizaci, ty můžete vyloučit. Další informace o jednotlivých detekci ochrany ATP v programu Azure vám pomohou rozhodnout entit, které chcete vyloučit, najdete v článku [výstraha zabezpečení průvodce](suspicious-activity-guide.md).
 
-Vyloučení entit z vyvolávání výstrah ve službě ochrana ATP v programu Azure:
+## <a name="entities-excluded-by-default-from-raising-alerts"></a>Ve výchozím nastavení nemají vyvolávat výstrahy vyloučit entity
+ Pro některé výstrahy, jako například **podezřelá komunikace prostřednictvím DNS**, domény Automatická vyloučení jsou přidány pomocí služby Azure ATP na základě zpětné vazby od zákazníků a výzkumu. 
+ 
+![Podezřelá komunikace prostřednictvím DNS automatické vyloučení](./media/dns-auto-exclusions.png) 
 
-Existují dva způsoby, jak vyloučit entity – v rámci samotné podezřelé aktivity nebo na kartě **Exclusions** (Vyloučení) na stránce **Configuration** (Konfigurace).
+## <a name="exclude-entities-from-raising-alerts"></a>Vyloučit entity nemají vyvolávat výstrahy
 
-- **V rámci podezřelé aktivity**: V podezřelé aktivity časovou osu, když obdržíte výstrahu týkající se aktivity uživatele nebo počítače nebo IP adresu, kterou smí provádět určitou aktivitu a můžou Uděláte to tak často, klikněte pravým tlačítkem na tři tečky na konci řádku pro podezřelé aktivity dané entity a vyberte **zavřít a vyloučit**. <br></br>Tím přidáte uživatele, počítače nebo IP adresu do seznamu vyloučení pro podezřelé aktivity. Zavře podezřelé aktivity a už nejsou uvedení v **otevřít** v seznamu událostí **časová osa podezřelých aktivit**.
+Existují dva způsoby, jak můžete ručně vyloučit entity, přímo z dané výstraze zabezpečení nebo z **vyloučení** kartě **konfigurace** stránky. 
+
+- **Z dané výstraze zabezpečení**: V časové osy aktivity, když obdržíte výstrahu týkající se aktivity uživatele, počítače nebo IP adresy, které jsou **je** povoleno určitou aktivitu a můžou Uděláte to tak často, proveďte následující :
+  - Klikněte pravým tlačítkem na tři tečky na konci řádku pro dané výstraze zabezpečení na dané entitě a vyberte **zavřít a vyloučit**. Tím přidáte uživatele, počítače nebo IP adresu do seznamu vyloučení pro tuto výstrahu zabezpečení. Zavření výstrahy zabezpečení a upozornění už není uvedený v **otevřít** v seznamu událostí **výstrah časová osa**.
 
     ![Vyloučení entity](./media/exclude-in-sa.png)
 
-- **Na stránce konfigurace**: Kontrola nebo úprava jakékoli vyloučení: v části **konfigurace**, klikněte na tlačítko **vyloučení** a pak vyberte podezřelou aktivitu, jako je například **DNS rekognoskace**.
+- **Na stránce konfigurace**: Kontrola nebo úprava jakékoli vyloučení: v části **konfigurace**, klikněte na tlačítko **vyloučení** a pak vyberte výstrahu zabezpečení, kterou chcete použít vyloučení, jako je například  **Rekognoskace DNS**.
 
     ![Konfigurace vyloučení](./media/exclusions.png)
 
-Chcete-li přidat entitu z **vyloučení** konfigurace: Zadejte název entity a potom klikněte na tlačítko plus a potom klikněte na **Uložit** v dolní části stránky.
+Chcete-li přidat entitu z **vyloučení** konfigurace: Zadejte název entity, pak klikněte na tlačítko plus a pak klikněte na tlačítko **Uložit** v dolní části stránky.
 
-Pokud chcete odebrat entitu z konfigurace **Exclusions** (Vyloučení): Klikněte na minus vedle názvu entity a potom klikněte na **Save** (Uložit) v dolní části stránky.
+Chcete-li odebrat entitu z **vyloučení** konfigurace: klikněte na minus vedle názvu entity a potom klikněte na **Uložit** v dolní části stránky.
 
-Doporučujeme přidat vyloučení k detekcím až po přijetí upozornění na typ a určení, že se jedná o neškodnou pravdivě pozitivní aktivitu. 
+Doporučujeme přidat vyloučení k detekcím až po získání výstrah tohoto konkrétního typu *a* určení, že se neškodné pravdivě pozitivní. 
 
 > [!NOTE]
 > Abychom vás ochránili, není možné nastavit vyloučení u všech detekcí. 
@@ -57,10 +63,11 @@ Každé vyloučení závisí na kontextu, v některých můžete nastavit uživa
 Až budete mít možnost vyloučit IP adresu nebo počítač, můžete vyloučit jednu z nich – nemusíte zadávat obě dvě.
 
 > [!NOTE]
-> Konfigurační stránky můžou upravovat jenom správci služby Azure ATP.
+> Konfigurační stránky lze upravit pouze správci služby Azure ATP.
 
 
 ## <a name="see-also"></a>Viz také
 
+- [Příručka ke službě Azure ATP výstraha zabezpečení](suspicious-activity-guide.md)
 - [Integraci se službou ochrana ATP v programu Windows Defender](integrate-wd-atp.md)
 - [Podívejte se na fórum služby Azure ATP.](https://aka.ms/azureatpcommunity)

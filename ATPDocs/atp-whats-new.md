@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 11/04/2018
+ms.date: 11/12/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,17 +13,25 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 3c453ad2fce37986811903693c27761c5ea79d40
-ms.sourcegitcommit: 03b1949beaf2f78a3cdf9396356a96488ea2e127
+ms.openlocfilehash: 2237834e867aa6bdacbc67fcc1244f07ac88711b
+ms.sourcegitcommit: 2afc1486b40431f442d51a53df06e289796de87e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "50983136"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51560741"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
 # <a name="whats-new-in-azure-atp"></a>Co je nového v Azure ATP 
 
+## <a name="azure-atp-release-254"></a>Verze ochrany ATP v programu Azure 2.5.4
+Vydáno 11. listopadu 2018
+
+- **Vylepšení funkce: výchozí vyloučení domény přidá do podezřelá komunikace přes upozornění DNS**<br>   Novým rozšířením tři Oblíbené domény do seznamu vyloučení výchozí domény. Seznam vyloučení zůstává plně přizpůsobitelné. Zobrazit [vyloučení entit z detekce](excluding-entities-from-detections.md), další informace. 
+
+- **Dokumentace k vylepšení: aktualizace protokolu SIEM, pokyny známé problémy**<br>    externalId mapování a další vysvětlení byly přidány do systému SIEM protokolu popisy. Zobrazit [referenční informace k protokolům SIEM](cef-format-sa.md), další informace. <br>Byla přidána další článek pokyny aktuálně nevyřešené známé problémy. Zobrazit, [známé problémy ochrany ATP v programu Azure](known-issues.md), další informace.  
+
+- Tato verze obsahuje vylepšení a opravy chyb pro interní senzor infrastruktury.
 
 ## <a name="azure-atp-release-253"></a>Verze ochrany ATP v programu Azure 2.5.3
 Vydáno 4. listopadu 2018
@@ -71,20 +79,20 @@ Vydáno 14. října 2018
 
 ## <a name="azure-atp-release-249"></a>Verze ochrany ATP v programu Azure 2.49
 Vydáno 7. října 2018
--   **Nové detekce: podezřelá komunikace DNS** (preview)<br>Nové detekce přidán k ochraně před útoky komunikace podezřelé DNS:
+-   **Nové detekce: podezřelá komunikace DNS** (preview)<br>Nové detekce přidána k chrání před útoky komunikace podezřelé DNS:
 
-    -   Tato detekce pomáhá odhalit útoky na protokolu DNS. Ve většině organizací není protokol DNS monitorovat a zřídka blokované před škodlivými aktivitami. To umožňuje útočníkovi na napadeném počítači zneužívání protokolu DNS. Škodlivý komunikace prostřednictvím DNS je možné pro průsak dat ven, příkaz a ovládací prvek a/nebo omezení úmyslem vyhnout podnikové sítě.
+    -   Tato detekce pomáhá odhalit útoky na protokolu DNS. Protokol DNS není ve většině organizací, monitorovat a zřídka blokované před škodlivými aktivitami. Povoluje se útočník na napadeném počítači zneužívají protokolu DNS. Škodlivý komunikace prostřednictvím DNS je možné pro průsak dat ven, příkaz a ovládací prvek a/nebo omezení úmyslem vyhnout podnikové sítě.
 
 - **Nové funkce** <br>Ochrana ATP v programu Azure **role uživatele** vylepšen o následující funkce:
-  - Změna stavu výstrah zabezpečení (potlačení znovu otevřete, zavřete, vyloučení)
+  - Změna stavu výstrah zabezpečení (znovu otevřete, zavřete, vyloučení, potlačení)
   - Nastavit plánované sestavy
-  - Nastavit značky entit (citlivé a honeytoken)
+  - Nastavit značky entit (citlivé a honey token)
   - Vyloučení detekce
   - Změnit jazyk
   - Nastavení oznámení prostřednictvím e-mailu nebo protokolu syslog
 
 
-- Bude častěji docházet **Rekognoskace adresáře pomocí dotazů služby** výstrahy zabezpečení, ke kterým došlo v 09/16/2018 se identifikovat a vyřešit. 
+- Bude častěji docházet **Rekognoskace adresáře pomocí dotazů služby** výstrahy zabezpečení, ke kterým došlo na 16. září 2018 se identifikovat a vyřešit. 
 
 - Tato verze rovněž obsahuje opravy a vylepšení pro několik problémů.
 
