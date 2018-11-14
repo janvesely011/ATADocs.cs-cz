@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 6e15f09ff03402e7aed499e032bac018999ab538
-ms.sourcegitcommit: 2916d6f8d6e6f754d7fb8a5d31b255a46aa35ecd
+ms.openlocfilehash: 7f96971f3d7d11f49c025ddf88c1ced5e4fc8cb6
+ms.sourcegitcommit: f86dc8ad3d1e75ba64b372d4d0ab5386e28f2e29
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50132601"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51609669"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
@@ -84,8 +84,7 @@ Po přidání **síťová služba** k **Event Log Readers** skupině, restartov�
         2.  Do pole **Zadejte název objektu k výběru** zadejte název řadiče domény. Potom klikněte na **Zkontrolovat jména** a nakonec na **OK**.  
           ![Obrázek prohlížeče událostí](media/wef3%20event%20viewer.png)  
         3.  Klikněte na **OK**.
-     4. Klikněte na **Vybrat události**.
-
+    4.  Klikněte na **Vybrat události**.
         1. Klikněte na **Podle protokolu** a vyberte **Zabezpečení**.
         2. Do pole **Zahrne nebo vyloučí ID události** zadejte číslo události a klikněte na **OK**. Zadejte 4776, jako je například v následujícím příkladu.
 
