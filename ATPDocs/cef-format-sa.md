@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 3261155c-3c72-4327-ba29-c113c63a4e6d
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: fcbeb18c3841799aad068c8eedd45af71660925e
-ms.sourcegitcommit: 2afc1486b40431f442d51a53df06e289796de87e
+ms.openlocfilehash: ed28ccfcba6472fa8706c8dd4b751954a834b2c0
+ms.sourcegitcommit: 65885bab8e31dd862a4f2ae9028fb31b288d7229
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560758"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52157569"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -150,8 +150,8 @@ Priority:
 ### <a name="suspicious-authentication-failures"></a>Podezřelé chyby ověřování
 02 – 21 – 2018 16:19:20 Auth.Warning 192.168.0.220 1 2018-02-21T14:19:15.397995 + 00:00 CENTER CEF 6076 BruteForceSecurityAlert ï» ¿0 | Microsoft | Ochrana ATP v programu Azure | 2.22.4228.22540 | BruteForceSecurityAlert | Podezřelé chyby ověřování | 5 | start = 2018-02-21T14:19:03.3831122Z app = Kerberos shost = CLIENT1 msg = podezřelá neúspěšná ověření indikující možný útok hrubou silou byly zjištěny z počítače CLIENT1. externalId = 2023 cs1Label = url cs1 =https://contoso-corp.atp.azure.com/securityAlert/fea88fc7-4110-454d-816d-349032474fd6 cs2Label = aktivační událost cs2 = nový
 
-### <a name="suspicious-communication-over-dns--preview"></a>Podezřelá komunikace prostřednictvím DNS – preview
-10-04-2018 14:49:38 Auth.Warning 192.168.0.202 1 2018-10-04T11:49:25.954059 + 00:00 DC3 CEF 3604 DnsSuspiciousCommunicationSecuri ï» ¿0 | Microsoft | Ochrana ATP v programu Azure | 2.49.5589.58606 | DnsSuspiciousCommunicationSecurityAlert | [PREVIEW] Podezřelá komunikace prostřednictvím DNS | 5 | start = 2018-10-04T11:49:11.0822077Z aplikace DnsEvent dhost = suspiciousdomainname msg = CLIENT1 odeslané podezřelých dotazů DNS řešení suspiciousdomainname externalId = 2031 cs1Label = = url cs1 =https://contoso-corp.atp.azure.com/securityAlert/0fc77777-49ca-40b3-a7ba-7644f355539e cs2Label = aktivovat cs2 = nový
+### <a name="suspicious-communication-over-dns"></a>Podezřelá komunikace prostřednictvím DNS
+10-04-2018 14:49:38 Auth.Warning 192.168.0.202 1 2018-10-04T11:49:25.954059 + 00:00 DC3 CEF 3604 DnsSuspiciousCommunicationSecuri ï» ¿0 | Microsoft | Ochrana ATP v programu Azure | 2.49.5589.58606 | DnsSuspiciousCommunicationSecurityAlert | Podezřelá komunikace prostřednictvím DNS | 5 | start = 2018-10-04T11:49:11.0822077Z aplikace DnsEvent dhost = suspiciousdomainname msg = CLIENT1 odeslané podezřelých dotazů DNS řešení suspiciousdomainname externalId = 2031 cs1Label = = url cs1 =https://contoso-corp.atp.azure.com/securityAlert/0fc77777-49ca-40b3-a7ba-7644f355539e cs2Label = aktivovat cs2 = nový
 
 ### <a name="suspicious-domain-controller-promotion-potential-dcshadow-attack"></a>Povýšení řadiče domény podezřelé (možný útok DcShadow)
 07-12-2018 11:18:07 Auth.Error 192.168.0.200 1 2018-07-12T08:18:06.883880 + 00:00 DC1 CEF 3868 DirectoryServicesRoguePromotionS ï» ¿0 | Microsoft | Ochrana ATP v programu Azure | 2.40.0.0 | DirectoryServicesRoguePromotionSecurityAlert | **Povýšení řadiče domény podezřelé (možný útok DcShadow)**| 10 | start = 2018-07-12T08:17:55.4067092Z app = Ldap shost = CLIENT1 msg = počítači CLIENT1 je počítač v domain1.test.local zaregistrovaný jako řadič domény na počítači DC1. externalId = 2028 cs1Label = url cs1 =https://contoso-corp.atp.azure.com:13000/securityAlert/97c59b43-dc18-44ee-9826-8fd5d03bd53 cs2Label = aktivační událost cs2 = aktualizace

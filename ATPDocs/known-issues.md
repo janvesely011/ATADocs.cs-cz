@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 11/12/2018
+ms.date: 11/15/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: feea1982-ba23-48be-a468-98d2586cf840
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c1c5aa0359ac0d24d2bf3fc3033986657c3fc897
-ms.sourcegitcommit: 2afc1486b40431f442d51a53df06e289796de87e
+ms.openlocfilehash: cab7dad8187c79ff1e5068594b972f58bb19040c
+ms.sourcegitcommit: 65885bab8e31dd862a4f2ae9028fb31b288d7229
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51561440"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52157552"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -28,11 +28,11 @@ Ochrana ATP v programu Azure má občas inženýrství nebo funkce omezení, kte
 
 Služby Azure ATP známé problémy s známé alternativní řešení, najdete v části [řešení potíží s Azure ATP známé problémy](troubleshooting-atp-known-issues.md). Chcete-li zkontrolovat stav tenanta ochrany ATP v programu Azure, navštivte [Health Center ochrany ATP v programu Azure](atp-health-center.md). 
 
-## <a name="winrm-not-supported-using-windows-server-2016"></a>Služba WinRM není podporován pomocí Windows serveru 2016
+## <a name="remote-code-execution-attempts-using-remote-powershell-commands-or-scripts-are-not-detected-when-using-windows-server-2016"></a>Vzdálené spuštění kódu pokusí pomocí vzdáleného prostředí PowerShell příkazů nebo skriptů nejsou zjištěny při použití Windows serveru 2016
 > [!div class="mx-tableFixed"]  
 |Problém|Stav|
 |----|----|
-|WinRM v současné době nepodporuje Windows serveru 2016. Související zjišťování a výsledné výstrahy (vzdálený kód pokusy o provedení) nejsou k dispozici pro počítače s Windows serverem 2016.|Engineering aktuálně pracuje na vyřešení tohoto problému a přidání podpory systému Windows Server 2016.|
+|Vzdálené pokusy o spuštění kódu pomocí příkazů Powershellu vzdáleného nejsou aktuálně zjištěna senzor počítače s Windows serverem 2016. Související detekcí a výsledné výstrahy nejsou k dispozici.|Engineering aktuálně pracuje na vyřešení tohoto problému a přidání podpory systému Windows Server 2016.|
 
 ## <a name="ad-groups-with-more-than-1000-members-have-limited-detail-sync"></a>Skupiny AD s více než 1000 členů mají omezenou podrobnosti synchronizace
 > [!div class="mx-tableFixed"]  

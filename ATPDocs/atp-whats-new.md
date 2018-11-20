@@ -13,16 +13,24 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 2237834e867aa6bdacbc67fcc1244f07ac88711b
-ms.sourcegitcommit: 2afc1486b40431f442d51a53df06e289796de87e
+ms.openlocfilehash: ca178eaa1b0ef1b631ebe2ab02f00fd5a9c26de5
+ms.sourcegitcommit: 65885bab8e31dd862a4f2ae9028fb31b288d7229
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560741"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52157586"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
 # <a name="whats-new-in-azure-atp"></a>Co je nového v Azure ATP 
+
+## <a name="azure-atp-release-255"></a>Verze ochrany ATP v programu Azure 2.5.5
+Vydáno 18. listopadu 2018
+
+- **Výstraha zabezpečení: Podezřelá komunikace prostřednictvím DNS – obecné dostupnosti**<br>
+Azure ATP [podezřelá komunikace prostřednictvím DNS](suspicious-activity-guide.md#suspicious-communication-over-dns) výstrahy zabezpečení jsou teď obecně dostupné. <br> Protokol DNS ve většině organizací není obvykle, monitorovat a zřídka blokované před škodlivými aktivitami. To umožňuje útočníkovi na napadeném počítači zneužívání protokolu DNS. Škodlivý komunikace prostřednictvím DNS je možné pro průsak dat ven, příkaz a ovládací prvek a/nebo omezení úmyslem vyhnout podnikové sítě.
+
+- Tato verze také zahrnuje vylepšení a opravy chyb pro interní senzor infrastruktury.
 
 ## <a name="azure-atp-release-254"></a>Verze ochrany ATP v programu Azure 2.5.4
 Vydáno 11. listopadu 2018
@@ -362,5 +370,5 @@ Vydáno 11. března 2018
 - [Co je Azure Advanced Threat Protection?](what-is-atp.md)
 - [Nejčastější dotazy](atp-technical-faq.md)
 - [Požadavky služby Azure ATP](atp-prerequisites.md)
-- [Plánování kapacity v Azure ATP](atp-capacity-planning.md) (configure-event-forwarding.md#configuring-windows-event-forwarding)
+- [Plánování kapacity v Azure ATP](atp-capacity-planning.md)
 - [Podívejte se na fórum služby Azure ATP.](https://aka.ms/azureatpcommunity)
