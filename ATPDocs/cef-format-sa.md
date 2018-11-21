@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 3261155c-3c72-4327-ba29-c113c63a4e6d
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: ed28ccfcba6472fa8706c8dd4b751954a834b2c0
-ms.sourcegitcommit: 65885bab8e31dd862a4f2ae9028fb31b288d7229
+ms.openlocfilehash: 4d1a4d24e2102a019b9df627f2d00c1df981c3ae
+ms.sourcegitcommit: 4d8e7c690453d9b78e6e597c3f8562250d335ba5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/20/2018
-ms.locfileid: "52157569"
+ms.locfileid: "52177381"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -53,7 +53,9 @@ Do systému SIEM se předávají následující pole a jejich hodnoty:
 > [!NOTE]
 > Pokud budete chtít vytvořit automatizace nebo skriptů pro protokolů SIEM ochrany ATP v programu Azure, doporučujeme použít **externalId** pole k identifikaci typu výstrahy místo názvu upozornění pro tento účel. Upozornění názvy mohou být občas upravit, zatímco **externalId** jednotlivých výstrah je trvalá.  
 
-|Upozornění Azure ATP|ExternalId jedinečný|
+## <a name="azure-atp-security-alert-unique-externalids"></a>Azure ATP zabezpečení výstrah jedinečný externalIds
+
+|Název výstrahy zabezpečení|ExternalId jedinečný|
 |---------|---------|
 |Útok hrubou silou pomocí jednoduché vazby LDAP.|2004|
 |Šifrování downgrade aktivity Skeleton key|2011|
