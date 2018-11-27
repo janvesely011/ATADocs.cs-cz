@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 11/12/2018
+ms.date: 11/22/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 3261155c-3c72-4327-ba29-c113c63a4e6d
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 4d1a4d24e2102a019b9df627f2d00c1df981c3ae
-ms.sourcegitcommit: 4d8e7c690453d9b78e6e597c3f8562250d335ba5
+ms.openlocfilehash: ea24931b71a8f96b4554389f4f3d2797c24d30c9
+ms.sourcegitcommit: eac0aa855270b550dfb4b8c61b9cf0953f1e5204
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52177381"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52298183"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -55,38 +55,38 @@ Do systému SIEM se předávají následující pole a jejich hodnoty:
 
 ## <a name="azure-atp-security-alert-unique-externalids"></a>Azure ATP zabezpečení výstrah jedinečný externalIds
 
-|Název výstrahy zabezpečení|ExternalId jedinečný|
-|---------|---------|
-|Útok hrubou silou pomocí jednoduché vazby LDAP.|2004|
-|Šifrování downgrade aktivity Skeleton key|2011|
-|Aktivita snížení úrovně šifrování (možný útok overpass-the-hash)|2008|
-|Aktivita snížení úrovně šifrování (potenciální útok metodou golden ticket)|2009|
-|Aktivita snížení úrovně šifrování (potenciální útoku typu skeleton key)|2010|
-|Aktivita Honeytokenu|2014|
-|Krádež identity pomocí útoku Pass-the-Hash|2017|
-|Krádež identity pomocí útoku Pass-the-Ticket|2018|
-|Lístek protokolu Kerberos golden – čas anomálií|2022|
-|Protokol Kerberos Golden Ticket - neexistující účet|2027|
-|Škodlivá žádost o soukromé informace přes Data Protection|2020|
-|Škodlivá replikace adresářových služeb|2006|
-|Eskalace oprávnění prostřednictvím zfalšovaných dat autorizace|2013|
-|Rekognoskace pomocí výčtu účtů|2003|
-|Rekognoskace pomocí DNS|2007|
-|Rekognoskace pomocí výčtu relací SMB|2012|
-|Rekognoskace pomocí dotazů na adresářové služby|2021|
-|Pokus o spuštění vzdáleného kódu|2019|
-|Podezřelé chyby ověřování|2023|
-|Žádost o replikaci řadiče domény podezřelé (možný útok DCShadow)|2029|
-|Povýšení řadiče domény podezřelé (možný útok DCShadow)|2028|
-|Podezřelá komunikace prostřednictvím DNS|2031|
-|Podezřelé úprava citlivých skupin|2024|
-|Podezřelé vytvoření služby|2026|
-|Podezřelé připojení k síti VPN|2025|
-|Neobvyklá implementace protokolu (možný útok ransomwarem WannaCry) *|2002|
-|Neobvyklá implementace protokolu (potenciální použití škodlivých nástrojů, jako je Hydra) *|2002|
-|Neobvyklá implementace protokolu (potenciální použijte Metasploit hacking nástroje) *|2002|
-|Neobvyklý protokol Kerberos protokol implementace (možný útok overpass-the-hash) *|2002|
-|*Neobvyklá implementace protokolu* výstrahy aktuálně sdílet externalId. ExternalId pro každý typ tyto výstrahy se změní v budoucích vydáních na jedinečné externalId|****|
+> [!div class="mx-tableFixed"] 
+|Nový název výstrahy zabezpečení|Název výstrahy zabezpečení pro starší verze|ExternalId jedinečný|
+|---------|----------|---------|
+|Podezřelý útok hrubou silou (LDAP)|Útok hrubou silou pomocí jednoduché vazby LDAP.|2004|
+|Podezřelý útoku typu Skeleton Key (oslabení šifrování)|Šifrování downgrade aktivity Skeleton key|2011|
+|Podezření na útok over-pass-the-hash (oslabení šifrování)|Aktivita snížení úrovně šifrování (možný útok overpass-the-hash)|2008|
+|Podezřelé použití lístku golden (oslabení šifrování)|Aktivita snížení úrovně šifrování (potenciální útok metodou golden ticket)|2009|
+|Útoku typu skeleton key podezřelého softwaru (oslabení šifrování)|Aktivita snížení úrovně šifrování (potenciální útoku typu skeleton key)|2010|
+|Aktivita Honeytokenu|Aktivita Honeytokenu|2014|
+|Krádež identity podezřelého softwaru (pass-the-hash)|Krádež identity pomocí útoku Pass-the-Hash|2017|
+|Krádež identity podezřelého softwaru (pass-the-ticket)|Krádež identity pomocí útoku Pass-the-Ticket|2018|
+|Podezřelé použití golden ticket (čas anomálií) |Lístek protokolu Kerberos golden – čas anomálií|2022|
+|Podezřelé využití lístku golden (neexistující účet)|Protokol Kerberos Golden Ticket - neexistující účet|2027|
+|Škodlivá žádost Data Protection API hlavní klíč|Škodlivá žádost o soukromé informace přes Data Protection|2020|
+|Podezřelý útok DCSync (replikace adresářových služeb)|Škodlivá replikace adresářových služeb|2006|
+|Podezřelé použití lístku Golden (falešných dat autorizace) |Eskalace oprávnění prostřednictvím zfalšovaných dat autorizace|2013|
+|Rekognoskace výčtu účtů|Rekognoskace pomocí výčtu účtů|2003|
+|Rekognoskace mapování sítě (DNS)|Rekognoskace pomocí DNS|2007|
+|Uživatele a IP adres pro rekognoskaci (SMB) |Rekognoskace pomocí výčtu relací SMB|2012|
+|Rekognoskace členství uživatelů a skupin (SAMR)|Rekognoskace pomocí dotazů na adresářové služby|2021|
+|Pokus o spuštění vzdáleného kódu|Pokus o spuštění vzdáleného kódu|2019|
+|Podezření na útok DCShadow (žádost o replikaci řadiče domény)|Žádost o replikaci řadiče domény podezřelé (možný útok DCShadow)|2029|
+|Podezřelý útok DCShadow (povýšení řadiče domény)|Povýšení řadiče domény podezřelé (možný útok DCShadow)|2028|
+|Podezřelá komunikace prostřednictvím DNS|Podezřelá komunikace prostřednictvím DNS|2031|
+|Podezřelé úprava citlivých skupin|Podezřelé úprava citlivých skupin|2024|
+|Podezřelé vytvoření služby|Podezřelé vytvoření služby|2026|
+|Podezřelé připojení k síti VPN|Podezřelé připojení k síti VPN|2025|
+|Podezření na útok WannaCry ransomwaru|Neobvyklá implementace protokolu (možný útok ransomwarem WannaCry) *|2002|
+|Podezřelý útok hrubou silou (SMB)|Neobvyklá implementace protokolu (potenciální použití škodlivých nástrojů, jako je Hydra) *|2002|
+|Podezřelé použití Metasploit hacking framework|Neobvyklá implementace protokolu (potenciální použijte Metasploit hacking nástroje) *|2002|
+|Podezření na útok overpass-the-hash (Kerberos)|Neobvyklý protokol Kerberos protokol implementace (možný útok overpass-the-hash) *|2002|
+|*Neobvyklá implementace protokolu* výstrahy aktuálně sdílet externalId. ExternalId pro každý typ tyto výstrahy se změní v budoucích vydáních na jedinečné externalId||****|
 
 ## <a name="sample-logs"></a>Ukázky protokolů
 
@@ -176,7 +176,7 @@ Priority:
 ### <a name="unusual-protocol-implementation---potential-use-of-malicious-tools-such-a-hydra"></a>Neobvyklá implementace protokolu - (potenciálně škodlivý nástroj, který tyto Hydra využití)
 02 – 21 – 2018 16:21:22 Auth.Warning 192.168.0.220 1 2018-02-21T14:21:13.916050 + 00:00 CENTER CEF 6076 AbnormalProtocolSecurityAlert ï» ¿0 | Microsoft | Ochrana ATP v programu Azure | 2.22.4228.22540 | AbnormalProtocolSecurityAlert | Neobvyklá implementace protokolu | 5 | start = 2018-02-21T14:19:03.1981155Z aplikace = Ntlm shost = CLIENT2 outcome = Success msg = došlo k pokusům o ověření z počítače CLIENT2 proti řadiči domény DC1 pomocí neobvyklé implementace protokolu. Může být důsledek použití škodlivých nástrojů ke spuštění útoku, třeba technikou Pass-the-Hash nebo hrubou silou. externalId = 2002 cs1Label = url cs1 =https://contoso-corp.atp.azure.com/securityAlert/40fe98dd-aa42-4540-9d73-831486fdd1e4 cs2Label = aktivační událost cs2 = nový
 
-### <a name="unusual-protocol-implementation--potential-use-of-malicious-tools-such-a-metasploit"></a>Neobvyklá implementace protokolu-(potenciálně škodlivý nástroj, který tyto Metasploit využití)
+### <a name="unusual-protocol-implementation---potential-use-of-malicious-tools-such-a-metasploit"></a>Neobvyklá implementace protokolu - (potenciálně škodlivý nástroj, který tyto Metasploit využití)
 10 – 29 – 2018 11:22:04 Auth.Warning 192.168.0.202 1 2018-10-29T09:22:00.460233 + 00:00 DC3 CEF 3908 AbnormalProtocolSecurityAlert ï» ¿0 | Microsoft | Ochrana ATP v programu Azure | 2.52.5704.46184 | AbnormalProtocolSecurityAlert | Neobvyklá implementace protokolu (potenciální použijte Metasploit hacking nástroje) | 5 | start = 2018-10-29T09:19:46.6092465Z app = Ntlm shost = CLIENT2 outcome = Success msg = došlo k pokusům o ověření z počítače CLIENT2 proti řadiči domény DC1 pomocí neobvyklý protokol implementace. externalId = 2002 cs1Label = url cs1 =https://contoso-corp.atp.azure.com/securityAlert/573f10a1-6f8a-44b1-a5b1-212d40996363 cs2Label = aktivační událost cs2 = nový
 
 ## <a name="see-also"></a>Viz také

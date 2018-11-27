@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 11/12/2018
+ms.date: 11/26/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,18 +13,35 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ca178eaa1b0ef1b631ebe2ab02f00fd5a9c26de5
-ms.sourcegitcommit: 65885bab8e31dd862a4f2ae9028fb31b288d7229
+ms.openlocfilehash: 30aa912193998b5c9b3d93265708511c6a0ae496
+ms.sourcegitcommit: eac0aa855270b550dfb4b8c61b9cf0953f1e5204
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52157586"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52298149"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
 # <a name="whats-new-in-azure-atp"></a>Co je nového v Azure ATP 
 
-## <a name="azure-atp-release-255"></a>Verze ochrany ATP v programu Azure 2.5.5
+## <a name="azure-atp-release-256"></a>Verze ochrany ATP v programu Azure 2.56
+Vydáno 25. listopadu 2018
+
+
+- **Rozšíření funkce: Cesty taktiky Lateral Movement (LMPs)** <br>
+K rozšíření možností Azure ochrany ATP v programu laterální pohyb cestu (LMP) jsou přidány dvě další funkce:
+
+  - Historie LMP jsou nyní uloženy a dostupnější za entity a pomocí LMP sestavy. 
+  - Postupujte podle entity v LMP prostřednictvím časové osy aktivity a prozkoumat pomocí dalších důkazu zjišťování potenciální útok cesty. 
+
+  Zobrazit [cesty taktiky Lateral Movement ochrany ATP v programu Azure](use-case-lateral-movement-path.md) Další informace o tom, jak používat a prozkoumat pomocí rozšířené LMPs. 
+
+- **Dokumentace k vylepšení: cesty laterální Lateral Movement, názvy výstraha zabezpečení**<br> Přidání a aktualizace byly provedeny na služby Azure ATP články s popisem cesty laterální pohyb popisy a funkce, název se přidá mapování pro všechny instance starých názvy výstrah zabezpečení nové názvy a externalIds. 
+  - V tématu [cesty taktiky Lateral Movement ochrany ATP v programu Azure](use-case-lateral-movement-path.md), [prozkoumat cesty taktiky Lateral Movement](investigate-lateral-movement-path.md), a [Průvodce výstrah zabezpečení](suspicious-activity-guide.md) Další informace.   
+
+- Tato verze obsahuje vylepšení a opravy chyb pro interní senzor infrastruktury.
+
+## <a name="azure-atp-release-255"></a>Verze ochrany ATP v programu Azure 2.55
 Vydáno 18. listopadu 2018
 
 - **Výstraha zabezpečení: Podezřelá komunikace prostřednictvím DNS – obecné dostupnosti**<br>
@@ -32,7 +49,7 @@ Azure ATP [podezřelá komunikace prostřednictvím DNS](suspicious-activity-gui
 
 - Tato verze také zahrnuje vylepšení a opravy chyb pro interní senzor infrastruktury.
 
-## <a name="azure-atp-release-254"></a>Verze ochrany ATP v programu Azure 2.5.4
+## <a name="azure-atp-release-254"></a>Verze ochrany ATP v programu Azure 2,54
 Vydáno 11. listopadu 2018
 
 - **Vylepšení funkce: výchozí vyloučení domény přidá do podezřelá komunikace přes upozornění DNS**<br>   Novým rozšířením tři Oblíbené domény do seznamu vyloučení výchozí domény. Seznam vyloučení zůstává plně přizpůsobitelné. Zobrazit [vyloučení entit z detekce](excluding-entities-from-detections.md), další informace. 
@@ -41,7 +58,7 @@ Vydáno 11. listopadu 2018
 
 - Tato verze obsahuje vylepšení a opravy chyb pro interní senzor infrastruktury.
 
-## <a name="azure-atp-release-253"></a>Verze ochrany ATP v programu Azure 2.5.3
+## <a name="azure-atp-release-253"></a>Verze ochrany ATP v programu Azure 2,53
 Vydáno 4. listopadu 2018
 
 - **Vylepšení upozornění zabezpečení: podezřelé chyby ověřování**<br>
@@ -52,7 +69,7 @@ V typické **heslo zařízení** útoku, útočníci po úspěšně výčet sezn
 
 - Tato verze také zahrnuje vylepšení a opravy chyb pro interní senzor infrastruktury.
 
-## <a name="azure-atp-release-252"></a>Verze ochrany ATP v programu Azure 2.5.2
+## <a name="azure-atp-release-252"></a>Verze ochrany ATP v programu Azure 2.52
 Vydáno 28. října 2018
 
 
@@ -73,7 +90,7 @@ Azure ATP [upozornění na zabezpečení. pokus o vzdálené spuštění kódu](
 
 - Tato verze také zahrnuje vylepšení a opravy chyb pro interní senzor infrastruktury.
 
-## <a name="azure-atp-release-251"></a>Azure ATP verze 2.5.1
+## <a name="azure-atp-release-251"></a>Verze ochrany ATP v programu Azure 2.51
 Vydáno 21. října 2018
 
 - Můžete teď povolit nebo zakázat **ATP v programu WD integrace** z portálu služby Azure ATP [konfigurace](integrate-wd-atp.md#how-to-integrate-azure-atp-with-windows-defender-atp) obrazovky. (Pro přístup k této funkci, musí být uživatel ochrany ATP v programu Azure globální nebo správce zabezpečení v AAD tenanta).
@@ -202,7 +219,6 @@ Vydáno 22. července 2018
 - Tato verze obsahuje opravy a vylepšení pro několik problémů. 
 
 
-
 ## <a name="azure-atp-release-240"></a>Verze ochrany ATP v programu Azure 2,40
 
 Vydáno 15. července 2018
@@ -281,7 +297,6 @@ Vydáno 27. května 2018
     - Čínština (Tchaj-wan)
 
 
-
 ## <a name="azure-atp-release-232"></a>Verze ochrany ATP v programu Azure 2.32
 
 Vydáno 13. května 2018
@@ -303,7 +318,6 @@ Vydáno 29. dubna 2018
 -   Ochrana ATP v programu Azure nyní používá Azure Email Orchestrator pro všechny e-mailů z ochrany ATP v programu Azure, včetně podezřelých aktivit monitorování výstrah a sestav. Uvidíte, že tato e-mailová oznámení teď řídí konzistentní formát pro snadné použití a Excelové soubory se propojí s e-mailu ke stažení z konzoly.
  
  
-
 ## <a name="azure-atp-release-229"></a>Verze ochrany ATP v programu Azure 2.29
 
 Vydáno 22. dubna 2018

@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/28/2018
+ms.date: 11/26/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,19 +13,19 @@ ms.technology: ''
 ms.assetid: 2c2d6b1a-fc8c-4ff7-b07d-64ce6159f84d
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9e35761c229e011cc1c48b705daa196e1e61ed58
-ms.sourcegitcommit: 3ab48f180aa0276f4e19cf7cd567581c7b4324cc
+ms.openlocfilehash: d101856cdc3a5bd1ba02fbbb215d120382da6c05
+ms.sourcegitcommit: eac0aa855270b550dfb4b8c61b9cf0953f1e5204
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50202367"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52298054"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
 
 # <a name="azure-atp-reports"></a>Sestavy služby Azure ATP
 
-Část sestavy ochrany ATP v programu Azure na portálu ochrany ATP v programu Azure umožňuje naplánovat nebo okamžitě vygenerování a stažení sestavy, které vám poskytnou informace o stavu systému. Z funkce sestavy můžete vytvořit sestavy o stavu systému a podezřelých aktivitách zjištěných ve vašem prostředí.
+Část sestavy ochrany ATP v programu Azure na portálu ochrany ATP v programu Azure umožňuje naplánovat nebo okamžitě vygenerování a stažení sestavy, které vám poskytnou informace o stavu systému a entity. Z funkce sestavy můžete vytvořit sestavy o stavu systému, výstrahy zabezpečení a potenciální cesty taktiky Lateral Movement zjištěných ve vašem prostředí.
 
 
 Pokud chcete získat přístup na stránku sestav, klikněte na ikonu sestav na řádku nabídek: ![ikona sestav](./media/atp-report-icon.png).
@@ -33,11 +33,11 @@ Jsou k dispozici sestavy:
 
 - **Souhrnná sestava**: Souhrnná sestava představuje řídicí panel stavu systému. Můžete zobrazit tři karty – **Souhrn** co bylo zjištěno ve vaší síti **otevřené podezřelé aktivity** , který obsahuje seznam podezřelých aktivit, které byste měli věnovat pozornost, a **otevřete stavu problémy s** , že seznamy můžete problémy se stavem služby Azure ATP byste měli věnovat pozornost. Podezřelé aktivity, které jsou uvedené, jsou rozdělené podle typu, stejně jako problémy se stavem. 
 
-- **Úprava citlivých skupin**: Tato sestava obsahuje seznam pokaždé, když změny citlivých skupin (například správce, nebo ručně označené účty nebo skupiny). Pokud používáte služby Azure ATP samostatné senzory, chcete-li zobrazit úplnou sestavu o citlivých skupin, je třeba Ujistěte se, že [události jsou předány z řadičů domény senzorů samostatné](configure-event-forwarding.md). 
+- **Úprava citlivých skupin**: Tato sestava obsahuje seznam pokaždé, když změny citlivých skupin (například správce, nebo ručně označené účty nebo skupiny). Pokud používáte služby Azure ATP samostatné snímačů, aby bylo možné zobrazit úplnou sestavu o citlivých skupin, ujistěte se, že [události jsou předány z řadičů domény senzorů samostatné](configure-event-forwarding.md). 
 
-- **Hesla odhalená v nešifrovaném textu**: Některé služby používat nezabezpečené protokolu LDAP k odesílání přihlašovací údaje k účtu v prostém textu. To může nastat i pro citlivé účty. Útočníci monitorování síťového provozu můžete zachytit a pak znovu použít tyto přihlašovací údaje ke škodlivým účelům. Tato sestava obsahuje seznam všech zdrojového počítače a hesla k účtům, které služby Azure ATP zjistilo, že se odesílají ve formátu prostého textu. 
+- **Hesla odhalená v nešifrovaném textu**: Některé služby používat nezabezpečené protokolu LDAP k odesílání přihlašovací údaje k účtu v prostém textu. To může nastat i pro citlivé účty. Útočníci monitorování síťového provozu můžete zachytit a pak znovu použít tyto přihlašovací údaje ke škodlivým účelům. Tato sestava uvádí všechny počítače a účtu hesla zdroje detekovaných službou Azure ATP odesílány ve formátu prostého textu. 
 
-- **Laterální pohyb cesty k citlivým účtům**: Tato sestava obsahuje citlivé účty, které jsou zveřejňovány prostřednictvím cesty taktiky Lateral Movement. Další informace najdete v tématu [laterální pohyb cesty](use-case-lateral-movement-path.md). Tato sestava shromáždí cesty, které se vytvořily za posledních 60 dnů, na rozdíl od informace zobrazí na portálu pracovního prostoru, která představuje jenom dva dny.
+- **Laterální pohyb cesty k citlivým účtům**: Tato sestava obsahuje citlivé účty, které jsou zveřejňovány prostřednictvím cesty taktiky Lateral Movement. Další informace najdete v tématu [laterální pohyb cesty](use-case-lateral-movement-path.md). Tato sestava shromáždí potenciální cesty taktiky Lateral Movement, které byly zjištěny v období vytváření sestav, které vyberete. 
 
 Existují dva způsoby, jak vygenerovat sestavu: na vyžádání nebo na základě naplánování pravidelného odesílání sestav e-mailem.
 
@@ -50,14 +50,14 @@ Vygenerování sestavy na vyžádání:
 
 Nastavení naplánované sestavy:
  
-1. V **sestavy** klikněte na **nastavit plánované sestavy**, nebo na stránce Konfigurace portálu pracovního prostoru ochrana ATP v programu Azure v rámci oznámení a sestavy, klikněte na tlačítko **naplánované sestavy**.
+1. V **sestavy** klikněte na **nastavit plánované sestavy**, nebo na stránce Konfigurace portálu ochrany ATP v programu Azure v rámci oznámení a sestavy, klikněte na tlačítko **naplánované sestavy**.
 
    ![Plánování sestav](./media/atp-sched-reports.png)
  
  > [!NOTE]
  > Ve výchozím nastavení denními sestavami jsou určeny k odeslány brzy po půlnoci UTC. Můžete si vyberte vlastní čas pomocí možnosti Výběr času. 
 
-2. Klikněte na tlačítko **plán** vedle vašeho typu vybranou sestavu, nastavit četnost a e-mailovou adresu pro doručení sestav a klikněte na znaménko plus vedle e-mailové adresy je přidat, a klikněte na **Uložit**.
+2. Klikněte na tlačítko **plán** vedle vašeho typu vybranou sestavu, nastavit četnost a e-mailovou adresu pro doručení sestavy. Je sestava, kterou vyberete četností informace obsažené v sestavě. Přidat e-mailové adresy, klikněte na znaménko plus vedle pole e-mailové adresy, zadejte adresu a klepněte na **Uložit**.
 
    ![Naplánování četnosti sestav a e-mailů](./media/sched-report1.png)
 
