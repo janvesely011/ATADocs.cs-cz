@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4fe68a3f11a1191035fbbcfadbc497929cf5e80a
-ms.sourcegitcommit: eac0aa855270b550dfb4b8c61b9cf0953f1e5204
+ms.openlocfilehash: 3c5a184ed1728e7013b7780c46c948a3bdb2fb6e
+ms.sourcegitcommit: 151b39b17cfe813f42fbcdbcd9c9a7f11d2d037a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52298166"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52339769"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -40,7 +40,7 @@ Další informace o tom, jak pracovat s výstrahami zabezpečení služby Azure 
 Ve verzi 2.56 všechny existující výstrahy zabezpečení služby Azure ATP byly přejmenovány s snáze pochopit názvy. Mapování mezi staré i nové názvy a jejich odpovídající jedinečný externalIds jsou uvedené v následující tabulce. Společnost Microsoft doporučuje použití výstrahy externalIds místo upozornění názvů pro skripty nebo automatizace jsou trvalé pouze výstrahy externalIds zabezpečení a nelze změnit. 
 
 > [!div class="mx-tableFixed"] 
-|Nový název výstrahy zabezpečení|Název výstrahy zabezpečení pro starší verze|ExternalId jedinečný|
+|Nový název výstrahy zabezpečení|Předchozí název výstrahy zabezpečení|ExternalId jedinečný|
 |---------|----------|---------|
 |Podezřelý útok hrubou silou (LDAP)|Útok hrubou silou pomocí jednoduché vazby LDAP.|2004|
 |Podezřelý útoku typu Skeleton Key (oslabení šifrování)|Šifrování downgrade aktivity Skeleton key|2011|
@@ -50,8 +50,8 @@ Ve verzi 2.56 všechny existující výstrahy zabezpečení služby Azure ATP by
 |Aktivita Honeytokenu|Aktivita Honeytokenu|2014|
 |Krádež identity podezřelého softwaru (pass-the-hash)|Krádež identity pomocí útoku Pass-the-Hash|2017|
 |Krádež identity podezřelého softwaru (pass-the-ticket)|Krádež identity pomocí útoku Pass-the-Ticket|2018|
-|Podezřelé použití golden ticket (čas anomálií) |Lístek protokolu Kerberos golden – čas anomálií|2022|
-|Podezřelé využití lístku golden (neexistující účet)|Protokol Kerberos Golden Ticket - neexistující účet|2027|
+|Podezřelé použití Golden Ticket (čas anomálií) |Protokol Kerberos Golden Ticket – čas anomálií|2022|
+|Podezřelé použití Golden Ticket (neexistující účet)|Protokol Kerberos Golden Ticket - neexistující účet|2027|
 |Škodlivá žádost Data Protection API hlavní klíč|Škodlivá žádost o soukromé informace přes Data Protection|2020|
 |Podezřelý útok DCSync (replikace adresářových služeb)|Škodlivá replikace adresářových služeb|2006|
 |Podezřelé použití lístku Golden (falešných dat autorizace) |Eskalace oprávnění prostřednictvím zfalšovaných dat autorizace|2013|
@@ -97,7 +97,7 @@ V této detekce se aktivuje upozornění, když zjistí velké množství jednod
 
 [Složitá a dlouhá hesla](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) poskytují nezbytnou první úroveň zabezpečení před útoky hrubou silou.
 
-## <a name="suspected-skeleton-key-attack-encryption-downgrade"></a>Podezřelý útoku typu Skeleton Key (oslabení šifrování)
+## <a name="suspected-skeleton-key-attack-encryption-downgrade"></a>Podezřelý útoku typu Skeleton Key (oslabení šifrování) 
 <a name="encryption-downgrade-activity-potential-skeleton-key-attack"></a>
 
 *Předchozí název:* aktivita snížení úrovně šifrování
@@ -229,46 +229,58 @@ Pass-the-Ticket je technika laterálního pohybu, kdy útočník získá lístek
 
 2. Pokud je citlivý účet, měli byste zvážit, obnovení účtu KRBTGT dvakrát jako podezřelá aktivita zlatého lístku. Obnovení účtu KRBTGT dvakrát zruší platnost všech protokolu Kerberos, takže Plánujte lístky v této doméně než to uděláte. Přečtěte si pokyny v [KRBTGT účet skriptů pro resetování hesla nyní dostupný pro zákazníky se](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), také naleznete pomocí [resetování nástroj hesla/klíčů účtu KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).  Protože to je technika laterálního pohybu, postupujte podle osvědčených postupů v [předání hodnoty hash doporučení](https://www.microsoft.com/download/details.aspx?id=36036).
 
-## <a name="suspected-golden-ticket-usage-forged-authorization-data"></a>Podezřelé použití lístku Golden (falešných dat autorizace)
+## <a name="suspected-golden-ticket-attack-nonexistant-account"></a>Podezření na útok typu Golden Ticket (neexistujícího účtu)
 <a name="golden-ticket"></a>
 
 Předchozí název: Kerberos golden ticket
 
 **Popis**
 
-Útočníci s právy správce domény může ohrozit [účtu KRBTGT](https://technet.microsoft.com/library/dn745899(v=ws.11).aspx#Sec_KRBTGT). Pomocí účtu KRBTGT, můžete vytvořit lístek Kerberos udělující lístek (TGT), který poskytuje autorizaci k jakémukoli prostředku a nastavit dobu platnosti lístku do libovolného kdykoli. Tato falešných lístků TGT se nazývá "goldentTicket" a útočníkům umožňuje dosáhnout trvalého průniku do sítě.
-
-V této detekce se aktivuje upozornění, pokud je lístek Kerberos udělující lístek se používá pro více než povolená doba uvedená v [maximální doba života lístku uživatele](https://technet.microsoft.com/library/jj852169(v=ws.11).aspx), jde **čas anomálií**útok typu golden Ticket, nebo neexistující účet jde **neexistující účet** útok metodou golden ticket.
-
+Útočníci, které získáte práva správce domény může ohrozit účet KRBTGT. Pomocí účtu KRBTGT, útočníci můžete vytvořit lístek Kerberos udělující lístek (TGT), který poskytuje autorizaci k jakémukoli prostředku. Falešných lístků TGT tohoto typu se nazývá "Zlatých lístků", protože to útočníkům umožňuje dosáhnout trvalého trvalost sítě. V této detekce se aktivuje upozornění pomocí neexistující účet.
 
 **Šetření**
 
-- **Čas anomálií**
-   1.   Byl poslední (během posledních několik hodin) změny do maximální doba života lístku nastavení hlavního názvu uživatele v zásadách skupiny? Vyhledat konkrétní hodnotu a zjistěte, jestli je nižší než čas, kdy-the-ticket se použil pro. Pokud ano, pak zavřete výstrahu (bylo falešně pozitivní).
-   2.   Je senzoru služby Azure ATP zahrnutých v této výstraze virtuálního počítače? Pokud ano, ji nedávno pokračovat od uloženého stavu? Pokud ano, tuto výstrahu zavřete.
-   3.   Pokud je odpověď na otázky uvedené výše předpokládají Ne, to se zlými úmysly.
+1. Odpovědět na tyto otázky:
+      - Uživatel je známé a platná doména uživatel? Pokud ano, pak zavřete výstrahu (bylo falešně pozitivní).
+      - Uživatel byl nedávno přidán? Pokud ano, pak zavřete výstrahu, změna nemusí mít nebyly synchronizovány.
+      - Uživatel byl nedávno odstraněn z AD? Pokud ano, pak zavřete výstrahu.
+2. Pokud je odpověď na otázky uvedené výše předpokládají Ne, to se zlými úmysly.
 
-- **Neexistující účet – nové** 
-   1.   Odpovědět na tyto otázky:
-         - Uživatel je známé a platná doména uživatel? Pokud ano, pak zavřete výstrahu (bylo falešně pozitivní).
-         - Uživatel byl nedávno přidán? Pokud ano, pak zavřete výstrahu, změna nemusí mít nebyly synchronizovány.
-         - Uživatel byl nedávno odstraněn z AD? Pokud ano, pak zavřete výstrahu.
-   2.   Pokud je odpověď na otázky uvedené výše předpokládají Ne, to se zlými úmysly.
+3. Klikněte na zdrojovém počítači přejděte do jeho **profilu** stránky. Zkontrolujte, co se stalo v době aktivity a podívejte se na neobvyklé aktivity, včetně, který byl přihlášen, získal přístup k jakým prostředkům? 
 
-1. Pro oba typy útoků pomocí zlatého lístku, klikněte na tlačítko na zdrojovém počítači přejděte do jeho **profilu** stránky. Zkontrolujte, co se stalo v době aktivity a podívejte se na neobvyklé aktivity, včetně, který byl přihlášen, získal přístup k jakým prostředkům? 
+4. Jsou všichni uživatelé, které se připojily k počítači, by měl být přihlášení? Jaké jsou jejich oprávnění? 
 
-2.  Jsou všichni uživatelé, které se připojily k počítači, by měl být přihlášení? Jaké jsou jejich oprávnění? 
-
-3.  Uživatelé, kteří jsou přihlášení mají mít přístup k těmto prostředkům?<br>
+5. Uživatelé, kteří jsou přihlášení mají mít přístup k těmto prostředkům?<br>
 Pokud jste nepovolili integraci ochrany ATP v programu Windows Defender, klikněte na oznámení ochrany ATP v programu Windows Defender.
  
- 4. K hlubšímu prošetření je počítač, zkontrolujte, které procesy a výstrahy došlo k chybě v době výskytu výstrahy v ochrany ATP v programu Windows Defender.
+ 1. K hlubšímu prošetření je počítač, zkontrolujte, které procesy a výstrahy došlo k chybě v době výskytu výstrahy v ochrany ATP v programu Windows Defender.
 
 **Náprava**
 
 
 Změnit heslo protokolu Kerberos KRBTGT Ticket Granting Ticket () dvakrát podle pokynů v [KRBTGT účet skriptů pro resetování hesla nyní k dispozici pro zákazníky, kteří](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), použije [resetování hesla/klíčů účtu KRBTGT Nástroj](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Obnovení účtu KRBTGT dvakrát zruší platnost všech protokolu Kerberos, takže Plánujte lístky v této doméně než to uděláte. Navíc vzhledem k tomu, že vytvoření Golden Ticket vyžaduje práva správce domény, implementovat [předání hodnoty hash doporučení](https://www.microsoft.com/download/details.aspx?id=36036).
 
+## <a name="suspected-golden-ticket-attack-time-anomaly"></a>Podezření na útok typu Golden Ticket (čas anomálií)
+
+Předchozí název: Kerberos golden ticket
+
+**Popis**
+
+Útočníci, které získat oprávnění správce domény může ohrozit [účtu KRBTGT](https://technet.microsoft.com/library/dn745899(v=ws.11).aspx#Sec_KRBTGT). Pomocí účtu KRBTGT, útočníci můžete vytvářet lístek protokolu Kerberos udělování lístků (TGT), které umožňují ověření k jakémukoli prostředku a nastavit dobu platnosti lístku do libovolného kdykoli. Falešných lístků TGT tohoto typu se nazývá "Zlatých lístků", protože to útočníkům umožňuje dosáhnout trvalého trvalost sítě. V této detekce se aktivuje upozornění, když lístek Kerberos udělující lístek slouží pro delší než povolený čas povolené, jak je uvedeno v [maximální doba života lístku uživatele](https://technet.microsoft.com/library/jj852169(v=ws.11).aspx).
+
+
+**Šetření**
+
+1. Byl poslední (během posledních několik hodin) změny do maximální doba života lístku nastavení hlavního názvu uživatele v zásadách skupiny? Vyhledat konkrétní hodnotu a zjistěte, jestli je nižší než čas, kdy-the-ticket se použil pro. Pokud ano, pak zavřete výstrahu (bylo falešně pozitivní).
+
+2. Je senzoru služby Azure ATP zahrnutých v této výstraze virtuálního počítače? Pokud ano, ji nedávno pokračovat od uloženého stavu? Pokud ano, tuto výstrahu zavřete.
+
+3. Pokud je odpověď na otázky uvedené výše předpokládají Ne, to se zlými úmysly.
+
+**Náprava**
+
+
+Změnit heslo protokolu Kerberos KRBTGT Ticket Granting Ticket () dvakrát podle pokynů v [KRBTGT účet skriptů pro resetování hesla nyní k dispozici pro zákazníky, kteří](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), použije [resetování hesla/klíčů účtu KRBTGT Nástroj](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Obnovení účtu KRBTGT dvakrát zruší platnost všech protokolu Kerberos, takže Plánujte lístky v této doméně než to uděláte. Navíc vzhledem k tomu, že vytvoření Golden Ticket vyžaduje práva správce domény, implementovat [předání hodnoty hash doporučení](https://www.microsoft.com/download/details.aspx?id=36036).
 
 ## <a name="malicious-request-of-data-protection-api-master-key"></a>Škodlivá žádost Data Protection API hlavní klíč
 <a name="malicious-data-protection-private-information-request"></a>
@@ -328,7 +340,7 @@ Další informace najdete v tématu [udělení Active Directory Domain Services
 Můžete využít [AD ACL Scanner](https://blogs.technet.microsoft.com/pfesweplat/2013/05/13/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool/) nebo vytvořit skript prostředí Windows PowerShell k určení, kdo v doméně tato oprávnění má.
 
 
-## <a name="suspected-golden-ticket-usage-forged-authorization-data"></a>Podezřelé použití lístku golden (falešných dat autorizace)
+## <a name="suspected-golden-ticket-usage-forged-authorization-data"></a>Podezřelé použití lístku Golden (falešných dat autorizace)
 <a name="privilege-escalation-using-forged-authorization-data"></a>
 
 *Předchozí název:* eskalace oprávnění prostřednictvím zfalšovaných dat autorizace
@@ -708,7 +720,7 @@ Oznámení se otevře po odchylky od chování uživatele podle algoritmu strojo
 ## <a name="unusual-protocol-implementation"></a>Neobvyklá implementace protokolu
 <a name="unusual-protocol-implementation"></a>
 
-*Předchozí název:* neobvyklá implementace protokolu 
+*Předchozí název:* neobvyklá implementace protokolu *této skupiny výstrahy zabezpečení bude přejmenován a uvedený nový externalIds v budoucí verzi ochrany ATP v programu Azure*
 
 **Popis**
 
