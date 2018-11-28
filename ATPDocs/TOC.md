@@ -44,7 +44,8 @@
 ## [Správa výstrah zabezpečení](working-with-suspicious-activities.md)
 # Výstrahy zabezpečení služby Azure ATP
 ## [Průvodce výstrahami zabezpečení](suspicious-activity-guide.md)
-## [Prošetřování laterálních průnikových tras pomocí služby Azure ATP](use-case-lateral-movement-path.md)
+## [Cesty taktity lateral movement](use-case-lateral-movement-path.md)
+### [Prošetřování cest taktity lateral movement](investigate-lateral-movement-path.md)
 ## [Prošetřování entit](investigate-entity.md)
 # Řešení problémů
 ## [Centrum stavu služby Azure ATP](atp-health-center.md)
