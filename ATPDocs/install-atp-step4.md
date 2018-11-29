@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 11/28/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 51911e39-76c7-4dcd-bc0b-ec6235d0403f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 52ffbac6acd762d4cf2898c170d7a026d2a37826
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: fd2a2316f63b5324e7869878104bd663e48b2771
+ms.sourcegitcommit: e2a89030c31376c6798697a62b484f45ed54e679
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783725"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52501095"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -33,7 +33,7 @@ ms.locfileid: "48783725"
 ## <a name="step-4-install-the-azure-atp-sensor"></a>Krok 4: Instalace senzoru služby Azure ATP
 
 > [!IMPORTANT]
->Ujistěte se, že rozhraní .net Framework 4.7 je nainstalovaná na počítači. Pokud je rozhraní .net Framework 4.7 není nainstalovaná Instalační balíček senzoru služby Azure ATP ho nainstaluje, která vyžaduje restartování serveru.
+>Ujistěte se, že rozhraní .net Framework 4.7 je nainstalovaná na počítači. Pokud je rozhraní .net Framework 4.7 není nainstalovaná instalačního balíčku senzoru služby Azure ATP ho nainstaluje, která může vyžadovat restartování serveru.
 
 Proveďte následující kroky na řadiči domény.
 

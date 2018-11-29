@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 11/22/2018
+ms.date: 11/26/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 3261155c-3c72-4327-ba29-c113c63a4e6d
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: ea24931b71a8f96b4554389f4f3d2797c24d30c9
-ms.sourcegitcommit: eac0aa855270b550dfb4b8c61b9cf0953f1e5204
+ms.openlocfilehash: fcad0fd1677a6e34a9d72b0e9660eb2e680ca22e
+ms.sourcegitcommit: e2a89030c31376c6798697a62b484f45ed54e679
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52298183"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52501130"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -34,7 +34,7 @@ Do systému SIEM se předávají následující pole a jejich hodnoty:
 |---------|---------------|
 |Spuštění|Počáteční čas výstrahy|
 |suser|účet (obvykle uživatelský účet) účastnící se upozornění|
-|shost|účet (obvykle uživatelský účet) účastnící se upozornění|
+|účet počítače|účet (obvykle uživatelský účet) účastnící se upozornění|
 |Výsledek|Pokud je to relevantní, úspěch nebo neúspěch podezřelých aktivit ve výstraze|
 |msg|popis výstrahy|
 |CNT|pro výstrahy, které mají počet, kolikrát, aktivity, ke kterým došlo (například útok hrubou silou má určité množství uhodnutí hesel)|
