@@ -8,7 +8,7 @@
 ## [Požadavky služby Azure ATP](atp-prerequisites.md)
 ## [Plánování kapacity služby Azure ATP](atp-capacity-planning.md)
 # Rychlý start
-## [Vytvoření pracovního prostoru na portálu Azure ATP](install-atp-step1.md)
+## [Vytvoření instance služby Azure ATP](install-atp-step1.md)
 ## [Připojení ke službě Active Directory](install-atp-step2.md)
 ### [Podpora vícedoménových struktur Azure ATP](atp-multi-forest.md)
 ## [Stažení balíčku senzoru služby Azure ATP](install-atp-step3.md)
