@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/18/2018
+ms.date: 12/02/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 37d1a032-65e7-4a89-be0b-c3f9cc2bacdb
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 5424c997de43ac186564b929ab50c7668333ed06
-ms.sourcegitcommit: 63ec9181f71edce6a950f5cc0d69428405436c48
+ms.openlocfilehash: a0109f6d1e2d8bcefd633acdfee18fec4406b2a2
+ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49963297"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52745179"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -107,6 +107,6 @@ Informace sledováno ochrany ATP v programu Azure se zobrazí ve formuláři akt
 
 ## <a name="see-also"></a>Viz také
 - [Správa výstrah zabezpečení](working-with-suspicious-activities.md)
-- [Příručka výstrahy zabezpečení](suspicious-activity-guide.md)
+- [Průvodce výstrahami zabezpečení](suspicious-activity-guide.md)
 - [Prošetřování entit](investigate-entity.md)
 - [Podívejte se na fórum služby Azure ATP.](https://aka.ms/azureatpcommunity)

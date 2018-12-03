@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 12/02/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 43e57f87-ca85-4922-8ed0-9830139fe7cb
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 72e26d9cdc539da168d1bc7c274971526eec61d1
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: 379feeef63776e71375a789daf4c9608a863e37b
+ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783300"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "52744468"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -34,7 +34,7 @@ Na stránce komplexní entity navržena pro celý podrobný rozbor šetření u�
 
 Chcete-li získat přístup stránku profil entity, klikněte na název sady entit, jako je například uživatelské jméno na časové ose výstrah zabezpečení. Uvidíte také zkrácenou verzi profil entity na stránce výstrah zabezpečení podržením ukazatele nad název entity.
 
-Profil entity umožňuje zobrazení entity aktivity, zobrazit data adresáře a zobrazení cesty taktiky Lateral Movement entity. Další informace najdete v tématu [Principy profily entit ](entity-profiles.md).
+Profil entity, které vám umožní zobrazit entity aktivity, data zobrazení adresáře a zobrazení [laterální pohyb cesty](use-case-lateral-movement-path.md) entity. Další informace o entitách, naleznete v tématu [Principy profily entit ](entity-profiles.md).
 
 ## <a name="check-entity-tags"></a>Zaškrtněte značky entit
 
@@ -111,5 +111,5 @@ Teprve potom přejděte vaše šetření je důležité vědět, jestli je entit
     
 ## <a name="see-also"></a>Viz také
 
-- [Práce s podezřelými aktivitami](working-with-suspicious-activities.md)
+- [Práce s výstrahami zabezpečení](working-with-suspicious-activities.md)
 - [Podívejte se na fórum služby Azure ATP.](https://aka.ms/azureatpcommunity)

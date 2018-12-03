@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/11/2018
+ms.date: 11/04/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 0d9d2a1d-6c76-4909-b6f9-58523df16d4f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 1ddd369fe51117a120a3f5b8a688f22624d711c0
-ms.sourcegitcommit: 03b1949beaf2f78a3cdf9396356a96488ea2e127
+ms.openlocfilehash: 9fe9011f0fbdf29e80e1957c4e1535f497061aa2
+ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "50983102"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "52744859"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -55,7 +55,7 @@ Proveďte následující kroky na serveru RRAS.
 
     ![Nastavení protokolu RADIUS](./media/radius-setup.png)
 
-4.  V **přidat Server protokolu RADIUS** okno, zadejte **název serveru** nejbližší senzoru služby Azure ATP (který má připojení k síti). Pro zajištění vysoké dostupnosti můžete přidat další služby Azure ATP senzorů jako servery RADIUS. V části **Port**, ujistěte se, že je nakonfigurovaný výchozí 1813. Klikněte na tlačítko **změnu** a zadejte nový sdílený tajný řetězec alfanumerických znaků, které si zapamatujete. Je potřeba vyplnit později v konfiguraci ochrany ATP v programu Azure. Zkontrolujte **zprávy odesílat účtu RADIUS On a vypnutém** pole a potom klikněte na tlačítko **OK** na všechna otevřená dialogová okna.
+4.  V **přidat Server protokolu RADIUS** okno, zadejte **název serveru** nejbližší senzoru služby Azure ATP (který má připojení k síti). Pro zajištění vysoké dostupnosti můžete přidat další služby Azure ATP senzorů jako servery RADIUS. V části **Port**, ujistěte se, že je nakonfigurovaný výchozí 1813. Klikněte na tlačítko **změnu** a zadejte nový sdílený tajný řetězec alfanumerických znaků. Poznamenejte si nový řetězec sdíleného tajného kódu podle musíte vyplnit později během konfigurace ochrany ATP v programu Azure. Zkontrolujte **zprávy odesílat účtu RADIUS On a vypnutém** pole a klikněte na tlačítko **OK** na všechna otevřená dialogová okna.
  
      ![Nastavení sítě VPN](./media/vpn-set-accounting.png)
      
@@ -74,7 +74,7 @@ Data sítě VPN nakonfigurujete v ochrany ATP v programu:
   ![Konfigurovat síť VPN Azure ATP](./media/atp-vpn-radius.png)
 
 
-Jakmile je tato možnost povolena, všechny služby Azure ATP senzory a samostatné senzorů naslouchání na portu 1813 události monitorování účtů protokolu RADIUS a vaší instalace byla dokončena. 
+Poté, co je tato možnost povolena, všechny senzory ochrany ATP v programu Azure naslouchání na portu 1813 události monitorování účtů protokolu RADIUS a nastavení sítě VPN je kompletní. 
 
  Poté, co senzoru služby Azure ATP přijímá události VPN a odesílá je ke cloudové službě ochrana ATP v programu Azure pro zpracování, profil entity označí odlišné navštívená umístění VPN a aktivity v profilu označí umístění.
 

@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 4ba46d60-3a74-480e-8f0f-9a082d62f343
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c4a437055c2fec0d242fe9de62ac9220ed2b66e6
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: 3968973bf4ddbc66dc66789239382ad5c9056aae
+ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783793"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "52744876"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -40,7 +40,7 @@ Chcete-li úspěšně přihlásit na portál ochrany ATP v programu Azure, budet
 
 ## <a name="logging-into-the-azure-atp-portal"></a>Přihlášení k portálu služby Azure ATP
 
-1. Ochrana ATP v programu Azure portal můžete zadat buď po přihlášení k portálu [ https://portal.atp.azure.com ](https://portal.atp.azure.com) a výběrem příslušné pracovní nebo přechodu na adresu URL pracovního prostoru: [https://*workspacename* . atp.azure.com](https://*workspacename*.atp.azure.com).
+1. Ochrana ATP v programu Azure portal můžete zadat buď po přihlášení k portálu [ https://portal.atp.azure.com ](https://portal.atp.azure.com) a výběr vašeho instance nebo přechodu na adresu URL instance: [https://*instancename*. ATP.Azure.com](https://*instancename*.atp.azure.com).
 
 
 2.  Azure ATP podporuje jednotné přihlašování integrované s ověřováním Windows – Pokud jste již přihlášení k počítači, ochrana ATP v programu Azure používá tento token pro přihlášení na portál ochrany ATP v programu Azure. K přihlášení můžete použít také čipovou kartu. Vaše oprávnění v Azure ATP odpovídají vaše [role správce](atp-role-groups.md).
@@ -51,7 +51,7 @@ Chcete-li úspěšně přihlásit na portál ochrany ATP v programu Azure, budet
 
 ### <a name="attack-time-line"></a>Časová osa útoků
 
-Na časové ose útoku, toto je výchozí cílová stránka, kterou budete přesměrováni na přihlášení k portálu ochrany ATP v programu Azure pracovní prostor. Ve výchozím nastavení jsou všechny otevřené podezřelé aktivity zobrazené na časové ose útoků. Můžete filtrovat na časové ose útoku a zobrazit všechny, otevřít, zamítnuté nebo Suppressed podezřelých aktivit. Můžete také zjistit závažnost, která se jednotlivým aktivitám přiřadila.
+Na časové ose útoku, toto je výchozí cílová stránka, kterou budete přesměrováni na přihlášení k portálu ochrany ATP v programu Azure. Ve výchozím nastavení jsou všechny otevřené podezřelé aktivity zobrazené na časové ose útoků. Můžete filtrovat na časové ose útoku a zobrazit všechny, otevřít, zamítnuté nebo Suppressed podezřelých aktivit. Můžete také zjistit závažnost, která se jednotlivým aktivitám přiřadila.
 
 ![Obrázek časové osy útoku Azure ATP](media/atp-sa-timeline.png)
 
@@ -77,7 +77,7 @@ Pokud kliknete číslo, dostanete stránka výsledků hledání, ve kterém mů�
 
 ### <a name="health-center"></a>Health center
 
-Health center zobrazuje výstrahy, pokud něco nefunguje správně ve vašem pracovním prostoru služby Azure ATP.
+Health center zobrazuje výstrahy, pokud něco nefunguje správně ve vaší instanci služby Azure ATP.
 
 ![Obrázek health center Azure ATP](media/atp-health-issue.png)
 
@@ -91,7 +91,7 @@ Informace o citlivých skupin v Azure ATP, naleznete v tématu [práce s citliv�
 
 ### <a name="mini-profile"></a>Miniprofil
 
-Pokud myší najetí myší na entitu, kdekoli na portálu pro pracovní prostor tam, kde je jedna entita uvedené, například uživatele nebo počítač, mini profil automaticky spustí se zobrazí následující informace, je-li k dispozici a jsou relevantní:
+Pokud myší najetí myší na entitu, kdekoli na portálu ochrany ATP v programu Azure níž se nachází jedna entita uvedené, například uživatele nebo počítač, mini profil automaticky spustí se zobrazí následující informace, pokud je dostupná a relevantní:
 
 ![Obrázek miniprofilu Azure ATP](media/atp-mini-profile.png)
 
@@ -114,5 +114,5 @@ Pokud myší najetí myší na entitu, kdekoli na portálu pro pracovní prostor
 
 ## <a name="see-also"></a>Viz také
 
-- [Vytváření pracovních prostorů služby Azure ATP](install-atp-step1.md)
+- [Vytváření instancí služby Azure ATP](install-atp-step1.md)
 - [Podívejte se na fórum služby Azure ATP.](https://aka.ms/azureatpcommunity)

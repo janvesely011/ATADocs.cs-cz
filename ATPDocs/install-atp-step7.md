@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/14/2018
+ms.date: 12/02/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 1ad5e923-9bbd-4f56-839a-b11a9f387d4b
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9202ba7c2519de0c7cd2eb3103578159dc437e83
-ms.sourcegitcommit: 58c75026e5ec4dcab3b0852a41f9f0a0ad6f22eb
+ms.openlocfilehash: 45858f80efb18060a845da47bfac3353946d18e0
+ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/14/2018
-ms.locfileid: "49315740"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "52744400"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -44,7 +44,7 @@ Pokud chcete nakonfigurovat, postupujte podle těchto kroků:
    ![Honeytoken](media/honeytoken-sensitive.png)
 
 4. Klikněte na **Vyloučení**. Zadejte uživatelský účet nebo IP adresy, které se mají vyloučit z detekce pro jednotlivé typy hrozeb. 
-5. Klikněte na tlačítko *plus* přihlašování. Pole **Add entity** (Přidat entitu) (uživatele nebo počítač) je možné prohledávat a automaticky se vyplní entitami ve vaší síti. Další informace najdete v tématu [vyloučení entit z detekce](excluding-entities-from-detections.md) a [Průvodce prošetřováním podezřelých aktivit](suspicious-activity-guide.md).
+5. Klikněte na tlačítko *plus* přihlašování. Pole **Add entity** (Přidat entitu) (uživatele nebo počítač) je možné prohledávat a automaticky se vyplní entitami ve vaší síti. Další informace najdete v tématu [vyloučení entit z detekce](excluding-entities-from-detections.md) a [Průvodce výstrah zabezpečení](suspicious-activity-guide.md).
 
    ![Vyloučení](media/exclusions.png)
 
@@ -53,9 +53,9 @@ Pokud chcete nakonfigurovat, postupujte podle těchto kroků:
 
 Blahopřejeme, úspěšně jste nasadili rozšířené ochrany před internetovými útoky pro Azure.
 
-Zkontrolujte časovou osu útoků, abyste viděli zjištěné podezřelé aktivity a našli uživatele nebo počítače a zobrazili jejich profily.
+Zkontrolujte na časové ose útoku na zobrazení zjistil výstrah zabezpečení a vyhledejte uživatele nebo počítače a zobrazili jejich profily.
 
-Kontrola ochrany ATP v programu Azure pro podezřelé aktivity spustí okamžitě. Některé způsoby detekce, jako je například neobvyklých změny skupiny vyžadují období učení a nejsou k dispozici okamžitě po nasazení služby Azure ATP.
+Kontrola Azure ATP okamžitě spustí. Některé způsoby detekce, jako je například neobvyklých změny skupiny vyžadují období učení a nejsou k dispozici okamžitě po nasazení služby Azure ATP.
 
 
 ## <a name="see-also"></a>Viz také

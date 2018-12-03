@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: d7c95f8c-04f8-4946-9bae-c27ed362fcb0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: b7ddaca0f0c5691c90873cef9af6cef13fa9650a
-ms.sourcegitcommit: e783df4c9d928fedf6dc3c65d58d9b530cdd2ff2
+ms.openlocfilehash: 2bdfd0fe41ed6dc5f489784c2095cefd2032d135
+ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49800032"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "52744348"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -75,7 +75,7 @@ Pokud chcete ověřit, že se úspěšně nasadil senzoru služby Azure ATP, zko
  >[!NOTE]
  > Verze služby Azure ATP aktualizace často, zkontrolujte nejnovější verzi portálu ochrany ATP v programu Azure, přejděte na **konfigurace** a potom **o**. 
 
-3.  Přejděte na adresu URL vašeho pracovního prostoru. Na portálu ochrany ATP v programu Azure něco vyhledejte v panelu vyhledávání, například uživatele nebo skupinu ve vaší doméně.
+3.  Přejděte na adresu URL instance služby Azure ATP. Na portálu ochrany ATP v programu Azure něco vyhledejte v panelu vyhledávání, například uživatele nebo skupinu ve vaší doméně.
 
 
 

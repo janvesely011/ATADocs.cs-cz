@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 11/28/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 1b7e72c3-a538-443f-981c-398ffafa5ab8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 8fdaa7311d39680ed8e9389f5dc9b7cdeca73197
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: 100964d904c7cda48e75cb5401fbba8a3ec0718e
+ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48782892"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "52744655"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -47,11 +47,11 @@ Pokud chcete zkontrolovat celkový stav pracovního prostoru, klikněte na ikonu
     > [!NOTE]
     > Ochrana ATP v programu Azure může znovu otevřít uzavřené aktivitu, pokud se stejná aktivita zjistí během krátké doby znovu.
     
--   **Suppressed** (Potlačeno): Potlačení aktivity znamená, že ji chcete prozatím ignorovat a upozornění chcete zobrazit, jenom pokud se bude jednat o novou instanci. Pokud je o podobnou výstrahu jako ochrana ATP v programu Azure nebude ho znovu otevřít. Ale pokud výstrahy po dobu sedmi dní zastaví a pak se znovu objeví, budete upozorněni znovu.
+-   **Suppressed** (Potlačeno): Potlačení aktivity znamená, že ji chcete prozatím ignorovat a upozornění chcete zobrazit, jenom pokud se bude jednat o novou instanci. Pokud je o podobnou výstrahu jako ochrana ATP v programu Azure nebude ho znovu otevřít. Ale pokud výstrahy po dobu sedmi dní zastaví a pak se znovu objeví, budete upozorněni, znovu.
 
--   **Znovu otevřít**: aby se zobrazovala Open můžete znovu otevřít uzavřeného nebo Potlačené problém znovu na časové ose.
+-   **Znovu otevřít**: aby se zobrazovala jako můžete znovu otevřít uzavřeného nebo Potlačená výstraha **otevřít** znovu na časové ose.
 
--   **Odstranit**: Z v rámci časové osy podezřelých aktivit, máte také možnost odstranění problému se stavem. Pokud výstrahu odstraníte, odstraní se z pracovního prostoru a nebudete moci obnovit. Po kliknutí na možnost pro odstranění budete moct odstranit všechny podezřelé aktivity stejného typu.
+-   **Odstranit**: Z v rámci časové osy výstrah zabezpečení, máte také možnost odstranění problému se stavem. Pokud výstrahu odstraníte, odstraní se z instance a nebudete moci obnovit. Po kliknutí na odstranit, budete moct odstranit všechny výstrahy zabezpečení stejného typu.
 
 
 

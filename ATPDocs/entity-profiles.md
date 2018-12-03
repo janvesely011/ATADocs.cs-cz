@@ -1,11 +1,11 @@
 ---
-title: Práce s profily uživatelů na portálu pro pracovní prostor rozšířené ochrany před internetovými útoky pro Azure | Dokumentace Microsoftu
-description: Popisuje, jak prozkoumat uživatelů z obrazovky profily uživatelů na portálu pro pracovní prostor služby Azure ATP
+title: Práce s profily uživatelů na portálu Azure Advanced Threat Protection | Dokumentace Microsoftu
+description: Popisuje, jak prozkoumat uživatelů z obrazovky profily uživatelů na portálu služby Azure ATP
 keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 12/02/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 17458706-79fb-4c23-aa42-66979164a45f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 357973698d9d53936c3fa308bc0021ae1cd98f60
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: a36afd4997a2f148bc5a31726aee22914a3607b4
+ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783504"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "52744366"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -26,7 +26,7 @@ ms.locfileid: "48783504"
 
 # <a name="understanding-entity-profiles"></a>Principy profily entit
 
-Profil entity vám poskytne komplexní entity stránka s určená pro celý podrobný rozbor šetření uživatelů, počítačů, zařízení a prostředky, které mají přístup k a jejich historie. Na stránce Profil využívá výhod nových překladač logické aktivity ochrany ATP v programu Azure, který můžete podívat na skupinu aktivit, ke kterým dochází (agregované až minutu) a seskupovat je do jedné logické aktivity umožňují lépe pochopit skutečné aktivity vaši uživatelé.
+Profil entity vám poskytne komplexní entity stránky navržené pro celý podrobný rozbor šetření uživatelů, počítačů, zařízení, prostředky, které mají přístup k a jejich historie. Na stránce Profil využívá výhod nových překladač logické aktivity ochrany ATP v programu Azure, který můžete podívat na skupinu aktivit, ke kterým dochází (agregované až minutu) a seskupovat je do jedné logické aktivity umožňují lépe pochopit skutečné aktivity vaši uživatelé.
 
 Chcete-li získat přístup stránku profil entity, klikněte na název sady entit, jako je například uživatelské jméno na časové ose podezřelé aktivity.
 
@@ -59,7 +59,7 @@ Když kliknete na kartu cesty laterální pohyb, se zobrazí plně dynamického 
 
 Mapa vám poskytne přehled o tom, kolik segmentů směrování mezi počítače nebo uživatelé útočník by mohl do a z tohoto uživatele k ohrožení citlivých účtů, a pokud má uživatel citlivých účtů, můžete zobrazit, kolik prostředky a účty jsou přímo připojené.
 
-Pokud se zjistila aktivita za poslední dva dny grafu již nezobrazuje, ale [laterální pohyb cesta sestavy](reports.md) je k dispozici pro poskytování informací o cesty taktiky Lateral Movement, které existovaly za posledních 60 dní. 
+Pokud pro entitu nebyl zjištěn potenciální LMP během posledních dvou dní, graf se nezobrazí. Vyberte jiné datum pomocí **zobrazit jiné datum** zobrazení předchozích grafů cesty laterální pohyb zjištěných pro tuto entitu. [Laterální pohyb cesta sestavy](reports.md) je vždy k dispozici pro poskytování informací o potenciální cesty taktiky Lateral Movement, které jsou zjištěny a je možné přizpůsobit podle času.  
 
 Další informace najdete v tématu [laterální pohyb cesty](use-case-lateral-movement-path.md). 
 

@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/07/2018
+ms.date: 11/29/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: effca0f2-fcae-4fca-92c1-c37306decf84
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 7ae3f0adca3137664f0a89c15e8feee71d0cd915
-ms.sourcegitcommit: c4978be196e0039c7a5d5887bec4cbc5c01d64f9
+ms.openlocfilehash: 4481f8896791e98f76a6fb6f0b93796337b15ed1
+ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48848609"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "52744327"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -38,17 +38,17 @@ Skupiny rolí umožňují správu přístupu pro služby Azure ATP. Pomocí skup
 
 ## <a name="accessing-the-azure-atp-portal"></a>Přístup k portálu služby Azure ATP
 
-Přístup k portálu ochrany ATP v programu Azure (portal.atp.azure.com) můžete provést pouze uživatele Azure AD, který má role adresáře globální správce nebo správce zabezpečení. Po zadání na portálu, můžete vytvořit pracovní prostor. Služba Ochrana ATP v programu Azure vytvoří tři skupiny zabezpečení ve vašem tenantovi Azure Active Directory: správci, uživatelé, prohlížeče. 
+Přístup k portálu ochrany ATP v programu Azure (portal.atp.azure.com) můžete provést pouze uživatele Azure AD, který má role adresáře globální správce nebo správce zabezpečení. Jakmile zadáte portál, požadované role, můžete vytvořit instanci služby Azure ATP. Služba Ochrana ATP v programu Azure vytvoří tři skupiny zabezpečení ve vašem tenantovi Azure Active Directory: správci, uživatelé, prohlížeče. 
 
 > [!NOTE]
-> Přístup k portálu ochrany ATP v programu Azure poskytována pouze pro uživatele v rámci skupiny zabezpečení služby Azure ATP v rámci Azure Active Directory a globální správci a správci zabezpečení nástroje klienta.
+> Přístup k portálu ochrany ATP v programu Azure poskytována pouze pro uživatele ve skupinách zabezpečení služby Azure ATP v rámci služby Azure Active Directory, stejně jako globální a zabezpečení Správci klienta.
 
 
 ## <a name="types-of-azure-atp-security-groups"></a>Typy skupin zabezpečení služby Azure ATP 
 
-Ochrana ATP v programu Azure nabízí tři typy skupin zabezpečení: ochrana ATP v programu Azure *(název pracovního prostoru)* Administrators, ochrana ATP v programu Azure *(název pracovního prostoru)* uživatele a služby Azure ATP *(název pracovního prostoru)* Prohlížeče. Následující tabulka popisuje typ přístupu na portálu ochrany ATP v programu Azure k dispozici pro jednotlivé role. V závislosti na roli, které přiřadíte, různé obrazovky a možnosti nabídky v ochrany ATP v programu Azure portal nejsou k dispozici pro uživatele, následujícím způsobem:
+Ochrana ATP v programu Azure nabízí tři typy skupin zabezpečení: ochrana ATP v programu Azure *(název instance)* Administrators, ochrana ATP v programu Azure *(název instance)* uživatele a služby Azure ATP *(název instance)* Prohlížeče. Následující tabulka popisuje typ přístupu na portálu ochrany ATP v programu Azure k dispozici pro jednotlivé role. V závislosti na roli, které přiřadíte, různé obrazovky a možnosti nabídky v ochrany ATP v programu Azure portal nejsou k dispozici pro uživatele, následujícím způsobem:
 
-|Aktivita |Ochrana ATP v programu Azure *(název pracovního prostoru)* správci|Ochrana ATP v programu Azure *(název pracovního prostoru)* uživatelů|Ochrana ATP v programu Azure *(název pracovního prostoru)* prohlížeče|
+|Aktivita |Ochrana ATP v programu Azure *(název instance)* správci|Ochrana ATP v programu Azure *(název instance)* uživatelů|Ochrana ATP v programu Azure *(název instance)* prohlížeče|
 |----|----|----|----|
 |Přihlášení|K dispozici|K dispozici|K dispozici|
 |Změna stavu výstrah zabezpečení (potlačení znovu otevřete, zavřete, vyloučení)|K dispozici|K dispozici|Není k dispozici|

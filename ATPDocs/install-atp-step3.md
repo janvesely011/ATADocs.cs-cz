@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 12/02/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 95bb4ec1-841f-41b7-92fe-fbd144085724
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 5a9eea9550af90577ad1763384a134f5889edc5f
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: 9e397d669ba4df7fe9f1ea6b497368b730abc938
+ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783776"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "52744893"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -42,8 +42,8 @@ Klikněte na tlačítko **Stáhnout** v seznamu kroků uvedených v horní čás
 
 1.  Klikněte na tlačítko **senzor**.
 2.  Uložte balíček místně.
-3.  Kopírovat **přístup** **klíč**. Přístupový klíč se vyžaduje senzoru služby Azure ATP pro připojení k vašemu pracovnímu prostoru služby Azure ATP. Přístupový klíč je jednoho heslem pro nasazení ze senzorů, po jejímž uplynutí veškerá komunikace se provádí pomocí certifikátů pro ověřování a šifrování TLS. Použití **znovu vygenerovat** tlačítko Pokud byste zas někdy potřebovali obnovit nový přístupový klíč, můžete, a to nebude mít vliv na všechny dříve nasazené senzorů, protože se používá jenom pro první registraci senzoru.
-4.  Zkopírujte balíček na vyhrazený server nebo řadič domény, na který instalujete senzoru služby Azure ATP. Alternativně můžete otevřít na portálu ochrany ATP v programu Azure pracovní prostor ze vyhrazený server nebo řadič domény a tento krok přeskočit.
+3.  Kopírovat **přístup** **klíč**. Přístupový klíč se vyžaduje pro připojení k vaší instanci služby Azure ATP senzoru služby Azure ATP. Přístupový klíč je jednoho heslem pro nasazení ze senzorů, po jejímž uplynutí veškerá komunikace se provádí pomocí certifikátů pro ověřování a šifrování TLS. Použití **znovu vygenerovat** tlačítko Pokud byste zas někdy potřebovali obnovit nový přístupový klíč, můžete, a to nebude mít vliv na všechny dříve nasazené senzorů, protože se používá jenom pro první registraci senzoru.
+4.  Zkopírujte balíček na vyhrazený server nebo řadič domény, na který instalujete senzoru služby Azure ATP. Alternativně můžete otevřít na portálu ochrany ATP v programu Azure ze vyhrazený server nebo řadič domény a tento krok přeskočit.
 
 Soubor zip obsahuje následující soubory:
 

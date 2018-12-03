@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 603d9e09-a07d-4357-862f-d5682c8bc3dd
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e478fc1a2ae955d66d00b3d87bd5f782354c766d
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: a24210415929b69152377d34aeec1bdc8906d08c
+ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783759"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "52744434"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -60,11 +60,11 @@ Obvykle senzorů automaticky aktualizovat při aktualizaci cloudové službě oc
 To vám umožňuje vybrat konkrétní senzory, na kterých nasazení aktualizace automaticky a aktualizujte zbytek vašeho senzory na zpoždění, až poté, co vidíte plynule nepovedlo počáteční aktualizace.
 
 > [!NOTE]
-> Pokud dojde k chybě a snímače se neaktualizuje, otevřete lístek podpory. Další posílení zabezpečení váš proxy server pouze komunikaci pomocí pracovního prostoru, najdete v článku [konfiguraci proxy serveru](configure-proxy.md)
+> Pokud dojde k chybě a snímače se neaktualizuje, otevřete lístek podpory. Váš proxy server pouze komunikovat s vaší instancí dál posiluje, najdete v článku [konfiguraci proxy serveru](configure-proxy.md)
 
 Nastavení senzoru zpožděné aktualizace:
 
-1. Z portálu pracovního prostoru ochrana ATP v programu Azure klikněte na ikonu nastavení a vyberte **konfigurace**.
+1. Z ochrany ATP v programu Azure portal, klikněte na ikonu nastavení a vyberte **konfigurace**.
 2. Klikněte na **aktualizace** kartu.
 3. V řádku tabulky, vedle každého senzor, kterou chcete zpožděně, nastavte **zpožděné aktualizace** posuvníku **na**.
 4. Klikněte na **Uložit**.

@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 12/02/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 9c173d28-a944-491a-92c1-9690eb06b151
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a7dc9b6c9243377a613490e166fb7c0294ecde99
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: da38cef088dcd255c264792fd70bfebf1c42a34b
+ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783317"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "52744927"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -70,9 +70,9 @@ Pokud proxy server nebo brána firewall blokuje veškerý provoz ve výchozím n
 |Asie|triprd1wcasse1sensorapi.ATP.Azure.com|
 
 
-Můžete také posílit ochranu firewall nebo proxy pravidla pro konkrétní pracovní prostor, že kterou jste vytvořili, tak, že vytvoříte pravidlo pro následující záznamy DNS:
-- \<váš název pracovního prostoru >. atp.azure.com – pro připojení konzoly. Například "Contoso-corp.atp.azure.com"
-- \<váš název pracovního prostoru > sensorapi.atp.azure.com – senzorů připojení. Například "contoso-corpsensorapi.atp.azure.com"
+Můžete také posílit ochranu firewall nebo proxy pravidla pro konkrétní instanci, že kterou jste vytvořili, tak, že vytvoříte pravidlo pro následující záznamy DNS:
+- \<your-instance-name >. atp.azure.com – pro připojení konzoly. Například "Contoso-corp.atp.azure.com"
+- \<your-instance-name > sensorapi.atp.azure.com – senzorů připojení. Například "contoso-corpsensorapi.atp.azure.com"
 
  
 > [!NOTE]

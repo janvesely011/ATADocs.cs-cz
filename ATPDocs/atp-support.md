@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/14/2018
+ms.date: 11/29/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 8ae459ac-9fca-4923-9a1a-dc10d5c50b29
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a5d6693aa44fd82d10654ebd40533100e8834627
-ms.sourcegitcommit: 58c75026e5ec4dcab3b0852a41f9f0a0ad6f22eb
+ms.openlocfilehash: 566b7ac598dcdd0d44d30c50c01846c42d0b643f
+ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/14/2018
-ms.locfileid: "49315757"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "52744791"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -30,13 +30,13 @@ Použijte v následujících zdrojích informací při další informace o nasaz
 
 |Provedete to tak...|...používat toto:|
 |----|----|
-|Projděte si naši dokumentaci nejoblíbenější|Přečtěte si pěti hlavních stránek:<br>- [Co je Azure Advanced Threat Protection?](what-is-atp.md)<br>- [Požadavky služby Azure ATP](atp-prerequisites.md)<br>- [Architektura služby Azure ATP](atp-architecture.md)<br>- [Plánování kapacity v Azure ATP](atp-capacity-planning.md)<br>- [Vytvoření pracovního prostoru](install-atp-step1.md)|
-|Spolupracujte s týmem a kolegy|Přejděte [technické komunitě](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection) Azure rozšířené ochrany před internetovými útoky.|
-|Zkontrolujte informace o předplatném a získání seznamu, které funkce jsou podporovány|Zobrazit [informace o předplatném](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) a [seznam funkcí](https://www.microsoft.com/cloud-platform/azure-information-protection-features) z webu rozšířené ochrany před internetovými útoky pro Azure.|
+|Projděte si naši dokumentaci nejoblíbenější|Přečtěte si pěti hlavních stránek:<br>- [Co je Azure Advanced Threat Protection?](what-is-atp.md)<br>- [Požadavky služby Azure ATP](atp-prerequisites.md)<br>- [Architektura služby Azure ATP](atp-architecture.md)<br>- [Plánování kapacity v Azure ATP](atp-capacity-planning.md)<br>- [Vytvoření instance](install-atp-step1.md)|
+|Spolupracujte s týmem a kolegy|Přejděte [technické komunitě](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection) Azure rozšířené ochrany před internetovými útoky.|
+|Zkontrolujte informace o předplatném a získání seznamu, které funkce jsou podporovány|Zobrazit [informace o předplatném](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) a [seznam funkcí](https://www.microsoft.com/cloud-platform/azure-information-protection-features) z webu rozšířené ochrany před internetovými útoky pro Azure.|
 
 ## <a name="information-about-new-releases-and-updates"></a>Informace o nových verzích a aktualizacích
 
-Produktový tým Azure Advanced Threat Protection publikuje oznámení o nových verzích a aktualizacích na [Enterprise Mobility and Security blog.](https://cloudblogs.microsoft.com/enterprisemobility/author/microsoft-advanced-threat-analytics-team/)
+Produktový tým Azure Advanced Threat Protection publikuje oznámení o nových verzích a aktualizacích na [Enterprise Mobility and Security blog.](https://cloudblogs.microsoft.com/enterprisemobility/author/microsoft-advanced-threat-analytics-team/)
 Příspěvky na blogu doplňují dokumentaci k produktu a informace o podpoře.
 
 Pro aktuální seznam nově vydané funkce a změny v ochrany ATP v programu Azure, podívejte se na [co je nového ve službě Azure Advanced Threat Protection](atp-whats-new.md).
@@ -47,7 +47,7 @@ Tato část obsahuje informace o podpoře, možnosti řešení potíží a komun
 
 Kontaktovat Microsoft Support:
 
-Pokud využíváte program Premier Support, můžete prostřednictvím [portálu pro zákazníky programu Premier Support](https://premier.microsoft.com/) odesílat incidenty, procházet řešení a získat nápovědu.
+Pokud máte plán Premier Support, navštivte [portálu pro zákazníky programu Premier Support](https://premier.microsoft.com/) odesílat incidenty, procházet řešení a získat pomoc.
 
 Pro ostatní zákazníky použijte kanály podpory následujícím způsobem:
 
@@ -66,7 +66,7 @@ Pokud chcete zobrazit stav systému pro ochrany ATP v programu Azure, přejděte
 
 #### <a name="on-demand-videos"></a>Videa na vyžádání
 
-- Relace Microsoft Ignite 2018 pro [rozšířené ochrany před internetovými útoky pro Azure](https://myignite.techcommunity.microsoft.com/sessions?t=%257B%2522from%2522%253A%25222018-09-23T08%253A00%253A00-04%253A00%2522%252C%2522to%2522%253A%25222018-09-28T19%253A00%253A00-04%253A00%2522%257D&q=azure%2520advanced%2520threat%2520protection#ignite-html-anchor).
+- Relace Microsoft Ignite 2018 pro [rozšířené ochrany před internetovými útoky pro Azure](https://myignite.techcommunity.microsoft.com/sessions?t=%257B%2522from%2522%253A%25222018-09-23T08%253A00%253A00-04%253A00%2522%252C%2522to%2522%253A%25222018-09-28T19%253A00%253A00-04%253A00%2522%257D&q=azure%2520advanced%2520threat%2520protection#ignite-html-anchor).
 
 Odstraňování problémů:
 
@@ -76,8 +76,8 @@ Odstraňování problémů:
 
 - Pokud máte Windows Defender ATP nasazené ve vašem prostředí a chcete ji integrovat s Azure Advanced Threat Protection najdete v tématu [integrací se službami ochrany ATP v programu Windows Defender](integrate-wd-atp.md).
 
-- Informace týkající se šetření výstrahy zabezpečení, najdete v článku [Průvodce výstrah zabezpečení](suspicious-activity-guide.md).
+- Informace týkající se šetření výstrahy zabezpečení, najdete v článku [Průvodce výstrah zabezpečení](suspicious-activity-guide.md).
 
 ### <a name="community-resources"></a>Zdroje informací a materiály z komunity
 
-Doporučujeme, abyste [skupiny Yammeru pro službu Azure Advanced Threat Protection](https://www.yammer.com/AskIPTeam). Tento prostředek poskytuje přímé odpovědi od týmu Azure Advanced Threat Protection kromě výhodu sdílených zkušeností a znalostí od jiných správců a konzultantů.
+Doporučujeme, abyste [skupiny Yammeru pro službu Azure Advanced Threat Protection](https://www.yammer.com/AskIPTeam). Tento prostředek poskytuje přímé odpovědi od týmu Azure Advanced Threat Protection kromě výhodu sdílených zkušeností a znalostí od jiných správců a konzultantů.

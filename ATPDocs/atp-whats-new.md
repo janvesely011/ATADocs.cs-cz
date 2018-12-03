@@ -13,16 +13,34 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 30aa912193998b5c9b3d93265708511c6a0ae496
-ms.sourcegitcommit: eac0aa855270b550dfb4b8c61b9cf0953f1e5204
+ms.openlocfilehash: e960e93470462acaf77c2033153af23725fe5e91
+ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52298149"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "52744502"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
 # <a name="whats-new-in-azure-atp"></a>Co je nového v Azure ATP 
+
+## <a name="azure-atp-release-257"></a>Verze ochrany ATP v programu Azure 2.57
+Vydáno 2. prosince 2018
+
+- **Nová výstraha zabezpečení: Podezřelý anomálií použití lístku Golden ticket (preview)**<br>
+Azure ATP [podezřelý Golden Ticket použití – lístek anomoly](suspicious-activity-guide.md) výstraha zabezpečení je teď ve verzi public preview. <br> Útočníci s právy správce domény může ohrozit účet KRBTGT. Pomocí účtu KRBTGT, útočníci můžete vytvořit lístek Kerberos udělující lístek (TGT), který poskytuje autorizaci k jakémukoli prostředku. 
+<br>Tato falešných lístků TGT se nazývá "Zlatých lístků", protože to útočníkům umožňuje dosáhnout trvalého trvalost sítě. Falešných Zlatých lístků tohoto typu mají jedinečné charakteristiky, které toto nové zjišťování je navržená speciálně pro identifikaci. 
+
+
+- **Vylepšení funkce: Automatické vytvoření instance (pracovní prostor) služby Azure ATP** <br>
+Od dnešního dne, ochrana ATP v programu Azure *pracovní prostory* se přejmenovat ochrany ATP v programu Azure *instance*. Ochrana ATP v programu Azure teď podporuje jednu instanci služby Azure ATP jeden účet služby Azure ATP. Instance pro nové zákazníky jsou vytvořené pomocí Průvodce vytvořením instance v [ochrany ATP v programu Azure portal](https://portal.atp.azure.com). Existujícím pracovním prostorům ochrany ATP v programu Azure se automaticky převedou na instance služby Azure ATP s aktualizací.  
+
+  - Zjednodušené vytváření instance pro rychlejší nasazení a ochranu pomocí [vytvořit instanci služby Azure ATP](install-atp-step1.md). 
+  - Všechny [ochrany osobních údajů a dodržování předpisů](atp-privacy-compliance.md) zůstává stejná. 
+
+  Zobrazit [vytvořit instanci služby Azure ATP](install-atp-step1.md) Další informace. 
+
+- Tato verze obsahuje vylepšení a opravy chyb pro interní senzor infrastruktury.
 
 ## <a name="azure-atp-release-256"></a>Verze ochrany ATP v programu Azure 2.56
 Vydáno 25. listopadu 2018

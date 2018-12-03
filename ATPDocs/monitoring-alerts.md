@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 12/02/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,18 +13,18 @@ ms.technology: ''
 ms.assetid: d0551e91-3b21-47d5-ad9d-3362df6d47c0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: eed1509cb31885bccdfcc40505284dbdbdfc4cca
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: 8cff5cbba1c9ed8d04764d9839a5cb2c66093c81
+ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783878"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "52744757"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
 # <a name="understanding-azure-atp-sensor-and-standalone-sensor-monitoring-alerts"></a>Principy senzoru služby Azure ATP a samostatný senzor výstrah monitorování
 
-Health Center ochrany ATP v programu Azure vám umožňuje vědět, že dojde k nějakému problému s váš pracovní prostor služby Azure ATP vyvoláním monitorovacího upozornění. Tento článek popisuje všechna monitorovací upozornění jednotlivých komponent včetně příčiny a postupu vedoucího k vyřešení problému.
+Health Center ochrany ATP v programu Azure vám umožňuje vědět, že dojde k nějakému problému s vaší instancí služby Azure ATP vyvoláním monitorovacího upozornění. Tento článek popisuje všechna monitorovací upozornění jednotlivých komponent včetně příčiny a postupu vedoucího k vyřešení problému.
 
 ## <a name="read-only-user-password-to-expire-shortly"></a>Brzy vyprší platnost hesla uživatele jen pro čtení
 

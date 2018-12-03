@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 12/02/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,18 +13,18 @@ ms.technology: ''
 ms.assetid: e7f065fa-1ad1-4e87-bd80-99cc695efbf5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a175a23a087b11d481dbcf055bff4fe5577b4f8e
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: a5b0befaa484a94cf307559296c887370228abb4
+ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783113"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "52744298"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
 
 
-# <a name="change-azure-atp-workspace-portal-configuration---domain-connectivity-password"></a>Změna ochrany ATP v programu Azure konfigurace portálu pracovního prostoru – heslo připojení k doméně
+# <a name="change-azure-atp-portal-configuration---domain-connectivity-password"></a>Změna konfigurace portálu ochrany ATP v programu Azure – heslo připojení k doméně
 
 
 
@@ -38,7 +38,7 @@ Postupujte podle následujícího postupu aktualizujte heslo připojení k domé
 > [!NOTE]
 > Toto je uživatelské jméno a heslo z místního nasazení služby Active Directory a nikoli z Azure AD.
 
-1.  Otevřít na portálu ochrany ATP v programu Azure díky přístupu do adresy URL pracovního prostoru.
+1.  Otevřete portál ochrany ATP v programu Azure přístup k portálu adresy URL.
 
 2.  Na panelu nástrojů vyberte možnost nastavení a vyberte **Konfigurace**.
 

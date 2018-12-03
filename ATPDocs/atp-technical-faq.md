@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/29/2018
+ms.date: 11/29/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 6a9b5273-eb26-414e-9cdd-f64406e24ed8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f3336189338b16a58a4e8bf67490948a163e9d56
-ms.sourcegitcommit: c10a1c5d1e5408b5473a31485346915908688680
+ms.openlocfilehash: 0001be015d45809a0ca550287452cfc4c366778d
+ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50208149"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "52744774"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -34,7 +34,7 @@ Tento článek obsahuje seznam častých otázek a odpovědí týkajících se o
 
 ### <a name="what-can-azure-atp-detect"></a>Co dokáže ochrana ATP v programu Azure?
 
-Ochrana ATP v programu Azure zjistí známé nebezpečné útoky a techniky, problémy se zabezpečením a rizika.
+Ochrana ATP v programu Azure zjistí známé nebezpečné útoky a techniky, problémy zabezpečení a rizika pro vaši síť.
 Úplný seznam detekcí ochrany ATP v programu Azure najdete v tématu [jaké detekce ochrany ATP v programu Azure provádí?](suspicious-activity-guide.md).
 
 ### <a name="what-data-does-azure-atp-collect"></a>Jaká data shromažďuje nástroj ochrany ATP v programu Azure? 
@@ -63,15 +63,15 @@ Ano. Protože počítače účty (stejně jako ostatní entity) lze použít k p
 Ochrana ATP v programu Azure je k dispozici jako součást řešení Enterprise Mobility + Security 5 suite (EMS E5) a jako samostatnou licenci. Můžete získat licence přímo od [portál služeb Office 365](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-pricing) nebo prostřednictvím licenčního modelu partnera CSP (Cloud Solution).
 
 ### <a name="is-this-going-to-be-a-part-of-azure-active-directory-or-on-premises-active-directory"></a>Bude součástí Azure Active Directory nebo místní služby Active Directory?
-Toto řešení je momentálně samostatné nabídky. Není součástí Azure Active Directory nebo místní služby Active Directory.
+Toto řešení ochrany ATP v programu Azure je momentálně samostatné nabídky. Není součástí Azure Active Directory nebo místní služby Active Directory.
 
 ### <a name="is-my-data-isolated-from-other-customer-data"></a>Jsou moje data nezávisle ostatní zákaznická data? 
 
-Ano, vaše data jsou izolované na základě ověřování přístupu a logické oddělení podle identifikátoru zákazníka. Každý zákazník přístupná pouze data shromážděná z vlastní organizace a obecná data, která poskytuje Microsoft.
+Ano, vaše data jsou izolované na základě ověřování přístupu a logické oddělení podle zákazníka identifikátory. Každý zákazník přístupná pouze data shromážděná z vlastní organizace a obecná data, která poskytuje Microsoft.
 
 ### <a name="do-i-have-the-flexibility-to-select-where-to-store-my-data"></a>Je nutné možnost vyberte, kam chcete uložit Moje data? 
 
-Při vytváření pracovního prostoru ochrana ATP v programu Azure, které můžete ukládat data, můžete k ukládání dat v datových center Microsoft Azure v USA nebo Evropa. Po nakonfigurování nejde změnit umístění, kde se vaše data jsou uložená. Microsoft nebude přenášet data ze zadaného umístění.                
+Ne. Je vytvořena instance vaší služby Azure ATP, je automaticky uložené v datovém centru země nejblíže zeměpisné umístění vašeho tenanta AAD. Azure data ochrany ATP v programu nelze přesunout, po vytvoření instance služby Azure ATP do různých datových center.                
 
 ### <a name="how-does-microsoft-prevent-malicious-insider-activities-and-abuse-of-high-privilege-roles"></a>Jak Microsoft zabránit aktivity zlými úmysly a zneužití vysoká oprávnění rolí? 
 
@@ -107,14 +107,14 @@ Pokud se virtuální řadič domény nedá pokrýt komponentou senzoru služby A
 
 Pro řadiče domény ke komunikaci s cloudovou službou, je nutné otevřít: *. atp.azure.com port 443 v brány firewall a proxy. Pokyny, jak to udělat, najdete v části [konfigurace proxy serveru nebo brány firewall k umožnění komunikace s Azure ATP senzorů](configure-proxy.md).
 
-### <a name="can-azure-atp-monitor-domain-controllers-be-virtualized-on-your-iaas-solution"></a>Je možné Virtualizovat řadiče domény monitorování ochrany ATP v programu Azure ve vašem řešení IaaS?
+### <a name="can-azure-atp-monitored-domain-controllers-be-virtualized-on-your-iaas-solution"></a>Můžete služby Azure ATP monitoruje řadiče domény virtualizované ve vašem řešení IaaS?
 Senzoru služby Azure ATP Ano, můžete použít k monitorování řadičů domény, které jsou v libovolném řešení IaaS.
 
 ### <a name="can-azure-atp-support-multi-domain-and-multi-forest"></a>Ochrana ATP v programu Azure může podporovat víc domén a doménových struktur?
 Azure Advanced Threat Protection podporuje prostředí s více doménami a několik doménových struktur. Tato funkce je aktuálně ve verzi public preview. Další informace a známých omezeních najdete v tématu [podporu více doménovými strukturami](atp-multi-forest.md).
 
 ### <a name="can-you-see-the-overall-health-of-the-deployment"></a>Dá se zjistit celkový stav nasazení?
-Ano, můžete zobrazit celkový stav nasazení a také konkrétní problémy související s konfigurací, připojení atd. kde se zobrazí výstraha při jejich výskytu.
+Ano, můžete zobrazit celkový stav nasazení a také konkrétní problémy související s konfigurací, připojení atd. kde se zobrazí výstraha při jejich výskytu pomocí upozornění na stav ochrany ATP v programu Azure.
 
 ## <a name="operation"></a>Operace
 
@@ -124,10 +124,10 @@ Ochrana ATP v programu Azure lze nakonfigurovat na odesílání výstrahy Syslog
 ### <a name="why-are-certain-accounts-considered-sensitive"></a>Proč se některé účty považují za citlivé?
 To se stane, když je účet členem skupiny, které jsou určené jako citlivé (například: "Domain Admins").
 
-Pokud chcete pochopit, proč je účet citlivý, můžete zkontrolovat jeho členství ve skupinách a zjistit, do kterých citlivých skupin patří (skupina, do které patří, může být citlivá také kvůli jiné skupině, takže je potřeba celý proces opakovat tak dlouho, až zjistíte citlivou skupinu nejvyšší úrovně). Můžete také [značky jako citlivé účty ručně](sensitive-accounts.md).
+Pokud chcete pochopit, proč je účet citlivý, můžete zkontrolovat jeho členství ve skupinách a zjistit, do kterých citlivých skupin patří (skupina, do které patří, může být citlivá také kvůli jiné skupině, takže je potřeba celý proces opakovat tak dlouho, až zjistíte citlivou skupinu nejvyšší úrovně). Můžete také ručně [jako citlivé účty značka](sensitive-accounts.md).
 
 ### <a name="do-you-have-to-write-your-own-rules-and-create-a-thresholdbaseline"></a>Je potřeba psát vlastní pravidla a určovat prahové nebo základní hodnoty?
-S Azure Advanced Threat Protection není nutné k vytváření pravidel ani prahových nebo standardní hodnoty a jejich následné vyladění. Ochrana ATP v programu Azure analyzuje chování uživatelů, zařízení a prostředků, a také jejich vzájemných vztazích – a dokáže detekovat podezřelé aktivity a známé útoky se rychle. Tři týdny po nasazení služby Azure ATP začne detekovat behaviorálně podezřelé aktivity. Na druhé straně ochrany ATP v programu Azure začne okamžitě po nasazení detekuje známé útoky se zlými úmysly a problémy se zabezpečením.
+S Azure Advanced Threat Protection není nutné k vytváření pravidel ani prahových nebo standardní hodnoty a jejich následné vyladění. Ochrana ATP v programu Azure analyzuje chování uživatelů, zařízení a prostředky, jakož i jejich vzájemných vztazích a dokáže detekovat podezřelé aktivity a známé útoky se rychle. Tři týdny po nasazení služby Azure ATP začne detekovat behaviorálně podezřelé aktivity. Na druhé straně ochrany ATP v programu Azure začne okamžitě po nasazení detekuje známé útoky se zlými úmysly a problémy se zabezpečením.
 
 ## <a name="troubleshooting"></a>Odstraňování potíží
 ### <a name="what-should-i-do-if-the-azure-atp-sensor-or-standalone-sensor-doesnt-start"></a>Co mám dělat, když ochrana ATP v programu Azure nebo samostatný senzor nespustí?
