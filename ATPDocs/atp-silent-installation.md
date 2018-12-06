@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/09/2017
+ms.date: 12/05/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 24eca4c6-c949-42ea-97b9-41ef0fb611f1
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 7b216ebcfd5a7255713eebcf9f9c830c4bd49854
-ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
+ms.openlocfilehash: fec3ccbf44b4637132d769e35c4c83f7a4b5e5f5
+ms.sourcegitcommit: bdf5dc203ecec3e7542f2ed08852afeff4f20dcd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "52744740"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52950318"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -74,9 +74,9 @@ Použijte následující příkaz k provedení plně tiché instalace senzoru sl
 > [!div class="mx-tableFixed"]
 |Název|Syntaxe|Povinné pro bezobslužnou instalaci?|Popis|
 |-------------|----------|---------|---------|
-|accessKey|AccessKey = "\*\*"|Ano|Nastaví přístupový klíč, který se použije k registraci senzoru služby Azure ATP s pracovním prostorem služby Azure ATP.|
+|accessKey|AccessKey = "\*\*"|Ano|Nastaví přístupový klíč, který se použije k registraci senzoru služby Azure ATP s instancí služby Azure ATP.|
 
-**Příklady**: bezobslužné instalace senzoru služby Azure ATP, přihlaste se k doméně připojené k počítači pomocí přihlašovacích údajů správce ochrany ATP v programu Azure tak, že není potřeba zadat přihlašovací údaje jako součást instalace. V opačném případě ho zaregistrujte s cloudovou službou ochrany ATP v programu Azure, pomocí zadaných přihlašovacích údajů:
+**Příklady**: bezobslužné instalace senzoru služby Azure ATP použijte následující příkaz:
 
     "Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" 
     AccessKey="3WlO0uKW7lY6Lk0+dfkfkJQ0qZV6aSq5WxLf71+fuBhggCl/BMs9JxfAwi7oy9vYGviazUS1EPpzte7z8s4grw==" 

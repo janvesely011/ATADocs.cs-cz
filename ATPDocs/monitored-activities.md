@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 37d1a032-65e7-4a89-be0b-c3f9cc2bacdb
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a0109f6d1e2d8bcefd633acdfee18fec4406b2a2
-ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
+ms.openlocfilehash: afcad5dccda979bed54e7808bddb3c4190f5c3a8
+ms.sourcegitcommit: bdf5dc203ecec3e7542f2ed08852afeff4f20dcd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52745179"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52950335"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -75,14 +75,17 @@ Informace sledováno ochrany ATP v programu Azure se zobrazí ve formuláři akt
 
 |Monitorovaných aktivit|Popis|
 |---------------------|------------------|
+|Replikace adresářové služby  |Použít při pokusu o replikaci adresářové služby.|
+|Dotaz DNS  |Uživatel provést dotaz AXFR proti řadiči domény.|
 |Spuštění WMI  |Uživatel se pokusil o vzdálené spuštění metody WMI.|
 |Vytvoření služby   |Uživatel se pokusil vzdáleně vytvořit konkrétní služby do vzdáleného počítače.|
 |Výčet relací SMB   |Uživatel se pokusil vytvořit výčet všech uživatelů s otevřenými relacemi SMB na řadičích domény.|
+|Kopírování souborů protokolu SMB| Uživatel zkopírovat soubory přes protokol SMB|
 |Plánování úkolů  |Uživatel se pokusil vzdáleně naplánovat X úkol ke vzdálenému počítači.|
 |Dotaz SAMR   |Uživatel provedl dotaz SAMR.|
 |Načítání dat soukromých  |Uživatel se pokusil/úspěšně dotazu privátní data pomocí protokolu LSARPC.|
-|Replikace adresářové služby  |Použít při pokusu o replikaci adresářové služby.|
-|Dotaz DNS  |Uživatel provést dotaz AXFR proti řadiči domény.|
+
+
 
 
 ## <a name="monitored-user-activities-login-operations"></a>Monitoruje aktivity uživatelů: operace přihlášení
