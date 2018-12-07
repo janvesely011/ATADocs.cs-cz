@@ -2,10 +2,10 @@
 title: Referenční informace o události ID ATA | Dokumentace Microsoftu
 description: Poskytuje seznam události ID ATA a jejich popisy.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: mbaldwin
-ms.date: 3/21/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.service: ''
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 5d639e84-2e37-43a9-9667-49be6c4fa8b7
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 38610c6b8f94dbe1a31e218e064750bf2bde2c49
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 353395f782d29bb18e95c02ad56407a592d8c20b
+ms.sourcegitcommit: 2b15356612eb720f83235ff8cb08e4a6435206ea
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133136"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53022420"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
@@ -89,7 +89,13 @@ Události najdete tady:
 
 2007 – podezřelé aktivity rekognoskace DNS 
 
-2008 – podezřelá aktivita snížení úrovně šifrování 
+2008 – podezřelá aktivita snížení úrovně šifrování (žádné podtyp)
+
+2009 – aktivita snížení úrovně šifrování podezřelé (podezřelý GoldenTicket)
+       
+2010 – aktivita snížení úrovně šifrování podezřelé (podezřelý Overpass-The-Hash)
+
+2011 – aktivita snížení úrovně šifrování podezřelé (podezřelý Skeleton Key)
 
 2012 – výčet relací podezřelé aktivity 
 
@@ -113,7 +119,11 @@ Události najdete tady:
 
 2023 – útok hrubou silou podezřelé aktivity 
 
-2024 - neobvyklé citlivou skupinu členství změnit podezřelé aktivity  
+2024 – neobvyklé členství změnit na podezřelé aktivity senstitive skupiny 
+
+2025 – neobvyklé podezřelou aktivitu sítě VPN
+
+2026 – škodlivé služby vytvoření podezřelé aktivity
 
 ## <a name="ata-auditing-events"></a>Události auditu ATA
 

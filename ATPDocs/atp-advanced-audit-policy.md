@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ab1e8dd9-a6c2-4c68-89d5-343b8ec56142
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d812673ed387bcd6a14e6b316cb2224819c503e3
-ms.sourcegitcommit: 46b6a5088ed975bcfb36e7f9a3b5c00ecd5e185a
+ms.openlocfilehash: 9d9294a22d1e3fd1847d42bd376e65fd114b04bf
+ms.sourcegitcommit: a2f6b52f66c89b9f2ca7410426b759a0b0de8d31
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51645272"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52981934"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -56,8 +56,8 @@ Pokročilé zásady auditu zabezpečení povolená přes **výchozí zásada řa
 
     ![Auditovat správu skupiny zabezpečení](media/atp-advanced-audit-policy-check-step-4.png)
 
-> [!NOTE]
-> Pokud se rozhodnete použít místní zásady, nezapomeňte přidat **přihlášení k účtu** a **správu účtů** protokoly v místních zásad auditu. Pokud konfigurujete zásady auditu pokročilé, ujistěte se, že chcete vynutit [podkategorie zásad auditu](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/audit-force-audit-policy-subcategory-settings-to-override).
+    > [!NOTE]
+    > Pokud se rozhodnete použít místní zásady, nezapomeňte přidat **přihlášení k účtu** a **správu účtů** protokoly v místních zásad auditu. Pokud konfigurujete zásady auditu pokročilé, ujistěte se, že chcete vynutit [podkategorie zásad auditu](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/audit-force-audit-policy-subcategory-settings-to-override).
 
 7. Po použití pomocí objektu zásad skupiny, nové události jsou viditelné v rámci vaší **protokoly událostí Windows**.
 
