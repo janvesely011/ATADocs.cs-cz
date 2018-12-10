@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 37d1a032-65e7-4a89-be0b-c3f9cc2bacdb
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: afcad5dccda979bed54e7808bddb3c4190f5c3a8
-ms.sourcegitcommit: bdf5dc203ecec3e7542f2ed08852afeff4f20dcd
+ms.openlocfilehash: f8bc815c3ffad4f75d84a69f2e6c30cc0707d8e3
+ms.sourcegitcommit: d1c9c3e69b196f6086a8f100e527553cf0d95aac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52950335"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53125026"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -41,10 +41,6 @@ Informace sledováno ochrany ATP v programu Azure se zobrazí ve formuláři akt
 
 |Monitorovaných aktivit|Popis|
 |---------------------|------------------|
-|Změnit e-mailu uživatele|Atribut e-mailu uživatele byl změněn.|
-|Změnit správce uživatelů|Atribut uživatele správce se změnil.|
-|Změnit telefonní číslo uživatele|Atribut telefonního čísla uživatele byl změněn.|
-|Změnit pozice uživatele |Název atributu uživatele byl změněn.|
 |Účet omezeného delegování stav se změnil |Stav účtu je teď zapnutá nebo vypnutá delegování.|
 |Hlavní názvy služby omezené delegování změnu účtu | Omezené delegování omezuje služby, ke kterým může zadaný server fungovat jménem uživatele.|
 |Zakázané změnu účtu |Označuje, zda je účet zakázána nebo povolena.|
@@ -57,8 +53,12 @@ Informace sledováno ochrany ATP v programu Azure se zobrazí ve formuláři akt
 |Provedení změny účtu není vyžadováno heslo |Účet uživatele byl změněn povolit přihlášení pomocí prázdné heslo.|
 |Provedení změny účtu vyžaduje čipovou kartu  |Změny účtu budou muset uživatelé přihlásit k zařízení pomocí čipové karty.|
 |Podporované typy šifrování změnit účet |Typy šifrování podporované protokolem Kerberos se změnila (typy: Des, AES 129, AES 256)|
-|Změnit členství ve skupině  |Uživatel byl, přidání nebo odebrání, z ní, jiným uživatelem nebo samy o sobě.|
 |Změnit hlavní uživatelské jméno účtu  |Hlavní název uživatele byl změněn.|
+|Změnit členství ve skupině  |Uživatel byl, přidání nebo odebrání, z ní, jiným uživatelem nebo samy o sobě.|
+|Změnit e-mailu uživatele|Atribut e-mailu uživatele byl změněn.|
+|Změnit správce uživatelů|Atribut uživatele správce se změnil.|
+|Změnit telefonní číslo uživatele|Atribut telefonního čísla uživatele byl změněn.|
+|Změnit pozice uživatele |Název atributu uživatele byl změněn.|
 
 ## <a name="monitored-user-activities-ad-security-principal-operations"></a>Monitoruje aktivity uživatelů: operace instančního objektu zabezpečení AD
 
@@ -77,16 +77,13 @@ Informace sledováno ochrany ATP v programu Azure se zobrazí ve formuláři akt
 |---------------------|------------------|
 |Replikace adresářové služby  |Použít při pokusu o replikaci adresářové služby.|
 |Dotaz DNS  |Uživatel provést dotaz AXFR proti řadiči domény.|
-|Spuštění WMI  |Uživatel se pokusil o vzdálené spuštění metody WMI.|
+|Načítání dat soukromých  |Uživatel se pokusil/úspěšně dotazu privátní data pomocí protokolu LSARPC.|
 |Vytvoření služby   |Uživatel se pokusil vzdáleně vytvořit konkrétní služby do vzdáleného počítače.|
 |Výčet relací SMB   |Uživatel se pokusil vytvořit výčet všech uživatelů s otevřenými relacemi SMB na řadičích domény.|
 |Kopírování souborů protokolu SMB| Uživatel zkopírovat soubory přes protokol SMB|
-|Plánování úkolů  |Uživatel se pokusil vzdáleně naplánovat X úkol ke vzdálenému počítači.|
 |Dotaz SAMR   |Uživatel provedl dotaz SAMR.|
-|Načítání dat soukromých  |Uživatel se pokusil/úspěšně dotazu privátní data pomocí protokolu LSARPC.|
-
-
-
+|Plánování úkolů  |Uživatel se pokusil vzdáleně naplánovat X úkol ke vzdálenému počítači.|
+|Spuštění WMI  |Uživatel se pokusil o vzdálené spuštění metody WMI.|
 
 ## <a name="monitored-user-activities-login-operations"></a>Monitoruje aktivity uživatelů: operace přihlášení
 

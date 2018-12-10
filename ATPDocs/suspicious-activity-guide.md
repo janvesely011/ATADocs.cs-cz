@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 12/02/2018
+ms.date: 12/09/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a32d19e8e130f326859276dde60c794712da5a91
-ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
+ms.openlocfilehash: 8604e3cfead3b52fd9f0d1ed38bb7d806cf50f46
+ms.sourcegitcommit: d1c9c3e69b196f6086a8f100e527553cf0d95aac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "52744808"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53125128"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -65,11 +65,10 @@ Ve verzi 2.56 všechny existující výstrahy zabezpečení služby Azure ATP by
 |Podezřelé úprava citlivých skupin|Podezřelé úprava citlivých skupin|2024|
 |Podezřelé vytvoření služby|Podezřelé vytvoření služby|2026|
 |Podezřelé připojení k síti VPN|Podezřelé připojení k síti VPN|2025|
-|Podezření na útok WannaCry ransomwaru|Neobvyklá implementace protokolu (možný útok ransomwarem WannaCry) *|2002|
-|Podezřelý útok hrubou silou (SMB)|Neobvyklá implementace protokolu (potenciální použití škodlivých nástrojů, jako je Hydra) *|2002|
-|Podezřelé použití Metasploit hacking framework|Neobvyklá implementace protokolu (potenciální použijte Metasploit hacking nástroje) *|2002|
-|Podezření na útok overpass-the-hash (Kerberos)|Neobvyklý protokol Kerberos protokol implementace (možný útok overpass-the-hash) *|2002|
-|* *Neobvyklá implementace protokolu* výstrahy aktuálně sdílet externalId. ExternalId pro každý typ tyto výstrahy se změní v budoucích vydáních na jedinečné externalId||****|
+|Podezření na útok WannaCry ransomwaru|Neobvyklá implementace protokolu (možný útok ransomwarem WannaCry)|2002|
+|Podezřelý útok hrubou silou (SMB)|Neobvyklá implementace protokolu (potenciální použití škodlivých nástrojů, jako je Hydra)|2002|
+|Podezřelé použití Metasploit hacking framework|Neobvyklá implementace protokolu (potenciální použijte Metasploit hacking nástroje)|2002|
+|Podezření na útok overpass-the-hash (Kerberos)|Neobvyklá implementace protokolu Kerberos (možný útok overpass-the-hash)|2002|
 |Rekognoskace členství uživatelů a skupin (SAMR)|Rekognoskace pomocí dotazů na adresářové služby|2021|
 |Uživatele a IP adres pro rekognoskaci (SMB) |Rekognoskace pomocí výčtu relací SMB|2012|
 
@@ -262,7 +261,7 @@ V této detekce se aktivuje upozornění při generování podezřelá replikace
 2. Dotyčný počítač by měl být replikaci dat ze služby Active Directory? Například Azure AD Connect. Pokud ano, **zavřít a vyloučit** podezřelou aktivitu.
 3. Klikněte na zdrojovém počítači přejděte na stránku jeho profil. Zkontrolujte, co se stalo **v době** replikace, hledání neobvyklých aktivit, jako například: kdo byl přihlášen, které prostředky byly použity a co je počítač, operační systém?
 
-   1.  Jsou všichni uživatelé, které se připojily k počítači, by měl být přihlášení? Jaké jsou jejich oprávnění? Mají oprávnění k provedení akce replikace (jsou domain admins)?
+   1.  Jsou všichni uživatelé, které se připojily k počítači, by měl být přihlášení? Jaké jsou jejich oprávnění? Mají oprávnění k provedení replikace (jsou domain admins)?
    2.  Mají uživatelé k těmto prostředkům přístup?
    3. Běží počítači operační systém Windows Server (nebo Windows/Linux)? Počítač jiného typu než server by nemělo replikovat data.
 Pokud jste nepovolili integraci ochrany ATP v programu Windows Defender, klikněte na možnost ochrana ATP v programu Windows Defender Odznáček ![ochrany ATP v programu Windows Defender oznámení "BADGE"](./media/wd-badge.png) k hlubšímu prošetření je počítač. V programu Windows Defender ATP zobrazí se výstrahy a procesů došlo k přibližně v době výstrahy.
@@ -420,7 +419,7 @@ Změnit heslo protokolu Kerberos KRBTGT Ticket Granting Ticket () dvakrát podle
 
 **Popis**
 
-Útočníci s právy správce domény může ohrozit účet KRBTGT. Pomocí účtu KRBTGT, můžete vytvořit lístek Kerberos udělující lístek (TGT), který poskytuje autorizaci k jakémukoli prostředku. Falešných lístků TGT tohoto typu se nazývá "Zlatých lístků", protože to útočníkům umožňuje dosáhnout trvalého trvalost sítě. Falešných Zlatých lístků tohoto typu mají jedinečné charakteristiky, které toto zjišťování je navržená speciálně pro identifikaci. 
+Útočníci s právy správce domény může ohrozit účet KRBTGT. Pomocí účtu KRBTGT, můžete vytvořit lístek Kerberos udělující lístek (TGT), který poskytuje autorizaci k jakémukoli prostředku. Falešných lístků TGT tohoto typu se nazývá "Zlatých lístků", protože to útočníkům umožňuje dosáhnout trvalého trvalost sítě. Falešných Zlatých lístků tohoto typu mají jedinečné charakteristiky, které tato detekce slouží k identifikaci. 
 
 **Šetření**
 1. Služba FS může vygenerovat lístků, které aktivuje toto upozornění. Zdrojový počítač hostitele těchto služeb? Pokud ano, zavřete výstrahu zabezpečení.
@@ -578,7 +577,7 @@ Interní server DNS lze proti rekognoskaci pomocí DNS zabezpečit zakázáním 
 
 **Popis**
 
-Protokol DNS ve většině organizací je obvykle není monitorovat a zřídka blokované před škodlivými aktivitami. To umožňuje útočníkovi na napadeném počítači zneužívání protokolu DNS. Škodlivý komunikace prostřednictvím DNS je možné pro průsak dat ven, příkaz a ovládací prvek a/nebo omezení úmyslem vyhnout podnikové sítě.
+Protokol DNS ve většině organizací je obvykle není monitorovat a zřídka blokované před škodlivými aktivitami. To umožňuje útočníkovi na napadeném počítači zneužívání protokolu DNS. Škodlivý komunikace prostřednictvím DNS je možné pro průsak dat ven, příkazu a řízení a/nebo omezení úmyslem vyhnout podnikové sítě.
 
 **Šetření**
 > [!NOTE]
@@ -671,41 +670,152 @@ Oznámení se otevře po odchylky od chování uživatele podle algoritmu strojo
 2.  Vezměte v úvahu blokování tento uživatel v připojení prostřednictvím sítě VPN.
 
 
-## <a name="unusual-protocol-implementation"></a>Neobvyklá implementace protokolu
+## <a name="suspected-wannacry-ransomware-attack"></a>Podezření na útok WannaCry ransomwaru
 <a name="unusual-protocol-implementation"></a>
 
-*Předchozí název:* neobvyklá implementace protokolu *této skupiny výstrahy zabezpečení bude přejmenován a uvedený nový externalIds v budoucí verzi ochrany ATP v programu Azure*
+*Předchozí název:* neobvyklá implementace protokolu (možný útok ransomwarem WannaCry)
 
 **Popis**
 
-Útočníci použít nástroje, které implementují různé protokoly (SMB, Kerberos, NTLM) nestandardním způsobem. Tento typ síťového provozu je přijat ve Windows bez upozornění, je ochrana ATP v programu Azure rozpoznat potenciální škodlivým činnostem. Chování je indikátorem techniky, jako je například over-pass-the-Hash a útoky hrubou silou, jakož i zneužití používané Upřesnit ransomwaru, například WannaCry.
+Útočníci používají nástroje, které různé protokoly implementují nestandardním způsobem. Tento typ síťového provozu je přijat ve Windows bez upozornění, je ochrana ATP v programu Azure rozpoznat potenciální škodlivým činnostem. Chování je indikátorem technik používaných pokročilé ransomwaru, jako je například WannaCry.
 
 **Šetření**
 
-Identifikace protokol, který neobvyklé – z časové osy podezřelých aktivit, klikněte na výstrahu zabezpečení zobrazíte na stránku jeho podrobnosti. protokol se zobrazí nad šipku: protokolu Kerberos nebo NTLM.
+Projděte si neobvyklé aktivity v dané výstraze zabezpečení na časové ose aktivity. Klikněte na výstrahu zabezpečení jeho podrobnosti stránku a pak zkontrolujte potenciálně ohrožený entit a seznamu důkaz. 
 
-- **Protokol Kerberos**: to se často aktivuje, pokud hackerům nástroj, jako je nástroj Mimikatz se použil, potenciálně provedení útoku Overpass-the-Hash. Zaškrtněte, pokud zdrojovém počítači běží aplikace, která implementuje vlastní zásobník protokolu Kerberos, není v souladu s RFC protokolu Kerberos. Pokud je to tento případ, se jedná o neškodné pravdivě pozitivní upozornění a můžete **Zavřít** výstrahu. Pokud výstrahu pokračuje k aktivaci a je stále splněny, můžete předchozí kontrola **potlačit** výstrahu.
+Jedná se *pravdivě pozitivní upozornění*, *neškodné pravdivě pozitivní upozornění*, nebo *falešně pozitivní*? 
 
-- **NTLM**: pravděpodobně WannaCry nebo nástrojů, jako je Metasploit Medusa a Hydra.  
+1. Kontrola, zda je na zdrojovém počítači spuštěná WannaCry. 
 
-Pokud chcete zjistit, zda se jedná o útok WannaCry, proveďte následující kroky:
+2. Pokud ano, je tato výstraha o pravdivě pozitivní upozornění. Chcete-li pochopit tak rozsah porušení:
+      - Prozkoumejte zdrojový počítač
+      - Prozkoumejte napadeného počítače. 
 
-1. Zkontrolujte, jestli zdrojovém počítači běží nástroj útoku například Metasploit, Medusa nebo Hydra.
+2. Pokud zdrojový počítač není spuštěný nástroj útoku někdy, aplikace implementovat vlastní ověřování protokolem NTLM nebo SMB zásobníku. Zaškrtněte, pokud zdrojovém počítači běží aplikace, která implementuje vlastní zásobník protokolu NTLM nebo podepisování SMB.
 
-2. Pokud se nenajdou žádné nástroje útoku, zkontrolujte, zda zdrojovém počítači běží aplikace, která implementuje vlastní zásobník protokolu NTLM nebo podepisování SMB.
+      1. Pokud počítač používá vlastní zásobník a by neměl být, opravte konfiguraci aplikace. V takovém případě je neškodné aktivity, je možné uzavřít dané výstraze zabezpečení.
 
-3. Klikněte na zdrojovém počítači přejděte na stránku jeho profil. Zkontrolujte, co se stalo v době výskytu výstrahy, hledání neobvyklých aktivit, jako například: kdo byl přihlášen, které prostředky tam, kde získat přístup. Pokud jste nepovolili integraci ochrany ATP v programu Windows Defender, klikněte na možnost ochrana ATP v programu Windows Defender odznáčku ![oznámení "BADGE" WD](./media/wd-badge.png) aby to prověřili počítače. V programu Windows Defender ATP zobrazí se výstrahy a procesů došlo k přibližně v době výstrahy.
+      2. Pokud počítač běží vlastní zásobník a, pokud je konfigurace správná, že výstrahu zabezpečení se dá zavřít a počítač vyloučený, jako je pravděpodobně o neškodné aktivitu.
+
+3. Klikněte na zdrojovém počítači přejděte na stránku jeho profil. Zkontrolujte, co se stalo v době výskytu výstrahy, hledání neobvyklých aktivit, jako je například kdo byl přihlášen a které prostředky jsou-li získat přístup. 
+
+4. Pokud jste nepovolili integraci ochrany ATP v programu Windows Defender, klikněte na možnost ochrana ATP v programu Windows Defender odznáčku ![oznámení "BADGE" WD](./media/wd-badge.png) aby to prověřili počítače. V programu Windows Defender ATP zobrazí se výstrahy a procesů došlo k přibližně v době výstrahy.
 
 
 **Náprava**
 
-Oprava všech počítačů, zejména použití aktualizací zabezpečení.
+1. Obsahují zdrojový počítač. 
+      - [Odebrat WannaCry](https://support.microsoft.com/help/890830/remove-specific-prevalent-malware-with-windows-malicious-software-remo)
+      - WanaKiwi může dešifrovat data v rámci ransom softwaru, ale jen pokud uživatel nebyl restartovat nebo vypnout počítač. Další informace najdete v tématu [chcete pokřik Ransomwaru](https://answers.microsoft.com/en-us/windows/forum/windows_10-security/wanna-cry-ransomware/5afdb045-8f36-4f55-a992-53398d21ed07?auth=1)
+      - Vyhledejte uživatelé přihlášení v době aktivity, jak může být ohrožené. Resetování hesel a povolení vícefaktorového ověřování 
+2. Oprava všech počítačů, a ujistěte se, aby aktualizace zabezpečení. 
+      - [Zakázat SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/)
 
-1. [Zakázat SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/)
+## <a name="suspected-use-of-metasploit-hacking-framework"></a>Podezřelé použití Metasploit hacking framework
 
-2. [Odebrat WannaCry](https://support.microsoft.com/help/890830/remove-specific-prevalent-malware-with-windows-malicious-software-remo)
 
-3. WanaKiwi může dešifrovat data v rámci ransom softwaru, ale jen pokud uživatel nebyl restartovat nebo vypnout počítač. Další informace najdete v tématu [chcete pokřik Ransomwaru](https://answers.microsoft.com/en-us/windows/forum/windows_10-security/wanna-cry-ransomware/5afdb045-8f36-4f55-a992-53398d21ed07?auth=1)
+*Předchozí název:* neobvyklá implementace protokolu (potenciální použijte Metasploit hacking nástroje)
+
+**Popis**
+
+Útočníci použít nástroje, které implementují různé protokoly (SMB, Kerberos, NTLM) nestandardním způsobem. Tento typ síťového provozu je přijat ve Windows bez upozornění, je ochrana ATP v programu Azure rozpoznat potenciální škodlivým činnostem. Chování je indikátorem techniky, jako je například používání hackerským metasploitu. 
+
+**Šetření**
+
+Projděte si neobvyklé aktivity v dané výstraze zabezpečení na časové ose aktivity. Klikněte na výstrahu zabezpečení jeho podrobnosti stránku a pak zkontrolujte potenciálně ohrožený entit a seznamu důkaz.
+
+Jedná se *pravdivě pozitivní upozornění*, *neškodné pravdivě pozitivní upozornění*, nebo *falešně pozitivní*? 
+
+1. Zkontrolujte, jestli zdrojovém počítači běží nástroj útoku, třeba Metasploit nebo Medusa. 
+
+2. Pokud ano, jde o pravdivě pozitivní upozornění. Chcete-li pochopit tak rozsah porušení:
+      - Prozkoumejte zdrojový počítač
+      - Prozkoumejte napadeného počítače. 
+
+3. Pokud zdrojový počítač není spuštěný nástroj útoku někdy, aplikace implementovat vlastní ověřování protokolem NTLM nebo SMB zásobníku. Zaškrtněte, pokud zdrojovém počítači běží aplikace, která implementuje vlastní zásobník protokolu NTLM nebo podepisování SMB.
+
+4. Pokud na počítači běží vlastní zásobník NTML nebo podepisování SMB a neměl by být, opravte konfiguraci aplikace.
+      1. V takovém případě je neškodné aktivity, je možné uzavřít dané výstraze zabezpečení. 
+      2. Pokud počítač běží vlastní zásobník a, pokud je konfigurace správná, že výstrahu zabezpečení se dá zavřít a počítač vyloučený, jako je pravděpodobně o neškodné aktivitu.
+
+5. Klikněte na zdrojovém počítači přejděte na stránku jeho profil. Zkontrolujte, co se stalo v době výskytu výstrahy, hledání neobvyklých aktivit, jako například: kdo byl přihlášen, které prostředky tam, kde získat přístup. Pokud jste nepovolili integraci ochrany ATP v programu Windows Defender, klikněte na možnost ochrana ATP v programu Windows Defender odznáčku ![oznámení "BADGE" WD](./media/wd-badge.png) aby to prověřili počítače. V programu Windows Defender ATP zobrazí se výstrahy a procesů došlo k přibližně v době výstrahy.
+
+
+**Náprava**
+
+1. Resetování hesel ohrožených uživatelů a povolit vícefaktorové ověřování.
+2. Obsahují zdrojový počítač
+   1. Najít nástroj, který provádí útoku a jeho odebrání.
+   2. Hledat uživatele přihlášení v době aktivity, jak může být ohrožena.
+   3. Resetování hesel a povolení služby Multi-Factor authentication. 
+4. Resetování hesel uživateli zdroje a povolení služby Multi-Factor authentication. 
+5. [Zakázat SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/)
+
+
+## <a name="suspected-overpass-the-hash-attack-kerberos"></a>Podezření na útok overpass-the-hash (Kerberos)
+<a name="unusual-protocol-implementation"></a>
+
+*Předchozí název:* neobvyklé protokolu Kerberos protokol implementace (možný útok overpass-the-hash) 
+
+**Popis**
+
+Útočníci používají nástroje, které implementují nestandardním způsobem různé protokoly, například pomocí protokolů Kerberos a protokolu SMB. Tento typ síťového provozu je přijat ve Windows bez upozornění, je ochrana ATP v programu Azure rozpoznat potenciální škodlivým činnostem. Chování je indikátorem techniky, jako je například over-pass-the-Hash a útoky hrubou silou, jakož i zneužití používané Upřesnit ransomwaru, například WannaCry.
+
+**Šetření**
+
+Projděte si neobvyklé aktivity v dané výstraze zabezpečení na časové ose aktivity. Klikněte na výstrahu zabezpečení jeho podrobnosti stránku a pak zkontrolujte potenciálně ohrožený entit a seznamu důkaz.
+
+Jedná se *pravdivě pozitivní upozornění*, *neškodné pravdivě pozitivní upozornění*, nebo *falešně pozitivní*? 
+
+ 1. Někdy aplikace implementovat vlastní zásobník protokolu Kerberos, není v souladu s RFC protokolu Kerberos.
+   1. Zkontrolujte, jestli zdrojovém počítači běží vlastní zásobník protokolu Kerberos. 
+   2. Pokud počítač používá vlastní zásobník protokolu Kerberos a neměl by být, opravte konfiguraci aplikace. V takovém případě je neškodné aktivity, je možné uzavřít dané výstraze zabezpečení. 
+   3. Pokud počítač běží vlastní zásobník protokolu Kerberos a, pokud je konfigurace správná, že výstrahu zabezpečení se dá zavřít a počítač vyloučený, jako je pravděpodobně o neškodné aktivitu.
+
+ **Náprava**
+
+1. Resetování hesel ohrožených uživatelů a povolit vícefaktorové ověřování.
+2. Obsahují zdrojový počítač. 
+   1. Najít nástroj, který provádí útoku a jeho odebrání.
+   2. Hledat uživatele přihlášení v době aktivity, jak může být ohrožena. 
+   3. Resetování hesel a povolení služby Multi-Factor authentication. 
+4. Resetování hesel uživateli zdroje a povolení služby Multi-Factor authentication. 
+
+## <a name="suspected-brute-force-attack-smb"></a>Podezřelý útok hrubou silou (SMB)
+<a name="unusual-protocol-implementation-smb"></a>
+
+*Předchozí název:* neobvyklá implementace protokolu (potenciální použití škodlivých nástrojů, jako je Hydra)
+
+**Popis**
+
+Útočníci používají nástroje, které implementují nestandardním způsobem různé protokoly, jako jsou SMB, protokolu Kerberos a NTLM. Tento typ síťového provozu je přijat ve Windows bez upozornění, je ochrana ATP v programu Azure rozpoznat potenciální škodlivým činnostem. Chování je indikátorem technik útoku hrubou silou. 
+
+**Šetření**
+
+Projděte si neobvyklé aktivity v dané výstraze zabezpečení na časové ose aktivity. Klikněte na výstrahu zabezpečení jeho podrobnosti stránku a pak zkontrolujte potenciálně ohrožený entit a seznamu důkaz.
+
+Jedná se *pravdivě pozitivní upozornění*, * neškodné pravdivě pozitivní upozornění nebo *falešně pozitivní*? 
+
+1. Zkontrolujte, jestli zdrojovém počítači běží nástroj útoku, jako je například Hydra. 
+   1. Pokud ano, jde o pravdivě pozitivní upozornění. Chcete-li pochopit tak rozsah porušení:
+      - Prozkoumejte zdrojový počítač
+      - Prozkoumejte napadeného počítače. 
+
+2. Pokud zdrojový počítač není spuštěný nástroj útoku někdy, aplikace implementovat vlastní ověřování protokolem NTLM nebo SMB zásobníku. Zaškrtněte, pokud zdrojovém počítači běží aplikace, která implementuje vlastní zásobník protokolu NTLM nebo podepisování SMB.
+
+3. Klikněte na zdrojovém počítači přejděte na stránku jeho profil. Zkontrolujte, co se stalo v době výskytu výstrahy, hledání neobvyklých aktivit, jako je například kdo byl přihlášen a které prostředky jsou-li získat přístup. Pokud jste nepovolili integraci ochrany ATP v programu Windows Defender, klikněte na možnost ochrana ATP v programu Windows Defender odznáčku ![oznámení "BADGE" WD](./media/wd-badge.png) aby to prověřili počítače. V programu Windows Defender ATP zobrazí se výstrahy a procesů došlo k přibližně v době výstrahy.
+
+**Náprava**
+
+1. Resetovat hesla uživatelů uhádnuté a povolení služby Multi-Factor authentication.
+2. Přidání uhádnuté uživatelů do seznamu ke zhlédnutí.
+3. Obsahují zdrojový počítač
+   1. Najít nástroj, který provádí útoku a jeho odebrání.
+   2. Hledat uživatele přihlášení v době aktivity, jak může být ohrožena.
+   3. Resetování hesel a povolení služby Multi-Factor authentication. 
+4. Vynutit komplexní a dlouho hesel v organizaci. Složitá a dlouhá hesla zadejte nezbytnou první úroveň zabezpečení proti budoucím útokům hrubou silou.
+5. [Zakázat SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/)
+
 
 ## <a name="user-and-ip-address-reconnaissance-smb"></a>Uživatele a IP adres pro rekognoskaci (SMB)
 <a name="reconnaissance-using-smb-session-enumeration"></a> Rekognoskace pomocí výčtu relací SMB
@@ -723,7 +833,7 @@ V této detekce se aktivuje upozornění při provádění výčet relací SMB p
 
  - Existuje nějaký druh kontrolu zabezpečení, které běží na zdrojovém počítači? Pokud ano, **zavřít a vyloučit** podezřelou aktivitu.
 
-2. Zkontrolujte operaci provést, které zahrnutých uživatelů/s. Obvykle protokolují do zdrojového počítače nebo jsou správci, kteří by měl provádět tyto akce?  
+2. Kontrola, která zahrnutých uživatelů za sekundu provést operaci. Obvykle protokolují do zdrojového počítače nebo jsou správci, kteří by měl provádět tyto akce?  
 
 3. Pokud ano a výstraha aktualizována, **potlačit** podezřelou aktivitu.  
 

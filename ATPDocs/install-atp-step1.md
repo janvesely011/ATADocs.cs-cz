@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 15ee7d0b-9a0c-46b9-bc71-98d0b4619ed0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 3fb857308d945fcae04e7dc3d501404a2334382e
-ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
+ms.openlocfilehash: e027e57e3f23be61139217b532b3b4a721dc9cdd
+ms.sourcegitcommit: d1c9c3e69b196f6086a8f100e527553cf0d95aac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "52744689"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53125145"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -35,7 +35,7 @@ V ochraně ATP v Azure budete mít jednu instanci umožňuje spravovat několik 
 > [!NOTE]
 > V současné době datová centra ochrany ATP v programu Azure se nasazují do Evropy a Asie a Severní Amerika/střední Amerika/Karibská oblast. Vaše instance se automaticky vytvoří v datovém centru, který je geograficky nejblíže k AAD. Po vytvoření, Azure instance ochrany ATP v programu nejsou přesouvatelný. 
 
-## <a name="step-1-enter-the-azure-atp-portal"></a>Krok 1: Zadejte ochrany ATP v programu Azure portal
+## <a name="step-1-enter-the-azure-atp-portal"></a>Krok 1. Zadejte ochrany ATP v programu Azure portal
 
 Po ověření, že vaši síť splňuje požadavky senzoru pokračujte ve vytváření vaší instance služby Azure ATP.
 
@@ -47,7 +47,7 @@ Po ověření, že vaši síť splňuje požadavky senzoru pokračujte ve vytvá
 
 2.  Přihlaste se pomocí uživatelského účtu Azure Active Directory.
 
-## <a name="step-2-create-your-instance"></a>Krok 2: Vytvoření instance
+## <a name="step-2-create-your-instance"></a>Krok 2. Vytvoření instance
 
 1. Klikněte na tlačítko **vytvořit instanci**. 
 
@@ -57,8 +57,8 @@ Po ověření, že vaši síť splňuje požadavky senzoru pokračujte ve vytvá
 
     ![Vytvoření instance Azure](media/instance-created.png)
 
-> [!NOTE]
- > K přihlášení do služby Azure ATP, budete muset přihlásit jako uživatel přiřazenou roli služby Azure ATP s oprávněními pro přístup k portálu ochrany ATP v programu Azure. Další informace o řízení přístupu na základě role (RBAC) v ochrany ATP v programu Azure najdete v tématu [práce se skupinami rolí služby Azure ATP](atp-role-groups.md).
+    > [!NOTE]
+    > K přihlášení do služby Azure ATP, budete muset přihlásit jako uživatel přiřazenou roli služby Azure ATP s oprávněními pro přístup k portálu ochrany ATP v programu Azure. Další informace o řízení přístupu na základě role (RBAC) v ochrany ATP v programu Azure najdete v tématu [práce se skupinami rolí služby Azure ATP](atp-role-groups.md).
  
 3. Klikněte na tlačítko **konfigurace**, **spravovat skupiny rolí**a použít [centra pro správu Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles-azure-portal) odkaz ke správě skupin rolí. .
 

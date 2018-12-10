@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 12/02/2018
+ms.date: 12/09/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 3261155c-3c72-4327-ba29-c113c63a4e6d
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 2cef2652b896ffb31d9b93ebf15e06d2c0638370
-ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
+ms.openlocfilehash: 5d2e359db2cd3b0d358ce14a9f662a82c47e23a2
+ms.sourcegitcommit: d1c9c3e69b196f6086a8f100e527553cf0d95aac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "52744485"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53125111"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
@@ -81,11 +81,10 @@ Do systému SIEM se předávají následující pole a jejich hodnoty:
 |Podezřelé úprava citlivých skupin|Podezřelé úprava citlivých skupin|2024|
 |Podezřelé vytvoření služby|Podezřelé vytvoření služby|2026|
 |Podezřelé připojení k síti VPN|Podezřelé připojení k síti VPN|2025|
-|Podezření na útok WannaCry ransomwaru|Neobvyklá implementace protokolu (možný útok ransomwarem WannaCry) *|2002|
-|Podezřelý útok hrubou silou (SMB)|Neobvyklá implementace protokolu (potenciální použití škodlivých nástrojů, jako je Hydra) *|2002|
-|Podezřelé použití Metasploit hacking framework|Neobvyklá implementace protokolu (potenciální použijte Metasploit hacking nástroje) *|2002|
-|Podezření na útok overpass-the-hash (Kerberos)|Neobvyklý protokol Kerberos protokol implementace (možný útok overpass-the-hash) *|2002|
-|* *Neobvyklá implementace protokolu* výstrahy aktuálně sdílet externalId. ExternalId pro každý typ tyto výstrahy se změní v budoucích vydáních na jedinečné externalId||****|
+|Podezření na útok WannaCry ransomwaru|Neobvyklá implementace protokolu (možný útok ransomwarem WannaCry) *|2035|
+|Podezřelý útok hrubou silou (SMB)|Neobvyklá implementace protokolu (potenciální použití škodlivých nástrojů, jako je Hydra)|2033|
+|Podezřelé použití Metasploit hacking framework|Neobvyklá implementace protokolu (potenciální použijte Metasploit hacking nástroje)|2034|
+|Podezření na útok overpass-the-hash (Kerberos)|Neobvyklá implementace protokolu Kerberos (možný útok overpass-the-hash)|2002|
 |Uživatele a IP adres pro rekognoskaci (SMB) |Rekognoskace pomocí výčtu relací SMB|2012|
 |Rekognoskace členství uživatelů a skupin (SAMR)|Rekognoskace pomocí dotazů na adresářové služby|2021|
 
@@ -174,14 +173,20 @@ Priority:
 ### <a name="suspicious-vpn-connection"></a>Připojení k síti VPN podezřelé
 07-03-2018 13:13:12 Auth.Warning 192.168.0.200 1 2018-07-03T10:13:06.187834 + 00:00 DC1 CEF 2520 AbnormalVpnSecurityAlert ï» ¿0 | Microsoft | Ochrana ATP v programu Azure | 2.39.0.0 | AbnormalVpnSecurityAlert | Podezřelé připojení VPN | 5 | start = 2018-06-30T15:34:05.3887333Z aplikace připojení VpnConnection suser = user1 msg = = uzivatel1 připojené k síti VPN pomocí počítače se 3 ze 3 míst.     externalId = 2025 cs1Label = url cs1 = https\://contoso-corp.eng.atp.azure.com:13000/securityAlert/88c46b0e-372f-4c06-9935-67bd512c4f68 cs2Label = aktivační událost cs2 = nový
 
-### <a name="unusual-protocol-implementation---potential-use-of-malicious-tools-such-a-hydra"></a>Neobvyklá implementace protokolu - (potenciálně škodlivý nástroj, který tyto Hydra využití)
-02 – 21 – 2018 16:21:22 Auth.Warning 192.168.0.220 1 2018-02-21T14:21:13.916050 + 00:00 CENTER CEF 6076 AbnormalProtocolSecurityAlert ï» ¿0 | Microsoft | Ochrana ATP v programu Azure | 2.22.4228.22540 | AbnormalProtocolSecurityAlert | Neobvyklá implementace protokolu | 5 | start = 2018-02-21T14:19:03.1981155Z aplikace = Ntlm shost = CLIENT2 outcome = Success msg = došlo k pokusům o ověření z počítače CLIENT2 proti řadiči domény DC1 pomocí neobvyklé implementace protokolu. Může být důsledek použití škodlivých nástrojů ke spuštění útoku, třeba technikou Pass-the-Hash nebo hrubou silou. externalId = 2002 cs1Label = url cs1 = https\://contoso-corp.atp.azure.com/securityAlert/40fe98dd-aa42-4540-9d73-831486fdd1e4 cs2Label = aktivační událost cs2 = nový
+### <a name="suspected-wannacry-ransomware-attack"></a>Podezření na útok WannaCry ransomwaru
+02 – 21 – 2018 16:21:22 Auth.Warning 192.168.0.220 1 2018-02-21T14:21:13.916050 + 00:00 CENTER CEF 6076 AbnormalProtocolSecurityAlert ï» ¿0 | Microsoft | Ochrana ATP v programu Azure | 2.22.4228.22540 | AbnormalProtocolSecurityAlert | SuspectedWannaCryRansomwareAttack | 5 | start = 2018-02-21T14:19:03.1981155Z aplikace = Ntlm shost = CLIENT2 outcome = Success msg = došlo k pokusům o ověření z počítače CLIENT2 proti řadiči domény DC1 pomocí neobvyklé implementace protokolu. Může být důsledek použití škodlivých nástrojů ke spuštění útoku, třeba technikou WannaCry. externalId = 2035 cs1Label = url cs1 = https\://contoso-corp.atp.azure.com/securityAlert/40fe98dd-aa42-4540-9d73-831486fdd1e4 cs2Label = aktivační událost cs2 = nový
 
-### <a name="unusual-protocol-implementation---potential-use-of-malicious-tools-such-a-metasploit"></a>Neobvyklá implementace protokolu - (potenciálně škodlivý nástroj, který tyto Metasploit využití)
-10 – 29 – 2018 11:22:04 Auth.Warning 192.168.0.202 1 2018-10-29T09:22:00.460233 + 00:00 DC3 CEF 3908 AbnormalProtocolSecurityAlert ï» ¿0 | Microsoft | Ochrana ATP v programu Azure | 2.52.5704.46184 | AbnormalProtocolSecurityAlert | Neobvyklá implementace protokolu (potenciální použijte Metasploit hacking nástroje) | 5 | start = 2018-10-29T09:19:46.6092465Z app = Ntlm shost = CLIENT2 outcome = Success msg = došlo k pokusům o ověření z počítače CLIENT2 proti řadiči domény DC1 pomocí neobvyklý protokol implementace. externalId = 2002 cs1Label = url cs1 = https\://contoso-corp.atp.azure.com/securityAlert/573f10a1-6f8a-44b1-a5b1-212d40996363 cs2Label = aktivační událost cs2 = nový
+### <a name="suspected-brute-force-attack-smb"></a>Podezřelý útok hrubou silou (SMB)
+002 – 21 – 2018 16:21:22 Auth.Warning 192.168.0.220 1 2018-02-21T14:21:13.916050 + 00:00 CENTER CEF 6076 AbnormalProtocolSecurityAlert ï» ¿0 | Microsoft | Ochrana ATP v programu Azure | 2.22.4228.22540 | AbnormalProtocolSecurityAlert | SuspectedBrutForceAttack | 5 | start = 2018-02-21T14:19:03.1981155Z aplikace = Ntlm shost = CLIENT2 outcome = Success msg = došlo k pokusům o ověření z počítače CLIENT2 proti řadiči domény DC1 pomocí neobvyklé implementace protokolu. Může být důsledek použití škodlivých nástrojů ke spuštění útoku, třeba technikou Hydra. externalId = roku 2033 cs1Label = url cs1 = https\://contoso-corp.atp.azure.com/securityAlert/40fe98dd-aa42-4540-9d73-831486fdd1e4 cs2Label = aktivační událost cs2 = nový
+
+### <a name="suspected-use-of-metasploit-hacking-framework"></a>Podezřelé použití Metasploit hacking framework
+002 – 21 – 2018 16:21:22 Auth.Warning 192.168.0.220 1 2018-02-21T14:21:13.916050 + 00:00 CENTER CEF 6076 AbnormalProtocolSecurityAlert ï» ¿0 | Microsoft | Ochrana ATP v programu Azure | 2.22.4228.22540 | AbnormalProtocolSecurityAlert | SuspectedAttackUsingMetasploit | 5 | start = 2018-02-21T14:19:03.1981155Z aplikace = Ntlm shost = CLIENT2 outcome = Success msg = došlo k pokusům o ověření z počítače CLIENT2 proti řadiči domény DC1 pomocí neobvyklé implementace protokolu. Může být důsledek použití škodlivých nástrojů ke spuštění útoku, třeba technikou Metasploit. externalId =. 2034 cs1Label = url cs1 = https\://contoso-corp.atp.azure.com/securityAlert/40fe98dd-aa42-4540-9d73-831486fdd1e4 cs2Label aktivační událost cs2 = = nový
+
+### <a name="suspected-overpass-the-hash-attack-kerberos"></a>Podezření na útok overpass-the-hash (Kerberos)
+002 – 21 – 2018 16:21:22 Auth.Warning 192.168.0.220 1 2018-02-21T14:21:13.916050 + 00:00 CENTER CEF 6076 AbnormalProtocolSecurityAlert ï» ¿0 | Microsoft | Ochrana ATP v programu Azure | 2.22.4228.22540 | AbnormalProtocolSecurityAlert | SuspectedOverPassTheHashAttack | 5 | start = 2018-02-21T14:19:03.1981155Z aplikace = Ntlm shost = CLIENT2 outcome = Success msg = došlo k pokusům o ověření z počítače CLIENT2 proti řadiči domény DC1 pomocí neobvyklé implementace protokolu. Může být výsledkem škodlivým činnostem pomocí protokolu Kerberos. externalId = 2002 cs1Label = url cs1 = https\://contoso-corp.atp.azure.com/securityAlert/40fe98dd-aa42-4540-9d73-831486fdd1e4 cs2Label = aktivační událost cs2 = nový
 
 ### <a name="user-and-ip-address-reconnaissance-smb"></a>Uživatele a IP adres pro rekognoskaci (SMB) 
-02 – 21 – 2018 16:21:22 Auth.Warning 192.168.0.220 1 2018-02-21T14:21:13.962930 + 00:00 CENTER CEF 6076 EnumerateSessionsSecurityAlert ï» ¿0 | Microsoft | Ochrana ATP v programu Azure | 2.22.4228.22540 | EnumerateSessionsSecurityAlert | Rekognoskace pomocí výčtu relací SMB | 5 | start = 2018-02-21T14:19:03.2071170Z app = SrvSvc shost = CLIENT1 msg = uživatele User1, z počítače CLIENT1 na DC1, vystavení Eugene Jenkins (uživatel2 počítač) se úspěšně provedly pokusy o výčet relací SMB . externalId = 2012 cs1Label = url cs1 = https\://contoso-corp.atp.azure.com/securityAlert/622c38ab-324f-4c1f-9caa-1fe85db3b440 cs2Label = aktivační událost cs2 = nový
+002 – 21 – 2018 16:21:22 Auth.Warning 192.168.0.220 1 2018-02-21T14:21:13.916050 + 00:00 CENTER CEF 6076 AbnormalProtocolSecurityAlert ï» ¿0 | Microsoft | Ochrana ATP v programu Azure | 2.22.4228.22540 | AbnormalProtocolSecurityAlert | ReconnaissanceusingSMBSessionEnumeration | 5 | start = 2018-02-21T14:19:03.1981155Z aplikace = Ntlm shost = CLIENT2 outcome = Success msg = došlo k pokusům o ověření z počítače CLIENT2 proti řadiči domény DC1 pomocí neobvyklé implementace protokolu. Může být důsledek použití škodlivých nástrojů ke spuštění útoku, třeba technikou Metasploit. externalId =. 2034 cs1Label = url cs1 = https\://contoso-corp.atp.azure.com/securityAlert/40fe98dd-aa42-4540-9d73-831486fdd1e4 cs2Label aktivační událost cs2 = = nový
 
 ## <a name="see-also"></a>Viz také
 - [Požadavky služby Azure ATP](atp-prerequisites.md)

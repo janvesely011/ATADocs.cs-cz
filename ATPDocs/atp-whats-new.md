@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 11/26/2018
+ms.date: 12/09/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,27 +13,53 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e960e93470462acaf77c2033153af23725fe5e91
-ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
+ms.openlocfilehash: cde3c56d0b8ad029337e03602c805930002f8ed4
+ms.sourcegitcommit: d1c9c3e69b196f6086a8f100e527553cf0d95aac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "52744502"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53125043"
 ---
 *Platí pro: Azure Rozšířená ochrana před internetovými útoky*
 
 # <a name="whats-new-in-azure-atp"></a>Co je nového v Azure ATP 
 
+## <a name="azure-atp-release-258"></a>Verze ochrany ATP v programu Azure 2.58
+
+Vydáno 9. prosince 2018
+
+- **Rozšířením upozornění zabezpečení: Rozdělit neobvyklé implementace protokolu upozornění**<br>
+Azure ATP řadu výstrah zabezpečení neobvyklé implementace protokolu, které dříve sdílené 1 externalId (2002), jsou teď rozdělit do 4 rozlišovací výstrahy, s odpovídající externalId jedinečný. 
+
+### <a name="new-alert-externalids"></a>Nové výstrahy externalIds
+> [!div class="mx-tableFixed"] 
+
+|Nový název výstrahy zabezpečení|Předchozí název výstrahy zabezpečení|ExternalId jedinečný|
+|---------|----------|---------|
+|Podezřelý útok hrubou silou (SMB)|Neobvyklá implementace protokolu (potenciální použití škodlivých nástrojů, jako je Hydra)|2033
+|Podezření na útok overpass-the-hash (Kerberos)|Neobvyklá implementace protokolu Kerberos (možný útok overpass-the-hash)|2002|
+|Podezřelé použití Metasploit hacking framework|Neobvyklá implementace protokolu (potenciální použijte Metasploit hacking nástroje)|2034
+|Podezření na útok WannaCry ransomwaru|Neobvyklá implementace protokolu (možný útok ransomwarem WannaCry)|2035
+|
+
+- **Nová aktivita sledovaných: kopírování prostřednictvím protokolu SMB souboru**<br>
+Kopírování souborů přes protokol SMB je nyní monitorované a filtrovat aktivity. Další informace o tom, které [aktivity ochrany ATP v programu Azure monitoruje](monitored-activities.md)a jak [filtru a vyhledávání monitorování aktivity](atp-activities-search.md) na portálu. 
+
+- **Velký obrázek rozšíření cesty laterální pohyb**<br>
+Při zobrazení cesty taktiky Lateral Movement velké, ochrana ATP v programu Azure nyní zvýrazňuje pouze uzly, které jsou připojené k vybrané entity, namísto rozostření do dalších uzlů. Tato změna přináší přináší značné vylepšení v velké LMP rychlost vykreslování. 
+
+- Tato verze obsahuje vylepšení a opravy chyb pro interní senzor infrastruktury.
+
 ## <a name="azure-atp-release-257"></a>Verze ochrany ATP v programu Azure 2.57
 Vydáno 2. prosince 2018
 
 - **Nová výstraha zabezpečení: Podezřelý anomálií použití lístku Golden ticket (preview)**<br>
-Azure ATP [podezřelý Golden Ticket použití – lístek anomoly](suspicious-activity-guide.md) výstraha zabezpečení je teď ve verzi public preview. <br> Útočníci s právy správce domény může ohrozit účet KRBTGT. Pomocí účtu KRBTGT, útočníci můžete vytvořit lístek Kerberos udělující lístek (TGT), který poskytuje autorizaci k jakémukoli prostředku. 
+Azure ATP [podezřelý Golden Ticket použití – lístek anomálií](suspicious-activity-guide.md) výstraha zabezpečení je teď ve verzi public preview. <br> Útočníci s právy správce domény může ohrozit účet KRBTGT. Pomocí účtu KRBTGT, útočníci můžete vytvořit lístek Kerberos udělující lístek (TGT), který poskytuje autorizaci k jakémukoli prostředku. 
 <br>Tato falešných lístků TGT se nazývá "Zlatých lístků", protože to útočníkům umožňuje dosáhnout trvalého trvalost sítě. Falešných Zlatých lístků tohoto typu mají jedinečné charakteristiky, které toto nové zjišťování je navržená speciálně pro identifikaci. 
 
 
 - **Vylepšení funkce: Automatické vytvoření instance (pracovní prostor) služby Azure ATP** <br>
-Od dnešního dne, ochrana ATP v programu Azure *pracovní prostory* se přejmenovat ochrany ATP v programu Azure *instance*. Ochrana ATP v programu Azure teď podporuje jednu instanci služby Azure ATP jeden účet služby Azure ATP. Instance pro nové zákazníky jsou vytvořené pomocí Průvodce vytvořením instance v [ochrany ATP v programu Azure portal](https://portal.atp.azure.com). Existujícím pracovním prostorům ochrany ATP v programu Azure se automaticky převedou na instance služby Azure ATP s aktualizací.  
+Od dnešního dne, ochrana ATP v programu Azure *pracovní prostory* se přejmenovat ochrany ATP v programu Azure *instance*. Ochrana ATP v programu Azure teď podporuje jednu instanci služby Azure ATP jeden účet služby Azure ATP. Instance pro nové zákazníky jsou vytvořené pomocí Průvodce vytvořením instance v [ochrany ATP v programu Azure portal](https://portal.atp.azure.com). Existujícím pracovním prostorům ochrany ATP v programu Azure se automaticky převedou na instance služby Azure ATP s touto aktualizací.  
 
   - Zjednodušené vytváření instance pro rychlejší nasazení a ochranu pomocí [vytvořit instanci služby Azure ATP](install-atp-step1.md). 
   - Všechny [ochrany osobních údajů a dodržování předpisů](atp-privacy-compliance.md) zůstává stejná. 
@@ -302,15 +328,15 @@ Vydáno 27. května 2018
 - Funkce ve verzi Preview: ochrana ATP v programu Azure teď podporuje nové jazyky a 13 nové národní prostředí:
     - Čeština
     - Maďarština
-    - Italština
+    - italština
     - Korejština
     - Holandština
-    - Polština
+    - polština
     - Portugalština (Brazílie)
     - Portugalština (Portugalsko)
     - Rusko
-    - Švédština
-    - Turečtina
+    - švédština
+    - turečtina
     - Čínština (Čína)
     - Čínština (Tchaj-wan)
 
