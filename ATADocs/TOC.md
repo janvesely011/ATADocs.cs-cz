@@ -3,6 +3,7 @@
 ## [Jaké hrozby ATA detekuje?](ata-threats.md)
 ## Novinky ATA
 ### [Novinky ATA verze 1.9](whats-new-version-1.9.md)
+#### [Aktualizace na ATA 1.9.1 – průvodce migrací](ata-update-1.9.1-migration-guide.md)
 #### [Aktualizace na ATA 1.9 – průvodce migrací](ata-update-1.9-migration-guide.md)
 ### [Novinky ATA verze 1.8](whats-new-version-1.8.md)
 #### [Aktualizace na ATA 1.8 – průvodce migrací](ata-update-1.8-migration-guide.md)
