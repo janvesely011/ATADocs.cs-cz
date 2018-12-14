@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 12/09/2018
+ms.date: 12/13/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,25 +13,25 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 8604e3cfead3b52fd9f0d1ed38bb7d806cf50f46
-ms.sourcegitcommit: d1c9c3e69b196f6086a8f100e527553cf0d95aac
+ms.openlocfilehash: b5f4b24eb67f2071274ad109e61afbe234e8e660
+ms.sourcegitcommit: 1c657f269aaece71b2126df55a37f8c43851539a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53125128"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53335451"
 ---
-*Platí pro: Azure Rozšířená ochrana před internetovými útoky*
+*Platí pro: Azure Advanced Threat Protection*
 
 
 # <a name="azure-advanced-threat-protection-security-alert-guide"></a>Azure Advanced Threat Protection výstrah Příručka zabezpečení
 
 Po správném šetření můžete všechny výstrahy zabezpečení služby Azure ATP klasifikováno jako:
 
--   **Pravdivě pozitivní upozornění**: škodlivá akce zjištěná službou ochrany ATP v programu Azure.
+-   **Pravdivě pozitivní upozornění**: Škodlivá akce zjištěná službou ochrany ATP v programu Azure.
 
--   **Neškodné pravdivě pozitivní upozornění**: akce zjištěná službou ochrany ATP v Azure, která je skutečná, ale není škodlivá, třeba test průniku.
+-   **Neškodné pravdivě pozitivní upozornění**: Akce zjištěná službou ochrany ATP v Azure, která je skutečná, ale není škodlivá, třeba test průniku.
 
--   **Falešně pozitivní**: alarm hodnotu false, to znamená aktivity neměli stát.
+-   **Falešně pozitivní**: Upozornění hodnotu false, to znamená aktivity neměli dojít.
 
 Další informace o tom, jak pracovat s výstrahami zabezpečení služby Azure ATP najdete v tématu [práce s výstrahami zabezpečení](working-with-suspicious-activities.md).
 
@@ -53,22 +53,23 @@ Ve verzi 2.56 všechny existující výstrahy zabezpečení služby Azure ATP by
 |Podezřelý útok DCShadow (žádost o replikaci řadiče domény)|Žádost o replikaci řadiče domény podezřelé (možný útok DCShadow)|2029|
 |Podezřelý útok DCSync (replikace adresářových služeb)|Škodlivá replikace adresářových služeb|2006|
 |Podezřelé použití lístku Golden (oslabení šifrování)|Aktivita snížení úrovně šifrování (potenciální útok metodou golden ticket)|2009|
-|Podezřelé použití lístku Golden (falešných dat autorizace) |Eskalace oprávnění prostřednictvím zfalšovaných dat autorizace|2013|
+|Podezřelé použití lístku Golden (falešných dat autorizace)|Eskalace oprávnění prostřednictvím zfalšovaných dat autorizace|2013|
 |Podezřelé použití Golden Ticket (neexistující účet)|Protokol Kerberos Golden Ticket - neexistující účet|2027|
-|Podezřelé použití Golden Ticket (ticket anomálií) |Protokol Kerberos Golden Ticket – lístek anomálií|2022|
-|Podezřelé použití Golden Ticket (čas anomálií) – preview| Není k dispozici|2032|
+|Podezřelé použití Golden Ticket (čas anomálií) |Kerberos Golden Ticket – čas anomálií|2022|
+|Podezřelé použití Golden Ticket (ticket anomálií) – preview|Není k dispozici|2032|
 |Krádež identity podezřelého softwaru (pass-the-hash)|Krádež identity pomocí útoku Pass-the-Hash|2017|
 |Krádež identity podezřelého softwaru (pass-the-ticket)|Krádež identity pomocí útoku Pass-the-Ticket|2018|
+|Podezřelý útok hrubou silou (SMB)|Neobvyklá implementace protokolu (potenciální použití škodlivých nástrojů, jako je Hydra)|2033|
+|Podezřelý útok hrubou silou (pomocí protokolu Kerberos, NTLM)|Podezřelé chyby ověřování|2023|
 |Podezření na útok over-pass-the-hash (oslabení šifrování)|Aktivita snížení úrovně šifrování (možný útok overpass-the-hash)|2008|
+|Podezření na útok overpass-the-hash (Kerberos)|Neobvyklá implementace protokolu Kerberos (možný útok overpass-the-hash)|2002|
+|Podezřelé použití Metasploit hacking framework|Neobvyklá implementace protokolu (potenciální použijte Metasploit hacking nástroje)|2034|
 |Útoku typu skeleton key podezřelého softwaru (oslabení šifrování)|Aktivita snížení úrovně šifrování (potenciální útoku typu skeleton key)|2010|
+|Podezření na útok WannaCry ransomwaru|Neobvyklá implementace protokolu (možný útok ransomwarem WannaCry)|2035|
 |Podezřelá komunikace prostřednictvím DNS|Podezřelá komunikace prostřednictvím DNS|2031|
 |Podezřelé úprava citlivých skupin|Podezřelé úprava citlivých skupin|2024|
 |Podezřelé vytvoření služby|Podezřelé vytvoření služby|2026|
 |Podezřelé připojení k síti VPN|Podezřelé připojení k síti VPN|2025|
-|Podezření na útok WannaCry ransomwaru|Neobvyklá implementace protokolu (možný útok ransomwarem WannaCry)|2002|
-|Podezřelý útok hrubou silou (SMB)|Neobvyklá implementace protokolu (potenciální použití škodlivých nástrojů, jako je Hydra)|2002|
-|Podezřelé použití Metasploit hacking framework|Neobvyklá implementace protokolu (potenciální použijte Metasploit hacking nástroje)|2002|
-|Podezření na útok overpass-the-hash (Kerberos)|Neobvyklá implementace protokolu Kerberos (možný útok overpass-the-hash)|2002|
 |Rekognoskace členství uživatelů a skupin (SAMR)|Rekognoskace pomocí dotazů na adresářové služby|2021|
 |Uživatele a IP adres pro rekognoskaci (SMB) |Rekognoskace pomocí výčtu relací SMB|2012|
 
@@ -105,7 +106,7 @@ Pokud ano, je odpověď na některý z těchto otázek **Zavřít** podezřelé 
 ## <a name="honeytoken-activity"></a>Aktivita Honeytokenu
 <a name="honeytoken-activity"></a>
 
-*Předchozí název:* aktivita Honeytokenu
+*Předchozí název:* Aktivita Honeytokenu
 
 **Popis**
 
@@ -130,7 +131,7 @@ Ujistěte se, že Honeytokenu účtů se používají pouze pro jejich zamýšle
 ## <a name="malicious-request-of-data-protection-api-master-key"></a>Škodlivá žádost Data Protection API hlavní klíč
 <a name="malicious-data-protection-private-information-request"></a>
 
-*Předchozí název:* škodlivých dat soukromých ochrany informace žádosti
+*Předchozí název:* Škodlivá žádost o soukromé informace přes Data Protection
 
 **Popis**
 
@@ -151,7 +152,7 @@ Použití rozhraní DPAPI, potřebuje útočník práva správce domény. Implem
 
 ## <a name="suspected-brute-force-attack-ldap"></a>Podezřelý útok hrubou silou (LDAP) 
 <a name="brute-force-attack-using-ldap-simple-bind"></a>
-*Předchozí název:* pomocí jednoduché vazby LDAP útoku hrubou silou
+*Předchozí název:* Útok hrubou silou pomocí jednoduché vazby LDAP.
 
 **Popis**
 
@@ -174,10 +175,10 @@ V této detekce se aktivuje upozornění, když zjistí velké množství jednod
 
 [Složitá a dlouhá hesla](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) poskytují nezbytnou první úroveň zabezpečení před útoky hrubou silou.
 
-## <a name="suspected-brute-force-attack-kerberos-ntlm"></a>Podezřelý útok hrubou silou pomocí protokolu Kerberos protokol NTLM)
+## <a name="suspected-brute-force-attack-kerberos-ntlm"></a>Podezřelý útok hrubou silou (pomocí protokolu Kerberos, NTLM)
 <a name="suspicious-authentication-failures"></a>
 
-*Předchozí název:* podezřelá neúspěšná ověření
+*Předchozí název:* Podezřelé chyby ověřování
 
 **Popis**
 
@@ -189,16 +190,16 @@ V této detekce se aktivuje upozornění, když dojít mnoho chyb ověřování 
 
 **Šetření**
 
-1.  Klikněte na tlačítko **stáhnout podrobnosti o** zobrazíte úplné informace v Excelové tabulce. Je k dispozici následující informace: 
+1. Klikněte na tlačítko **stáhnout podrobnosti o** zobrazíte úplné informace v Excelové tabulce. Je k dispozici následující informace: 
    -    Seznam napadené účty
    -    Seznam odhadnuté účty v které pokusů o přihlášení, bylo dokončeno s úspěšné ověření
    -    Pokud byly provedeny pokusy o ověření, pomocí protokolu NTLM, zobrazí se vám relevantní události aktivit 
    -    Pokud byly provedeny pokusy o ověření, pomocí protokolu Kerberos, zobrazí se příslušné síťové aktivity
    -  Pokud pokusy o ověření použít heslo zařízení, zobrazí se příslušné síťové aktivity
 
-2.  Klikněte na zdrojovém počítači přejděte na stránku jeho profil. Zkontrolujte, co se stalo v době těchto pokusů o přihlášení, hledání neobvyklých aktivit, jako například: kdo byl přihlášen, které prostředky tam, kde získat přístup. Pokud jste nepovolili integraci ochrany ATP v programu Windows Defender, klikněte na možnost ochrana ATP v programu Windows Defender odznáčku ![Oznámení "BADGE" ochrany ATP v programu Windows Defender](./media/wd-badge.png) aby to prověřili počítače. V programu Windows Defender ATP zobrazí se výstrahy a procesů došlo k přibližně v době výstrahy. 
+2. Klikněte na zdrojovém počítači přejděte na stránku jeho profil. Zkontrolujte, co se stalo v době těchto pokusů o přihlášení, hledání neobvyklých aktivit, jako například: kdo byl přihlášen, které prostředky tam, kde získat přístup. Pokud jste nepovolili integraci ochrany ATP v programu Windows Defender, klikněte na možnost ochrana ATP v programu Windows Defender odznáčku ![Oznámení "BADGE" ochrany ATP v programu Windows Defender](./media/wd-badge.png) aby to prověřili počítače. V programu Windows Defender ATP zobrazí se výstrahy a procesů došlo k přibližně v době výstrahy. 
 
-3.  Pokud se provádí ověřování pomocí protokolu NTLM a uvidíte, že výstraha vyskytuje v mnoha případech a není dostatek informací o serveru, který zdrojový počítač se pokusil získat přístup, povolte **auditování protokolu NTLM** na součástí řadiče domény. K tomuto účelu zapněte události 8004. Toto je událost ověřování NTLM, která obsahuje informace o zdrojovém počítači, uživatelský účet a ** serveru, které na zdrojovém počítači se pokusili získat přístup. Až budete vědět, které server odeslal ověření ověřování, prozkoumejte serveru tak, že zkontrolujete jeho události, jako je 4624 pro lepší pochopení procesu ověřování. 
+3. Pokud se provádí ověřování pomocí protokolu NTLM a uvidíte, že výstraha vyskytuje v mnoha případech a není dostatek informací o serveru, který zdrojový počítač se pokusil získat přístup, povolte **auditování protokolu NTLM** na součástí řadiče domény. K tomuto účelu zapněte události 8004. Toto je událost ověřování NTLM, která obsahuje informace o zdrojovém počítači, uživatelský účet a ** serveru, které na zdrojovém počítači se pokusili získat přístup. Až budete vědět, které server odeslal ověření ověřování, prozkoumejte serveru tak, že zkontrolujete jeho události, jako je 4624 pro lepší pochopení procesu ověřování. 
 
 **Náprava**
 
@@ -207,7 +208,7 @@ V této detekce se aktivuje upozornění, když dojít mnoho chyb ověřování 
 ## <a name="suspected-dcshadow-attack-dc-promotion"></a>Podezřelý útok DCShadow (povýšení řadiče domény)
 <a name="suspicious-domain-controller-promotion-potential-dcshadow-attack"></a>
 
-*Předchozí název:* povýšení řadiče domény podezřelé (možný útok DCShadow)
+*Předchozí název:* Povýšení řadiče domény podezřelé (možný útok DCShadow)
 
 **Popis**
 
@@ -248,7 +249,7 @@ Můžete využít [AD ACL Scanner](https://blogs.technet.microsoft.com/pfeswepla
 ## <a name="suspected-dcshadow-attack-dc-replication-request"></a>Podezření na útok DCShadow (žádost o replikaci řadiče domény)
 <a name="suspicious-replication-request-potential-dcshadow-attack"></a>
 
-*Předchozí název:* podezřelá replikace požadavku (možný útok DCShadow) 
+*Předchozí název:* Podezřelá replikace požadavku (možný útok DCShadow) 
 
 **Popis** 
 
@@ -281,7 +282,7 @@ K tomuto účelu můžete využít [AD ACL Scanner](https://blogs.technet.micros
 ## <a name="suspected-dcsync-attack-replication-of-directory-services"></a>Podezřelý útok DCSync (replikace adresářových služeb)
 <a name="malicious-replication-of-directory-services"></a>
 
-*Předchozí název:* škodlivá replikace adresářových služeb
+*Předchozí název:* Škodlivá replikace adresářových služeb
 
 **Popis**
 
@@ -315,9 +316,9 @@ Můžete využít [AD ACL Scanner](https://blogs.technet.microsoft.com/pfeswepl
 ## <a name="suspected-golden-ticket-usage-encryption-downgrade"></a>Podezřelé použití lístku Golden (oslabení šifrování)
 <a name="Encryption-downgrade-activity-potential-golden-ticket-attack"></a>
 
-*Předchozí název:* aktivita snížení úrovně šifrování
+*Předchozí název:* Aktivita snížení úrovně šifrování
 
-**Popis** oslabení šifrování je metoda oslabení podle downgradu úrovně šifrování protokolu různých polí, které jsou šifrované pomocí nejvyšší úrovně šifrování pomocí protokolu Kerberos. Oslabeným šifrované pole může být snazší target na offline útoky hrubou silou při pokusech. Různých metod útoku zvýšit využití slabé šifrování doklad protokolu Kerberos. V tomto zjišťování ochrany ATP v programu Azure učí typy šifrování pomocí protokolu Kerberos, počítačů a uživatelů a upozorní vás, když je slabší šifrovací, který používá: (1) neobvyklé, že u zdrojového počítače nebo uživatele. a (2) shod označuje technik útoku. 
+**Popis** oslabení šifrování je metoda oslabení podle downgradu úrovně šifrování protokolu různých polí, které jsou šifrované pomocí nejvyšší úrovně šifrování pomocí protokolu Kerberos. Oslabeným šifrované pole může být snazší target na offline útoky hrubou silou při pokusech. Různých metod útoku zvýšit využití slabé šifrování doklad protokolu Kerberos. V tomto zjišťování zjišťuje ochrany ATP v programu Azure typy šifrování pomocí protokolu Kerberos, počítačů a uživatelů a oznámení, že vás, když je slabší šifrovací, který používá: (1) je neobvyklé, že u zdrojového počítače nebo uživatele. a (2) shod označuje technik útoku. 
 
 Ve výstraze Golden Ticket metoda šifrování pole TGT v TGS_REQ (žádost o službu) zprávy ze zdrojového počítače downgradovat ve srovnání s dřív zjištěné chování. To není založené na čase anomálií (stejně jako v jiných detekce Golden Ticket). Kromě toho se žádný požadavek na ověření Kerberos související s předchozí žádosti o službu detekovaných službou ochrany ATP v programu.
 
@@ -340,7 +341,7 @@ Ve výstraze Golden Ticket metoda šifrování pole TGT v TGS_REQ (žádost o sl
 ## <a name="suspected-golden-ticket-usage-forged-authorization-data"></a>Podezřelé použití lístku Golden (falešných dat autorizace)
 <a name="privilege-escalation-using-forged-authorization-data"></a>
 
-*Předchozí název:* eskalace oprávnění prostřednictvím zfalšovaných dat autorizace
+*Předchozí název:* Eskalace oprávnění prostřednictvím zfalšovaných dat autorizace
 
 **Popis**
 
@@ -363,7 +364,7 @@ Ujistěte se, že všechny řadiče domény s operačním systémem až do syst�
 ## <a name="suspected-golden-ticket-usage-nonexistant-account"></a>Podezřelé použití Golden Ticket (neexistujícího účtu)
 <a name="golden-ticket"></a>
 
-Předchozí název: Kerberos golden ticket
+Předchozí název: Protokol Kerberos golden ticket
 
 **Popis**
 
@@ -393,7 +394,7 @@ Změnit heslo protokolu Kerberos KRBTGT Ticket Granting Ticket () dvakrát podle
 
 ## <a name="suspected-golden-ticket-usage-time-anomaly"></a>Podezřelé použití Golden Ticket (čas anomálií)
 
-Předchozí název: Kerberos golden ticket
+Předchozí název: Protokol Kerberos golden ticket
 
 **Popis**
 
@@ -440,7 +441,7 @@ Změnit heslo protokolu Kerberos KRBTGT Ticket Granting Ticket () dvakrát podle
 ## <a name="suspected-identity-theft-pass-the-hash"></a>Krádež identity podezřelého softwaru (pass-the-hash) 
 <a name="identity-theft-using-pass-the-hash-attack"></a>
 
-*Předchozí název:* krádež Identity pomocí útoku Pass-the-Hash
+*Předchozí název:* Krádež identity pomocí útoku Pass-the-Hash
 
 **Popis**
 
@@ -459,7 +460,7 @@ Zjistěte, jestli hodnota hash byla použita na počítači, který cílový už
 ## <a name="suspected-identity-theft-pass-the-ticket"></a>Krádež identity podezřelého softwaru (pass-the-ticket) 
 <a name="identity-theft-using-pass-the-ticket-attack"></a>
 
-*Předchozí název:* krádež Identity pomocí útoku Pass-the-Ticket
+*Předchozí název:* Krádež identity pomocí útoku Pass-the-Ticket
 
 **Popis**
 
@@ -480,11 +481,11 @@ Pass-the-Ticket je technika laterálního pohybu, kdy útočník získá lístek
 ## <a name="suspected-over-pass-the-hash-attack-encryption-downgrade"></a>Podezření na útok over-pass-the-Hash (oslabení šifrování) 
 <a name="Encryption-downgrade-activity-potential-over-pass-the-hash"></a>
 
-*Předchozí název:* aktivita snížení úrovně šifrování
+*Předchozí název:* Aktivita snížení úrovně šifrování
 
 **Popis**
 
-Oslabení šifrování je metoda oslabení podle downgradu úrovně šifrování protokolu různých polí, které jsou šifrované pomocí nejvyšší úrovně šifrování pomocí protokolu Kerberos. Oslabeným šifrované pole může být snazší target na offline útoky hrubou silou při pokusech. Různých metod útoku zvýšit využití slabé šifrování doklad protokolu Kerberos. V tomto zjišťování ochrany ATP v programu Azure učí typy šifrování pomocí protokolu Kerberos, počítačů a uživatelů a upozorní vás, když je slabší šifrovací, který používá: (1) neobvyklé, že u zdrojového počítače nebo uživatele. a (2) shod označuje technik útoku. 
+Oslabení šifrování je metoda oslabení podle downgradu úrovně šifrování protokolu různých polí, které jsou šifrované pomocí nejvyšší úrovně šifrování pomocí protokolu Kerberos. Oslabeným šifrované pole může být snazší target na offline útoky hrubou silou při pokusech. Různých metod útoku zvýšit využití slabé šifrování doklad protokolu Kerberos. V tomto zjišťování zjišťuje ochrany ATP v programu Azure typy šifrování pomocí protokolu Kerberos, počítačů a uživatelů a oznámení, že vás, když je slabší šifrovací, který používá: (1) je neobvyklé, že u zdrojového počítače nebo uživatele. a (2) shod označuje technik útoku. 
 
 V over-pass-the-hash útok útočník využije k vytvoření lístku silné žádost Kerberos AS slabé odcizené hodnoty hash. Při tomto zjišťování byla downgradovat typ šifrování zprávy AS_REQ ze zdrojového počítače, ve srovnání s dřív zjištěné chování (to znamená, počítač se pomocí standardu AES).
 
@@ -502,9 +503,9 @@ V over-pass-the-hash útok útočník využije k vytvoření lístku silné žá
 ## <a name="suspected-skeleton-key-attack-encryption-downgrade"></a>Podezřelý útoku typu Skeleton Key (oslabení šifrování) 
 <a name="encryption-downgrade-activity-potential-skeleton-key-attack"></a>
 
-*Předchozí název:* aktivita snížení úrovně šifrování
+*Předchozí název:* Aktivita snížení úrovně šifrování
 
-**Popis** oslabení šifrování je metoda oslabení podle downgradu úrovně šifrování protokolu různých polí, které jsou šifrované pomocí nejvyšší úrovně šifrování pomocí protokolu Kerberos. Oslabeným šifrované pole může být snazší target na offline útoky hrubou silou při pokusech. Různých metod útoku zvýšit využití slabé šifrování doklad protokolu Kerberos. V tomto zjišťování ochrany ATP v programu Azure učí typy šifrování pomocí protokolu Kerberos, počítačů a uživatelů a upozorní vás, když je slabší šifrovací, který používá: (1) neobvyklé, že u zdrojového počítače nebo uživatele. a (2) shod označuje technik útoku. 
+**Popis** oslabení šifrování je metoda oslabení podle downgradu úrovně šifrování protokolu různých polí, které jsou šifrované pomocí nejvyšší úrovně šifrování pomocí protokolu Kerberos. Oslabeným šifrované pole může být snazší target na offline útoky hrubou silou při pokusech. Různých metod útoku zvýšit využití slabé šifrování doklad protokolu Kerberos. V tomto zjišťování zjišťuje ochrany ATP v programu Azure typy šifrování pomocí protokolu Kerberos, počítačů a uživatelů a oznámení, že vás, když je slabší šifrovací, který používá: (1) je neobvyklé, že u zdrojového počítače nebo uživatele. a (2) shod označuje technik útoku. 
 
 Skeleton Key je malware, který běží na řadičích domény a umožňuje ověření vůči doméně pomocí libovolného účtu bez znalosti jeho hesla. Tento malware často používá slabší šifrovací algoritmy k vytvoření hodnoty hash hesel uživatelů na řadiči domény. Tato detekce byla metoda šifrování zprávy KRB_ERR z řadiče domény k účtu s žádostí o lístek downgradovat ve srovnání s dřív zjištěné chování.
 
@@ -543,7 +544,7 @@ Interní server DNS lze proti rekognoskaci pomocí DNS zabezpečit zakázáním 
 
 ## <a name="remote-code-execution-attempt"></a>Pokus o spuštění vzdáleného kódu
 <a name="remote-code-execution-attempt"></a>
-*Předchozí název:* pokus o spuštění vzdáleného kódu
+*Předchozí název:* Pokus o spuštění vzdáleného kódu
 
 **Popis**
 
@@ -573,7 +574,7 @@ Interní server DNS lze proti rekognoskaci pomocí DNS zabezpečit zakázáním 
 ## <a name="suspicious-communication-over-dns"></a>Podezřelá komunikace prostřednictvím DNS
 <a name="suspicious-communication-over-dns"></a>
 
-*Předchozí název:* podezřelá komunikace prostřednictvím DNS 
+*Předchozí název:* Podezřelá komunikace prostřednictvím DNS 
 
 **Popis**
 
@@ -596,7 +597,7 @@ Pokud po šetření není důvěryhodné domény registrovaný dotaz, doporučuj
 ## <a name="suspicious-modification-of-sensitive-groups"></a>Podezřelé úprava citlivých skupin
 <a name="suspicious-midification-of-sensitive-groups"></a>
 
-*Předchozí název:* podezřelé úprava citlivých skupin
+*Předchozí název:* Podezřelé úprava citlivých skupin
 
 **Popis**
 
@@ -623,7 +624,7 @@ Nastavit [Privileged Access Management pro službu Active Directory](https://doc
 ## <a name="suspicious-service-creation"></a>Podezřelé vytvoření služby
 <a name="suspicious-service-creation"></a>
 
-*Předchozí název:* podezřelé vytvoření služby
+*Předchozí název:* Podezřelé vytvoření služby
 
 **Popis**
 
@@ -649,7 +650,7 @@ Podezřelé služba je vytvořená na řadiči domény ve vaší organizaci. Tat
 ## <a name="suspicious-vpn-connection"></a>Podezřelé připojení k síti VPN
 <a name="suspicious-vpn-detection"></a>
 
-*Předchozí název:* podezřelé sítě VPN 
+*Předchozí název:* Podezřelé připojení k síti VPN 
 
 **Popis**
 
@@ -673,7 +674,7 @@ Oznámení se otevře po odchylky od chování uživatele podle algoritmu strojo
 ## <a name="suspected-wannacry-ransomware-attack"></a>Podezření na útok WannaCry ransomwaru
 <a name="unusual-protocol-implementation"></a>
 
-*Předchozí název:* neobvyklá implementace protokolu (možný útok ransomwarem WannaCry)
+*Předchozí název:* Neobvyklá implementace protokolu (možný útok ransomwarem WannaCry)
 
 **Popis**
 
@@ -714,7 +715,7 @@ Jedná se *pravdivě pozitivní upozornění*, *neškodné pravdivě pozitivní 
 ## <a name="suspected-use-of-metasploit-hacking-framework"></a>Podezřelé použití Metasploit hacking framework
 
 
-*Předchozí název:* neobvyklá implementace protokolu (potenciální použijte Metasploit hacking nástroje)
+*Předchozí název:* Neobvyklá implementace protokolu (potenciální použijte Metasploit hacking nástroje)
 
 **Popis**
 
@@ -755,7 +756,7 @@ Jedná se *pravdivě pozitivní upozornění*, *neškodné pravdivě pozitivní 
 ## <a name="suspected-overpass-the-hash-attack-kerberos"></a>Podezření na útok overpass-the-hash (Kerberos)
 <a name="unusual-protocol-implementation"></a>
 
-*Předchozí název:* neobvyklé protokolu Kerberos protokol implementace (možný útok overpass-the-hash) 
+*Předchozí název:* Neobvyklá implementace protokolu Kerberos (možný útok overpass-the-hash) 
 
 **Popis**
 
@@ -784,7 +785,7 @@ Jedná se *pravdivě pozitivní upozornění*, *neškodné pravdivě pozitivní 
 ## <a name="suspected-brute-force-attack-smb"></a>Podezřelý útok hrubou silou (SMB)
 <a name="unusual-protocol-implementation-smb"></a>
 
-*Předchozí název:* neobvyklá implementace protokolu (potenciální použití škodlivých nástrojů, jako je Hydra)
+*Předchozí název:* Neobvyklá implementace protokolu (potenciální použití škodlivých nástrojů, jako je Hydra)
 
 **Popis**
 
@@ -816,9 +817,39 @@ Jedná se *pravdivě pozitivní upozornění*, * neškodné pravdivě pozitivní
 4. Vynutit komplexní a dlouho hesel v organizaci. Složitá a dlouhá hesla zadejte nezbytnou první úroveň zabezpečení proti budoucím útokům hrubou silou.
 5. [Zakázat SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/)
 
+## <a name="suspected-brute-force-attack-kerberos-ntlm"></a>Podezřelý útok hrubou silou (pomocí protokolu Kerberos, NTLM)
+<a name="suspicious-authentication-failures"></a>
+
+*Předchozí název:* Podezřelé chyby ověřování
+
+**Popis** v útok hrubou silou se útočník pokusí ověření pomocí mnoha různých hesel pro různé účty, dokud nebude nalezen správné heslo pro alespoň jeden účet. Jednou najde, útočník může přihlásit pomocí tohoto účtu.
+
+V této detekce se aktivuje upozornění při zjištění mnoho chyb ověřování pomocí protokolu Kerberos nebo NTLM. Může to být buď vodorovně s menší skupinou hesel mezi mnoha uživateli; nebo svisle s velkým nastavte hesel pouze několik uživatelů. nebo libovolnou kombinaci těchto dvou možností.
+
+**Časový rámec** minimální dobu, než toto konkrétní upozornění se dá spouštět je minimálně jeden týden po nasazení senzoru.
+
+**Šetření**
+
+1. Klikněte na výstrahu, kterou chcete zobrazit: 
+   - Seznam napadené účty
+   - Seznam odhadnuté účty v které pokusů o přihlášení, bylo dokončeno s úspěšné ověření
+   - Pokud byly provedeny pokusy o ověření, pomocí protokolu NTLM, zobrazí se příslušné události aktivit
+   - Pokud byly provedeny pokusy o ověření, pomocí protokolu Kerberos, zobrazí se příslušné síťové aktivity
+2. Klikněte na zdrojovém počítači přejděte na stránku jeho profil. Zkontrolujte, co se stalo v době těchto pokusů o přihlášení, hledání neobvyklých aktivit, jako je například kdo byl přihlášen a které prostředky jsou-li získat přístup. Pokud jste nepovolili integraci ochrany ATP v programu Windows Defender, klikněte na oznámení "BADGE" ochrany ATP v programu Windows Defender k hlubšímu prošetření je počítač. V programu Windows Defender ATP uvidíte, které procesy a výstrahy došlo k přibližně v době výstrahy.
+
+3. Pokud se provádí ověřování pomocí protokolu NTLM a objeví se výstraha vyskytuje v mnoha případech a není dostatek informací o serveru, které na zdrojovém počítači se pokusili získat přístup, měli byste povolit NTLM auditování na řadičích domény používané. K tomuto účelu zapněte události 8004. Toto je událost ověřování NTLM, která obsahuje informace o zdrojovém počítači, uživatelský účet a serveru, který na zdrojovém počítači se pokusili získat přístup. Až budete vědět, které server odeslal ověření ověřování, prozkoumejte serveru tak, že zkontrolujete jeho události, jako je 4624 pro lepší pochopení procesu ověřování.
+<br>
+1. Klikněte na tlačítko **stáhnout podrobnosti o** zobrazíte v Excelové tabulce. 
+
+**Náprava**
+
+Složitá a dlouhá hesla zadejte nezbytnou první úroveň zabezpečení před útoky hrubou silou.
+
 
 ## <a name="user-and-ip-address-reconnaissance-smb"></a>Uživatele a IP adres pro rekognoskaci (SMB)
-<a name="reconnaissance-using-smb-session-enumeration"></a> Rekognoskace pomocí výčtu relací SMB
+<a name="reconnaissance-using-smb-session-enumeration"></a>
+
+*Předchozí název:* Rekognoskace pomocí výčtu relací SMB
 
 
 **Popis**

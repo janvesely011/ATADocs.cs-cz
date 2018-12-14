@@ -13,20 +13,19 @@ ms.technology: ''
 ms.assetid: 2946310a-8e4e-48fc-9450-fc9647efeb22
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: b645522c26f42b4864a68f3793cb9474e98d2149
-ms.sourcegitcommit: ec5dc294d9c6cd5693b13a7c5e7cf1bdd6fb47d7
+ms.openlocfilehash: 80d6b2744c3299bf92d0c4082085dbd872403cc0
+ms.sourcegitcommit: 9acf035f6f2ce32290e00d2e45385ae7993bb63a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53179145"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53334983"
 ---
 # <a name="ata-version-191"></a>ATA verze 1.9.1
 
-## <a name="introduction"></a>Úvod
 
 Tento článek popisuje opravených chybách v aktualizaci 1 pro Microsoft Advanced Threat Analytics (ATA) verze 1.9. Číslo sestavení této aktualizace je 1.9.7412.
 
-## <a name="fixed-issues-included-in-this-update"></a>Tato aktualizace řeší opravené problémy:
+## <a name="fixed-issues-included-in-this-update"></a>Opravené problémy, které jsou součástí této aktualizace
 
 - Možnost selhání migrace mezi ATA verze 1.8 verze 1.9 u velkých databází.
 - Pokud používáte nejnovější verzi prohlížeče Microsoft Edge a přepínání uživatelů, prohlížeče může přestat reagovat.
@@ -37,11 +36,11 @@ Tento článek popisuje opravených chybách v aktualizaci 1 pro Microsoft Advan
 - Nekonzistentní exporty podezřelých aktivit do aplikace Microsoft Excel. Příležitostné selhání pomocí generování chyb.  
 
 
-## <a name="improvements-included-in-this-update"></a>Tato aktualizace řeší vylepšení: 
+## <a name="improvements-included-in-this-update"></a>Vylepšení zahrnutá v této aktualizaci
 - Změny požadované standardy usnadnění společnosti Microsoft (MAS) k certifikaci.
 - Zahrnuje další opravy zabezpečení a výkonu.
 
-## <a name="get-this-update"></a>Získáte tuto aktualizaci:
+## <a name="get-this-update"></a>Získat tuto aktualizaci
 
 Jsou k dispozici na webu Microsoft Update nebo ruční stažení aktualizace pro Microsoft Advanced Threat Analytics verze 1.9.
 
@@ -61,7 +60,7 @@ Počítač vyžaduje restartování počítače po instalaci této aktualizace.
 Tato aktualizace nahrazuje ATA verze 1.9 (1.9.7312).
 
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Verze ATA](ata-versions.md)

@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 11/28/2018
+ms.date: 12/13/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,14 +13,14 @@ ms.technology: ''
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ad2a7e86b2280e1b30a7605bc832ede1e19cb7a2
-ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
+ms.openlocfilehash: 1fc3930fc4b38b396bda2c3ff50795d835910439
+ms.sourcegitcommit: 1c657f269aaece71b2126df55a37f8c43851539a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52744944"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53335417"
 ---
-*Platí pro: Azure Rozšířená ochrana před internetovými útoky*
+*Platí pro: Azure Advanced Threat Protection*
 
 
 
@@ -37,13 +37,13 @@ K vytvoření instance služby Azure ATP, budete potřebovat minimálně jeden g
 
 Tato příručka požadovaných součástí je rozdělen do následujících částí k zajištění, že máte všechno, co potřebujete k úspěšnému nasazení služby Azure ATP. 
 
-[Než začnete](#before-you-start): jsou uvedené informace ke shromáždění a účty a síťové entity, je potřeba mít před zahájením instalace.
+[Než začnete](#before-you-start): Jsou uvedené informace ke shromáždění a účty a síťové entity, které je potřeba mít před zahájením instalace.
 
-[Portál Azure ATP](#azure-atp-workspace-management-portal-and-workspace-portal-requirements): požadavky na portálu prohlížeč popisuje služby Azure ATP.
+[Portál Azure ATP](#azure-atp-workspace-management-portal-and-workspace-portal-requirements): Popisuje požadavky na prohlížeč portálu ochrany ATP v programu Azure.
 
-[Azure ATP senzor](#azure-atp-lightweight-sensor-requirements): uvádí služby Azure ATP senzor hardwarové a softwarové požadavky.
+[Azure ATP senzor](#azure-atp-lightweight-sensor-requirements): Seznamy ochrany ATP v programu Azure senzor hardwarové a softwarové požadavky.
 
-[Azure ATP samostatný senzor](#azure-atp-sensor-requirements): uvádí služby Azure ATP samostatný senzor hardwaru, požadavky na software, jakož i nastavení, která musíte nakonfigurovat na serverech služby Azure ATP samostatného senzoru.
+[Azure ATP samostatný senzor](#azure-atp-sensor-requirements): Vypíše ochrany ATP v programu Azure samostatný senzor hardwaru, požadavky na software a nastavení, které je potřeba nakonfigurovat na serverech služby Azure ATP samostatného senzoru.
 
 ## <a name="before-you-start"></a>Než začnete
 Tato část obsahuje informace, které byste měli získat, a také účty a síťové entity informace, které byste měli mít před zahájením instalace služby Azure ATP.
@@ -61,11 +61,11 @@ Tato část obsahuje informace, které byste měli získat, a také účty a sí
 
 - Pokud se pokusíte instalace senzoru služby Azure ATP do počítače nakonfigurované s adaptérem seskupování síťových adaptérů, obdržíte chybu instalace. Pokud chcete nainstalovat na počítač nakonfigurován s funkcí seskupování síťových adaptérů senzoru služby Azure ATP naleznete v tématu [senzoru služby Azure ATP seskupování problém NIC](troubleshooting-atp-known-issues.md#nic-teaming).
 
--    Doporučené: Uživatel by měl mít oprávnění jen pro čtení kontejneru odstraněných objektů. To umožňuje Azure ATP pro detekci odstranění uživatele ze služby Active Directory. Informace o konfiguraci oprávnění jen pro čtení pro kontejner odstraněných objektů najdete v tématu **Změna oprávnění pro kontejner odstraněných objektů** tématu [zobrazení nebo nastavení oprávnění u objektu adresáře](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) článku.
+-    Doporučené: Uživatel by měl mít ke kontejneru odstraněných objektů oprávnění jen pro čtení. To umožňuje Azure ATP pro detekci odstranění uživatele ze služby Active Directory. Informace o konfiguraci oprávnění jen pro čtení pro kontejner odstraněných objektů najdete v tématu **Změna oprávnění pro kontejner odstraněných objektů** tématu [zobrazení nebo nastavení oprávnění u objektu adresáře](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) článku.
 
 -   Volitelné: Uživatelský účet uživatele, který nemá žádné síťové aktivity. Tento účet je nakonfigurovaný jako uživatel Honeytokenu ochrany ATP v programu Azure. Další informace najdete v tématu [konfigurovat vyloučení a uživatele Honeytokenu](install-atp-step7.md).
 
--   Volitelné: Když nasazujete samostatný senzor, je nezbytné, aby předávaly události Windows 4776, 4732, 4733, 4728, 4729, 4756, 4757 a 7045 ochrany ATP v programu Azure dál vylepšit Azure ATP Pass-the-Hash, útoky hrubou silou, úpravy citlivých skupin a Honeytokenů detekce a vytvoření škodlivé služby. Tyto události přijímá Azure senzor ochrany ATP v programu automaticky. V Azure ATP samostatný senzor mohou přijímat tyto události ze služby SIEM nebo nastavením předávání událostí Windows z řadiče domény. Shromážděné události poskytují ochrany ATP v programu Azure společně s dalšími informacemi, které nejsou k dispozici prostřednictvím síťový provoz na řadiči domény.
+-   Volitelné: Při nasazování samostatný senzor, je nezbytné k předávání událostí Windows 4776, 4732, 4733, 4728, 4729, 4756, 4757 a 7045 do služby Azure ATP dál vylepšit Azure ATP Pass-the-Hash, útoky hrubou silou, úpravy citlivých skupin a Honeytokenů detekce, a Vytvoření škodlivé služby. Tyto události přijímá Azure senzor ochrany ATP v programu automaticky. V Azure ATP samostatný senzor mohou přijímat tyto události ze služby SIEM nebo nastavením předávání událostí Windows z řadiče domény. Shromážděné události poskytují ochrany ATP v programu Azure společně s dalšími informacemi, které nejsou k dispozici prostřednictvím síťový provoz na řadiči domény.
 
 ## <a name="azure-atp-portal-requirements"></a>Portálu požadavky služby Azure ATP
 Přístup k portálu ochrany ATP v programu Azure je prostřednictvím prohlížeče. podporují následující prohlížeče a nastavení:
@@ -121,7 +121,7 @@ Senzor se nepodporuje v doméně, řadiče se systémem Windows 2008 R2 pomocí 
 ### <a name="ports"></a>Porty
 Následující tabulka uvádí minimální porty, které vyžaduje senzoru služby Azure ATP:
 
-|Protokol|Přenos|Port|Směr|Direction|
+|Protocol (Protokol)|Přenos|Port|Směr|Direction|
 |------------|-------------|--------|-----------|-------------|
 |**Porty Internet**|||||
 |SSL (*.atp.azure.com)|TCP|443|Cloudovou službu Azure ATP|Odchozí|
@@ -133,6 +133,10 @@ Následující tabulka uvádí minimální porty, které vyžaduje senzoru služ
 |Syslog (volitelné)|TCP/UDP|514, v závislosti na konfiguraci|Server SIEM|Příchozí|
 |POMOCÍ PROTOKOLU RADIUS|UDP|1813|POMOCÍ PROTOKOLU RADIUS|Příchozí|
 |Protokol TLS pro RDP port|TCP|3389|Všechna zařízení v síti|Obojí|
+
+### <a name="windows-event-logs"></a>Protokoly událostí Windows
+Azure ATP detekce spoléhá na konkrétní Windows protokoly událostí, které mohou analyzovat senzor z řadiče domény. Pro správné události, které se Audituje a součástí og události Windows řadičů domény vyžadují nastavení přesné pokročilé zásady auditu. Další informace najdete v tématu [Advanced kontrol zásad auditu](atp-advanced-audit-policy.md).
+
 
 > [!NOTE]
 > - Pomocí uživatelského účtu služby adresáře, dotazuje senzor koncových bodů ve vaší organizaci pro použití SAM-R (přihlášení k síti) k vytvoření místního správce [grafu cesty laterální pohyb](use-case-lateral-movement-path.md). Další informace najdete v tématu [konfigurace SAM-R požadovaná oprávnění](install-atp-step8-samr.md).
@@ -195,7 +199,7 @@ Samostatný senzor ochrany ATP v programu Azure vyžaduje minimálně jeden adap
 ### <a name="ports"></a>Porty
 Následující tabulka uvádí minimální porty, které vyžaduje samostatný senzor ochrany ATP v programu Azure nakonfigurovaná na adaptéru pro správu:
 
-|Protokol|Přenos|Port|Směr|Direction|
+|Protocol (Protokol)|Přenos|Port|Směr|Direction|
 |------------|-------------|--------|-----------|-------------|
 |**Porty Internet**|||||
 |SSL (*.atp.azure.com)|TCP|443|Cloudovou službu Azure ATP|Odchozí|
