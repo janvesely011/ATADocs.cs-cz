@@ -13,14 +13,14 @@ ms.technology: ''
 ms.assetid: 43e57f87-ca85-4922-8ed0-9830139fe7cb
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 31871a03795b1c08e4fd8954cac80a00538863db
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: 75a450b9ddea9c47d12f9c14da2ee6c3089775ea
+ms.sourcegitcommit: 8f9d6c517b91b9b389b604cd85f2482593b36fcf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783334"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53654871"
 ---
-*Platí pro: Azure Rozšířená ochrana před internetovými útoky*
+*Platí pro: Azure Advanced Threat Protection*
 
 
 
@@ -30,7 +30,7 @@ ms.locfileid: "48783334"
 
 Následující seznam skupin se považují za citlivé ochrany ATP v programu Azure. Za citlivou se považuje každá entita, která je členem těchto skupin:
 
--   Administrators
+-   Správci
 -   Power Users
 -   Account Operators
 -   Server Operators
@@ -48,7 +48,7 @@ Následující seznam skupin se považují za citlivé ochrany ATP v programu Az
 -   Enterprise Admins
 
  > [!NOTE]
- > . Září 2018 Remote Desktop Users byly také automaticky považují za citlivé pomocí služby Azure ATP. Vzdálené plochy entity nebo přidat po tohoto data již nebude automaticky označené jako citlivé při vzdálené plochy entity nebo skupiny přidat před tímto datem může zůstat označeno jako citlivé. Toto citlivá nastavení lze změnit teď ručně.  
+ > Do září 2018 Remote Desktop Users byly také automaticky považují za citlivé pomocí služby Azure ATP. Vzdálené plochy entity nebo přidat po tohoto data již nebude automaticky označené jako citlivé při vzdálené plochy entity nebo skupiny přidat před tímto datem může zůstat označeno jako citlivé. Toto citlivá nastavení lze změnit teď ručně.  
 
 ## <a name="tagging-sensitive-accounts"></a>Označování citlivých účtů
 
@@ -67,7 +67,7 @@ Kromě těchto skupin můžete ručně označit skupiny nebo účty jako citliv�
 4. Klikněte na **Uložit**.
 
     
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Práce s podezřelými aktivitami](working-with-suspicious-activities.md)
 - [Podívejte se na fórum služby Azure ATP.](https://aka.ms/azureatpcommunity)

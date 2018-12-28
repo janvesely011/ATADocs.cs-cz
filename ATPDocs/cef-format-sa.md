@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 12/13/2018
+ms.date: 12/17/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 3261155c-3c72-4327-ba29-c113c63a4e6d
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 025a5134f6521cf206ad27197a42672a11a0ea64
-ms.sourcegitcommit: 9acf035f6f2ce32290e00d2e45385ae7993bb63a
+ms.openlocfilehash: 929b0db30632e737e6371d473639f1e22532f75f
+ms.sourcegitcommit: c3ee9495b9d4db985783dcabcc4fa77c7c8eaed4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53335017"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53454542"
 ---
 *Platí pro: Azure Advanced Threat Protection*
 
@@ -145,10 +145,10 @@ Priority:
 02 – 21 – 2018 17:04:47 Auth.Error 192.168.0.220 1 2018-02-21T15:04:33.537583 + 00:00 CENTER CEF 6076 PassTheTicketSecurityAlert ï» ¿0 | Microsoft | Ochrana ATP v programu Azure | 2.22.4228.22540 | PassTheTicketSecurityAlert | Krádež identity pomocí útoku Pass-the-Ticket | 10 | start = 2018-02-21T15:02:22.2577465Z aplikace = Kerberos suser = msg Eugene Jenkins = Kerberos Eugene Jenkins (softwarový inženýr) pro lístky byly odcizeny z Admin-PC do Victim-PC a používá pro přístup k účtu krbtgt/Doména1. TEST. MÍSTNÍ. externalId = 2018 cs1Label = url cs1 = https\://contoso-corp.atp.azure.com/securityAlert/511f1487-2915-477d-be2e-04cfba702ccd cs2Label = aktivační událost cs2 = nový
 
 ### <a name="suspected-over-pass-the-hash-attack-encryption-downgrade"></a>Podezření na útok over-pass-the-Hash (oslabení šifrování) 
-02 – 21 – 2018 16:21:07 Auth.Warning 192.168.0.220 1 2018-02-21T14:20:54.145833 + 00:00 CENTER CEF 6076 EncryptionDowngradeSecurityAlert ï» ¿0 | Microsoft | Ochrana ATP v programu Azure | 2.22.4228.22540 | EncryptionDowngradeSecurityAlert | Aktivita související s oslabením šifrování | 5 | start = 2018-02-21T14:19:41.8737870Z aplikace = Kerberos msg = metodu šifrování pole Encrypted_Timestamp v AS_REQ byla snížena zpráv z počítače CLIENT1, na základě dřív zjištěné chování. Může to být důsledek krádeže přihlašovacích údajů s pomocí Overpass-the-Hash z počítače CLIENT1. externalId = 2011 cs1Label = url cs1 = https\://contoso-corp.atp.azure.com/securityAlert/6354b9ed-6a39-4f5b-b10e-f51bbee879d2 cs2Label = aktivační událost cs2 = aktualizace
+02 – 21 – 2018 16:21:07 Auth.Warning 192.168.0.220 1 2018-02-21T14:20:54.145833 + 00:00 CENTER CEF 6076 EncryptionDowngradeSecurityAlert ï» ¿0 | Microsoft | Ochrana ATP v programu Azure | 2.22.4228.22540 | EncryptionDowngradeSecurityAlert | Aktivita související s oslabením šifrování | 5 | start = 2018-02-21T14:19:41.8737870Z aplikace = Kerberos msg = metodu šifrování pole Encrypted_Timestamp v AS_REQ byla snížena zpráv z počítače CLIENT1, na základě dřív zjištěné chování. Může to být důsledek krádeže přihlašovacích údajů s pomocí Overpass-the-Hash z počítače CLIENT1. externalId = 2008 cs1Label = url cs1 = https\://contoso-corp.atp.azure.com/securityAlert/6354b9ed-6a39-4f5b-b10e-f51bbee879d2 cs2Label = aktivační událost cs2 = aktualizace
 
 ### <a name="suspected-skeleton-key-attack-encryption-downgrade"></a>Podezřelý útoku typu Skeleton Key (oslabení šifrování) 
-02 – 21 – 2018 16:21:07 Auth.Warning 192.168.0.220 1 2018-02-21T14:20:54.145833 + 00:00 CENTER CEF 6076 EncryptionDowngradeSecurityAlert ï» ¿0 | Microsoft | Ochrana ATP v programu Azure | 2.22.4228.22540 | EncryptionDowngradeSecurityAlert | Aktivita související s oslabením šifrování | 5 | start = 2018-02-21T14:19:41.8737870Z aplikace = Kerberos msg = metodu šifrování pole ETYPE_INFO2 KRB_ERR byl downgradovat zpráv z počítače CLIENT1, na základě dřív zjištěné chování. To může být důsledek Skeleton Key na řadič domény DC1. externalId = 2011 cs1Label = url cs1 = https\://contoso-corp.atp.azure.com/securityAlert/6354b9ed-6a39-4f5b-b10e-f51bbee879d2 cs2Label = aktivační událost cs2 = nový
+02 – 21 – 2018 16:21:07 Auth.Warning 192.168.0.220 1 2018-02-21T14:20:54.145833 + 00:00 CENTER CEF 6076 EncryptionDowngradeSecurityAlert ï» ¿0 | Microsoft | Ochrana ATP v programu Azure | 2.22.4228.22540 | EncryptionDowngradeSecurityAlert | Aktivita související s oslabením šifrování | 5 | start = 2018-02-21T14:19:41.8737870Z aplikace = Kerberos msg = metodu šifrování pole ETYPE_INFO2 KRB_ERR byl downgradovat zpráv z počítače CLIENT1, na základě dřív zjištěné chování. To může být důsledek Skeleton Key na řadič domény DC1. externalId = 2010 cs1Label = url cs1 = https\://contoso-corp.atp.azure.com/securityAlert/6354b9ed-6a39-4f5b-b10e-f51bbee879d2 cs2Label = aktivační událost cs2 = nový
 
 ### <a name="suspected-dcsync-attack-replication-of-directory-services"></a>Podezřelý útok DCSync (replikace adresářových služeb)
 02 – 21 – 2018 16:20:06 Auth.Warning 192.168.0.220 1 2018-02-21T14:19:54.254930 + 00:00 CENTER CEF 6076 MaliciousServiceCreationSecurity ï» ¿0 | Microsoft | Ochrana ATP v programu Azure | 2.22.4228.22540 | MaliciousServiceCreationSecurityAlert | Podezřelé vytvoření služby | 5 | start = 2018-02-21T14:19:41.7897808Z aplikace = ServiceInstalledEvent shost = CLIENT1 msg = user1 vytvořili MaliciousService mohl spustit potenciálně škodlivé příkazy na počítači CLIENT1. externalId = 2026 cs1Label = url cs1 = https\://contoso-corp.atp.azure.com/securityAlert/179229b6-b791-4895-b5aa-fdf3747a325c cs2Label = aktivační událost cs2 = aktualizace

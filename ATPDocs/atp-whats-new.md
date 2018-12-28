@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 12/09/2018
+ms.date: 12/21/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,25 +13,35 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: cde3c56d0b8ad029337e03602c805930002f8ed4
-ms.sourcegitcommit: d1c9c3e69b196f6086a8f100e527553cf0d95aac
+ms.openlocfilehash: af08c371f19288043eba2377ea03d1a90bd2eaab
+ms.sourcegitcommit: 39822aa24bddb72eea55f484d9df290cce2e19d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53125043"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53737045"
 ---
-*Platí pro: Azure Rozšířená ochrana před internetovými útoky*
+*Platí pro: Azure Advanced Threat Protection*
 
-# <a name="whats-new-in-azure-atp"></a>Co je nového v Azure ATP 
+# <a name="whats-new-in-azure-atp"></a>Co je nového v Azure ATP
+
+## <a name="azure-atp-release-260"></a>Verze ochrany ATP v programu Azure 2,60
+Azure 2,60 verzi ochrany ATP v programu je aktuálně naplánované pro verzi během první týden 2019. Během této doby Pokud se nenajdou žádné kritické problémy, které vyžadují dočasné aktualizace, aktualizace se pošle podle potřeby.
+
+## <a name="azure-atp-release-259"></a>Verze ochrany ATP v programu Azure 2.59
+Vydáno 16 dne 2018
+
+- Tato verze obsahuje vylepšení a opravy chyb pro interní senzor infrastruktury.
+
 
 ## <a name="azure-atp-release-258"></a>Verze ochrany ATP v programu Azure 2.58
 
 Vydáno 9. prosince 2018
 
-- **Rozšířením upozornění zabezpečení: Rozdělit neobvyklé implementace protokolu upozornění**<br>
+- **Vylepšení upozornění zabezpečení: Neobvyklá implementace protokolu upozornění rozdělení**<br>
 Azure ATP řadu výstrah zabezpečení neobvyklé implementace protokolu, které dříve sdílené 1 externalId (2002), jsou teď rozdělit do 4 rozlišovací výstrahy, s odpovídající externalId jedinečný. 
 
 ### <a name="new-alert-externalids"></a>Nové výstrahy externalIds
+
 > [!div class="mx-tableFixed"] 
 
 |Nový název výstrahy zabezpečení|Předchozí název výstrahy zabezpečení|ExternalId jedinečný|
@@ -42,7 +52,7 @@ Azure ATP řadu výstrah zabezpečení neobvyklé implementace protokolu, které
 |Podezření na útok WannaCry ransomwaru|Neobvyklá implementace protokolu (možný útok ransomwarem WannaCry)|2035
 |
 
-- **Nová aktivita sledovaných: kopírování prostřednictvím protokolu SMB souboru**<br>
+- **Nové monitorované aktivity: Kopírování souborů přes protokol SMB**<br>
 Kopírování souborů přes protokol SMB je nyní monitorované a filtrovat aktivity. Další informace o tom, které [aktivity ochrany ATP v programu Azure monitoruje](monitored-activities.md)a jak [filtru a vyhledávání monitorování aktivity](atp-activities-search.md) na portálu. 
 
 - **Velký obrázek rozšíření cesty laterální pohyb**<br>
@@ -72,7 +82,7 @@ Od dnešního dne, ochrana ATP v programu Azure *pracovní prostory* se přejmen
 Vydáno 25. listopadu 2018
 
 
-- **Rozšíření funkce: Cesty taktiky Lateral Movement (LMPs)** <br>
+- **Vylepšení funkce: Cesty taktiky Lateral Movement (LMPs)** <br>
 K rozšíření možností Azure ochrany ATP v programu laterální pohyb cestu (LMP) jsou přidány dvě další funkce:
 
   - Historie LMP jsou nyní uloženy a dostupnější za entity a pomocí LMP sestavy. 
@@ -80,7 +90,7 @@ K rozšíření možností Azure ochrany ATP v programu laterální pohyb cestu 
 
   Zobrazit [cesty taktiky Lateral Movement ochrany ATP v programu Azure](use-case-lateral-movement-path.md) Další informace o tom, jak používat a prozkoumat pomocí rozšířené LMPs. 
 
-- **Dokumentace k vylepšení: cesty laterální Lateral Movement, názvy výstraha zabezpečení**<br> Přidání a aktualizace byly provedeny na služby Azure ATP články s popisem cesty laterální pohyb popisy a funkce, název se přidá mapování pro všechny instance starých názvy výstrah zabezpečení nové názvy a externalIds. 
+- **Dokumentace k vylepšení: Cesty taktiky Lateral Movement, názvy výstraha zabezpečení**<br> Přidání a aktualizace byly provedeny na služby Azure ATP články s popisem cesty laterální pohyb popisy a funkce, název se přidá mapování pro všechny instance starých názvy výstrah zabezpečení nové názvy a externalIds. 
   - V tématu [cesty taktiky Lateral Movement ochrany ATP v programu Azure](use-case-lateral-movement-path.md), [prozkoumat cesty taktiky Lateral Movement](investigate-lateral-movement-path.md), a [Průvodce výstrah zabezpečení](suspicious-activity-guide.md) Další informace.   
 
 - Tato verze obsahuje vylepšení a opravy chyb pro interní senzor infrastruktury.
@@ -96,20 +106,20 @@ Azure ATP [podezřelá komunikace prostřednictvím DNS](suspicious-activity-gui
 ## <a name="azure-atp-release-254"></a>Verze ochrany ATP v programu Azure 2,54
 Vydáno 11. listopadu 2018
 
-- **Vylepšení funkce: výchozí vyloučení domény přidá do podezřelá komunikace přes upozornění DNS**<br>   Novým rozšířením tři Oblíbené domény do seznamu vyloučení výchozí domény. Seznam vyloučení zůstává plně přizpůsobitelné. Zobrazit [vyloučení entit z detekce](excluding-entities-from-detections.md), další informace. 
+- **Vylepšení funkce: Výchozí vyloučení domény přidá do podezřelá komunikace přes upozornění DNS**<br>   Novým rozšířením tři Oblíbené domény do seznamu vyloučení výchozí domény. Seznam vyloučení zůstává plně přizpůsobitelné. Zobrazit [vyloučení entit z detekce](excluding-entities-from-detections.md), další informace. 
 
-- **Dokumentace k vylepšení: aktualizace protokolu SIEM, pokyny známé problémy**<br>    externalId mapování a další vysvětlení byly přidány do systému SIEM protokolu popisy. Zobrazit [referenční informace k protokolům SIEM](cef-format-sa.md), další informace. <br>Byla přidána další článek pokyny aktuálně nevyřešené známé problémy. Zobrazit, [známé problémy ochrany ATP v programu Azure](known-issues.md), další informace.  
+- **Dokumentace k vylepšení: Aktualizace protokolu SIEM, pokyny známé problémy**<br>    externalId mapování a další vysvětlení byly přidány do systému SIEM protokolu popisy. Zobrazit [referenční informace k protokolům SIEM](cef-format-sa.md), další informace. <br>Byla přidána další článek pokyny aktuálně nevyřešené známé problémy. Zobrazit, [známé problémy ochrany ATP v programu Azure](known-issues.md), další informace.  
 
 - Tato verze obsahuje vylepšení a opravy chyb pro interní senzor infrastruktury.
 
 ## <a name="azure-atp-release-253"></a>Verze ochrany ATP v programu Azure 2,53
 Vydáno 4. listopadu 2018
 
-- **Vylepšení upozornění zabezpečení: podezřelé chyby ověřování**<br>
+- **Vylepšení upozornění zabezpečení: Podezřelé ověřování se nezdařilo**<br>
 Azure ATP [podezřelé chyby ověřování zabezpečení upozornění](suspicious-activity-guide.md) teď obsahuje monitorování pro detekci hesla hrubou zařízení vynutit útoky.
 V typické **heslo zařízení** útoku, útočníci po úspěšně výčet seznamu platní uživatelé z řadiče domény, zkuste jedno heslo pečlivě vytvořené pro všechny známé uživatelské účty (jedno heslo na více účtů) . Při počáteční heslo zařízení neproběhne úspěšně, bude snaží znovu, využívají jiné heslo pečlivě vytvořený, obvykle po uplynutí 30 minut mezi pokusy. Doba čekání útočníkům umožňuje, aby neměl spouštět nejčastěji podle času účet uzamčení prahové hodnoty. Heslo zařízení se rychle stal oblíbenou technikou útočník a testery pera. Heslo zařízení útoky ukázaly na zajistit efektivitu při získávání počáteční základnu v organizaci a pro následné laterální přesuny pokouší o zvýšení oprávnění. 
 
-- **Vylepšení funkce: odeslat testovací zprávu Syslog**<br>   Nová možnost odeslat testovací zpráva Syslogu během procesu instalace systému SIEM. Zobrazit [integrace se Syslogem](setting-syslog.md), další informace. 
+- **Vylepšení funkce: Odeslat zprávu Syslog**<br>   Nová možnost odeslat testovací zpráva Syslogu během procesu instalace systému SIEM. Zobrazit [integrace se Syslogem](setting-syslog.md), další informace. 
 
 - Tato verze také zahrnuje vylepšení a opravy chyb pro interní senzor infrastruktury.
 
@@ -117,13 +127,13 @@ V typické **heslo zařízení** útoku, útočníci po úspěšně výčet sezn
 Vydáno 28. října 2018
 
 
-- **Vylepšení upozornění zabezpečení: Pokus o vzdálené spuštění kódu**<br>
+- **Vylepšení upozornění zabezpečení: Pokus o spuštění vzdáleného kódu**<br>
 Azure ATP [upozornění na zabezpečení. pokus o vzdálené spuštění kódu](suspicious-activity-guide.md) nyní zahrnuje monitorování podezřelých pokusy o spuštění vzdáleného kódu Powershellu v řadičích domény. Je běžné metody pro provádění platné příkazy pro správu vzdáleného prostředí PowerShell, ale se často používá speciálně při pokusu o spuštění skriptů na vzdálené koncové body. 
 
-- **Vylepšení funkce: nastavit plánování sestav**
+- **Vylepšení funkce: Nastavit plánování sestav**
 <br>Teď můžete nastavit jenom konkrétní hodiny naplánování sestav pomocí služby Azure ATP [sestavy](reports.md#) funkce. 
 
-- **Přidání konfigurace: Tenanta řízení přístupu na základě role (RBAC)**
+- **Přidání konfigurace: Tenant řízení přístupu na základě role (RBAC)**
 <br>Konfigurování rolí zabezpečení vašeho tenanta v Centru pro správu Azure Active Directory (AAD) přímo z nové propojení správce portálu ochrany ATP v programu Azure. 
 
 - **Dokumentace k revidované struktuře a obsahu**
@@ -148,7 +158,7 @@ Vydáno 14. října 2018
 
 ## <a name="azure-atp-release-249"></a>Verze ochrany ATP v programu Azure 2.49
 Vydáno 7. října 2018
--   **Nové detekce: podezřelá komunikace DNS** (preview)<br>Nové detekce přidána k chrání před útoky komunikace podezřelé DNS:
+-   **Nové detekce: Podezřelá komunikace DNS** (preview)<br>Nové detekce přidána k chrání před útoky komunikace podezřelé DNS:
 
     -   Tato detekce pomáhá odhalit útoky na protokolu DNS. Protokol DNS není ve většině organizací, monitorovat a zřídka blokované před škodlivými aktivitami. Povoluje se útočník na napadeném počítači zneužívají protokolu DNS. Škodlivý komunikace prostřednictvím DNS je možné pro průsak dat ven, příkaz a ovládací prvek a/nebo omezení úmyslem vyhnout podnikové sítě.
 
@@ -168,7 +178,7 @@ Vydáno 7. října 2018
 
 ## <a name="azure-atp-release-248"></a>Verze ochrany ATP v programu Azure 2.48
 Vydáno 16. září 2018
-- **Výstraha zabezpečení:** dotazů služby Rekognoskace pomocí adresáře
+- **Výstraha zabezpečení:** Rekognoskace pomocí dotazů na adresářové služby
 
   Tato výstraha zabezpečení teď vylepšili infografiky a doklady. 
 
@@ -325,7 +335,7 @@ Vydáno 3. června 2018
 
 Vydáno 27. května 2018
 
-- Funkce ve verzi Preview: ochrana ATP v programu Azure teď podporuje nové jazyky a 13 nové národní prostředí:
+- Funkce ve verzi Preview: Ochrana ATP v programu Azure teď podporuje nové jazyky a 13 nové národní prostředí:
     - Čeština
     - Maďarština
     - italština
@@ -390,7 +400,7 @@ Vydáno 8. dubna 2018
 
 Vydáno 25. března 2018
 
-- Až ochrany ATP v programu Azure upozorňuje vás na podezřelé aktivity, které identifikují jako neškodné pozitivní (legitimní akci, která není podezřelé aktivity), budete mít možnost vyloučit počítače a IP adresy pro další způsoby detekce, včetně: oslabení šifrování, LDAP Útok hrubou silou, podobě zfalšovaných certifikátů PAC, útoky hrubou silou a Pass-the-hash.
+- Když ochrany ATP v programu Azure upozorňuje vás na podezřelé aktivity, které identifikují jako neškodné pozitivní (legitimní akci, která není podezřelé aktivity) máte možnost vyloučit počítače a IP adresy pro další způsoby detekce, včetně: Oslabení šifrování, útok hrubou silou v protokolu LDAP, podobě zfalšovaných certifikátů PAC, útoky hrubou silou a Pass-the-hash.
 -   Byl vylepšen výkon senzoru služby Azure ATP.
 -   Nové oblasti pro nasazení pracovního prostoru, přidala se teď můžete nasadit pracovní prostor v Asii. 
 

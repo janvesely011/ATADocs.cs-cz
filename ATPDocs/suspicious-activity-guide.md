@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 12/13/2018
+ms.date: 12/19/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: b5f4b24eb67f2071274ad109e61afbe234e8e660
-ms.sourcegitcommit: 1c657f269aaece71b2126df55a37f8c43851539a
+ms.openlocfilehash: 5e4c8ccc1af72a1951b1437f0d19468b7ca1382f
+ms.sourcegitcommit: d68a44b3230dc4c522d8d895eb3bc93feacae62e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53335451"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53615303"
 ---
 *Platí pro: Azure Advanced Threat Protection*
 
@@ -37,7 +37,7 @@ Další informace o tom, jak pracovat s výstrahami zabezpečení služby Azure 
 
 ## <a name="security-alert-name-mapping-and-unique-externalid"></a>Mapování názvu upozornění zabezpečení a jedinečný externalId
 
-Ve verzi 2.56 všechny existující výstrahy zabezpečení služby Azure ATP byly přejmenovány s snáze pochopit názvy. Mapování mezi staré i nové názvy a jejich odpovídající jedinečný externalIds jsou uvedené v následující tabulce. Společnost Microsoft doporučuje použití výstrahy externalIds místo upozornění názvů pro skripty nebo automatizace jsou trvalé pouze výstrahy externalIds zabezpečení a nelze změnit. 
+Ve verzi 2.56 všechny existující výstrahy zabezpečení služby Azure ATP byly přejmenovány s snáze pochopit názvy. Mapování mezi staré i nové názvy a jejich odpovídající jedinečný externalIds jsou uvedené v následující tabulce. Společnost Microsoft doporučuje použití výstrahy externalIds místo upozornění názvů pro skripty nebo automatizace jsou trvalé pouze výstrahy externalIds zabezpečení a nelze změnit.
 
 > [!div class="mx-tableFixed"] 
 
@@ -46,14 +46,14 @@ Ve verzi 2.56 všechny existující výstrahy zabezpečení služby Azure ATP by
 |Rekognoskace výčtu účtů|Rekognoskace pomocí výčtu účtů|2003|
 |Aktivita Honeytokenu|Aktivita Honeytokenu|2014|
 |Škodlivá žádost Data Protection API hlavní klíč|Škodlivá žádost o soukromé informace přes Data Protection|2020|
-|Rekognoskace mapování sítě (DNS)|Rekognoskace pomocí DNS|2007|
+|Mapování sondování sítě (DNS)|Rekognoskace pomocí DNS|2007|
 |Pokus o spuštění vzdáleného kódu|Pokus o spuštění vzdáleného kódu|2019|
 |Podezřelý útok hrubou silou (LDAP)|Útok hrubou silou pomocí jednoduché vazby LDAP.|2004|
 |Podezřelý útok DCShadow (povýšení řadiče domény)|Povýšení řadiče domény podezřelé (možný útok DCShadow)|2028|
 |Podezřelý útok DCShadow (žádost o replikaci řadiče domény)|Žádost o replikaci řadiče domény podezřelé (možný útok DCShadow)|2029|
 |Podezřelý útok DCSync (replikace adresářových služeb)|Škodlivá replikace adresářových služeb|2006|
 |Podezřelé použití lístku Golden (oslabení šifrování)|Aktivita snížení úrovně šifrování (potenciální útok metodou golden ticket)|2009|
-|Podezřelé použití lístku Golden (falešných dat autorizace)|Eskalace oprávnění prostřednictvím zfalšovaných dat autorizace|2013|
+|Podezřelé použití lístku Golden (falešných dat autorizace) |Eskalace oprávnění prostřednictvím zfalšovaných dat autorizace|2013|
 |Podezřelé použití Golden Ticket (neexistující účet)|Protokol Kerberos Golden Ticket - neexistující účet|2027|
 |Podezřelé použití Golden Ticket (čas anomálií) |Kerberos Golden Ticket – čas anomálií|2022|
 |Podezřelé použití Golden Ticket (ticket anomálií) – preview|Není k dispozici|2032|
@@ -74,8 +74,11 @@ Ve verzi 2.56 všechny existující výstrahy zabezpečení služby Azure ATP by
 |Uživatele a IP adres pro rekognoskaci (SMB) |Rekognoskace pomocí výčtu relací SMB|2012|
 
 
+
+
 ## <a name="account-enumeration-reconnaissance"></a>Rekognoskace výčtu účtů
 <a name="reconnaissance-using-account-enumeration"></a>
+
 *Předchozí název:* Rekognoskace pomocí výčtu účtů
 
 **Popis**
@@ -142,9 +145,9 @@ V této detekce se aktivuje upozornění při použití neúspěšně pokusil na
 
 1. Zdrojový počítač, s organizaci schválení je pokročilý kontrolu zabezpečení Active Directory?
 
-2. Pokud ano a ji by měl vždy být tím, **zavřít a vyloučit** podezřelou aktivitu.
+2. Pokud ano a ji by měl vždy být tím, **zavřít a vyloučit** výstrahu.
 
-3. Pokud ano a je to dělat neměli, **Zavřít** podezřelou aktivitu.
+3. Pokud ano a je to dělat neměli, **Zavřít** výstrahu.
 
 **Náprava**
 
@@ -320,7 +323,7 @@ Můžete využít [AD ACL Scanner](https://blogs.technet.microsoft.com/pfeswepl
 
 **Popis** oslabení šifrování je metoda oslabení podle downgradu úrovně šifrování protokolu různých polí, které jsou šifrované pomocí nejvyšší úrovně šifrování pomocí protokolu Kerberos. Oslabeným šifrované pole může být snazší target na offline útoky hrubou silou při pokusech. Různých metod útoku zvýšit využití slabé šifrování doklad protokolu Kerberos. V tomto zjišťování zjišťuje ochrany ATP v programu Azure typy šifrování pomocí protokolu Kerberos, počítačů a uživatelů a oznámení, že vás, když je slabší šifrovací, který používá: (1) je neobvyklé, že u zdrojového počítače nebo uživatele. a (2) shod označuje technik útoku. 
 
-Ve výstraze Golden Ticket metoda šifrování pole TGT v TGS_REQ (žádost o službu) zprávy ze zdrojového počítače downgradovat ve srovnání s dřív zjištěné chování. To není založené na čase anomálií (stejně jako v jiných detekce Golden Ticket). Kromě toho se žádný požadavek na ověření Kerberos související s předchozí žádosti o službu detekovaných službou ochrany ATP v programu.
+Ve výstraze Golden Ticket metoda šifrování přidělování lístků (TGT) pole zprávy TGS_REQ (žádost o službu) ze zdrojového počítače lístků downgradovat ve srovnání s dřív zjištěné chování. To není založené na čase anomálií (stejně jako v jiných detekce Golden Ticket). Kromě toho se žádný požadavek na ověření Kerberos související s předchozí žádosti o službu detekovaných službou ochrany ATP v programu.
 
 **Šetření**
 1. Některé prostředky nepodporují silné šifrování metody a může aktivovat tuto výstrahu.
@@ -601,7 +604,7 @@ Pokud po šetření není důvěryhodné domény registrovaný dotaz, doporučuj
 
 **Popis**
 
-Útočníci přidání uživatelů do skupiny s vysokou úrovní oprávnění. Učiní tak získat přístup k více prostředkům a k získání průniku do sítě. Tato detekce spoléhá na profilaci aktivity Změna skupiny uživatelů a upozorní při viděli doplněk neobvyklé citlivých skupin. Profilace se neustále provádí pomocí služby Azure ATP. Minimální dobu, než může být výstraha je jeden měsíc na každém řadiči domény.
+Útočníci obvykle přidání uživatelů do skupiny s vysokou úrovní oprávnění. Učiní tak získat přístup k více prostředkům a k získání průniku do sítě. Tato detekce spoléhá na profilaci aktivity Změna skupiny uživatelů a upozorní při viděli doplněk neobvyklé citlivých skupin. Profilace se neustále provádí pomocí služby Azure ATP. Minimální dobu, než může být výstraha je jeden měsíc na každém řadiči domény.
 
 Definice citlivých skupin v Azure ATP, naleznete v tématu [práce s citlivými účty](sensitive-accounts.md).
 
@@ -707,7 +710,7 @@ Jedná se *pravdivě pozitivní upozornění*, *neškodné pravdivě pozitivní 
 
 1. Obsahují zdrojový počítač. 
       - [Odebrat WannaCry](https://support.microsoft.com/help/890830/remove-specific-prevalent-malware-with-windows-malicious-software-remo)
-      - WanaKiwi může dešifrovat data v rámci ransom softwaru, ale jen pokud uživatel nebyl restartovat nebo vypnout počítač. Další informace najdete v tématu [chcete pokřik Ransomwaru](https://answers.microsoft.com/en-us/windows/forum/windows_10-security/wanna-cry-ransomware/5afdb045-8f36-4f55-a992-53398d21ed07?auth=1)
+      - WanaKiwi může dešifrovat data v rámci ransom softwaru, ale jen pokud uživatel nebyl restartovat nebo vypnout počítač. Další informace najdete v tématu [WannaCry Ransomwaru](https://answers.microsoft.com/en-us/windows/forum/windows_10-security/wanna-cry-ransomware/5afdb045-8f36-4f55-a992-53398d21ed07?auth=1)
       - Vyhledejte uživatelé přihlášení v době aktivity, jak může být ohrožené. Resetování hesel a povolení vícefaktorového ověřování 
 2. Oprava všech počítačů, a ujistěte se, aby aktualizace zabezpečení. 
       - [Zakázat SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/)
@@ -835,9 +838,9 @@ V této detekce se aktivuje upozornění při zjištění mnoho chyb ověřován
    - Seznam odhadnuté účty v které pokusů o přihlášení, bylo dokončeno s úspěšné ověření
    - Pokud byly provedeny pokusy o ověření, pomocí protokolu NTLM, zobrazí se příslušné události aktivit
    - Pokud byly provedeny pokusy o ověření, pomocí protokolu Kerberos, zobrazí se příslušné síťové aktivity
-2. Klikněte na zdrojovém počítači přejděte na stránku jeho profil. Zkontrolujte, co se stalo v době těchto pokusů o přihlášení, hledání neobvyklých aktivit, jako je například kdo byl přihlášen a které prostředky jsou-li získat přístup. Pokud jste nepovolili integraci ochrany ATP v programu Windows Defender, klikněte na oznámení "BADGE" ochrany ATP v programu Windows Defender k hlubšímu prošetření je počítač. V programu Windows Defender ATP uvidíte, které procesy a výstrahy došlo k přibližně v době výstrahy.
+2. Klikněte na zdrojovém počítači přejděte na stránku jeho profil. Zkontrolujte, co se stalo v době těchto pokusů o přihlášení, hledání neobvyklých aktivit, jako je například kdo byl přihlášen a které prostředky jsou-li získat přístup. Pokud jste nepovolili integraci ochrany ATP v programu Windows Defender, klikněte na oznámení "BADGE" ochrany ATP v programu Windows Defender k hlubšímu prošetření je počítač. Pomocí programu Windows Defender ATP, můžete zjistit, které procesy a výstrahy došlo v době výskytu výstrahy.
 
-3. Pokud se provádí ověřování pomocí protokolu NTLM a objeví se výstraha vyskytuje v mnoha případech a není dostatek informací o serveru, které na zdrojovém počítači se pokusili získat přístup, měli byste povolit NTLM auditování na řadičích domény používané. K tomuto účelu zapněte události 8004. Toto je událost ověřování NTLM, která obsahuje informace o zdrojovém počítači, uživatelský účet a serveru, který na zdrojovém počítači se pokusili získat přístup. Až budete vědět, které server odeslal ověření ověřování, prozkoumejte serveru tak, že zkontrolujete jeho události, jako je 4624 pro lepší pochopení procesu ověřování.
+3. Pokud se provádí ověřování pomocí protokolu NTLM, a zobrazí se že výstraha vyskytuje v mnoha případech bez dostatek informací o serveru, že zdrojový počítač se pokusili získat přístup, povolte NTLM auditování na řadičích domény používané. Povolte ověřování NTLM auditování na řadičích domény používané zapnutím události 8004. Toto je událost ověřování NTLM, která obsahuje informace o zdrojovém počítači, uživatelský účet a serveru, že zdrojový počítač se pokusili získat přístup. Až budete vědět, které server odeslal ověření ověřování, prozkoumejte serveru tak, že zkontrolujete události, například události 4624 pro lepší pochopení procesu ověřování.
 <br>
 1. Klikněte na tlačítko **stáhnout podrobnosti o** zobrazíte v Excelové tabulce. 
 
@@ -845,12 +848,42 @@ V této detekce se aktivuje upozornění při zjištění mnoho chyb ověřován
 
 Složitá a dlouhá hesla zadejte nezbytnou první úroveň zabezpečení před útoky hrubou silou.
 
+## <a name="user-and-group-membership-reconnaissance-samr"></a>Rekognoskace členství uživatelů a skupin (SAMR)
+
+*Předchozí název:* Rekognoskace pomocí dotazy adresářových služeb <a name="reconnaissance-using-directory-service-queries"></a>
+
+**Popis** uživatele a skupiny členství rekognoskace se útočníci používají ke zmapování struktury adresáře a zacílení privilegovaných účtů v pozdějších krocích útoku. Protokol vzdáleného správce zabezpečení účtů (SAM-R) je jedna z metod používaných k dotazování adresáře k provedení tohoto typu mapování.  
+Při zjišťování žádné výstrahy týkající se aktivují první měsíc po nasazení služby Azure ATP (období učení). Během učení období, ochrana ATP v programu Azure profily které dotazy SAM-R se sestavují z které počítače výčet a jednotlivé dotazy citlivých účtů. 
+
+**Období učení** 4 týdny každý řadič domény od první síťové aktivity SAMR, proti konkrétní řadič domény. 
+
+Je tato výstraha **True kladné**, **neškodné True kladné** , nebo **falešně pozitivní**? 
+
+1. Klikněte na zdrojovém počítači přejděte na stránku jeho profil.        -Je zdrojový počítač by měl generovat aktivity tohoto typu?  
+      - Pokud ano, můžete si *Zavřít* výstrahy zabezpečení a vyloučit tento počítač, je pravděpodobně neškodné true pozitivní aktivitu. 
+2. Zkontrolujte uživatele/s, který provedl operaci. 
+      - Obvykle protokolují do zdrojového počítače nebo jsou správci, kteří by měl provádět tyto konkrétní akce?   
+      - Zkontrolujte profil uživatele a jejich souvisejícími uživatelskými aktivity. Pochopení jejich normálního chování a vyhledejte další podezřelých aktivit pomocí v uživatelské příručce šetření. 
+      - Pokud ano, *Zavřít* dané výstraze zabezpečení jako neškodné aktivity. 
+  
+**Vysvětlení rozsahu porušení**
+
+1. Zkontrolujte, které dotazy se prováděly (pro příklad, Enterprise admins nebo správce) a určit, pokud byli úspěšní. 
+2. Prozkoumání jednotlivých vystavené uživatele s využitím v uživatelské příručce šetření. 
+3. Prozkoumejte zdrojový počítač.  
+  
+**Navrhované nápravné kroky a pro ochrany před únikem informací**
+
+1. Obsahují zdrojový počítač. 
+2. Najít nástroj, který provádí útoku a jeho odebrání. 
+3. Vyhledejte uživatelé přihlášení přibližně ve stejnou dobu jako aktivity, jak může být ohrožena. Resetování hesel a povolení vícefaktorového ověřování. 
+4. Resetovat heslo uživatele zdroje a povolit vícefaktorové ověřování. 
+5. Použijte přístup k síti: Omezte klienty moct vzdáleně volat SAM zásad skupiny.
 
 ## <a name="user-and-ip-address-reconnaissance-smb"></a>Uživatele a IP adres pro rekognoskaci (SMB)
 <a name="reconnaissance-using-smb-session-enumeration"></a>
 
 *Předchozí název:* Rekognoskace pomocí výčtu relací SMB
-
 
 **Popis**
 
@@ -866,9 +899,9 @@ V této detekce se aktivuje upozornění při provádění výčet relací SMB p
 
 2. Kontrola, která zahrnutých uživatelů za sekundu provést operaci. Obvykle protokolují do zdrojového počítače nebo jsou správci, kteří by měl provádět tyto akce?  
 
-3. Pokud ano a výstraha aktualizována, **potlačit** podezřelou aktivitu.  
+3. Pokud ano a výstrahy se aktualizuje, **potlačit** dané výstraze zabezpečení.  
 
-4. Pokud ano a to už nepotřebujeme, by neměla provést **Zavřít** podezřelou aktivitu.
+4. Pokud ano a je to dělat neměli, **Zavřít** dané výstraze zabezpečení.
 
 5. Pokud odpovědi na všechny výše uvedené je Ne, Předpokládejme, že to je škodlivý.
 

@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 1fe5fd6f-1b79-4a25-8051-2f94ff6c71c1
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: be1a699ffd1ab0925df43910aec7f8166d4e423d
-ms.sourcegitcommit: 58c75026e5ec4dcab3b0852a41f9f0a0ad6f22eb
+ms.openlocfilehash: 4e0102e8a19f5f5bd303c00c4ebdb6190bcc5eb3
+ms.sourcegitcommit: d68a44b3230dc4c522d8d895eb3bc93feacae62e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/14/2018
-ms.locfileid: "49315842"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53615286"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
@@ -27,17 +27,17 @@ ms.locfileid: "49315842"
 
 Po správném šetření dají považovat za podezřelé aktivity:
 
--   **Pravdivě pozitivní upozornění**: škodlivá akce zjištěná službou ATA.
+-   **Pravdivě pozitivní upozornění**: Škodlivá akce zjištěná službou ATA.
 
--   **Neškodné pravdivě pozitivní upozornění**: akce zjištěná službou ATA, která je skutečná, ale není škodlivá, třeba test průniku.
+-   **Neškodné pravdivě pozitivní upozornění**: Akce zjištěná službou ATA, která je skutečná, ale není škodlivá, třeba test průniku.
 
--   **Falešně pozitivní**: alarm hodnotu false, to znamená aktivity neměli stát.
+-   **Falešně pozitivní**: Upozornění hodnotu false, to znamená aktivity neměli dojít.
 
 Další informace o tom, jak pracovat s výstrahami ATA najdete v tématu [práce s podezřelými aktivitami](working-with-suspicious-activities.md).
 
 Pro dotazy nebo připomínky, obraťte se na tým ATA v [ ATAEval@microsoft.com ](mailto:ATAEval@microsoft.com).
 
-## <a name="abnormal-sensitive-group-modification"></a>Neobvyklá úprava citlivých skupin
+## <a name="abnormal-modification-of-sensitive-groups"></a>Neobvyklá úprava citlivých skupin
 
 
 **Popis**
@@ -52,7 +52,7 @@ Pokud chcete mít jistotu, potřebné události auditu řadičů domény, použi
 
 **Šetření**
 
-1. Úpravy skupiny je legitimní? </br>Úpravy legitimní skupiny zřídka dojít a nebyly zjistili, jako je "normální", může dojít k upozornění, která může být považovaná za neškodné pravdivě pozitivní upozornění.
+1. Úpravy skupiny je legitimní? </br>Úpravy legitimní skupiny zřídka dojít a nebyly zjistili, jako je "normální", může dojít k upozornění, která může být považovaná za neškodné pravdivě pozitivní upozornění.
 
 2. Pokud byl přidaný objekt uživatelský účet, zkontrolujte akce, které trvalo uživatelský účet po přidání do skupiny správců. Přejděte na stránku uživatele v ATA získali podrobnější přehled. Tam byli jakýkoli jiný podezřelé aktivity, které jsou přidružené k účtu před nebo po přidání konal úplně? Stáhnout **úpravy citlivých skupin** sestavu, abyste viděli, jaké další změny byly provedeny a kým stejného časového období.
 
@@ -108,7 +108,7 @@ V této detekce se aktivuje upozornění, když ATA zjistí masivní počet ově
 
 **Popis**
 
-Oslabení šifrování je metoda oslabení podle downgradu úrovně šifrování protokolu různých polí, které jsou obvykle šifrována pomocí nejvyšší úrovně šifrování pomocí protokolu Kerberos. Oslabeným šifrované pole může být snazší target na offline útoky hrubou silou při pokusech. Různých metod útoku zvýšit využití slabé šifrování doklad protokolu Kerberos. V této detekce ATA učí typy šifrování pomocí protokolu Kerberos, počítačů a uživatelů a upozorní vás, když je slabší šifrovací, který používá: (1) neobvyklé, že u zdrojového počítače nebo uživatele. a (2) shod označuje technik útoku.
+Oslabení šifrování je metoda oslabení podle downgradu úrovně šifrování protokolu různých polí, které jsou obvykle šifrována pomocí nejvyšší úrovně šifrování pomocí protokolu Kerberos. Oslabeným šifrované pole může být snazší target na offline útoky hrubou silou při pokusech. Různých metod útoku zvýšit využití slabé šifrování doklad protokolu Kerberos. V této detekce ATA učí typy šifrování pomocí protokolu Kerberos, počítačů a uživatelů a oznámení, že vás, když je slabší šifrovací, který používá: (1) je neobvyklé, že u zdrojového počítače nebo uživatele. a (2) shod označuje technik útoku.
 
 Existují tři typy detekce:
 
@@ -133,10 +133,10 @@ Nejprve zkontrolujte Popis upozornění a uvidíte, které z výše uvedených t
 
 1.  Kostru klíče – odebere malware. Další informace najdete v tématu [analýzy Malware Skeleton Key](https://www.virusbulletin.com/virusbulletin/2016/01/paper-digital-bian-lian-face-changing-skeleton-key-malware).
 
-2.  Zlatý lístek – postupujte podle pokynů [Golden Ticket](#golden-ticket) podezřelých aktivit.   
-    Navíc vzhledem k tomu, že vytvoření Golden Ticket vyžaduje práva správce domény, implementovat [předání hodnoty hash doporučení](https://www.microsoft.com/download/details.aspx?id=36036).
+2.  Zlatý lístek – postupujte podle pokynů [Golden Ticket](#golden-ticket) podezřelých aktivit.   
+    Navíc vzhledem k tomu, že vytvoření Golden Ticket vyžaduje práva správce domény, implementovat [předání hodnoty hash doporučení](https://www.microsoft.com/download/details.aspx?id=36036).
 
-3.  Overpass-the-Hash – Pokud je potřebný účet není citlivé, poté resetujte heslo daného účtu. To zabrání útočník vytváření nových lístky protokolu Kerberos z hodnoty hash hesla, i když existující lístky je stále možné až do vypršení jejich platnosti. Pokud je citlivý účet, měli byste zvážit, obnovení účtu KRBTGT dvakrát jako podezřelá aktivita zlatého lístku. Obnovení účtu KRBTGT dvakrát zruší platnost všech protokolu Kerberos, takže Plánujte lístky v této doméně než to uděláte. Přečtěte si pokyny v [KRBTGT účet skriptů pro resetování hesla nyní k dispozici pro zákazníky, kteří](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/). Viz také pomocí [resetování nástroj hesla/klíčů účtu KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Protože to je technika laterálního pohybu, postupujte podle osvědčené postupy z [předání hodnoty hash doporučení](https://www.microsoft.com/download/details.aspx?id=36036).
+3.  Overpass-the-Hash – Pokud je potřebný účet není citlivé, poté resetujte heslo daného účtu. To zabrání útočník vytváření nových lístky protokolu Kerberos z hodnoty hash hesla, i když existující lístky je stále možné až do vypršení jejich platnosti. Pokud je citlivý účet, měli byste zvážit, obnovení účtu KRBTGT dvakrát jako podezřelá aktivita zlatého lístku. Obnovení účtu KRBTGT dvakrát zruší platnost všech protokolu Kerberos, takže Plánujte lístky v této doméně než to uděláte. Přečtěte si pokyny v [KRBTGT účet skriptů pro resetování hesla nyní k dispozici pro zákazníky, kteří](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/). Viz také pomocí [resetování nástroj hesla/klíčů účtu KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Protože to je technika laterálního pohybu, postupujte podle osvědčené postupy z [předání hodnoty hash doporučení](https://www.microsoft.com/download/details.aspx?id=36036).
 
 
 ## <a name="honeytoken-activity"></a>Aktivita Honeytokenu
@@ -176,7 +176,7 @@ Zkontrolujte, jestli-the-hash používá z počítače vůči cílové uživatel
 
 1. Pokud není potřebný účet citlivé, resetovat heslo daného účtu. Resetuje se heslo zabraňuje útočníkovi vytváření nových lístky protokolu Kerberos z hodnoty hash hesla. Existující lístky jsou stále možné použít, dokud nevyprší jejich platnost. 
 
-2. Pokud je potřebný účet citlivý, zvažte obnovení účtu KRBTGT dvakrát, stejně jako v podezřelá aktivita zlatého lístku. Obnovení účtu KRBTGT dvojím zruší platnost všechny lístky protokolu Kerberos domény, než to uděláte, takže Plánujte kolem dopad. Přečtěte si pokyny v [KRBTGT účet skriptů pro resetování hesla nyní k dispozici pro zákazníky, kteří](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), platí také pro použití [nástroj hesla/klíčů účtu KRBTGT pro resetování](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Toto je obvykle technika laterálního pohybu, postupujte podle osvědčené postupy z [předání hodnoty hash doporučení](https://www.microsoft.com/download/details.aspx?id=36036).
+2. Pokud je potřebný účet citlivý, zvažte obnovení účtu KRBTGT dvakrát, stejně jako v podezřelá aktivita zlatého lístku. Obnovení účtu KRBTGT dvojím zruší platnost všechny lístky protokolu Kerberos domény, než to uděláte, takže Plánujte kolem dopad. Přečtěte si pokyny v [KRBTGT účet skriptů pro resetování hesla nyní k dispozici pro zákazníky, kteří](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), platí také pro použití [nástroj hesla/klíčů účtu KRBTGT pro resetování](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Toto je obvykle technika laterálního pohybu, postupujte podle osvědčené postupy z [předání hodnoty hash doporučení](https://www.microsoft.com/download/details.aspx?id=36036).
 
 ## <a name="identity-theft-using-pass-the-ticket-attack"></a>Krádež identity pomocí útoku Pass-the-Ticket
 
@@ -194,9 +194,9 @@ Pass-the-Ticket je technika laterálního pohybu, kdy útočník získá lístek
 
 1. Pokud není potřebný účet citlivé, resetujte heslo daného účtu. Heslo zopakuje útočník zabrání vytváření nových lístky protokolu Kerberos z hodnoty hash hesla. Všechny existující lístky zůstávají použitelné, dokud platnost vypršela.  
 
-2. Pokud je citlivý účet, měli byste zvážit, obnovení účtu KRBTGT dvakrát jako podezřelá aktivita zlatého lístku. Obnovení účtu KRBTGT dvakrát zruší platnost všech protokolu Kerberos, takže Plánujte lístky v této doméně než to uděláte. Přečtěte si pokyny v [KRBTGT účet skriptů pro resetování hesla nyní dostupný pro zákazníky se](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), také naleznete pomocí [resetování nástroj hesla/klíčů účtu KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).  Protože to je technika laterálního pohybu, postupujte podle osvědčených postupů v [předání hodnoty hash doporučení](https://www.microsoft.com/download/details.aspx?id=36036).
+2. Pokud je citlivý účet, měli byste zvážit, obnovení účtu KRBTGT dvakrát jako podezřelá aktivita zlatého lístku. Obnovení účtu KRBTGT dvakrát zruší platnost všech protokolu Kerberos, takže Plánujte lístky v této doméně než to uděláte. Přečtěte si pokyny v [KRBTGT účet skriptů pro resetování hesla nyní dostupný pro zákazníky se](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), také naleznete pomocí [resetování nástroj hesla/klíčů účtu KRBTGT](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51).  Protože to je technika laterálního pohybu, postupujte podle osvědčených postupů v [předání hodnoty hash doporučení](https://www.microsoft.com/download/details.aspx?id=36036).
 
-## Protokol Kerberos Golden Ticket<a name="golden-ticket"></a>
+## Aktivita zlatého lístku Kerberos<a name="golden-ticket"></a>
 
 **Popis**
 
@@ -214,11 +214,11 @@ V této detekce se aktivuje upozornění, pokud je Kerberos lístku pro přiděl
 
 **Náprava**
 
-Změnit heslo protokolu Kerberos KRBTGT Ticket Granting Ticket () dvakrát podle pokynů v [KRBTGT účet skriptů pro resetování hesla nyní k dispozici pro zákazníky, kteří](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), použije [resetování hesla/klíčů účtu KRBTGT Nástroj](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Obnovení účtu KRBTGT dvakrát zruší platnost všech protokolu Kerberos, takže Plánujte lístky v této doméně než to uděláte.  
-Navíc vzhledem k tomu, že vytvoření Golden Ticket vyžaduje práva správce domény, implementovat [předání hodnoty hash doporučení](https://www.microsoft.com/download/details.aspx?id=36036).
+Změnit heslo protokolu Kerberos KRBTGT Ticket Granting Ticket () dvakrát podle pokynů v [KRBTGT účet skriptů pro resetování hesla nyní k dispozici pro zákazníky, kteří](https://blogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), použije [resetování hesla/klíčů účtu KRBTGT Nástroj](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). Obnovení účtu KRBTGT dvakrát zruší platnost všech protokolu Kerberos, takže Plánujte lístky v této doméně než to uděláte.  
+Navíc vzhledem k tomu, že vytvoření Golden Ticket vyžaduje práva správce domény, implementovat [předání hodnoty hash doporučení](https://www.microsoft.com/download/details.aspx?id=36036).
 
 
-## <a name="malicious-data-protection-private-information-request"></a>Škodlivá žádost o soukromé informace přes Data Protection
+## <a name="malicious-data-protection-private-information-request"></a>Žádost o soukromé informace ochrany škodlivých dat
 
 **Popis**
 
@@ -235,7 +235,7 @@ V této detekce se aktivuje upozornění při použití neúspěšně pokusil na
 
 **Náprava**
 
-Použití rozhraní DPAPI, potřebuje útočník práva správce domény. Implementace [předání hodnoty hash doporučení](https://www.microsoft.com/download/details.aspx?id=36036).
+Použití rozhraní DPAPI, potřebuje útočník práva správce domény. Implementace [předání hodnoty hash doporučení](https://www.microsoft.com/download/details.aspx?id=36036).
 
 ## <a name="malicious-replication-of-directory-services"></a>Škodlivá replikace adresářových služeb
 
@@ -257,12 +257,12 @@ V této detekce se aktivuje upozornění, když se spustí požadavek replikace 
 
 Ověřte následující oprávnění: 
 
-- Replikace změn adresáře   
+- Replikace změn adresáře   
 
 - Replikovat všechny změny v adresáři  
 
-Další informace najdete v tématu [udělení Active Directory Domain Services oprávnění k synchronizaci profilu v SharePoint serveru 2013](https://technet.microsoft.com/library/hh296982.aspx).
-Můžete využít [AD ACL Scanner](https://blogs.technet.microsoft.com/pfesweplat/2013/05/13/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool/) nebo vytvořit skript prostředí Windows PowerShell k určení, kdo v doméně tato oprávnění má.
+Další informace najdete v tématu [udělení Active Directory Domain Services oprávnění k synchronizaci profilu v SharePoint serveru 2013](https://technet.microsoft.com/library/hh296982.aspx).
+Můžete využít [AD ACL Scanner](https://blogs.technet.microsoft.com/pfesweplat/2013/05/13/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool/) nebo vytvořit skript prostředí Windows PowerShell k určení, kdo v doméně tato oprávnění má.
 
 ## <a name="massive-object-deletion"></a>Hromadné odstranění objektů
 
@@ -299,7 +299,7 @@ Známé chyby zabezpečení ve starších verzích Windows serveru umožňují �
 
 **Náprava**
 
-Zajistěte, aby na všech řadičích domény s operačním systémem až do verze Windows Server 2012 R2 byla nainstalovaná aktualizace [KB3011780](https://support.microsoft.com/help/2496930/ms11-013-vulnerabilities-in-kerberos-could-allow-elevation-of-privilege) a na všech členských serverech a řadičích domény až do verze 2012 R2 byla nainstalovaná aktualizace KB2496930. Další informace najdete v článku [Stříbrný certifikát PAC](https://technet.microsoft.com/library/security/ms11-013.aspx) a [Zfalšovaný certifikát PAC](https://technet.microsoft.com/library/security/ms14-068.aspx).
+Ujistěte se, že všechny řadiče domény s operačním systémem až do systému Windows Server 2012 R2 se instalují s [KB3011780](https://support.microsoft.com/help/2496930/ms11-013-vulnerabilities-in-kerberos-could-allow-elevation-of-privilege) a všech členských serverech a řadičích domény až 2012 R2 jsou aktuální s KB2496930. Další informace najdete v tématu [stříbrný certifikát PAC](https://technet.microsoft.com/library/security/ms11-013.aspx) a [podobě zfalšovaných certifikátů PAC](https://technet.microsoft.com/library/security/ms14-068.aspx).
 
 ## <a name="reconnaissance-using-account-enumeration"></a>Rekognoskace pomocí výčtu účtů
 
@@ -382,7 +382,7 @@ Protokol DNS obsahuje několik typů dotazů. ATA detekuje žádosti AXFR (přen
 **Náprava**
 
 Interní server DNS lze proti rekognoskaci pomocí DNS zabezpečit zakázáním nebo omezením přenosů zóny jen na konkrétní IP adresy. Další informace o omezení přenosů zóny najdete v tématu [omezení přenosů zóny](https://technet.microsoft.com/library/ee649273(v=ws.10).aspx).
-Úprava přenosů zóny je jedním z úkolů na kontrolním seznamu, která by měla být určena pro [zabezpečení před útoky interních i externích serverů DNS](https://technet.microsoft.com/library/cc770432(v=ws.11).aspx).
+Úprava přenosů zóny je jedním z úkolů na kontrolním seznamu, která by měla být určena pro [zabezpečení před útoky interních i externích serverů DNS](https://technet.microsoft.com/library/cc770432(v=ws.11).aspx).
 
 ## <a name="reconnaissance-using-smb-session-enumeration"></a>Rekognoskace pomocí výčtu relací SMB
 
@@ -430,7 +430,7 @@ Použití [Net ukončí nástroj](https://gallery.technet.microsoft.com/Net-Ceas
 
 1. Zakažte vzdálený přístup k řadičům domény z počítačů, které nejsou ve vrstvě 0.
 
-2. Implementace [privilegovaný přístup](https://technet.microsoft.com/windows-server-docs/security/securing-privileged-access/securing-privileged-access) povolit jen počítačům s posíleným zabezpečením pro připojení k řadiči domény pro správce.
+2. Implementace [privilegovaný přístup](https://technet.microsoft.com/windows-server-docs/security/securing-privileged-access/securing-privileged-access) povolit jen počítačům s posíleným zabezpečením pro připojení k řadiči domény pro správce.
 
 ## <a name="sensitive-account-credentials-exposed--services-exposing-account-credentials"></a>Vystaveny přihlašovací údaje k účtu a služby, které odhalují přihlašovací údaje k účtu
 
@@ -523,11 +523,11 @@ ATA učí chování entit pro uživatele, počítače a zdroje, posuvného tří
 
 **Šetření**
 
-Identifikujte na protokol, který neobvyklá – z časové osy podezřelých aktivit, klikněte na podezřelé aktivity a přístup ke stránce Podrobnosti; protokol se zobrazí nad šipku: protokolu Kerberos nebo NTLM.
+Identifikujte na protokol, který neobvyklá – z časové osy podezřelých aktivit, klikněte na podezřelé aktivity a přístup ke stránce Podrobnosti; protokol se zobrazí nad šipku: Protokol Kerberos nebo NTLM.
 
-- **Kerberos**: často aktivovat v případě, že hackerům nástroj, jako je nástroj Mimikatz potenciálně se používá k útoku Overpass-the-Hash. Zaškrtněte, pokud zdrojovém počítači běží aplikace, která implementuje vlastní zásobníku protokolu Kerberos, který není v souladu s RFC protokolu Kerberos. V takovém případě se jedná o neškodné pravdivě pozitivní upozornění a výstrahy může být **uzavřeno**. Pokud udržuje se výstraha a se stále o případ, můžete si **potlačit** výstrahu.
+- **Protokol Kerberos**: Často aktivovat v případě, že hackerům nástroj, jako je nástroj Mimikatz potenciálně se používá k útoku Overpass-the-Hash. Zaškrtněte, pokud zdrojovém počítači běží aplikace, která implementuje vlastní zásobníku protokolu Kerberos, který není v souladu s RFC protokolu Kerberos. V takovém případě se jedná o neškodné pravdivě pozitivní upozornění a výstrahy může být **uzavřeno**. Pokud udržuje se výstraha a se stále o případ, můžete si **potlačit** výstrahu.
 
-- **NTLM**: může být WannaCry nebo nástrojů, jako je Metasploit Medusa a Hydra.  
+- **NTLM**: Může být WannaCry nebo nástrojů, jako je Metasploit Medusa a Hydra.  
 
 Pokud chcete zjistit, zda je aktivita o útok WannaCry, proveďte následující kroky:
 

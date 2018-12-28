@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 12/06/2018
+ms.date: 12/20/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.service: ''
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 5d639e84-2e37-43a9-9667-49be6c4fa8b7
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 353395f782d29bb18e95c02ad56407a592d8c20b
-ms.sourcegitcommit: 2b15356612eb720f83235ff8cb08e4a6435206ea
+ms.openlocfilehash: e21e2b984db3d58703cf6503817401f1bab0fda1
+ms.sourcegitcommit: c390d36d75f13607698c2a8d7ac757ecef4c748e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53022420"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53709910"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
@@ -33,114 +33,69 @@ Události najdete tady:
 
 ## <a name="ata-health-events"></a>Události stavu ATA
 
-1001 – jednotky databázových dat ATA Center upozornění na stav volného místa 
-
-1003 – upozornění na přetížení stav ATA Center 
-
-1004 – upozornění na stav vypršení platnosti certifikátu 
-
-1005 – upozornění na stav odpojení databáze System center 
-
-1006 – ATA Gateway adresář služby klienta účtu heslo vypršení platnosti upozornění na stav 
-
-1007 – upozornění na stav nepřiřazený synchronizátor domény ATA Gateway 
-
-1008 – ATA Gateway Zachytávání síťových adaptéru chybovém stavu výstrahy 
-
-1009 – ATA Gateway zaznamenat upozornění na chybějící stav sítě adaptéru 
-
-1010 – ATA Gateway adresář služby klienta připojení stavu výstrahy 
-
-1011 – upozornění na stav odpojení ATA Gateway 
-
-1012 – upozornění na stav aktivity události přetížené ATA Gateway 
-
-1013 – ATA Gateway přetížené síti upozornění na stav aktivity 
-
-1014 – upozornění na stav e-mailu System center 
-
-1015 – upozornění na stav Syslog System center 
-
-1016 – upozornění na zastaralý stav komponenty ATA Gateway 
-
-1017 – System center není příjem upozornění na stav provozu 
-
-1018 – upozornění na stav selhání spuštění ATA Gateway 
-
-1019 – upozornění na stav nedostatku paměti ATA Gateway 
-
-1020 – upozornění na stav naslouchací proces události ATA Gateway RADIUS 
-
-1021 – upozornění na stav naslouchací proces události ATA Gateway Syslog 
-
-1022 – ATA Center externích IP adres řešení selhání upozornění na stav 
+|ID události monitorování| Název monitorování výstrah|
+|---------|---------------|
+|1001|System Center dochází místo na disku|
+|1003|System Center přetížení|
+|1004|Vypršela platnost certifikátu Center se vypršení platnosti / Center certifikátu|
+|1005|MongoDB je mimo provoz|
+|1006|Hesla uživatele jen pro čtení, který brzy vyprší platnost nebo platnost hesla uživatele jen pro čtení|
+|1007|Nepřiřazený synchronizátor domény|
+|1008|Nejsou k dispozici některé nebo všechny síťové adaptéry pro zachytávání na bránu|
+|1009|Síťový adaptér pro zachytávání na bránu už neexistuje.|
+|1010|Některé řadiče domény nejsou dostupné prostřednictvím brány / všechny řadiče domény nejsou dostupné prostřednictvím brány|
+|1011|Gateway přestala komunikovat|
+|1012|Některé předané události se neanalyzují|
+|1013|Některý síťový provoz se neanalyzuje|
+|1014|Chyba odeslání e-mailu|
+|1015|Neúspěšné připojení k serveru SIEM pomocí protokolu Syslog|
+|1016|Verze brány zastaralá|
+|1017|Z řadiče domény se nepřijímá žádný provoz|
+|1018|Nepovedlo se spustit službu brány|
+|1019|Komponenta Lightweight Gateway dosáhla limitu prostředků paměti|
+|1020|Brána nezpracovává události Radius|
+|1021|Brána nezpracovává události Syslog|
+|1022|Informace o zeměpisné poloze služba není dostupná.|
  
-## <a name="ata-suspicious-activity-events"></a>Události podezřelých aktivit ATA
+## <a name="ata-security-alert-events"></a>Události výstrah zabezpečení ATA
 
-2001 – podezřelá aktivita neobvyklé chování 
-
-2002 – podezřelá aktivita neobvyklý protokol 
-
-2003 – podezřelá aktivita výčtu účtů 
-
-2004 – LDAP hrubou vynutit podezřelé aktivity 
-
-2006 – adresářových služeb replikace podezřelé aktivity 
-
-2007 – podezřelé aktivity rekognoskace DNS 
-
-2008 – podezřelá aktivita snížení úrovně šifrování (žádné podtyp)
-
-2009 – aktivita snížení úrovně šifrování podezřelé (podezřelý GoldenTicket)
-       
-2010 – aktivita snížení úrovně šifrování podezřelé (podezřelý Overpass-The-Hash)
-
-2011 – aktivita snížení úrovně šifrování podezřelé (podezřelý Skeleton Key)
-
-2012 – výčet relací podezřelé aktivity 
-
-2013 – falešný certifikát PAC podezřelé aktivity 
-
-2014 – podezřelá aktivita Honeytokenu aktivita 
-
-2016 – podezřelá aktivita odstranění objekt 
-
-2017 – předání hodnoty hash podezřelé aktivity 
-
-2018 – předání lístku podezřelé aktivity 
-
-2019 – vzdálené spuštění podezřelých aktivit 
-
-2020 – načíst data protection zálohování klíče podezřelé aktivity 
-
-2021 – podezřelé aktivity rekognoskace SAMR 
-
-2022 – podezřelá aktivita zlatý lístek 
-
-2023 – útok hrubou silou podezřelé aktivity 
-
-2024 – neobvyklé členství změnit na podezřelé aktivity senstitive skupiny 
-
-2025 – neobvyklé podezřelou aktivitu sítě VPN
-
-2026 – škodlivé služby vytvoření podezřelé aktivity
+|Upozornění názvy|ID oznámení událostí|
+|---------|---------------|
+|2001|Podezření na krádež identity na základě neobvyklého chování|
+|2002|Neobvyklá implementace protokolu|
+|2003|Rekognoskace pomocí výčtu účtů|
+|2004|Útok hrubou silou pomocí jednoduché vazby LDAP.|
+|2006|Škodlivá replikace adresářových služeb|
+|2007|Rekognoskace pomocí DNS|
+|2008|Aktivita snížení úrovně šifrování|
+|2009|Aktivita snížení úrovně šifrování (potenciální zlatý lístek)|
+|2010|Aktivita snížení úrovně šifrování (potenciální overpass-the-hash)|
+|2011|Aktivita snížení úrovně šifrování (potenciální typu skeleton key)|
+|2012|Rekognoskace pomocí výčtu relací SMB|
+|2013|Eskalace oprávnění prostřednictvím zfalšovaných dat autorizace|
+|2014|Aktivita Honeytokenu|
+|2016|Hromadné odstranění objektů|
+|2017|Krádež identity pomocí útoku Pass-the-Hash|
+|2018|Krádež identity pomocí útoku Pass-the-Ticket|
+|2019|Zjištěn pokus o vzdálené spuštění|
+|2020|Žádost o soukromé informace ochrany škodlivých dat|
+|2021|Rekognoskace pomocí dotazů na adresářové služby|
+|2022|Aktivita zlatého lístku Kerberos|
+|2023|Podezřelé chyby ověřování|
+|2024|Neobvyklá úprava citlivých skupin|
+|2026|Podezřelé vytvoření služby|
 
 ## <a name="ata-auditing-events"></a>Události auditu ATA
 
-3001 – změna konfigurace ATA 
-
-3002 – přidání ATA Gateway
-
-3003 – odstranit ATA Gateway
-
-3004 - aktivovat licenci ATA
-
-3005 – Přihlaste se ke konzole ATA
-
-3006 – ručně prováděné změny stavu aktivity 
-
-3007 – ruční změna stavu podezřelé aktivity 
-
+|Upozornění názvy|ID oznámení událostí|
+|---------|---------------|
+|3001|Změna konfigurace ATA|
+|3002|Přidání komponenty ATA Gateway|
+|3003|Odstranit komponenty ATA Gateway|
+|3004|Aktivovat licenci ATA|
+|3005|Přihlášení ke konzole ATA|
+|3006|Ruční změna stavu aktivity|
+|3007|Ruční změna stavu podezřelé aktivity|
 
 ## <a name="see-also"></a>Viz také
 - [Požadavky ATA](ata-prerequisites.md)

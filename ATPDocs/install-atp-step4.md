@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 11/28/2018
+ms.date: 12/16/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,14 +13,14 @@ ms.technology: ''
 ms.assetid: 51911e39-76c7-4dcd-bc0b-ec6235d0403f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: fd2a2316f63b5324e7869878104bd663e48b2771
-ms.sourcegitcommit: e2a89030c31376c6798697a62b484f45ed54e679
+ms.openlocfilehash: 5b5d588f11bb1c7a665cf4727cb996e5261b7237
+ms.sourcegitcommit: 281d8ea451b6ac726331d0032c344651b1a964b7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52501095"
+ms.lasthandoff: 12/16/2018
+ms.locfileid: "53450384"
 ---
-*Platí pro: Azure Rozšířená ochrana před internetovými útoky*
+*Platí pro: Azure Advanced Threat Protection*
 
 
 
@@ -30,7 +30,7 @@ ms.locfileid: "52501095"
 > [« Krok 3](install-atp-step3.md)
 > [Krok 5 »](install-atp-step5.md)
 
-## <a name="step-4-install-the-azure-atp-sensor"></a>Krok 4: Instalace senzoru služby Azure ATP
+## <a name="step-4-install-the-azure-atp-sensor"></a>Krok 4. Instalace senzoru služby Azure ATP
 
 > [!IMPORTANT]
 >Ujistěte se, že rozhraní .net Framework 4.7 je nainstalovaná na počítači. Pokud je rozhraní .net Framework 4.7 není nainstalovaná instalačního balíčku senzoru služby Azure ATP ho nainstaluje, která může vyžadovat restartování serveru.
@@ -38,9 +38,9 @@ ms.locfileid: "52501095"
 Proveďte následující kroky na řadiči domény.
 
 1. Ověřte, zda je počítač připojen k relevantní koncový bod cloudu služby ochrany ATP v programu Azure:
-  - https://triprd1wceuw1sensorapi.atp.azure.com (pro Evropa)  
-  - https://triprd1wcuse1sensorapi.atp.azure.com (pro USA)
-  - https://triprd1wcasse1sensorapi.atp.azure.com (pro Asie)
+  - [https://triprd1wceuw1sensorapi.atp.azure.com](https://triprd1wceuw1sensorapi.atp.azure.com) (pro Evropa)  
+  - [https://triprd1wcuse1sensorapi.atp.azure.com](https://triprd1wcuse1sensorapi.atp.azure.com) (pro USA)
+  - [https://triprd1wcasse1sensorapi.atp.azure.com](https://triprd1wcasse1sensorapi.atp.azure.com) (pro Asie)
 
 2. Rozbalte instalační soubory ze souboru zip. 
 > [!NOTE] 
@@ -68,11 +68,11 @@ Proveďte následující kroky na řadiči domény.
 
     ![Azure ochrany ATP v programu samostatný senzor konfigurace image](media/sensor-install-config.png)
 
-      - Instalační cesta: Toto je umístění, kde je nainstalován samostatného senzoru služby Azure ATP. Ve výchozím nastavení to je %programfiles%\Azure Advanced Threat Protection senzoru. Nechte nastavenou výchozí hodnotu.
+      - Instalační cesta: Toto je umístění, kde je nainstalovaný samostatný senzor ochrany ATP v programu Azure. Ve výchozím nastavení to je %programfiles%\Azure Advanced Threat Protection senzoru. Nechte nastavenou výchozí hodnotu.
 
-      - Přístupový klíč: to je načten z ochrany ATP v programu Azure portal v předchozím kroku.
+      - Přístupový klíč: To je načten z ochrany ATP v programu Azure portal v předchozím kroku.
     
-7. Klikněte na tlačítko **Nainstalovat**. Následující komponenty jsou nainstalovaná a nakonfigurovaná v průběhu instalace senzoru služby Azure ATP:
+7. Klikněte na tlačítko **nainstalovat**. Následující komponenty jsou nainstalovaná a nakonfigurovaná v průběhu instalace senzoru služby Azure ATP:
 
     -   KB 3047154 (pouze pro Windows Server 2012 R2)
 
