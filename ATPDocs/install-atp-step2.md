@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 12/30/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,14 +13,14 @@ ms.technology: ''
 ms.assetid: ae8a95f0-278c-4a12-ae69-14282364fba1
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 7e13bf0e3d32fc14cf1f0a91f3e7d18accea067c
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: 6ee7bbe48181b55ba93e24e9ac4dd5c9f7d0b59f
+ms.sourcegitcommit: 1bdaccbddf2896be517885fbcee1c2bc47f4de8d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48782986"
+ms.lasthandoff: 12/30/2018
+ms.locfileid: "53815069"
 ---
-*Platí pro: Azure Rozšířená ochrana před internetovými útoky*
+*Platí pro: Azure Advanced Threat Protection*
 
 
 
@@ -30,7 +30,7 @@ ms.locfileid: "48782986"
 > [« Krok 1](install-atp-step1.md)
 > [Krok 3 »](install-atp-step3.md)
 
-## <a name="step-2-provide-a-username-and-password-to-connect-to-your-active-directory-forest"></a>Krok 2: Zadejte uživatelské jméno a heslo pro připojení k vaší doménové struktury služby Active Directory
+## <a name="step-2-provide-a-username-and-password-to-connect-to-your-active-directory-forest"></a>Krok 2. Zadejte uživatelské jméno a heslo pro připojení k vaší doménové struktury služby Active Directory
 
 Při prvním otevření ochrany ATP v programu Azure portal, zobrazí se následující obrazovka:
 
@@ -44,9 +44,9 @@ Při prvním otevření ochrany ATP v programu Azure portal, zobrazí se násled
 
     |Pole|Komentáře|
     |---------|------------|
-    |**Uživatelské jméno** (povinné)|Zadejte jen pro čtení služby Active Directory uživatelské jméno, například: **ATPuser**.|
-    |**Heslo** (povinné)|Zadejte heslo pro uživatele, který je jen pro čtení, například **Pencil1**.|
-    |**Doména** (povinné)|Zadejte doménu pro uživatele, který je jen pro čtení, například **contoso.com**. **Poznámka:** Je důležité, abyste zadali kompletní plně kvalifikovaný název domény, ve které je uživatel umístěný. Pokud je například účet uživatele v doméně corp.contoso.com, musíte zadat `corp.contoso.com`, a ne contoso.com.|
+    |**Uživatelské jméno** (povinné)|Zadejte jen pro čtení služby Active Directory uživatelské jméno, například: **ATPuser**. **Poznámka:** Proveďte **není** pomocí formátu UPN pro své uživatelské jméno.|
+    |**Heslo** (povinné)|Zadejte heslo pro uživatele jen pro čtení, například: **Pencil1**.|
+    |**Doména** (povinné)|Zadejte doménu pro uživatele, který je jen pro čtení, například **contoso.com**. **Poznámka:** Je důležité, abyste zadali plně kvalifikovaný název domény, ve kterém se uživatel zdržuje. Pokud je například účet uživatele v doméně corp.contoso.com, musíte zadat `corp.contoso.com`, a ne contoso.com.|
 
 3. Na portálu ochrany ATP v programu Azure, klikněte na tlačítko **stáhnout instalaci senzoru a nainstalovat první senzor** pokračujte.
 
