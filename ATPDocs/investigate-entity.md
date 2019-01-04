@@ -5,30 +5,38 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 12/02/2018
-ms.topic: conceptual
+ms.date: 1/3/2019
+ms.topic: tutorial
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
 ms.technology: ''
 ms.assetid: 43e57f87-ca85-4922-8ed0-9830139fe7cb
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 379feeef63776e71375a789daf4c9608a863e37b
-ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
+ms.openlocfilehash: 07f688f9afe82d47c5292670b8836d30022a0f97
+ms.sourcegitcommit: 1ba4e327784c6267db5a708592c4d81ca23376ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "52744468"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53996804"
 ---
-*Platí pro: Azure Rozšířená ochrana před internetovými útoky*
+*Platí pro: Azure Advanced Threat Protection*
 
 
+# <a name="tutorial-investigate-an-entity"></a>Kurz: Prozkoumat entity
 
-# <a name="investigate-an-entity-with-azure-atp"></a>Prozkoumat entity pomocí služby Azure ATP
+V tomto kurzu dozvíte, jak zkoumat entity, které jsou připojené k podezřelým aktivitám zjistil pomocí Azure Advanced Threat Protection (ATP). Po zobrazení výstrahy zabezpečení na časové ose, se dozvíte, jak procházet entity účastnící se upozornění a použít následující parametry a podrobnosti se dozvíte více o co se stalo a co potřebujete dělat pro zmírnění rizika.
 
-Tento článek popisuje proces pro zkoumání entit, poté, co detekovaly podezřelé aktivity s Azure Advanced Threat Protection (ATP). Po zobrazení výstrahy zabezpečení na časové ose, můžete přejít na entity účastnící se upozornění a použít následující parametry a podrobnosti se dozvíte více o co se stalo a co je potřeba dělat pro zmírnění rizika.
+> [!div class="checklist"]
+> * Zkontrolujte profil entity
+> * Zaškrtněte značky entit
+> * Zkontrolujte řídicí příznaky účtu uživatele
+> * Zkontrolovat pomocí Windows Defenderu
+> * Přehled o citlivé uživatele a skupiny
+> * Projděte si potenciální cesty taktiky Lateral Movement
+> * Kontrola stavu honeytokenu
 
-## <a name="look-at-the-entity-profile"></a>Podívejte se na profil entity
+## <a name="check-the-entity-profile"></a>Zkontrolujte profil entity
 
 Na stránce komplexní entity navržena pro celý podrobný rozbor šetření uživatelů, počítačů, zařízení a prostředky, ke kterým mají přístup k spolu s jejich historie vám poskytne profil entity. Na stránce Profil využívá výhod nových překladač logické aktivity ochrany ATP v programu Azure, který můžete podívat na skupinu aktivit, ke kterým dochází (agregované až minutu) a seskupovat je do jedné logické aktivity umožňují lépe pochopit skutečné aktivity vaši uživatelé.
 
@@ -41,13 +49,13 @@ Profil entity, které vám umožní zobrazit entity aktivity, data zobrazení ad
 Ochrana ATP v programu Azure si vyžádá značky z Active Directory a poskytují tak jednotné rozhraní pro monitorování uživatelů služby Active Directory a entity. Tyto značky poskytují informace o entitě ze služby Active Directory, včetně:
 - Částečné: Tento uživatel, počítač nebo skupina se nesynchronizovali z domény a částečně se určili pomocí globálního katalogu. Některé atributy nejsou k dispozici.
 - Nerozpoznané: Tento počítač se nepodařilo přeložit na platný entitu v doménové struktuře služby active directory. Nejsou dostupné žádné informace adresáře.
-- Odstraněné: Byla entita odstraněna ze služby Active Directory.
-- Zakázáno: Entity je zakázaný ve službě Active Directory.
+- Odstranit: Byla entita odstraněna ze služby Active Directory.
+- Zakázáno: Entita je zakázaný ve službě Active Directory.
 - Uzamčení: Entita příliš mnohokrát zadala chybné heslo a je uzamčen.
 - Vypršela platnost: Platnost entity ve službě Active Directory.
-- Novinka: Se entita vytvořila před méně než 30 dny.
+- Nové: Se entita vytvořila před méně než 30 dny.
 
-## <a name="look-at-the-user-account-control-flags"></a>Podívejte se na řídicí příznaky účtu uživatele
+## <a name="check-user-account-control-flags"></a>Zkontrolujte řídicí příznaky účtu uživatele
 
 Řídicí příznaky účtu uživatele budou importovány také ze služby Active Directory. Azure data adresáře ochrany ATP v programu entity obsahují 10 příznaky, které platí pro zkoumání: 
 - Platnost hesla nikdy nevyprší
@@ -74,7 +82,7 @@ Váš profil entity poskytují přehledy mezi produkty, obsahuje entity, které 
 
 Ochrana ATP v programu Azure importuje uživatele a skupiny informace ze služby Azure Active Directory umožňuje určit, kteří uživatelé jsou automaticky považují za citlivé protože jsou členy z těchto skupin ve službě Active Directory:
 
--   Administrators
+-   Správci
 -   Power Users
 -   Account Operators
 -   Server Operators
@@ -94,7 +102,7 @@ Ochrana ATP v programu Azure importuje uživatele a skupiny informace ze služby
 
 Kromě toho můžete **ručně označit** entity jako citlivé v rámci ochrany ATP v programu Azure. To je důležité, protože některé detekce ochrany ATP v programu Azure, jako je například zjišťování úpravy citlivých skupin a cesty laterální pohyb, závisí na citlivosti stavu entity. Pokud ručně označíte další uživatele nebo skupiny jako citlivé, jako je například členů vedení společnosti a prodejní ředitele, ochrana ATP v programu Azure bude zvažovat je citlivé. Další informace najdete v tématu [práce s citlivými účty](sensitive-accounts.md).
 
-## <a name="be-aware-of-lateral-movement-paths"></a>Mějte na paměti z cesty taktiky Lateral Movement
+## <a name="review-lateral-movement-paths"></a>Projděte si cesty taktiky Lateral Movement
 
 Ochrana ATP v programu Azure vám mohou pomoci zabránit útokům, které používají cesty taktiky Lateral Movement. Laterální pohyb je, když útočník proaktivně pomocí tohoto počtu účtů pro přístup k citlivým účtům.
 
@@ -102,14 +110,11 @@ Pokud existuje cesty laterální pohyb entity, na stránce profil entity, bude m
 
 Další informace najdete v tématu [cesty taktiky Lateral Movement Investigating pomocí služby Azure ATP](use-case-lateral-movement-path.md).
 
-
-## <a name="is-it-a-honeytoken-entity"></a>Je to honeytokenu entity?
+## <a name="check-honeytoken-status"></a>Kontrola stavu honeytokenu
 
 Teprve potom přejděte vaše šetření je důležité vědět, jestli je entita honeytokenu. Účty a entity můžete označit jako honeytokens v ochrany ATP v programu Azure. Při otevření profil entity nebo zkrácený profil entity, které jste označili jako honeytokenu nebo účet, zobrazí se Odznáček honeytokenu. Při zkoumání, honeytoken oznámení vás upozorní, že se pomocí účtu, který jste označili jako honeytokenu provedla aktivita probíhá kontrola.
 
-
-    
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Práce s výstrahami zabezpečení](working-with-suspicious-activities.md)
 - [Podívejte se na fórum služby Azure ATP.](https://aka.ms/azureatpcommunity)

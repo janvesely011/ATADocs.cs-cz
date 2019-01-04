@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/23/2018
+ms.date: 1/3/2019
 ms.topic: article
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,14 +13,14 @@ ms.technology: ''
 ms.assetid: 2d14d0e9-1b03-4bcc-ae97-8fd41526ffc5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e11e0e75c8c7fd4a0be592ad45b961f7046ec5e2
-ms.sourcegitcommit: e783df4c9d928fedf6dc3c65d58d9b530cdd2ff2
+ms.openlocfilehash: f4138a8649bbb278453114f606d034a0123cbdd7
+ms.sourcegitcommit: 1ba4e327784c6267db5a708592c4d81ca23376ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49800062"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53996872"
 ---
-*Platí pro: Azure Rozšířená ochrana před internetovými útoky*
+*Platí pro: Azure Advanced Threat Protection*
 
 # <a name="what-is-azure-advanced-threat-protection"></a>Co je Azure Advanced Threat Protection?
 Azure Protection pokročilé před internetovými útoky (ATP) je řešení cloudového zabezpečení, které identifikuje a detekuje, vám pomůže prozkoumat důmyslné hrozby, ohrožení zabezpečení identity a zlými úmysly akce zaměřené na vaší organizaci. Ochrana ATP v programu Azure umožňuje analytikům SecOp a jenom pro detekci pokročilých útoků v hybridních prostředích pro odborníky v oblasti zabezpečení:  
@@ -39,14 +39,14 @@ Ochrana ATP v programu Azure obsahuje nedocenitelné insights konfigurace identi
 Obvykle útoky jsou spouštěny proti jakémukoli subjektu přístupné, jako je například uživatel s nízkým oprávněním a potom rychle následně k laterálnímu pohybu dokud útočník získá přístup k cenným prostředků – například citlivých účtů, správci domény a vysoce citlivá data. Ochrana ATP v programu Azure identifikuje tyto pokročilé hrozby ve zdrojovém kódu v celém řetězu událostí útoku. 
 ### <a name="reconnaissance"></a>Rekognoskace 
 Identifikaci uživatelů neautorizovaných serverů a útočníků pokusí získat informace. Útočníci vyhledat informace o uživatelská jména, členství ve skupině uživatelů, IP adresy přiřazené k zařízení, prostředků a další, pomocí různých metod.  
-### <a name="compromised-users"></a>Ohrožených uživatelů
+### <a name="compromised-credentials"></a>Prozrazené přihlašovací údaje
 Zjištění pokusů ohrozit přihlašovací údaje uživatele pomocí útoky hrubou silou, selžou, změn členství ve skupinách uživatelů a jiných metod.  
 
 ### <a name="lateral-movements"></a>Taktiky Lateral Movement
 Zjištění pokusů o následně k laterálnímu pohybu v síti, abyste získali další kontrolu nad citlivé uživatele využívající metody například průchodu-the-Ticket, předat-the-Hash, Overpass-the-Hash a další.  
 
 ### <a name="domain-dominance"></a>Dominance v doméně
-Zvýraznění útočník chování, pokud je dosaženo dominance v doméně, prostřednictvím vzdálené spuštění kódu na řadiči domény a metod jako stínové řadiče domény, replikaci řadiče domény škodlivý, Golden Ticket aktivity a další.   
+Zvýraznění útočník chování, pokud je dosaženo dominance v doméně, prostřednictvím vzdálené spuštění kódu na řadiči domény a metod jako stínové řadiče domény, replikaci řadiče domény škodlivý, Golden Ticket aktivity a další.
 
 ## <a name="investigate-alerts-and-user-activities"></a>Prozkoumat upozornění a aktivity uživatele  
 Ochrana ATP v programu Azure slouží k obecné výstrahy nepůsobily, pouze relevantní, důležité bezpečnostní výstrahy na časové ose útoku organizační jednoduchý, v reálném čase. Zobrazení časové osy útoku ochrany ATP v programu Azure umožňuje snadno soustředit se na to důležité využití intelligence inteligentní analýzy. Specialistům na zabezpečení pomocí služby Azure ATP můžete rychle prošetření hrozeb a získejte přehledy napříč organizací pro uživatele, zařízení a síťové prostředky. Bezproblémová integrace s ochrany ATP v programu Windows Defender zajišťuje další vrstvu vyšší míru zabezpečení tak, že další zjišťování a ochranu proti pokročilé a trvalé hrozby v operačním systému.  
@@ -80,14 +80,14 @@ Microsoft Ignite 2018 vybrané více relací, zaměřuje na [rozšířené ochra
 
 Přehled služby Azure ATP oznámení, které byly provedeny na konferenci Ignite 2018, najdete v blogovém příspěvku - [Advanced Threat ochranu rozšiřuje integrace Azure, detekce a forenzní funkce](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Azure-Advanced-Threat-Protection-Expands-Integrations-Detections/ba-p/262409).
 
-## <a name="whats-next"></a>Co dál? 
+## <a name="whats-next"></a>Co dále? 
 
 Doporučujeme nasadit ochrany ATP v programu Azure ve třech fázích:  
 
 ### <a name="phase-1"></a>Fáze 1
 
 1. Nastavení ochrany ATP v programu Azure k ochraně vašich primární prostředí. Model rychlé nasazení Azure ATP můžete začít chránit vaše organizace ještě dnes. [Instalace služby Azure ATP](install-atp-step1.md)  
-2. Nastavte [citlivých účtů](sensitive-accounts.md) a [účty honeytokenu](install-atp-step7.md).   
+2. Nastavte [citlivých účtů](sensitive-accounts.md) a [účty honeytokenu](install-atp-step7.md).
 3. Prohlížet si sestavy a [laterální pohyb cesty](use-case-lateral-movement-path.md).  
 
 
@@ -95,12 +95,12 @@ Doporučujeme nasadit ochrany ATP v programu Azure ve třech fázích:
 
 1. Ochrana všech řadičů domény a [doménových struktur](atp-multi-forest.md) ve vaší organizaci.  
 2.  Monitorujte všechny [výstrahy](working-with-suspicious-activities.md) – prozkoumat, laterální pohyb a domény dominance výstrahy.  
-3. Práce s [výstraha zabezpečení průvodce](suspicious-activity-guide.md) hrozby a posuzovat potenciální útoky.   
+3. Práce s [výstraha zabezpečení průvodce](suspicious-activity-guide.md) hrozby a posuzovat potenciální útoky.
 
 
 ### <a name="phase-3"></a>Fáze 3
 
-1. Integrujte upozornění služby Azure ATP do vašich pracovních postupů SecOp. 
+1. Integrujte upozornění služby Azure ATP do vašich pracovních postupů SecOp.
 
 ## <a name="see-also"></a>Viz také
 - [Nejčastější dotazy k Azure ATP](atp-technical-faq.md)

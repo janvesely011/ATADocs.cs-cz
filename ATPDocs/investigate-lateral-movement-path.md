@@ -5,41 +5,48 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 11/25/2018
-ms.topic: conceptual
+ms.date: 1/3/2019
+ms.topic: tutorial
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
 ms.technology: ''
 ms.assetid: 9295dc09-ecdb-44c0-906b-cba4c5c8f17c
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: bb460b699e0052f917ffcd6899d5cc1baa71182f
-ms.sourcegitcommit: eac0aa855270b550dfb4b8c61b9cf0953f1e5204
+ms.openlocfilehash: 4201ccc187b0f06522cc46aefb1518ff22012c86
+ms.sourcegitcommit: 1ba4e327784c6267db5a708592c4d81ca23376ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52298315"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53996906"
 ---
-*Platí pro: Azure Rozšířená ochrana před internetovými útoky*
+*Platí pro: Azure Advanced Threat Protection*
 
-# <a name="using-azure-atp-lateral-movement-paths-lmps"></a>Pomocí Azure ATP laterální pohyb cest (LMPs)
+# <a name="tutorial-use-lateral-movement-paths-lmps"></a>Kurz: Použití cesty taktiky Lateral Movement (LMPs)
 
-Laterální pohyb útoky jsou obvykle provedeno pomocí řadu různých technik. Některé z nejoblíbenějších metod používaných útočníky [krádeže přihlašovacích údajů](suspicious-activity-guide.md#) a [předat lístky](suspicious-activity-guide.md) útoky. V obou metod méně citlivé účty používají útočníci pro laterální přesuny využívajícím počítačů nejsou citliví, které sdílejí uložená pověření přihlášení v účtů, skupin a počítačů s citlivými účty. 
+Laterální pohyb útoky jsou obvykle provedeno pomocí řadu různých technik. Některé z nejoblíbenějších metod používaných útočníky [krádeže přihlašovacích údajů](suspicious-activity-guide.md#) a [předat lístky](suspicious-activity-guide.md) útoky. V obou metod méně citlivé účty používají útočníci pro laterální přesuny využívajícím počítačů nejsou citliví, které sdílejí uložená pověření přihlášení v účtů, skupin a počítačů s citlivými účty.
 
-Použít LMPs ochrany ATP v programu Azure k [prozkoumat](#investigate) potenciální laterální pohyb cesty a taky výstrahy zabezpečení služby Azure ATP, získat lépe pochopit, co se stalo ve vaší síti a jak. Použití [LMP sestavy citlivých účtů](#discover-your-at-risk-sensitive-accounts) zjistit všechny citlivých účtů pomocí potenciální cesty taktiky Lateral Movement, které jsou zjištěny ve vaší síti časové období.  
+V tomto kurzu se naučíte používat LMPs ochrany ATP v programu Azure k [prozkoumat](#investigate) potenciální laterální pohyb cesty a taky výstrahy zabezpečení služby Azure ATP, získat lépe pochopit, co se stalo ve vaší síti a jak. Kromě toho se dozvíte, jak používat [LMP sestavy citlivých účtů](#discover-your-at-risk-sensitive-accounts) zjistit všechny citlivých účtů pomocí potenciální cesty taktiky Lateral Movement, které jsou zjištěny ve vaší síti časové období.
+
+> [!div class="checklist"]
+> * Prozkoumat LMPs
+> * Zjistit vaše citlivé účty
+> * Přístup **laterální cesty Lateral Movement k citlivým účtům** sestavy
+
 
 ## <a name="investigate"></a>Prošetření
-Použití a prozkoumat LMPs několika způsoby. Na portálu ochrany ATP v programu Azure vyhledávání entity a pak prozkoumejte cestu nebo aktivity. 
+
+Použití a prozkoumat LMPs několika způsoby. Na portálu ochrany ATP v programu Azure vyhledávání entity a pak prozkoumejte cestu nebo aktivity.
 
 1. Na portálu vyhledejte uživatele nebo počítače. Všimněte si, že pokud Odznáček taktiky Lateral Movement byl přidán do profilu entity. Oznámení se zobrazí pouze při zjištění entity v potenciální LMP za posledních 48 hodin.  
 
-   ![laterální ikonu](./media/lateral-movement-icon.png) nebo ![Ikona cesty](./media/paths-icon.png). 
+   ![laterální ikonu](./media/lateral-movement-icon.png) nebo ![Ikona cesty](./media/paths-icon.png).
 
-2. Na stránce profilu uživatele, které se otevře, klikněte na tlačítko **laterální pohyb cesty** kartu. 
+2. Na stránce profilu uživatele, které se otevře, klikněte na tlačítko **laterální pohyb cesty** kartu.
 
    ![Azure kartu ochrany ATP v programu cesty laterální pohyb (LMP)](./media/lateral-movement-path-tab.png)
 
-3. Graf, který se zobrazí poskytuje mapování z možných cest pro citlivé uživatele během 48 hodin časové období. Pokud se zjistila žádná aktivita v posledních dvou dní grafu nezobrazí. Použití **zobrazit jiné datum** možnosti se zobrazí graf pro předchozí detekce cesty laterální pohyb entity. 
+3. Graf, který se zobrazí poskytuje mapování z možných cest pro citlivé uživatele během 48 hodin časové období. Pokud se zjistila žádná aktivita v posledních dvou dní grafu nezobrazí. Použití **zobrazit jiné datum** možnosti se zobrazí graf pro předchozí detekce cesty laterální pohyb entity.
 
    ![LMP zobrazit jiné datum](./media/atp-view-different-date.png)
 
@@ -59,13 +66,21 @@ Pokud chcete zjistit všechny citlivé účty ve vaší síti, které jsou vysta
 
 3. Klikněte na tlačítko **Stáhnout**.
 
-4. Excelový soubor se vytvoří, které poskytuje podrobnosti o potenciální cesty taktiky Lateral Movement a ohrožení citlivých účtů pro vybraná data. **Souhrn** karta obsahuje grafy, které podrobně popisují, počet citlivých účtů, počítačů a průměry pro rizikové přístup. **Podrobnosti** karta obsahuje seznam citlivé účty, které byste měli dále prozkoumat. 
+4. Excelový soubor se vytvoří, které poskytuje podrobnosti o potenciální cesty taktiky Lateral Movement a ohrožení citlivých účtů pro vybraná data. **Souhrn** karta obsahuje grafy, které podrobně popisují, počet citlivých účtů, počítačů a průměry pro rizikové přístup. **Podrobnosti** karta obsahuje seznam citlivé účty, které byste měli dále prozkoumat.
 
-Laterální pohyb k citlivým účtům sestavy můžete taky naplánovat pomocí funkce set plánované sestavy. 
+## <a name="schedule-report"></a>Naplánovat sestavu
 
-Všimněte si, že skutečné LMPs podrobné sestavy ke stažení mohou nadále již nebudou dostupné vzhledem k tomu, že jsou v minulosti byly zjištěny a může změnit, změnit nebo oprava, protože byly zjištěny. 
+Laterální pohyb k citlivým účtům sestavy můžete taky naplánovat pomocí funkce set plánované sestavy.
 
-Zobrazit historická LMPs, vyberte různá data k dispozici ve výběru kalendáře při vytváření sestav. 
+Všimněte si, že skutečné LMPs podrobné sestavy ke stažení mohou nadále již nebudou dostupné vzhledem k tomu, že jsou v minulosti byly zjištěny a může změnit, změnit nebo oprava, protože byly zjištěny.
+
+Zobrazit historická LMPs, vyberte různá data k dispozici ve výběru kalendáře při vytváření sestav.
+
+## <a name="next-steps"></a>Další postup
+
+V tomto kurzu jste zjistili, jak používat LMPs prozkoumat podezřelé aktivity. Další informace o entitách, které jsou součástí LMPs, pokračujte ke kurzu entity prošetřit.
+> [!div class="nextstepaction"]
+> [Prošetřování entit](investigate-entity.md)
 
 ## <a name="see-also"></a>Viz také
 

@@ -1,11 +1,11 @@
 ---
 title: Monitorování stavu systému Azure Advanced Threat Protection a událostí | Dokumentace Microsoftu
-description: Health center pracovní prostor ochrany ATP v programu Azure použít ke kontrole, jak funguje služba ochrany ATP v programu Azure a upozorní vás na potenciální problémy a zobrazit systémové události v prohlížeči událostí.
+description: Pomocí služby Azure ATP health center zkontrolujte fungování služby Azure ATP a upozorní vás na potenciální problémy a zobrazit systémové události v prohlížeči událostí.
 keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 11/28/2018
+ms.date: 1/3/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,43 +13,43 @@ ms.technology: ''
 ms.assetid: 1b7e72c3-a538-443f-981c-398ffafa5ab8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 100964d904c7cda48e75cb5401fbba8a3ec0718e
-ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
+ms.openlocfilehash: 2bd20b9c8cfcea82f1fed91bb5bf2baafbf572f4
+ms.sourcegitcommit: 1ba4e327784c6267db5a708592c4d81ca23376ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "52744655"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53996838"
 ---
-*Platí pro: Azure Rozšířená ochrana před internetovými útoky*
+*Platí pro: Azure Advanced Threat Protection*
 
 
-# <a name="working-with-azure-atp-workspace-health-and-events"></a>Práce s události a stav pracovního prostoru služby Azure ATP
+# <a name="work-with-azure-atp-health-and-events"></a>Práce s události a stav služby Azure ATP
 
-## <a name="azure-atp-workspace-health-center"></a>Centrum stavu pracovního prostoru Azure ochrany ATP v programu 
+## <a name="azure-atp-health-center"></a>Centrum stavu služby Azure ochrany ATP v programu 
 
-Health center pracovní prostor ochrany ATP v programu Azure vám umožňuje vědět, jaký je výkon vašeho pracovního prostoru ochrana ATP v programu Azure a vás upozorní, když dochází k problémům.
+Health center ochrany ATP v programu Azure vám umožňuje vědět, jaký je výkon vaší instance služby Azure ATP a vás upozorní, když dochází k problémům.
 
-## <a name="working-with-the-azure-atp-workspace-health-center"></a>Práce s health center pracovní prostor služby Azure ATP
+## <a name="working-with-the-azure-atp-health-center"></a>Práce s Azure ATP health center
 
-Health center pracovní prostor ochrany ATP v programu Azure vám umožňuje vědět, že dojde k problému zobrazením výstrahy (červené tečky) nad ikonou Health Center v řádku nabídek.
+Health center ochrany ATP v programu Azure vám umožňuje vědět, že dojde k problému zobrazením výstrahy (červené tečky) nad ikonou Health Center v řádku nabídek.
 
-![Ochrana ATP v programu pracovní prostor health center červená tečka nástrojů webu Azure](media/atp-health-bar.png)
+![Azure ochrany ATP v programu health center červená tečka nástrojů](media/atp-health-bar.png)
 
-### <a name="managing-azure-atp-workspace-health"></a>Správa stavu pracovního prostoru služby Azure ATP
-Pokud chcete zkontrolovat celkový stav pracovního prostoru, klikněte na ikonu Health Center v řádku nabídek ![Ikona stavu centra Azure ochrany ATP v programu pracovního prostoru](media/atp-red-dot.png)
+### <a name="managing-azure-atp-health"></a>Správa stavu služby Azure ATP
+Pokud chcete zkontrolovat celkový stav vaší instance služby Azure ATP, klikněte na ikonu Health Center v řádku nabídek ![Azure ikona center stavu ochrany ATP v programu](media/atp-red-dot.png)
 
 -   Všechny otevřené problémy můžete spravovat jejich nastavením na **Zavřít**, nebo **potlačit**, kliknutím na tři tečky v pravém rohu výstrahy a zvolení požadované možnosti.
 
--   **Open** (Otevřeno): V tomto seznamu se zobrazí všechny nové podezřelé aktivity.
+-   **Otevřít**: V tomto seznamu se zobrazí všechny nové podezřelé aktivity.
 
--   **Zavřít**: slouží ke sledování podezřelých aktivit, které identifikovali, prozkoumali a opravili zmírnit.
+-   **Zavřít**: Slouží ke sledování podezřelých aktivit, které identifikovali, prozkoumali a opravili zmírnit.
 
     > [!NOTE]
     > Ochrana ATP v programu Azure může znovu otevřít uzavřené aktivitu, pokud se stejná aktivita zjistí během krátké doby znovu.
     
--   **Suppressed** (Potlačeno): Potlačení aktivity znamená, že ji chcete prozatím ignorovat a upozornění chcete zobrazit, jenom pokud se bude jednat o novou instanci. Pokud je o podobnou výstrahu jako ochrana ATP v programu Azure nebude ho znovu otevřít. Ale pokud výstrahy po dobu sedmi dní zastaví a pak se znovu objeví, budete upozorněni, znovu.
+-   **Potlačit**: Potlačení aktivity znamená, že chcete prozatím ignorovat a pouze znovu upozorněni při novou instanci. Pokud je o podobnou výstrahu jako ochrana ATP v programu Azure nebude ho znovu otevřít. Ale pokud výstrahy po dobu sedmi dní zastaví a pak se znovu objeví, budete upozorněni, znovu.
 
--   **Znovu otevřít**: aby se zobrazovala jako můžete znovu otevřít uzavřeného nebo Potlačená výstraha **otevřít** znovu na časové ose.
+-   **Znovu otevřít**: Aby se zobrazovala jako můžete znovu otevřít uzavřeného nebo Potlačená výstraha **otevřít** znovu na časové ose.
 
 -   **Odstranit**: Z v rámci časové osy výstrah zabezpečení, máte také možnost odstranění problému se stavem. Pokud výstrahu odstraníte, odstraní se z instance a nebudete moci obnovit. Po kliknutí na odstranit, budete moct odstranit všechny výstrahy zabezpečení stejného typu.
 
