@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 12/21/2018
+ms.date: 1/6/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,19 +13,21 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: af08c371f19288043eba2377ea03d1a90bd2eaab
-ms.sourcegitcommit: 39822aa24bddb72eea55f484d9df290cce2e19d9
+ms.openlocfilehash: f5ce0643c502b94bb6a09cc353b8e0eadb0d6737
+ms.sourcegitcommit: b33c1860baa39e9d6d287e33940d579d7a728463
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53737045"
+ms.lasthandoff: 01/06/2019
+ms.locfileid: "54058850"
 ---
 *Platí pro: Azure Advanced Threat Protection*
 
 # <a name="whats-new-in-azure-atp"></a>Co je nového v Azure ATP
 
 ## <a name="azure-atp-release-260"></a>Verze ochrany ATP v programu Azure 2,60
-Azure 2,60 verzi ochrany ATP v programu je aktuálně naplánované pro verzi během první týden 2019. Během této doby Pokud se nenajdou žádné kritické problémy, které vyžadují dočasné aktualizace, aktualizace se pošle podle potřeby.
+Vydáno 6. ledna 2019
+
+- Tato verze obsahuje vylepšení a opravy chyb pro interní senzor infrastruktury.
 
 ## <a name="azure-atp-release-259"></a>Verze ochrany ATP v programu Azure 2.59
 Vydáno 16 dne 2018
@@ -38,13 +40,13 @@ Vydáno 16 dne 2018
 Vydáno 9. prosince 2018
 
 - **Vylepšení upozornění zabezpečení: Neobvyklá implementace protokolu upozornění rozdělení**<br>
-Azure ATP řadu výstrah zabezpečení neobvyklé implementace protokolu, které dříve sdílené 1 externalId (2002), jsou teď rozdělit do 4 rozlišovací výstrahy, s odpovídající externalId jedinečný. 
+Azure ATP řadu výstrah zabezpečení neobvyklé implementace protokolu, které dříve sdíleli, 1 externalId (2002), jsou teď rozdělit do 4 rozlišovací výstrahy, s odpovídající jedinečného externího ID. 
 
 ### <a name="new-alert-externalids"></a>Nové výstrahy externalIds
 
 > [!div class="mx-tableFixed"] 
 
-|Nový název výstrahy zabezpečení|Předchozí název výstrahy zabezpečení|ExternalId jedinečný|
+|Nový název výstrahy zabezpečení|Předchozí název výstrahy zabezpečení|Jedinečné ID externí|
 |---------|----------|---------|
 |Podezřelý útok hrubou silou (SMB)|Neobvyklá implementace protokolu (potenciální použití škodlivých nástrojů, jako je Hydra)|2033
 |Podezření na útok overpass-the-hash (Kerberos)|Neobvyklá implementace protokolu Kerberos (možný útok overpass-the-hash)|2002|

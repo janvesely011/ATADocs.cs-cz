@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 51911e39-76c7-4dcd-bc0b-ec6235d0403f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 5b5d588f11bb1c7a665cf4727cb996e5261b7237
-ms.sourcegitcommit: 281d8ea451b6ac726331d0032c344651b1a964b7
+ms.openlocfilehash: 16dc99c4c4a90aa1753826f90af80792ff42ac89
+ms.sourcegitcommit: b33c1860baa39e9d6d287e33940d579d7a728463
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/16/2018
-ms.locfileid: "53450384"
+ms.lasthandoff: 01/06/2019
+ms.locfileid: "54058833"
 ---
 *Platí pro: Azure Advanced Threat Protection*
 
@@ -37,16 +37,21 @@ ms.locfileid: "53450384"
 
 Proveďte následující kroky na řadiči domény.
 
-1. Ověřte, zda je počítač připojen k relevantní koncový bod cloudu služby ochrany ATP v programu Azure:
-  - [https://triprd1wceuw1sensorapi.atp.azure.com](https://triprd1wceuw1sensorapi.atp.azure.com) (pro Evropa)  
-  - [https://triprd1wcuse1sensorapi.atp.azure.com](https://triprd1wcuse1sensorapi.atp.azure.com) (pro USA)
-  - [https://triprd1wcasse1sensorapi.atp.azure.com](https://triprd1wcasse1sensorapi.atp.azure.com) (pro Asie)
+1. Ověřte, zda že je počítač připojen k příslušné koncových bodů služby Azure ATP cloudové služby:
+  - [https://triprd1wceuw1sensorapi.atp.azure.com](https://triprd1wceuw1sensorapi.atp.azure.com) 
+  - [https://triprd1wceun1sensorapi.atp.azure.com](https://triprd1wceun1sensorapi.atp.azure.com)
+<br>(pro Evropa)  
+  - [https://triprd1wcuse1sensorapi.atp.azure.com](https://triprd1wcuse1sensorapi.atp.azure.com)
+  - [https://triprd1wcusw1sensorapi.atp.azure.com](https://triprd1wcusw1sensorapi.atp.azure.com)
+  - [https://triprd1wcuswb1sensorapi.atp.azure.com](https://triprd1wcuswb1sensorapi.atp.azure.com)
+<br>(pro USA)
+  - [https://triprd1wcasse1sensorapi.atp.azure.com](https://triprd1wcasse1sensorapi.atp.azure.com)<br>(pro Asie)
 
 2. Rozbalte instalační soubory ze souboru zip. 
 > [!NOTE] 
 > Instalace přímo ze souboru zip selže.
 
-3.  Spustit **setup.exe senzoru služby Azure ATP** a postupujte podle pokynů Průvodce instalací.
+3. Spustit **setup.exe senzoru služby Azure ATP** a postupujte podle pokynů Průvodce instalací.
 
 4.  Na stránce **Vítejte** vyberte svůj jazyk a klikněte na **Další**.
 
