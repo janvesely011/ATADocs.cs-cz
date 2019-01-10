@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 11/29/2018
+ms.date: 1/7/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,14 +13,14 @@ ms.technology: ''
 ms.assetid: 8ae459ac-9fca-4923-9a1a-dc10d5c50b29
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 566b7ac598dcdd0d44d30c50c01846c42d0b643f
-ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
+ms.openlocfilehash: 7d7be8cb236a58e6f0576d3b283fb8eff137ac96
+ms.sourcegitcommit: fd6c8a28e6bf3a6031835aebd0b9278e495d3e0b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "52744791"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54142399"
 ---
-*Platí pro: Azure Rozšířená ochrana před internetovými útoky*
+*Platí pro: Azure Advanced Threat Protection*
 
 
 # <a name="azure-advanced-threat-protection-information-and-support"></a>Azure Advanced Threat Protection informace a podpora 
@@ -60,7 +60,7 @@ O dalších možnostech podpory se můžete dozvědět, když se zeptáte svojí
 
 ### <a name="self-help"></a>Samoobslužná pomoc
 
-#### <a name="system-status-page"></a>Stránka stavu systému 
+#### <a name="system-status-page"></a>Stránka stavu systému
 
 Pokud chcete zobrazit stav systému pro ochrany ATP v programu Azure, přejděte [ **stav systému** ](https://health.atp.azure.com/) stránky. Tato stránka poskytuje informace o tom, zda je na portálu ochrany ATP v programu Azure a aktivní, pokud dojde k problémům s detekcí a pokud senzor je možné směrovat provoz do cloudu. Můžete přistupovat **stav systému** z řádku nabídek služby Azure ATP.
 
@@ -80,4 +80,4 @@ Odstraňování problémů:
 
 ### <a name="community-resources"></a>Zdroje informací a materiály z komunity
 
-Doporučujeme, abyste [skupiny Yammeru pro službu Azure Advanced Threat Protection](https://www.yammer.com/AskIPTeam). Tento prostředek poskytuje přímé odpovědi od týmu Azure Advanced Threat Protection kromě výhodu sdílených zkušeností a znalostí od jiných správců a konzultantů.
+Doporučujeme, abyste [tech community skupiny pro rozšířené ochrany před internetovými útoky pro Azure](https://aka.ms/azureatpcommunity). Tento prostředek poskytuje přímé odpovědi od týmu Azure Advanced Threat Protection kromě výhodu sdílených zkušeností a znalostí od jiných správců a konzultantů.

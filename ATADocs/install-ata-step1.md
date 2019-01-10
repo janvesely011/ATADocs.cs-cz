@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/31/2018
+ms.date: 1/9/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.service: ''
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 04a25e6f0a73e45b4358566f15f38c20d291a153
-ms.sourcegitcommit: 1b914a85cfa33dc0c5005f9dc68e6ea08a0164ac
+ms.openlocfilehash: b138f533b1ce804af08479a961a791c4069e5a27
+ms.sourcegitcommit: fd6c8a28e6bf3a6031835aebd0b9278e495d3e0b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50411625"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54142433"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
@@ -33,7 +33,7 @@ Tento instalační postup uvádí pokyny pro novou instalaci ATA 1.9. Informace 
 > [!IMPORTANT] 
 > Pokud používáte Windows 2012 R2, aktualizaci KB2934520 můžete nainstalovat na server ATA Center a na serverech ATA Gateway před začátkem instalace, jinak instalace ATA tuto aktualizaci nainstaluje a vyžaduje restart uprostřed instalace ATA.
 
-## <a name="step-1-download-and-install-the-ata-center"></a>Krok 1: Stažení a instalace ATA Center
+## <a name="step-1-download-and-install-the-ata-center"></a>Krok 1. Stažení a instalace ATA Center
 Po ověření, že server splňuje požadavky, můžete pokračovat v instalaci ATA Center.
     
 > [!NOTE]
@@ -66,7 +66,7 @@ Na serveru ATA Center proveďte tento postup.
 
     |Pole|Popis|Komentáře|
     |---------|---------------|------------|
-    |Instalační cesta|Toto je umístění, kde je nainstalován na ATA Center. Ve výchozím nastavení to je %programfiles%\Microsoft Advanced Threat Analytics\Center.|Ponechte výchozí hodnotu.|
+    |Instalační cesta|Toto je umístění, kde je nainstalován na ATA Center. Ve výchozím nastavení to je %programfiles%\Microsoft Advanced Threat Analytics\Center|Ponechte výchozí hodnotu.|
     |Cesta k datům databáze|Toto je umístění, kde jsou uložené soubory databáze MongoDB. Ve výchozím nastavení to je %programfiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data.|Změňte umístění na místo, kde existuje místo pro růst v závislosti na vaší velikosti. **Poznámka:** <ul><li>V produkčním prostředí měli používat jednotku, která má dostatek místa na základě plánování kapacity.</li><li>U rozsáhlých nasazení by měla být databáze umístěná na samostatném fyzickém disku.</li></ul>Informace o velikosti najdete v tématu [Plánování kapacity ATA](ata-capacity-planning.md).|
     |Certifikát SSL služby Center|Jedná se o certifikát, který je používán službou konzole ATA a komponenty ATA Center.|Klikněte na ikonu klíče a vyberte nainstalovaný certifikát, nebo při nasazení v testovacím prostředí zaškrtněte certifikát podepsaný svým držitelem. Máte možnost vytvořit certifikát podepsaný svým držitelem.|
         
@@ -96,7 +96,14 @@ Vzhledem k tomu, že se přihlašujete na web pomocí IP adresy, zobrazí se upo
 
 Po instalaci komponenty ATA Center má být vyloučena adresář databáze MongoDB z je průběžně skenovalo antivirové aplikace. Výchozím umístěním databáze je: **C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data**.
 
+Ujistěte se, že jste také vyloučení těchto složek ze skenování antivirová ochrana v programu:
 
+C:\Program Files\Microsoft Advanced Threat Analytics\Center\ParentKerberosAsBloomFilters
+<br>C:\Program Files\Microsoft Advanced Threat Analytics\Center\ParentKerberosTgsBloomFilters
+<br>C:\Program Files\Microsoft Advanced Threat Analytics\Center\Backup
+<br>C:\Program Files\Microsoft Advanced Threat Analytics\Center\Logs
+
+Pokud jste nainstalovali ATA v jiném adresáři, ujistěte se, že chcete-li změnit cesty složky podle vaší instalaci. 
 
 > [!div class="step-by-step"]
 > [« Předinstalace](configure-port-mirroring.md)
