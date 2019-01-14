@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 12/17/2018
+ms.date: 1/13/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 3261155c-3c72-4327-ba29-c113c63a4e6d
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 929b0db30632e737e6371d473639f1e22532f75f
-ms.sourcegitcommit: c3ee9495b9d4db985783dcabcc4fa77c7c8eaed4
+ms.openlocfilehash: 2cc450a50b35101b768d521d867850946e207dc5
+ms.sourcegitcommit: 6a0ac21f59e72db8615811da2c886f54cf3727f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/17/2018
-ms.locfileid: "53454542"
+ms.lasthandoff: 01/13/2019
+ms.locfileid: "54249993"
 ---
 *Platí pro: Azure Advanced Threat Protection*
 
@@ -57,14 +57,17 @@ Do systému SIEM se předávají následující pole a jejich hodnoty:
 
 > [!div class="mx-tableFixed"] 
 
-|Nový název výstrahy zabezpečení|Předchozí název výstrahy zabezpečení|ExternalId jedinečný|
+|Nový název výstrahy zabezpečení|Předchozí název výstrahy zabezpečení|Jedinečné ID externí|
 |---------|----------|---------|
 |Rekognoskace výčtu účtů|Rekognoskace pomocí výčtu účtů|2003|
+|Průsak dat ven přes protokol SMB| Není k dispozici| 2030|
 |Aktivita Honeytokenu|Aktivita Honeytokenu|2014|
 |Škodlivá žádost Data Protection API hlavní klíč|Škodlivá žádost o soukromé informace přes Data Protection|2020|
-|Rekognoskace mapování sítě (DNS)|Rekognoskace pomocí DNS|2007|
+|Mapování sondování sítě (DNS)|Rekognoskace pomocí DNS|2007|
 |Pokus o spuštění vzdáleného kódu|Pokus o spuštění vzdáleného kódu|2019|
 |Podezřelý útok hrubou silou (LDAP)|Útok hrubou silou pomocí jednoduché vazby LDAP.|2004|
+|Podezřelý útok hrubou silou (pomocí protokolu Kerberos, NTLM)|Podezřelé chyby ověřování|2023|
+|Podezřelý útok hrubou silou (SMB)|Neobvyklá implementace protokolu (potenciální použití škodlivých nástrojů, jako je Hydra)|2033|
 |Podezřelý útok DCShadow (povýšení řadiče domény)|Povýšení řadiče domény podezřelé (možný útok DCShadow)|2028|
 |Podezřelý útok DCShadow (žádost o replikaci řadiče domény)|Žádost o replikaci řadiče domény podezřelé (možný útok DCShadow)|2029|
 |Podezřelý útok DCSync (replikace adresářových služeb)|Škodlivá replikace adresářových služeb|2006|
@@ -75,8 +78,6 @@ Do systému SIEM se předávají následující pole a jejich hodnoty:
 |Podezřelé použití Golden Ticket (ticket anomálií) – preview|Není k dispozici|2032|
 |Krádež identity podezřelého softwaru (pass-the-hash)|Krádež identity pomocí útoku Pass-the-Hash|2017|
 |Krádež identity podezřelého softwaru (pass-the-ticket)|Krádež identity pomocí útoku Pass-the-Ticket|2018|
-|Podezřelý útok hrubou silou (SMB)|Neobvyklá implementace protokolu (potenciální použití škodlivých nástrojů, jako je Hydra)|2033|
-|Podezřelý útok hrubou silou (pomocí protokolu Kerberos, NTLM)|Podezřelé chyby ověřování|2023|
 |Podezření na útok over-pass-the-hash (oslabení šifrování)|Aktivita snížení úrovně šifrování (možný útok overpass-the-hash)|2008|
 |Podezření na útok overpass-the-hash (Kerberos)|Neobvyklá implementace protokolu Kerberos (možný útok overpass-the-hash)|2002|
 |Podezřelé použití Metasploit hacking framework|Neobvyklá implementace protokolu (potenciální použijte Metasploit hacking nástroje)|2034|
@@ -101,6 +102,9 @@ Priority:
 
 ### <a name="account-enumeration-reconnaissance"></a>Rekognoskace výčtu účtů 
 02 – 21 – 2018 16:19:35 Auth.Warning 192.168.0.220 1 2018-02-21T14:19:27.540731 + 00:00 CENTER CEF 6076 AccountEnumerationSecurityAlert ï» ¿0 | Microsoft | Ochrana ATP v programu Azure | 2.22.4228.22540 | AccountEnumerationSecurityAlert | Rekognoskace pomocí výčtu účtů | 5 | start = 2018-02 – 21T14:19:02.6045416Z app = Kerberos shost = CLIENT1 suser = LMaldonado msg = podezřelé přihlašovací aktivity výčet pomocí protokolu Kerberos, která pochází z počítače CLIENT1, a úspěšně odhadla Lamon Maldonado (softwarový inženýr). externalId = 2003 cs1Label = url cs1 = https\://contoso-corp.atp.azure.com/securityAlert/eb6a35da-ff7f-4ab5-a1b5-a07529a89e6d cs2Label = aktivační událost cs2 = nový
+
+### <a name="data-exfiltration-over-smb"></a>Průsak dat ven přes protokol SMB
+12. 19 2018 14:17:46 Auth.Error 127.0.0.1 1 2018-12-19T12:17:34.645993 + 00:00 DC1 CEF. 3288 SmbDataExfiltrationSecurityAlert ï» ¿0 | Microsoft | Ochrana ATP v programu Azure | 2.60.0.0 | SmbDataExfiltrationSecurityAlert | [PREVIEW] Průsak dat ven přes protokol SMB | 10 | start = 2018-12-19T12:14:12.4932821Z aplikace Smb shost = CLIENT1 msg = = Eugene Jenkins (softwarový inženýr) na počítač DC2 zkopírovat podezřelé soubory na počítači CLIENT1. externalId = 2030 cs1Label = url cs1 = https\://contoso-corp.atp.azure.com:13000/securityAlert/3ca2ec9d-2c67-44cc-a2d6-391716611bb6 cs2Label = aktivační událost cs2 = nový
 
 ### <a name="honeytoken-activity"></a>Aktivita Honeytokenu
 02 – 21 – 2018 16:20:36 Auth.Warning 192.168.0.220 1 2018-02-21T14:20:34.106162 + 00:00 CENTER CEF 6076 HoneytokenActivitySecurityAlert ï» ¿0 | Microsoft | Ochrana ATP v programu Azure | 2.22.4228.22540 | HoneytokenActivitySecurityAlert | Aktivita Honeytokenu | 5 | start = 2018-02-21T14:20:26.6705617Z aplikace Kerberos suser = honey msg = = následující aktivity provedl honey: \r\nLogged v na počítači KLIENT2 přes řadič domény DC1. externalId = 2014 cs1Label = url cs1 = https\://contoso-corp.atp.azure.com/securityAlert/9249fe9a-c883-46dd-a4da-2a1fca5f211c cs2Label = aktivační událost cs2 = nový

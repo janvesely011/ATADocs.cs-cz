@@ -13,15 +13,13 @@ ms.technology: ''
 ms.assetid: 9295dc09-ecdb-44c0-906b-cba4c5c8f17c
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4201ccc187b0f06522cc46aefb1518ff22012c86
-ms.sourcegitcommit: 1ba4e327784c6267db5a708592c4d81ca23376ba
+ms.openlocfilehash: d108974a930aa8aad737e9348dc228f384858eb1
+ms.sourcegitcommit: 6a0ac21f59e72db8615811da2c886f54cf3727f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53996906"
+ms.lasthandoff: 01/13/2019
+ms.locfileid: "54249908"
 ---
-*Platí pro: Azure Advanced Threat Protection*
-
 # <a name="tutorial-use-lateral-movement-paths-lmps"></a>Kurz: Použití cesty taktiky Lateral Movement (LMPs)
 
 Laterální pohyb útoky jsou obvykle provedeno pomocí řadu různých technik. Některé z nejoblíbenějších metod používaných útočníky [krádeže přihlašovacích údajů](suspicious-activity-guide.md#) a [předat lístky](suspicious-activity-guide.md) útoky. V obou metod méně citlivé účty používají útočníci pro laterální přesuny využívajícím počítačů nejsou citliví, které sdílejí uložená pověření přihlášení v účtů, skupin a počítačů s citlivými účty.

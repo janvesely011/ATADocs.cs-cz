@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 1/6/2019
+ms.date: 1/13/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,16 +13,46 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f5ce0643c502b94bb6a09cc353b8e0eadb0d6737
-ms.sourcegitcommit: b33c1860baa39e9d6d287e33940d579d7a728463
+ms.openlocfilehash: 5248ab54c8fd8d03035e1f6451597c5e8cfc63b2
+ms.sourcegitcommit: 6a0ac21f59e72db8615811da2c886f54cf3727f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/06/2019
-ms.locfileid: "54058850"
+ms.lasthandoff: 01/13/2019
+ms.locfileid: "54250027"
 ---
 *Platí pro: Azure Advanced Threat Protection*
 
 # <a name="whats-new-in-azure-atp"></a>Co je nového v Azure ATP
+
+## <a name="azure-atp-release-261"></a>Verze ochrany ATP v programu Azure 2.61
+Vydáno 13. ledna 2019
+
+- **Nová výstraha zabezpečení: Průsak dat ven přes protokol SMB - (preview)**<br>
+Azure ATP [průsak dat ven přes protokol SMB](atp-exfiltration-alerts.md) výstraha zabezpečení je teď ve verzi public preview. <br> Útočníci s právy správce domény může ohrozit účet KRBTGT. Pomocí účtu KRBTGT, útočníci můžete vytvořit lístek Kerberos udělující lístek (TGT), který poskytuje autorizaci k jakémukoli prostředku. 
+
+
+- **Vylepšení funkce: Pokus o spuštění vzdáleného kódu** výstraha zabezpečení <br> Nový popis výstrahy a další důkazy byly přidány do srozumitelnější výstrahy a poskytovat lepší šetření pracovních postupů. 
+
+
+- **Vylepšení funkce: Logické aktivity dotaz DNS** <br>Další dotaz typy byly přidány do [ochrany ATP v programu Azure monitorovat aktivity](monitored-activities.md) včetně: **TXT**, **MX**, **NS**, **SRV**, **ANY**, **DNSKEY**. 
+
+- **Vylepšení funkce: Podezřelý Golden Ticket využití (ticket anomálií) a podezřelý Golden Ticket (neexistující účet)** <br>
+Vylepšenou detekční logiku použil se pro obě výstrahy pro snížení počtu výstrah FP a poskytovat přesnější výsledky.
+
+- **Vylepšení funkce: Dokumentace k Azure ATP výstraha zabezpečení** <br>
+Byl rozšířené ochrany ATP v programu zabezpečení výstrah dokumentace ke službě Azure a i na lepší popisech výstrah, přesnější upozornění klasifikace a vysvětlení, opravy, a ochrany před únikem informací. Seznamte se s nové výstrahy dokumentaci návrhu zabezpečení pomocí následujících odkazů: 
+    - [Výstrahy zabezpečení služby Azure ATP](suspicious-activity-guide.md)
+    - [Principy výstrah zabezpečení](understanding-security-alerts.md)
+        - [Upozornění fáze rekognoskace](atp-reconnaissance-alerts.md)
+        - [Ohrožení zabezpečení přihlašovacích údajů Fáze oznámení](atp-compromised-credentials-alerts.md)
+        - [Laterální pohyb fáze oznámení](atp-lateral-movement-alerts.md)
+        - [Upozornění fáze dominance v doméně](atp-domain-dominance-alerts.md)
+        - [Fáze oznámení průsak ven](atp-exfiltration-alerts.md)
+    - [Prozkoumat počítače](investigate-a-computer.md)
+    - [Prozkoumat uživatele](investigate-a-user.md)
+
+- Tato verze také zahrnuje vylepšení a opravy chyb pro interní senzor infrastruktury.
+
 
 ## <a name="azure-atp-release-260"></a>Verze ochrany ATP v programu Azure 2,60
 Vydáno 6. ledna 2019
@@ -40,7 +70,7 @@ Vydáno 16 dne 2018
 Vydáno 9. prosince 2018
 
 - **Vylepšení upozornění zabezpečení: Neobvyklá implementace protokolu upozornění rozdělení**<br>
-Azure ATP řadu výstrah zabezpečení neobvyklé implementace protokolu, které dříve sdíleli, 1 externalId (2002), jsou teď rozdělit do 4 rozlišovací výstrahy, s odpovídající jedinečného externího ID. 
+Azure ATP řadu výstrah zabezpečení neobvyklé implementace protokolu, které dříve sdíleli, 1 externalId (2002), jsou teď rozdělit do čtyř rozlišovací výstrahy, s odpovídající jedinečného externího ID. 
 
 ### <a name="new-alert-externalids"></a>Nové výstrahy externalIds
 
@@ -67,7 +97,7 @@ Vydáno 2. prosince 2018
 
 - **Nová výstraha zabezpečení: Podezřelý anomálií použití lístku Golden ticket (preview)**<br>
 Azure ATP [podezřelý Golden Ticket použití – lístek anomálií](suspicious-activity-guide.md) výstraha zabezpečení je teď ve verzi public preview. <br> Útočníci s právy správce domény může ohrozit účet KRBTGT. Pomocí účtu KRBTGT, útočníci můžete vytvořit lístek Kerberos udělující lístek (TGT), který poskytuje autorizaci k jakémukoli prostředku. 
-<br>Tato falešných lístků TGT se nazývá "Zlatých lístků", protože to útočníkům umožňuje dosáhnout trvalého trvalost sítě. Falešných Zlatých lístků tohoto typu mají jedinečné charakteristiky, které toto nové zjišťování je navržená speciálně pro identifikaci. 
+<br>Tato falešných lístků TGT se nazývá "Zlatých lístků", protože to útočníkům umožňuje dosáhnout trvalého trvalost sítě. Falešných Zlatých lístků tohoto typu mají jedinečné charakteristiky, které tato nové detekce slouží k identifikaci. 
 
 
 - **Vylepšení funkce: Automatické vytvoření instance (pracovní prostor) služby Azure ATP** <br>
@@ -76,7 +106,7 @@ Od dnešního dne, ochrana ATP v programu Azure *pracovní prostory* se přejmen
   - Zjednodušené vytváření instance pro rychlejší nasazení a ochranu pomocí [vytvořit instanci služby Azure ATP](install-atp-step1.md). 
   - Všechny [ochrany osobních údajů a dodržování předpisů](atp-privacy-compliance.md) zůstává stejná. 
 
-  Zobrazit [vytvořit instanci služby Azure ATP](install-atp-step1.md) Další informace. 
+  Další informace o instancích ochrany ATP v programu Azure najdete v tématu [vytvořit instanci služby Azure ATP](install-atp-step1.md). 
 
 - Tato verze obsahuje vylepšení a opravy chyb pro interní senzor infrastruktury.
 
@@ -101,7 +131,7 @@ K rozšíření možností Azure ochrany ATP v programu laterální pohyb cestu 
 Vydáno 18. listopadu 2018
 
 - **Výstraha zabezpečení: Podezřelá komunikace prostřednictvím DNS – obecné dostupnosti**<br>
-Azure ATP [podezřelá komunikace prostřednictvím DNS](suspicious-activity-guide.md#suspicious-communication-over-dns) výstrahy zabezpečení jsou teď obecně dostupné. <br> Protokol DNS ve většině organizací není obvykle, monitorovat a zřídka blokované před škodlivými aktivitami. To umožňuje útočníkovi na napadeném počítači zneužívání protokolu DNS. Škodlivý komunikace prostřednictvím DNS je možné pro průsak dat ven, příkaz a ovládací prvek a/nebo omezení úmyslem vyhnout podnikové sítě.
+Azure ATP [podezřelá komunikace prostřednictvím DNS](suspicious-activity-guide.md) výstrahy zabezpečení jsou teď obecně dostupné. <br> Protokol DNS ve většině organizací není obvykle, monitorovat a zřídka blokované před škodlivými aktivitami. To umožňuje útočníkovi na napadeném počítači zneužívání protokolu DNS. Škodlivý komunikace prostřednictvím DNS je možné pro průsak dat ven, příkazu a řízení a/nebo omezení úmyslem vyhnout podnikové sítě.
 
 - Tato verze také zahrnuje vylepšení a opravy chyb pro interní senzor infrastruktury.
 
@@ -286,7 +316,7 @@ Vydáno 15. července 2018
 ## <a name="azure-atp-release-239"></a>Verze ochrany ATP v programu Azure 2.39
 
 Vydané 5. července 2018
--   **Přidat nové detekce: Kerberos golden ticket - neexistující účet** (preview)<br>Toto nové zjišťování pomáhá chránit vaši organizaci před útoky, ve kterých je vytvořen zlatý lístek Kerberos účtu, který neexistuje ve vaší doméně. Další informace najdete v tématu [Průvodce prošetřováním podezřelých aktivit rozšířené ochrany před internetovými útoky pro Azure](suspicious-activity-guide.md#golden-ticket)
+-   **Přidat nové detekce: Kerberos golden ticket - neexistující účet** (preview)<br>Toto nové zjišťování pomáhá chránit vaši organizaci před útoky, ve kterých je vytvořen zlatý lístek Kerberos účtu, který neexistuje ve vaší doméně. Další informace najdete v tématu [Průvodce prošetřováním podezřelých aktivit rozšířené ochrany před internetovými útoky pro Azure](suspicious-activity-guide.md)
 
 - Tato verze obsahuje opravy a vylepšení pro několik problémů. 
 
@@ -316,7 +346,7 @@ Vydáno 10. června 2018
  
 - **Nové ve verzi preview detekce**<br></br>Z nichž lze dodat nové funkce v nyní, bude ochrana ATP v programu Azure využít výhod skutečnost, že je Cloudová služba – rychlá cykly – a poskytneme vám nové detekce nejkratší možné době. Tyto nové detekce byla označená jako "preview" při prvním vydání. Obvykle nové detekce se přesune z verze preview pro obecnou dostupnost během pár týdnů. Ve výchozím nastavení se zobrazí náhled detekcí. Informace o vyjádří svůj nesouhlas najdete v tématu [ve verzi preview detekce](working-with-suspicious-activities.md#preview-detections).
  
-- **Podezřelé zjišťování sítě VPN**<br></br>Tato verze přináší předběžnou verzi detekce podezřelých VPN. Ochrana ATP v programu Azure učí chování uživatele sítě VPN, včetně počítačů, uživatelů přihlášených k a umístění, které uživatelé připojit z a vás upozorní, když je odchylky od očekávané chování. Další informace najdete v tématu [detekce podezřelých VPN](suspicious-activity-guide.md#suspicious-vpn-detection).
+- **Podezřelé zjišťování sítě VPN**<br></br>Tato verze přináší předběžnou verzi detekce podezřelých VPN. Ochrana ATP v programu Azure učí chování uživatele sítě VPN, včetně počítačů, uživatelů přihlášených k a umístění, které uživatelé připojit z a vás upozorní, když je odchylky od očekávané chování. Další informace najdete v tématu [detekce podezřelých VPN](suspicious-activity-guide.md).
 
 - **Zpožděné aktualizace**<br></br>Teď máte možnost nastavit ochrana ATP v programu Azure snímačů a aktualizovat později pokaždé, když aktualizace ochrany ATP v programu Azure. Teď můžete nastavit každou senzoru služby Azure ATP **zpožděné aktualizace** tak, aby se aktualizuje po 24 hodinách od aktualizace ochrany ATP v programu Azure cloud service. Tato funkce umožňuje otestovat aktualizaci na konkrétní testovací senzorů a aktualizovat vaše produkční senzorů pouze později. Pokud během první cyklu aktualizací zjistíte problém, otevřete lístek podpory. Další informace najdete v části [ochrany ATP v programu Azure aktualizace senzorů](sensor-update.md).
 

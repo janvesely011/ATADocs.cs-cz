@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 1/9/2019
+ms.date: 1/10/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.service: ''
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: b138f533b1ce804af08479a961a791c4069e5a27
-ms.sourcegitcommit: fd6c8a28e6bf3a6031835aebd0b9278e495d3e0b
+ms.openlocfilehash: 00bce1b381b32e1fe3fe9a2bb2c11016b33699f7
+ms.sourcegitcommit: 6a0ac21f59e72db8615811da2c886f54cf3727f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54142433"
+ms.lasthandoff: 01/13/2019
+ms.locfileid: "54249925"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
@@ -96,12 +96,17 @@ Vzhledem k tomu, že se přihlašujete na web pomocí IP adresy, zobrazí se upo
 
 Po instalaci komponenty ATA Center má být vyloučena adresář databáze MongoDB z je průběžně skenovalo antivirové aplikace. Výchozím umístěním databáze je: **C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data**.
 
-Ujistěte se, že jste také vyloučení těchto složek ze skenování antivirová ochrana v programu:
+Ujistěte se, že mají také vyloučit následující složky a procesy z kontroly antivirová ochrana v programu:
 
-C:\Program Files\Microsoft Advanced Threat Analytics\Center\ParentKerberosAsBloomFilters
+**Složky** C:\Program Files\Microsoft Advanced Threat Analytics\Center\ParentKerberosAsBloomFilters
 <br>C:\Program Files\Microsoft Advanced Threat Analytics\Center\ParentKerberosTgsBloomFilters
 <br>C:\Program Files\Microsoft Advanced Threat Analytics\Center\Backup
 <br>C:\Program Files\Microsoft Advanced Threat Analytics\Center\Logs
+
+**Procesy**
+<br>mongod.exe
+<br>Microsoft.Tri.Center.exe
+
 
 Pokud jste nainstalovali ATA v jiném adresáři, ujistěte se, že chcete-li změnit cesty složky podle vaší instalaci. 
 

@@ -13,16 +13,13 @@ ms.technology: ''
 ms.assetid: 43e57f87-ca85-4922-8ed0-9830139fe7cb
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 07f688f9afe82d47c5292670b8836d30022a0f97
-ms.sourcegitcommit: 1ba4e327784c6267db5a708592c4d81ca23376ba
+ms.openlocfilehash: d892b22e46efee6ab8315a20e39bd7b47a4c824b
+ms.sourcegitcommit: 6a0ac21f59e72db8615811da2c886f54cf3727f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53996804"
+ms.lasthandoff: 01/13/2019
+ms.locfileid: "54249942"
 ---
-*Platí pro: Azure Advanced Threat Protection*
-
-
 # <a name="tutorial-investigate-an-entity"></a>Kurz: Prozkoumat entity
 
 V tomto kurzu dozvíte, jak zkoumat entity, které jsou připojené k podezřelým aktivitám zjistil pomocí Azure Advanced Threat Protection (ATP). Po zobrazení výstrahy zabezpečení na časové ose, se dozvíte, jak procházet entity účastnící se upozornění a použít následující parametry a podrobnosti se dozvíte více o co se stalo a co potřebujete dělat pro zmírnění rizika.
