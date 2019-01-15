@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 1/9/2019
+ms.date: 1/14/2019
 ms.topic: tutorial
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4c688b1db3409a1e959790cdcd7fda0533e395c6
-ms.sourcegitcommit: 6a0ac21f59e72db8615811da2c886f54cf3727f5
+ms.openlocfilehash: 020646ef360d9cf370fa50c9ac8b537029e83ee2
+ms.sourcegitcommit: 1ee052c4c6b04b290e2d5384c24b65a108b1f1f3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2019
-ms.locfileid: "54250250"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54253516"
 ---
 # <a name="tutorial-compromised-credential-alerts"></a>Kurz: Upozornění ohrožení zabezpečení přihlašovacích údajů  
 
@@ -37,12 +37,12 @@ Výstrahy pomáhají identifikovat a napravit následující zabezpečení **př
 > * Aktivita Honeytokenu (externí ID 2014)
 > * Podezřelý útok hrubou silou (pomocí protokolu Kerberos, NTLM) (externí ID 2023)
 > * Podezřelý útok hrubou silou (LDAP) (externí ID 2004)
-> * Podezřelý útok ransomwarem WannaCry (externí ID 2035)
 > * Podezřelý útok hrubou silou (SMB) (roku 2033 externí ID)
+> * Podezřelý útok ransomwarem WannaCry (externí ID 2035)
 > * Podezřelé použití Metasploit hacking framework (. 2034 externí ID)
 > * Podezřelé připojení k síti VPN (externí ID 2025)
 
-## Aktivita Honeytokenu (externí ID 2014) <a name="honeytoken-activity"></a>
+## <a name="honeytoken-activity-external-id-2014"></a>Aktivita Honeytokenu (externí ID 2014) 
 
 *Předchozí název:* Aktivita Honeytokenu
 
@@ -69,7 +69,7 @@ Další informace o honeytokenové účty, najdete v části [konfigurovat vylou
     - Najít nástroj, který provádí útoku a jeho odebrání.
     - Vyhledejte uživatele, kteří byli přihlášeni přibližně ve stejnou dobu aktivity došlo k chybě, protože tyto uživatele může také dojít k ohrožení. Resetování hesel a povolení vícefaktorového ověřování.
 
-## Podezřelý útok hrubou silou (pomocí protokolu Kerberos, NTLM) (externí ID 2023) <a name="suspicious-authentication-failures"></a>
+## <a name="suspected-brute-force-attack-kerberos-ntlm-external-id-2023"></a>Podezřelý útok hrubou silou (pomocí protokolu Kerberos, NTLM) (externí ID 2023)
 
 *Předchozí název:* Podezřelé chyby ověřování
 
@@ -108,7 +108,7 @@ Je důležité zkontrolovat, pokud ukončení všech pokusů o přihlášení po
     2. Pokud chcete povolit auditování protokolu NTLM, zapněte události 8004 (NTLM authentication událost, která obsahuje informace o zdrojovém počítači, uživatelský účet a serveru, na kterém se pokusili získat přístup na zdrojovém počítači).
     3. Když zjistíte, které server odeslal ověření ověřování, prozkoumejte serveru tak, že zkontrolujete události, například události 4624, aby lépe porozumět procesu ověřování.
 
-### <a name="suggested-remediation-and-steps-for-prevention"></a>Navrhované nápravné kroky a pro ochrany před únikem informací
+**Navrhované nápravné kroky a pro ochrany před únikem informací**
 
 1. Resetovat hesla uhádnuté uživatelů a povolte vícefaktorové ověřování.
 2. Obsahují zdrojový počítač.
@@ -117,16 +117,16 @@ Je důležité zkontrolovat, pokud ukončení všech pokusů o přihlášení po
 3. Resetování hesel uživateli zdroje a povolit vícefaktorové ověřování.
 4. Vynutit [složitá a dlouhá hesla](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) v organizaci, bude poskytovat nezbytnou první úroveň zabezpečení proti budoucím útokům hrubou silou.
 
-## Podezřelý útok hrubou silou (LDAP) (externí ID 2004) <a name="brute-force-attack-using-ldap-simple-bind"></a>
+## <a name="suspected-brute-force-attack-ldap-external-id-2004"></a>Podezřelý útok hrubou silou (LDAP) (externí ID 2004) 
 
 *Předchozí název:* Útok hrubou silou pomocí jednoduché vazby LDAP.
 
-### <a name="description"></a>**Popis**
+**Popis**
 
 V rámci útoku hrubou silou se útočník pokusí ověření pomocí mnoha různých hesel pro různé účty, dokud nebude nalezen správné heslo pro alespoň jeden účet. Jednou najde, útočník může přihlásit pomocí tohoto účtu.  
 V této detekce se aktivuje upozornění, když zjistí velké množství jednoduché vazby ověřování ochrana ATP v programu Azure. Tato výstraha detekuje útok hrubou silou provést buď *vodorovně* s menší skupinou hesel mezi mnoha uživateli *svisle* s rozsáhlou sadou hesla u několika uživatelů či libovolnou kombinaci Tyto dvě možnosti.
 
-### <a name="tp-b-tp-or-fp"></a>TP, B-TP nebo FP
+**TP, B-TP nebo FP**
 
 Je důležité zkontrolovat, pokud ukončení všech pokusů o přihlášení pomocí ověřování úspěšné.
 
@@ -156,15 +156,49 @@ Je důležité zkontrolovat, pokud ukončení všech pokusů o přihlášení po
 4. Vynutit [složitá a dlouhá hesla](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) v organizaci, bude poskytovat nezbytnou první úroveň zabezpečení proti budoucím útokům hrubou silou.
 5. Zabraňte dalším využívání protokolu nešifrovaný text LDAP ve vaší organizaci.
 
-## Podezřelý útok ransomwarem WannaCry (externí ID 2035)<a name="unusual-protocol-implementation"></a>
+## <a name="suspected-brute-force-attack-smb-external-id-2033"></a>Podezřelý útok hrubou silou (SMB) (roku 2033 externí ID) 
+
+*Předchozí název:* Neobvyklá implementace protokolu (potenciální použití škodlivých nástrojů, jako je Hydra)
+
+**Popis**
+
+Útočníci používají nástroje, které implementují nestandardním způsobem různé protokoly, jako jsou SMB, protokolu Kerberos a NTLM. Tento typ síťového provozu je přijat ve Windows bez upozornění, je ochrana ATP v programu Azure rozpoznat potenciální škodlivým činnostem. Chování je indikátorem technik útoku hrubou silou.
+
+**TP, B-TP nebo FP**
+
+1. Zkontrolujte, jestli zdrojovém počítači běží nástroj útoku, jako je například Hydra.
+   1. Pokud zdrojovém počítači běží nástroj útoku, je tato výstraha **TP**. Postupujte podle pokynů v [pochopit tak rozsah porušení](#understand-the-scope-of-the-breach).
+
+V některých případech aplikace implementovat vlastní ověřování protokolem NTLM nebo SMB zásobníku.
+
+1. Zkontrolujte, jestli zdrojovém počítači běží vlastní ověřování protokolem NTLM nebo SMB zásobníku typu aplikace.
+    1. Pokud zdrojový počítač se nachází spuštění tohoto typu aplikace a by neměl dál běžet, opravte konfiguraci aplikace podle potřeby. **Zavřít** dané výstraze zabezpečení jako **T BP** aktivity.
+    2. Pokud zdrojový počítač se nachází spuštění tohoto typu aplikace, a mělo by to dokončíte, **Zavřít** dané výstraze zabezpečení jako **T BP** aktivitu a vyloučit tento počítač.
+
+**Vysvětlení rozsahu porušení**
+
+1. Prozkoumat [zdrojový počítač](investigate-a-computer.md).
+2. Prozkoumat [zdrojový uživatel](investigate-a-user.md)) (Pokud je zdrojový uživatel).
+
+**Navrhované nápravné kroky a pro ochrany před únikem informací**
+
+1. Resetovat hesla uživatelů uhádnuté a povolení služby Multi-Factor authentication.
+2. Obsahují zdrojový počítač
+   1. Najít nástroj, který provádí útoku a jeho odebrání.
+   2. Hledat uživatele přihlášení v době aktivity, jak může být ohrožena.
+   3. Resetování hesel a povolení služby Multi-Factor authentication.
+3. Vynutit [komplexní a dlouho hesla](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/password-policy) v organizaci. Složitá a dlouhá hesla zadejte nezbytnou první úroveň zabezpečení proti budoucím útokům hrubou silou.
+4. [Zakázat SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/)
+
+## <a name="suspected-wannacry-ransomware-attack-external-id-2035"></a>Podezřelý útok ransomwarem WannaCry (externí ID 2035)
 
 *Předchozí název:* Neobvyklá implementace protokolu (možný útok ransomwarem WannaCry)
 
-### <a name="description"></a>Popis
+**Popis**
 
 Útočníci používají nástroje, které různé protokoly implementují nestandardním způsobem. Tento typ síťového provozu je přijat ve Windows bez upozornění, je ochrana ATP v programu Azure rozpoznat potenciální škodlivým činnostem. Chování je indikátorem technik používaných pokročilé ransomwaru, jako je například WannaCry.
 
-### <a name="tp-b-tp-or-fp"></a>TP, B-TP nebo FP **
+**TP, B-TP nebo FP**
 
 1. Kontrola, zda je na zdrojovém počítači spuštěná WannaCry. 
 
@@ -176,12 +210,12 @@ V některých případech aplikace implementovat vlastní ověřování protokol
     1. Pokud zdrojový počítač se nachází spuštění tohoto typu aplikace a by neměl dál běžet, opravte konfiguraci aplikace podle potřeby. **Zavřít** dané výstraze zabezpečení jako **T BP** aktivity.
     2. Pokud zdrojový počítač se nachází spuštění tohoto typu aplikace, a mělo by to dokončíte, **Zavřít** dané výstraze zabezpečení jako **T BP** aktivitu a vyloučit tento počítač.
 
-### <a name="understand-the-scope-of-the-breach"></a>Vysvětlení rozsahu porušení
+**Vysvětlení rozsahu porušení**
 
 1. Prozkoumat [zdrojový počítač](investigate-a-computer.md).
 2. Prozkoumat [dojde k ohrožení bezpečnosti uživatelského](investigate-a-user.md).
 
-### <a name="suggested-remediation-and-steps-for-prevention"></a>Navrhované nápravné kroky a pro ochrany před únikem informací
+**Navrhované nápravné kroky a pro ochrany před únikem informací**
 
 1. Obsahují zdrojový počítač.
       - [Odebrat WannaCry](https://support.microsoft.com/help/890830/remove-specific-prevalent-malware-with-windows-malicious-software-remo)
@@ -190,50 +224,15 @@ V některých případech aplikace implementovat vlastní ověřování protokol
 2. Oprava všech počítačů, a ujistěte se, aby aktualizace zabezpečení. 
       - [Zakázat SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/)
 
-
-## Podezřelý útok hrubou silou (SMB) (roku 2033 externí ID) <a name="unusual-protocol-implementation-smb"></a>
-
-*Předchozí název:* Neobvyklá implementace protokolu (potenciální použití škodlivých nástrojů, jako je Hydra)
-
-### <a name="description"></a>Popis
-
-Útočníci používají nástroje, které implementují nestandardním způsobem různé protokoly, jako jsou SMB, protokolu Kerberos a NTLM. Tento typ síťového provozu je přijat ve Windows bez upozornění, je ochrana ATP v programu Azure rozpoznat potenciální škodlivým činnostem. Chování je indikátorem technik útoku hrubou silou.
-
-### <a name="tp-b-tp-or-fp"></a>TP, B-TP nebo FP
-
-1. Zkontrolujte, jestli zdrojovém počítači běží nástroj útoku, jako je například Hydra.
-   1. Pokud zdrojovém počítači běží nástroj útoku, je tato výstraha **TP**. Postupujte podle pokynů v [pochopit tak rozsah porušení](#understand-the-scope-of-the-breach).
-
-V některých případech aplikace implementovat vlastní ověřování protokolem NTLM nebo SMB zásobníku.
-
-1. Zkontrolujte, jestli zdrojovém počítači běží vlastní ověřování protokolem NTLM nebo SMB zásobníku typu aplikace.
-    1. Pokud zdrojový počítač se nachází spuštění tohoto typu aplikace a by neměl dál běžet, opravte konfiguraci aplikace podle potřeby. **Zavřít** dané výstraze zabezpečení jako **T BP** aktivity.
-    2. Pokud zdrojový počítač se nachází spuštění tohoto typu aplikace, a mělo by to dokončíte, **Zavřít** dané výstraze zabezpečení jako **T BP** aktivitu a vyloučit tento počítač.
-
-### <a name="understand-the-scope-of-the-breach"></a>Vysvětlení rozsahu porušení
-
-1. Prozkoumat [zdrojový počítač](investigate-a-computer.md).
-2. Prozkoumat [zdrojový uživatel](investigate-a-user.md)) (Pokud je zdrojový uživatel).
-
-### <a name="suggested-remediation-and-steps-for-prevention"></a>Navrhované nápravné kroky a pro ochrany před únikem informací 
-
-1. Resetovat hesla uživatelů uhádnuté a povolení služby Multi-Factor authentication.
-2. Obsahují zdrojový počítač
-   1. Najít nástroj, který provádí útoku a jeho odebrání.
-   2. Hledat uživatele přihlášení v době aktivity, jak může být ohrožena.
-   3. Resetování hesel a povolení služby Multi-Factor authentication.
-3. Vynutit [komplexní a dlouho hesla](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/password-policy) v organizaci. Složitá a dlouhá hesla zadejte nezbytnou první úroveň zabezpečení proti budoucím útokům hrubou silou.
-4. [Zakázat SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/)
-
-## Podezřelé použití Metasploit hacking framework (. 2034 externí ID)<a name="unusual-protocol-implementation-metasploit-hacking-tools"></a>
+## <a name="suspected-use-of-metasploit-hacking-framework-external-id-2034"></a>Podezřelé použití Metasploit hacking framework (. 2034 externí ID)
 
 *Předchozí název:* Neobvyklá implementace protokolu (potenciální použijte Metasploit hacking nástroje)
 
-### <a name="description"></a>Popis
+**Popis**
 
 Útočníci použít nástroje, které implementují různé protokoly (SMB, Kerberos, NTLM) nestandardním způsobem. Tento typ síťového provozu je přijat ve Windows bez upozornění, je ochrana ATP v programu Azure rozpoznat potenciální škodlivým činnostem. Chování je indikátorem techniky, jako je například používání hackerským metasploitu. 
 
-### <a name="tp-b-tp-or-fp"></a>TP, B-TP nebo FP
+**TP, B-TP nebo FP**
 
 1. Zkontrolujte, jestli zdrojovém počítači běží nástroj útoku, třeba Metasploit nebo Medusa.
 
@@ -245,12 +244,12 @@ V některých případech aplikace implementovat vlastní ověřování protokol
     1. Pokud zdrojový počítač se nachází spuštění tohoto typu aplikace a by neměl dál běžet, opravte konfiguraci aplikace podle potřeby. **Zavřít** dané výstraze zabezpečení jako **T BP** aktivity.
     2. Pokud zdrojový počítač se nachází spuštění tohoto typu aplikace, a mělo by to dokončíte, **Zavřít** dané výstraze zabezpečení jako **T BP** aktivitu a vyloučit tento počítač.
 
-### <a name="understand-the-scope-of-the-breach"></a>Vysvětlení rozsahu porušení
+**Vysvětlení rozsahu porušení**
 
 1. Prozkoumat [zdrojový počítač](investigate-a-computer.md).
 2. Pokud není zdrojový uživatel [prozkoumat uživatel](investigate-a-user.md).
 
-### <a name="suggested-remediation-and-steps-for-prevention"></a>Navrhované nápravné kroky a pro ochrany před únikem informací 
+**Navrhované nápravné kroky a pro ochrany před únikem informací**
 
 1. Resetovat hesla uhádnuté uživatelů a povolte vícefaktorové ověřování.
 2. Obsahují zdrojový počítač.
@@ -259,11 +258,11 @@ V některých případech aplikace implementovat vlastní ověřování protokol
 3. Resetování hesel uživateli zdroje a povolit vícefaktorové ověřování. 
 4. [Zakázat SMBv1](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/) 
 
-## Podezřelé připojení k síti VPN (externí ID 2025) <a name="suspicious-vpn-detection"></a>
+## <a name="suspicious-vpn-connection-external-id-2025"></a>Podezřelé připojení k síti VPN (externí ID 2025) 
 
 *Předchozí název:* Podezřelé připojení k síti VPN 
 
-### <a name="description"></a>Popis
+**Popis**
 
 Ochrana ATP v programu Azure se učí chování entit pro uživatele sítě VPN klouzavou dobu jednoho měsíce. 
 
@@ -271,10 +270,11 @@ Model chování VPN je založen na počítače, které se uživatelé přihlašu
 
 Oznámení se otevře po odchylky od chování uživatele podle algoritmu strojového učení.
 
-### <a name="learning-period"></a>Období učení
+**Období učení**
+
 30 dní od první připojení k síti VPN a nejméně 5 připojení k síti VPN v posledních 30 dní, za uživatele.
 
-### <a name="tp-b-tp-or-fp"></a>TP, B-TP nebo FP
+**TP, B-TP nebo FP**
 
 1. Podezřelé uživatel by měl být provádění těchto operací?
     1. Uživatel naposledy změnit jejich umístění?
@@ -282,12 +282,12 @@ Oznámení se otevře po odchylky od chování uživatele podle algoritmu strojo
 
 Pokud jsou odpovědi na otázky uvedené výše, **Zavřít** dané výstraze zabezpečení jako **B-TP** aktivity.
 
-### <a name="understand-the-scope-of-the-breach"></a>Vysvětlení rozsahu porušení
+**Vysvětlení rozsahu porušení**
 
 1. Prozkoumat [zdrojový počítač](investigate-a-computer.md).
 2. Pokud není zdrojový uživatel [prozkoumat uživatel](investigate-a-user.md).
 
-### <a name="suggested-remediation-and-steps-for-prevention"></a>Navrhované nápravné kroky a pro ochrany před únikem informací
+**Navrhované nápravné kroky a pro ochrany před únikem informací**
 
 1. Resetovat heslo uživatele a povolit vícefaktorové ověřování.
 2. Vezměte v úvahu blokování tento uživatel v připojení pomocí sítě VPN.

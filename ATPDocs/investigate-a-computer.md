@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 1/2/2019
+ms.date: 1/14/2019
 ms.topic: tutorial
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,15 +13,13 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 99a9d8bfcf7f6dc7fa758e426913010fa387980d
-ms.sourcegitcommit: 6a0ac21f59e72db8615811da2c886f54cf3727f5
+ms.openlocfilehash: 64424c6c2b2b0f627099ab479831f4b289eb9605
+ms.sourcegitcommit: 1ee052c4c6b04b290e2d5384c24b65a108b1f1f3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2019
-ms.locfileid: "54250241"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54253380"
 ---
-*Platí pro: Azure Advanced Threat Protection*
-
 # <a name="tutorial-investigate-a-computer"></a>Kurz: Prozkoumat počítače
 
 Azure důkazy upozornění ochrany ATP v programu poskytuje zrušte označení, když počítače mít podíl na podezřelé aktivity nebo pokud existují označení, že na počítači dojde k narušení. Pomocí návrhy šetření můžete určit rizika pro vaši organizaci, rozhodněte se, jak opravit a určit nejlepší způsob, jak podobné útokům v budoucnu.  

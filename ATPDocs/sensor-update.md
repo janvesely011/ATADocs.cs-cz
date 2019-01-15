@@ -1,11 +1,11 @@
 ---
 title: Aktualizace senzorů vaší ochrany ATP v programu Azure | Dokumentace Microsoftu
-description: Popisuje postup aktualizace senzorů v ochrany ATP v programu Azure.
+description: Popisuje, jak aktualizovat a zpoždění aktualizace senzorů v ochrany ATP v programu Azure.
 keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 1/14/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,14 +13,14 @@ ms.technology: ''
 ms.assetid: 603d9e09-a07d-4357-862f-d5682c8bc3dd
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a24210415929b69152377d34aeec1bdc8906d08c
-ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
+ms.openlocfilehash: ea165ca1f3e0f4f6a6034a8145cf3df05f31ed79
+ms.sourcegitcommit: 1ee052c4c6b04b290e2d5384c24b65a108b1f1f3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "52744434"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54253499"
 ---
-*Platí pro: Azure Rozšířená ochrana před internetovými útoky*
+*Platí pro: Azure Advanced Threat Protection*
 
 
 # <a name="update-azure-atp-sensors"></a>Aktualizace služby Azure ATP senzorů
@@ -87,12 +87,12 @@ Každých několik minut, senzory ochrany ATP v programu Azure zkontrolujte, jes
   7. Snímač přijímá odbavení z cloudové služby Azure. Můžete to ověřit v **aktualizace** stránky.
   8. Další senzor zahájí proces aktualizace. 
 
-4. Po 24 hodinách od služby Azure ATP cloudovou službu aktualizovat, senzory vybraná **zpožděné aktualizace** zahájíte proces aktualizace.
+4. 24 hodin, po aktualizaci cloudové službě ochrana ATP v programu Azure senzorů vybraná **zpožděné aktualizace** zahájíte proces aktualizace.
 
 ![aktualizace ze senzorů](./media/sensor-update.png)
 
 
-V případě selhání Pokud senzor nedokončil proces aktualizace relevantní monitorovací upozornění se aktivuje a odesílají je jako upozornění.
+V případě selhání aktualizace Pokud senzor nedokončil proces aktualizace relevantní monitorovací upozornění se aktivuje a odesílají je jako upozornění.
 
 ![senzor zastaralé](./media/sensor-outdated.png)
 

@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 1/13/2019
+ms.date: 1/14/2019
 ms.topic: tutorial
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 0b3a1db5-0d43-49af-b356-7094cc85f0a5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c45f28d7d165414bcbdbfb4815ad13954e5adfdd
-ms.sourcegitcommit: 6a0ac21f59e72db8615811da2c886f54cf3727f5
+ms.openlocfilehash: 8cef770f928287b83897dcba0b61afb7ccd1f70f
+ms.sourcegitcommit: 1ee052c4c6b04b290e2d5384c24b65a108b1f1f3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2019
-ms.locfileid: "54250269"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54253550"
 ---
 # <a name="tutorial-domain-dominance-alerts"></a>Kurz: Upozornění dominance v doméně  
 
@@ -47,7 +47,7 @@ Výstrahy pomáhají identifikovat a napravit následující zabezpečení **dom
 > * Podezřelé úprava citlivých skupin (externí ID 2024)
 > * Podezřelé vytvoření služby (externí ID 2026)
 
-## Škodlivá žádost hlavní klíč rozhraní Data Protection API (2020 externí ID) <a name="malicious-data-protection-private-information-request"></a>
+## <a name="malicious-request-of-data-protection-api-master-key-external-id-2020"></a>Škodlivá žádost hlavní klíč rozhraní Data Protection API (2020 externí ID) 
 
 *Předchozí název:* Škodlivá žádost o soukromé informace přes Data Protection
 
@@ -79,7 +79,7 @@ Skenery pokročilé zabezpečení může oprávněně generovat tento typ aktivi
 3. Odcizeného privátní klíč se nikdy změní. To znamená objekt actor můžete vždy použít odcizeného klíč k dešifrování chráněných dat v cílové doméně. Metodické způsob, jak změnit tento privátní klíč neexistuje. 
     - K vytvoření klíče, použijte aktuální privátní klíč, vytvořte klíč a znovu zašifrovat každé domény hlavního klíče s nový privátní klíč.
 
-## Pokus o spuštění vzdáleného kódu (externí ID 2019) <a name="remote-code-execution-attempt"></a>
+## <a name="remote-code-execution-attempt-external-id-2019"></a>Pokus o spuštění vzdáleného kódu (externí ID 2019) 
 
 *Předchozí název:* Pokus o spuštění vzdáleného kódu
 
@@ -122,7 +122,7 @@ Pracovní stanice pro správu, členové týmu IT a účty služeb mohou provád
 > [!NOTE]
 > Vzdálené spuštění kódu pokusit výstrahy týkající se pokus o použití prostředí Powershell příkazy jsou podporovány pouze senzory ochrany ATP v programu.
 
-## Podezření na útok DCShadow (povýšení řadiče domény) (externí ID 2028) <a name="suspicious-domain-controller-promotion-potential-dcshadow-attack"></a>
+## <a name="suspected-dcshadow-attack-domain-controller-promotion-external-id-2028"></a>Podezření na útok DCShadow (povýšení řadiče domény) (externí ID 2028) 
 
 *Předchozí název:* Povýšení řadiče domény podezřelé (možný útok DCShadow)
 
@@ -180,7 +180,7 @@ Ověřte následující oprávnění:
 > [!NOTE]
 > Výstrahy povýšení (možný útok DCShadow) řadiče domény podezřelé jsou podporovány pouze senzorů ochrany ATP v programu.
 
-## Podezření na útok DCShadow (žádost o replikaci řadiče domény) (externí ID 2029) <a name="suspicious-replication-request-potential-dcshadow-attack"></a>
+## <a name="suspected-dcshadow-attack-domain-controller-replication-request-external-id-2029"></a>Podezření na útok DCShadow (žádost o replikaci řadiče domény) (externí ID 2029) 
 
 *Předchozí název:* Podezřelá replikace požadavku (možný útok DCShadow)
 
@@ -233,7 +233,7 @@ Ověřte následující oprávnění:
 > [!NOTE]
 > Upozornění na podezřelé replikace žádosti (možný útok DCShadow) jsou podporovány pouze senzorů ochrany ATP v programu. 
 
-## Podezření na útok DCSync (replikace adresářových služeb) (externí ID 2006) <a name="malicious-replication-of-directory-services"></a>
+## <a name="suspected-dcsync-attack-replication-of-directory-services-external-id-2006"></a>Podezření na útok DCSync (replikace adresářových služeb) (externí ID 2006) 
 
 *Předchozí název:* Škodlivá replikace adresářových služeb
 
@@ -286,7 +286,7 @@ Ověřte následující oprávnění:
 2. Replikujte všechny změny v adresáři.
 3. Další informace najdete v tématu [udělení Active Directory Domain Services oprávnění k synchronizaci profilu v SharePoint serveru 2013](https://technet.microsoft.com/library/hh296982.aspx). Můžete použít [AD ACL Scanner](https://blogs.technet.microsoft.com/pfesweplat/2013/05/13/take-control-over-ad-permissions-and-the-ad-acl-scanner-tool/) nebo vytvořit skript prostředí Windows PowerShell k určení, kdo v doméně tato oprávnění má.
 
-## Podezřelé použití lístku Golden (oslabení šifrování) (externí ID 2009) <a name="encryption-downgrade-activity-potential-golden-ticket-attack"></a>
+## <a name="suspected-golden-ticket-usage-encryption-downgrade-external-id-2009"></a>Podezřelé použití lístku Golden (oslabení šifrování) (externí ID 2009) 
 
 *Předchozí název:* Aktivita snížení úrovně šifrování
 
@@ -335,7 +335,7 @@ Aplikace může ověřit pomocí nižší šifry šifrování. Některé se ově
 
 4. Ujistěte se, že všechny řadiče domény s operačním systémem až do systému Windows Server 2012 R2 se instalují s [KB3011780](https://www.microsoft.com/download/details.aspx?id=44978) a všech členských serverech a řadičích domény až 2012 R2 jsou aktuální s [KB2496930](https://support.microsoft.com/help/2496930/ms11-013-vulnerabilities-in-kerberos-could-allow-elevation-of-privileg). Další informace najdete v tématu [stříbrný certifikát PAC](https://technet.microsoft.com/library/security/ms11-013.aspx) a [podobě zfalšovaných certifikátů PAC](https://technet.microsoft.com/library/security/ms14-068.aspx).
 
-## Podezřelé použití lístku Golden (falešných dat autorizace) (externí ID 2013)<a name="privilege-escalation-using-forged-authorization-data"></a>
+## <a name="suspected-golden-ticket-usage-forged-authorization-data-external-id-2013"></a>Podezřelé použití lístku Golden (falešných dat autorizace) (externí ID 2013)
 
 *Předchozí název:* Eskalace oprávnění prostřednictvím zfalšovaných dat autorizace
 
@@ -367,7 +367,7 @@ Některé operační systémy nebo aplikace se ví, upravovat data autorizace. N
     - Obnovení účtu KRBTGT dvojím zruší platnost všechny lístky protokolu Kerberos v této doméně. Zrušení platnosti všechny lístky protokolu Kerberos v doméně znamená **všechny** služeb je nebude fungovat a nebudou až do jejich obnovování nebo v některých případech se restartuje službu znovu fungovat. Před provedením KRBTGT double resetovat, protože má vliv na všechny počítače, servery a uživatelů v rámci prostředí, naplánujte pečlivě.
 4. Ujistěte se, že všechny řadiče domény s operačním systémem až do systému Windows Server 2012 R2 se instalují s [KB3011780](https://www.microsoft.com/download/details.aspx?id=44978) a všech členských serverech a řadičích domény až 2012 R2 jsou aktuální s [KB2496930](https://support.microsoft.com/help/2496930/ms11-013-vulnerabilities-in-kerberos-could-allow-elevation-of-privileg). Další informace najdete v tématu [stříbrný certifikát PAC](https://technet.microsoft.com/library/security/ms11-013.aspx) a [podobě zfalšovaných certifikátů PAC](https://technet.microsoft.com/library/security/ms14-068.aspx).
 
-## Podezřelé použití Golden Ticket (neexistující účet) (externí ID 2027) <a name="golden-ticket"></a>
+## <a name="suspected-golden-ticket-usage-nonexistent-account-external-id-2027"></a>Podezřelé použití Golden Ticket (neexistující účet) (externí ID 2027) 
 
 Předchozí název: Protokol Kerberos golden ticket
 
@@ -396,7 +396,7 @@ Pokud je odpověď **Ano**, k některému z předchozí dotazy, **Zavřít** vý
     - Obnovení účtu KRBTGT dvojím zruší platnost všechny lístky protokolu Kerberos v této doméně. Zrušení platnosti všechny lístky protokolu Kerberos v doméně znamená **všechny** služeb je nebude fungovat a nebudou až do jejich obnovování nebo v některých případech se restartuje službu znovu fungovat. Před provedením KRBTGT double resetovat, protože má vliv na všechny počítače, servery a uživatelů v rámci prostředí, naplánujte pečlivě.
 
  
-## Podezřelé použití Golden Ticket (ticket anomálií) (. 2032 externí ID) – Preview <a name="golden-ticket-usage-ticket-anomaly"></a>
+## <a name="suspected-golden-ticket-usage-ticket-anomaly-external-id-2032--preview"></a>Podezřelé použití Golden Ticket (ticket anomálií) (. 2032 externí ID) – Preview 
 
 **Popis** útočníci s právy správce domény může ohrozit účet KRBTGT. Pomocí účtu KRBTGT, můžete vytvořit lístek Kerberos udělující lístek (TGT), který poskytuje autorizaci k jakémukoli prostředku a nastavit dobu platnosti lístku do libovolného kdykoli. Tato falešných lístků TGT se nazývá "Zlatých lístků" a útočníkům umožňuje dosáhnout trvalého sítě. Falešných Zlatých lístků tohoto typu mají jedinečné charakteristiky, které toto zjišťování je navržená speciálně pro identifikaci.  
  
@@ -452,7 +452,7 @@ Pokud je odpověď na předchozí otázky **Ano**, **Zavřít** dané výstraze 
 
     **Pečlivě naplánujte, než se pustíte do dvojitých resetování KRBTGT. Obnovení má vliv na všechny počítače, servery a uživatelů v rámci prostředí.**
 
-## Podezření na útok typu skeleton key (oslabení šifrování) (externí 2010 ID) <a name="encryption-downgrade-activity-potential-skeleton-key-attack"></a>
+## <a name="suspected-skeleton-key-attack-encryption-downgrade-external-id-2010"></a>Podezření na útok typu skeleton key (oslabení šifrování) (externí 2010 ID) 
 
 *Předchozí název:* Aktivita snížení úrovně šifrování
 
@@ -509,7 +509,7 @@ Tato detekce spoléhá na události se auditují na řadiče domény. Zajistěte
 1. Chcete-li pomoci zabránit budoucím útokům, Minimalizujte počet uživatelům oprávnění k úpravě citlivých skupin. 
 2. Nastavte Privileged Access Management pro službu Active Directory. Pokud je k dispozici.
  
-## Podezřelé vytvoření služby (externí ID 2026)<a name="suspicious-service-creation"></a>
+## <a name="suspicious-service-creation-external-id-2026"></a>Podezřelé vytvoření služby (externí ID 2026)
 
 *Předchozí název:* Podezřelé vytvoření služby
 

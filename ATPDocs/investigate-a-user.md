@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 1/1/2019
+ms.date: 1/14/2019
 ms.topic: tutorial
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 2b59c7a6f39b656f93d68f955bedcd4f46aafaca
-ms.sourcegitcommit: 6a0ac21f59e72db8615811da2c886f54cf3727f5
+ms.openlocfilehash: 126653dd2831e0e3dbd9c777d84d32b1c2e74bd9
+ms.sourcegitcommit: 1ee052c4c6b04b290e2d5384c24b65a108b1f1f3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2019
-ms.locfileid: "54250242"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54253397"
 ---
 # <a name="tutorial-investigate-a-user"></a>Kurz: Prozkoumat uživatele
 

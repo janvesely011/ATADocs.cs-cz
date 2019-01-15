@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 1/13/2019
+ms.date: 1/14/2019
 ms.topic: tutorial
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 452d951c-5f49-4a21-ae10-9fb38c3de302
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4fd866e919696c4e6b2e8f88fd7de7749bfec36b
-ms.sourcegitcommit: 6a0ac21f59e72db8615811da2c886f54cf3727f5
+ms.openlocfilehash: 68a1fcef26f1d8df584e5b1585130db01ba89956
+ms.sourcegitcommit: 1ee052c4c6b04b290e2d5384c24b65a108b1f1f3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2019
-ms.locfileid: "54250245"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54253431"
 ---
 # <a name="tutorial-exfiltration-alerts"></a>Kurz: Upozornění průsak ven  
 
@@ -36,15 +36,15 @@ Výstrahy pomáhají identifikovat a napravit následující zabezpečení **pr�
 > * Podezřelá komunikace prostřednictvím DNS (externí ID 2031)
 > * Průsak dat ven přes protokol SMB - Preview (externí ID 2030)
 
-## Podezřelá komunikace prostřednictvím DNS (externí ID 2031) <a name="suspicious-communication-over-dns"></a>
+## <a name="suspicious-communication-over-dns-external-id-2031"></a>Podezřelá komunikace prostřednictvím DNS (externí ID 2031) 
 
 *Předchozí název*: Podezřelá komunikace prostřednictvím DNS
 
-## <a name="description"></a>Popis
+**Popis**
 
 Protokol DNS ve většině organizací je obvykle není monitorovat a zřídka blokované před škodlivými aktivitami. Povoluje se útočník na napadeném počítači zneužívají protokolu DNS. Škodlivý komunikace prostřednictvím DNS je možné pro průsak dat ven, příkazu a řízení a/nebo omezení úmyslem vyhnout podnikové sítě.
 
-## <a name="tp-b-tp-or-fp"></a>TP, B-TP nebo FP?
+**TP, B-TP nebo FP?**
  
 Některé společnosti oprávněně použití serveru DNS pro pravidelné komunikace. Chcete-li zjistit stav výstrahy zabezpečení:
 
@@ -52,7 +52,7 @@ Některé společnosti oprávněně použití serveru DNS pro pravidelné komuni
     - Považujte jej **B-TP** aktivitu, pokud je známé a důvěryhodné domény a nejsou povoleny pro dotazy DNS. *Zavřít* výstrahy zabezpečení a vyloučit domény z budoucích oznámení.  
     - Pokud domény registrovaný dotaz není důvěryhodný, identifikujte proces vytváření žádosti na zdrojovém počítači. Použití [monitorování procesu](https://docs.microsoft.com/sysinternals/downloads/procmon) jako pomoc s touto úlohou.
 
-## <a name="understand-the-scope-of-the-breach"></a>Vysvětlení rozsahu porušení
+**Vysvětlení rozsahu porušení**
 
 1. V cílovém počítači, který by měl být DNS server, zkontrolujte záznamy v doméně.
     - Jaké IP jsou to korelována?
@@ -60,7 +60,7 @@ Některé společnosti oprávněně použití serveru DNS pro pravidelné komuni
     - Pokud je IP adresa?
 1. Prozkoumat [zdrojový a cílový počítač](investigate-a-computer.md).
 
-## <a name="suggested-remediation-and-steps-for-prevention"></a>Navrhované nápravné kroky a pro ochrany před únikem informací
+**Navrhované nápravné kroky a pro ochrany před únikem informací**
 
 1. Obsahují zdrojový počítač.
     - Najít nástroj, který provádí útoku a jeho odebrání.
@@ -72,17 +72,17 @@ Některé společnosti oprávněně použití serveru DNS pro pravidelné komuni
 
 ## <a name="data-exfiltration-over-smb---preview-external-id-2030"></a>Průsak dat ven přes protokol SMB - Preview (externí ID 2030)
 
-## <a name="description"></a>Popis
-Řadičích domény se nachází nejcitlivější data organizace. Pro většinu útočníky jedním z nejdůležitějších úkolů jejich je k získání přístupu k řadiči domény, aby ukrást vaše nejcitlivější data. Cílem Ntds.dit soubor, uložený na řadiči domény, například umožňuje útočníkovi forge poskytující registraci tickets(TGT) prostředek lístek protokolu Kerberos. Falešných lístků TGT protokolu Kerberos povolit umožní nastavit dobu platnosti lístku do libovolného kdykoli. Azure ATP **průsak dat ven přes protokol SMB** aktivuje upozornění při podezřelých přenosy dat jsou dodržovány z monitorovaných řadičů domény.
+**Popis** řadičích domény se nachází nejcitlivější data organizace. Pro většinu útočníky jedním z nejdůležitějších úkolů jejich je k získání přístupu k řadiči domény, aby ukrást vaše nejcitlivější data. Cílem Ntds.dit soubor, uložený na řadiči domény, například umožňuje útočníkovi forge poskytující registraci tickets(TGT) prostředek lístek protokolu Kerberos. Falešných lístků TGT protokolu Kerberos povolit umožní nastavit dobu platnosti lístku do libovolného kdykoli. Azure ATP **průsak dat ven přes protokol SMB** aktivuje upozornění při podezřelých přenosy dat jsou dodržovány z monitorovaných řadičů domény.
 
-## <a name="tp-b-tp-or-fp"></a>TP, B-TP nebo FP?
+**TP, B-TP nebo FP**
 1. Tito uživatelé mají zkopírujte tyto soubory do tohoto počítače?  
-    – Pokud je odpověď na předchozí otázce **Ano**, **Zavřít** zabezpečení výstrahy a vyloučit počítače jako **B-TP** aktivity.
-## <a name="understand-the-scope-of-the-breach"></a>Vysvětlení rozsahu porušení
+    - Pokud je odpověď na otázku předchozí **Ano**, **Zavřít** zabezpečení výstrahy a vyloučit počítače jako **B-TP** aktivity.
+
+**Vysvětlení rozsahu porušení**
 1. Prozkoumat [zdroje uživatelé](investigate-a-user.md).  
 2. Prozkoumat [zdrojový a cílový počítač](investigate-a-computer.md) kopie. 
 
-## <a name="suggested-remediation-and-steps-for-prevention"></a>Navrhované nápravné kroky a pro ochrany před únikem informací
+**Navrhované nápravné kroky a pro ochrany před únikem informací**
 1. Resetovat heslo uživatele zdroje a povolit vícefaktorové ověřování.
 2. Obsahují zdrojový počítač.
     - Najít nástroj, který provádí útoku a jeho odebrání.
@@ -92,7 +92,9 @@ Některé společnosti oprávněně použití serveru DNS pro pravidelné komuni
 3. Pokud jeden ze souborů se **ntds.dit** souboru:
     - Změnit heslo protokolu Kerberos KRBTGT Ticket Granting Ticket () dvakrát podle pokynů v [KRBTGT účet skriptů pro resetování hesla nyní k dispozici pro zákazníky, kteří](https://cloudblogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), použije [resetování hesla/klíčů účtu KRBTGT Nástroj](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). 
     - Obnovení účtu KRBTGT dvojím zruší platnost všechny lístky protokolu Kerberos v této doméně. Zrušení platnosti všechny lístky protokolu Kerberos v doméně znamená **všechny** služby nebude fungovat a nebudou fungovat znovu, dokud se obnovit nebo v některých případech se službu restartovat.
+
     - **Pečlivě naplánujte před provedením obnovení double KRBTGT. Resetování double KRBTGT má vliv na všechny počítače, servery a uživatelů v rámci prostředí.**
+
    - Zavřete všechny existující relace položky celkem řadiče domény. 
 
 ## <a name="see-also"></a>Viz také

@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 2257eb00-8614-4577-b6a1-5c65085371f2
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 65a060dd717bded0a0482e365f92eb1f211e092e
-ms.sourcegitcommit: 6a0ac21f59e72db8615811da2c886f54cf3727f5
+ms.openlocfilehash: 7889a4f743db259753479394939484ffaddc5a7d
+ms.sourcegitcommit: 1ee052c4c6b04b290e2d5384c24b65a108b1f1f3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2019
-ms.locfileid: "54250246"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54253450"
 ---
 # <a name="tutorial-lateral-movement-alerts"></a>Kurz: Upozornění taktiky Lateral Movement  
 
@@ -38,7 +38,7 @@ Výstrahy pomáhají identifikovat a napravit následující zabezpečení **tak
 > * Podezření na útok overpass-the-hash (oslabení šifrování) (externí ID 2008)
 > * Podezření na útok overpass-the-hash (Kerberos) (externí ID 2002)
 
-## Krádež identity podezřelého softwaru (pass-the-hash) (externí ID 2017)<a name="identity-theft-using-pass-the-hash-attack"></a>
+## <a name="suspected-identity-theft-pass-the-hash-external-id-2017"></a>Krádež identity podezřelého softwaru (pass-the-hash) (externí ID 2017)
 
 *Předchozí název:* Krádež identity pomocí útoku Pass-the-Hash
 
@@ -62,7 +62,7 @@ Pass-the-Hash je technika laterálního pohybu, kdy útočník získá NTLM hash
 3. Najít nástroj, který provádí útoku a jeho odebrání.
 4. Hledejte uživatele přihlášené přibližně ve stejnou dobu aktivity, jak může být ohrožena. Resetování hesel a povolení vícefaktorového ověřování.
 
-## Krádež identity podezřelého softwaru (pass-the-ticket) (externí ID 2018)<a name="identity-theft-using-pass-the-ticket-attack"></a>
+## <a name="suspected-identity-theft-pass-the-ticket-external-id-2018"></a>Krádež identity podezřelého softwaru (pass-the-ticket) (externí ID 2018)
 
 *Předchozí název:* Krádež identity pomocí útoku Pass-the-Ticket
 
@@ -100,7 +100,7 @@ Existují vlastní aplikace, které dál lístky jménem uživatelů. Tyto aplik
 4. Vyhledejte uživatelé přihlášení přibližně ve stejnou dobu jako aktivity, jak může být ohrožena. Resetování hesel a povolení vícefaktorového ověřování.
 5. Pokud máte nainstalovaný – programu Windows Defender ATP použít **vyprázdnit klist.exe** odstranit všechny lístky zadané přihlašovací relace a zabránit dalším využívání lístky.
 
-## Podezření na útok overpass-the-hash (oslabení šifrování) (externí ID 2008) <a name="Encryption-downgrade-activity-potential-over-pass-the-hash"></a>
+## <a name="suspected-overpass-the-hash-attack-encryption-downgrade-external-id-2008"></a>Podezření na útok overpass-the-hash (oslabení šifrování) (externí ID 2008) 
 
 *Předchozí název:* Aktivita snížení úrovně šifrování
 
@@ -145,7 +145,7 @@ Některé legitimní materiálů nepodporují silné šifrování šifry a toto 
 2. Ujistěte se, že je úroveň funkčnosti domény nastavená pro podporu silného šifrování doklad.  
 3. Dávat přednost použití aplikace, které podporují doklad silné šifrování.
 
-## Podezření na útok overpass-the-hash (Kerberos) (externí ID 2002) <a name="unusual-protocol-implementation"></a>
+## <a name="suspected-overpass-the-hash-attack-kerberos-external-id-2002"></a>Podezření na útok overpass-the-hash (Kerberos) (externí ID 2002) 
 
 *Předchozí název:* Neobvyklá implementace protokolu Kerberos (možný útok overpass-the-hash)
 

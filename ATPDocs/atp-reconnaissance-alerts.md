@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e820febef92f2cc8f5d83336e8e5cf3377881955
-ms.sourcegitcommit: 6a0ac21f59e72db8615811da2c886f54cf3727f5
+ms.openlocfilehash: 559c09b1fdc0dbbf25716e3c908ae7465ed91625
+ms.sourcegitcommit: 1ee052c4c6b04b290e2d5384c24b65a108b1f1f3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2019
-ms.locfileid: "54250252"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54253465"
 ---
 # <a name="tutorial-reconnaissance-alerts"></a>Kurz: Rekognoskace výstrahy  
 
@@ -38,7 +38,7 @@ Výstrahy pomáhají identifikovat a napravit následující zabezpečení **Rek
 > * Uživatele a IP adres pro rekognoskaci (SMB) (externí ID 2012)
 > * Rekognoskace členství uživatelů a skupin (SAMR) (externí ID 2021)
 
-## Rekognoskace výčet účtu (externí ID 2003) <a name="reconnaissance-using-account-enumeration"></a>
+## <a name="account-enumeration-reconnaissance-external-id-2003"></a>Rekognoskace výčet účtu (externí ID 2003) 
 
 
 *Předchozí název:* Rekognoskace pomocí výčtu účtů
@@ -98,7 +98,7 @@ Nyní podívejte se na účty:<br>
     3. Resetování hesel a povolení vícefaktorového ověřování.
 2. Vynutit [komplexní a dlouho hesla](https://docs.microsoft.com/windows/device-security/security-policy-settings/password-policy) v organizaci. Složitá a dlouhá hesla zadejte nezbytnou první úroveň zabezpečení před útoky hrubou silou. Dalším krokem v řetězu událostí internetového útoku po výčtu jsou obvykle útoky hrubou silou. 
 
-## Mapování sondování sítě (DNS) (externí ID 2007) <a name="reconnaissance-using-dns"></a>
+## <a name="network-mapping-reconnaissance-dns-external-id-2007"></a>Mapování sondování sítě (DNS) (externí ID 2007) 
 
 
 *Předchozí název:* Rekognoskace pomocí DNS
@@ -137,7 +137,7 @@ Dotazy DNS můžete vygenerovat bezpečnostní skenery a oprávněné aplikace.
 
 1. Zabezpečení interní server DNS pro rekognoskaci pomocí DNS tím, že zakážete přenosů zóny nebo podle [omezení přenosů zóny](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee649273(v=ws.10)) pouze na zadané IP adresy. Úprava přenosů zóny je jedním z úkolů na kontrolním seznamu, která by měla být určena pro [zabezpečení před útoky interních i externích serverů DNS](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee649273(v=ws.10)).
 
-## Uživatele a IP adres pro rekognoskaci (SMB) (externí ID 2012) <a name="reconnaissance-using-smb-session-enumeration"></a>
+## <a name="user-and-ip-address-reconnaissance-smb-external-id-2012"></a>Uživatele a IP adres pro rekognoskaci (SMB) (externí ID 2012) 
 
 
 *Předchozí název:* Rekognoskace pomocí výčtu relací SMB
@@ -168,7 +168,7 @@ Bezpečnostní skenery a aplikace může oprávněně dotazovat řadiče domény
 
 Použití [Net ukončí nástroj](https://gallery.technet.microsoft.com/Net-Cease-Blocking-Net-1e8dcb5b) Posilte zabezpečení vašeho prostředí vůči útoku.
 
-## Rekognoskace členství uživatelů a skupin (SAMR) (externí ID 2021) <a name="reconnaissance-using-directory-service-queries"></a>
+## <a name="user-and-group-membership-reconnaissance-samr-external-id-2021"></a>Rekognoskace členství uživatelů a skupin (SAMR) (externí ID 2021) 
 
 
 *Předchozí název:* Rekognoskace pomocí dotazů na adresářové služby 
