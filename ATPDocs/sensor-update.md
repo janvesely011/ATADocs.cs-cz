@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 603d9e09-a07d-4357-862f-d5682c8bc3dd
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ea165ca1f3e0f4f6a6034a8145cf3df05f31ed79
-ms.sourcegitcommit: 1ee052c4c6b04b290e2d5384c24b65a108b1f1f3
+ms.openlocfilehash: f2df8f8f59edff7ebda3f86aae26b899913d57f8
+ms.sourcegitcommit: e2daa0f93d97d552cfbf1577fbd05a547b63e95b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54253499"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54314325"
 ---
 *Platí pro: Azure Advanced Threat Protection*
 
@@ -60,7 +60,7 @@ Obvykle senzorů automaticky aktualizovat při aktualizaci cloudové službě oc
 To vám umožňuje vybrat konkrétní senzory, na kterých nasazení aktualizace automaticky a aktualizujte zbytek vašeho senzory na zpoždění, až poté, co vidíte plynule nepovedlo počáteční aktualizace.
 
 > [!NOTE]
-> Pokud dojde k chybě a snímače se neaktualizuje, otevřete lístek podpory. Váš proxy server pouze komunikovat s vaší instancí dál posiluje, najdete v článku [konfiguraci proxy serveru](configure-proxy.md)
+> Pokud dojde k chybě a snímače se neaktualizuje, otevřete lístek podpory. Váš proxy server pouze komunikovat s vaší instancí dál posiluje, najdete v článku [konfiguraci proxy serveru](configure-proxy.md).
 
 Nastavení senzoru zpožděné aktualizace:
 

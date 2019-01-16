@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 1/13/2019
+ms.date: 1/15/2019
 ms.topic: tutorial
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 2257eb00-8614-4577-b6a1-5c65085371f2
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 7889a4f743db259753479394939484ffaddc5a7d
-ms.sourcegitcommit: 1ee052c4c6b04b290e2d5384c24b65a108b1f1f3
+ms.openlocfilehash: 7816dba02c2fea07afc080c7aed5ede073c88fac
+ms.sourcegitcommit: e2daa0f93d97d552cfbf1577fbd05a547b63e95b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54253450"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54314308"
 ---
 # <a name="tutorial-lateral-movement-alerts"></a>Kurz: Upozornění taktiky Lateral Movement  
 
@@ -29,6 +29,8 @@ Obvykle kybernetických útoků jsou spouštěny proti jakémukoli subjektu př�
 3. **Taktiky Lateral Movement**
 4. [Dominance v doméně](atp-domain-dominance-alerts.md)
 5. [Průsak ven](atp-exfiltration-alerts.md)
+
+Další informace o tom, jak pochopit strukturu a běžné součásti všech výstrah zabezpečení ochrany ATP v programu Azure najdete v tématu [Principy výstrah zabezpečení](understanding-security-alerts.md).
 
 Výstrahy pomáhají identifikovat a napravit následující zabezpečení **taktiky Lateral Movement** fáze podezřelých aktivitách zjištěných ochrany ATP v programu Azure ve vaší síti. V tomto kurzu se dozvíte, jak pochopit, klasifikovat, opravit a brání následující typy útoků:
 
@@ -179,11 +181,11 @@ Někdy aplikace implementovat vlastní zásobník protokolu Kerberos, není v so
 
 ## <a name="see-also"></a>Viz také
 
-- [Prozkoumat počítače](investigate-a-computer.md)
+- [Prošetřování počítačů](investigate-a-computer.md)
 - [Práce s výstrahami zabezpečení](working-with-suspicious-activities.md)
 - [Práce s cesty taktiky Lateral Movement](use-case-lateral-movement-path.md)
-- [Rekognoskace výstrahy](atp-reconnaissance-alerts.md)
-- [Upozornění ohrožení zabezpečení přihlašovacích údajů](atp-compromised-credentials-alerts.md)
-- [Upozornění dominance v doméně](atp-domain-dominance-alerts.md)
-- [Upozornění průsak ven](atp-exfiltration-alerts.md)
+- [Výstrahy před hrozbami „osahávání“ (reconnaissance)](atp-reconnaissance-alerts.md)
+- [Výstrahy před ohrožením zabezpečení přihlašovacích údajů](atp-compromised-credentials-alerts.md)
+- [Výstrahy před dominancí v doméně](atp-domain-dominance-alerts.md)
+- [Výstrahy před exfiltrací](atp-exfiltration-alerts.md)
 - [Podívejte se na fórum služby Azure ATP.](https://aka.ms/azureatpcommunity)

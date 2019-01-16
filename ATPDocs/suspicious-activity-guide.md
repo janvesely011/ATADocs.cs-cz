@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 1/13/2019
+ms.date: 1/15/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,20 +13,29 @@ ms.technology: ''
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c9932e372e69dac28611b99c5cd622c3888d5658
-ms.sourcegitcommit: 1ee052c4c6b04b290e2d5384c24b65a108b1f1f3
+ms.openlocfilehash: 0834bebfd1f9428995c8c1c4dd19d95fe0ffa279
+ms.sourcegitcommit: e2daa0f93d97d552cfbf1577fbd05a547b63e95b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54253533"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54314376"
 ---
-*Platí pro: Azure Advanced Threat Protection*
-
 # <a name="azure-atp-security-alerts"></a>Výstrahy zabezpečení služby Azure ATP
+
+Upozornění zabezpečení v Azure ochrany ATP v programu popisují podezřelých aktivitách zjištěných ochrany ATP v programu Azure senzorů v síti a objekty actor a počítačů zahrnutých v každém útoky.   Upozornění důkazy seznamy obsahovat přímé odkazy na související uživatelé a počítače, abyste se mohli vaše šetření, snadno a s přímým přístupem.
+
+Upozornění zabezpečení v Azure ochrany ATP v programu jsou rozdělené do následujících kategorií nebo fází, jako je fáze v řetězu událostí typické internetového útoku. Další informace o každé fáze, výstrahy, které jsou navržené k detekování každého útoku a jak používat výstrahy k ochraně sítě pomocí následujících odkazů:
+  1. [Upozornění fáze rekognoskace](atp-reconnaissance-alerts.md)
+  2. [Ohrožení zabezpečení přihlašovacích údajů Fáze oznámení](atp-compromised-credentials-alerts.md)
+  3. [Laterální pohyb fáze oznámení](atp-lateral-movement-alerts.md)
+  4. [Upozornění fáze dominance v doméně](atp-domain-dominance-alerts.md)
+  5. [Fáze oznámení průsak ven](atp-exfiltration-alerts.md)
+
+Další informace o struktuře a běžné součásti všech výstrah zabezpečení ochrany ATP v programu Azure najdete v tématu [Principy výstrah zabezpečení](understanding-security-alerts.md).
 
 ## <a name="security-alert-name-mapping-and-unique-external-ids"></a>Mapování názvu upozornění zabezpečení a jedinečných externí ID
 
-Ve verzi 2.56 všechny existující výstrahy zabezpečení služby Azure ATP byly přejmenovány s snáze pochopit názvy. Mapování mezi staré i nové názvy a jejich odpovídající jedinečný externalIds jsou uvedené v následující tabulce. Společnost Microsoft doporučuje použití externí ID výstrah místo upozornění názvů pro skripty nebo Automatizace pouze zabezpečení upozornil externí ID jsou trvalé a nelze změnit.
+Ve verzi 2.56 všechny existující výstrahy zabezpečení služby Azure ATP byly přejmenovány s snáze pochopit názvy. Mapování mezi staré i nové názvy a jejich odpovídající jedinečný externalIds jsou uvedené v následující tabulce. Při použití se skripty a automatizace, společnost Microsoft doporučuje použití externí ID výstrah místo upozornění názvů, pouze zabezpečení upozornil externí ID jsou trvalé a nelze změnit.
 
 > [!div class="mx-tableFixed"] 
 
@@ -63,22 +72,11 @@ Ve verzi 2.56 všechny existující výstrahy zabezpečení služby Azure ATP by
 |[Rekognoskace členství uživatelů a skupin (SAMR)](atp-reconnaissance-alerts.md#user-and-group-membership-reconnaissance-samr-external-id-2021)|Rekognoskace pomocí dotazů na adresářové služby|2021|
 |[Uživatele a IP adres pro rekognoskaci (SMB)](atp-reconnaissance-alerts.md#user-and-ip-address-reconnaissance-smb-external-id-2012)|Rekognoskace pomocí výčtu relací SMB|2012|
 
-
-Upozornění zabezpečení v Azure ochrany ATP v programu jsou rozdělené do následujících kategorií nebo fází, jako je fáze v řetězu událostí typické internetového útoku. Další informace o každé fáze, výstrahy, které jsou navržené k detekování každého útoku a jak používat výstrahy k ochraně sítě pomocí následujících odkazů:
-
-*Fáze:*
-
-   <br>[1. Rekognoskace výstrahy](atp-reconnaissance-alerts.md)
-   <br>[2. Upozornění ohrožení zabezpečení přihlašovacích údajů](atp-compromised-credentials-alerts.md)
-   <br>[3. Upozornění taktiky Lateral Movement](atp-lateral-movement-alerts.md)
-   <br>[4. Upozornění dominance v doméně](atp-domain-dominance-alerts.md)
-   <br>[5. Upozornění průsak ven](atp-exfiltration-alerts.md)
-
 > [!NOTE]
 > Pokud chcete zakázat všechny výstrahy zabezpečení, obraťte se na podporu.
 
 
 ## <a name="see-also"></a>Viz také
 - [Práce s výstrahami zabezpečení](working-with-suspicious-activities.md)
-- [Principy výstrah zabezpečení](understanding-security-alerts.md)
+- [Porozumění výstrahám zabezpečení](understanding-security-alerts.md)
 - [Podívejte se na fórum služby Azure ATP.](https://aka.ms/azureatpcommunity)

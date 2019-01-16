@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 1/14/2019
+ms.date: 1/15/2019
 ms.topic: tutorial
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,23 +13,24 @@ ms.technology: ''
 ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 020646ef360d9cf370fa50c9ac8b537029e83ee2
-ms.sourcegitcommit: 1ee052c4c6b04b290e2d5384c24b65a108b1f1f3
+ms.openlocfilehash: afd113d68a15d376e7665d66915a423e54bb170a
+ms.sourcegitcommit: e2daa0f93d97d552cfbf1577fbd05a547b63e95b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54253516"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54314359"
 ---
 # <a name="tutorial-compromised-credential-alerts"></a>Kurz: Upozornění ohrožení zabezpečení přihlašovacích údajů  
 
 Obvykle kybernetických útoků jsou spouštěny proti jakémukoli subjektu přístupné, jako je například uživatel s nízkým oprávněním a potom rychle následně k laterálnímu pohybu dokud útočník získá přístup k cenným prostředků – například citlivých účtů, správci domény a vysoce citlivá data . Ochrana ATP v programu Azure identifikuje tyto důmyslných hrozeb ve zdrojovém kódu v celém řetězu událostí útoku a klasifikuje do následujících fází:
 
-**Fáze internetového útoku kill řetězce**
-1. Rekognoskace
-2. **Zneužití přihlašovacích údajů**
-3. Laterální pohyb
-4. Dominance v doméně
-5. Průsak ven  
+1. [Rekognoskace](atp-reconnaissance-alerts.md)
+2. **Ohrožení zabezpečení přihlašovacích údajů**
+3. [Taktiky Lateral Movement](atp-lateral-movement-alerts.md)
+4. [Dominance v doméně](atp-domain-dominance-alerts.md)
+5. [Průsak ven](atp-exfiltration-alerts.md) 
+
+Další informace o tom, jak pochopit strukturu a běžné součásti všech výstrah zabezpečení ochrany ATP v programu Azure najdete v tématu [Principy výstrah zabezpečení](understanding-security-alerts.md).
 
 Výstrahy pomáhají identifikovat a napravit následující zabezpečení **přihlašovací údaje** fáze podezřelých aktivitách zjištěných ochrany ATP v programu Azure ve vaší síti. V tomto kurzu se dozvíte, jak pochopit, klasifikovat, opravit a brání následující typy útoků:
 
@@ -299,12 +300,12 @@ Pokud jsou odpovědi na otázky uvedené výše, **Zavřít** dané výstraze za
 
 ## <a name="see-also"></a>Viz také
 
-- [Prozkoumat počítače](investigate-a-computer.md)
-- [Prozkoumat uživatele](investigate-a-user.md)
+- [Prošetřování počítačů](investigate-a-computer.md)
+- [Prošetřování uživatelů](investigate-a-user.md)
 - [Práce s výstrahami zabezpečení](working-with-suspicious-activities.md)
 - [Práce s cesty taktiky Lateral Movement](use-case-lateral-movement-path.md)
-- [Rekognoskace výstrahy](atp-reconnaissance-alerts.md)
-- [Upozornění taktiky Lateral Movement](atp-lateral-movement-alerts.md)
-- [Upozornění dominance v doméně](atp-domain-dominance-alerts.md)
-- [Upozornění průsak ven](atp-exfiltration-alerts.md)
+- [Výstrahy před hrozbami „osahávání“ (reconnaissance)](atp-reconnaissance-alerts.md)
+- [Výstrahy před taktikou lateral movement](atp-lateral-movement-alerts.md)
+- [Výstrahy před dominancí v doméně](atp-domain-dominance-alerts.md)
+- [Výstrahy před exfiltrací](atp-exfiltration-alerts.md)
 - [Podívejte se na fórum služby Azure ATP.](https://aka.ms/azureatpcommunity)
