@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 1/10/2019
+ms.date: 1/17/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.service: ''
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 00bce1b381b32e1fe3fe9a2bb2c11016b33699f7
-ms.sourcegitcommit: 6a0ac21f59e72db8615811da2c886f54cf3727f5
+ms.openlocfilehash: 0f146c7263ff45c730f5a579e232525c0e09add1
+ms.sourcegitcommit: 379a365fdc667b0df5df06e1fb8b02f988c89a94
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2019
-ms.locfileid: "54249925"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54364018"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
@@ -53,12 +53,12 @@ Na serveru ATA Center proveďte tento postup.
 4.  Pokud není nainstalované rozhraní Microsoft .net Framework, zobrazí se výzva k jeho instalaci, když spustíte instalaci. Po dokončení instalace rozhraní .NET Framework se může zobrazit výzva k restartování.
 5.  Na **Vítejte** vyberte jazyk, který chcete použít pro instalační obrazovky ATA, a klikněte na tlačítko **Další**.
 
-6.  Přečtěte si licenční podmínky pro Software společnosti Microsoft a pokud souhlasíte s podmínkami, klikněte na zaškrtávací políčko a potom klikněte na tlačítko **Další**.
+6.  Přečtěte si licenční podmínky softwaru společnosti Microsoft po přijetí podmínek, klikněte na zaškrtávací políčko pro přijetí a potom klikněte na **Další**.
 
-7.  Doporučuje se nastavit řešení ATA tak, aby se aktualizovalo automaticky. Pokud Windows není nastavená k tomu ve vašem počítači, můžete získat **použít službu Microsoft Update zajistit, aby byl váš počítač, zabezpečené a aktuální** obrazovky. 
+7.  Doporučujeme nastavit řešení ATA možnost automaticky aktualizovat. Pokud Windows není nastavena automaticky aktualizovat v počítači, zobrazí se vám **pomocí Microsoft Update zajistit, aby byl váš počítač, zabezpečené a aktuální** obrazovky. 
     ![Obrázek zajištění aktuálnosti ATA](media/ata_ms_update.png)
 
-8. Vyberte **Při vyhledávání aktualizací použít službu Microsoft Update (doporučeno)**. To upraví nastavení Windows tak, aby povolovala aktualizace pro ostatní produkty Microsoftu (včetně ATA), zde. 
+8. Vyberte **Při vyhledávání aktualizací použít službu Microsoft Update (doporučeno)**. Tím se upraví nastavení Windows tak, aby povolovala aktualizace pro ostatní produkty Microsoftu (včetně ATA). 
 
     ![Obrázek automatické aktualizace Windows](media/ata_installupdatesautomatically.png)
 
@@ -68,7 +68,7 @@ Na serveru ATA Center proveďte tento postup.
     |---------|---------------|------------|
     |Instalační cesta|Toto je umístění, kde je nainstalován na ATA Center. Ve výchozím nastavení to je %programfiles%\Microsoft Advanced Threat Analytics\Center|Ponechte výchozí hodnotu.|
     |Cesta k datům databáze|Toto je umístění, kde jsou uložené soubory databáze MongoDB. Ve výchozím nastavení to je %programfiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data.|Změňte umístění na místo, kde existuje místo pro růst v závislosti na vaší velikosti. **Poznámka:** <ul><li>V produkčním prostředí měli používat jednotku, která má dostatek místa na základě plánování kapacity.</li><li>U rozsáhlých nasazení by měla být databáze umístěná na samostatném fyzickém disku.</li></ul>Informace o velikosti najdete v tématu [Plánování kapacity ATA](ata-capacity-planning.md).|
-    |Certifikát SSL služby Center|Jedná se o certifikát, který je používán službou konzole ATA a komponenty ATA Center.|Klikněte na ikonu klíče a vyberte nainstalovaný certifikát, nebo při nasazení v testovacím prostředí zaškrtněte certifikát podepsaný svým držitelem. Máte možnost vytvořit certifikát podepsaný svým držitelem.|
+    |Certifikát SSL služby Center|Jedná se o certifikát, který je používán službou konzole ATA a komponenty ATA Center.|Klikněte na ikonu klíče a vyberte nainstalovaný certifikát nebo vytvořit certifikát podepsaný svým držitelem pomocí zaškrtávacího políčka.|
         
     ![Obrázek konfigurace ATA Center](media/ATA-Center-Configuration.png)
 
@@ -83,22 +83,22 @@ Na serveru ATA Center proveďte tento postup.
 
     -   Certifikáty podepsané svým držitelem (pokud došlo k výběru během instalace)
 
-11.  Po dokončení instalace otevřete kliknutím na **Spustit** konzolu ATA a dokončete instalaci na stránce **Konfigurace**.
-V tuto chvíli vás bude automaticky přejít na **Obecné** stránku nastavení a pokračovat v konfiguraci a nasazení komponent ATA Gateway.
+11.  Po dokončení instalace klikněte na tlačítko **spuštění** otevřete konzolu ATA a dokončete instalaci z **konfigurace** stránky.
+**Obecné** nastavení stránka se otevře automaticky pokračovat v konfiguraci a nasazení komponent ATA Gateway.
 Vzhledem k tomu, že se přihlašujete na web pomocí IP adresy, zobrazí se upozornění související s certifikátem, to je normální a měli byste kliknout na **pokračovat na tento web**.
 
 ### <a name="validate-installation"></a>Ověření instalace
 
-1.  Zkontrolujte, že je služba **Microsoft Advanced Threat Analytics Center** spuštěná.
-2.  Na ploše klikněte na zástupce **Microsoft Advanced Threat Analytics** a připojte se ke konzole ATA. Přihlaste se pomocí stejných přihlašovacích údajů, které jste použili k instalaci ATA Center.
+1.  Zkontrolujte, zda služba **Microsoft Advanced Threat Analytics Center**, běží.
+2.  Na ploše klikněte na zástupce **Microsoft Advanced Threat Analytics** a připojte se ke konzole ATA. Přihlaste se pomocí přihlašovacích údajů uživatele, který jste použili k instalaci ATA Center.
 
 ### <a name="set-anti-virus-exclusions"></a>Nastavte antivirový program výjimky
 
-Po instalaci komponenty ATA Center má být vyloučena adresář databáze MongoDB z je průběžně skenovalo antivirové aplikace. Výchozím umístěním databáze je: **C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data**.
+Po instalaci komponenty ATA Center, vyloučíte adresáře databáze MongoDB z je průběžně skenovalo antivirové aplikace. Výchozím umístěním databáze je: **C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data**.
 
 Ujistěte se, že mají také vyloučit následující složky a procesy z kontroly antivirová ochrana v programu:
 
-**Složky** C:\Program Files\Microsoft Advanced Threat Analytics\Center\ParentKerberosAsBloomFilters
+**Folders** C:\Program Files\Microsoft Advanced Threat Analytics\Center\ParentKerberosAsBloomFilters
 <br>C:\Program Files\Microsoft Advanced Threat Analytics\Center\ParentKerberosTgsBloomFilters
 <br>C:\Program Files\Microsoft Advanced Threat Analytics\Center\Backup
 <br>C:\Program Files\Microsoft Advanced Threat Analytics\Center\Logs
