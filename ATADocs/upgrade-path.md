@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 88720401-1fb2-4353-ad39-32bc0088f0de
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 38600b4e537f583c106462bce26690c7bc14bfe8
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: a57a4457d330543f57be850d0d8f998a654ceb32
+ms.sourcegitcommit: b11433f7d454231a62f64c9d9bfa1355ecf91075
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133536"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54403474"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
@@ -50,6 +50,6 @@ Tento článek obsahuje informace o dostupných verzí Advanced Threat Analytics
 - [Požadavky ATA](ata-prerequisites.md)
 - [Plánování kapacity ATA](ata-capacity-planning.md)
 - [Konfigurace shromažďování událostí](configure-event-collection.md)
-- [Konfigurace předávání událostí systému Windows](configure-event-collection.md#configuring-windows-event-forwarding)
+- [Konfigurace předávání událostí systému Windows](configure-event-collection.md)
 - [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 

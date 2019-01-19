@@ -13,14 +13,14 @@ ms.technology: ''
 ms.assetid: ab1e8dd9-a6c2-4c68-89d5-343b8ec56142
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9d9294a22d1e3fd1847d42bd376e65fd114b04bf
-ms.sourcegitcommit: a2f6b52f66c89b9f2ca7410426b759a0b0de8d31
+ms.openlocfilehash: cae81a20ae5494e18b1e12eec6ffb1a9c9465ca5
+ms.sourcegitcommit: b11433f7d454231a62f64c9d9bfa1355ecf91075
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52981934"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54403627"
 ---
-*Platí pro: Azure Rozšířená ochrana před internetovými útoky*
+*Platí pro: Azure Advanced Threat Protection*
 
 
 # <a name="azure-atp-advanced-audit-policy-check"></a>Kontrola zásad auditu rozšířené ochrany ATP v programu Azure
@@ -64,5 +64,5 @@ Pokročilé zásady auditu zabezpečení povolená přes **výchozí zásada řa
 ## <a name="see-also"></a>Viz také
 - [Požadavky služby Azure ATP](atp-prerequisites.md)
 - [Konfigurace shromažďování událostí](configure-event-collection.md)
-- [Konfigurace předávání událostí systému Windows](configure-event-forwarding.md#configuring-windows-event-forwarding)
+- [Konfigurace předávání událostí systému Windows](configure-event-forwarding.md)
 - [Podívejte se na fórum služby Azure ATP.](https://aka.ms/azureatpcommunity)

@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 38ea49b5-cd5e-43e5-bc39-5071f759633b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: eaa579a6b82bab27bba0ddb79b39f06bd495debc
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 8e50b68c91cc1431875d7aba33f765c87615ff9f
+ms.sourcegitcommit: b11433f7d454231a62f64c9d9bfa1355ecf91075
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133221"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54403582"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
@@ -69,5 +69,5 @@ Nastavení naplánované sestavy:
 - [Požadavky ATA](ata-prerequisites.md)
 - [Plánování kapacity ATA](ata-capacity-planning.md)
 - [Konfigurace shromažďování událostí](configure-event-collection.md)
-- [Konfigurace předávání událostí systému Windows](configure-event-collection.md#configuring-windows-event-forwarding)
+- [Konfigurace předávání událostí systému Windows](configure-event-collection.md)
 - [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

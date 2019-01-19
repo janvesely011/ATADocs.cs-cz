@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 5a65285c-d1de-4025-9bb4-ef9c20b13cfa
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: e3f59bc7c6873407d8764dc5ab64bfd7a52fdebe
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: fba03e93665c73f6faf070ea6c0d8d3aa6fb4c8d
+ms.sourcegitcommit: b11433f7d454231a62f64c9d9bfa1355ecf91075
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133340"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54403578"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
@@ -48,7 +48,7 @@ Pokud se dá spustit, je platforma pravděpodobně v pořádku. V opačném př�
 
 ## <a name="troubleshooting-ata-lightweight-gateway-startup"></a>Řešení potíží se spuštěním ATA Lightweight Gateway
 
-**Příznak**
+**Symptom**
 
 ATA Gateway se nespustí a zobrazí tato chyba:<br></br>
 *System.Net.Http.HttpRequestException: Stavový kód odpovědi neoznačuje Úspěch: 500 (vnitřní chyba serveru)*
@@ -69,5 +69,5 @@ K tomu dochází, protože jako součást procesu instalace Lightweight Gateway,
 - [Požadavky ATA](ata-prerequisites.md)
 - [Plánování kapacity ATA](ata-capacity-planning.md)
 - [Konfigurace shromažďování událostí](configure-event-collection.md)
-- [Konfigurace předávání událostí systému Windows](configure-event-collection.md#configuring-windows-event-forwarding)
+- [Konfigurace předávání událostí systému Windows](configure-event-collection.md)
 - [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

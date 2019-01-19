@@ -13,14 +13,14 @@ ms.technology: ''
 ms.assetid: 23386e36-2756-4291-923f-fa8607b5518a
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e65133fdd09f821c633a3095ae419df01da98b16
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: 3daa559babccddd425714cc063abdbd719a050e7
+ms.sourcegitcommit: b11433f7d454231a62f64c9d9bfa1355ecf91075
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783708"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54403644"
 ---
-*Platí pro: Azure Rozšířená ochrana před internetovými útoky*
+*Platí pro: Azure Advanced Threat Protection*
 
 
 # <a name="troubleshooting-azure-atp-known-issues"></a>Řešení potíží s Azure – ochrana ATP v programu známé problémy 
@@ -28,13 +28,13 @@ ms.locfileid: "48783708"
 
 ## <a name="deployment-log-location"></a>Umístění protokolu nasazení
  
-Protokoly nasazení služby Azure ATP jsou umístěné v adresáři temp uživatele, který příslušný produkt nainstaloval. Ve výchozím umístění instalace, najdete ho na: C:\Users\Administrator\AppData\Local\Temp (nebo jednomu adresáři % temp %). Další informace najdete v tématu [analytických řešení potíží pomocí protokolů](troubleshooting-atp-using-logs.md)
+Protokoly nasazení služby Azure ATP jsou umístěné v adresáři temp uživatele, který příslušný produkt nainstaloval. Ve výchozím umístění instalace můžete najít na: C:\Users\Administrator\AppData\Local\Temp (nebo v jednom adresáři % temp %). Další informace najdete v tématu [analytických řešení potíží pomocí protokolů](troubleshooting-atp-using-logs.md)
 
 ## <a name="proxy-authentication-problem-presents-as-a-licensing-error"></a>Problém s ověřováním proxy prezentuje jako chybu licencování
 
-Pokud během instalace senzoru se zobrazí následující chyba: **zaregistrovat kvůli problémům s licencováním se senzor nepovedlo.**
+Pokud během instalace senzoru se zobrazí následující chyba:  **Zaregistrovat kvůli problémům s licencováním se senzor nepovedlo.**
 
-Položky protokolu nasazení: [1C 60: 1AA8] [2018-03-24T23:59:13] i000: 2018-03-25 02:59:13.1237 informace InteractiveDeploymentManager ValidateCreateSensorAsync vrátil [\[] validateCreateSensorResult = LicenseInvalid [\]] [1 c 60 : 1AA8] [2018-03-24T23:59:56] i000: 2018-03-25 02:59:56.4856 informace InteractiveDeploymentManager ValidateCreateSensorAsync vrátil [\[] validateCreateSensorResult = LicenseInvalid [\]] [1 C 60: 1AA8] [2018-03-25T00:27:56] i000: 2018-03-25 03:27:56.7399 ladění SensorBootstrapperApplication Engine.Quit [\[] deploymentResultStatus = 1602 isRestartRequired = False [\]] [1 C 60: 15B8] [2018-03-25T00:27:56] i500: vypíná, ukončovací kód: 0x642
+Položky protokolu nasazení: [1C 60: 1AA8] [2018-03-24T23:59:13] i000: 2018-03-25 02:59:13.1237 Info  InteractiveDeploymentManager ValidateCreateSensorAsync returned [\[]validateCreateSensorResult=LicenseInvalid[\]] [1C60:1AA8][2018-03-24T23:59:56]i000: 2018-03-25 02:59:56.4856 Info  InteractiveDeploymentManager ValidateCreateSensorAsync returned [\[]validateCreateSensorResult=LicenseInvalid[\]] [1C60:1AA8][2018-03-25T00:27:56]i000: 2018-03-25 03:27:56.7399 Debug SensorBootstrapperApplication Engine.Quit [\[]deploymentResultStatus=1602 isRestartRequired=False[\]] [1C60:15B8][2018-03-25T00:27:56]i500: Vypíná, ukončovací kód: 0x642
 
 
 **Příčina:**
@@ -77,7 +77,7 @@ Pokud máte senzoru služby Azure ATP na virtuálních počítačích VMware, m�
 
 Řešení tohoto problému:
 
-Nastavte následující nastavení na **0** nebo **zakázané** v konfiguraci síťové karty virtuálního počítače: TsoEnable, LargeSendOffload, TSO Offload a Giant TSO Offload.
+Nastavte následující nastavení na **0** nebo **zakázané** v konfiguraci síťové karty virtuálního počítače: TsoEnable, LargeSendOffload, TSO Offload, Giant TSO Offload.
 > [!NOTE]
 > Pro služby Azure ATP senzory, potřebujete jenom zakázat **IPv4, TSO Offload** v části konfigurace síťové karty.
 
@@ -87,5 +87,5 @@ Nastavte následující nastavení na **0** nebo **zakázané** v konfiguraci s�
 - [Požadavky služby Azure ATP](atp-prerequisites.md)
 - [Plánování kapacity v Azure ATP](atp-capacity-planning.md)
 - [Konfigurace shromažďování událostí](configure-event-collection.md)
-- [Konfigurace předávání událostí systému Windows](configure-event-forwarding.md#configuring-windows-event-forwarding)
+- [Konfigurace předávání událostí systému Windows](configure-event-forwarding.md)
 - [Podívejte se na fórum služby Azure ATP.](https://aka.ms/azureatpcommunity)

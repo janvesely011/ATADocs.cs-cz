@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 892b16d2-58a6-49f9-8693-1e5f69d8299c
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: a71491fc717aca3f9b418750b78657e83ac65ecf
-ms.sourcegitcommit: 1b914a85cfa33dc0c5005f9dc68e6ea08a0164ac
+ms.openlocfilehash: 4962e22c1a037f8ddf8a08b5159929f8b21ccde6
+ms.sourcegitcommit: b11433f7d454231a62f64c9d9bfa1355ecf91075
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50411642"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54403729"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
@@ -53,9 +53,9 @@ Nasazení ATA se může skládat z jediné komponenty ATA Center připojené ke 
 ATA můžete nasadit s využitím následující kombinace bran:
 
 -   **Jenom komponenty ATA Gateway** <br>
-Nasazení ATA může obsahovat jen komponenty ATA Gateway bez komponent ATA Lightweight Gateway: všechny řadiče domény musí být nakonfigurované tak, aby povolovaly zrcadlení portů na ATA Gateway, nebo musí být nastavené síťové odposlouchávání.
+Nasazení ATA může obsahovat jen komponenty ATA Gateway, bez jakékoli komponenty ATA Lightweight Gateway: Všechny řadiče domény musí být nakonfigurované tak, aby povolovaly zrcadlení portů na ATA Gateway nebo síťové odposlouchávání musí být splněné.
 -   **Jenom komponenty ATA Lightweight Gateway**<br>
-Nasazení ATA může obsahovat jen komponenty ATA Lightweight Gateway: komponenty ATA Lightweight Gateway jsou nasazené na každém řadiči domény a nejsou potřeba žádné další servery ani konfigurace zrcadlení portů.
+Nasazení ATA může obsahovat jen komponenty ATA Lightweight Gateway: ATA Lightweight Gateway jsou nasazené na každém řadiči domény a žádné další servery nebo je nutné konfiguraci zrcadlení portů.
 -   **Komponenty ATA Gateway i ATA Lightweight**<br>
 Nasazení ATA obsahuje jak komponenty ATA Gateway, tak ATA Lightweight Gateway. Komponenty ATA Lightweight Gateway jsou nainstalované na některých řadičích domény (například na všech řadičích domény v pobočkách). Jiné řadiče domény jsou zároveň monitorované komponentami ATA Gateway (například větší řadiče domény v hlavních datových centrech).
 
@@ -79,7 +79,7 @@ Ve všech těchto scénářích odesílají všechny brány data do ATA Center.
 
 -   Spouští konzolu ATA.
 
--   Volitelné: ATA Center můžete nakonfigurovat pro odesílání e-mailů a událostí při zjištění podezřelé aktivity.
+-   Volitelné: Komponenty ATA Center můžete nakonfigurovat na odesílání e-mailů a událostí, když zjistí podezřelou aktivitu.
 
 ATA Center přijímá parsovaný provoz z komponent ATA Gateway a ATA Lightweight Gateway. Pomocí profilace, deterministické detekce, strojového učení a behaviorálních algoritmů pak poznává vaši síť, umožňuje detekovat anomálie a upozorňuje vás na podezřelé aktivity.
 
@@ -173,11 +173,11 @@ Při zrcadlení portů zrcadlí veškerý síťový provoz řadičů domény do 
 
 
 ### <a name="events"></a>Události
-Kvůli vylepšení detekce předání hodnoty hash (Pass-the-Hash), hrubé síly, úpravy citlivých skupin a honeytokenů potřebuje ATA následující události Windows: 4776, 4732, 4733, 4728, 4729, 4756, 4757. Tyto události buď může automaticky číst ATA Lightweight Gateway, nebo mohou být jedním ze dvou způsobů předávány komponentě ATA Gateway (v případě, že komponenta ATA Lightweight Gateway není nasazená), a to konfigurací komponenty ATA Gateway pro naslouchání událostem SIEM, nebo [konfigurací předávání událostí Windows](#configuring-windows-event-forwarding).
+K vylepšení detekce útoků typu Pass-the-Hash, útoky hrubou silou, úpravy citlivých skupin a Honeytokenů potřebuje ATA následující události Windows: 4776, 4732, 4733, 4728, 4729, 4756, 4757. Tyto události buď může automaticky číst ATA Lightweight Gateway, nebo mohou být jedním ze dvou způsobů předávány komponentě ATA Gateway (v případě, že komponenta ATA Lightweight Gateway není nasazená), a to konfigurací komponenty ATA Gateway pro naslouchání událostem SIEM, nebo [konfigurací předávání událostí Windows](configure-event-collection.md).
 
 -   Konfigurace komponenty ATA Gateway pro naslouchání událostem SIEM <br>Nakonfigurujte SIEM pro předávání určitých událostí systému Windows bráně ATA Gateway. ATA podporuje několik poskytovatelů SIEM. Další informace najdete v tématu [Konfigurace sběru událostí](configure-event-collection.md).
 
--   Konfigurace předávání událostí systému Windows<br>Jiným způsobem, jak může ATA získávat události, je konfigurace řadičů domén tak, aby předával události Windows 4776, 4732, 4733, 4728, 4729, 4756 a 4757 komponentě ATA Gateway. To je obzvláště užitečné, pokud nemáte server SIEM nebo pokud ATA váš server SIEM v současnosti nepodporuje. K dokončení vaší konfigurace předávání událostí Windows v ATA najdete v článku [předávání událostí Windows konfigurace](configure-event-collection.md#configuring-windows-event-forwarding). Platí jen pro fyzické komponenty ATA Gateway, nikoli pro ATA Lightweight Gateway.
+-   Konfigurace předávání událostí systému Windows<br>Jiným způsobem, jak může ATA získávat události, je konfigurace řadičů domén tak, aby předával události Windows 4776, 4732, 4733, 4728, 4729, 4756 a 4757 komponentě ATA Gateway. To je obzvláště užitečné, pokud nemáte server SIEM nebo pokud ATA váš server SIEM v současnosti nepodporuje. K dokončení vaší konfigurace předávání událostí Windows v ATA najdete v článku [předávání událostí Windows konfigurace](configure-event-collection.md). Platí jen pro fyzické komponenty ATA Gateway, nikoli pro ATA Lightweight Gateway.
 
 ## <a name="related-videos"></a>Související videa
 - [Volba správného typu komponenty ATA Gateway](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
@@ -188,6 +188,6 @@ Kvůli vylepšení detekce předání hodnoty hash (Pass-the-Hash), hrubé síly
 - [Nástroje pro změnu velikosti ATA](http://aka.ms/atasizingtool)
 - [Plánování kapacity ATA](ata-capacity-planning.md)
 - [Konfigurace shromažďování událostí](configure-event-collection.md)
-- [Konfigurace předávání událostí systému Windows](configure-event-collection.md#configuring-windows-event-forwarding)
+- [Konfigurace předávání událostí systému Windows](configure-event-collection.md)
 - [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 

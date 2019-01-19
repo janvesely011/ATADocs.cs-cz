@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 377a3c81-5c1d-486f-8942-85249aacf560
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: b3fb06733a2ba1c38aeb682cd6f8cc57a2ba1a3b
-ms.sourcegitcommit: 65885bab8e31dd862a4f2ae9028fb31b288d7229
+ms.openlocfilehash: 54c8ce78952a9e7a4dd072c5dc91e87dc44f0071
+ms.sourcegitcommit: b11433f7d454231a62f64c9d9bfa1355ecf91075
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52157518"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54403678"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
@@ -31,7 +31,7 @@ Můžete pracovat s databází pomocí výchozího příkazového řádku nebo n
 ## <a name="interacting-with-the-database"></a>Interakce s databází
 Výchozí a nejzákladnější možnost pro dotazování databáze je použití prostředí Mongo:
 
-1.  Otevřete okno příkazového řádku a změňte cestu ke složce bin MongoDB. Výchozí cesta je **C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin**.
+1.  Otevřete okno příkazového řádku a změňte cestu ke složce bin MongoDB. Výchozí cesta je: **C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin**.
 
 2.  Spusťte `mongo.exe ATA`. Ujistěte se, že jste text ATA zadali velkými písmeny.
 
@@ -53,5 +53,5 @@ Následující příklad uvádí ukázku kódu pomocí syntaxe uvedené výše. 
 - [Požadavky ATA](ata-prerequisites.md)
 - [Plánování kapacity ATA](ata-capacity-planning.md)
 - [Konfigurace shromažďování událostí](configure-event-collection.md)
-- [Konfigurace předávání událostí systému Windows](configure-event-collection.md#configuring-windows-event-forwarding)
+- [Konfigurace předávání událostí systému Windows](configure-event-collection.md)
 - [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

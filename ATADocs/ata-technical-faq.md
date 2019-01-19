@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: a7d378ec-68ed-4a7b-a0db-f5e439c3e852
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: e31f7552bed4d794ee24131557342105eb2ced43
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: e242a654952e653ca71fdfa87c14d833d40fa571
+ms.sourcegitcommit: b11433f7d454231a62f64c9d9bfa1355ecf91075
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133816"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54403780"
 ---
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
@@ -86,7 +86,7 @@ Pro jeden plný den s průměrem 1000 paketů/s budete potřebovat 0,3 GB úlož
 
 
 ## <a name="why-are-certain-accounts-considered-sensitive"></a>Proč se některé účty považují za citlivé?
-Dojde k tomu, když je účet členem konkrétních skupin, které označujeme jako citlivé (například Domain Admins).
+To se stane, když je účet členem konkrétních skupin, které označujeme jako citlivé (například: "Skupina domain Admins").
 
 Pokud chcete pochopit, proč je účet citlivý, můžete zkontrolovat jeho členství ve skupinách a zjistit, do kterých citlivých skupin patří (skupina, do které patří, může být citlivá také kvůli jiné skupině, takže je potřeba celý proces opakovat tak dlouho, až zjistíte citlivou skupinu nejvyšší úrovně). 
 
@@ -162,6 +162,6 @@ Ano, můžete zobrazit celkový stav nasazení a také konkrétní problémy sou
 - [Požadavky ATA](ata-prerequisites.md)
 - [Plánování kapacity ATA](ata-capacity-planning.md)
 - [Konfigurace shromažďování událostí](configure-event-collection.md)
-- [Konfigurace předávání událostí systému Windows](configure-event-collection.md#configuring-windows-event-forwarding)
+- [Konfigurace předávání událostí systému Windows](configure-event-collection.md)
 - [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 

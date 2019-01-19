@@ -13,14 +13,14 @@ ms.technology: ''
 ms.assetid: 6a9b5273-eb26-414e-9cdd-f64406e24ed8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0001be015d45809a0ca550287452cfc4c366778d
-ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
+ms.openlocfilehash: 556bc66b6e4b8a5285166c4365b706f2ec9592ab
+ms.sourcegitcommit: b11433f7d454231a62f64c9d9bfa1355ecf91075
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "52744774"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54403814"
 ---
-*Platí pro: Azure Rozšířená ochrana před internetovými útoky*
+*Platí pro: Azure Advanced Threat Protection*
 
 # <a name="azure-atp-frequently-asked-questions"></a>Nejčastější dotazy k Azure ATP
 Tento článek obsahuje seznam častých otázek a odpovědí týkajících se ochrany ATP v programu Azure rozdělené do následujících catergories: 
@@ -28,7 +28,7 @@ Tento článek obsahuje seznam častých otázek a odpovědí týkajících se o
 - [Licencování a ochrany osobních údajů](#licensing-and-privacy)
 - [Nasazení](#deployment)
 - [Operace](#operation)
-- [Poradce při potížích](#troubleshooting)
+- [Odstraňování potíží](#troubleshooting)
 
 ## <a name="what-is-azure-atp"></a>Co je ochrana ATP v programu Azure?
 
@@ -83,7 +83,7 @@ Microsoft vývojářům a správcům, podle návrhu, mít dostatečná oprávně
 
 Kromě toho Microsoft provádí kontroly podstupovaly ověřování u správců osobní prověrku určité operace a omezuje přístup k aplikacím, systémy a síťovou infrastrukturu výkonový zisk úroveň ověřování probíhá na pozadí. Operace pracovníky postupujte podle formální proces, když jsou potřeba pro přístup k účtu zákazníka nebo související informace v plnění jejich úkolů. 
 
-## <a name="deployment"></a>nasazení
+## <a name="deployment"></a>Nasazení
 ### <a name="how-many-azure-atp-sensors-do-i-need"></a>Počet senzorů ochrany ATP v programu Azure budu potřebovat?
 
 Každý řadič domény v prostředí měly být pokryté komponentami ochrany ATP v programu nebo samostatného senzoru. Další informace najdete v tématu [velikosti senzoru služby Azure ATP](atp-capacity-planning.md#sizing). 
@@ -122,14 +122,14 @@ Ano, můžete zobrazit celkový stav nasazení a také konkrétní problémy sou
 Ochrana ATP v programu Azure lze nakonfigurovat na odesílání výstrahy Syslog na libovolný server SIEM pomocí formátu CEF pro výstrahy týkající se stavu a když se detekuje výstraha zabezpečení. Zobrazit [referenční informace k protokolům SIEM](cef-format-sa.md) Další informace.
 
 ### <a name="why-are-certain-accounts-considered-sensitive"></a>Proč se některé účty považují za citlivé?
-To se stane, když je účet členem skupiny, které jsou určené jako citlivé (například: "Domain Admins").
+To se stane, když je účet členem skupiny, které jsou určené jako citlivé (například: "Skupina domain Admins").
 
 Pokud chcete pochopit, proč je účet citlivý, můžete zkontrolovat jeho členství ve skupinách a zjistit, do kterých citlivých skupin patří (skupina, do které patří, může být citlivá také kvůli jiné skupině, takže je potřeba celý proces opakovat tak dlouho, až zjistíte citlivou skupinu nejvyšší úrovně). Můžete také ručně [jako citlivé účty značka](sensitive-accounts.md).
 
 ### <a name="do-you-have-to-write-your-own-rules-and-create-a-thresholdbaseline"></a>Je potřeba psát vlastní pravidla a určovat prahové nebo základní hodnoty?
 S Azure Advanced Threat Protection není nutné k vytváření pravidel ani prahových nebo standardní hodnoty a jejich následné vyladění. Ochrana ATP v programu Azure analyzuje chování uživatelů, zařízení a prostředky, jakož i jejich vzájemných vztazích a dokáže detekovat podezřelé aktivity a známé útoky se rychle. Tři týdny po nasazení služby Azure ATP začne detekovat behaviorálně podezřelé aktivity. Na druhé straně ochrany ATP v programu Azure začne okamžitě po nasazení detekuje známé útoky se zlými úmysly a problémy se zabezpečením.
 
-## <a name="troubleshooting"></a>Odstraňování potíží
+## <a name="troubleshooting"></a>Řešení potíží
 ### <a name="what-should-i-do-if-the-azure-atp-sensor-or-standalone-sensor-doesnt-start"></a>Co mám dělat, když ochrana ATP v programu Azure nebo samostatný senzor nespustí?
 Podívejte se na poslední chyba aktuální chybě [protokolu](troubleshooting-atp-using-logs.md) (kde služby Azure ATP je nainstalována ve složce "Protokoly").
 
@@ -140,7 +140,7 @@ Začátku do konce testu můžete simulovat podezřelé aktivity. V následujíc
 2.  Otevřít CMD
 3.  Spusťte následující příkaz: nslookup –<DC iP address>
     -   Stisknutím klávesy enter
-    -   Typu: Je -d <FQDN>
+    -   Zadejte: Is -d <FQDN>
     -   V závislosti na konfiguraci vašeho prostředí se odpovědi liší z "Bylo odmítnuto dotazu" na seznam záznamů DNS. 
 4. Zobrazte výstrahy související s Simulovaná rekognoskace DNS na portálu ochrany ATP v programu Azure. 
 
@@ -148,6 +148,6 @@ Začátku do konce testu můžete simulovat podezřelé aktivity. V následujíc
 - [Požadavky služby Azure ATP](atp-prerequisites.md)
 - [Plánování kapacity v Azure ATP](atp-capacity-planning.md)
 - [Konfigurace shromažďování událostí](configure-event-collection.md)
-- [Konfigurace předávání událostí systému Windows](configure-event-forwarding.md#configuring-windows-event-forwarding)
-- [Poradce při potížích](troubleshooting-atp-known-issues.md)
+- [Konfigurace předávání událostí systému Windows](configure-event-forwarding.md)
+- [Odstraňování potíží](troubleshooting-atp-known-issues.md)
 - [Podívejte se na fórum služby Azure ATP.](https://aka.ms/azureatpcommunity)

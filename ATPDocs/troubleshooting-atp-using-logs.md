@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: de796346-647d-48e1-970a-8f072e990f1e
 ms.reviewer: ''
 ms.suite: ''
-ms.openlocfilehash: 2cd1d7b070818044e74838178b0fab5838ab46ef
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: 5c414fb05410bc01d5cef0f2fce6e791d4aeb133
+ms.sourcegitcommit: b11433f7d454231a62f64c9d9bfa1355ecf91075
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783249"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54403661"
 ---
 *Platí pro: Advanced Threat Protection*
 
@@ -28,7 +28,7 @@ ms.locfileid: "48783249"
 Ochrana ATP v programu protokoly poskytují přehled o tom, co jednotlivé komponenty senzoru služby Azure ATP dělá v libovolném časovém okamžiku v čase.
 
 
-Ochrana ATP v programu Azure protokoly jsou umístěné v podsložce s názvem **protokoly** kde je nainstalován ochrany ATP v programu; výchozí umístění je: **C:\Program Files\Azure Advanced Threat ochrany senzor\\**. Ve výchozím umístění instalace, najdete ho na: **C:\Program Files\Azure Advanced Threat Protection Sensor\version number\Logs**.
+Ochrana ATP v programu Azure protokoly jsou umístěné v podsložce s názvem **protokoly** kde je nainstalován ochrany ATP v programu; výchozí umístění je: **C:\Program Files\Azure Advanced Threat Protection Sensor\\**. Ve výchozím umístění instalace můžete najít na: **C:\Program Files\Azure Advanced Threat Protection Sensor\version number\Logs**.
 
 Senzoru služby Azure ATP využívá tyto protokoly:
 
@@ -45,7 +45,7 @@ Senzoru služby Azure ATP využívá tyto protokoly:
 > První tři soubory protokolů mají maximální velikost až 50 MB. Při dosažení této velikosti se otevře nový soubor protokolu a předchozí je přejmenován na &lt;původní název souboru&gt;-Archived-00000 (číslo při každém přejmenování zvětší). Pokud již existuje více než 10 souborů stejného typu, budou nejstarší z nich ve výchozím nastavení odstraněny.
 
 ## <a name="azure-atp-deployment-logs"></a>Protokoly nasazení Azure ATP
-Protokoly nasazení služby Azure ATP jsou umístěné v adresáři temp uživatele, který příslušný produkt nainstaloval. Ve výchozí instalaci tento adresář najdete tady: **C:\Users\Administrator\AppData\Local\Temp** (nebo v adresáři bezprostředně nadřazeném adresáři %temp%).
+Protokoly nasazení služby Azure ATP jsou umístěné v adresáři temp uživatele, který příslušný produkt nainstaloval. Ve výchozím umístění instalace můžete najít na: **C:\Users\Administrator\AppData\Local\Temp** (nebo jednomu adresáři % temp %).
 
 Protokoly nasazení senzoru Azure ochrany ATP v programu:
 
@@ -62,5 +62,5 @@ Protokoly nasazení senzoru Azure ochrany ATP v programu:
 - [Požadavky služby Azure ATP](atp-prerequisites.md)
 - [Plánování kapacity v Azure ATP](atp-capacity-planning.md)
 - [Konfigurace shromažďování událostí](configure-event-collection.md)
-- [Konfigurace předávání událostí systému Windows](configure-event-forwarding.md#configuring-windows-event-forwarding)
+- [Konfigurace předávání událostí systému Windows](configure-event-forwarding.md)
 - [Podívejte se na fórum služby Azure ATP.](https://aka.ms/azureatpcommunity)
