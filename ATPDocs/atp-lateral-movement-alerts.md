@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 1/15/2019
+ms.date: 1/20/2019
 ms.topic: tutorial
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 2257eb00-8614-4577-b6a1-5c65085371f2
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 7816dba02c2fea07afc080c7aed5ede073c88fac
-ms.sourcegitcommit: e2daa0f93d97d552cfbf1577fbd05a547b63e95b
+ms.openlocfilehash: 2c5dc79622f764a68407204e5d1bffbcbd8a749a
+ms.sourcegitcommit: 443e6c07788938960555046def389a1503c259a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54314308"
+ms.lasthandoff: 01/20/2019
+ms.locfileid: "54417265"
 ---
 # <a name="tutorial-lateral-movement-alerts"></a>Kurz: Upozornění taktiky Lateral Movement  
 
@@ -35,10 +35,48 @@ Další informace o tom, jak pochopit strukturu a běžné součásti všech vý
 Výstrahy pomáhají identifikovat a napravit následující zabezpečení **taktiky Lateral Movement** fáze podezřelých aktivitách zjištěných ochrany ATP v programu Azure ve vaší síti. V tomto kurzu se dozvíte, jak pochopit, klasifikovat, opravit a brání následující typy útoků:
 
 > [!div class="checklist"]
+> * Vzdálené spuštění kódu nad DNS - preview (externí ID 2036)
 > * Krádež identity podezřelého softwaru (pass-the-hash) (externí ID 2017)
 > * Krádež identity podezřelého softwaru (pass-the-ticket) (externí ID 2018)
 > * Podezření na útok overpass-the-hash (oslabení šifrování) (externí ID 2008)
 > * Podezření na útok overpass-the-hash (Kerberos) (externí ID 2002)
+
+## <a name="remote-code-execution-over-dns-external-id-2036---preview"></a>Vzdálené spuštění kódu nad DNS (externí ID 2036) – preview
+
+**Popis**
+
+Publikované 12/11/2018 Microsoft [CVE-2018-8626](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2018-8626), oznamujeme, že existuje nově zjištěných vzdálené spuštění kódu na serverech Windows systému DNS (Domain Name). V toto ohrožení zabezpečení servery nepodaří správně zpracovávat požadavky. Útočník, který tuto chybu zabezpečení úspěšně zneužije, může spustit libovolný kód v kontextu místního systémového účtu. Servery Windows aktuálně nakonfigurované jako servery DNS vystavují se riziku toto ohrožení zabezpečení.
+
+V této detekce se aktivuje upozornění zabezpečení služby Azure ATP při podezření na zneužití ohrožení zabezpečení CVE-2018-8626 dotazy DNS se provádí na řadiči domény v síti.
+
+**TP, B-TP nebo FP**
+
+1. Cílové počítače jsou aktuální a patched proti CVE-2018-8626? 
+    - Pokud jsou počítače v aktuálním stavu a opravou, **Zavřít** dané výstraze zabezpečení jako **FP**.
+2. Byla služba vytvořena nebo neznámého proces spuštěn v době výskytu útoku
+    - Pokud se nenajde žádné nové služby nebo neznámého procesu, **Zavřít** dané výstraze zabezpečení jako **FP**. 
+3. Tento typ útoku může dojít k selhání služby DNS před recyklováním úspěšně provádění kódu.
+    - Zaškrtněte, pokud několikrát v době výskytu útoku se restartoval službu DNS.
+    - Pokud DNS byl restartován, byl pravděpodobně pokus o zneužití CVE-2018-8626. Vezměte v úvahu tuto výstrahu **TP** a postupujte podle pokynů v **pochopit tak rozsah porušení**. 
+
+**Vysvětlení rozsahu porušení**
+
+- Prozkoumat [zdrojový a cílový počítač](investigate-a-computer.md).
+
+**Navrhované nápravné kroky a pro ochrany před únikem informací**
+
+**Náprava**
+
+1. Obsahovat řadiče domény. 
+    1. Opravte pokus o spuštění vzdáleného kódu.
+    2. Vyhledejte uživatelé také přihlášení přibližně ve stejnou dobu jako podezřelou aktivitu, jak může být ohrožena. Resetování hesel a povolení vícefaktorového ověřování. 
+2. Obsahují zdrojový počítač.
+    1. Najít nástroj, který provádí útoku a jeho odebrání.
+    2. Vyhledejte uživatelé také přihlášení přibližně ve stejnou dobu jako podezřelou aktivitu, jak může být ohrožena. Resetování hesel a povolení vícefaktorového ověřování.
+
+**Ochrany před únikem informací**
+
+- Ujistěte se, že všechny servery DNS v prostředí jsou aktuální a patched proti [CVE-2018-8626](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2018-8626). 
 
 ## <a name="suspected-identity-theft-pass-the-hash-external-id-2017"></a>Krádež identity podezřelého softwaru (pass-the-hash) (externí ID 2017)
 

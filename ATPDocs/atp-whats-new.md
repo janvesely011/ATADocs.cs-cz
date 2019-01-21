@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 1/13/2019
+ms.date: 1/20/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,16 +13,27 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 5248ab54c8fd8d03035e1f6451597c5e8cfc63b2
-ms.sourcegitcommit: 6a0ac21f59e72db8615811da2c886f54cf3727f5
+ms.openlocfilehash: 79ad5eb4c958dcbf7db0bcddbf4e6b66603dcaf2
+ms.sourcegitcommit: 443e6c07788938960555046def389a1503c259a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2019
-ms.locfileid: "54250027"
+ms.lasthandoff: 01/20/2019
+ms.locfileid: "54417316"
 ---
 *Platí pro: Azure Advanced Threat Protection*
 
 # <a name="whats-new-in-azure-atp"></a>Co je nového v Azure ATP
+
+## <a name="azure-atp-release-262"></a>Verze ochrany ATP v programu Azure 2.62
+Vydáno 20. ledna 2019
+
+- **Nová výstraha zabezpečení: Vzdálené spuštění kódu nad DNS-(preview)**<br>
+Azure ATP [vzdálené spuštění kódu nad DNS](atp-lateral-movement-alerts.md#remote-code-execution-over-dns-external-id-2036---preview) výstraha zabezpečení je teď ve verzi public preview. <br> V této detekce se aktivuje upozornění zabezpečení služby Azure ATP při dotazy DNS vzbuzovat podezření na zneužití ohrožení zabezpečení [CVE-2018-8626](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2018-8626) se provádí na řadiči domény v síti.
+
+- **Vylepšení funkce: 72 hodin zpožděné aktualizace senzorů** <br> Změněné možnost zpoždění senzor aktualizací na vybrané senzory až 72 hodin (místo zpoždění předchozích 24 hodin) po každé aktualizaci verze služby Azure ATP. Zobrazit [aktualizace senzoru služby Azure ATP](sensor-update.md) pokyny ke konfiguraci. 
+
+
+- Tato verze také zahrnuje vylepšení a opravy chyb pro interní senzor infrastruktury.
 
 ## <a name="azure-atp-release-261"></a>Verze ochrany ATP v programu Azure 2.61
 Vydáno 13. ledna 2019
@@ -42,14 +53,14 @@ Vylepšenou detekční logiku použil se pro obě výstrahy pro snížení počt
 - **Vylepšení funkce: Dokumentace k Azure ATP výstraha zabezpečení** <br>
 Byl rozšířené ochrany ATP v programu zabezpečení výstrah dokumentace ke službě Azure a i na lepší popisech výstrah, přesnější upozornění klasifikace a vysvětlení, opravy, a ochrany před únikem informací. Seznamte se s nové výstrahy dokumentaci návrhu zabezpečení pomocí následujících odkazů: 
     - [Výstrahy zabezpečení služby Azure ATP](suspicious-activity-guide.md)
-    - [Principy výstrah zabezpečení](understanding-security-alerts.md)
+    - [Porozumění výstrahám zabezpečení](understanding-security-alerts.md)
         - [Upozornění fáze rekognoskace](atp-reconnaissance-alerts.md)
         - [Ohrožení zabezpečení přihlašovacích údajů Fáze oznámení](atp-compromised-credentials-alerts.md)
         - [Laterální pohyb fáze oznámení](atp-lateral-movement-alerts.md)
         - [Upozornění fáze dominance v doméně](atp-domain-dominance-alerts.md)
         - [Fáze oznámení průsak ven](atp-exfiltration-alerts.md)
-    - [Prozkoumat počítače](investigate-a-computer.md)
-    - [Prozkoumat uživatele](investigate-a-user.md)
+    - [Prošetřování počítačů](investigate-a-computer.md)
+    - [Prošetřování uživatelů](investigate-a-user.md)
 
 - Tato verze také zahrnuje vylepšení a opravy chyb pro interní senzor infrastruktury.
 

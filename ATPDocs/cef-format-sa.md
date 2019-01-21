@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 1/13/2018
+ms.date: 1/20/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 3261155c-3c72-4327-ba29-c113c63a4e6d
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 730c167ba5a754a1327b04e59ba25a2e1285f8f1
-ms.sourcegitcommit: b11433f7d454231a62f64c9d9bfa1355ecf91075
+ms.openlocfilehash: f09278c5390372c164f45744059d6a73935fb0c0
+ms.sourcegitcommit: 443e6c07788938960555046def389a1503c259a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54403865"
+ms.lasthandoff: 01/20/2019
+ms.locfileid: "54417282"
 ---
 *Platí pro: Azure Advanced Threat Protection*
 
@@ -59,36 +59,37 @@ Do systému SIEM se předávají následující pole a jejich hodnoty:
 
 |Nový název výstrahy zabezpečení|Předchozí název výstrahy zabezpečení|Jedinečné ID externí|
 |---------|----------|---------|
-|Rekognoskace výčtu účtů|Rekognoskace pomocí výčtu účtů|2003|
-|Průsak dat ven přes protokol SMB| Není k dispozici| 2030|
-|Aktivita Honeytokenu|Aktivita Honeytokenu|2014|
-|Škodlivá žádost Data Protection API hlavní klíč|Škodlivá žádost o soukromé informace přes Data Protection|2020|
-|Mapování sondování sítě (DNS)|Rekognoskace pomocí DNS|2007|
-|Pokus o spuštění vzdáleného kódu|Pokus o spuštění vzdáleného kódu|2019|
-|Podezřelý útok hrubou silou (LDAP)|Útok hrubou silou pomocí jednoduché vazby LDAP.|2004|
-|Podezřelý útok hrubou silou (pomocí protokolu Kerberos, NTLM)|Podezřelé chyby ověřování|2023|
-|Podezřelý útok hrubou silou (SMB)|Neobvyklá implementace protokolu (potenciální použití škodlivých nástrojů, jako je Hydra)|2033|
-|Podezřelý útok DCShadow (povýšení řadiče domény)|Povýšení řadiče domény podezřelé (možný útok DCShadow)|2028|
-|Podezřelý útok DCShadow (žádost o replikaci řadiče domény)|Žádost o replikaci řadiče domény podezřelé (možný útok DCShadow)|2029|
-|Podezřelý útok DCSync (replikace adresářových služeb)|Škodlivá replikace adresářových služeb|2006|
-|Podezřelé použití lístku Golden (oslabení šifrování)|Aktivita snížení úrovně šifrování (potenciální útok metodou golden ticket)|2009|
-|Podezřelé použití lístku Golden (falešných dat autorizace) |Eskalace oprávnění prostřednictvím zfalšovaných dat autorizace|2013|
-|Podezřelé použití Golden Ticket (neexistující účet)|Protokol Kerberos Golden Ticket - neexistující účet|2027|
-|Podezřelé použití Golden Ticket (čas anomálií) |Kerberos Golden Ticket – čas anomálií|2022|
-|Podezřelé použití Golden Ticket (ticket anomálií) – preview|Není k dispozici|2032|
-|Krádež identity podezřelého softwaru (pass-the-hash)|Krádež identity pomocí útoku Pass-the-Hash|2017|
-|Krádež identity podezřelého softwaru (pass-the-ticket)|Krádež identity pomocí útoku Pass-the-Ticket|2018|
-|Podezření na útok over-pass-the-hash (oslabení šifrování)|Aktivita snížení úrovně šifrování (možný útok overpass-the-hash)|2008|
-|Podezření na útok overpass-the-hash (Kerberos)|Neobvyklá implementace protokolu Kerberos (možný útok overpass-the-hash)|2002|
-|Podezřelé použití Metasploit hacking framework|Neobvyklá implementace protokolu (potenciální použijte Metasploit hacking nástroje)|2034|
-|Útoku typu skeleton key podezřelého softwaru (oslabení šifrování)|Aktivita snížení úrovně šifrování (potenciální útoku typu skeleton key)|2010|
-|Podezření na útok WannaCry ransomwaru|Neobvyklá implementace protokolu (možný útok ransomwarem WannaCry)|2035|
-|Podezřelá komunikace prostřednictvím DNS|Podezřelá komunikace prostřednictvím DNS|2031|
-|Podezřelé úprava citlivých skupin|Podezřelé úprava citlivých skupin|2024|
-|Podezřelé vytvoření služby|Podezřelé vytvoření služby|2026|
-|Podezřelé připojení k síti VPN|Podezřelé připojení k síti VPN|2025|
-|Rekognoskace členství uživatelů a skupin (SAMR)|Rekognoskace pomocí dotazů na adresářové služby|2021|
-|Uživatele a IP adres pro rekognoskaci (SMB) |Rekognoskace pomocí výčtu relací SMB|2012|
+|[Rekognoskace výčtu účtů](atp-reconnaissance-alerts.md#account-enumeration-reconnaissance-external-id-2003)|Rekognoskace pomocí výčtu účtů|2003|
+|[Průsak dat ven přes protokol SMB](atp-exfiltration-alerts.md#data-exfiltration-over-smb---preview-external-id-2030)| Není k dispozici| 2030|
+|[Aktivita Honeytokenu](atp-compromised-credentials-alerts.md#honeytoken-activity-external-id-2014)|Aktivita Honeytokenu|2014|
+|[Škodlivá žádost Data Protection API hlavní klíč](atp-domain-dominance-alerts.md#malicious-request-of-data-protection-api-master-key-external-id-2020)|Škodlivá žádost o soukromé informace přes Data Protection|2020|
+|[Mapování sondování sítě (DNS)](atp-reconnaissance-alerts.md#network-mapping-reconnaissance-dns-external-id-2007)|Rekognoskace pomocí DNS|2007|
+|[Pokus o spuštění vzdáleného kódu](atp-domain-dominance-alerts.md#remote-code-execution-attempt-external-id-2019)|Pokus o spuštění vzdáleného kódu|2019|
+|[Vzdálené spuštění kódu nad DNS – preview](atp-lateral-movement-alerts.md#remote-code-execution-over-dns-external-id-2036---preview)|Není k dispozici|2036|
+|[Podezřelý útok hrubou silou (LDAP)](atp-compromised-credentials-alerts.md#suspected-brute-force-attack-ldap-external-id-2004)|Útok hrubou silou pomocí jednoduché vazby LDAP.|2004|
+|[Podezřelý útok hrubou silou (pomocí protokolu Kerberos, NTLM)](atp-compromised-credentials-alerts.md#suspected-brute-force-attack-kerberos-ntlm-external-id-2023)|Podezřelé chyby ověřování|2023|
+|[Podezřelý útok hrubou silou (SMB)](atp-compromised-credentials-alerts.md#suspected-brute-force-attack-smb-external-id-2033)|Neobvyklá implementace protokolu (potenciální použití škodlivých nástrojů, jako je Hydra)|2033|
+|[Podezřelý útok DCShadow (povýšení řadiče domény)](atp-domain-dominance-alerts.md#suspected-dcshadow-attack-domain-controller-promotion-external-id-2028)|Povýšení řadiče domény podezřelé (možný útok DCShadow)|2028|
+|[Podezřelý útok DCShadow (žádost o replikaci řadiče domény)](atp-domain-dominance-alerts.md#suspected-dcshadow-attack-domain-controller-replication-request-external-id-2029)|Žádost o replikaci řadiče domény podezřelé (možný útok DCShadow)|2029|
+|[Podezřelý útok DCSync (replikace adresářových služeb)](atp-domain-dominance-alerts.md#suspected-dcsync-attack-replication-of-directory-services-external-id-2006)|Škodlivá replikace adresářových služeb|2006|
+|[Podezřelé použití lístku Golden (oslabení šifrování)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-encryption-downgrade-external-id-2009)|Aktivita snížení úrovně šifrování (potenciální útok metodou golden ticket)|2009|
+|[Podezřelé použití lístku Golden (falešných dat autorizace)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-forged-authorization-data-external-id-2013) |Eskalace oprávnění prostřednictvím zfalšovaných dat autorizace|2013|
+|[Podezřelé použití Golden Ticket (neexistující účet)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-nonexistent-account-external-id-2027)|Protokol Kerberos Golden Ticket - neexistující účet|2027|
+|[Podezřelé použití Golden Ticket (ticket anomálií) – Preview](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-ticket-anomaly-external-id-2032--preview)|Není k dispozici|2032|
+|[Podezřelé použití Golden Ticket (čas anomálií)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-time-anomaly-external-id-2022)|Kerberos Golden Ticket – čas anomálií|2022|
+|[Krádež identity podezřelého softwaru (pass-the-hash)](atp-lateral-movement-alerts.md#suspected-identity-theft-pass-the-hash-external-id-2017)|Krádež identity pomocí útoku Pass-the-Hash|2017|
+|[Krádež identity podezřelého softwaru (pass-the-ticket)](atp-lateral-movement-alerts.md#suspected-identity-theft-pass-the-ticket-external-id-2018)|Krádež identity pomocí útoku Pass-the-Ticket|2018|
+|[Podezření na útok over-pass-the-hash (oslabení šifrování)](atp-lateral-movement-alerts.md#suspected-overpass-the-hash-attack-encryption-downgrade-external-id-2008)|Aktivita snížení úrovně šifrování (možný útok overpass-the-hash)|2008|
+|[Podezření na útok overpass-the-hash (Kerberos)](atp-lateral-movement-alerts.md#suspected-overpass-the-hash-attack-kerberos-external-id-2002)|Neobvyklá implementace protokolu Kerberos (možný útok overpass-the-hash)|2002|
+|[Podezřelé použití Metasploit hacking framework](atp-compromised-credentials-alerts.md#suspected-use-of-metasploit-hacking-framework-external-id-2034)|Neobvyklá implementace protokolu (potenciální použijte Metasploit hacking nástroje)|2034|
+|[Útoku typu skeleton key podezřelého softwaru (oslabení šifrování)](atp-domain-dominance-alerts.md#suspected-skeleton-key-attack-encryption-downgrade-external-id-2010)|Aktivita snížení úrovně šifrování (potenciální útoku typu skeleton key)|2010|
+|[Podezření na útok WannaCry ransomwaru](atp-compromised-credentials-alerts.md#suspected-wannacry-ransomware-attack-external-id-2035)|Neobvyklá implementace protokolu (možný útok ransomwarem WannaCry)|2035|
+|[Podezřelá komunikace prostřednictvím DNS](atp-exfiltration-alerts.md#suspicious-communication-over-dns-external-id-2031)|Podezřelá komunikace prostřednictvím DNS|2031|
+|[Podezřelé úprava citlivých skupin](atp-domain-dominance-alerts.md#suspicious-modification-of-sensitive-groups-external-id-2024)|Podezřelé úprava citlivých skupin|2024|
+|[Podezřelé vytvoření služby](atp-domain-dominance-alerts.md#suspicious-service-creation-external-id-2026)|Podezřelé vytvoření služby|2026|
+|[Podezřelé připojení k síti VPN](atp-compromised-credentials-alerts.md#suspicious-vpn-connection-external-id-2025)|Podezřelé připojení k síti VPN|2025|
+|[Rekognoskace členství uživatelů a skupin (SAMR)](atp-reconnaissance-alerts.md#user-and-group-membership-reconnaissance-samr-external-id-2021)|Rekognoskace pomocí dotazů na adresářové služby|2021|
+|[Uživatele a IP adres pro rekognoskaci (SMB)](atp-reconnaissance-alerts.md#user-and-ip-address-reconnaissance-smb-external-id-2012)|Rekognoskace pomocí výčtu relací SMB|2012|
 
 ## <a name="sample-logs"></a>Ukázky protokolů
 
@@ -121,6 +122,9 @@ Priority:
 ### <a name="remote-code-execution-attempt"></a>Pokus o spuštění vzdáleného kódu
 10 – 29 – 2018 11:22:04 Auth.Warning 192.168.0.202 1 2018-10-29T09:22:00.100856 + 00:00 DC3 CEF 3908 RemoteExecutionSecurityAlert ï» ¿0 | Microsoft | Ochrana ATP v programu Azure | 2.52.5704.46184 | RemoteExecutionSecurityAlert | Pokus o spuštění vzdáleného kódu | 5 | start = 2018-10-29T09:19:45.0552367Z shost = CLIENT1 msg = následující vzdálené spuštění kódu došlo k pokusům na počítači DC1 z CLIENT1:\r\nSuccessful vzdálené plánování jeden nebo více úloh podle user1.\r\nFailed vzdálené jeden nebo více úloh plánování podle user1.\r\nSuccessful vzdálené spuštění jedné nebo více metod WMI uživatele User1. externalId = 2019 cs1Label = url cs1 = https\://contoso-corp.atp.azure.com/securityAlert/f063c778-830c-4e9f-98d1-bc6c11c94e11 cs2Label aktivační událost cs2 = = nový
 
+### <a name="remote-code-execution-over-dns---preview"></a>Vzdálené spuštění kódu nad DNS – preview
+1-17 – 2019 08:24:54 Auth.Warning 192.168.0.202 1 2019-01-17T08:24:54.100856 + 00:00 DC3 CEF 3908 DnsRemoteCodeExecutionSecurityAlert ï» ¿0 | Microsoft | Ochrana ATP v programu Azure | 2.63.0.0 | DnsRemoteCodeExecutionSecurityAlert | [PREVIEW] Vzdálené spuštění kódu přes DNS | 5 | start = 2019-01-17T08:24:54.5293800Z app = Dns shost = CLIENT1 msg = prvek "actor" se pokusil spustit příkazy vzdáleně na počítači CLIENT1 od řadiče domény DC1, protokolu DNS. externalId=2036 cs1Label=url cs1=https\:////contoso-corp.atp.azure.com:13000/securityAlert/591f9769-d904-40b1-89fa-c307c2ca814f cs2Label=trigger cs2=new
+
 ### <a name="suspected-brute-force-attack-ldap"></a>Podezřelý útok hrubou silou (LDAP)
 02 – 21 – 2018 16:20:21 Auth.Warning 192.168.0.220 1 2018-02-21T14:20:06.156238 + 00:00 CENTER CEF 6076 LdapBruteForceSecurityAlert ï» ¿0 | Microsoft | Ochrana ATP v programu Azure | 2.22.4228.22540 | LdapBruteForceSecurityAlert | Útok hrubou silou pomocí jednoduché vazby LDAP | 5 | start = 2018-02-21T14:19:41.7422810Z app = Ldap suser Wofford Thurston shost = = CLIENT1 msg = na Wofford Thurston (softwarový inženýr) pomocí protokolu Ldap protokolu došlo k pokusu o útok hrubou silou z počítače CLIENT1 (100 odhad pokusy o). CNT = 100 externalId = 2004 cs1Label = url cs1 = https\://contoso-corp.atp.azure.com/securityAlert/57b8ac96-7907-4971-9b27-ec77ad8c029a cs2Label = aktivační událost cs2 = aktualizace
 
@@ -133,7 +137,7 @@ Priority:
 ### <a name="suspected-golden-ticket-usage-non-existent-account"></a>Podezřelé použití Golden Ticket (neexistující účet)
 07-01-2018 14:28:49 Auth.Error 192.168.0.100 1 2018-07-01T11:28:35.546638 + 00:00 CENTER CEF 38768 ForgedPrincipalSecurityAlert ï» ¿0 | Microsoft | Ochrana ATP v programu Azure | 2.39.0.0 | ForgedPrincipalSecurityAlert | Kerberos Golden Ticket - neexistujících účtů | 10 | start = 2018-07-01T09:48:31.2567987Z app = Kerberos suser=domain1.test.local\fake msg=domain1.test.local\fake, který neexistuje v Active Directory, používá lístek protokolu Kerberos. -The-ticket byla zjištěna z 2 počítače přístup k prostředkům 3. To může znamenat potenciální útok metodou Golden Ticket. externalId = 2027 cs1Label = url cs1 = https\://contoso-corp.atp.azure.com:13000/securityAlert/98f050d4-9134-429c-8e54-d8eeb19849c4 cs2Label = aktivační událost cs2 = aktualizace
 
-### <a name="suspected-golden-ticket-usage-ticket-anomaly--preview"></a>Podezřelé použití Golden Ticket (ticket anomálií) – preview
+### <a name="suspected-golden-ticket-usage-ticket-anomaly---preview"></a>Podezřelé použití Golden Ticket (ticket anomálií) – preview
 1 2018-11-18T10:46:23.346946 + 00:00 MAXIMG 7050 CEF 24284 GoldenTicketSizeAnomalySecurityA 0 | Microsoft | Ochrana ATP v programu Azure | 2.56.0.0 | GoldenTicketSizeAnomalySecurityAlert | [PREVIEW] Podezřelé použití Golden Ticket (ticket anomálií) | 10 | start = 2018-11-18T10:44:12.9317797Z app = Kerberos shost CLIENT2 suser = RFosdyke msg = = Renzo Fosdyke (softwarový inženýr) pro přístup k ldap/domain1.test.local podezřelé lístek Kerberos z počítače CLIENT2. externalId =. 2032 cs1Label = url cs1 = https\://contoso-corp.atp.azure.com:13000/securityAlert/63600e03-f423-49bf-a92d-4010e1d52b9f cs2Label = aktivační událost cs2 = aktualizace
 
 ### <a name="suspected-golden-ticket-usage-time-anomaly"></a>Podezřelé použití Golden Ticket (čas anomálií) 

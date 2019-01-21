@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 1/15/2019
+ms.date: 1/20/2019
 ms.topic: tutorial
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 0b3a1db5-0d43-49af-b356-7094cc85f0a5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e2a8eb9ada18e14bbe88cdd6c0081c86e5733648
-ms.sourcegitcommit: e2daa0f93d97d552cfbf1577fbd05a547b63e95b
+ms.openlocfilehash: 6d9d43cba99e2d3c14eb8631ca8cd4030ff9d793
+ms.sourcegitcommit: 443e6c07788938960555046def389a1503c259a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54314410"
+ms.lasthandoff: 01/20/2019
+ms.locfileid: "54417299"
 ---
 # <a name="tutorial-domain-dominance-alerts"></a>Kurz: Upozornění dominance v doméně  
 

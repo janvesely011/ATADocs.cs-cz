@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 1/14/2019
+ms.date: 1/20/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,54 +13,56 @@ ms.technology: ''
 ms.assetid: 603d9e09-a07d-4357-862f-d5682c8bc3dd
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f2df8f8f59edff7ebda3f86aae26b899913d57f8
-ms.sourcegitcommit: e2daa0f93d97d552cfbf1577fbd05a547b63e95b
+ms.openlocfilehash: 5c5e5ff9bcbf6fbbd17f9f17d51249852e1ba4ec
+ms.sourcegitcommit: 443e6c07788938960555046def389a1503c259a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54314325"
+ms.lasthandoff: 01/20/2019
+ms.locfileid: "54417247"
 ---
-*Platí pro: Azure Advanced Threat Protection*
-
-
 # <a name="update-azure-atp-sensors"></a>Aktualizace služby Azure ATP senzorů
-Je nezbytné k zajištění aktuálnosti nejlepší možné ochranu pro vaši organizaci povolit rozšířené ochrany před internetovými útoky pro Azure.
 
-Služba Ochrana ATP v programu Azure se aktualizuje několikrát za měsíc s opravy chyb a vylepšení výkonu, nové detekce. V některých těchto aktualizací vyžadují odpovídající aktualizaci ke snímačům. 
+Průběžná senzorů vaší rozšířené ochrany před internetovými útoky pro Azure poskytuje nejlepší možnou ochranu pro vaši organizaci.
 
-Pokud nechcete aktualizovat vaše senzory, se nebudou moct komunikovat s cloudovou službou ochrany ATP v programu Azure, což může způsobit snížení služby. 
+Služba Ochrana ATP v programu Azure se obvykle aktualizuje několikrát za měsíc s nové detekce, funkce a vylepšení výkonu. Obvykle tyto aktualizace zahrnují odpovídající dílčí aktualizace ke snímačům. Azure ATP senzory a odpovídající aktualizace nikdy mají oprávnění k zápisu do řadiče domény. Balíčky aktualizací senzor řídit jenom senzoru služby Azure ATP a možnosti detekce senzor. 
 
+### <a name="azure-atp-sensor-update-types"></a>Azure typy aktualizací senzor ochrany ATP v programu   
+
+Azure ATP senzorů podporují dva typy aktualizace:
+- Vedlejší verze aktualizace: 
+    - Časté 
+    - Vyžaduje, aby nebyla instalace MSI a žádné změny v registru
+    - Restartování: Senzor služby Azure ATP 
+    - Nelze restartovat: Služby řadiče domény a serverový operační systém
+
+- Hlavní verze aktualizace:
+    - Výjimečných
+    - Obsahuje významné změny 
+    - Restartování: Senzor služby Azure ATP
+    - Je to možné je vyžadováno restartování: Služby řadiče domény a serverový operační systém
+
+> [!NOTE]
+>- Řízení senzor automatické restartování (pro **hlavní** aktualizace) na stránce Konfigurace portálu ochrany ATP v programu Azure. 
+> - Azure ATP senzor rezervuje vždy alespoň 15 % dostupné paměti a procesoru, které jsou k dispozici na řadiči domény, kde je nainstalovaný. Pokud službě ochrana ATP v programu Azure spotřebovává příliš mnoho paměti, služba automaticky zastavit a restartovat službu updater senzoru služby Azure ATP.
+
+### <a name="update-requirement"></a>Požadavek na aktualizaci
+
+Selhání její aktualizace vašeho senzory pro funkce více než jednu aktualizaci verze znamená, že vaše senzorů už nemůže komunikovat s cloudovou službou ochrany ATP v programu Azure a může způsobit nedostupnost služby bez ochrany ATP v programu Azure a žádná ochrana pro vaši organizaci.  
+
+## <a name="delayed-sensor-update"></a>Zpožděné aktualizace senzorů
+
+Zadaný rychlé rychlost probíhající aktualizace služby Azure ATP vývoje a vydávání verzí, můžete rozhodnout definujte skupinu dílčí vaše snímačů jako zpožděné aktualizačního procesu aktualizace postupné senzor. Ochrana ATP v programu Azure vám umožní vybrat jak aktualizace a nastavit každý ze senzorů jako vaše senzory **zpožděné aktualizace** Release candidate.  
+
+Není vybrána pro zpožděné aktualizace senzorů se automaticky aktualizují, pokaždé, když se aktualizuje službě ochrana ATP v programu Azure. Senzorů nastavena na **zpoždění aktualizace** se aktualizují na zpoždění 72 hodin, po oficiálním vydání každou aktualizaci služby. 
+
+**Zpožděné aktualizace** možnost vám umožňuje vybrat konkrétní senzorů jako automatické aktualizační kanál, na kterém všechny se aktualizace zavedou automaticky a zbytek vašeho snímačů a aktualizovat na zpoždění, získáte tak čas Ujistěte se, že sada automaticky aktualizované senzorů proběhly úspěšně.
+
+> [!NOTE]
+> Pokud dojde k chybě a snímače se neaktualizuje, otevřete lístek podpory. Váš proxy server pouze komunikovat s vaší instancí dál posiluje, najdete v článku [konfiguraci proxy serveru](configure-proxy.md).
 Ověřování mezi vaší senzory a cloudové služby Azure využívá silné a na základě certifikátů vzájemného ověřování. 
 
 Každá aktualizace je otestovali a ověřili na všech podporovaných operačních systémech způsobí minimálním dopadem na operace a síť.
 
-### <a name="azure-atp-sensor-update-types"></a>Azure typy aktualizací senzor ochrany ATP v programu   
-
-Azure ATP senzorů podporuje dva typy aktualizace:
-- Vedlejší verze aktualizace: 
-  - Časté 
-  - Vyžadovat, aby nebyla instalace MSI a žádné změny v registru
-  - Azure restartování služby ochrany ATP v programu senzor
-  - Řadiče domény a server není potřeba restartovat
-
-- Hlavní verze aktualizace:
- - Výjimečných
- - Může vyžadovat restartování řadiče domény a servery
- - Obsahují významné změny 
-
-> [!NOTE]
->- Na stránce konfigurace se dá řídit automatické restartování snímačů (v hlavní aktualizace). 
-> - Senzoru služby Azure ATP vždy zachováno alespoň 15 % paměti a procesoru, které jsou k dispozici. Pokud služba spotřebovává příliš mnoho paměti se automaticky restartuje službou ochrany ATP v programu Azure senzor updater.
-
-## <a name="delayed-sensor-update"></a>Zpožděné aktualizace senzorů
-Pokud chcete povolit více postupné proces aktualizace, ochrana ATP v programu Azure vám umožní nastavit senzoru jako **zpožděné aktualizace** Release candidate. 
-
-Obvykle senzorů automaticky aktualizovat při aktualizaci cloudové službě ochrana ATP v programu Azure. Nastavte senzorů na **zpožděné aktualizace** aktualizuje po 24 hodinách od aktualizace počáteční cloudové služby.
-
-To vám umožňuje vybrat konkrétní senzory, na kterých nasazení aktualizace automaticky a aktualizujte zbytek vašeho senzory na zpoždění, až poté, co vidíte plynule nepovedlo počáteční aktualizace.
-
-> [!NOTE]
-> Pokud dojde k chybě a snímače se neaktualizuje, otevřete lístek podpory. Váš proxy server pouze komunikovat s vaší instancí dál posiluje, najdete v článku [konfiguraci proxy serveru](configure-proxy.md).
 
 Nastavení senzoru zpožděné aktualizace:
 
@@ -73,28 +75,28 @@ Nastavení senzoru zpožděné aktualizace:
 
 Každých několik minut, senzory ochrany ATP v programu Azure zkontrolujte, jestli se mají nejnovější verzi. Po aktualizaci na novější verzi cloudové službě ochrana ATP v programu Azure službu sensor ochrany ATP v programu Azure zahájí proces aktualizace:
 
-1. Ochrana ATP v programu Azure cloud service aktualizace na nejnovější verzi.
-2. Aktualizační službu senzoru služby Azure ATP zjistí, že je aktualizovaná verze.
-3. Snímače, které nejsou nastaveny **zpožděné aktualizace** zahájíte proces aktualizace:
-  1. Aktualizační služba sensor ochrany ATP v programu Azure získává aktualizovanou verzi z cloudové služby (ve formátu souboru cab).
-  2. Aktualizátor senzoru služby Azure ATP ověří podpis souboru.
-  3. Aktualizační službu senzoru služby Azure ATP extrahovat soubor cab do nové složky ve složce instalace senzoru. Ve výchozím nastavení budou extrahovány do *C:\Program Files\Azure Advanced Threat ochrany senzor\<číslo verze >*
-  4. Aktualizační službu senzoru služby Azure ATP restartuje službu sensor ochrany ATP v programu Azure.
-  5. Službu sensor ochrany ATP v programu Azure odkazuje na nové soubory extrahovány ze souboru cab.
-  > [!NOTE]
-  >Dílčí aktualizace čidel nelze nainstalovat Instalační služba MSI nebo změnit hodnoty registru nebo soubory systému. Čeká na restartování nebudou mít vliv na aktualizace snímačům. 
-  6. Snímačům spouštět na základě nově aktualizovaná verze.
-  7. Snímač přijímá odbavení z cloudové služby Azure. Můžete to ověřit v **aktualizace** stránky.
-  8. Další senzor zahájí proces aktualizace. 
+1. Ochrana ATP v programu cloud service aktualizace Azure na nejnovější verzi.
+2. Azure ATP senzor aktualizační službu zjistí, že je aktualizovaná verze.
+3. Snímače, které nejsou nastaveny **zpožděné aktualizace** zahájíte proces aktualizace na základě ze senzorů pomocí senzoru:
+    1. Azure ATP senzor aktualizační službu stáhne aktualizované verze z cloudové služby (ve formátu souboru cab).
+    2. Azure updater senzor ochrany ATP v programu ověří podpis souboru.
+    3. Azure ATP senzor aktualizační službu extrahuje soubor cab do nové složky ve složce instalace senzoru. Ve výchozím nastavení je extrahován do *C:\Program Files\Azure Advanced Threat ochrany senzor\<číslo verze >*
+    4. Službu sensor Azure ATP odkazuje na nové soubory extrahovány ze souboru cab.    
+    5. Azure ATP senzor aktualizační službu restartuje službu sensor ochrany ATP v programu Azure.
+        > [!NOTE]
+      >Aktualizace podverze senzor nainstalovat žádné instalační služby MSI, změní žádné hodnoty registru nebo soubory systému. Čeká na restartování nemá žádný vliv na aktualizace ze senzorů. 
+    6. Senzorů spouštět na základě nově aktualizovaná verze.
+    7. Senzor přijímá odbavení z cloudové služby Azure. Stav ze senzorů v si můžete ověřit **aktualizace** stránky.
+    8. Další senzor zahájí proces aktualizace. 
 
-4. 24 hodin, po aktualizaci cloudové službě ochrana ATP v programu Azure senzorů vybraná **zpožděné aktualizace** zahájíte proces aktualizace.
+4. 72 hodin, po aktualizaci cloudové službě ochrana ATP v programu Azure senzorů vybraná **zpoždění aktualizace** spusťte proces jejich aktualizace podle stejného procesu aktualizace jako automaticky aktualizované senzory.
 
 ![aktualizace ze senzorů](./media/sensor-update.png)
 
 
-V případě selhání aktualizace Pokud senzor nedokončil proces aktualizace relevantní monitorovací upozornění se aktivuje a odesílají je jako upozornění.
+K žádnému senzoru, kterému se nedaří dokončit proces aktualizace relevantní monitorovací upozornění se aktivuje a se odešle jako oznámení.
 
-![senzor zastaralé](./media/sensor-outdated.png)
+![Neúspěšná aktualizace senzorů](./media/sensor-outdated.png)
 
 
 ## <a name="see-also"></a>Viz také
