@@ -13,16 +13,13 @@ ms.technology: ''
 ms.assetid: 2c2d6b1a-fc8c-4ff7-b07d-64ce6159f84d
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 213f7e4a651463918c53fd53c20c993ae5ef7d66
-ms.sourcegitcommit: b11433f7d454231a62f64c9d9bfa1355ecf91075
+ms.openlocfilehash: be1831e077c34712640cc3c9c3c1eb05493be61a
+ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54403695"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54458661"
 ---
-*Platí pro: Azure Advanced Threat Protection*
-
-
 # <a name="azure-atp-reports"></a>Sestavy služby Azure ATP
 
 Část sestavy ochrany ATP v programu Azure na portálu ochrany ATP v programu Azure umožňuje naplánovat nebo okamžitě vygenerování a stažení sestavy, které vám poskytnou informace o stavu systému a entity. Z funkce sestavy můžete vytvořit sestavy o stavu systému, výstrahy zabezpečení a potenciální cesty taktiky Lateral Movement zjištěných ve vašem prostředí.

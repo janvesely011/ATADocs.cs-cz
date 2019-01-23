@@ -13,17 +13,13 @@ ms.technology: ''
 ms.assetid: de796346-647d-48e1-970a-8f072e990f1e
 ms.reviewer: ''
 ms.suite: ''
-ms.openlocfilehash: 5c414fb05410bc01d5cef0f2fce6e791d4aeb133
-ms.sourcegitcommit: b11433f7d454231a62f64c9d9bfa1355ecf91075
+ms.openlocfilehash: cc8008f79758f314321c59f170e9099610824e54
+ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54403661"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54458496"
 ---
-*Platí pro: Advanced Threat Protection*
-
-
-
 # <a name="troubleshooting-azure-advanced-threat-protection-atp-sensor-using-the-atp-logs"></a>Řešení problémů s Azure Advanced Threat Protection (ATP) ze senzorů pomocí protokolů ochrany ATP v programu
 Ochrana ATP v programu protokoly poskytují přehled o tom, co jednotlivé komponenty senzoru služby Azure ATP dělá v libovolném časovém okamžiku v čase.
 

@@ -13,17 +13,13 @@ ms.technology: ''
 ms.assetid: 3547519f-8d9c-40a9-8f0e-c7ba21081203
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c17fbe10bea696711bd3dc011893bdcd3dbc87f4
-ms.sourcegitcommit: eb144ce1331ec3404fd2f75025cdbe802a73890b
+ms.openlocfilehash: 65e2262c0b37d2c32176d1acd520675dfd3d8d4b
+ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52620842"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54458576"
 ---
-*Platí pro: Azure Rozšířená ochrana před internetovými útoky*
-
-
-
 # <a name="configuring-windows-event-forwarding"></a>Konfigurace předávání událostí systému Windows
 
 > [!NOTE]
@@ -49,7 +45,7 @@ V tomto scénáři předpokládá, že služby Azure ATP samostatný senzor je �
 
 Po přidání **síťová služba** k **Event Log Readers** skupině, restartování řadiče domény se změna projevila.
 
-**Krok 2: Vytvořte zásadu pro řadiče domény, abyste nastavili možnost Nakonfigurovat cílového správce odběrů.** 
+**Krok 2: Vytvořte zásadu pro řadiče domény, abyste nastavili možnost nakonfigurovat cílového správce odběrů.** 
 > [!Note] 
 > Můžete vytvořit zásady skupiny pro tato nastavení a použití zásad skupiny na každý řadič domény služby Azure ATP samostatný senzor monitoruje. Následující postup upravuje místní zásady řadiče domény.     
 
@@ -63,14 +59,14 @@ Po přidání **síťová služba** k **Event Log Readers** skupině, restartov�
    
     1.  Vyberte **Povoleno**.
     2.  V části **možnosti**, klikněte na tlačítko **zobrazit**.
-    3.  V části **SubscriptionManagers**, zadejte následující hodnoty a klikněte na tlačítko **OK**: Server = http\://\<fqdnATPSensor >: 5985 nebo wsman/SubscriptionManager / WEC, obnovení = 10 (Příklad: Server = http\:/ / atpsensor9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10)
+    3.  V části **SubscriptionManagers**, zadejte následující hodnoty a klikněte na tlačítko **OK**: Server = http\://\<fqdnATPSensor >: 5985 nebo wsman/SubscriptionManager/WEC, obnovení = 10 (například: Server=http\://atpsensor9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10)
     
     ![Obrázek konfigurace cílového odběru](media/wef%202%20config%20target%20sub%20manager.png)
     
 5.  Klikněte na **OK**.
 6.  Do příkazového řádku se zvýšenými oprávněními zadejte *gpupdate /force*. 
 
-**Krok 3: Proveďte následující kroky na samostatného senzoru služby Azure ATP** 
+**Krok 3: Následující postup proveďte samostatného senzoru služby Azure ATP** 
 
 1. Otevřete příkazový řádek se zvýšenými oprávněními a zadejte příkaz *wecutil qc*.
 2. Otevřete **Prohlížeč událostí**. 
@@ -91,7 +87,7 @@ Po přidání **síťová služba** k **Event Log Readers** skupině, restartov�
     6. Po několika minutách zkontrolujte události nastavit na předat dál, zobrazují mezi předanými událostmi v samostatného senzoru služby Azure ATP.
 
 
-Další informace najdete v tématu: [konfigurace počítačů pro předání a shromáždění událostí](https://technet.microsoft.com/library/cc748890)
+Další informace naleznete v tématu: [Konfigurace počítačů pro předání a shromáždění událostí](https://technet.microsoft.com/library/cc748890)
 
 ## <a name="see-also"></a>Viz také
 

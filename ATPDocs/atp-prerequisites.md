@@ -13,17 +13,13 @@ ms.technology: ''
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 1fc3930fc4b38b396bda2c3ff50795d835910439
-ms.sourcegitcommit: 1c657f269aaece71b2126df55a37f8c43851539a
+ms.openlocfilehash: 5d36a5921c4b54e1de04d076737e5a8262cefab7
+ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53335417"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54459125"
 ---
-*Platí pro: Azure Advanced Threat Protection*
-
-
-
 # <a name="azure-atp-prerequisites"></a>Požadavky služby Azure ATP
 Tento článek popisuje požadavky pro úspěšné nasazení služby Azure ATP ve vašem prostředí.
 
@@ -127,7 +123,7 @@ Následující tabulka uvádí minimální porty, které vyžaduje senzoru služ
 |SSL (*.atp.azure.com)|TCP|443|Cloudovou službu Azure ATP|Odchozí|
 |**Interní porty**|||||
 |DNS|TCP a UDP|53|Servery DNS|Odchozí|
-|Služba Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|Všechna zařízení v síti|Odchozí|
+|Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|Všechna zařízení v síti|Odchozí|
 |NTLM přes RPC|TCP|135|Všechna zařízení v síti|Obojí|
 |NetBIOS|UDP|137|Všechna zařízení v síti|Obojí|
 |Syslog (volitelné)|TCP/UDP|514, v závislosti na konfiguraci|Server SIEM|Příchozí|
@@ -209,7 +205,7 @@ Následující tabulka uvádí minimální porty, které vyžaduje samostatný s
 |LDAP pro globální katalog|TCP|3268|Řadiče domény|Odchozí|
 |LDAPS pro globální katalog|TCP|3269|Řadiče domény|Odchozí|
 |Kerberos|TCP a UDP|88|Řadiče domény|Odchozí|
-|Služba Netlogon (SMB, CIFS, SAM-R)|TCP a UDP|445|Všechna zařízení v síti|Odchozí|
+|Netlogon (SMB, CIFS, SAM-R)|TCP a UDP|445|Všechna zařízení v síti|Odchozí|
 |Čas Windows|UDP|123|Řadiče domény|Odchozí|
 |DNS|TCP a UDP|53|Servery DNS|Odchozí|
 |NTLM přes RPC|TCP|135|Všechna zařízení v síti|Obojí|

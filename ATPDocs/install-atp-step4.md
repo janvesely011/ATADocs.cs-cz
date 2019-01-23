@@ -13,17 +13,13 @@ ms.technology: ''
 ms.assetid: 51911e39-76c7-4dcd-bc0b-ec6235d0403f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: fa65a796100c23f2b113410fd30f9adf22e79268
-ms.sourcegitcommit: fd6c8a28e6bf3a6031835aebd0b9278e495d3e0b
+ms.openlocfilehash: 013dce6118a3b209efe6af6da918262d56e0edb9
+ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54142416"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54458882"
 ---
-*Platí pro: Azure Advanced Threat Protection*
-
-
-
 # <a name="install-azure-atp---step-4"></a>Instalace služby Azure ATP – krok 4
 
 > [!div class="step-by-step"]

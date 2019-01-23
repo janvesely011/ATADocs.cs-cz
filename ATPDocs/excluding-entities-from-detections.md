@@ -13,17 +13,13 @@ ms.technology: ''
 ms.assetid: cae3ed45-8fbc-4f25-ba24-3cc407c6ea93
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0a27d87f758940e25b463d2514031c5c342a3114
-ms.sourcegitcommit: 2afc1486b40431f442d51a53df06e289796de87e
+ms.openlocfilehash: 8ca74bdf85cc48a1d2175b6f67e9e83fd6528f83
+ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560673"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54458798"
 ---
-*Platí pro: Azure Rozšířená ochrana před internetovými útoky*
-
-
-
 # <a name="excluding-entities-from-detections"></a>Vyloučení entit z detekce
 Tento článek vysvětluje, jak vyloučení entit, která aktivuje upozornění. Některé entity budou vyloučeny, chcete-li minimalizovat neškodné pravdivě pozitivní během provádění, je možné zachytit pravdivě pozitivní. Pokud chcete zabránit vytvoření šumu o aktivitách, které určitých uživatelů, může být součástí vaší běžné podnikové činnosti ochrany ATP v programu Azure, můžete potlačit – nebo vyloučit – konkrétní entity nemají vyvolávat výstrahy. Kromě toho jsou vyloučeny některé oblíbené entity ve výchozím nastavení. 
 
@@ -38,12 +34,12 @@ Například pokud máte kontrolu zabezpečení, která provádí rekognoskaci DN
 
 Existují dva způsoby, jak můžete ručně vyloučit entity, přímo z dané výstraze zabezpečení nebo z **vyloučení** kartě **konfigurace** stránky. 
 
-- **Z dané výstraze zabezpečení**: V časové osy aktivity, když obdržíte výstrahu týkající se aktivity uživatele, počítače nebo IP adresy, které jsou **je** povoleno určitou aktivitu a můžou Uděláte to tak často, proveďte následující :
+- **Z dané výstraze zabezpečení**: V časové osy aktivity, když obdržíte výstrahu týkající se aktivity uživatele, počítače nebo IP adresy, které jsou **je** povoleno určitou aktivitu a můžou Uděláte to tak často, proveďte následující:
   - Klikněte pravým tlačítkem na tři tečky na konci řádku pro dané výstraze zabezpečení na dané entitě a vyberte **zavřít a vyloučit**. Tím přidáte uživatele, počítače nebo IP adresu do seznamu vyloučení pro tuto výstrahu zabezpečení. Zavření výstrahy zabezpečení a upozornění už není uvedený v **otevřít** v seznamu událostí **výstrah časová osa**.
 
     ![Vyloučení entity](./media/exclude-in-sa.png)
 
-- **Na stránce konfigurace**: Kontrola nebo úprava jakékoli vyloučení: v části **konfigurace**, klikněte na tlačítko **vyloučení** a pak vyberte výstrahu zabezpečení, kterou chcete použít vyloučení, jako je například  **Rekognoskace DNS**.
+- **Na stránce konfigurace**:  Kontrola nebo úprava jakékoli vyloučení: v části **konfigurace**, klikněte na tlačítko **vyloučení** a pak vyberte příslušnou výstrahu zabezpečení použít vyloučení, jako například **rekognoskace DNS** .
 
     ![Konfigurace vyloučení](./media/exclusions.png)
 

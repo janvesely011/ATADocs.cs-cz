@@ -13,17 +13,13 @@ ms.technology: ''
 ms.assetid: 4ba46d60-3a74-480e-8f0f-9a082d62f343
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 525e6879c7b683d833f5e2f73fa229f6e7580e3a
-ms.sourcegitcommit: c3ee9495b9d4db985783dcabcc4fa77c7c8eaed4
+ms.openlocfilehash: fd8b104522cf7c89cdf66cef7a1967946db24782
+ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/17/2018
-ms.locfileid: "53454508"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54458746"
 ---
-*Platí pro: Azure Advanced Threat Protection*
-
-
-
 # <a name="working-with-the-azure-atp-portal"></a>Práce s portálem Azure ATP
 
 Pomocí ochrany ATP v programu Azure portal k monitorování a reakce na podezřelé aktivity detekovaných službou ochrany ATP v programu.

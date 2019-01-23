@@ -13,17 +13,13 @@ ms.technology: ''
 ms.assetid: 34dc152c-6b7f-4128-93fe-aad56c282730
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: b61e840efc1b2ee14c2d367d1492b57836e2d144
-ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
+ms.openlocfilehash: a61434b7b9c15516c115dcbc9ae58e8cc9815111
+ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "52744451"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54459038"
 ---
-*Platí pro: Azure Rozšířená ochrana před internetovými útoky*
-
-
-
 # <a name="azure-atp-readiness-guide"></a>Příručka ke službě Azure ATP připravenosti
 
 Tento článek vám poskytne plány připravenosti, který vám poskytne seznam prostředků, které vám Začínáme se službou Azure Advanced Threat Protection. 
@@ -70,13 +66,13 @@ Po ochrany ATP v programu Azure je zapnutý a spuštěný, zobrazení výstrah z
 
 ## <a name="community-resources"></a>Zdroje informací a materiály z komunity
 
-Blog: [blogu Azure ATP](https://aka.ms/aatpblog)
+Blog: [Blog o Azure ATP](https://aka.ms/aatpblog)
 
-Veřejné komunita: [Azure ATP technické komunity](https://aka.ms/AatpCom)
+Veřejné komunity: [Azure ATP Tech Community](https://aka.ms/AatpCom)
 
-Soukromé komunity: [skupiny Yammeru ochrany ATP v programu Azure](https://www.yammer.com/azureadvisors/#/threads/inGroup?type=in_group&feedId=9386893&view=all)
+Soukromé komunity: [Azure ATP Yammer Group](https://www.yammer.com/azureadvisors/#/threads/inGroup?type=in_group&feedId=9386893&view=all)
 
-Kanál 9: [stránky Microsoft Security Channel 9](https://channel9.msdn.com/Shows/Microsoft-Security/)
+Kanál 9: [Stránka Microsoft Security Channel 9](https://channel9.msdn.com/Shows/Microsoft-Security/)
 
 
 

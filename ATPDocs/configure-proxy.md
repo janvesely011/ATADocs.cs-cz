@@ -13,17 +13,13 @@ ms.technology: ''
 ms.assetid: 9c173d28-a944-491a-92c1-9690eb06b151
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: da38cef088dcd255c264792fd70bfebf1c42a34b
-ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
+ms.openlocfilehash: 1ef76226f4f490687ff2437e657e0be240fa5e7f
+ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "52744927"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54458715"
 ---
-*Platí pro: Azure Rozšířená ochrana před internetovými útoky*
-
-
-
 # <a name="configure-endpoint-proxy-and-internet-connectivity-settings-for-your-azure-atp-sensor"></a>Konfigurace koncového bodu proxy serveru a nastavení připojení k Internetu pro vaše senzor ochrany ATP v programu Azure
 
 Každý ze senzorů Azure Advanced Threat Protection (ATP) vyžaduje připojení k Internetu ke cloudové službě ochrana ATP v programu Azure správně fungovala. V některých organizacích řadiče domény nejsou připojené přímo k Internetu, ale jsou připojené prostřednictvím připojení k proxy serveru webových. Každý senzoru služby Azure ATP vyžaduje používat konfiguraci proxy serveru Microsoft Windows Internet (WinINET) na data ze senzorů sestavy a komunikovat se službou ochrana ATP v programu Azure. Pokud používáte konfiguraci proxy serveru WinHTTP, stále potřebujete ke konfiguraci proxy nastavení prohlížeče Internet Windows (WinINet) pro komunikaci mezi senzorem a cloudové službě ochrana ATP v programu Azure.
@@ -63,11 +59,11 @@ Statické proxy je možné konfigurovat pomocí registru. Konfigurace proxy serv
 
 Pokud proxy server nebo brána firewall blokuje veškerý provoz ve výchozím nastavení a umožňuje pouze konkrétní domény prostřednictvím nebo je povolenou komunikací HTTPS vyhledávání (kontroly protokolu SSL), ujistěte se, že následující adresy URL jsou uvedené prázdné, aby umožňovala komunikaci se službou Azure ATP v port 443:
 
-|Umístění služby|. Záznam Atp.Azure.com DNS|
+|Umístění služby|.Atp.Azure.com DNS record|
 |----|----|
-|USA |triprd1wcusw1sensorapi.ATP.Azure.com<br>triprd1wcuswb1sensorapi.ATP.Azure.com<br>triprd1wcuse1sensorapi.ATP.Azure.com|
-|Evropa|triprd1wceun1sensorapi.ATP.Azure.com<br>triprd1wceuw1sensorapi.ATP.Azure.com|
-|Asie|triprd1wcasse1sensorapi.ATP.Azure.com|
+|USA |triprd1wcusw1sensorapi.atp.azure.com<br>triprd1wcuswb1sensorapi.atp.azure.com<br>triprd1wcuse1sensorapi.atp.azure.com|
+|Evropa|triprd1wceun1sensorapi.atp.azure.com<br>triprd1wceuw1sensorapi.atp.azure.com|
+|Asie|triprd1wcasse1sensorapi.atp.azure.com|
 
 
 Můžete také posílit ochranu firewall nebo proxy pravidla pro konkrétní instanci, že kterou jste vytvořili, tak, že vytvoříte pravidlo pro následující záznamy DNS:

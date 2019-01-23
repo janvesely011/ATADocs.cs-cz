@@ -13,16 +13,13 @@ ms.technology: ''
 ms.assetid: 90f68f2c-d421-4339-8e49-1888b84416e6
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d41eac8700e334989594639880a0f85d5c725578
-ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
+ms.openlocfilehash: 10cbb1fcb30f40a41d17a9995e4e132c4afbf332
+ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "52744417"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54459001"
 ---
-*Platí pro: Azure Rozšířená ochrana před internetovými útoky*
-
-
 # <a name="azure-atp-architecture"></a>Architektura služby Azure ATP
 
 Ochrana ATP v programu Azure monitoruje řadiče domény tak, že zachycení a parsování síťového provozu a využití události Windows přímo z řadičů domény a pak analyzuje data útoky a hrozbami. Využitím profilace deterministickou detekci, strojové učení a behaviorální algoritmy, které služby Azure ATP učí o síti, umožňuje detekovat anomálie a upozorní vás na podezřelé aktivity.

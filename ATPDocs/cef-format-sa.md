@@ -13,16 +13,13 @@ ms.technology: ''
 ms.assetid: 3261155c-3c72-4327-ba29-c113c63a4e6d
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: f09278c5390372c164f45744059d6a73935fb0c0
-ms.sourcegitcommit: 443e6c07788938960555046def389a1503c259a4
+ms.openlocfilehash: 2c957f90215b6c251eadff67f3e66fc450711373
+ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/20/2019
-ms.locfileid: "54417282"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54459188"
 ---
-*Platí pro: Azure Advanced Threat Protection*
-
-
 # <a name="azure-atp-siem-log-reference"></a>Referenční informace k protokolům Azure ATP SIEM
 
 Ochrana ATP v programu Azure můžete dál zabezpečení výstrahy a monitorování výstrahy události do vašeho systému SIEM. Výstrahy a události jsou ve formátu CEF. Tento referenční článek obsahuje ukázky protokolů odeslané do vašeho systému SIEM.

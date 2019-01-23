@@ -13,16 +13,13 @@ ms.technology: ''
 ms.assetid: 15ee7d0b-9a0c-46b9-bc71-98d0b4619ed0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e027e57e3f23be61139217b532b3b4a721dc9cdd
-ms.sourcegitcommit: d1c9c3e69b196f6086a8f100e527553cf0d95aac
+ms.openlocfilehash: 8cdb87bb577577f48b45e750f96159d008f72810
+ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53125145"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54458542"
 ---
-*Platí pro: Azure Rozšířená ochrana před internetovými útoky*
-
-
 # <a name="creating-your-azure-atp-instance-in-the-azure-atp-portal---step-1"></a>Vytvoření instance vaší ochrany ATP v programu Azure na portálu ochrany ATP v programu Azure – krok 1
 
 > [!div class="step-by-step"]

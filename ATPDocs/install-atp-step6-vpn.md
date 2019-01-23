@@ -13,16 +13,13 @@ ms.technology: ''
 ms.assetid: 0d9d2a1d-6c76-4909-b6f9-58523df16d4f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9fe9011f0fbdf29e80e1957c4e1535f497061aa2
-ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
+ms.openlocfilehash: 947f816d30dbc8e8de817eccf8213d25c026f833
+ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "52744859"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54458781"
 ---
-*Platí pro: Azure Rozšířená ochrana před internetovými útoky*
-
-
 # <a name="integrate-vpn"></a>Integrace sítě VPN
 
 Azure Advanced Threat Protection (ATP) z řešení sítě VPN můžete shromažďovat informace o monitorování účtů. Při konfiguraci, uživatelského profilu obsahovat informace z připojení VPN, jako je například IP adresy a umístění, původu připojení. To doplňuje procesu šetření tím, že poskytuje další informace na aktivity uživatelů, jakož i nové zjišťování pro nestandardní připojení k síti VPN. Volání překládat externí IP adresu na umístění je anonymní. Žádné osobní identifikátor se posílá ve toto volání.

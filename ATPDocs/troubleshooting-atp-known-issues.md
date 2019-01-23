@@ -13,16 +13,13 @@ ms.technology: ''
 ms.assetid: 23386e36-2756-4291-923f-fa8607b5518a
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 3daa559babccddd425714cc063abdbd719a050e7
-ms.sourcegitcommit: b11433f7d454231a62f64c9d9bfa1355ecf91075
+ms.openlocfilehash: 6592d381f8a7e6d3f661a67a101ed5d1191a2b66
+ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54403644"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54458495"
 ---
-*Platí pro: Azure Advanced Threat Protection*
-
-
 # <a name="troubleshooting-azure-atp-known-issues"></a>Řešení potíží s Azure – ochrana ATP v programu známé problémy 
 
 

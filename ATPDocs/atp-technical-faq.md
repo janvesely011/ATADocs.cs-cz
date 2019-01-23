@@ -13,15 +13,13 @@ ms.technology: ''
 ms.assetid: 6a9b5273-eb26-414e-9cdd-f64406e24ed8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 556bc66b6e4b8a5285166c4365b706f2ec9592ab
-ms.sourcegitcommit: b11433f7d454231a62f64c9d9bfa1355ecf91075
+ms.openlocfilehash: bfbe57fc4f7a4a235e8cd051d4e7b62375310657
+ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54403814"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54459154"
 ---
-*Platí pro: Azure Advanced Threat Protection*
-
 # <a name="azure-atp-frequently-asked-questions"></a>Nejčastější dotazy k Azure ATP
 Tento článek obsahuje seznam častých otázek a odpovědí týkajících se ochrany ATP v programu Azure rozdělené do následujících catergories: 
 - [Co je ochrana ATP v programu Azure](#what-is-azure-atp)

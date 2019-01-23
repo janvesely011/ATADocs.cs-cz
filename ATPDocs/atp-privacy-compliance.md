@@ -13,15 +13,13 @@ ms.technology: ''
 ms.assetid: 224e629a-0e82-458c-bb03-b67070a9241d
 ms.reviewer: ophirp
 ms.suite: ems
-ms.openlocfilehash: e05424c8a29d3dc77f7e7bbfe2351bb97d65160f
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: d796acae64d6c6081eb9d55306b9c3b5fe901857
+ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48782943"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54458510"
 ---
-*Platí pro: Azure Rozšířená ochrana před internetovými útoky*
-
 # <a name="azure-atp-data-security-and-privacy"></a>Zabezpečení dat ve službě Azure ATP a ochrana osobních údajů
 
 [!INCLUDE [Handle personal data](../includes/gdpr-intro-sentence.md)]
@@ -51,6 +49,6 @@ V ochraně ATP v Azure máte možnost [exportovat](working-with-suspicious-activ
 
 Ochrana ATP v programu Azure implementuje auditu změn osobní údaje, včetně, odstraňování a export záznamů osobní údaje. Doba uchování záznamu pro audit je 90 dní. Auditování v ochrany ATP v programu Azure je funkce back-end a není k dispozici zákazníkům.
  
-## <a name="additional-resources"></a>Další materiály a zdroje informací
+## <a name="additional-resources"></a>Další zdroje
 
 - Informace o důvěryhodnosti ochrany ATP v programu Azure a dodržování předpisů, najdete v článku [portálu důvěryhodnosti služeb](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted) a [dodržování předpisů GDPR pro Microsoft 365 Enterprise lokality](https://docs.microsoft.com/microsoft-365/compliance/compliance-solutions-overview).

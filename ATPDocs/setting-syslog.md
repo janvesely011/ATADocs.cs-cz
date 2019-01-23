@@ -13,17 +13,13 @@ ms.technology: ''
 ms.assetid: a2d29c9c-7ecb-4804-b74b-fde899b28648
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 5d3eb4dbc714e7de4d586e686cd26ead83fceda8
-ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
+ms.openlocfilehash: 6070dd6bbb6d7e439f6ecf4fcf7612a30b72fb59
+ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "52744672"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54458474"
 ---
-*Platí pro: Azure Rozšířená ochrana před internetovými útoky*
-
-
-
 # <a name="integrate-with-syslog"></a>Integrace se Syslogem
 
 Ochrana ATP v programu Azure může upozornit při zjištění podezřelých aktivit a výstrahy zabezpečení problémy, stejně jako upozornění na stav zasláním oznámení na váš server Syslog. Pokud povolíte upozornění pro Syslog, můžete nastavit následující:
@@ -34,7 +30,7 @@ Ochrana ATP v programu Azure může upozornit při zjištění podezřelých akt
 
     -   Port, na kterém naslouchá server SIEM
 
-    -   Používaného přenosu: UDP, TCP nebo TLS (Syslog se zabezpečením)
+    -   Používaného přenosu: UDP, TCP nebo TLS (zabezpečený Syslog)
 
     -   Formát odesílání dat: RFC 3164 nebo 5424
 

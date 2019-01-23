@@ -13,17 +13,13 @@ ms.technology: ''
 ms.assetid: 88692d1a-45a3-4d54-a549-4b5bba6c037b
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: eaf798149c828b641ba037ffbb6854ca07c6732a
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: 5d73f4ba4a37511027334a057878de3573888692
+ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783589"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54458933"
 ---
-*Platí pro: Azure Rozšířená ochrana před internetovými útoky*
-
-
-
 # <a name="configure-event-collection"></a>Konfigurace shromažďování událostí
 
 Kvůli vylepšení detekčních schopností potřebuje ochrany ATP v programu Azure následující události Windows: 4776, 4732, 4733, 4728, 4729, 4756, 4757 a 7045. Ty můžete buď automaticky číst senzoru služby Azure ATP nebo v případě, že není nasazený senzoru služby Azure ATP, může být přeposílán do samostatného senzoru služby Azure ATP v jednom ze dvou způsobů, tím nakonfigurujete samostatný senzor ochrany ATP v programu Azure tak, aby naslouchala událostem SIEM nebo [Konfigurace předávání událostí Windows](configure-event-forwarding.md).
@@ -129,9 +125,9 @@ Počítač se pokusil o ověření přihlašovacích údajů pro účet.
 
 Ověřovací balíček:              MICROSOFT_AUTHENTICATION_PACKAGE_V1_0
 
-Účet přihlášení: Administrator
+Přihlašovací účet: Správce
 
-Zdrojová pracovní stanice:       SIEM
+Zdrojový pracovní stanice:       SIEM
 
 Kód chyby:         0x0
 
@@ -160,7 +156,7 @@ Kód chyby:         0x0
 -   Pořadí není pro dvojice klíč=hodnota důležité.
 
 ## <a name="qradar"></a>QRadar
-QRadar umožňuje shromažďování událostí prostřednictvím agenta. Pokud se data shromažďují pomocí agenta, formát času se shromažďuje bez údajů o milisekundách. Protože ochrany ATP v programu Azure vyžaduje údajů o milisekundách, je nutné nastavit Qradaru bez agentů shromažďování událostí Windows. Další informace najdete v tématu [http://www-01.ibm.com/support/docview.wss?uid=swg21700170](http://www-01.ibm.com/support/docview.wss?uid=swg21700170 "QRadar: Agentless Windows shromažďování událostí pomocí protokolu MSRPC").
+QRadar umožňuje shromažďování událostí prostřednictvím agenta. Pokud se data shromažďují pomocí agenta, formát času se shromažďuje bez údajů o milisekundách. Protože ochrany ATP v programu Azure vyžaduje údajů o milisekundách, je nutné nastavit Qradaru bez agentů shromažďování událostí Windows. Další informace najdete v tématu [ http://www-01.ibm.com/support/docview.wss?uid=swg21700170 ] (http://www-01.ibm.com/support/docview.wss?uid=swg21700170 "QRadar: Bez agentů shromažďování událostí Windows pomocí protokolu MSRPC").
 
     <13>Feb 11 00:00:00 %IPADDRESS% AgentDevice=WindowsLog AgentLogFile=Security Source=Microsoft-Windows-Security-Auditing Computer=%FQDN% User= Domain= EventID=4776 EventIDCode=4776 EventType=8 EventCategory=14336 RecordNumber=1961417 TimeGenerated=1456144380009 TimeWritten=1456144380009 Message=The computer attempted to validate the credentials for an account. Authentication Package: MICROSOFT_AUTHENTICATION_PACKAGE_V1_0 Logon Account: Administrator Source Workstation: HOSTNAME Error Code: 0x0
 

@@ -12,17 +12,13 @@ ms.prod: ''
 ms.assetid: da0ee438-35f8-4097-b3a1-1354ad59eb32
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9485e3dd70708caf6e3ebbe60d9c006fac0b0163
-ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
+ms.openlocfilehash: 51ce0ca62d29c58475f8f426ee715515cf106193
+ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "52744723"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54459086"
 ---
-*Platí pro: Azure Rozšířená ochrana před internetovými útoky*
-
-
-
 # <a name="azure-atp-capacity-planning"></a>Plánování kapacity v Azure ATP
 Tento článek pomůže určit, kolik ochrany ATP v programu Azure senzory a samostatné senzory, které potřebujete.
 
@@ -32,7 +28,7 @@ Doporučený a nejjednodušší způsob, jak určit kapacitu pro vaše nasazení
 > [!NOTE] 
 > Nástroj pro změnu velikosti má dvě tabulky – jeden pro ochrany ATP v programu Azure a jeden pro ATA. Ujistěte se, že používáte správné list.
 
-- Senzoru služby Azure ATP: shoda **zaneprázdněný Packets/sec** v tabulce senzoru služby Azure ATP v souboru výsledků s **PAKETŮ za SEKUNDU** pole [tabulky senzoru služby Azure ATP](#azure-atp-standalone-sensor-sizing) nebo [Ochrany ATP v programu azure samostatný senzor tabulky](#azure-atp-sensor-sizing), v závislosti na [zvoleného typu senzor](#choosing-the-right-sensor-type-for-your-deployment).
+- Senzor ochrany ATP v programu Azure: Shoda **zaneprázdněný Packets/sec** v tabulce senzoru služby Azure ATP v souboru výsledků s **PAKETŮ za SEKUNDU** pole [tabulky senzoru služby Azure ATP](#azure-atp-standalone-sensor-sizing) nebo [Ochrany ATP v programu azure samostatný senzor tabulky](#azure-atp-sensor-sizing), v závislosti na [zvoleného typu senzor](#choosing-the-right-sensor-type-for-your-deployment).
 
 
 ![Ukázkový nástroj plánování kapacity](media/capacity-tool.png)
@@ -76,12 +72,12 @@ Senzoru služby Azure ATP může podporovat monitorování jednoho řadiče dom�
 
 |Paketů za sekundu *|Procesor (jádra)|Paměť (GB)|
 |----|----|-----|
-|0 – 1 tis.|0.25|2.50|
-|1-5 tis.|0.75|6.00|
+|0-1k|0.25|2.50|
+|1k-5k|0.75|6.00|
 |5-10 tis.|1.00|6.50|
-|10-20 tis.|2.00|9,00|
+|10k-20k|2.00|9.00|
 |20 – 50 tis.|3.50|9.50|
-|50-75 tis. |3.50|9.50|
+|50k-75k |3.50|9.50|
 |75 100 tis.|3.50 |9.50|
 
 > [!NOTE]

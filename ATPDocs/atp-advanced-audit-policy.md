@@ -13,16 +13,13 @@ ms.technology: ''
 ms.assetid: ab1e8dd9-a6c2-4c68-89d5-343b8ec56142
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: cae81a20ae5494e18b1e12eec6ffb1a9c9465ca5
-ms.sourcegitcommit: b11433f7d454231a62f64c9d9bfa1355ecf91075
+ms.openlocfilehash: 8d7d8bc8ce6c1aefb95b5770a103859fed74efe1
+ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54403627"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54458627"
 ---
-*Platí pro: Azure Advanced Threat Protection*
-
-
 # <a name="azure-atp-advanced-audit-policy-check"></a>Kontrola zásad auditu rozšířené ochrany ATP v programu Azure
 
 Azure ATP detekce spoléhá na konkrétní Windows protokoly událostí pro viditelnost v některých scénářích, jako je například přihlašování, úpravy skupin zabezpečení a podobné události protokolu NTLM. Pro správné události, které mají být auditovat a zahrnuty v protokolu událostí Windows řadiče domény vyžadují nastavení přesné pokročilé zásady auditu. Nesprávné nastavení Pokročilé zásady auditu ponechte kritické události z protokolů a výsledků v pokrytí nebudou úplná ochrany ATP v programu Azure.

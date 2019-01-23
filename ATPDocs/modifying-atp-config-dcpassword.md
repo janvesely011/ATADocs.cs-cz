@@ -13,17 +13,13 @@ ms.technology: ''
 ms.assetid: e7f065fa-1ad1-4e87-bd80-99cc695efbf5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a5b0befaa484a94cf307559296c887370228abb4
-ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
+ms.openlocfilehash: 42ec5782ec870a0f878485aa1e65487287f2c4a2
+ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "52744298"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54458865"
 ---
-*Platí pro: Azure Rozšířená ochrana před internetovými útoky*
-
-
-
 # <a name="change-azure-atp-portal-configuration---domain-connectivity-password"></a>Změna konfigurace portálu ochrany ATP v programu Azure – heslo připojení k doméně
 
 

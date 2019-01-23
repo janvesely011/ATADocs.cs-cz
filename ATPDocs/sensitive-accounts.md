@@ -13,17 +13,13 @@ ms.technology: ''
 ms.assetid: 43e57f87-ca85-4922-8ed0-9830139fe7cb
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 75a450b9ddea9c47d12f9c14da2ee6c3089775ea
-ms.sourcegitcommit: 8f9d6c517b91b9b389b604cd85f2482593b36fcf
+ms.openlocfilehash: fbaabd0a8ebc7028615b47b32a704d18a4fede2e
+ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53654871"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54458916"
 ---
-*Platí pro: Azure Advanced Threat Protection*
-
-
-
 # <a name="working-with-sensitive-accounts"></a>Práce s citlivými účty
 
 ## <a name="sensitive-groups"></a>Citlivé skupiny

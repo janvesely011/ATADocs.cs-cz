@@ -13,15 +13,13 @@ ms.technology: ''
 ms.assetid: feea1982-ba23-48be-a468-98d2586cf840
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 59da5e27433ba4ce38e05d4e723f763cf48ca23d
-ms.sourcegitcommit: c3ee9495b9d4db985783dcabcc4fa77c7c8eaed4
+ms.openlocfilehash: 92562ba852636389b5fe3358fc139bb208bfab12
+ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/17/2018
-ms.locfileid: "53454474"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54458763"
 ---
-*Platí pro: Azure Advanced Threat Protection*
-
 # <a name="azure-atp-known-issues"></a>Azure – ochrana ATP v programu známé problémy
 
 Ochrana ATP v programu Azure má občas inženýrství nebo funkce omezení, které mohou omezit nebo změnit způsob, jak vaše organizace používá služby Azure ATP. Známá omezení potíže, které mají žádné známé alternativní řešení nebo stav probíhající práce bez časové osy konkrétní aktualizace jsou zde popsány. 

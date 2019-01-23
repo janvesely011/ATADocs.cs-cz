@@ -13,15 +13,13 @@ ms.technology: ''
 ms.assetid: de15c920-8904-4124-8bdc-03abd9f667cf
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 40faae88e209b8b737dbc7ef364f17a8b82a4d52
-ms.sourcegitcommit: eac0aa855270b550dfb4b8c61b9cf0953f1e5204
+ms.openlocfilehash: 88a7d5e23cc6b3f1202f522e40060e71f676397f
+ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52298108"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54459069"
 ---
-*Platí pro: Azure Rozšířená ochrana před internetovými útoky*
-
 # <a name="azure-atp-lateral-movement-paths-lmps"></a>Azure ATP laterální pohyb cesty (LMPs) 
 
 Laterální pohyb je, když útočník pomocí tohoto počtu účtů pro přístup k citlivým účtům v celé síti. Laterální pohyb útočníci slouží k identifikaci a získat přístup k citlivým účtům a počítačů v síti, které sdílejí přihlašovací údaje uložené v účtů, skupin a počítačů. Jakmile útočník Díky úspěšné laterální přibližování klíčových cílů, útočník můžete také využít a získat přístup k vašim řadičům domény. Laterální pohyb útoky provádějí pomocí řady metod popsaných v [Průvodce prošetřováním podezřelých aktivit](suspicious-activity-guide.md).

@@ -13,17 +13,13 @@ ms.technology: ''
 ms.assetid: 17458706-79fb-4c23-aa42-66979164a45f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a36afd4997a2f148bc5a31726aee22914a3607b4
-ms.sourcegitcommit: f4f2a1b2c674c4dba7a46ece0624f5ea10c4865e
+ms.openlocfilehash: 8c80529c5111c909bd5e2b1b0ff17933e4f30b18
+ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "52744366"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54458644"
 ---
-*Platí pro: Azure Rozšířená ochrana před internetovými útoky*
-
-
-
 # <a name="understanding-entity-profiles"></a>Principy profily entit
 
 Profil entity vám poskytne komplexní entity stránky navržené pro celý podrobný rozbor šetření uživatelů, počítačů, zařízení, prostředky, které mají přístup k a jejich historie. Na stránce Profil využívá výhod nových překladač logické aktivity ochrany ATP v programu Azure, který můžete podívat na skupinu aktivit, ke kterým dochází (agregované až minutu) a seskupovat je do jedné logické aktivity umožňují lépe pochopit skutečné aktivity vaši uživatelé.

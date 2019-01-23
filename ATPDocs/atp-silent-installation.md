@@ -13,16 +13,13 @@ ms.technology: ''
 ms.assetid: 24eca4c6-c949-42ea-97b9-41ef0fb611f1
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: fec3ccbf44b4637132d769e35c4c83f7a4b5e5f5
-ms.sourcegitcommit: bdf5dc203ecec3e7542f2ed08852afeff4f20dcd
+ms.openlocfilehash: 0ea45387ba92bea36e0599f3258da58e12a1fa82
+ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52950318"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54459018"
 ---
-*Platí pro: Azure Rozšířená ochrana před internetovými útoky*
-
-
 # <a name="azure-atp-switches-and-silent-installation"></a>Azure ATP přepínače a bezobslužná instalace
 Tento článek obsahuje pokyny pro služby Azure ATP přepínače a tichou instalaci.
 
@@ -74,9 +71,9 @@ Použijte následující příkaz k provedení plně tiché instalace senzoru sl
 > [!div class="mx-tableFixed"]
 |Název|Syntaxe|Povinné pro bezobslužnou instalaci?|Popis|
 |-------------|----------|---------|---------|
-|accessKey|AccessKey = "\*\*"|Ano|Nastaví přístupový klíč, který se použije k registraci senzoru služby Azure ATP s instancí služby Azure ATP.|
+|AccessKey|AccessKey="\*\*"|Ano|Nastaví přístupový klíč, který se použije k registraci senzoru služby Azure ATP s instancí služby Azure ATP.|
 
-**Příklady**: bezobslužné instalace senzoru služby Azure ATP použijte následující příkaz:
+**Příklady**: Bezobslužná instalace senzoru služby Azure ATP použijte následující příkaz:
 
     "Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" 
     AccessKey="3WlO0uKW7lY6Lk0+dfkfkJQ0qZV6aSq5WxLf71+fuBhggCl/BMs9JxfAwi7oy9vYGviazUS1EPpzte7z8s4grw==" 
@@ -101,13 +98,13 @@ K bezobslužné aktualizaci senzoru služby Azure ATP použijte následující p
 |NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Ano|Určuje parametry pro instalaci rozhraní .Net Framework. K vynucení bezobslužné instalace rozhraní .Net Framework musí být nastavené.|
 
 
-**Příklady**: bezobslužná aktualizace senzoru služby Azure ATP:
+**Příklady**: Bezobslužná aktualizace senzoru služby Azure ATP:
 
     Azure ATP sensor Setup.exe /quiet NetFrameworkCommandLineArguments="/q"
 
 ## <a name="uninstall-the-azure-atp-sensor-silently"></a>Bezobslužná odinstalace senzoru služby Azure ATP
 
-Použijte následující příkaz k provedení bezobslužné odinstalace senzoru služby Azure ATP: **syntaxe**:
+Použijte následující příkaz k provedení bezobslužné odinstalace senzoru služby Azure ATP: **Syntaxe**:
 
     Azure ATP sensor Setup.exe [/quiet] [/Uninstall] [/Help]
     
@@ -120,7 +117,7 @@ Použijte následující příkaz k provedení bezobslužné odinstalace senzoru
 |Odinstalace|/uninstall|Ano|Spustí bezobslužnou odinstalaci senzoru služby Azure ATP ze serveru.|
 |Nápověda|/help|Ne|Poskytuje nápovědu a stručnou referenční příručku. Zobrazí správné použití instalačních příkazů včetně seznamu všech možností a jejich chování.|
 
-**Příklady**: bezobslužná odinstalace senzoru služby Azure ATP ze serveru:
+**Příklady**: Bezobslužná odinstalace senzoru služby Azure ATP ze serveru:
 
 
     Azure ATP sensor Setup.exe /quiet /uninstall

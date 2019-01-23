@@ -13,16 +13,13 @@ ms.technology: ''
 ms.assetid: 4308f03e-b2a7-4e38-a750-540ff94faa81
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 79368731bcfef923466d566f06fe775ebf1caeac
-ms.sourcegitcommit: e783df4c9d928fedf6dc3c65d58d9b530cdd2ff2
+ms.openlocfilehash: aec544a31bdb11282e1259103ffa43411263f830
+ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49800031"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54458559"
 ---
-*Platí pro: Azure Rozšířená ochrana před internetovými útoky*
-
-
 # <a name="set-azure-atp-notifications"></a>Nastavení oznámení služby Azure ATP
 
 Ochrana ATP v programu Azure může upozornit, když zjistí podezřelou aktivitu a vydá výstrahu zabezpečení nebo e-mailem upozornění stavu. 

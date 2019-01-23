@@ -13,28 +13,26 @@ ms.technology: ''
 ms.assetid: f6f3ed75-d6bb-4966-a9a7-5339c4f3ebac
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 52445e15a4465f0fa4b399cf99ccf6620db7a572
-ms.sourcegitcommit: 59ed430fa0cd8ac34a70609026ec5fc2f5972f57
+ms.openlocfilehash: 2ff18759e23462a2b01a10f45729b5a282495347
+ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/21/2018
-ms.locfileid: "49480680"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54458811"
 ---
-*Platí pro: Azure Rozšířená ochrana před internetovými útoky*
-
 # <a name="integrate-azure-atp-with-windows-defender-atp"></a>Integrace ochrany ATP v programu Azure s programem Windows Defender ATP
 
 Azure Advanced Threat Protection umožňuje integrovat ochrany ATP v programu Azure s Windows Defender ATP pro ještě podrobnější řešení ochrany před hrozbami. Během ochrany ATP v programu Azure monitoruje provoz na řadičích domény, ochrana ATP v programu Windows Defender monitoruje vaše koncové body společně poskytuje tak jednotné rozhraní, ze kterého budete moci chránit vaše prostředí.
 
 Prostřednictvím integrace ochrany ATP v programu Windows Defender do ochrany ATP v programu Azure, můžete plně využívat potenciál obou služeb a zabezpečit vaše prostředí, včetně:
 
-- Azure ATP senzory a samostatné senzorů: může být umístěn souběžně přímo na řadiče domény nebo zrcadlení portů z řadičů domény do ochrany ATP v programu, k zachycení a parsování síťového provozu různých protokolů (například Kerberos, DNS, RPC, NTLM a další) pro ověřování autorizaci a shromažďování informací. 
+- Azure ochrany ATP v programu senzory a samostatné senzory: Může být umístěn souběžně přímo na řadiče domény nebo zrcadlení portů z řadičů domény do ochrany ATP v programu, k zachycení a parsování síťového provozu různých protokolů (například Kerberos, DNS, RPC, NTLM a další) pro ověřování, autorizaci a shromažďování informací. 
 
--   Senzory chování koncového bodu: vložený ve Windows 10, tyto senzory shromažďovat a zpracovávat chování signály od operačního systému (například proces, registr, souboru a síťovou komunikaci) a odesílat tato data ze senzorů do izolovaného, vašeho privátního cloudu instance ochrany ATP v programu Windows Defender.
+-   Senzory chování koncového bodu: Součástí Windows 10, tyto senzory shromažďovat a zpracovávat chování signály od operačního systému (například proces, registr, souboru a síťovou komunikaci) a odesílat tato data ze senzorů k vaší instanci cloudu privátní, izolované, z ochrany ATP v programu Windows Defender.
 
-- Analýzy zabezpečení v cloudu: využití velkých objemů dat, machine learning a jedinečný Microsoft zobrazení v ekosystému Windows (například [nástroj pro odstranění škodlivého softwaru Microsoft](https://www.microsoft.com/download/malicious-software-removal-tool-details.aspx)), cloudové produkty enterprise (např. Office 365) a online prostředků (jako je Bing a adresu URL SmartScreen urs) chování signály přeložit na přehledy, detekce a doporučuje pokročilé hrozby.
+- Analýzy zabezpečení cloudu: Využití velkých objemů dat, machine learning a jedinečný Microsoft zobrazení v ekosystému Windows (například [nástroj pro odstranění škodlivého softwaru Microsoft](https://www.microsoft.com/download/malicious-software-removal-tool-details.aspx)), cloudové produkty enterprise (např. Office 365) a online prostředků (například Bing a adresu URL SmartScreen urs) chování signály jsou přeloženy na přehledy, detekce a doporučuje pokročilé hrozby.
 
-- Hrozeb: generovaný myslivci Microsoft teams zabezpečení a rozšířen o analýzy hrozeb, které jsou k dispozici od partnerů, threat intelligence umožňuje programu Windows Defender ATP identifikovat útočník nástroje, technik, postupy a generování upozornění pro případ Tyto aktivity jsou dodržovány v datech shromážděných senzoru.
+- Analýza hrozeb: Generovaný myslivci Microsoft teams zabezpečení a rozšířen o poskytovaných partnery analýzy hrozeb, analýzy hrozeb umožňuje programu Windows Defender ATP identifikovat útočník nástroje, technik, postupy a generovat výstrahy, když jsou tyto aktivity pozorovaná v daty ze snímačů shromážděná.
 
 Technologie ochrany ATP v programu Azure detekuje různé podezřelé aktivity, zaměřuje se na několik fází v řetězci kill internetového útoku včetně:
 

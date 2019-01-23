@@ -12,17 +12,13 @@ ms.technology: ''
 ms.assetid: 0a56cf27-9eaa-4ad0-ae6c-9d0484c69094
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 0d9e2bcbbe2635765f1bcce9ee1367c1d3895080
-ms.sourcegitcommit: 27cf312b8ebb04995e4d06d3a63bc75d8ad7dacb
+ms.openlocfilehash: f11a80edae80eb12c8973965ee9f55fcad6d3da6
+ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48783436"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54458389"
 ---
-*Platí pro: Azure Rozšířená ochrana před internetovými útoky*
-
-
-
 # <a name="validate-port-mirroring"></a>Ověření zrcadlení portů
 > [!NOTE] 
 > Tento článek je relevantní pouze pokud nasazujete nasadit samostatný senzor ochrany ATP v programu Azure místo senzor ochrany ATP v programu Azure. Pokud chcete zjistit, pokud budete muset použít snímač ochrany ATP v programu Azure, najdete v článku [výběr správné senzor pro vaše nasazení](atp-capacity-planning.md#choosing-the-right-sensor-type-for-your-deployment).
@@ -45,7 +41,7 @@ Následující kroky vás provedou procesem ověření, že je zrcadlení portů
 
         ![Obrázek karty Vytvořit nové zachytávání](media/atp-port-mirroring-capture.png)
 
-3.  V okně filtru zobrazení zadejte filtr **KerberosV5 nebo LDAP** a potom klikněte na **Použít**.
+3.  V okně filtru zobrazení zadejte filtr: **KerberosV5 nebo LDAP** a potom klikněte na tlačítko **použít**.
 
     ![Obrázek použití filtru KerberosV5 nebo LDAP](media/atp-port-mirroring-filter-settings.png)
 

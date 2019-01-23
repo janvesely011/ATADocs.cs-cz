@@ -13,15 +13,13 @@ ms.technology: ''
 ms.assetid: d0551e91-3b21-47d5-ad9d-3362df6d47c0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: b7a077e1cdfd3356b6d199e31728bd2a619ba6c0
-ms.sourcegitcommit: b11433f7d454231a62f64c9d9bfa1355ecf91075
+ms.openlocfilehash: 084e3752953077b4be8678e6c98a73cb99bc9587
+ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54403848"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54459103"
 ---
-*Platí pro: Azure Advanced Threat Protection*
-
 # <a name="understanding-azure-atp-sensor-and-standalone-sensor-monitoring-alerts"></a>Principy senzoru služby Azure ATP a samostatný senzor výstrah monitorování
 
 Health Center ochrany ATP v programu Azure vám umožňuje vědět, že dojde k nějakému problému s vaší instancí služby Azure ATP vyvoláním monitorovacího upozornění. Tento článek popisuje všechna monitorovací upozornění jednotlivých komponent včetně příčiny a postupu vedoucího k vyřešení problému.
