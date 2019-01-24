@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 0b3a1db5-0d43-49af-b356-7094cc85f0a5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 6d9d43cba99e2d3c14eb8631ca8cd4030ff9d793
-ms.sourcegitcommit: 443e6c07788938960555046def389a1503c259a4
+ms.openlocfilehash: 929dfae084bbce8f831c55d042f7765ddfd64019
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/20/2019
-ms.locfileid: "54417299"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840842"
 ---
 # <a name="tutorial-domain-dominance-alerts"></a>Kurz: Upozornění dominance v doméně  
 
@@ -299,22 +299,23 @@ Ve výstraze Golden Ticket, metoda šifrování pole TGT v TGS_REQ (žádost o s
 **TP, B-TP nebo FP**
 <br>Některé legitimní materiálů nepodporují silné šifrování šifry a toto upozornění mohou aktivovat. 
 
-2. Všichni uživatelé zdroje sdílí něco společné? 
-    1. Například všechny marketingové pracovníky ve vaší organizaci přistupují konkrétní prostředek, který by mohl způsobit aktivovat upozornění?
-    2. Podívejte se na zdroje přistupuje těchto lístků. 
-        - Zaškrtnutím tohoto políčka ve službě Active Directory tak, že zkontrolujete atribut *msDS-SupportedEncryptionTypes*, prostředků účtu služby.
-    3. Pokud existuje pouze jeden prostředek, ke kterému přistupujete, zkontrolujte, jestli je platný prostředek tito uživatelé mají přístup.  
 
-    Pokud je odpověď na jednu z předchozí otázky **Ano**, je pravděpodobné, že **T BP** aktivity. Zkontrolujte prostředku může podporovat silné šifrování šifer s nižší sílou,-li implementovat šifer s nižší sílou silnější šifrování, kde je to možné, a **Zavřít** dané výstraze zabezpečení.
+1. Všichni uživatelé zdroje sdílí něco společné? 
+   1. Například všechny marketingové pracovníky ve vaší organizaci přistupují konkrétní prostředek, který by mohl způsobit aktivovat upozornění?
+   2. Podívejte se na zdroje přistupuje těchto lístků. 
+       - Zaškrtnutím tohoto políčka ve službě Active Directory tak, že zkontrolujete atribut *msDS-SupportedEncryptionTypes*, prostředků účtu služby.
+   3. Pokud existuje pouze jeden prostředek, ke kterému přistupujete, zkontrolujte, jestli je platný prostředek tito uživatelé mají přístup.  
+
+      Pokud je odpověď na jednu z předchozí otázky **Ano**, je pravděpodobné, že **T BP** aktivity. Zkontrolujte prostředku může podporovat silné šifrování šifer s nižší sílou,-li implementovat šifer s nižší sílou silnější šifrování, kde je to možné, a **Zavřít** dané výstraze zabezpečení.
 
 Aplikace může ověřit pomocí nižší šifry šifrování. Některé se ověřují jménem uživatelů, jako jsou třeba servery služby IIS a SQL. 
 
 1. Kontrolovat, jestli zdroj uživatelé mají něco společné.         
-    - Například všechny pracovníky prodejní používají konkrétní aplikaci, která se můžou aktivovat upozornění?
-    - Zkontrolujte, jestli jsou aplikace tohoto typu na zdrojovém počítači. 
-    - Zkontrolujte role počítače. <br>Jde o servery, které pracují s těmito typy aplikací? 
+   - Například všechny pracovníky prodejní používají konkrétní aplikaci, která se můžou aktivovat upozornění?
+   - Zkontrolujte, jestli jsou aplikace tohoto typu na zdrojovém počítači. 
+   - Zkontrolujte role počítače. <br>Jde o servery, které pracují s těmito typy aplikací? 
 
-    Pokud je odpověď na jednu z předchozí otázky **Ano**, je pravděpodobné, že **T BP** aktivity. Zkontrolujte prostředku může podporovat silné šifrování šifer s nižší sílou,-li implementovat šifer s nižší sílou silnější šifrování, kde je to možné, a **Zavřít** dané výstraze zabezpečení.
+     Pokud je odpověď na jednu z předchozí otázky **Ano**, je pravděpodobné, že **T BP** aktivity. Zkontrolujte prostředku může podporovat silné šifrování šifer s nižší sílou,-li implementovat šifer s nižší sílou silnější šifrování, kde je to možné, a **Zavřít** dané výstraze zabezpečení.
 
 
 **Vysvětlení rozsahu porušení**
@@ -420,9 +421,9 @@ Služba FS může vygenerovat lístků, které aktivuje toto upozornění.
     - Pokud máte nainstalovaný – programu Windows Defender ATP použít **vyprázdnit klist.exe** odstranit všechny lístky zadané přihlašovací relace a zabránit dalším využívání lístky.
 2. Obsahují prostředky, které byly zpřístupněny tohoto lístku.
 3. Změnit heslo protokolu Kerberos KRBTGT Ticket Granting Ticket () dvakrát podle pokynů v [KRBTGT účet skriptů pro resetování hesla nyní k dispozici pro zákazníky, kteří](https://cloudblogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), použije [resetování hesla/klíčů účtu KRBTGT Nástroj](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). 
-    - Obnovení účtu KRBTGT dvojím zruší platnost všechny lístky protokolu Kerberos v této doméně. Zrušení platnosti všechny lístky protokolu Kerberos v doméně znamená **všechny** služby jsou přerušeno a nelze opět fungovat, dokud nebude obnoven, nebo v některých případech se služba restartuje. 
+   - Obnovení účtu KRBTGT dvojím zruší platnost všechny lístky protokolu Kerberos v této doméně. Zrušení platnosti všechny lístky protokolu Kerberos v doméně znamená **všechny** služby jsou přerušeno a nelze opět fungovat, dokud nebude obnoven, nebo v některých případech se služba restartuje. 
 
-    **Pečlivě naplánujte, než se pustíte do dvojitých resetování KRBTGT. Obnovení má vliv na všechny počítače, servery a uživatelů v rámci prostředí.**
+     **Pečlivě naplánujte, než se pustíte do dvojitých resetování KRBTGT. Obnovení má vliv na všechny počítače, servery a uživatelů v rámci prostředí.**
 
 ## <a name="suspected-golden-ticket-usage-time-anomaly-external-id-2022"></a>Podezřelé použití Golden Ticket (čas anomálií) (externí ID 2022) 
 
@@ -448,11 +449,11 @@ Pokud je odpověď na předchozí otázky **Ano**, **Zavřít** dané výstraze 
     - Najít nástroj, který provádí útoku a jeho odebrání.
     - Vyhledejte uživatelé přihlášení přibližně ve stejnou dobu jako aktivity, jak může být ohrožena. Resetování hesel a povolení vícefaktorového ověřování.
     - Pokud máte nainstalovaný – programu Windows Defender ATP použít **vyprázdnit klist.exe** odstranit všechny lístky zadané přihlašovací relace a zabránit dalším využívání lístky.
-3. Obsahují prostředky, které přistupuje tento lístek.
-4. Změnit heslo protokolu Kerberos KRBTGT Ticket Granting Ticket () dvakrát podle pokynů v [KRBTGT účet skriptů pro resetování hesla nyní k dispozici pro zákazníky, kteří](https://cloudblogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), použije [resetování hesla/klíčů účtu KRBTGT Nástroj](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). 
-    - Obnovení účtu KRBTGT dvojím zruší platnost všechny lístky protokolu Kerberos v této doméně. Zrušení platnosti všechny lístky protokolu Kerberos v doméně znamená **všechny** služby se přeruší a nebudou fungovat znovu, dokud se obnovit nebo v některých případech se službu restartovat. 
+2. Obsahují prostředky, které přistupuje tento lístek.
+3. Změnit heslo protokolu Kerberos KRBTGT Ticket Granting Ticket () dvakrát podle pokynů v [KRBTGT účet skriptů pro resetování hesla nyní k dispozici pro zákazníky, kteří](https://cloudblogs.microsoft.com/microsoftsecure/2015/02/11/krbtgt-account-password-reset-scripts-now-available-for-customers/), použije [resetování hesla/klíčů účtu KRBTGT Nástroj](https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51). 
+   - Obnovení účtu KRBTGT dvojím zruší platnost všechny lístky protokolu Kerberos v této doméně. Zrušení platnosti všechny lístky protokolu Kerberos v doméně znamená **všechny** služby se přeruší a nebudou fungovat znovu, dokud se obnovit nebo v některých případech se službu restartovat. 
 
-    **Pečlivě naplánujte, než se pustíte do dvojitých resetování KRBTGT. Obnovení má vliv na všechny počítače, servery a uživatelů v rámci prostředí.**
+     **Pečlivě naplánujte, než se pustíte do dvojitých resetování KRBTGT. Obnovení má vliv na všechny počítače, servery a uživatelů v rámci prostředí.**
 
 ## <a name="suspected-skeleton-key-attack-encryption-downgrade-external-id-2010"></a>Podezření na útok typu skeleton key (oslabení šifrování) (externí 2010 ID) 
 

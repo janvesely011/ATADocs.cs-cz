@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 88692d1a-45a3-4d54-a549-4b5bba6c037b
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 5d73f4ba4a37511027334a057878de3573888692
-ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
+ms.openlocfilehash: 640ea2ab75d4388381f9789dcac5399fa1327d05
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54458933"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840637"
 ---
 # <a name="configure-event-collection"></a>Konfigurace shromažďování událostí
 
@@ -32,12 +32,12 @@ Kromě shromažďování a analýzy síťového provozu do a z řadičů domény
 ## <a name="siemsyslog"></a>SIEM/Syslog
 Pro služby Azure ATP mohli zpracovat data ze serveru Syslog je třeba provést následující kroky:
 
--   Konfigurace serverů senzoru služby Azure ATP pro poslouchat a přijímat události, které jsou předávány ze serveru SIEM/Syslog.
+- Konfigurace serverů senzoru služby Azure ATP pro poslouchat a přijímat události, které jsou předávány ze serveru SIEM/Syslog.
 
- > [!NOTE]
- > Ochrana ATP v programu Azure naslouchá jenom na IPv4 a IPv6 není. 
+  > [!NOTE]
+  > Ochrana ATP v programu Azure naslouchá jenom na IPv4 a IPv6 není. 
 
--   Nakonfigurujte server SIEM/Syslog, aby předávání určitých událostí na senzoru služby Azure ATP.
+- Nakonfigurujte server SIEM/Syslog, aby předávání určitých událostí na senzoru služby Azure ATP.
 
 > [!IMPORTANT]
 > -   Nepřeposílat všechna data Syslogu na senzoru služby Azure ATP.

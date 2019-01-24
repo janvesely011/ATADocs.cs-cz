@@ -13,18 +13,17 @@ ms.technology: ''
 ms.assetid: 7620e171-76d5-4e3f-8b03-871678217a3a
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 072abaef05432184653d260c43470e86a38d29db
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 09d471710a987db332a84f0e38a761a3b1e4ed16
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133554"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54839953"
 ---
+# <a name="ata-disaster-recovery"></a>Zotavení po havárii ATA
+
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
-
-
-# <a name="ata-disaster-recovery"></a>Zotavení po havárii ATA
 Tento článek popisuje postup rychlého zotavení komponenty ATA Center a obnovení funkcí ATA v případě, kdy přijdete o funkce ATA Center, ale komponenty ATA Gateways dále fungují. 
 
 >[!NOTE]
@@ -40,8 +39,8 @@ Tento článek popisuje postup rychlého zotavení komponenty ATA Center a obnov
     3. Postupujte podle pokynů pro export certifikátu a nezapomeňte vyexportovat také privátní klíč.
     4. Vyexportovaný soubor certifikátu zazálohujte na oddělený počítač.
 
-  > [!NOTE] 
-  > Pokud privátní klíč exportovat nejde, musíte vytvořit nový certifikát a nasadit ho do ATA podle postupu uvedeného v části [Změna certifikátu ATA Center](modifying-ata-center-configuration.md). Pak ho vyexportujte. 
+   > [!NOTE] 
+   > Pokud privátní klíč exportovat nejde, musíte vytvořit nový certifikát a nasadit ho do ATA podle postupu uvedeného v části [Změna certifikátu ATA Center](modifying-ata-center-configuration.md). Pak ho vyexportujte. 
 
 ## <a name="recover-your-ata-center"></a>Obnovení vašeho ATA Center
 

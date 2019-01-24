@@ -13,18 +13,17 @@ ms.technology: ''
 ms.assetid: 581a3257-32dc-453f-b84e-b9f99186f5d3
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: a34d25e59183e496350216f5d3043430cd65bca6
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: bc5eda18d9b126fbde8e79c0b65aa04bdc42e90c
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133445"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54839811"
 ---
-*Platí pro: Advanced Threat Analytics verze 1.9*
-
-
-
 # <a name="investigating-entity-profiles"></a>Zkoumání profily entit
+
+
+*Platí pro: Advanced Threat Analytics verze 1.9*
 
 Profil entity obsahuje, můžete s řídicím panelem určená pro celý podrobný rozbor šetření uživatelů, počítačů, zařízení a prostředky, které mají přístup k a jejich historie. Na stránce Profil využívá nové translator logické aktivity ATA, která může podívat na skupinu aktivit, ke kterým dochází (souhrn až minutu) a seskupovat je do jedné logické aktivity umožňují lépe pochopit skutečné aktivity vaší uživatelé.
 

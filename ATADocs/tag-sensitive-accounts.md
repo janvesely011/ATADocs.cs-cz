@@ -13,18 +13,17 @@ ms.technology: ''
 ms.assetid: 40a1c5c4-b8d6-477c-8ae5-562b37661624
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: cea6d666d3d969070541fc8dcc4fd59726ac8c38
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 8a7c5120f72a341fd4784b68fedb0231de6e98c4
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46134077"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840198"
 ---
-*Platí pro: Advanced Threat Analytics verze 1.9*
-
-
-
 # <a name="tag-sensitive-accounts"></a>Označování citlivých účtů
+
+
+*Platí pro: Advanced Threat Analytics verze 1.9*
 
 Můžete ručně označit skupiny nebo účty jako citlivé vylepšit detekce. Je důležité, abyste měli jistotu, že to je aktualizovat, protože některé detekce ATA, jako je například zjišťování úpravy citlivých skupin a cesty laterální pohyb, závisí na jaké skupiny a účty se považují za citlivé. Dříve, ATA automaticky považována za entity *citlivé* Pokud byl členem konkrétní seznam skupin. Nově můžete ručně označit jiné uživatele nebo skupiny jako citlivé, jako je například členů vedení společnosti, ředitel pro prodej, atd. a ATA bude předpokládat, že jejich citlivé.
 
@@ -47,7 +46,7 @@ Můžete ručně označit skupiny nebo účty jako citlivé vylepšit detekce. J
 
 Následující seznam skupin se považují za citlivé řešením ATA. Za citlivou se považuje každá entita, která je členem těchto skupin:
 
--   Administrators
+-   Správci
 -   Power Users
 -   Account Operators
 -   Server Operators
@@ -65,5 +64,5 @@ Následující seznam skupin se považují za citlivé řešením ATA. Za citliv
 -   Schema Admins 
 -   Enterprise Admins
      
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)

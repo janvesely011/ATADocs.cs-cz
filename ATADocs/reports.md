@@ -13,17 +13,17 @@ ms.technology: ''
 ms.assetid: 38ea49b5-cd5e-43e5-bc39-5071f759633b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 8e50b68c91cc1431875d7aba33f765c87615ff9f
-ms.sourcegitcommit: b11433f7d454231a62f64c9d9bfa1355ecf91075
+ms.openlocfilehash: ea63b6966cc933fcb0a4c748e5b4de511895c483
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54403582"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840331"
 ---
-*Platí pro: Advanced Threat Analytics verze 1.9*
-
-
 # <a name="ata-reports"></a>Sestavy ATA
+
+
+*Platí pro: Advanced Threat Analytics verze 1.9*
 
 Část pro sestavy ATA v konzole umožňuje generovat sestavy, které poskytují informace o stavu systému obsahující informace o stavu i podezřelých aktivitách zjištěných ve vašem prostředí.
 
@@ -53,8 +53,8 @@ Nastavení naplánované sestavy:
 
    ![Plánování sestav](./media/ata-sched-reports.png)
 
-  > [!NOTE]
-  > Denní sestavy jsou určeny k odeslány brzy po půlnoci UTC.
+   > [!NOTE]
+   > Denní sestavy jsou určeny k odeslány brzy po půlnoci UTC.
 
 2. Klikněte na tlačítko **plán** vedle vašeho typu vybranou sestavu, nastavit četnost a e-mailovou adresu pro doručení sestav a klikněte na znaménko plus vedle e-mailové adresy je přidat, a klikněte na **Uložit**.
 

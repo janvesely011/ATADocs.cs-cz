@@ -13,16 +13,17 @@ ms.technology: ''
 ms.assetid: 283e7b4e-996a-4491-b7f6-ff06e73790d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 20e11445548e121b09931399a13077c0c5931446
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 1cbb690fd65a4d8f2b721527b501b47646a66f4f
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133446"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54839851"
 ---
-*Platí pro: Advanced Threat Analytics verze 1.9*
-
 # <a name="what-threats-does-ata-look-for"></a>Jaké hrozby ATA vyhledává?
+
+
+*Platí pro: Advanced Threat Analytics verze 1.9*
 
 ATA zajišťuje detekci pro následující fáze pokročilých útoků: rekognoskace, zneužití přihlašovacích údajů, laterální pohyb, zvýšení úrovně oprávnění, dominance v doméně a další. Tyto detekce jsou zaměřené na zjišťování pokročilých útoků a vnitřních hrozeb ještě předtím, než mohou ve vaší organizaci způsobit škody.
 Výsledkem detekce v jednotlivých fázích je několik podezřelých aktivit relevantních pro danou fázi. Každá podezřelá aktivita je v korelaci s různými charakteristikami možných útoků.
@@ -34,11 +35,11 @@ Na následujícím obrázku jsou zvýrazněné fáze v řetězci úkonů útočn
 Další informace najdete v tématu [práce s podezřelými aktivitami](working-with-suspicious-activities.md) a [Průvodce prošetřováním podezřelých aktivit ATA](suspicious-activity-guide.md).
 
 
-## <a name="whats-next"></a>Co dál?
+## <a name="whats-next"></a>Co dále?
 
--   Další informace o zapojení řešení ATA do vaší sítě najdete v tématu [Architektura ATA](ata-architecture.md).
+-   Další informace o zapojení řešení ATA do vaší sítě: [Architektura ATA](ata-architecture.md)
 
--   Pokud chcete začít s nasazením ATA, přečtěte si téma [Instalace ATA](install-ata-step1.md).
+-   Abyste mohli začít nasazením ATA: [Instalace ATA](install-ata-step1.md)
 
 
 ## <a name="see-also"></a>Viz také

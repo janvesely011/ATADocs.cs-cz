@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 2d14d0e9-1b03-4bcc-ae97-8fd41526ffc5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d5cdeab9f883a5d9bfb10ed0e7e611de9fcbd77b
-ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
+ms.openlocfilehash: 345b6285dbef34d0a72e789fc3d884214be4b79d
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54459039"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840930"
 ---
 # <a name="what-is-azure-advanced-threat-protection"></a>Co je Azure Advanced Threat Protection?
 Azure Protection pokročilé před internetovými útoky (ATP) je řešení cloudového zabezpečení, které identifikuje a detekuje, vám pomůže prozkoumat důmyslné hrozby, ohrožení zabezpečení identity a zlými úmysly akce zaměřené na vaší organizaci. Ochrana ATP v programu Azure umožňuje analytikům SecOp a jenom pro detekci pokročilých útoků v hybridních prostředích pro odborníky v oblasti zabezpečení:  
@@ -63,7 +63,7 @@ Ochrana ATP v programu Azure slouží k obecné výstrahy nepůsobily, pouze rel
 [https://www.yammer.com/azureadvisors/#/threads/inGroup?type=in_group&feedId=9386893](https://www.yammer.com/azureadvisors/#/threads/inGroup?type=in_group&feedId=9386893 "Komunita Azure ochrany ATP v Yammeru")
  
 ### <a name="visit-the-azure-atp-product-page"></a>Na stránce produktu Azure ATP  
-[https://azure.microsoft.com/en-us/features/azure-advanced-threat-protection/](https://azure.microsoft.com/en-us/features/azure-advanced-threat-protection/ "Produktová stránka Azure ATP")
+[https://azure.microsoft.com/features/azure-advanced-threat-protection/](https://azure.microsoft.com/features/azure-advanced-threat-protection/ "Produktová stránka Azure ATP")
 
 ### <a name="learn-more-about-azure-atp-architecture"></a>Další informace o architektuře služby Azure ATP
  [Architektura služby Azure ATP](atp-architecture.md)

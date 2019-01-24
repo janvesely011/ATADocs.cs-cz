@@ -13,23 +13,22 @@ ms.technology: ''
 ms.assetid: 1d27dba8-fb30-4cce-a68a-f0b1df02b977
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 3abe18d7da00e5af0373d74db2dc2dc1f91a6fc9
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: b470bc1a7de358d5326539aaf91d71ef08cb1282
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133306"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54839928"
 ---
+# <a name="export-and-import-the-ata-configuration"></a>Export a import konfigurace ATA
+
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
-
-
-# <a name="export-and-import-the-ata-configuration"></a>Export a import konfigurace ATA
 Konfigurace ATA je uložená v databázi v kolekci SystemProfile.
-Tato kolekce se zálohuje každé 4 hodiny ve službě ATA Center do souboru s názvem: **SystemProfile_*časové razítko*.json**. Jsou uloženy 300 nejnovější verze.
-Tento soubor je umístěný v podsložce s názvem **zálohování**. Ve výchozím umístění instalace ATA se nachází tady: *C:\Program Files\Microsoft Advanced Threat Analytics\Center\Backup\SystemProfile_* časové-razítko *.json*. 
+Tato kolekce se zálohuje každé 4 hodiny ve službě ATA Center do souboru s názvem: **SystemProfile_*timestamp*.json**. Jsou uloženy 300 nejnovější verze.
+Tento soubor je umístěný v podsložce s názvem **zálohování**. Ve výchozím nastavení instalace ATA umístění, do kterého ji najdete tady:  <em>C:\Program Files\Microsoft Advanced Threat Analytics\Center\Backup\SystemProfile_</em>timestamp<em>.json</em>. 
 
-**Poznámka:** Doporučujeme, abyste si tento soubor někam zazálohovali, pokud v ATA provádíte velké změny.
+**Poznámka**: Doporučujeme zálohovat tento soubor někam hlavní změny ATA.
 
 Je možné obnovit všechna nastavení spuštěním následujícího příkazu:
 

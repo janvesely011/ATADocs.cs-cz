@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e61fb5c54dc17baf0005ea6137f7d21096e1c520
-ms.sourcegitcommit: e2daa0f93d97d552cfbf1577fbd05a547b63e95b
+ms.openlocfilehash: caf64977da89c88f3640430bf4aa68a76a51026e
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54314342"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54841147"
 ---
 # <a name="tutorial-reconnaissance-alerts"></a>Kurz: Rekognoskace výstrahy  
 
@@ -62,28 +62,28 @@ Chcete-li zjistit, zda tento dotaz **TP**, **BTP** nebo **FP**, klikněte na vý
 1. Zaškrtněte, pokud byl zdrojový počítač má provádět tento typ dotazu. Příklady **B-TP** v tomto případě může být serverech Microsoft Exchange nebo systémech lidských zdrojů.
 
 2. Zkontrolujte účet domény.
-    - Zobrazit další uživatele, kteří patří do jiné domény? 
-    <br>Chybná konfigurace serveru jako je například Exchange a Skypu nebo ADSF může způsobit další uživatele, které patří do jiných domén.
-    - Podívejte se na konfiguraci služby problematické opravit chybným nastavením.
+   - Zobrazit další uživatele, kteří patří do jiné domény? 
+     <br>Chybná konfigurace serveru jako je například Exchange a Skypu nebo ADSF může způsobit další uživatele, které patří do jiných domén.
+   - Podívejte se na konfiguraci služby problematické opravit chybným nastavením.
 
-    Pokud vaše odpověď **Ano** na otázky uvedené výše, je **B-TP** aktivity. *Zavřít* dané výstraze zabezpečení.<br>
+     Pokud vaše odpověď **Ano** na otázky uvedené výše, je **B-TP** aktivity. *Zavřít* dané výstraze zabezpečení.<br>
 
 Jako další krok podívejte se na zdrojovém počítači: 
 
 1. Je skript nebo aplikace spuštěné na zdrojovém počítači, který může generovat toto chování?  
-    - Je skript skriptu staré staré přihlašovacích údajů ke spuštění? <br>Pokud ano, zastavte a upravit nebo odstranit skript. 
-    - Je aplikace pro správu nebo zabezpečení skriptu nebo aplikace, která se má spustit v prostředí?
+   - Je skript skriptu staré staré přihlašovacích údajů ke spuštění? <br>Pokud ano, zastavte a upravit nebo odstranit skript. 
+   - Je aplikace pro správu nebo zabezpečení skriptu nebo aplikace, která se má spustit v prostředí?
  
-    Pokud vaše odpověď **Ano** k předchozí otázce *Zavřít* zabezpečení výstrahy a vyloučit tento počítač. Pravděpodobně se jedná **B-TP** aktivity.
+     Pokud vaše odpověď **Ano** k předchozí otázce *Zavřít* zabezpečení výstrahy a vyloučit tento počítač. Pravděpodobně se jedná **B-TP** aktivity.
 
 Nyní podívejte se na účty:<br>
 <br>Útočníci se označuje použití slovník náhodnými názvy k vyhledání názvů existujících účtů v organizaci.
 
 1. Neexistujících účtů vám to povědomé?  
-    - Zda povědomé neexistujících účtů, může se zakázanými účty nebo patří zaměstnancům, kteří opustil společnost.
-    - Zkontrolujte aplikaci nebo skript, který ověří a určí, které účty jsou stále existují ve službě Active Directory.
+   - Zda povědomé neexistujících účtů, může se zakázanými účty nebo patří zaměstnancům, kteří opustil společnost.
+   - Zkontrolujte aplikaci nebo skript, který ověří a určí, které účty jsou stále existují ve službě Active Directory.
 
-    Pokud vaše odpověď **Ano** k jednomu z předchozí dotazy, *Zavřít* výstrahy zabezpečení, je pravděpodobně **B-TP** aktivity.
+     Pokud vaše odpověď **Ano** k jednomu z předchozí dotazy, *Zavřít* výstrahy zabezpečení, je pravděpodobně **B-TP** aktivity.
 
 2. Pokud některý z odhad pokusí shodovat s existujícími názvy účtů, jak útočník ví o existenci účty ve vašem prostředí a může pokusit použít útok hrubou silou pro přístup k vlastní domény s využitím zjištěných uživatelská jména. 
     - Zkontrolujte názvy účtů uhádnuté další podezřelých aktivit. 
@@ -187,13 +187,13 @@ Při zjišťování žádné výstrahy týkající se aktivují první měsíc p
 **TP, B-TP nebo FP** 
 
 1. Klikněte na zdrojový počítač, přejděte na stránku jeho profil.        
-    - Zdrojový počítač by měl generovat aktivity tohoto typu?
-      - Pokud ano, *Zavřít* zabezpečení výstrahy a vyloučit tento počítač jako **B-TP** aktivity. 
-    - Zkontrolujte uživatele/s, který provedl operaci.
-      - Tito uživatelé běžně protokolovat do zdrojového počítače, nebo jsou správci, kteří by měl provádět tyto konkrétní akce?   
-      - Zkontrolujte profil uživatele a jejich souvisejícími uživatelskými aktivity. Pochopení jejich chování v režimu normálního uživatele a hledat další podezřelých aktivit pomocí [uživatelská příručka k vyšetřování](investigate-a-user.md). 
+   - Zdrojový počítač by měl generovat aktivity tohoto typu?
+     - Pokud ano, *Zavřít* zabezpečení výstrahy a vyloučit tento počítač jako **B-TP** aktivity. 
+   - Zkontrolujte uživatele/s, který provedl operaci.
+     - Tito uživatelé běžně protokolovat do zdrojového počítače, nebo jsou správci, kteří by měl provádět tyto konkrétní akce?   
+     - Zkontrolujte profil uživatele a jejich souvisejícími uživatelskými aktivity. Pochopení jejich chování v režimu normálního uživatele a hledat další podezřelých aktivit pomocí [uživatelská příručka k vyšetřování](investigate-a-user.md). 
     
-    Pokud vaše odpověď **Ano** na předchozí výše, *Zavřít* výstrahu jako **B-TP** aktivity. 
+     Pokud vaše odpověď **Ano** na předchozí výše, *Zavřít* výstrahu jako **B-TP** aktivity. 
   
 **Vysvětlení rozsahu porušení**
 

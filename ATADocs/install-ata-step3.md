@@ -13,24 +13,23 @@ ms.technology: ''
 ms.assetid: 7fb024e6-297a-4ad9-b962-481bb75a0ba3
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: d49770f435985027690ddfc05a9359e84841c0ff
-ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
+ms.openlocfilehash: b73a82b2dc301de0d464f9f0dc936cce17a2fb10
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47454033"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54841113"
 ---
-*Platí pro: Advanced Threat Analytics verze 1.9*
-
-
-
 # <a name="install-ata---step-3"></a>Instalace ATA – krok 3
+
+*Platí pro: Advanced Threat Analytics verze 1.9*
 
 > [!div class="step-by-step"]
 > [« Krok 2](install-ata-step2.md)
 > [Krok 4 »](install-ata-step4.md)
 
-## <a name="step-3-download-the-ata-gateway-setup-package"></a>Krok 3: Stažení instalačního balíčku ATA Gateway
+## <a name="step-3-download-the-ata-gateway-setup-package"></a>Krok 3. Stažení instalačního balíčku ATA Gateway
+
 Po konfiguraci nastavení připojení k doméně si můžete stáhnout instalační balíček ATA Gateway. ATA Gateway se dá nainstalovat na vyhrazený server nebo na řadič domény. Pokud nainstalujete ho na řadič domény, nainstaluje se jako ATA Lightweight Gateway. Další informace o ATA Lightweight Gateway najdete v tématu [Architektura ATA](ata-architecture.md). 
 
 Klikněte na tlačítko **stáhnout instalační program brány** v seznamu kroků uvedených v horní části stránky a přejděte tak **brány** stránky.

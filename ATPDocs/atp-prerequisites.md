@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 5d36a5921c4b54e1de04d076737e5a8262cefab7
-ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
+ms.openlocfilehash: 06e31d44afba18cb44d2df6cde167c9a8babc92b
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54459125"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840722"
 ---
 # <a name="azure-atp-prerequisites"></a>Požadavky služby Azure ATP
 Tento článek popisuje požadavky pro úspěšné nasazení služby Azure ATP ve vašem prostředí.
@@ -65,13 +65,13 @@ Tato část obsahuje informace, které byste měli získat, a také účty a sí
 
 ## <a name="azure-atp-portal-requirements"></a>Portálu požadavky služby Azure ATP
 Přístup k portálu ochrany ATP v programu Azure je prostřednictvím prohlížeče. podporují následující prohlížeče a nastavení:
--   Microsoft Edge
--   Internet Explorer verze 10 a novější
--   Google Chrome 4.0 a vyšší
--   Minimální rozlišení obrazovky na šířku 1 700 pixelů
--   Otevření brány firewall a proxy - komunikovat s cloudovou službou ochrany ATP v programu Azure *. musí být atp.azure.com port 443 otevřený ve firewallu nebo proxy serveru.
+- Microsoft Edge
+- Internet Explorer verze 10 a novější
+- Google Chrome 4.0 a vyšší
+- Minimální rozlišení obrazovky na šířku 1 700 pixelů
+- Otevření brány firewall a proxy - komunikovat s cloudovou službou ochrany ATP v programu Azure *. musí být atp.azure.com port 443 otevřený ve firewallu nebo proxy serveru.
 
- ![Diagram architektury Azure ATP](media/ATP-architecture-topology.png)
+  ![Diagram architektury Azure ATP](media/ATP-architecture-topology.png)
 
 
 > [!NOTE]

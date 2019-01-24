@@ -13,16 +13,17 @@ ms.technology: ''
 ms.assetid: 710f01bd-c878-4406-a7b2-ce13f98736ea
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 0d247671c43e4c62f740eca263f2e0e680c7d319
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: b6aaaf1a93fe635f4e159f88e7d55a110bcef0d2
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133949"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840484"
 ---
-*Platí pro: Advanced Threat Analytics verze 1.9*
-
 # <a name="investigating-lateral-movement-paths-with-ata"></a>Prošetřování laterálních průnikových tras pomocí ATA
+
+
+*Platí pro: Advanced Threat Analytics verze 1.9*
 
 I v případě, že provedete stačily na ochranu vašich citlivých uživatelů a vaši Správci mají složitých hesel, která se často mění, jsou Posílená jejich počítačů a jejich data jsou bezpečně uložena, útočníci můžou využívat cesty taktiky Lateral Movement k citlivým účty. Útocích taktiky Lateral Movement útočník využívá instance citlivé uživatele po přihlášení na počítač kde kteří nejsou citliví uživatel má místní práva. Útočníci můžou přesuňte následně k laterálnímu, přístup k méně citlivé uživatele a následné přepravy napříč počítači k získání přihlašovacích údajů pro citlivé uživatele. 
 
@@ -40,11 +41,11 @@ Ke zjištění, které citlivé účty ve vaší síti byly ohrožené kvůli p�
 
 2. V části **laterální pohyb cesty k citlivým účtům**, pokud nejsou nalezeny žádné cesty taktiky Lateral Movement, je sestava zobrazena šedě. Pokud existují cesty taktiky Lateral Movement, pak data sestavy automaticky vybere první datum, kdy je relevantní data. 
 
- ![sestavy](./media/reports.png)
+   ![sestavy](./media/reports.png)
 
 3. Klikněte na tlačítko **Stáhnout**.
 
-3. Excelový soubor, který je vytvořen poskytuje podrobnosti o vašich citlivých účtů, které jsou na rizika. **Souhrn** karta obsahuje grafy, které podrobně popisují, počet citlivých účtů, počítačů a průměry za rizikové prostředky. **Podrobnosti** karta obsahuje seznam citlivé účty, které byste měli mít obavy. Všimněte si, že cesty jsou cesty, které dříve existoval a nemusí být k dispozici už dnes.
+4. Excelový soubor, který je vytvořen poskytuje podrobnosti o vašich citlivých účtů, které jsou na rizika. **Souhrn** karta obsahuje grafy, které podrobně popisují, počet citlivých účtů, počítačů a průměry za rizikové prostředky. **Podrobnosti** karta obsahuje seznam citlivé účty, které byste měli mít obavy. Všimněte si, že cesty jsou cesty, které dříve existoval a nemusí být k dispozici už dnes.
 
 
 ## <a name="investigate"></a>Prošetření
@@ -59,7 +60,7 @@ Teď, když víte, které citlivé účty se riziku, hluboké můžete začít A
 
 4. Projděte si grafu chcete zobrazit, co se dozvíte o rizika ohrožení citlivých uživatelských přihlašovacích údajů. Například v této mapy, můžete postupovat podle **přihlašující** šedý šipky zobrazíte, kde Samira přihlášení její privilegovaných přihlašovacích údajů. V tomto případě byly pro Samira citlivé přihlašovací údaje uložené v počítači REDMOND, WA-odch Potom, zjistili, která jiným uživatelům přihlášení na které počítače, které vytvořili nejvíce zviditelnění webu a ohrožení zabezpečení. Tohle je vidět pohledem **správce** černé šipky zjistit, kdo má oprávnění správce na prostředku. V tomto příkladu, všem uživatelům ve skupině **Contoso všechny** umožňuje přístup k přihlašovacím údajům uživatele z tohoto prostředku.  
 
- ![cesty taktiky Lateral Movement profilu uživatele](media/user-profile-lateral-movement-paths.png)
+   ![cesty taktiky Lateral Movement profilu uživatele](media/user-profile-lateral-movement-paths.png)
 
 
 ## <a name="preventative-best-practices"></a>Preventivní osvědčené postupy

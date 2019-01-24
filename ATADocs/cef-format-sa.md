@@ -13,17 +13,17 @@ ms.technology: ''
 ms.assetid: 601b48ba-a327-4aff-a1f9-2377a2bb7a42
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: af78eb1c18e4ca17d811456f85eeef9817f25085
-ms.sourcegitcommit: b11433f7d454231a62f64c9d9bfa1355ecf91075
+ms.openlocfilehash: 357f3517a864114c0aaa83a074c0b061d21259c2
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54403797"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840929"
 ---
-*Platí pro: Advanced Threat Analytics verze 1.9*
-
-
 # <a name="ata-siem-log-reference"></a>Referenční informace k protokolům pro ATA SIEM
+
+
+*Platí pro: Advanced Threat Analytics verze 1.9*
 
 ATA může předat zabezpečení a monitorování výstrahy události do vašeho systému SIEM. Ve formátu CEF se předávají výstrahy. Ukázka jednotlivých typů výstrah protokolu zabezpečení k odeslání do vašeho systému SIEM je níže.
 

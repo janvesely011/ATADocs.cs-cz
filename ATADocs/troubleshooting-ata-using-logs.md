@@ -13,18 +13,17 @@ ms.technology: ''
 ms.assetid: b8ad5511-8893-4d1d-81ee-b9a86e378347
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: cf87c90712d095e8d9347e005f640cbd8b925988
-ms.sourcegitcommit: b11433f7d454231a62f64c9d9bfa1355ecf91075
+ms.openlocfilehash: 5e42694b9c3bc6da84344ba0e97cebc4c622290a
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54403710"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54839737"
 ---
+# <a name="troubleshooting-ata-using-the-ata-logs"></a>Řešení potíží s ATA pomocí protokolů ATA
+
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
-
-
-# <a name="troubleshooting-ata-using-the-ata-logs"></a>Řešení potíží s ATA pomocí protokolů ATA
 Protokoly ATA poskytují přehled o tom, co jednotlivé komponenty ATA v libovolném časovém okamžiku dělají.
 
 ## <a name="ata-gateway-logs"></a>Protokoly ATA Gateway

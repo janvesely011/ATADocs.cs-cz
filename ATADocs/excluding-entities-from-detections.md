@@ -13,18 +13,17 @@ ms.technology: ''
 ms.assetid: 344c0f33-45e1-42e2-a051-f722a4504531
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 3b731593e08cfb1b52e01b83f52b0403dd74aadc
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: ad8a33701938ed846bcdf1d435f25c50d91e27ab
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133034"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54841079"
 ---
+# <a name="excluding-entities-from-detections"></a>Vyloučení entit z detekce
+
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
-
-
-# <a name="excluding-entities-from-detections"></a>Vyloučení entit z detekce
 Tento článek vysvětluje, jak vyloučení entit, která aktivuje upozornění, pokud chcete minimalizovat neškodné pravdivě pozitivní, ale ve stejnou dobu, ujistěte se, že při zachycení pravdivě pozitivní. Aby služba ATA nebudou hlučného o aktivitách, které určitých uživatelů, může být součástí vaší běžné podnikové činnosti, můžete potlačit – nebo vyloučit – konkrétní entity nemají vyvolávat výstrahy.
 
 Pokud máte například kontrolu zabezpečení, která provádí rekognoskaci DNS, nebo správce, který spouští na dálku skripty na řadiči domény – a jedná se o schválené aktivity, které se provádí jako součást běžného provozu IT ve vaší organizaci.
@@ -33,11 +32,11 @@ Vyloučení entit, které nemají vyvolávat výstrahy v rámci služby ATA:
 
 Existují dva způsoby, jak vyloučit entity – v rámci samotné podezřelé aktivity nebo na kartě **Exclusions** (Vyloučení) na stránce **Configuration** (Konfigurace).
 
-- **V rámci podezřelé aktivity**: V časové ose podezřelé aktivity, když obdržíte výstrahu týkající se aktivity uživatele nebo počítače nebo IP adresu, kterou smí provádět určitou aktivitu a můžou Uděláte to tak často, klikněte pravým tlačítkem na tři tečky na konci řádku pro podezřelé aktivity dané entity a vyberte **zavřít a vyloučit**. <br></br>Tím přidáte uživatele, počítače nebo IP adresu do seznamu vyloučení pro podezřelé aktivity. Zavře podezřelé aktivity a už nejsou uvedení v **otevřít** v seznamu událostí **časová osa podezřelých aktivit**.
+- **V rámci podezřelé aktivity**: V rámci podezřelé aktivity časové osy, když obdržíte výstrahu týkající se aktivity uživatele nebo počítače nebo IP adresu, kterou může určitou aktivitu a může se tak často, klikněte pravým tlačítkem na tři tečky na konci řádku podezřelé aktivity th v entitě a vyberte **zavřít a vyloučit**. <br></br>Tím přidáte uživatele, počítače nebo IP adresu do seznamu vyloučení pro podezřelé aktivity. Zavře podezřelé aktivity a už nejsou uvedení v **otevřít** v seznamu událostí **časová osa podezřelých aktivit**.
 
     ![Vyloučení entity](./media/exclude-in-sa.png)
 
-- **Na stránce konfigurace**: Kontrola nebo úprava jakékoli vyloučení: v části **konfigurace**, klikněte na tlačítko **vyloučení** a pak vyberte podezřelou aktivitu, jako je například  **Přihlašovací údaje k účtu vystavený**.
+- **Na stránce konfigurace**:  Kontrola nebo úprava jakékoli vyloučení: v části **konfigurace**, klikněte na tlačítko **vyloučení** a pak vyberte podezřelou aktivitu, jako je například **k citlivým účtům pověření**.
 
     ![Konfigurace vyloučení](./media/exclusions-config-page.png)
 

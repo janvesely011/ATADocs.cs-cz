@@ -13,19 +13,17 @@ ms.technology: ''
 ms.assetid: 892b16d2-58a6-49f9-8693-1e5f69d8299c
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 4962e22c1a037f8ddf8a08b5159929f8b21ccde6
-ms.sourcegitcommit: b11433f7d454231a62f64c9d9bfa1355ecf91075
+ms.openlocfilehash: 8b158f9656e2c47583cfcc8218a78091cf158221
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54403729"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840688"
 ---
+# <a name="ata-architecture"></a>Architektura ATA
+
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
-
-
-
-# <a name="ata-architecture"></a>Architektura ATA
 Architektura Microsoft Advanced Threat Analytics je znázorněna v tomto obrázku:
 
 ![Diagram topologie architektury ATA](media/ATA-architecture-topology.jpg)

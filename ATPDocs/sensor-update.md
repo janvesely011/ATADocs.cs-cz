@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 603d9e09-a07d-4357-862f-d5682c8bc3dd
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 5c5e5ff9bcbf6fbbd17f9f17d51249852e1ba4ec
-ms.sourcegitcommit: 443e6c07788938960555046def389a1503c259a4
+ms.openlocfilehash: c7b131bffdca092d6355a7f8cb4d280c2388b8eb
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/20/2019
-ms.locfileid: "54417247"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840807"
 ---
 # <a name="update-azure-atp-sensors"></a>Aktualizace služby Azure ATP senzorů
 
@@ -78,16 +78,16 @@ Každých několik minut, senzory ochrany ATP v programu Azure zkontrolujte, jes
 1. Ochrana ATP v programu cloud service aktualizace Azure na nejnovější verzi.
 2. Azure ATP senzor aktualizační službu zjistí, že je aktualizovaná verze.
 3. Snímače, které nejsou nastaveny **zpožděné aktualizace** zahájíte proces aktualizace na základě ze senzorů pomocí senzoru:
-    1. Azure ATP senzor aktualizační službu stáhne aktualizované verze z cloudové služby (ve formátu souboru cab).
-    2. Azure updater senzor ochrany ATP v programu ověří podpis souboru.
-    3. Azure ATP senzor aktualizační službu extrahuje soubor cab do nové složky ve složce instalace senzoru. Ve výchozím nastavení je extrahován do *C:\Program Files\Azure Advanced Threat ochrany senzor\<číslo verze >*
-    4. Službu sensor Azure ATP odkazuje na nové soubory extrahovány ze souboru cab.    
-    5. Azure ATP senzor aktualizační službu restartuje službu sensor ochrany ATP v programu Azure.
-        > [!NOTE]
+   1. Azure ATP senzor aktualizační službu stáhne aktualizované verze z cloudové služby (ve formátu souboru cab).
+   2. Azure updater senzor ochrany ATP v programu ověří podpis souboru.
+   3. Azure ATP senzor aktualizační službu extrahuje soubor cab do nové složky ve složce instalace senzoru. Ve výchozím nastavení je extrahován do *C:\Program Files\Azure Advanced Threat ochrany senzor\<číslo verze >*
+   4. Službu sensor Azure ATP odkazuje na nové soubory extrahovány ze souboru cab.    
+   5. Azure ATP senzor aktualizační službu restartuje službu sensor ochrany ATP v programu Azure.
+       > [!NOTE]
       >Aktualizace podverze senzor nainstalovat žádné instalační služby MSI, změní žádné hodnoty registru nebo soubory systému. Čeká na restartování nemá žádný vliv na aktualizace ze senzorů. 
-    6. Senzorů spouštět na základě nově aktualizovaná verze.
-    7. Senzor přijímá odbavení z cloudové služby Azure. Stav ze senzorů v si můžete ověřit **aktualizace** stránky.
-    8. Další senzor zahájí proces aktualizace. 
+   6. Senzorů spouštět na základě nově aktualizovaná verze.
+   7. Senzor přijímá odbavení z cloudové služby Azure. Stav ze senzorů v si můžete ověřit **aktualizace** stránky.
+   8. Další senzor zahájí proces aktualizace. 
 
 4. 72 hodin, po aktualizaci cloudové službě ochrana ATP v programu Azure senzorů vybraná **zpoždění aktualizace** spusťte proces jejich aktualizace podle stejného procesu aktualizace jako automaticky aktualizované senzory.
 

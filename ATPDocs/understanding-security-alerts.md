@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 671747d5-faed-4352-a871-17b58fdc6574
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d8cbbba3f034dac7679d77a645545374bfad643c
-ms.sourcegitcommit: 6a0ac21f59e72db8615811da2c886f54cf3727f5
+ms.openlocfilehash: b40cdeb52f26e3fae32185c3168c5e3073bf5929
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2019
-ms.locfileid: "54250249"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840850"
 ---
 # <a name="tutorial-understanding-security-alerts"></a>Kurz: Principy výstrah zabezpečení
 
@@ -70,11 +70,11 @@ Poznámka: Zvýšení výstrah přesně stejný typ obvykle snižuje podezřelé
 
 Upozornění zabezpečení v Azure ochrany ATP v programu jsou rozdělené do následujících kategorií nebo fází, jako je fáze v řetězu událostí typické internetového útoku. Další informace o jednotlivých fází a výstrahy, které jsou navržené k detekování každého útoku, pomocí následujících odkazů:
 
-- [Rekognoskace výstrahy](atp-reconnaissance-alerts.md)
-- [Upozornění ohrožení zabezpečení přihlašovacích údajů](atp-compromised-credentials-alerts.md)
-- [Upozornění taktiky Lateral Movement](atp-lateral-movement-alerts.md)
-- [Upozornění dominance v doméně](atp-domain-dominance-alerts.md)
-- [Upozornění průsak ven](atp-exfiltration-alerts.md)
+- [Výstrahy před hrozbami „osahávání“ (reconnaissance)](atp-reconnaissance-alerts.md)
+- [Výstrahy před ohrožením zabezpečení přihlašovacích údajů](atp-compromised-credentials-alerts.md)
+- [Výstrahy před taktikou lateral movement](atp-lateral-movement-alerts.md)
+- [Výstrahy před dominancí v doméně](atp-domain-dominance-alerts.md)
+- [Výstrahy před exfiltrací](atp-exfiltration-alerts.md)
 
 ## <a name="advanced-security-alert-investigation"></a>Výstrahy vyšetřování pokročilé zabezpečení
 
@@ -98,7 +98,7 @@ Každého stažení služby Azure ATP výstrah Excel obsahuje následující inf
   - Název
   - Podrobnosti 
   - Typ 
-  - Název_sam  
+  - SamName  
   - Zdrojový počítač
   - Zdrojový uživatel (Pokud je k dispozici)
   - Domain Controllers
@@ -117,9 +117,9 @@ Každého stažení služby Azure ATP výstrah Excel obsahuje následující inf
 
 Každé upozornění obsahuje poslední zarážky **související entity**. Související entity jsou všechny entity účastnící se podezřelé aktivity, bez oddělení "role" se přehrávají v upozornění. Každá entita má dva soubory Json, jedinečné Entity Json a Json profil jedinečné Entity. Další informace o entitě a který vám pomůže prozkoumat upozornění, použijte tyto dva soubory Json. 
  
-**Json jedinečné Entity**
+**Unique Entity Json**
  
-Obsahuje data, která ochrany ATP v programu Azure vytvořeným ze služby Active Directory o účtu. To zahrnuje všechny atributy jako *rozlišující název*, *SID*, * LockoutTime, a *PasswordExpiryTime*. Pro uživatelské účty, obsahuje data *oddělení*, *e-mailu*, a *PhoneNumber*. Pro účty počítačů obsahuje data *OperatingSystem*, * IsDomainController, a *DnsName*.
+Obsahuje data, která ochrany ATP v programu Azure vytvořeným ze služby Active Directory o účtu. To zahrnuje všechny atributy jako *rozlišující název*, *SID*, <em>LockoutTime, a * PasswordExpiryTime</em>. Pro uživatelské účty, obsahuje data *oddělení*, *e-mailu*, a *PhoneNumber*. Pro účty počítačů obsahuje data *OperatingSystem*, <em>IsDomainController, a * DnsName</em>.
 
 **Json profil jedinečné Entity**
 
@@ -159,7 +159,7 @@ Další informace o tom, jak pracovat s výstrahami zabezpečení služby Azure 
 
 ## <a name="see-also"></a>Viz také
 
-- [Prozkoumat uživatele](investigate-a-user.md)
-- [Prozkoumat počítače](investigate-a-computer.md)
+- [Prošetřování uživatelů](investigate-a-user.md)
+- [Prošetřování počítačů](investigate-a-computer.md)
 - [Práce s cesty taktiky Lateral Movement](use-case-lateral-movement-path.md)
 - [Podívejte se na fórum služby Azure ATP.](https://aka.ms/azureatpcommunity)

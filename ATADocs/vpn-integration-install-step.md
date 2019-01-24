@@ -13,18 +13,16 @@ ms.technology: ''
 ms.assetid: e0aed853-ba52-46e1-9c55-b336271a68e7
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 8a651e177d37361ccbca178075fb2ac33a434a90
-ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
+ms.openlocfilehash: c45436c78af1f6d44073f88fb042ab9c9f1acfb0
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47453914"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840892"
 ---
-*Platí pro: Advanced Threat Analytics verze 1.9*
-
-
-
 # <a name="install-ata---step-7"></a>Instalace ATA – krok 7
+
+*Platí pro: Advanced Threat Analytics verze 1.9*
 
 > [!div class="step-by-step"]
 > [«Krok 5](install-ata-step5.md)
@@ -72,11 +70,11 @@ ATA shromažďuje data sítě VPN a identifikuje, kdy a kde se právě používa
 
 Data sítě VPN nakonfigurujete v ATA:
 
-1.  V konzole ATA, otevřete stránku konfigurace ATA a přejděte na **VPN**.
+1. V konzole ATA, otevřete stránku konfigurace ATA a přejděte na **VPN**.
  
-  ![Konfigurační nabídka ATA](./media/config-menu.png)
+   ![Konfigurační nabídka ATA](./media/config-menu.png)
 
-2.  Zapnout **monitorování účtů protokolu Radius**a zadejte **sdílený tajný klíč** jste dříve nakonfigurovali na serveru RRAS VPN. Potom klikněte na **Uložit**.
+2. Zapnout **monitorování účtů protokolu Radius**a zadejte **sdílený tajný klíč** jste dříve nakonfigurovali na serveru RRAS VPN. Potom klikněte na **Uložit**.
  
 
   ![Konfigurovat síť VPN pro ATA](./media/vpn.png)

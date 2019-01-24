@@ -13,18 +13,16 @@ ms.technology: ''
 ms.assetid: 3f0498f9-061d-40e6-ae07-98b8dcad9b20
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 8fffdfa2269139cee5b06b8824bfce35034ab9ba
-ms.sourcegitcommit: bdf5dc203ecec3e7542f2ed08852afeff4f20dcd
+ms.openlocfilehash: a6d8556298a2bf225bef45edf55acf2a75d13a53
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52950352"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840705"
 ---
-*Platí pro: Advanced Threat Analytics verze 1.9*
-
-
-
 # <a name="configuring-windows-event-forwarding"></a>Konfigurace předávání událostí systému Windows
+
+*Platí pro: Advanced Threat Analytics verze 1.9*
 
 > [!NOTE]
 > U ATA verze 1.8 a vyšších se u komponent ATA Lightweight Gateway shromažďování událostí už nemusí konfigurovat. ATA Lightweight Gateway teď číst události místně bez nutnosti konfigurace předávání událostí.
@@ -48,31 +46,31 @@ V tomto scénáři se předpokládá, že ATA Gateway členem domény.
 
 Po přidání **síťová služba** k **Event Log Readers** skupině, restartování řadiče domény se změna projevila.
 
-**Krok 2: Vytvořte zásadu pro řadiče domény, abyste nastavili možnost Nakonfigurovat cílového správce odběrů.** 
+**Krok 2: Vytvořte zásadu pro řadiče domény, abyste nastavili možnost nakonfigurovat cílového správce odběrů.** 
 > [!Note] 
 > Můžete vytvořit zásady skupiny pro tato nastavení a používat je na každý řadič domény, který je monitorovaný pomocí součásti ATA Gateway. Následující postup upravuje místní zásady řadiče domény.     
 
-1.  Na každém řadiči domény spusťte následující příkaz: *winrm quickconfig*.
-2.  Do příkazového řádku zadejte *gpedit.msc*.
-3.  Rozbalte položku **Konfigurace počítače > Šablony pro správu > Součásti systému Windows > Předávání událostí**.
+1. Na každém řadiči domény spusťte následující příkaz: *winrm quickconfig*.
+2. Do příkazového řádku zadejte *gpedit.msc*.
+3. Rozbalte položku **Konfigurace počítače > Šablony pro správu > Součásti systému Windows > Předávání událostí**.
 
-  ![Obrázek editoru skupiny místních zásad](media/wef%201%20local%20group%20policy%20editor.png)
+   ![Obrázek editoru skupiny místních zásad](media/wef%201%20local%20group%20policy%20editor.png)
 
-4.  Dvakrát klikněte na panel **nakonfigurovat cílového správce odběrů**.
+4. Dvakrát klikněte na panel **nakonfigurovat cílového správce odběrů**.
    
-    1.  Vyberte **Povoleno**.
-    2.  V části **možnosti**, klikněte na tlačítko **zobrazit**.
+   1.  Vyberte **Povoleno**.
+   2.  V části **možnosti**, klikněte na tlačítko **zobrazit**.
 
-    3.  V části **SubscriptionManagers**, zadejte následující hodnoty a klikněte na tlačítko **OK**: *Server = http: / /<fqdnATAGateway>: 5985 nebo wsman/SubscriptionManager/WEC, obnovení = 10* 
+   3.  V části **SubscriptionManagers**, zadejte následující hodnoty a klikněte na tlačítko **OK**: *Server=http://<fqdnATAGateway>:5985/wsman/SubscriptionManager/WEC,Refresh=10* 
       
-         *(Příklad: Server =`http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10`)*
+        *(Například: Server=`http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10`)*
       
-         ![Obrázek konfigurace cílového odběru](media/wef%202%20config%20target%20sub%20manager.png)
+        ![Obrázek konfigurace cílového odběru](media/wef%202%20config%20target%20sub%20manager.png)
       
-    4.  Klikněte na **OK**.
-    5.  Do příkazového řádku se zvýšenými oprávněními zadejte *gpupdate /force*. 
+   4.  Klikněte na **OK**.
+   5.  Do příkazového řádku se zvýšenými oprávněními zadejte *gpupdate /force*. 
 
-**Krok 3: V ATA Gateway proveďte následující postup.** 
+**Krok 3: Proveďte následující kroky v komponentě ATA Gateway** 
 
 1.  Otevřete příkazový řádek se zvýšenými oprávněními a zadejte příkaz *wecutil qc*.
 2.  Otevřete **Prohlížeč událostí**. 
@@ -95,7 +93,7 @@ Po přidání **síťová služba** k **Event Log Readers** skupině, restartov�
     6.  Po několika minutách ověřte, že se události, jejichž předávání jste nastavili, zobrazují mezi předanými událostmi v komponentě ATA Gateway.
 
 
-Další informace najdete v tématu: [konfigurace počítačů pro předání a shromáždění událostí](https://technet.microsoft.com/library/cc748890)
+Další informace naleznete v tématu: [Konfigurace počítačů pro předání a shromáždění událostí](https://technet.microsoft.com/library/cc748890)
 
 ## <a name="see-also"></a>Viz také
 - [Instalace ATA](install-ata-step1.md)

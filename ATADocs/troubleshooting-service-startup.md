@@ -13,18 +13,16 @@ ms.technology: ''
 ms.assetid: 5a65285c-d1de-4025-9bb4-ef9c20b13cfa
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: fba03e93665c73f6faf070ea6c0d8d3aa6fb4c8d
-ms.sourcegitcommit: b11433f7d454231a62f64c9d9bfa1355ecf91075
+ms.openlocfilehash: 21afd487fbf15b3fc1f5d618e0e6b98d50d07cae
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54403578"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54839559"
 ---
-*Platí pro: Advanced Threat Analytics verze 1.9*
-
-
-
 # <a name="troubleshooting-service-startup"></a>Řešení potíží se spuštěním služby
+
+*Platí pro: Advanced Threat Analytics verze 1.9*
 
 ## <a name="troubleshooting-ata-center-service-startup"></a>Řešení potíží se spuštěním služby ATA Center
 

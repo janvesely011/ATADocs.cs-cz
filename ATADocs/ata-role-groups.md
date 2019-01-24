@@ -13,19 +13,17 @@ ms.technology: ''
 ms.assetid: 3715b69e-e631-449b-9aed-144d0f9bcee7
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: ed4d112cda614053aa20a6a486cb29baa1fed58a
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 1e5818e4e37b7d22669721341f3f31a94cd78baa
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133629"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54841028"
 ---
-*Platí pro: Advanced Threat Analytics verze 1.9*
-
-
-
-
 # <a name="ata-role-groups"></a>Skupiny rolí ATA
+
+
+*Platí pro: Advanced Threat Analytics verze 1.9*
 
 Skupiny rolí umožňují správu přístupu pro ATA. Pomocí skupin rolí můžete oddělit úlohy v rámci týmu zabezpečení a udělit přístup pouze v takovém rozsahu, který uživatelé potřebují ke své práci. Tento článek vysvětluje správu přístupu a autorizaci rolí ATA a ulehčí vám uvedení skupin rolí v ATA co nejdříve do provozu.
 

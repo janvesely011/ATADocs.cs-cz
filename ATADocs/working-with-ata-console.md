@@ -13,18 +13,17 @@ ms.technology: ''
 ms.assetid: 1bf264d9-9697-44b5-9533-e1c498da4f07
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 08cf7ea6b2d1c32c952a973e9781a24fc9e87230
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: f25cdcf03be079f17adaf16b43be62b29c904bc2
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133850"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54841062"
 ---
-*Platí pro: Advanced Threat Analytics verze 1.9*
-
-
-
 # <a name="working-with-the-ata-console"></a>Práce s konzolou ATA
+
+
+*Platí pro: Advanced Threat Analytics verze 1.9*
 
 Konzolu ATA použijte k monitorování a reakci na podezřelé aktivity, které detekuje ATA.
 
@@ -42,13 +41,13 @@ Chcete-li úspěšně přihlášení ke konzole ATA, budete muset přihlásit ja
 
     ![Ikona serveru ATA](media/ata-server-icon.png)
 
- >[!NOTE]
- > Můžete také otevřít prohlížeč z komponenty ATA Center nebo ATA Gateway a vyhledat IP adresu, kterou jste při instalaci komponenty ATA Center nakonfigurovali pro konzolu ATA.    
+   >[!NOTE]
+   > Můžete také otevřít prohlížeč z komponenty ATA Center nebo ATA Gateway a vyhledat IP adresu, kterou jste při instalaci komponenty ATA Center nakonfigurovali pro konzolu ATA.    
 
-2.  Pokud počítač, na kterém je nainstalovaná na ATA Center a počítače, ze kterého se pokoušíte získat přístup ke konzole ATA se obě domény připojený, podporuje ATA jednotné přihlašování integrované s ověřováním Windows – Pokud jste již přihlášení k počítači, ATA využívá Tento token pro přihlášení ke konzole ATA. K přihlášení můžete použít také čipovou kartu. Vaše oprávnění v ATA odpovídat vaší [role správce](ata-role-groups.md).
+2. Pokud počítač, na kterém je nainstalovaná na ATA Center a počítače, ze kterého se pokoušíte získat přístup ke konzole ATA se obě domény připojený, podporuje ATA jednotné přihlašování integrované s ověřováním Windows – Pokud jste již přihlášení k počítači, ATA využívá Tento token pro přihlášení ke konzole ATA. K přihlášení můžete použít také čipovou kartu. Vaše oprávnění v ATA odpovídat vaší [role správce](ata-role-groups.md).
 
- > [!NOTE]
- > Ujistěte se, že pro přihlášení k počítači, ze kterého chcete získat přístup ke konzole ATA pomocí ATA uživatelské jméno správce a hesla. Alternativně můžete spustit prohlížeč jako jiný uživatel nebo se odhlásit z Windows a přihlásit se jako uživatel s rolí správce ATA. Výzvy konzoly ATA, chcete-li požádat o přihlašovací údaje, přístup ke konzole IP adres zobrazí se výzva k zadání přihlašovacích údajů.
+   > [!NOTE]
+   > Ujistěte se, že pro přihlášení k počítači, ze kterého chcete získat přístup ke konzole ATA pomocí ATA uživatelské jméno správce a hesla. Alternativně můžete spustit prohlížeč jako jiný uživatel nebo se odhlásit z Windows a přihlásit se jako uživatel s rolí správce ATA. Výzvy konzoly ATA, chcete-li požádat o přihlašovací údaje, přístup ke konzole IP adres zobrazí se výzva k zadání přihlašovacích údajů.
 
 3. K přihlášení pomocí jednotného přihlašování, ujistěte se, že web konzoly ATA je definován jako místní intranetový server v prohlížeči a přístup shortname nebo místním hostiteli.
 
@@ -134,7 +133,7 @@ Pokud myší najedete myší entity, kdekoli v konzole níž se nachází jedna 
 
 -   Obrázek
 
--   E-mailu
+-   Email
 
 -   Telefon
 

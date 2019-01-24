@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 2946310a-8e4e-48fc-9450-fc9647efeb22
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: cfcf40c0c5776a29e3aa680096930b50ac04396f
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 8afee7eb6c96407f562443b4bfc353630de4825b
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133289"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840467"
 ---
 # <a name="updating-ata-to-version-19"></a>Aktualizace ATA na verzi 1.9
 
@@ -44,34 +44,34 @@ V migrační verzi lze soubor pouze pro aktualizaci z ATA 1.8. Ve verzi z centra
 
 ### <a name="step-1-update-the-ata-center"></a>Krok 1: Aktualizace ATA Center
 
-1.  Zazálohujte svou databázi: (volitelné)
+1. Zazálohujte svou databázi: (volitelné)
 
-    -   Pokud ATA Center běží jako virtuální počítač a chcete pořídit kontrolní bod, nejdřív vypnout virtuální počítač.
+   -   Pokud ATA Center běží jako virtuální počítač a chcete pořídit kontrolní bod, nejdřív vypnout virtuální počítač.
 
-    -   Pokud ATA Center běží na fyzickém serveru, najdete informace o zálohování databáze v článku [Zotavení po havárii](disaster-recovery.md).
+   -   Pokud ATA Center běží na fyzickém serveru, najdete informace o zálohování databáze v článku [Zotavení po havárii](disaster-recovery.md).
 
-2.  Spusťte instalační soubor **Microsoft ATA Center Setup.exe** a nainstalujte aktualizaci podle pokynů na obrazovce.
+2. Spusťte instalační soubor **Microsoft ATA Center Setup.exe** a nainstalujte aktualizaci podle pokynů na obrazovce.
 
-    -  Na **uvítací** stránce si zvolte jazyk a klikněte na **Další**.
+   - Na **uvítací** stránce si zvolte jazyk a klikněte na **Další**.
 
-    -  Pokud jste nepovolili automatické aktualizace ve verzi 1.8, zobrazí se výzva, abyste používali službu Microsoft Update k zajištění aktuálnosti ATA.  Na stránce služby Microsoft Update zaškrtněte **Při kontrole aktualizací použít službu Microsoft Update (doporučeno)**.
-    ![Zachovat aktuální obrázek ATA](media/ata_ms_update.png)
+   - Pokud jste nepovolili automatické aktualizace ve verzi 1.8, zobrazí se výzva, abyste používali službu Microsoft Update k zajištění aktuálnosti ATA.  Na stránce služby Microsoft Update zaškrtněte **Při kontrole aktualizací použít službu Microsoft Update (doporučeno)**.
+     ![Zachovat aktuální obrázek ATA](media/ata_ms_update.png)
      
      Tím se upraví nastavení Windows tak, aby povolovala aktualizace pro ATA. 
     
-    -  **Částečná data migrace** obrazovky vám umožňuje vědět, že dříve zaznamenané síťové přenosy, události, entit a zjišťování související data se odstraní. Všechna nalezení okamžitě pracovat s výjimkou detekce neobvyklého chování, neobvyklá skupiny změny, Rekognoskace pomocí adresářových služeb (SAM-R) a detekcí oslabení šifrování, které trvat až tři týdny sestavit kompletní profil po požadovaných studijních čas. 
+   - **Částečná data migrace** obrazovky vám umožňuje vědět, že dříve zaznamenané síťové přenosy, události, entit a zjišťování související data se odstraní. Všechna nalezení okamžitě pracovat s výjimkou detekce neobvyklého chování, neobvyklá skupiny změny, Rekognoskace pomocí adresářových služeb (SAM-R) a detekcí oslabení šifrování, které trvat až tři týdny sestavit kompletní profil po požadovaných studijních čas. 
      
-      ![ATA částečné migrace](media/partial-migration.png)
+     ![ATA částečné migrace](media/partial-migration.png)
 
-    -  Klikněte na **Aktualizovat**. Po klepnutí na Aktualizovat bude ATA až do dokončení aktualizace offline.
+   - Klikněte na tlačítko **aktualizace**. Po klepnutí na Aktualizovat bude ATA až do dokončení aktualizace offline.
 
-4.  Po úspěšném dokončení aktualizace ATA Center klikněte na tlačítko **Spustit** a na konzole ATA pro komponenty ATA Gateway otevřete obrazovku **Aktualizace**.
+3. Po úspěšném dokončení aktualizace ATA Center klikněte na tlačítko **Spustit** a na konzole ATA pro komponenty ATA Gateway otevřete obrazovku **Aktualizace**.
 
-     ![Obrazovka Úspěšná aktualizace](media/migration-center-success.png)
+    ![Obrazovka Úspěšná aktualizace](media/migration-center-success.png)
 
-5.  V **aktualizace** obrazovky, pokud jste již nastavili automatické aktualizace ATA Gateway se aktualizace v tomto okamžiku, v opačném případě klikněte na tlačítko **aktualizovat** vedle každé ATA Gateway.
+4. V **aktualizace** obrazovky, pokud jste již nastavili automatické aktualizace ATA Gateway se aktualizace v tomto okamžiku, v opačném případě klikněte na tlačítko **aktualizovat** vedle každé ATA Gateway.
   
-     ![Obrázek aktualizace bran](media/migration-update-gw.png)
+    ![Obrázek aktualizace bran](media/migration-update-gw.png)
 
   
 > [!IMPORTANT] 

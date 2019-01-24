@@ -13,25 +13,24 @@ ms.technology: ''
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 3ef2d163ae96e5bf8f893367095eacd9a44c3411
-ms.sourcegitcommit: 1a5880de35422d050fc1bc7a918dedc4180c45ad
+ms.openlocfilehash: d7c1a2cb171caf732ba4b49ddf50b7eaa2daaa1a
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51265675"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840194"
 ---
-*Platí pro: Advanced Threat Analytics verze 1.9*
-
-
-
 # <a name="install-ata---step-6"></a>Instalace ATA – krok 6
+
+*Platí pro: Advanced Threat Analytics verze 1.9*
 
 > [!div class="step-by-step"]
 > [« Krok 5](install-ata-step5.md)
 > [Krok 7 »](vpn-integration-install-step.md)
 
-## <a name="step-6-configure-event-collection"></a>Krok 6: Konfigurace shromažďování událostí
+## <a name="step-6-configure-event-collection"></a>Krok 6. Konfigurace shromažďování událostí
 ### <a name="configure-event-collection"></a>Konfigurace shromažďování událostí
+
 Kvůli vylepšení detekčních schopností potřebuje ATA následující události Windows: 4776, 4732, 4733, 4728, 4729, 4756, 4757 a 7045. Tyto události buď může automaticky číst ATA Lightweight Gateway, nebo mohou být jedním ze dvou způsobů předávány komponentě ATA Gateway (v případě, že komponenta ATA Lightweight Gateway není nasazená), a to konfigurací komponenty ATA Gateway pro naslouchání událostem SIEM, nebo [konfigurací předávání událostí Windows](configure-event-collection.md). 
 
 > [!NOTE]
@@ -46,9 +45,8 @@ Kromě shromažďování a analýzy síťového provozu na řadičích domény d
 
 > [!NOTE]
 > ATA naslouchá jenom na IPv4, ne na IPv6. 
-
--   Nakonfigurujte server SIEM/Syslog, aby předával určité události komponentě ATA Gateway.
-
+> -   Nakonfigurujte server SIEM/Syslog, aby předával určité události komponentě ATA Gateway.
+> 
 > [!IMPORTANT]
 > -   Nepředávejte komponentě ATA Gateway všechna data Syslog.
 > -   ATA podporuje ze serveru SIEM/Syslog provoz UDP.
@@ -135,9 +133,9 @@ Počítač se pokusil o ověření přihlašovacích údajů pro účet.
 
 Ověřovací balíček:              MICROSOFT_AUTHENTICATION_PACKAGE_V1_0
 
-Účet přihlášení: Administrator
+Přihlašovací účet: Správce
 
-Zdrojová pracovní stanice:       SIEM
+Zdrojový pracovní stanice:       SIEM
 
 Kód chyby:         0x0
 
@@ -166,7 +164,7 @@ Kód chyby:         0x0
 -   Pořadí není pro dvojice klíč=hodnota důležité.
 
 #### <a name="qradar"></a>QRadar
-QRadar umožňuje shromažďování událostí prostřednictvím agenta. Pokud se data shromažďují pomocí agenta, formát času se shromažďuje bez údajů o milisekundách. Protože ale ATA údaje o milisekundách vyžaduje, je nutné v QRadaru nastavit shromažďování událostí Windows bez agenta. Další informace najdete v tématu [http://www-01.ibm.com/support/docview.wss?uid=swg21700170](http://www-01.ibm.com/support/docview.wss?uid=swg21700170 "QRadar: Agentless Windows shromažďování událostí pomocí protokolu MSRPC").
+QRadar umožňuje shromažďování událostí prostřednictvím agenta. Pokud se data shromažďují pomocí agenta, formát času se shromažďuje bez údajů o milisekundách. Protože ale ATA údaje o milisekundách vyžaduje, je nutné v QRadaru nastavit shromažďování událostí Windows bez agenta. Další informace najdete v tématu [ http://www-01.ibm.com/support/docview.wss?uid=swg21700170 ] (http://www-01.ibm.com/support/docview.wss?uid=swg21700170 "QRadar: Bez agentů shromažďování událostí Windows pomocí protokolu MSRPC").
 
     <13>Feb 11 00:00:00 %IPADDRESS% AgentDevice=WindowsLog AgentLogFile=Security Source=Microsoft-Windows-Security-Auditing Computer=%FQDN% User= Domain= EventID=4776 EventIDCode=4776 EventType=8 EventCategory=14336 RecordNumber=1961417 TimeGenerated=1456144380009 TimeWritten=1456144380009 Message=The computer attempted to validate the credentials for an account. Authentication Package: MICROSOFT_AUTHENTICATION_PACKAGE_V1_0 Logon Account: Administrator Source Workstation: HOSTNAME Error Code: 0x0
 

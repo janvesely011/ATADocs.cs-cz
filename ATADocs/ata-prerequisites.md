@@ -13,18 +13,17 @@ ms.technology: ''
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: f5a21b1b84d164542e04d77e3a6a57fe5c944102
-ms.sourcegitcommit: 1b23381ca4551a902f6343428d98f44480077d30
+ms.openlocfilehash: 0abf415dd896d62e0308f4b236d92bcb327a0a5d
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47403195"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840875"
 ---
+# <a name="ata-prerequisites"></a>Požadavky ATA
+
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
-
-
-# <a name="ata-prerequisites"></a>Požadavky ATA
 Tento článek popisuje požadavky pro úspěšné nasazení ATA ve vašem prostředí.
 
 > [!NOTE]
@@ -38,13 +37,13 @@ Systém ATA funguje na hranici doménové struktury ve službě Active Directory
 
 [Než začnete](#before-you-start): V této části jsou uvedené informace, které byste měli získat, a účty a síťové entity, které byste měli mít před zahájením instalace ATA.
 
-[ATA Center](#ata-center-requirements): V této části jsou uvedené požadavky komponenty ATA Center na hardware a software a taky nastavení, která musíte nakonfigurovat na příslušném serveru ATA Center.
+[ATA Center](#ata-center-requirements): Tato část obsahuje seznam ATA Center na hardware, požadavky na software, jakož i nastavení, které je potřeba nakonfigurovat na serveru ATA Center.
 
-[ATA Gateway](#ata-gateway-requirements): V této části jsou uvedené požadavky komponenty ATA Gateway na hardware a software a taky nastavení, která musíte nakonfigurovat na příslušné servery ATA Gateway.
+[ATA Gateway](#ata-gateway-requirements): Tato část uvádí komponenty ATA Gateway na hardware, požadavky na software, jakož i nastavení, které je potřeba nakonfigurovat na serverech ATA Gateway.
 
-[ATA Lightweight Gateway](#ata-lightweight-gateway-requirements): V této části jsou uvedené požadavky komponenty ATA Lightweight Gateway na hardware a software.
+[ATA Lightweight Gateway](#ata-lightweight-gateway-requirements): Tato část obsahuje komponenty ATA Lightweight Gateway na hardware a požadavky na software.
 
-[Konzola ATA](#ata-console): V této části jsou uvedené požadavky na prohlížeč pro spuštění konzoly ATA.
+[Konzola ATA](#ata-console): Tato část uvádí požadavky na prohlížeč pro spuštění konzoly ATA.
 
 ![Diagram architektury ATA](media/ATA-architecture-topology.jpg)
 
@@ -59,11 +58,11 @@ Tato část uvádí informace, které byste měli získat, a také účty a sí�
 
 -   Neinstalujte na ATA Gateway nebo Lightweight Gateway Microsoft Message Analyzer. Message Analyzer ovladač je v konfliktu s ovladači komponent ATA Gateway a Lightweight Gateway. Pokud na komponentě ATA Gateway spustíte Wireshark a následně zastavíte jeho zachytávání, budete muset restartovat službu Microsoft Advanced Threat Analytics Gateway. Pokud ne, brána přestane zachytávání provozu. Wireshark běžící na ATA Lightweight Gateway nijak nenarušuje ATA Lightweight Gateway.
 
--    Doporučené: Uživatel by měl mít oprávnění jen pro čtení kontejneru odstraněných objektů. To umožňuje ATA detekovat hromadné odstranění objektů v doméně. Informace o konfiguraci oprávnění jen pro čtení pro kontejner odstraněných objektů najdete v tématu **Změna oprávnění pro kontejner odstraněných objektů** tématu [zobrazení nebo nastavení oprávnění u objektu adresáře](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) článku.
+-    Doporučené: Uživatel by měl mít ke kontejneru odstraněných objektů oprávnění jen pro čtení. To umožňuje ATA detekovat hromadné odstranění objektů v doméně. Informace o konfiguraci oprávnění jen pro čtení pro kontejner odstraněných objektů najdete v tématu **Změna oprávnění pro kontejner odstraněných objektů** tématu [zobrazení nebo nastavení oprávnění u objektu adresáře](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) článku.
 
 -   Volitelné: Uživatelský účet uživatele s žádné síťové aktivity. Tento účet se dají konfigurovat jako uživatel Honeytokenu ATA. Při konfiguraci účtu jako uživatel Honeytokenu, pouze uživatelské jméno je povinné. Informace o konfiguraci Honeytokenu, naleznete v tématu [vyloučení konfigurace IP adres a uživatele Honeytokenu](install-ata-step7.md).
 
--   Volitelné: Kromě shromažďování a analýzy síťového provozu do a z řadičů domény, může ATA využít události Windows 4776, 4732, 4733, 4728, 4729, 4756 a 4757 dál vylepšit ATA Pass-the-Hash, útoky hrubou silou, úpravy citlivých skupin a Podezřelá detekce tokeny. Tyto události můžete dostat z vašeho systému SIEM nebo nastavením předávání událostí Windows z řadiče domény. Shromážděné události poskytují řešení ATA další informace, které není možné zjistit z monitorování provozu na řadiči domény.
+-   Volitelné: Kromě shromažďování a analýzy síťového provozu do a z řadičů domény, může ATA pomocí událostí Windows 4776, 4732, 4733, 4728, 4729, 4756 a 4757 dál vylepšit ATA Pass-the-Hash, útoky hrubou silou, úpravy citlivých skupin a Honeytokenů detekce. Tyto události můžete dostat z vašeho systému SIEM nebo nastavením předávání událostí Windows z řadiče domény. Shromážděné události poskytují řešení ATA další informace, které není možné zjistit z monitorování provozu na řadiči domény.
 
 
 ## <a name="ata-center-requirements"></a>Požadavky pro ATA Center
@@ -76,7 +75,7 @@ ATA Center podporuje instalaci na serveru s Windows Serverem 2012 R2 nebo Window
 
 ATA Center se dá nainstalovat na server, který je členem domény nebo pracovní skupiny.
 
-Před instalací součásti ATA Center do systému Windows Server 2012 R2 zkontrolujte, jestli je nainstalovaná aktualizace [KB2919355](https://support.microsoft.com/kb/2919355/).
+Před instalací ATA Center do systému Windows 2012 R2, zkontrolujte, zda byla nainstalována následující aktualizace: [KB2919355](https://support.microsoft.com/kb/2919355/).
 
 Toto ověření můžete provést spuštěním následující rutiny Windows PowerShellu: `[Get-HotFix -Id kb2919355]`.
 
@@ -110,7 +109,7 @@ Měli byste následující:
 ### <a name="ports"></a>Porty
 Následující tabulka uvádí minimální porty, které musí být otevřené, aby služba ATA Center fungovala správně.
 
-|Protokol|Přenos|Port|Směr|Direction|
+|Protocol (Protokol)|Přenos|Port|Směr|Direction|
 |------------|-------------|--------|-----------|-------------|
 |**SSL** (komunikace ATA)|TCP|443|ATA Gateway|Příchozí|
 |**HTTP** (volitelné)|TCP|80|Podniková síť|Příchozí|
@@ -158,7 +157,7 @@ ATA Gateway podporuje instalaci na serveru se systémem Windows Server 2012 R2 n
 ATA Gateway se dá nainstalovat na server, který je členem domény nebo pracovní skupiny.
 ATA Gateway můžete použít k monitorování řadičů domény pomocí funkční úrovně domény v systému Windows 2003 a novějším.
 
-Před instalací ATA Gateway do systému Windows Server 2012 R2 zkontrolujte, jestli je nainstalovaná aktualizace [KB2919355](https://support.microsoft.com/kb/2919355/).
+Před instalací ATA Gateway do systému Windows 2012 R2, zkontrolujte, zda byla nainstalována následující aktualizace: [KB2919355](https://support.microsoft.com/kb/2919355/).
 
 Toto ověření můžete provést spuštěním následující rutiny Windows PowerShellu: `[Get-HotFix -Id kb2919355]`.
 
@@ -205,14 +204,14 @@ ATA Gateway vyžaduje nejméně jen adaptér pro správu a jeden adaptér pro za
 ### <a name="ports"></a>Porty
 Následující tabulka uvádí minimální porty, u kterých ATA Gateway vyžaduje, aby byly nakonfigurované na adaptéru pro správu:
 
-|Protokol|Přenos|Port|Směr|Direction|
+|Protocol (Protokol)|Přenos|Port|Směr|Direction|
 |------------|-------------|--------|-----------|-------------|
 |LDAP|TCP a UDP|389|Řadiče domény|Odchozí|
 |Zabezpečený LDAP (LDAPS)|TCP|636|Řadiče domény|Odchozí|
 |LDAP pro globální katalog|TCP|3268|Řadiče domény|Odchozí|
 |LDAPS pro globální katalog|TCP|3269|Řadiče domény|Odchozí|
 |Kerberos|TCP a UDP|88|Řadiče domény|Odchozí|
-|Služba Netlogon (SMB, CIFS, SAM-R)|TCP a UDP|445|Všechna zařízení v síti|Odchozí|
+|Netlogon (SMB, CIFS, SAM-R)|TCP a UDP|445|Všechna zařízení v síti|Odchozí|
 |Čas Windows|UDP|123|Řadiče domény|Odchozí|
 |DNS|TCP a UDP|53|Servery DNS|Odchozí|
 |NTLM přes RPC|TCP|135|Všechna zařízení v síti|Obojí|
@@ -238,11 +237,11 @@ ATA Lightweight Gateway podporuje instalaci na řadičích domény se systémem 
 
 Řadič domény může být řadič domény jen pro čtení (RODC).
 
-Před instalací ATA Lightweight Gateway na řadiči domény se systémem Windows Server 2012 R2 ověřte, že je nainstalovaná aktualizace [KB2919355](https://support.microsoft.com/kb/2919355/).
+Před instalací ATA Lightweight Gateway na řadiči domény se systémem Windows Server 2012 R2, zkontrolujte, zda byla nainstalována následující aktualizace: [KB2919355](https://support.microsoft.com/kb/2919355/).
 
 Můžete to ověřit spuštěním následující rutiny Windows PowerShellu: `[Get-HotFix -Id kb2919355]`.
 
-Pokud se instalace provádí pro Windows Server 2012 R2 Server Core, musí být nainstalovaná také následující aktualizace: [KB3000850](https://support.microsoft.com/help/3000850/november-2014-update-rollup-for-windows-rt-8.1%2c-windows-8.1%2c-and-windows-server-2012-r2).
+Pokud dopadla instalace pro Windows server 2012 R2 Server Core, musí být nainstalovaná také následující aktualizace: [KB3000850](https://support.microsoft.com/help/3000850/november-2014-update-rollup-for-windows-rt-8.1%2c-windows-8.1%2c-and-windows-server-2012-r2).
 
  Můžete to ověřit spuštěním následující rutiny Windows PowerShellu: `[Get-HotFix -Id kb3000850]`.
 
@@ -279,14 +278,14 @@ Po nasazení můžete pomocí konzoly ATA případně změnit, které síťové 
 ### <a name="ports"></a>Porty
 Následující tabulka uvádí minimální porty, které ATA Lightweight Gateway vyžaduje:
 
-|Protokol|Přenos|Port|Směr|Direction|
+|Protocol (Protokol)|Přenos|Port|Směr|Direction|
 |------------|-------------|--------|-----------|-------------|
 |DNS|TCP a UDP|53|Servery DNS|Odchozí|
 |NTLM přes RPC|TCP|135|Všechna zařízení v síti|Obojí|
 |NetBIOS|UDP|137|Všechna zařízení v síti|Obojí|
 |SSL|TCP|443|ATA Center|Odchozí|
 |Syslog (volitelné)|UDP|514|Server SIEM|Příchozí|
-|Služba Netlogon (SMB, CIFS, SAM-R)|TCP a UDP|445|Všechna zařízení v síti|Odchozí|
+|Netlogon (SMB, CIFS, SAM-R)|TCP a UDP|445|Všechna zařízení v síti|Odchozí|
 
 > [!NOTE]
 > V rámci procesu překladu, který provádí ATA Lightweight Gateway, musí být na zařízeních v síti následující porty otevřené pro příjem dat z ATA Lightweight Gateway.

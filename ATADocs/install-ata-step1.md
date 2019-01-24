@@ -13,20 +13,20 @@ ms.technology: ''
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 0f146c7263ff45c730f5a579e232525c0e09add1
-ms.sourcegitcommit: 379a365fdc667b0df5df06e1fb8b02f988c89a94
+ms.openlocfilehash: 78097c185d2dc8b834844e540929c9e57b52cffa
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54364018"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840654"
 ---
-*Platí pro: Advanced Threat Analytics verze 1.9*
-
-
 # <a name="install-ata---step-1"></a>Instalace ATA – krok 1
+
+*Platí pro: Advanced Threat Analytics verze 1.9*
 
 > [!div class="step-by-step"]
 > [Krok 2 »](install-ata-step2.md)
+
 
 Tento instalační postup uvádí pokyny pro novou instalaci ATA 1.9. Informace o aktualizaci stávajícího nasazení ATA ze starší verze najdete v tématu [Průvodci migrací ATA pro verze 1.9](ata-update-1.9-migration-guide.md).
 
@@ -50,42 +50,42 @@ Na serveru ATA Center proveďte tento postup.
 > [!NOTE]   
 > Ujistěte se, že jste instalační soubor spustili z místního disku, nikoli z připojeného souboru ISO. Vyhnete se tak potížím v případě, že by se v rámci instalace vyžadovalo restartování.   
 
-4.  Pokud není nainstalované rozhraní Microsoft .net Framework, zobrazí se výzva k jeho instalaci, když spustíte instalaci. Po dokončení instalace rozhraní .NET Framework se může zobrazit výzva k restartování.
-5.  Na **Vítejte** vyberte jazyk, který chcete použít pro instalační obrazovky ATA, a klikněte na tlačítko **Další**.
+4. Pokud není nainstalované rozhraní Microsoft .net Framework, zobrazí se výzva k jeho instalaci, když spustíte instalaci. Po dokončení instalace rozhraní .NET Framework se může zobrazit výzva k restartování.
+5. Na **Vítejte** vyberte jazyk, který chcete použít pro instalační obrazovky ATA, a klikněte na tlačítko **Další**.
 
-6.  Přečtěte si licenční podmínky softwaru společnosti Microsoft po přijetí podmínek, klikněte na zaškrtávací políčko pro přijetí a potom klikněte na **Další**.
+6. Přečtěte si licenční podmínky softwaru společnosti Microsoft po přijetí podmínek, klikněte na zaškrtávací políčko pro přijetí a potom klikněte na **Další**.
 
-7.  Doporučujeme nastavit řešení ATA možnost automaticky aktualizovat. Pokud Windows není nastavena automaticky aktualizovat v počítači, zobrazí se vám **pomocí Microsoft Update zajistit, aby byl váš počítač, zabezpečené a aktuální** obrazovky. 
-    ![Obrázek zajištění aktuálnosti ATA](media/ata_ms_update.png)
+7. Doporučujeme nastavit řešení ATA možnost automaticky aktualizovat. Pokud Windows není nastavena automaticky aktualizovat v počítači, zobrazí se vám **pomocí Microsoft Update zajistit, aby byl váš počítač, zabezpečené a aktuální** obrazovky. 
+   ![Obrázek zajištění aktuálnosti ATA](media/ata_ms_update.png)
 
 8. Vyberte **Při vyhledávání aktualizací použít službu Microsoft Update (doporučeno)**. Tím se upraví nastavení Windows tak, aby povolovala aktualizace pro ostatní produkty Microsoftu (včetně ATA). 
 
     ![Obrázek automatické aktualizace Windows](media/ata_installupdatesautomatically.png)
 
-8.  Na stránce **Konfigurace centra** zadejte následující informace podle svého prostředí:
+9. Na stránce **Konfigurace centra** zadejte následující informace podle svého prostředí:
 
-    |Pole|Popis|Komentáře|
-    |---------|---------------|------------|
-    |Instalační cesta|Toto je umístění, kde je nainstalován na ATA Center. Ve výchozím nastavení to je %programfiles%\Microsoft Advanced Threat Analytics\Center|Ponechte výchozí hodnotu.|
-    |Cesta k datům databáze|Toto je umístění, kde jsou uložené soubory databáze MongoDB. Ve výchozím nastavení to je %programfiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data.|Změňte umístění na místo, kde existuje místo pro růst v závislosti na vaší velikosti. **Poznámka:** <ul><li>V produkčním prostředí měli používat jednotku, která má dostatek místa na základě plánování kapacity.</li><li>U rozsáhlých nasazení by měla být databáze umístěná na samostatném fyzickém disku.</li></ul>Informace o velikosti najdete v tématu [Plánování kapacity ATA](ata-capacity-planning.md).|
-    |Certifikát SSL služby Center|Jedná se o certifikát, který je používán službou konzole ATA a komponenty ATA Center.|Klikněte na ikonu klíče a vyberte nainstalovaný certifikát nebo vytvořit certifikát podepsaný svým držitelem pomocí zaškrtávacího políčka.|
+   |Pole|Popis|Komentáře|
+   |---------|---------------|------------|
+   |Instalační cesta|Toto je umístění, kde je nainstalován na ATA Center. Ve výchozím nastavení to je %programfiles%\Microsoft Advanced Threat Analytics\Center|Ponechte výchozí hodnotu.|
+   |Cesta k datům databáze|Toto je umístění, kde jsou uložené soubory databáze MongoDB. Ve výchozím nastavení to je %programfiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data.|Změňte umístění na místo, kde existuje místo pro růst v závislosti na vaší velikosti. **Poznámka:** <ul><li>V produkčním prostředí měli používat jednotku, která má dostatek místa na základě plánování kapacity.</li><li>U rozsáhlých nasazení by měla být databáze umístěná na samostatném fyzickém disku.</li></ul>Informace o velikosti najdete v tématu [Plánování kapacity ATA](ata-capacity-planning.md).|
+   |Certifikát SSL služby Center|Jedná se o certifikát, který je používán službou konzole ATA a komponenty ATA Center.|Klikněte na ikonu klíče a vyberte nainstalovaný certifikát nebo vytvořit certifikát podepsaný svým držitelem pomocí zaškrtávacího políčka.|
         
-    ![Obrázek konfigurace ATA Center](media/ATA-Center-Configuration.png)
+   ![Obrázek konfigurace ATA Center](media/ATA-Center-Configuration.png)
 
-10.  Kliknutím na **Instalovat** nainstalujete ATA Center a všechny jeho komponenty.
-    Během instalace ATA Center se instalují a konfigurují následující komponenty:
+10. Kliknutím na **Instalovat** nainstalujete ATA Center a všechny jeho komponenty.
+   Během instalace ATA Center se instalují a konfigurují následující komponenty:
 
-    -   Služba ATA Center
+   -   Služba ATA Center
 
-    -   MongoDB
+   -   MongoDB
 
-    -   Vlastní sada kolekcí dat Sledování výkonu
+   -   Vlastní sada kolekcí dat Sledování výkonu
 
-    -   Certifikáty podepsané svým držitelem (pokud došlo k výběru během instalace)
+   -   Certifikáty podepsané svým držitelem (pokud došlo k výběru během instalace)
 
-11.  Po dokončení instalace klikněte na tlačítko **spuštění** otevřete konzolu ATA a dokončete instalaci z **konfigurace** stránky.
-**Obecné** nastavení stránka se otevře automaticky pokračovat v konfiguraci a nasazení komponent ATA Gateway.
-Vzhledem k tomu, že se přihlašujete na web pomocí IP adresy, zobrazí se upozornění související s certifikátem, to je normální a měli byste kliknout na **pokračovat na tento web**.
+11. Po dokončení instalace klikněte na tlačítko **spuštění** otevřete konzolu ATA a dokončete instalaci z **konfigurace** stránky.
+   **Obecné** nastavení stránka se otevře automaticky pokračovat v konfiguraci a nasazení komponent ATA Gateway.
+   Vzhledem k tomu, že se přihlašujete na web pomocí IP adresy, zobrazí se upozornění související s certifikátem, to je normální a měli byste kliknout na **pokračovat na tento web**.
 
 ### <a name="validate-installation"></a>Ověření instalace
 

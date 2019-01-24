@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: afd113d68a15d376e7665d66915a423e54bb170a
-ms.sourcegitcommit: e2daa0f93d97d552cfbf1577fbd05a547b63e95b
+ms.openlocfilehash: 6df7a945771fed8640eac773e46d2b886758d011
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54314359"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54841181"
 ---
 # <a name="tutorial-compromised-credential-alerts"></a>Kurz: Upozornění ohrožení zabezpečení přihlašovacích údajů  
 
@@ -90,10 +90,10 @@ Heslo zařízení po úspěšně výčet seznamu platní uživatelé z řadiče 
 Je důležité zkontrolovat, pokud ukončení všech pokusů o přihlášení pomocí ověřování úspěšné.
 
 1. Pokud všech pokusů o přihlášení skončila úspěšně, zkontrolujte, zda má některý **odhadnuté účty** se obvykle používají z tohoto zdrojového počítače.
-    - Je pravděpodobné, že tyto účty se nezdařila, protože byl použit chybného hesla?  
-    - Obraťte se na uživatele, pokud se vygeneruje aktivity (fe doby přihlášení se nezdařilo a pak bylo úspěšné). 
+   - Je pravděpodobné, že tyto účty se nezdařila, protože byl použit chybného hesla?  
+   - Obraťte se na uživatele, pokud se vygeneruje aktivity (fe doby přihlášení se nezdařilo a pak bylo úspěšné). 
 
-    Pokud je odpověď na výše uvedené otázky **Ano**, **Zavřít** dané výstraze zabezpečení jako aktivita B-TP.
+     Pokud je odpověď na výše uvedené otázky **Ano**, **Zavřít** dané výstraze zabezpečení jako aktivita B-TP.
 
 2. Pokud neexistují žádné **odhadnuté účty**, zkontrolujte, jestli některý z **napadených účtů** se obvykle používají ze zdrojového počítače.
     - Zkontrolujte, jestli je skript spuštěn na zdrojovém počítači pomocí přihlašovacích údajů k chybě/old?
@@ -132,15 +132,15 @@ V této detekce se aktivuje upozornění, když zjistí velké množství jednod
 Je důležité zkontrolovat, pokud ukončení všech pokusů o přihlášení pomocí ověřování úspěšné.
 
 1. Pokud všechny pokusy o přihlášení skončila úspěšně, jsou všechny **odhadnuté účty** běžně používaný z tohoto zdrojového počítače?
-    - Je pravděpodobné, že tyto účty se nezdařila, protože byl použit chybného hesla?  
-    - Obraťte se na uživatele, pokud se vygeneruje aktivity (přihlášení několikrát se nezdařilo a pak bylo úspěšné).
+   - Je pravděpodobné, že tyto účty se nezdařila, protože byl použit chybného hesla?  
+   - Obraťte se na uživatele, pokud se vygeneruje aktivity (přihlášení několikrát se nezdařilo a pak bylo úspěšné).
 
-    Pokud je odpověď na předchozí otázky **Ano**, **Zavřít** dané výstraze zabezpečení jako aktivita B-TP.
+     Pokud je odpověď na předchozí otázky **Ano**, **Zavřít** dané výstraze zabezpečení jako aktivita B-TP.
 
 2. Pokud neexistují žádné **odhadnuté účty**, zkontrolujte, jestli některý z **napadených účtů** se obvykle používají ze zdrojového počítače.
-    - Zkontrolujte, jestli je skript spuštěn na zdrojovém počítači pomocí přihlašovacích údajů k chybě/old?
+   - Zkontrolujte, jestli je skript spuštěn na zdrojovém počítači pomocí přihlašovacích údajů k chybě/old?
 
-    Pokud je odpověď na otázku předchozí **Ano**, zastavte a upravit nebo odstranit skript. **Zavřít** dané výstraze zabezpečení jako aktivita B-TP.
+     Pokud je odpověď na otázku předchozí **Ano**, zastavte a upravit nebo odstranit skript. **Zavřít** dané výstraze zabezpečení jako aktivita B-TP.
 
 **Vysvětlení rozsahu porušení**
 

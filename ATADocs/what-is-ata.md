@@ -13,17 +13,17 @@ ms.technology: ''
 ms.assetid: 283e7b4e-996a-4491-b7f6-ff06e73790d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 1aa60326ed3c26e29d2188acb5b766fe34b474ba
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: ab2b6fa569f0c639b63ceb0317ecf0ae7a53411d
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133119"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840909"
 ---
+# <a name="what-is-advanced-threat-analytics"></a>Co je Advanced Threat Analytics?
+
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
-
-# <a name="what-is-advanced-threat-analytics"></a>Co je Advanced Threat Analytics?
 Řešení ATA (Advanced Threat Analytics) je místní platforma, která chrání podnik před různými typy pokročilých cílových útoků z kyberprostoru a před vnitřními hrozbami.
 
 ## <a name="how-ata-works"></a>Popis fungování řešení ATA
@@ -52,7 +52,7 @@ Technologie ATA detekuje různé podezřelé aktivity a zaměřuje se na několi
 -   Dominance domény (trvalost), během které útočník zachycuje informace, které umožňuje pokračovat v kampani pomocí různých sad vstupních bodů, přihlašovacích údajů a technik. 
 
 Tyto fáze internetového útoku jsou podobné a předvídatelné bez ohledu na typ napadené společnosti nebo typ informací, o které se usiluje.
-ATA hledá tří hlavní typy útoků: škodlivé útoky, neobvyklé chování a problémy a rizika zabezpečení.
+ATA hledá tří hlavní typy útoků: Útoky se zlými úmysly, neobvyklé chování a problémy se zabezpečením a rizika.
 
 **Škodlivé útoky** se detekují deterministicky vyhledáváním úplného seznamu známých typů útoků, včetně následujících:
 
@@ -103,11 +103,11 @@ Podezřelé aktivity tohoto typu můžete zobrazit na řídicím panelu ATA. V n
 - Pokud vyberete možnost provedení úplné migrace, může to v závislosti na velikosti databáze trvat velmi dlouho. Při výběru možností migrace se zobrazí odhadovaná doba – Poznačte si to předtím, než se rozhodnete, kterou možnost vyberete. 
 
 
-## <a name="whats-next"></a>Co dál?
+## <a name="whats-next"></a>Co dále?
 
--   Další informace o zapojení řešení ATA do vaší sítě najdete v tématu [Architektura ATA](ata-architecture.md).
+-   Další informace o zapojení řešení ATA do vaší sítě: [Architektura ATA](ata-architecture.md)
 
--   Pokud chcete začít s nasazením ATA, přečtěte si téma [Instalace ATA](install-ata-step1.md).
+-   Abyste mohli začít nasazením ATA: [Instalace ATA](install-ata-step1.md)
 
 ## <a name="related-videos"></a>Související videa
 - [Připojení k zabezpečení komunitě](https://channel9.msdn.com/Shows/Microsoft-Security/Join-the-Security-Community)

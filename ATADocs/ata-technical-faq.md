@@ -13,16 +13,17 @@ ms.technology: ''
 ms.assetid: a7d378ec-68ed-4a7b-a0db-f5e439c3e852
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: e242a654952e653ca71fdfa87c14d833d40fa571
-ms.sourcegitcommit: b11433f7d454231a62f64c9d9bfa1355ecf91075
+ms.openlocfilehash: 2806bdd4c457628d9202e494ac1a064365cf61db
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54403780"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54839999"
 ---
+# <a name="ata-frequently-asked-questions"></a>Nejčastější dotazy k ATA
+
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
-# <a name="ata-frequently-asked-questions"></a>Nejčastější dotazy k ATA
 Tento článek obsahuje seznam nejčastějších dotazů týkajících se ATA a poskytuje podrobné informace a odpovědi.
 
 

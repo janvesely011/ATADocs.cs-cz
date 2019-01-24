@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 9ec7eb4c-3cad-4543-bbf0-b951d8fc8ffe
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d548fa73770711562f2a03d6bc024e362ecb2a13
-ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
+ms.openlocfilehash: a9b69db461dc322010fcb8aa446a95151b7a276f
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54458825"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840535"
 ---
 # <a name="configure-port-mirroring"></a>Konfigurace zrcadlení portů
 > [!NOTE] 
@@ -59,12 +59,12 @@ Další informace najdete v tématu v dokumentaci od výrobce.
 
 **Pokud pracujete s virtualizačními clustery:**
 
--   U každého řadiče domény spuštěného ve virtualizačním clusteru ve virtuálním počítači pomocí služby Azure ATP samostatný senzor nakonfigurujte spřažení mezi řadičem domény a samostatného senzoru služby Azure ATP. Tímto způsobem, pokud řadič domény přesune na jiného hostitele v clusteru služby Azure ATP samostatný senzor ji následuje. To funguje dobře, pokud je jen několik řadičů domény.
+- U každého řadiče domény spuštěného ve virtualizačním clusteru ve virtuálním počítači pomocí služby Azure ATP samostatný senzor nakonfigurujte spřažení mezi řadičem domény a samostatného senzoru služby Azure ATP. Tímto způsobem, pokud řadič domény přesune na jiného hostitele v clusteru služby Azure ATP samostatný senzor ji následuje. To funguje dobře, pokud je jen několik řadičů domény.
 
- > [!NOTE]
- > Pokud vaše prostředí podporuje proces V2V (Virtual to Virtual) na různých hostitelích (RSPAN), nemusíte si dělat starosti se spřažením.
+  > [!NOTE]
+  > Pokud vaše prostředí podporuje proces V2V (Virtual to Virtual) na různých hostitelích (RSPAN), nemusíte si dělat starosti se spřažením.
  
--   Aby se zajistilo samostatný senzor ochrany ATP v programu Azure mají správnou velikost, zpracovávat sledování všech řadičů domény samy o sobě, zkuste tuto možnost: Nainstalujte virtuální počítač na každého hostitele virtualizace a Azure ATP samostatný senzor na každém hostiteli. Nakonfigurujte každý samostatný senzor ochrany ATP v programu Azure ke sledování všech řadičů domény, které běží na clusteru. Tímto způsobem se monitoruje všechny hostitele, které běží na řadiče domény.
+- Aby se zajistilo samostatný senzor ochrany ATP v programu Azure mají správnou velikost, zpracovávat sledování všech řadičů domény samy o sobě, zkuste tuto možnost: Nainstalujte virtuální počítač na každého hostitele virtualizace a Azure ATP samostatný senzor na každém hostiteli. Nakonfigurujte každý samostatný senzor ochrany ATP v programu Azure ke sledování všech řadičů domény, které běží na clusteru. Tímto způsobem se monitoruje všechny hostitele, které běží na řadiče domény.
 
 Po dokončení konfigurace zrcadlení portů, ověřte, že zrcadlení portů funguje před instalací samostatného senzoru služby Azure ATP.
 

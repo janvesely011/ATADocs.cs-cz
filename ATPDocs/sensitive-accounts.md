@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 43e57f87-ca85-4922-8ed0-9830139fe7cb
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: fbaabd0a8ebc7028615b47b32a704d18a4fede2e
-ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
+ms.openlocfilehash: 0e95caae500effb8bd5c34c3da44a713088c7585
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54458916"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840278"
 ---
 # <a name="working-with-sensitive-accounts"></a>Práce s citlivými účty
 
@@ -26,25 +26,25 @@ ms.locfileid: "54458916"
 
 Následující seznam skupin se považují za citlivé ochrany ATP v programu Azure. Za citlivou se považuje každá entita, která je členem těchto skupin:
 
--   Správci
--   Power Users
--   Account Operators
--   Server Operators
--   Print Operators
--   Backup Operators
--   Replicators
--   Network Configuration Operators 
--   Incoming Forest Trust Builders
--   Domain Admins
--   Domain Controllers
--   Group Policy Creator Owners 
--   Řadiče domény jen pro čtení 
--   Enterprise Read-only Domain Controllers 
--   Schema Admins 
--   Enterprise Admins
+- Správci
+- Power Users
+- Account Operators
+- Server Operators
+- Print Operators
+- Backup Operators
+- Replicators
+- Network Configuration Operators 
+- Incoming Forest Trust Builders
+- Domain Admins
+- Domain Controllers
+- Group Policy Creator Owners 
+- Řadiče domény jen pro čtení 
+- Enterprise Read-only Domain Controllers 
+- Schema Admins 
+- Enterprise Admins
 
- > [!NOTE]
- > Do září 2018 Remote Desktop Users byly také automaticky považují za citlivé pomocí služby Azure ATP. Vzdálené plochy entity nebo přidat po tohoto data již nebude automaticky označené jako citlivé při vzdálené plochy entity nebo skupiny přidat před tímto datem může zůstat označeno jako citlivé. Toto citlivá nastavení lze změnit teď ručně.  
+  > [!NOTE]
+  > Do září 2018 Remote Desktop Users byly také automaticky považují za citlivé pomocí služby Azure ATP. Vzdálené plochy entity nebo přidat po tohoto data již nebude automaticky označené jako citlivé při vzdálené plochy entity nebo skupiny přidat před tímto datem může zůstat označeno jako citlivé. Toto citlivá nastavení lze změnit teď ručně.  
 
 ## <a name="tagging-sensitive-accounts"></a>Označování citlivých účtů
 

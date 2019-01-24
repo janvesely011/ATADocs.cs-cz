@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 24eca4c6-c949-42ea-97b9-41ef0fb611f1
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0ea45387ba92bea36e0599f3258da58e12a1fa82
-ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
+ms.openlocfilehash: 9bd886f4c8929af85a3f77e25052ff0fbc7a4c56
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54459018"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840671"
 ---
 # <a name="azure-atp-switches-and-silent-installation"></a>Azure ATP přepínače a bezobslužná instalace
 Tento článek obsahuje pokyny pro služby Azure ATP přepínače a tichou instalaci.
@@ -51,7 +51,7 @@ Použijte následující příkaz k provedení plně tiché instalace senzoru sl
 **Syntaxe**:
 
     Azure ATP sensor Setup.exe /AccessKey=<Access Key> /quiet NetFrameworkCommandLineArguments ="/q" 
-   
+
 
 > [!NOTE]
 > Zkopírovat přístupový klíč z portálu ochrany ATP v programu Azure v rámci **konfigurace** a potom **senzor**.
@@ -60,24 +60,26 @@ Použijte následující příkaz k provedení plně tiché instalace senzoru sl
 **Možnosti instalace**:
 
 > [!div class="mx-tableFixed"]
-|Název|Syntaxe|Povinné pro bezobslužnou instalaci?|Popis|
-|-------------|----------|---------|---------|
-|Quiet|/quiet|Ano|Spustí instalační program, který nezobrazuje žádné uživatelské rozhraní ani výzvy.|
-|Nápověda|/help|Ne|Poskytuje nápovědu a stručnou referenční příručku. Zobrazí správné použití instalačních příkazů včetně seznamu všech možností a jejich chování.|
-|NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Ano|Určuje parametry pro instalaci rozhraní .Net Framework. K vynucení bezobslužné instalace rozhraní .Net Framework musí být nastavené.|
+> 
+> |Název|Syntaxe|Povinné pro bezobslužnou instalaci?|Popis|
+> |-------------|----------|---------|---------|
+> |Quiet|/quiet|Ano|Spustí instalační program, který nezobrazuje žádné uživatelské rozhraní ani výzvy.|
+> |Nápověda|/help|Ne|Poskytuje nápovědu a stručnou referenční příručku. Zobrazí správné použití instalačních příkazů včetně seznamu všech možností a jejich chování.|
+> |NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Ano|Určuje parametry pro instalaci rozhraní .Net Framework. K vynucení bezobslužné instalace rozhraní .Net Framework musí být nastavené.|
 
 **Parametry instalace**:
 
 > [!div class="mx-tableFixed"]
-|Název|Syntaxe|Povinné pro bezobslužnou instalaci?|Popis|
-|-------------|----------|---------|---------|
-|AccessKey|AccessKey="\*\*"|Ano|Nastaví přístupový klíč, který se použije k registraci senzoru služby Azure ATP s instancí služby Azure ATP.|
+> 
+> |Název|Syntaxe|Povinné pro bezobslužnou instalaci?|Popis|
+> |-------------|----------|---------|---------|
+> |AccessKey|AccessKey="\*\*"|Ano|Nastaví přístupový klíč, který se použije k registraci senzoru služby Azure ATP s instancí služby Azure ATP.|
 
 **Příklady**: Bezobslužná instalace senzoru služby Azure ATP použijte následující příkaz:
 
     "Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" 
     AccessKey="3WlO0uKW7lY6Lk0+dfkfkJQ0qZV6aSq5WxLf71+fuBhggCl/BMs9JxfAwi7oy9vYGviazUS1EPpzte7z8s4grw==" 
-    
+
 
 ## <a name="update-the-azure-atp-sensor"></a>Aktualizace senzoru služby Azure ATP
 
@@ -91,11 +93,12 @@ K bezobslužné aktualizaci senzoru služby Azure ATP použijte následující p
 **Možnosti instalace**:
 
 > [!div class="mx-tableFixed"]
-|Název|Syntaxe|Povinné pro bezobslužnou instalaci?|Popis|
-|-------------|----------|---------|---------|
-|Quiet|/quiet|Ano|Spustí instalační program, který nezobrazuje žádné uživatelské rozhraní ani výzvy.|
-|Nápověda|/help|Ne|Poskytuje nápovědu a stručnou referenční příručku. Zobrazí správné použití instalačních příkazů včetně seznamu všech možností a jejich chování.|
-|NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Ano|Určuje parametry pro instalaci rozhraní .Net Framework. K vynucení bezobslužné instalace rozhraní .Net Framework musí být nastavené.|
+> 
+> |Název|Syntaxe|Povinné pro bezobslužnou instalaci?|Popis|
+> |-------------|----------|---------|---------|
+> |Quiet|/quiet|Ano|Spustí instalační program, který nezobrazuje žádné uživatelské rozhraní ani výzvy.|
+> |Nápověda|/help|Ne|Poskytuje nápovědu a stručnou referenční příručku. Zobrazí správné použití instalačních příkazů včetně seznamu všech možností a jejich chování.|
+> |NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Ano|Určuje parametry pro instalaci rozhraní .Net Framework. K vynucení bezobslužné instalace rozhraní .Net Framework musí být nastavené.|
 
 
 **Příklady**: Bezobslužná aktualizace senzoru služby Azure ATP:
@@ -107,21 +110,22 @@ K bezobslužné aktualizaci senzoru služby Azure ATP použijte následující p
 Použijte následující příkaz k provedení bezobslužné odinstalace senzoru služby Azure ATP: **Syntaxe**:
 
     Azure ATP sensor Setup.exe [/quiet] [/Uninstall] [/Help]
-    
+
 **Možnosti instalace**:
 
 > [!div class="mx-tableFixed"]
-|Název|Syntaxe|Povinné pro bezobslužnou odinstalaci?|Popis|
-|-------------|----------|---------|---------|
-|Quiet|/quiet|Ano|Spustí odinstalační program, který nezobrazuje žádné uživatelské rozhraní ani výzvy.|
-|Odinstalace|/uninstall|Ano|Spustí bezobslužnou odinstalaci senzoru služby Azure ATP ze serveru.|
-|Nápověda|/help|Ne|Poskytuje nápovědu a stručnou referenční příručku. Zobrazí správné použití instalačních příkazů včetně seznamu všech možností a jejich chování.|
+> 
+> |Název|Syntaxe|Povinné pro bezobslužnou odinstalaci?|Popis|
+> |-------------|----------|---------|---------|
+> |Quiet|/quiet|Ano|Spustí odinstalační program, který nezobrazuje žádné uživatelské rozhraní ani výzvy.|
+> |Odinstalace|/uninstall|Ano|Spustí bezobslužnou odinstalaci senzoru služby Azure ATP ze serveru.|
+> |Nápověda|/help|Ne|Poskytuje nápovědu a stručnou referenční příručku. Zobrazí správné použití instalačních příkazů včetně seznamu všech možností a jejich chování.|
 
 **Příklady**: Bezobslužná odinstalace senzoru služby Azure ATP ze serveru:
 
 
     Azure ATP sensor Setup.exe /quiet /uninstall
-    
+
 
 
 

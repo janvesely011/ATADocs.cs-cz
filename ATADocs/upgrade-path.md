@@ -13,16 +13,17 @@ ms.technology: ''
 ms.assetid: 88720401-1fb2-4353-ad39-32bc0088f0de
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: a57a4457d330543f57be850d0d8f998a654ceb32
-ms.sourcegitcommit: b11433f7d454231a62f64c9d9bfa1355ecf91075
+ms.openlocfilehash: 318e14a4313b80aec92516829b70314008acb8c5
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54403474"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840154"
 ---
+# <a name="recommended-upgrade-path-for-ata"></a>Doporučená Cesta upgradu pro ATA
+
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
-# <a name="recommended-upgrade-path-for-ata"></a>Doporučená Cesta upgradu pro ATA
 Tento článek obsahuje informace o dostupných verzí Advanced Threat Analytics a postupu při upgradu ATA v závislosti na tom, jakou verzi máte systémem.
 
 

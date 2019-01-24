@@ -13,18 +13,17 @@ ms.technology: ''
 ms.assetid: 05e49e23-6e0a-4ec0-9a63-a2093173c8a1
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 1374b57a4633c45bce2d4ab88952197a7b8f168a
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 3dde0df4c0ddcf69a17b103d0a60bbb04ffe0d67
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46134010"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840416"
 ---
+# <a name="ata-database-management"></a>Správa databáze ATA
+
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
-
-
-# <a name="ata-database-management"></a>Správa databáze ATA
 Když potřebujete přesunout, zálohovat nebo obnovit databázi ATA, použijte tyto postupy pro práci s MongoDB.
 
 ## <a name="backing-up-the-ata-database"></a>Zálohování databáze ATA
@@ -35,23 +34,23 @@ Viz [příslušná dokumentace k MongoDB](http://docs.mongodb.org/manual/adminis
 
 ## <a name="moving-the-ata-database-to-another-drive"></a>Přesunutí databáze ATA na jinou jednotku
 
-1.  Zastavte službu **Microsoft Advanced Threat Analytics Center**.
-> [!Important] 
-> Zajistěte, aby se před přechodem k dalšímu kroku služba ATA Center zastavila.
+1. Zastavte službu **Microsoft Advanced Threat Analytics Center**.
+   > [!Important] 
+   > Zajistěte, aby se před přechodem k dalšímu kroku služba ATA Center zastavila.
 
-2.  Zastavte službu **MongoDB**.
+2. Zastavte službu **MongoDB**.
 
-3.  Otevřete konfigurační soubor Mongo, standardně C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\mongod.cfg.
+3. Otevřete konfigurační soubor Mongo, standardně: C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\mongod.cfg.
 
-    Vyhledání parametru `storage: dbPath`
+   Vyhledání parametru `storage: dbPath`
 
-4.  Přesuňte složku uvedenou v parametru `dbPath` do nového umístění.
+4. Přesuňte složku uvedenou v parametru `dbPath` do nového umístění.
 
-5.  Změňte parametr `dbPath` v konfiguračním souboru mongo na novou cestu ke složce a uložte a zavřete soubor.
+5. Změňte parametr `dbPath` v konfiguračním souboru mongo na novou cestu ke složce a uložte a zavřete soubor.
 
-    ![Úprava konfigurační image MongoDB](media/ATA-mongoDB-moveDB.png)
+   ![Úprava konfigurační image MongoDB](media/ATA-mongoDB-moveDB.png)
 
-6.  Spusťte službu **MongoDB**.
+6. Spusťte službu **MongoDB**.
 
 7. Spusťte službu **Microsoft Advanced Threat Analytics Center**.
 

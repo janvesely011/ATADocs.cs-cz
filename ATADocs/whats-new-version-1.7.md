@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: be9ee613-4eb3-40f1-8973-e7f0a707ff57
 ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: 1eb61e35998fd5caaa49d2149cef91e839cd7286
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: e89933143121355a13ee5d84984bffb822bc2968
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133680"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840756"
 ---
 # <a name="whats-new-in-ata-version-17"></a>Novinky ATA verze 1.7
 Tyto poznámky k verzi obsahují informace o známých problémech v této verzi Advanced Threat Analytics.
@@ -53,7 +53,7 @@ Aktualizace ATA na verzi 1.7 přináší vylepšení v následujících oblastec
 
 ### <a name="infrastructure"></a>Infrastruktura
 
-- **Řízení přístupu na základě role** Možnost řízení přístupu na základě role (RBAC). ATA 1.7 obsahuje tři role: Správce ATA, Analytik ATA a Vedení ATA.
+- **Řízení přístupu na základě role** Možnost řízení přístupu na základě role (RBAC). ATA 1.7 obsahuje tři role: Správce ATA, analytik ATA a vedení ATA.
 
 - **Podpora Windows Serveru 2016 a jádra Windows Serveru** ATA 1.7 podporuje nasazení součástí Lightweight Gateway v řadičích domény, na kterých běží Windows Server 2008 R2 SP1 (kromě jádra serveru), Windows Server 2012, Windows Server 2012 R2, Windows Server 2016 (včetně jádra, ale ne Nano). Kromě toho tato verze podporuje Windows Server 2016 pro součásti ATA Center i ATA Gateway.
 
@@ -64,15 +64,15 @@ Aktualizace ATA na verzi 1.7 přináší vylepšení v následujících oblastec
 V této verzi existují následující známé problémy.
 
 ### <a name="gateway-automatic-update-may-fail"></a>Automatické aktualizace brány se nemusí podařit.
-**Příznaky:** V prostředích s pomalým připojením WAN může při aktualizaci ATA Gateway vypršet časový limit pro aktualizaci (100 sekund) a aktualizace se nepodaří.
+**Příznaky:** V prostředích s pomalým připojením WAN může aktualizace komponenty ATA Gateway vypršet časový limit pro aktualizaci (100 sekund) a se nepodaří.
 V konzole ATA může ATA Gateway po dlouhou dobu zobrazovat stav „Probíhá aktualizace (stahování balíčku)“ a nakonec dojde k chybě.
-**Alternativní řešení:** Pokud chcete tento problém vyřešit, stáhněte z konzoly ATA nejnovější balíček ATA Gateway a aktualizujte ATA Gateway ručně.
+**Alternativní řešení:** Chcete-li tento problém obejít, stáhněte si nejnovější balíček ATA Gateway v konzole ATA a ručně aktualizujte ATA Gateway.
 
- > [!IMPORTANT]
- Automatické obnovení certifikátu pro certifikáty používané funkcí ATA není podporované. Použití těchto certifikátů po jejich automatickém obnovení může způsobit, že ATA přestane fungovat. 
+> [!IMPORTANT]
+>  Automatické obnovení certifikátu pro certifikáty používané funkcí ATA není podporované. Použití těchto certifikátů po jejich automatickém obnovení může způsobit, že ATA přestane fungovat. 
 
 ### <a name="no-browser-support-for-jis-encoding"></a>Prohlížeče nepodporují kódování JIS
-**Příznaky:** Konzola ATA nemusí fungovat dle očekávání v prohlížečích s kódováním JIS. **Řešení:** Změňte kódování prohlížeče na Unicode UTF-8.
+**Příznaky:** Konzola ATA nemusí fungovat dle očekávání v prohlížečích s kódováním JIS **alternativní řešení:** Změňte kódování prohlížeče na Unicode UTF-8.
  
 ### <a name="dropped-port-mirror-traffic-when-using-vmware"></a>Přerušené přenosy se zrcadlením portů při použití VMware
 
@@ -90,7 +90,7 @@ Zvažte také zakázání procesu IPv4 Giant TSO Offload. Další informace najd
 
 Automatický proces aktualizace ATA Gateway a ruční instalace bran pomocí balíčku bran nefungují při aktualizaci z ATA 1.7 na ATA 1.7 aktualizace 1, jak by měly.
 K tomuto problému dochází, pokud se certifikát používaný komponentou ATA Center před aktualizací ATA změnil.
-Pokud chcete tento problém ověřit, podívejte se na protokol **Microsoft.Tri.Gateway.Updater.log** u ATA Gateway a hledejte následující výjimky: **System.Net.Http.HttpRequestException: Při odesílání požadavku došlo k chybě. ---> System.Net.WebException: Nadřízené připojení bylo uzavřeno: Došlo k neočekávané chybě při odeslání. ---> System.IdentityModel.Tokens.SecurityTokenValidationException: Nepodařilo se ověřit kryptografický otisk certifikátu.**
+Chcete-li tento problém ověřit, přečtěte si téma **Microsoft.Tri.Gateway.Updater.log** na ATA Gateway a hledejte následující výjimky: **System.Net.Http.HttpRequestException: Při odesílání požadavku došlo k chybě. ---> System.Net.WebException: Nadřízené připojení bylo uzavřeno: Došlo k neočekávané chybě při odeslání. ---> System.IdentityModel.Tokens.SecurityTokenValidationException: Nepovedlo se ověřit kryptografický otisk certifikátu**
 
 ![Chyba aktualizace brány ATA](media/17update_gatewaybug.png)
 
@@ -103,7 +103,7 @@ Pokud chcete tento problém vyřešit, přejděte na příkazovém řádku se zv
 3. db.SystemProfile.update({_t:"ServiceSystemProfile"},{$set:{"Configuration.ManagementClientConfiguration.ServerCertificateThumbprint":CenterThumbprint}}, {multi: true})
 
 ### <a name="export-suspicious-activity-details-to-excel-may-fail"></a>Export podrobností o podezřelých aktivitách do Excelu se nemusí podařit
-Při pokusu o export podrobností o podezřelých aktivitách do souboru Excelu se nemusí tato operace podařit a může se zobrazit tato chybová zpráva: *Chyba [BsonClassMapSerializer`1] System.FormatException: Při deserializaci vlastnosti Activity třídy Microsoft.Tri.Common.Data.NetworkActivities.SuspiciousActivityActivitydošlo k chybě: Prvek 'ResourceIdentifier' neodpovídá žádnému poli nebo vlastnosti třídy Microsoft.Tri.Common.Data.EventActivities.NtlmEvent. ---> System.FormatException: Prvek 'ResourceIdentifier' neodpovídá žádnému poli nebo vlastnosti třídy Microsoft.Tri.Common.Data.EventActivities.NtlmEvent.*
+Při pokusu o export podrobností o podezřelých aktivitách do Excelového souboru, může operace selhat kvůli následující chybě: *Error [BsonClassMapSerializer`1] System.FormatException: Došlo k chybě při deserializaci vlastnosti Activity třídy Microsoft.TRI.Common.data.networkactivities.suspiciousactivityactivitydošlo k chybě: Prvek 'ResourceIdentifier' neodpovídá žádnému poli nebo vlastnosti třídy Microsoft.Tri.Common.Data.EventActivities.NtlmEvent. ---> System.FormatException: Prvek 'ResourceIdentifier' neodpovídá žádnému poli nebo vlastnosti třídy Microsoft.Tri.Common.Data.EventActivities.NtlmEvent.*
 
 Chcete-li vyřešit tento problém, z příkazového řádku se zvýšenými oprávněními přejděte do následujícího umístění: **%ProgramFiles%\Microsoft Advanced Threat Analytics\Center\MongoDB\bin** a spusťte následující příkazy:
 1.  `Mongo.exe ATA` (ATA musí být velkými písmeny)

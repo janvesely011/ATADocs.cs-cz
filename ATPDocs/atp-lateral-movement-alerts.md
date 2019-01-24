@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 2257eb00-8614-4577-b6a1-5c65085371f2
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 2c5dc79622f764a68407204e5d1bffbcbd8a749a
-ms.sourcegitcommit: 443e6c07788938960555046def389a1503c259a4
+ms.openlocfilehash: e564307a62361cd8b1c872818225a2e1e63585fb
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/20/2019
-ms.locfileid: "54417265"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840773"
 ---
 # <a name="tutorial-lateral-movement-alerts"></a>Kurz: Upozornění taktiky Lateral Movement  
 
@@ -152,19 +152,19 @@ V over-pass-the-hash útok útočník využije k vytvoření lístku silné žá
 
 **TP, B-TP nebo FP?**
 1. Určete, jestli nedávno změnit konfiguraci čipové karty. 
-    - Účty používané nedávno mají změny konfigurace pomocí čipové karty?  
+   - Účty používané nedávno mají změny konfigurace pomocí čipové karty?  
     
-    Pokud odpovíte Ano, **Zavřít** dané výstraze zabezpečení jako **T BP** aktivity. 
+     Pokud odpovíte Ano, **Zavřít** dané výstraze zabezpečení jako **T BP** aktivity. 
 
 Některé legitimní materiálů nepodporují silné šifrování šifry a toto upozornění mohou aktivovat. 
 
 2. Všechny zdroje uživatelé sdílet něco? 
-    1. Například všechny marketingové pracovníky ve vaší organizaci přistupují konkrétní prostředek, který by mohl způsobit aktivovat upozornění?
-    2. Podívejte se na zdroje přistupuje těchto lístků. 
-        - Zaškrtnutím tohoto políčka ve službě Active Directory tak, že zkontrolujete atribut *msDS-SupportedEncryptionTypes*, prostředků účtu služby.
-    3. Pokud existuje pouze jeden prostředek používaná, zkontrolujte, zda není platný prostředek pro tyto uživatele bude možné získat přístup.   
+   1. Například všechny marketingové pracovníky ve vaší organizaci přistupují konkrétní prostředek, který by mohl způsobit aktivovat upozornění?
+   2. Podívejte se na zdroje přistupuje těchto lístků. 
+       - Zaškrtnutím tohoto políčka ve službě Active Directory tak, že zkontrolujete atribut *msDS-SupportedEncryptionTypes*, prostředků účtu služby.
+   3. Pokud existuje pouze jeden prostředek používaná, zkontrolujte, zda není platný prostředek pro tyto uživatele bude možné získat přístup.   
 
-    Pokud je odpověď na jednu z předchozí otázky **Ano**, je pravděpodobné, že **T BP** aktivity. Zkontrolujte prostředku může podporovat silné šifrování šifer s nižší sílou,-li implementovat šifer s nižší sílou silnější šifrování, kde je to možné, a **Zavřít** dané výstraze zabezpečení.
+      Pokud je odpověď na jednu z předchozí otázky **Ano**, je pravděpodobné, že **T BP** aktivity. Zkontrolujte prostředku může podporovat silné šifrování šifer s nižší sílou,-li implementovat šifer s nižší sílou silnější šifrování, kde je to možné, a **Zavřít** dané výstraze zabezpečení.
 
 **Vysvětlení rozsahu porušení**
 

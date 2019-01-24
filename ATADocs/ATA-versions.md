@@ -12,16 +12,17 @@ ms.technology: ''
 ms.assetid: a8afbd91-c888-4dfc-94ab-72e38745163e
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 0265f986c342f424075ecae1ea7a175260067ca1
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: b79cbeab25c0e75714bb69e8b0f3081a210a789e
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133799"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840739"
 ---
-*Platí pro: Advanced Threat Analytics verze 1.9*
-
 # <a name="support-for-microsoft-advanced-threat-analytics-ata-versions"></a>Podpora pro verze Microsoft Advanced Threat Analytics (ATA)
+
+
+*Platí pro: Advanced Threat Analytics verze 1.9*
 
 Microsoft má v plánu vydávat aktualizace ATA párkrát za rok s tím, že každá verze aktualizace bude podporována po dobu 12 měsíců od data jejího vydání s obecnou dostupností. Technická podpora je poskytována po celých 12 měsíců. Naše struktura podpory je teď ale dynamická – rozvíjí se do dvou různých fází údržby, které závisejí na dostupnosti nejnovější verze.
 
@@ -37,7 +38,7 @@ Microsoft má v plánu vydávat aktualizace ATA párkrát za rok s tím, že ka�
 |VERZE|ČÍSLO BUILDU|DATUM DOSTUPNOSTI|DATUM UKONČENÍ PODPORY|
 |----|----|----|----|
 |1.4|1.4.2457|31. SRPNA 2015|30. SRPNA 2016|
-|1.5|1.5.2946|17. PROSINCE 2015|16. PROSINCE 2016|
+|1,5|1.5.2946|17. PROSINCE 2015|16. PROSINCE 2016|
 |1.6|1.6.4103|5. KVĚTNA 2016|4. KVĚTNA 2017|
 |1.6.1|1.6.4317|15. ČERVNA 2016|14. ČERVNA 2017|
 |1.7|1.7.5402|31. SRPNA 2016|30. SRPNA 2017|
@@ -45,7 +46,7 @@ Microsoft má v plánu vydávat aktualizace ATA párkrát za rok s tím, že ka�
 |1.7.2|1.7.5757|15. LISTOPADU 2016|14. LISTOPADU 2017|
 |1.8|1.8.6645|30. ČERVNA 2017|30. ČERVNA 2018|
 |1.8.1|1.8.6765|02. SRPNA 2017|02. SRPNA 2018|
-|1.9|1.9.7312|21. BŘEZNA 2018|21. BŘEZNA 2019|
+|1.9|1.9.7312|21-MAR-2018|21-MAR-2019|
 |1.9.1|1.9.7412|01. ČERVENCE 2018|01. ČERVENCE 2019|
 
 

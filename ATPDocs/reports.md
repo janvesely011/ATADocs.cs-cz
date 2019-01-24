@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 2c2d6b1a-fc8c-4ff7-b07d-64ce6159f84d
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: be1831e077c34712640cc3c9c3c1eb05493be61a
-ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
+ms.openlocfilehash: 41f66dce4b7aea6654b28f9d82a167439f29eabb
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54458661"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840824"
 ---
 # <a name="azure-atp-reports"></a>Sestavy služby Azure ATP
 
@@ -51,8 +51,8 @@ Nastavení naplánované sestavy:
 
    ![Plánování sestav](./media/atp-sched-reports.png)
  
- > [!NOTE]
- > Ve výchozím nastavení denními sestavami jsou určeny k odeslány brzy po půlnoci UTC. Můžete si vyberte vlastní čas pomocí možnosti Výběr času. 
+   > [!NOTE]
+   > Ve výchozím nastavení denními sestavami jsou určeny k odeslány brzy po půlnoci UTC. Můžete si vyberte vlastní čas pomocí možnosti Výběr času. 
 
 2. Klikněte na tlačítko **plán** vedle vašeho typu vybranou sestavu, nastavit četnost a e-mailovou adresu pro doručení sestavy. Je sestava, kterou vyberete četností informace obsažené v sestavě. Přidat e-mailové adresy, klikněte na znaménko plus vedle pole e-mailové adresy, zadejte adresu a klepněte na **Uložit**.
 

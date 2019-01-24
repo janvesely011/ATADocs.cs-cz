@@ -13,18 +13,16 @@ ms.technology: ''
 ms.assetid: 2a5b6652-2aef-464c-ac17-c7e5f12f920f
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: dbc89fc060fb10408edc5137ae0179d8711e7517
-ms.sourcegitcommit: f86dc8ad3d1e75ba64b372d4d0ab5386e28f2e29
+ms.openlocfilehash: 75f75173fd8776b89781698bb5f64d7186f938f7
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51609652"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840450"
 ---
-*Platí pro: Advanced Threat Analytics verze 1.9*
-
-
-
 # <a name="install-ata---step-5"></a>Instalace ATA – krok 5
+
+*Platí pro: Advanced Threat Analytics verze 1.9*
 
 > [!div class="step-by-step"]
 > [« Krok 4](install-ata-step4.md)
@@ -32,36 +30,37 @@ ms.locfileid: "51609652"
 
 
 ## <a name="step-5-configure-the-ata-gateway-settings"></a>Krok 5. Konfigurace nastavení ATA Gateway
+
 Po instalaci komponenty ATA Gateway proveďte následující kroky a nakonfigurujte nastavení ATA Gateway.
 
-1.  V konzole ATA přejděte do sekce **Konfigurace** a v části **Systém** vyberte možnost **Gateway**.
+1. V konzole ATA přejděte do sekce **Konfigurace** a v části **Systém** vyberte možnost **Gateway**.
    
-     ![Obrázek konfigurace nastavení brány](media/ata-gw-config-1.png)
+    ![Obrázek konfigurace nastavení brány](media/ata-gw-config-1.png)
 
 
-2.  Klikněte na bránu, kterou chcete nakonfigurovat, a zadejte následující informace:
+2. Klikněte na bránu, kterou chcete nakonfigurovat, a zadejte následující informace:
 
-    ![Obrázek konfigurace nastavení brány](media/ATA-Gateways-config-2.png)
+   ![Obrázek konfigurace nastavení brány](media/ATA-Gateways-config-2.png)
 
-  - **Popis**: Zadejte popis pro ATA Gateway (volitelné).
-  - **Řadiče domény zrcadlené portem (FQDN)** (požadováno pro ATA Gateway, nastavení nelze změnit pro ATA Lightweight Gateway): Zadejte úplný název FQDN řadiče domény a kliknutím na symbol plus ho přidejte do seznamu. Například **dc01.contoso.com**.
+   - **Popis**: Zadejte popis pro ATA Gateway (nepovinné).
+   - **Port zrcadlení řadiče domény (FQDN)** (povinné pro ATA Gateway, toto chování nelze změnit pro ATA Lightweight Gateway): Zadejte úplný plně kvalifikovaný název domény řadiči domény a kliknutím na symbol plus ho přidejte do seznamu. Například **dc01.contoso.com**.
 
-  Následující informace platí pro servery, které zadáte do seznamu **Řadiče domény**:  
+   Následující informace platí pro servery, které zadáte do seznamu **Řadiče domény**:  
 
-  - Všechny řadiče domény, jejichž provoz ATA Gateway monitoruje přes zrcadlení portů, musí být uvedené v seznamu **Řadiče domény**. Pokud řadič domény není uvedený v seznamu **Řadiče domény**, detekce podezřelých aktivit nemusí fungovat podle očekávání.  
+   - Všechny řadiče domény, jejichž provoz ATA Gateway monitoruje přes zrcadlení portů, musí být uvedené v seznamu **Řadiče domény**. Pokud řadič domény není uvedený v seznamu **Řadiče domény**, detekce podezřelých aktivit nemusí fungovat podle očekávání.  
    - Nejméně jeden řadič domény v seznamu by měl být globální katalog. To umožňuje ATA překládat objekty počítačů a uživatelů v jiných doménách v doménové struktuře.
 
-  - **Síťové adaptéry pro zachytávání** (povinné):
-    - Pro ATA Gateway na vyhrazeném serveru vyberte síťové adaptéry, které jsou nakonfigurované jako cílový port zrcadlení. Tyto příjem provozu řadiče domény zrcadlené.
-    - V případě ATA Lightweight Gateway by to měly být všechny síťové adaptéry, které se používají ke komunikaci s ostatními počítači ve vaší organizaci.
+   - **Síťové adaptéry pro zachytávání** (povinné):
+   - Pro ATA Gateway na vyhrazeném serveru vyberte síťové adaptéry, které jsou nakonfigurované jako cílový port zrcadlení. Tyto příjem provozu řadiče domény zrcadlené.
+   - V případě ATA Lightweight Gateway by to měly být všechny síťové adaptéry, které se používají ke komunikaci s ostatními počítači ve vaší organizaci.
   
-  - **Kandidát na synchronizátora domény**: Za synchronizaci mezi ATA a doménou Active Directory může být zodpovědná libovolná ATA Gateway, která je nastavená jako kandidát na synchronizátora domény. Počáteční synchronizace v závislosti na velikosti domény může nějakou dobu trvat a je náročná. Ve výchozím nastavení jsou jako kandidáti na synchronizátora domény nastavené jenom ATA Gateway.
+   - **Kandidát na synchronizátora domény**: Za synchronizaci mezi ATA a doménou Active Directory může být zodpovědná libovolná komponenta ATA Gateway, která je nastavená jako kandidát na synchronizátora domény. Počáteční synchronizace v závislosti na velikosti domény může nějakou dobu trvat a je náročná. Ve výchozím nastavení jsou jako kandidáti na synchronizátora domény nastavené jenom ATA Gateway.
    Doporučuje se, že zakážete všechny vzdálené lokality komponenty ATA Gateway nebudou kandidáti na synchronizátora domény.
    Pokud je řadič domény jen pro čtení, nenastavujte ho jako kandidáta na synchronizátora domény. Další informace najdete v části [Architektura ATA](ata-architecture.md#ata-lightweight-gateway-features).
 
-  > [!NOTE] 
-  > První spuštění služby ATA Gateway po instalaci bude trvat několik minut, protože sestavuje mezipaměť analyzátorů zachytávání dat ze sítě.
-  > Změny konfigurace jsou použity v ATA Gateway při příští plánované synchronizaci mezi ATA Gateway a ATA Center.
+   > [!NOTE] 
+   > První spuštění služby ATA Gateway po instalaci bude trvat několik minut, protože sestavuje mezipaměť analyzátorů zachytávání dat ze sítě.
+   > Změny konfigurace jsou použity v ATA Gateway při příští plánované synchronizaci mezi ATA Gateway a ATA Center.
 
 3. Volitelně můžete nastavit [Syslog listener and Windows Event Forwarding Collection](configure-event-collection.md) (Naslouchací proces syslog a kolekce předávání událostí systému Windows). 
 4. Povolit **aktualizaci ATA Gateway automaticky** tak, že ve vydání příštích verzí při aktualizaci komponenty ATA Center, tato komponenta ATA Gateway se automaticky aktualizuje.

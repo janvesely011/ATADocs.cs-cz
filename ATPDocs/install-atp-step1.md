@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 15ee7d0b-9a0c-46b9-bc71-98d0b4619ed0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 8cdb87bb577577f48b45e750f96159d008f72810
-ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
+ms.openlocfilehash: 4c178d4ed874ae3d826e97a154ae2e17bd52f48c
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54458542"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840365"
 ---
 # <a name="creating-your-azure-atp-instance-in-the-azure-atp-portal---step-1"></a>Vytvoření instance vaší ochrany ATP v programu Azure na portálu ochrany ATP v programu Azure – krok 1
 
@@ -64,9 +64,9 @@ Po ověření, že vaši síť splňuje požadavky senzoru pokračujte ve vytvá
 - Uchovávání dat – dřív Odstraněná instance služby Azure ATP se nezobrazí v uživatelském rozhraní. Další informace o uchovávání dat ochrany ATP v programu Azure najdete v tématu [ochrany ATP v programu Azure dat zabezpečení a ochrana osobních údajů](atp-privacy-compliance.md).
 
 
->[!div class="step-by-step"]
-[« Předinstalace](atp-prerequisites.md)
-[Krok 2 »](install-atp-step2.md)
+> [!div class="step-by-step"]
+> [« Předinstalace](atp-prerequisites.md)
+> [Krok 2 »](install-atp-step2.md)
 
 
 

@@ -13,22 +13,19 @@ ms.technology: ''
 ms.assetid: 4a25561b-a5ed-44aa-9b72-366976b3c72a
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 5c84806dd12e516d1d7b61064906ed57bfd6db72
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 8dfee189f0be42e2d488506a0eaf950107061357
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133272"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54839907"
 ---
-*Platí pro: Advanced Threat Analytics verze 1.9*
-
-
-
 # <a name="change-ata-configuration---domain-connectivity-password"></a>Změna konfigurace ATA – heslo připojení k doméně
 
-
+*Platí pro: Advanced Threat Analytics verze 1.9*
 
 ## <a name="change-the-domain-connectivity-password"></a>Změna hesla připojení k doméně
+
 Pokud změníte heslo připojení k doméně, ujistěte se, že je zadané heslo správné. Pokud není, služba ATA Gateway se zastaví na komponenty ATA Gateway.
 
 Pokud máte podezření, že se to stalo v komponentě ATA Gateway, vyhledejte v souboru Microsoft.Tri.Gateway-Errors.log následující chyby: `The supplied credential is invalid.`

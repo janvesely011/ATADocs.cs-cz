@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: feea1982-ba23-48be-a468-98d2586cf840
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 92562ba852636389b5fe3358fc139bb208bfab12
-ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
+ms.openlocfilehash: 03312ad3c1b5cd31e4823080af644ad9826d6996
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54458763"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840348"
 ---
 # <a name="azure-atp-known-issues"></a>Azure – ochrana ATP v programu známé problémy
 
@@ -35,24 +35,27 @@ Služby Azure ATP známé problémy s známé alternativní řešení, najdete v
 
 ## <a name="ad-groups-with-more-than-1000-members-have-limited-detail-sync"></a>Skupiny AD s více než 1000 členů mají omezenou podrobnosti synchronizace
 > [!div class="mx-tableFixed"]  
-|Problém|Stav|
-|----|----|
-|Ochrana ATP v programu Azure nepodporuje podrobnosti synchronizace entit ve skupinách AD s více než 1000 členů na skupinu. Při zkoumání entit ve skupinách s více než 1 000 členů, může selhat některé entity k synchronizaci nebo zobrazení podrobností.|Omezení inženýrství. Žádné známé řešení.|
+> 
+> |Problém|Stav|
+> |----|----|
+> |Ochrana ATP v programu Azure nepodporuje podrobnosti synchronizace entit ve skupinách AD s více než 1000 členů na skupinu. Při zkoumání entit ve skupinách s více než 1 000 členů, může selhat některé entity k synchronizaci nebo zobrazení podrobností.|Omezení inženýrství. Žádné známé řešení.|
 
 ## <a name="report-downloads-cannot-contain-more-than-100000-entries"></a>Soubory ke stažení sestavy nemůže obsahovat více než 100 000 položek
 > [!div class="mx-tableFixed"]  
-|Problém|Stav|
-|----|----|
-|Ochrana ATP v programu Azure nepodporuje soubory ke stažení sestavy, které obsahují více než 100 000 položek na sestavu. Sestavy se zobrazí takto neúplný, pokud více než 100 000 položek, které jsou zahrnuty.|Omezení inženýrství. Žádné známé řešení.|
+> 
+> |Problém|Stav|
+> |----|----|
+> |Ochrana ATP v programu Azure nepodporuje soubory ke stažení sestavy, které obsahují více než 100 000 položek na sestavu. Sestavy se zobrazí takto neúplný, pokud více než 100 000 položek, které jsou zahrnuty.|Omezení inženýrství. Žádné známé řešení.|
 
 ## <a name="closed-issues"></a>Uzavřené problémy
 
 Tato skupina známých problémů už jsou uzavřené. Zkontrolujte číslo verze opravy pro referenci.   
 ### <a name="remote-code-execution-attempts-using-remote-powershell-commands-or-scripts-are-not-detected-when-using-windows-server-2016---v257-december-2-2018"></a>Vzdálené spuštění kódu pokusí pomocí vzdáleného prostředí PowerShell příkazů nebo skriptů nejsou zjištěny při použití Windows serveru 2016 - v.2.57 (2. prosince 2018)
 > [!div class="mx-tableFixed"]  
-|Problém|Stav|
-|----|----|
-|Vzdálené pokusy o spuštění kódu pomocí příkazů Powershellu vzdáleného nejsou aktuálně zjištěna senzor počítače s Windows serverem 2016. Související detekcí a výsledné výstrahy nejsou k dispozici.|Engineering aktuálně pracuje na vyřešení tohoto problému a přidání podpory systému Windows Server 2016.|
+> 
+> |Problém|Stav|
+> |----|----|
+> |Vzdálené pokusy o spuštění kódu pomocí příkazů Powershellu vzdáleného nejsou aktuálně zjištěna senzor počítače s Windows serverem 2016. Související detekcí a výsledné výstrahy nejsou k dispozici.|Engineering aktuálně pracuje na vyřešení tohoto problému a přidání podpory systému Windows Server 2016.|
 
 ## <a name="see-also"></a>Viz také
 

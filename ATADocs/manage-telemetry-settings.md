@@ -13,26 +13,24 @@ ms.technology: ''
 ms.assetid: 8c1c7a1b-a3de-4105-9fd0-08a061952172
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: a0b856ced72ad91a046f1116f96648baba7f7cba
-ms.sourcegitcommit: bdf5dc203ecec3e7542f2ed08852afeff4f20dcd
+ms.openlocfilehash: 36ba5f6e79743065ba3579fa72aa752ad8a63534
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52950301"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54839596"
 ---
+# <a name="manage-system-generated-logs"></a>Správa systémem generovaných protokolů
+
 *Platí pro: Advanced Threat Analytics verze 1.9*
-
-
-
-# <a name="manage-system-generated-logs"></a>Správa systémem generovaných protokolů > 
-
 
 [!INCLUDE [Handle personal data](../includes/gdpr-intro-sentence.md)]
 
  > [!NOTE]
  > Advanced Threat Analytics (ATA) shromažďuje anonymizované systémem generovaných protokolů týkající se ATA a odesílá je přes připojení HTTPS k serverům Microsoftu. Tato data Microsoft používá k vylepšení budoucích verzích ATA.
 
-## <a name="data-collected"></a>Shromažďovaná data
+## <a name="data-collected"></a>Data shromážděná
+
 Shromážděná anonymizovaná data zahrnují následující parametry:
 
 -   Čítače výkonu z ATA Center a ATA Gateway
@@ -88,7 +86,7 @@ Shromážděná anonymizovaná data zahrnují následující parametry:
 - Adresa URL konzoly ATA – adresy URL při používání konzoly ATA, to znamená, navštívené stránky v konzole ATA.
 
 
-### <a name="disable-data-collection"></a>Zakázání shromažďování dat
+### <a name="disable-data-collection"></a>Zakázat shromažďování dat
 Chcete-li zastavit shromažďování a odesílání telemetrických dat Microsoftu, proveďte následující kroky:
 
 1.  Přihlaste se ke konzole ATA, na panelu nástrojů klikněte na tlačítko se třemi tečkami a vyberte **O aplikaci**.

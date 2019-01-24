@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: b09adce3-0fbc-40e3-a53f-31f57fe79ca3
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e9d8a901d79d83dea7e11fd91343d41594fbadf5
-ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
+ms.openlocfilehash: 4b0cdf2bd9294a2acb70bb8c3ce5e2e55e480f23
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54458610"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54839668"
 ---
 # <a name="configure-azure-atp-to-make-remote-calls-to-sam"></a>Konfigurace ochrany ATP v programu Azure k vzdáleně volat SAM
 Ochrana ATP v programu Azure [cesty laterální pohyb](use-case-lateral-movement-path.md) detekce spoléhá na dotazy, které identifikují místními správci na konkrétní počítače. Tyto dotazy se provádí pomocí protokolu SAM-R, pomocí účtu služby ochrany ATP v programu Azure vytvoří během instalace služby Azure ATP [kroku 2. Připojení ke službě AD](install-atp-step2.md).
@@ -28,14 +28,14 @@ K zajištění Windows klienty a servery povolit váš účet služby Azure ATP 
 
 1. Vyhledejte zásady:
 
- - Název zásad: Přístup k síti – omezovat klienty moct vzdáleně volat SAM
- - Umístění: Konfigurace nastavení Windows, nastavení zabezpečení, místní zásady, možnosti zabezpečení
+   - Název zásad: Přístup k síti – omezovat klienty moct vzdáleně volat SAM
+   - Umístění: Konfigurace nastavení Windows, nastavení zabezpečení, místní zásady, možnosti zabezpečení
   
-  ![Vyhledejte zásady](./media/samr-policy-location.png)
+   ![Vyhledejte zásady](./media/samr-policy-location.png)
 
 2. Přidáte službu ochrany ATP v programu Azure do seznamu schválených účtů schopen provést tuto akci do moderního systému Windows.
  
-  ![Přidat službu](./media/samr-add-service.png)
+   ![Přidat službu](./media/samr-add-service.png)
 
 3. **Služba AATP** (službu ochrany ATP v programu Azure vytvoří během instalace) má teď oprávnění potřebná k provedení SAM-R v prostředí.
 

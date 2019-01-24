@@ -13,17 +13,17 @@ ms.technology: ''
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 4083975599985abe5540becb8a8ce580980f1f14
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 35577c9001d522f1c227731ab0953a0c8425724d
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46134054"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54841164"
 ---
+# <a name="ata-silent-installation"></a>Bezobslužná instalace ATA
+
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
-
-# <a name="ata-silent-installation"></a>Bezobslužná instalace ATA
 Tento článek poskytuje podrobné pokyny k bezobslužné instalaci ATA.
 
 ## <a name="prerequisites"></a>Požadavky
@@ -47,29 +47,31 @@ K instalaci komponenty ACA Center použijte následující příkaz:
 
     "Microsoft ATA Center Setup.exe" [/quiet] [/Help] [--LicenseAccepted] [NetFrameworkCommandLineArguments="/q"] [InstallationPath="<InstallPath>"] [DatabaseDataPath= "<DBPath>"] [CenterIpAddress=<CenterIPAddress>] [CenterPort=<CenterPort>] [CenterCertificateThumbprint="<CertThumbprint>"] 
     [ConsoleIpAddress=<ConsoleIPAddress>] [ConsoleCertificateThumbprint="<CertThumbprint >"]
-    
+
 **Možnosti instalace**:
 
 > [!div class="mx-tableFixed"]
-|Název|Syntaxe|Povinné pro bezobslužnou instalaci?|Popis|
-|-------------|----------|---------|---------|
-|Quiet|/quiet|Ano|Spustí instalační program, který nezobrazuje žádné uživatelské rozhraní ani výzvy.|
-|Nápověda|/help|Ne|Poskytuje nápovědu a stručnou referenční příručku. Zobrazí správné použití instalačních příkazů včetně seznamu všech možností a jejich chování.|
-|NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Ano|Určuje parametry pro instalaci rozhraní .Net Framework. K vynucení bezobslužné instalace rozhraní .Net Framework musí být nastavené.|
-|LicenseAccepted|--LicenseAccepted|Ano|Udává, že licence byla přečtena a schválena. U bezobslužné instalace musí být nastavené.|
+> 
+> |Název|Syntaxe|Povinné pro bezobslužnou instalaci?|Popis|
+> |-------------|----------|---------|---------|
+> |Quiet|/quiet|Ano|Spustí instalační program, který nezobrazuje žádné uživatelské rozhraní ani výzvy.|
+> |Nápověda|/help|Ne|Poskytuje nápovědu a stručnou referenční příručku. Zobrazí správné použití instalačních příkazů včetně seznamu všech možností a jejich chování.|
+> |NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Ano|Určuje parametry pro instalaci rozhraní .Net Framework. K vynucení bezobslužné instalace rozhraní .Net Framework musí být nastavené.|
+> |LicenseAccepted|--LicenseAccepted|Ano|Udává, že licence byla přečtena a schválena. U bezobslužné instalace musí být nastavené.|
 
 **Parametry instalace**:
 
 > [!div class="mx-tableFixed"]
-|Název|Syntaxe|Povinné pro bezobslužnou instalaci?|Popis|
-|-------------|----------|---------|---------|
-|InstallationPath|InstallationPath="<InstallPath>"|Ne|Nastavuje cestu pro instalaci binárních souborů ATA. Výchozí cesta: C:\Program Files\Microsoft Advanced Threat Analytics\Center|
-|DatabaseDataPath|DatabaseDataPath= "<DBPath>"|Ne|Nastavuje cestu k datové složce databáze ATA. Výchozí cesta: C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data|
-|CenterIpAddress|CenterIpAddress=<CenterIPAddress>|Ano|Nastaví IP adresu služby ATA Center.|
-|CenterPort|CenterPort=<CenterPort>|Ano|Nastaví síťový port služby ATA Center.|
-|CenterCertificateThumbprint|CenterCertificateThumbprint="<CertThumbprint>"|Ne|Nastaví kryptografický otisk certifikátu pro službu ATA Center. Tento certifikát slouží k zabezpečení komunikace mezi komponentami ATA Center a ATA Gateway. Pokud není sada, instalace vytvoří certifikát podepsaný svým držitelem.|
-|ConsoleIpAddress|ConsoleIpAddress=<ConsoleIPAddress>|Ano|Nastaví IP adresu konzoly ATA.|
-|ConsoleCertificateThumbprint|ConsoleCertificateThumbprint="<CertThumbprint >"|Ne|Nastaví kryptografický otisk certifikátu pro konzolu ATA. Tento certifikát slouží k ověření identity webu konzoly ATA. Pokud není zadán, instalace vytvoří certifikát podepsaný svým držitelem|
+> 
+> |             Název             |                      Syntaxe                      | Povinné pro bezobslužnou instalaci? |                                                                                                        Popis                                                                                                         |
+> |------------------------------|--------------------------------------------------|------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+> |       InstallationPath       |         InstallationPath="<InstallPath>"         |                 Ne                 |                                               Nastavuje cestu pro instalaci binárních souborů ATA. Výchozí cesta: C:\Program Files\Microsoft Advanced Threat Analytics\Center                                                |
+> |       DatabaseDataPath       |           DatabaseDataPath= "<DBPath>"           |                 Ne                 |                                         Nastavuje cestu k datové složce databáze ATA. Výchozí cesta: C:\Program Files\Microsoft Advanced Threat Analytics\Center\MongoDB\bin\data                                         |
+> |       CenterIpAddress        |        CenterIpAddress=<CenterIPAddress>         |                Ano                 |                                                                                       Nastaví IP adresu služby ATA Center.                                                                                        |
+> |          CenterPort          |             CenterPort=<CenterPort>              |                Ano                 |                                                                                      Nastaví síťový port služby ATA Center.                                                                                       |
+> | CenterCertificateThumbprint  |  CenterCertificateThumbprint="<CertThumbprint>"  |                 Ne                 | Nastaví kryptografický otisk certifikátu pro službu ATA Center. Tento certifikát slouží k zabezpečení komunikace mezi komponentami ATA Center a ATA Gateway. Pokud není sada, instalace vytvoří certifikát podepsaný svým držitelem. |
+> |       ConsoleIpAddress       |       ConsoleIpAddress=<ConsoleIPAddress>        |                Ano                 |                                                                                           Nastaví IP adresu konzoly ATA.                                                                                           |
+> | ConsoleCertificateThumbprint | ConsoleCertificateThumbprint="<CertThumbprint >" |                 Ne                 |       Nastaví kryptografický otisk certifikátu pro konzolu ATA. Tento certifikát slouží k ověření identity webu konzoly ATA. Pokud není zadán, instalace vytvoří certifikát podepsaný svým držitelem       |
 
 **Příklady**: Instalace komponenty ATA Center s výchozími instalačními cestami a jednou IP adresou:
 
@@ -93,11 +95,12 @@ K aktualizaci komponenty ACA Center použijte následující příkaz:
 **Možnosti instalace**:
 
 > [!div class="mx-tableFixed"]
-|Název|Syntaxe|Povinné pro bezobslužnou instalaci?|Popis|
-|-------------|----------|---------|---------|
-|Quiet|/quiet|Ano|Spustí instalační program, který nezobrazuje žádné uživatelské rozhraní ani výzvy.|
-|Nápověda|/help|Ne|Poskytuje nápovědu a stručnou referenční příručku. Zobrazí správné použití instalačních příkazů včetně seznamu všech možností a jejich chování.|
-|NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Ano|Určuje parametry pro instalaci rozhraní .Net Framework. K vynucení bezobslužné instalace rozhraní .Net Framework musí být nastavené.|
+> 
+> |Název|Syntaxe|Povinné pro bezobslužnou instalaci?|Popis|
+> |-------------|----------|---------|---------|
+> |Quiet|/quiet|Ano|Spustí instalační program, který nezobrazuje žádné uživatelské rozhraní ani výzvy.|
+> |Nápověda|/help|Ne|Poskytuje nápovědu a stručnou referenční příručku. Zobrazí správné použití instalačních příkazů včetně seznamu všech možností a jejich chování.|
+> |NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Ano|Určuje parametry pro instalaci rozhraní .Net Framework. K vynucení bezobslužné instalace rozhraní .Net Framework musí být nastavené.|
 
 
 Při aktualizaci instalační program automaticky rozpozná, že služba ATA už je na serveru nainstalovaná, a nevyžaduje se žádná možnost pro instalaci aktualizace.
@@ -108,7 +111,7 @@ Při aktualizaci instalační program automaticky rozpozná, že služba ATA už
 
 ## <a name="uninstall-the-ata-center-silently"></a>Bezobslužná odinstalace komponenty ATA Center
 
-K provedení bezobslužné odinstalace komponenty ATA Center použijte následující příkaz:**Syntaxe**:
+K provedení bezobslužné odinstalace komponenty ATA Center použijte následující příkaz: **Syntaxe**:
 
     Microsoft ATA Center Setup.exe [/quiet] [/Uninstall] [/Help]
      [--DeleteExistingDatabaseData]
@@ -116,18 +119,20 @@ K provedení bezobslužné odinstalace komponenty ATA Center použijte následuj
 **Možnosti instalace**:
 
 > [!div class="mx-tableFixed"]
-|Název|Syntaxe|Povinné pro bezobslužnou odinstalaci?|Popis|
-|-------------|----------|---------|---------|
-|Quiet|/quiet|Ano|Spustí odinstalační program, který nezobrazuje žádné uživatelské rozhraní ani výzvy.|
-|Odinstalace|/uninstall|Ano|Spustí bezobslužnou odinstalaci komponenty ATA Center ze serveru.|
-|Nápověda|/help|Ne|Poskytuje nápovědu a stručnou referenční příručku. Zobrazí správné použití instalačních příkazů včetně seznamu všech možností a jejich chování.|
+> 
+> |Název|Syntaxe|Povinné pro bezobslužnou odinstalaci?|Popis|
+> |-------------|----------|---------|---------|
+> |Quiet|/quiet|Ano|Spustí odinstalační program, který nezobrazuje žádné uživatelské rozhraní ani výzvy.|
+> |Odinstalace|/uninstall|Ano|Spustí bezobslužnou odinstalaci komponenty ATA Center ze serveru.|
+> |Nápověda|/help|Ne|Poskytuje nápovědu a stručnou referenční příručku. Zobrazí správné použití instalačních příkazů včetně seznamu všech možností a jejich chování.|
 
 **Parametry instalace**:
 
 > [!div class="mx-tableFixed"]
-|Název|Syntaxe|Povinné pro bezobslužnou odinstalaci?|Popis|
-|-------------|----------|---------|---------|
-|DeleteExistingDatabaseData|DeleteExistingDatabaseData|Ne|Odstraní všechny soubory ve stávající databázi.|
+> 
+> |Název|Syntaxe|Povinné pro bezobslužnou odinstalaci?|Popis|
+> |-------------|----------|---------|---------|
+> |DeleteExistingDatabaseData|DeleteExistingDatabaseData|Ne|Odstraní všechny soubory ve stávající databázi.|
 
 **Příklady**: Bezobslužná odinstalace komponenty ATA Center ze serveru s odebráním všech stávajících databázových dat:
 
@@ -155,25 +160,27 @@ K bezobslužné instalaci komponenty ACA Gateway použijte následující přík
 **Možnosti instalace**:
 
 > [!div class="mx-tableFixed"]
-|Název|Syntaxe|Povinné pro bezobslužnou instalaci?|Popis|
-|-------------|----------|---------|---------|
-|Quiet|/quiet|Ano|Spustí instalační program, který nezobrazuje žádné uživatelské rozhraní ani výzvy.|
-|Nápověda|/help|Ne|Poskytuje nápovědu a stručnou referenční příručku. Zobrazí správné použití instalačních příkazů včetně seznamu všech možností a jejich chování.|
-|NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Ano|Určuje parametry pro instalaci rozhraní .Net Framework. K vynucení bezobslužné instalace rozhraní .Net Framework musí být nastavené.|
+> 
+> |Název|Syntaxe|Povinné pro bezobslužnou instalaci?|Popis|
+> |-------------|----------|---------|---------|
+> |Quiet|/quiet|Ano|Spustí instalační program, který nezobrazuje žádné uživatelské rozhraní ani výzvy.|
+> |Nápověda|/help|Ne|Poskytuje nápovědu a stručnou referenční příručku. Zobrazí správné použití instalačních příkazů včetně seznamu všech možností a jejich chování.|
+> |NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Ano|Určuje parametry pro instalaci rozhraní .Net Framework. K vynucení bezobslužné instalace rozhraní .Net Framework musí být nastavené.|
 
 **Parametry instalace**:
 
 > [!div class="mx-tableFixed"]
-|Název|Syntaxe|Povinné pro bezobslužnou instalaci?|Popis|
-|-------------|----------|---------|---------|
-|ConsoleAccountName|ConsoleAccountName="<AccountName>"|Ano|Nastaví název uživatelského účtu (user@domain.com), který se použije k registraci komponenty ATA Gateway ve službě ATA Center.|
-|ConsoleAccountPassword|ConsoleAccountPassword="<AccountPassword>"|Ano|Nastaví heslo uživatelského účtu (user@domain.com), který se použije k registraci komponenty ATA Gateway ve službě ATA Center.|
+> 
+> |          Název          |                   Syntaxe                   | Povinné pro bezobslužnou instalaci? |                                                      Popis                                                       |
+> |------------------------|--------------------------------------------|------------------------------------|------------------------------------------------------------------------------------------------------------------------|
+> |   ConsoleAccountName   |     ConsoleAccountName="<AccountName>"     |                Ano                 |   Nastaví název uživatelského účtu (user@domain.com), který se použije k registraci komponenty ATA Gateway ve službě ATA Center.    |
+> | ConsoleAccountPassword | ConsoleAccountPassword="<AccountPassword>" |                Ano                 | Nastaví heslo uživatelského účtu (user@domain.com), který se použije k registraci komponenty ATA Gateway ve službě ATA Center. |
 
-**Příklady**: bezobslužná instalace komponenty ATA Gateway, přihlaste se k doméně připojené k počítači pomocí přihlašovacích údajů správce ATA, takže není potřeba zadat přihlašovací údaje jako součást instalace. V opačném případě použijte k registraci v ATA Center uvedené přihlašovací údaje:
+**Příklady**: K bezobslužné instalaci ATA Gateway, přihlaste se k doméně připojené k počítači pomocí přihlašovacích údajů správce ATA, takže není potřeba zadat přihlašovací údaje jako součást instalace. V opačném případě použijte k registraci v ATA Center uvedené přihlašovací údaje:
 
     "Microsoft ATA Gateway Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" 
     ConsoleAccountName="user@contoso.com" ConsoleAccountPassword="userpwd"
-    
+
 
 ## <a name="update-the-ata-gateway"></a>Aktualizace ATA Gateway
 
@@ -187,11 +194,12 @@ K bezobslužné aktualizaci komponenty ACA Gateway použijte následující př�
 **Možnosti instalace**:
 
 > [!div class="mx-tableFixed"]
-|Název|Syntaxe|Povinné pro bezobslužnou instalaci?|Popis|
-|-------------|----------|---------|---------|
-|Quiet|/quiet|Ano|Spustí instalační program, který nezobrazuje žádné uživatelské rozhraní ani výzvy.|
-|Nápověda|/help|Ne|Poskytuje nápovědu a stručnou referenční příručku. Zobrazí správné použití instalačních příkazů včetně seznamu všech možností a jejich chování.|
-|NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Ano|Určuje parametry pro instalaci rozhraní .Net Framework. K vynucení bezobslužné instalace rozhraní .Net Framework musí být nastavené.|
+> 
+> |Název|Syntaxe|Povinné pro bezobslužnou instalaci?|Popis|
+> |-------------|----------|---------|---------|
+> |Quiet|/quiet|Ano|Spustí instalační program, který nezobrazuje žádné uživatelské rozhraní ani výzvy.|
+> |Nápověda|/help|Ne|Poskytuje nápovědu a stručnou referenční příručku. Zobrazí správné použití instalačních příkazů včetně seznamu všech možností a jejich chování.|
+> |NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Ano|Určuje parametry pro instalaci rozhraní .Net Framework. K vynucení bezobslužné instalace rozhraní .Net Framework musí být nastavené.|
 
 
 **Příklady**: Bezobslužná aktualizace komponenty ATA Gateway:
@@ -203,21 +211,22 @@ K bezobslužné aktualizaci komponenty ACA Gateway použijte následující př�
 K provedení bezobslužné odinstalace komponenty ATA Gateway použijte následující příkaz: **Syntaxe**:
 
     Microsoft ATA Gateway Setup.exe [/quiet] [/Uninstall] [/Help]
-    
+
 **Možnosti instalace**:
 
 > [!div class="mx-tableFixed"]
-|Název|Syntaxe|Povinné pro bezobslužnou odinstalaci?|Popis|
-|-------------|----------|---------|---------|
-|Quiet|/quiet|Ano|Spustí odinstalační program, který nezobrazuje žádné uživatelské rozhraní ani výzvy.|
-|Odinstalace|/uninstall|Ano|Spustí bezobslužnou odinstalaci komponenty ATA Gateway ze serveru.|
-|Nápověda|/help|Ne|Poskytuje nápovědu a stručnou referenční příručku. Zobrazí správné použití instalačních příkazů včetně seznamu všech možností a jejich chování.|
+> 
+> |Název|Syntaxe|Povinné pro bezobslužnou odinstalaci?|Popis|
+> |-------------|----------|---------|---------|
+> |Quiet|/quiet|Ano|Spustí odinstalační program, který nezobrazuje žádné uživatelské rozhraní ani výzvy.|
+> |Odinstalace|/uninstall|Ano|Spustí bezobslužnou odinstalaci komponenty ATA Gateway ze serveru.|
+> |Nápověda|/help|Ne|Poskytuje nápovědu a stručnou referenční příručku. Zobrazí správné použití instalačních příkazů včetně seznamu všech možností a jejich chování.|
 
 **Příklady**: Bezobslužná odinstalace komponenty ATA Gateway ze serveru:
 
 
     Microsoft ATA Gateway Setup.exe /quiet /uninstall
-    
+
 
 
 

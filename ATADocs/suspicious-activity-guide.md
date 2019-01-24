@@ -13,17 +13,17 @@ ms.technology: ''
 ms.assetid: 1fe5fd6f-1b79-4a25-8051-2f94ff6c71c1
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 4e0102e8a19f5f5bd303c00c4ebdb6190bcc5eb3
-ms.sourcegitcommit: d68a44b3230dc4c522d8d895eb3bc93feacae62e
+ms.openlocfilehash: 033333fe332f879e5f5c34bdf487e7893db586e4
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53615286"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54841045"
 ---
-*Platí pro: Advanced Threat Analytics verze 1.9*
-
-
 # <a name="advanced-threat-analytics-suspicious-activity-guide"></a>Průvodce prošetřováním podezřelých aktivit rozšířené analýzy hrozeb
+
+
+*Platí pro: Advanced Threat Analytics verze 1.9*
 
 Po správném šetření dají považovat za podezřelé aktivity:
 
@@ -349,11 +349,11 @@ V tomto zjišťování by první měsíc po nasazení ATA aktivovat žádné vý
 
 5. Pokud nejsou k dispozici informace na zahrnutých účtu: k tomuto účtu mají takové dotazy nebo nemá tento účet normálně přihlásit ke zdrojovému počítači?
 
- - Pokud ano a výstraha aktualizována, **potlačit** podezřelou aktivitu.
+   - Pokud ano a výstraha aktualizována, **potlačit** podezřelou aktivitu.
 
- - Pokud ano a to už nepotřebujeme, by neměla provést **Zavřít** podezřelou aktivitu.
+   - Pokud ano a to už nepotřebujeme, by neměla provést **Zavřít** podezřelou aktivitu.
 
- - Pokud byla odpověď Ne všechny výše uvedené, se předpokládá to se zlými úmysly.
+   - Pokud byla odpověď Ne všechny výše uvedené, se předpokládá to se zlými úmysly.
 
 6. Pokud není k dispozici žádné informace o účet, který je obsažená, můžete přejít ke koncovému bodu a zkontrolovat účtu, který byl přihlášen v době výstrahy.
 
@@ -397,7 +397,7 @@ V této detekce se aktivuje upozornění, když se provádí výčet relací SMB
 
 1. Klikněte na výstrahu, kterou chcete získat jeho stránku podrobností. Zkontrolujte účtu/s, který provedl operaci a které účty byly vystaveny, pokud existuje.
 
- - Existuje nějaký druh kontrolu zabezpečení, které běží na zdrojovém počítači? Pokud ano, **zavřít a vyloučit** podezřelou aktivitu.
+   - Existuje nějaký druh kontrolu zabezpečení, které běží na zdrojovém počítači? Pokud ano, **zavřít a vyloučit** podezřelou aktivitu.
 
 2. Zkontrolujte operaci provést, které zahrnutých uživatelů/s. Obvykle protokolují do zdrojového počítače nebo jsou správci, kteří by měl provádět tyto akce?  
 
@@ -420,10 +420,10 @@ Použití [Net ukončí nástroj](https://gallery.technet.microsoft.com/Net-Ceas
 **Šetření**
 
 1. To je běžné pro pracovní stanice pro správu také členové týmu IT a účty služeb, které provádět úlohy správy řadiče domény. Pokud je to tento případ, a výstrahu získá aktualizovat, protože je správce nebo počítač provádí úlohu, **potlačit** výstrahu.
-2.  Je povolené vzdálené spuštění vůči vašemu řadiči domény v daném počítači?
-  - Je dotyčného účtu povolené vzdálené spuštění vůči vašemu řadiči domény?
-  - Pokud na obě otázky odpovíte Ano, pak **Zavřít** výstrahu.
-3.  Pokud je odpověď na obě otázky Ne, tato aktivita by se měly zvažovat pravdivě pozitivní upozornění. Pokuste se najít zdrojový na pokus o kontrolou počítače a účtu profily. Klikněte na zdrojový počítač nebo účet, přejděte na stránku jeho profil. Zkontrolujte, co se stalo v době těchto pokusů o přihlášení, hledání neobvyklých aktivit, jako například: kdo byl přihlášen, které prostředky tam, kde získat přístup.
+2. Je povolené vzdálené spuštění vůči vašemu řadiči domény v daném počítači?
+   - Je dotyčného účtu povolené vzdálené spuštění vůči vašemu řadiči domény?
+   - Pokud na obě otázky odpovíte Ano, pak **Zavřít** výstrahu.
+3. Pokud je odpověď na obě otázky Ne, tato aktivita by se měly zvažovat pravdivě pozitivní upozornění. Pokuste se najít zdrojový na pokus o kontrolou počítače a účtu profily. Klikněte na zdrojový počítač nebo účet, přejděte na stránku jeho profil. Zkontrolujte, co se stalo v době těchto pokusů o přihlášení, hledání neobvyklých aktivit, jako například: kdo byl přihlášen, které prostředky tam, kde získat přístup.
 
 
 **Náprava**
@@ -461,13 +461,13 @@ Tato detekce se aktivuje upozornění, když došlo k mnoha chyb ověřování p
 
 **Šetření**
 
-1.  Klikněte na tlačítko **stáhnout podrobnosti o** zobrazíte úplné informace v Excelové tabulce. Můžete získat následující informace: 
-  - Seznam napadené účty
-  - Seznam odhadnuté účty v které pokusů o přihlášení, bylo dokončeno s úspěšné ověření
-  - Pokud byly provedeny pokusy o ověření, pomocí protokolu NTLM, zobrazí se příslušné události aktivit 
-  - Pokud byly provedeny pokusy o ověření, pomocí protokolu Kerberos, zobrazí se příslušné síťové aktivity
-2.  Klikněte na zdrojovém počítači přejděte na stránku jeho profil. Zkontrolujte, co se stalo v době těchto pokusů o přihlášení, hledání neobvyklých aktivit, jako například: kdo byl přihlášen, které prostředky tam, kde získat přístup. 
-3.  Pokud se provádí ověřování pomocí protokolu NTLM a objeví se, že výstrahy v mnoha případech a není dostatek informací o serveru, který je na zdrojovém počítači se pokusili získat přístup, měli byste povolit **auditování protokolu NTLM** na součástí řadiče domény. K tomuto účelu zapněte události 8004. Toto je událost ověřování NTLM, která obsahuje informace o zdrojovém počítači, uživatelský účet a **server** , které na zdrojovém počítači se pokusili získat přístup. Až budete vědět, které server odeslal ověření ověřování, které byste měli prozkoumat serveru tak, že zkontrolujete jeho události, jako je 4624 pro lepší pochopení procesu ověřování. 
+1. Klikněte na tlačítko **stáhnout podrobnosti o** zobrazíte úplné informace v Excelové tabulce. Můžete získat následující informace: 
+   - Seznam napadené účty
+   - Seznam odhadnuté účty v které pokusů o přihlášení, bylo dokončeno s úspěšné ověření
+   - Pokud byly provedeny pokusy o ověření, pomocí protokolu NTLM, zobrazí se příslušné události aktivit 
+   - Pokud byly provedeny pokusy o ověření, pomocí protokolu Kerberos, zobrazí se příslušné síťové aktivity
+2. Klikněte na zdrojovém počítači přejděte na stránku jeho profil. Zkontrolujte, co se stalo v době těchto pokusů o přihlášení, hledání neobvyklých aktivit, jako například: kdo byl přihlášen, které prostředky tam, kde získat přístup. 
+3. Pokud se provádí ověřování pomocí protokolu NTLM a objeví se, že výstrahy v mnoha případech a není dostatek informací o serveru, který je na zdrojovém počítači se pokusili získat přístup, měli byste povolit **auditování protokolu NTLM** na součástí řadiče domény. K tomuto účelu zapněte události 8004. Toto je událost ověřování NTLM, která obsahuje informace o zdrojovém počítači, uživatelský účet a **server** , které na zdrojovém počítači se pokusili získat přístup. Až budete vědět, které server odeslal ověření ověřování, které byste měli prozkoumat serveru tak, že zkontrolujete jeho události, jako je 4624 pro lepší pochopení procesu ověřování. 
 
 
 **Náprava**
@@ -486,9 +486,9 @@ Tato detekce se aktivuje upozornění, když došlo k mnoha chyb ověřování p
 
 2. Je služba něco, co rozpoznat v tomto počítači?
 
- - Je **účet** dotyčný můžou nainstalovat tuto službu?
+   - Je **účet** dotyčný můžou nainstalovat tuto službu?
 
- - Pokud na obě otázky odpovíte *Ano*, pak **Zavřít** výstrahu nebo ho přidejte do seznamu vyloučení.
+   - Pokud na obě otázky odpovíte *Ano*, pak **Zavřít** výstrahu nebo ho přidejte do seznamu vyloučení.
 
 3. Pokud na obě otázky odpovíte *žádné*, a to by se měly zvažovat pravdivě pozitivní upozornění.
 

@@ -12,19 +12,18 @@ ms.service: ''
 ms.technology: ''
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 7875c6b0f6be62277f80881edbefe36b910bb4c9
-ms.sourcegitcommit: eac0aa855270b550dfb4b8c61b9cf0953f1e5204
+ms.openlocfilehash: ffc46e3d74928cc071215da9bafd5989e4448a65
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52298132"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840552"
 ---
-*Platí pro: Advanced Threat Analytics verze 1.9*
-
-
-
 # <a name="modifying-the-ata-center-configuration"></a>Změna konfigurace ATA Center
 
+
+
+*Platí pro: Advanced Threat Analytics verze 1.9*
 
 Po počátečním nasazení by se změny ATA Center měly dělat opatrně. Při aktualizaci adresu URL konzoly a certifikátu použijte následující postupy.
 
@@ -46,16 +45,16 @@ Adresa URL se používá v následujících scénářích:
 
 2. V nastavení ATA v části **Center**, zadejte novou adresu URL. V tomto okamžiku je služba ATA Center stále používá původní adresu URL. 
 
- ![Změna konfigurace ATA](media/change-center-config.png)
+   ![Změna konfigurace ATA](media/change-center-config.png)
 
-  > [!NOTE]
-  > Pokud jste zadali vlastní IP adresu, nemůžete kliknout **aktivovat** dokud nenainstalujete IP adresu na ATA Center.
+   > [!NOTE]
+   > Pokud jste zadali vlastní IP adresu, nemůžete kliknout **aktivovat** dokud nenainstalujete IP adresu na ATA Center.
     
 3. Vyčkat, než komponenty ATA Gateway k synchronizaci. Tito uživatelé teď mají dvě potenciální adresy URL, pomocí kterého je možné získat přístup ke konzole ATA. Tak dlouho, dokud se komponenta ATA Gateway můžete připojit pomocí původní adresu URL, nepokusí novou.
 
 4. Po všechny komponenty ATA Gateway synchronizovaly s aktualizovanou konfigurací, na stránce konfigurace System Center, klikněte **aktivovat** tlačítko aktivovat novou adresu URL. Po aktivaci nové adresy URL komponenty ATA Gateway použije pro přístup ke komponentě ATA Center nyní nové adresy URL Po připojení ke službě ATA Center, ATA Gateway stáhne nejnovější konfiguraci a bude obsahovat pouze nové adresy URL pro konzolu ATA. 
 
- ![Aktivovat certifikát](media/center-activation.png)
+   ![Aktivovat certifikát](media/center-activation.png)
 
 > [!NOTE]
 > -   Pokud při aktivaci nové adresy URL a nikdy nezískala aktualizovanou konfiguraci ATA Gateway byla ve stavu offline, ručně aktualizujte konfigurační soubor JSON v ATA Gateway.
@@ -74,7 +73,7 @@ Nahraďte certifikát pomocí následujícího postupu:
 
 2. V nastavení ATA v části **Center**, vyberte tento nově vytvořeného certifikátu. V tomto okamžiku je služba ATA Center stále vázaná na původní certifikát. 
 
- ![Změna konfigurace ATA](media/change-center-config.png)
+   ![Změna konfigurace ATA](media/change-center-config.png)
 
 3. Vyčkat, než komponenty ATA Gateway k synchronizaci. Nyní mají dva potenciální certifikáty, které jsou platné pro vzájemné ověřování. Tak dlouho, dokud se komponenta ATA Gateway můžete připojit pomocí původního certifikátu, ne zkoušet nový.
 

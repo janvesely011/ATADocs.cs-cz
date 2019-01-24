@@ -13,16 +13,16 @@ ms.technology: ''
 ms.assetid: 1b2d185c-62cd-45f0-b0dd-687b51317f32
 ms.reviewer: ophirp
 ms.suite: ems
-ms.openlocfilehash: 08876085e3fe5d86c8219c6b0ad7beb8c44c700a
-ms.sourcegitcommit: 1b23381ca4551a902f6343428d98f44480077d30
+ms.openlocfilehash: 174c3fdace1fcb1d188e3157ae5c6d2a894f1b77
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47403229"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54839873"
 ---
-*Platí pro: Advanced Threat Analytics verze 1.9*
-
 # <a name="ata-data-security-and-privacy"></a>Ochrana osobních údajů a zabezpečení dat ATA
+
+*Platí pro: Advanced Threat Analytics verze 1.9*
 
 [!INCLUDE [Handle personal data](../includes/gdpr-intro-sentence.md)]
 
@@ -86,6 +86,6 @@ Chcete-li zakázat shromažďování dat:
 1. Přihlaste se ke konzole ATA, na panelu nástrojů klikněte na tlačítko se třemi tečkami a vyberte **O aplikaci**. 
 2. Zrušte zaškrtnutí políčka **Send us usage information to help improve your customer experience in the future** (Posílat nám informace o použití k vylepšení zkušeností uživatelů v budoucnosti). 
 
-## <a name="additional-resources"></a>Další materiály a zdroje informací
+## <a name="additional-resources"></a>Další zdroje
 
 - Informace o ATA zabezpečení a dodržování předpisů, najdete v článku [portálu důvěryhodnosti služeb](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted) a [dodržování předpisů GDPR pro Microsoft 365 Enterprise lokality](https://docs.microsoft.com/microsoft-365/compliance/compliance-solutions-overview).

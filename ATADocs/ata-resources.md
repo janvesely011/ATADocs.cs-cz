@@ -13,16 +13,17 @@ ms.technology: ''
 ms.assetid: 42a1a34f-ed6b-4538-befb-452168a30e8c
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 069ee0f367c52de897486291f761bf0dde6016e0
-ms.sourcegitcommit: 8ecb76ddfbf48c361d3637d15bd48313a3e68685
+ms.openlocfilehash: 92768392fffb2485a3043ca49fa0c7d494a26df7
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "49634745"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840994"
 ---
+# <a name="ata-readiness-roadmap"></a>Plán připravenosti ATA 
+
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
-# <a name="ata-readiness-roadmap"></a>Plán připravenosti ATA 
 Tento článek vám poskytne plány připravenosti, která vám pomůže začít pracovat s Advanced Threat Analytics.
 
 ## <a name="understanding-ata"></a>Principy ATA
@@ -43,7 +44,7 @@ ATA se skládá z komponenty ATA Center, které si můžete nainstalovat na serv
 |Konfigurace | Rozhodnutí |
 |----|----|
 |Typ hardwaru|Fyzickými, virtuálními virtuálního počítače Azure|
-|Pracovní skupině nebo doméně|Pracovní skupině, doméně|
+|Pracovní skupině nebo doméně|Workgroup, domain|
 |Velikost brány|Úplné brány Lightweight Gateway|
 |Certifikáty|Infrastruktura veřejných KLÍČŮ, podepsaný svým držitelem|
 
@@ -77,7 +78,7 @@ Základní nastavení potřebné v ATA jsou nakonfigurované jako součást Prů
 
 Po vytvoření a spuštění ATA je, zobrazíte podezřelých aktivit, které jsou zjištěny na časové ose útoku. Toto je výchozí cílová stránka, která se vám zobrazí po přihlášení ke konzole ATA. Ve výchozím nastavení jsou všechny otevřené podezřelé aktivity zobrazené na časové ose útoků. Můžete také zjistit závažnost, která se jednotlivým aktivitám přiřadila. Zkontrolovat každou podezřelou aktivitu, že procházení k podrobnostem entitách (počítače, zařízení a uživatele) otevřete jejich profilové stránky, které poskytují další informace. Tyto prostředky vám usnadní práci s podezřelými aktivitami ATA:
 
-[Playbook podezřelých aktivit ATA](http://aka.ms/ataplaybook) – Tento článek vás provede technik útoku krádeží přihlašovacích údajů pomocí snadno dostupné výzkumné nástroje na Internetu. U každého bodu útoku uvidíte, jak ATA vám pomůže získat náhled do těchto hrozeb.
+[Playbook podezřelých aktivit ATA](http://aka.ms/ataplaybook) – Tento článek vás provede technik útoku krádeží přihlašovacích údajů pomocí snadno dostupné výzkumné nástroje na Internetu. U každého bodu útoku uvidíte, jak ATA vám pomůže získat náhled do těchto hrozeb.
 
 [Průvodce prošetřováním podezřelých aktivit ATA](suspicious-activity-guide.md)
 
@@ -89,7 +90,7 @@ Po vytvoření a spuštění ATA je, zobrazíte podezřelých aktivit, které js
 
 [Nejčastější dotazy k ATA](ata-technical-faq.md) – Tento článek obsahuje seznam nejčastějších dotazů týkající se ATA a poskytuje podrobné informace a odpovědi.
 
-## <a name="additional-resources"></a>Další materiály a zdroje informací
+## <a name="additional-resources"></a>Další zdroje
 
 [Stránka Microsoft Security Channel 9](https://channel9.msdn.com/Shows/Microsoft-Security/)
 

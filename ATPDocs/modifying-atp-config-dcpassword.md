@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: e7f065fa-1ad1-4e87-bd80-99cc695efbf5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 42ec5782ec870a0f878485aa1e65487287f2c4a2
-ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
+ms.openlocfilehash: 795677a2a8cc81335811cc800195588512241de7
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54458865"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840504"
 ---
 # <a name="change-azure-atp-portal-configuration---domain-connectivity-password"></a>Změna konfigurace portálu ochrany ATP v programu Azure – heslo připojení k doméně
 
@@ -34,24 +34,24 @@ Postupujte podle následujícího postupu aktualizujte heslo připojení k domé
 > [!NOTE]
 > Toto je uživatelské jméno a heslo z místního nasazení služby Active Directory a nikoli z Azure AD.
 
-1.  Otevřete portál ochrany ATP v programu Azure přístup k portálu adresy URL.
+1. Otevřete portál ochrany ATP v programu Azure přístup k portálu adresy URL.
 
-2.  Na panelu nástrojů vyberte možnost nastavení a vyberte **Konfigurace**.
+2. Na panelu nástrojů vyberte možnost nastavení a vyberte **Konfigurace**.
 
-    ![Ikona nastavení konfigurace služby Azure ATP](media/atp-config-menu.png)
+   ![Ikona nastavení konfigurace služby Azure ATP](media/atp-config-menu.png)
 
-3.  Vyberte **Adresářové služby**.
+3. Vyberte **Adresářové služby**.
 
-    ![Azure ATP samostatný senzor změnit heslo image](media/directory-services.png)
+   ![Azure ATP samostatný senzor změnit heslo image](media/directory-services.png)
 
-4.  V části **Heslo** změňte heslo.
+4. V části **Heslo** změňte heslo.
 
- > [!NOTE]
- > Zadejte uživatele služby Active Directory a heslo, nikoli Azure Active Directory.
+   > [!NOTE]
+   > Zadejte uživatele služby Active Directory a heslo, nikoli Azure Active Directory.
 
-5.  Klikněte na **Uložit**.
+5. Klikněte na **Uložit**.
 
-6.  Po změně hesla ručně zkontrolujte, že služba sensor samostatné ochrany ATP v programu Azure běží na samostatných serverech senzoru služby Azure ATP.
+6. Po změně hesla ručně zkontrolujte, že služba sensor samostatné ochrany ATP v programu Azure běží na samostatných serverech senzoru služby Azure ATP.
 
 7. Na portálu ochrany ATP v programu Azure v rámci **konfigurace**, přejděte na stránku **senzor** stránku a zkontrolovat stav snímačům.
 

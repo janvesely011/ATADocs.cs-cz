@@ -13,24 +13,23 @@ ms.technology: ''
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: b45012f82a2457d09a616c2bd9e7e8866d0f5cdc
-ms.sourcegitcommit: b283bf66e63d76e6dba4564a229e804792794c6d
+ms.openlocfilehash: 76c149c351400c57d8d70274d152d23ca6f729df
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47453931"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54839890"
 ---
-*Platí pro: Advanced Threat Analytics verze 1.9*
-
-
-
 # <a name="install-ata---step-8"></a>Instalace ATA – krok 8
+
+*Platí pro: Advanced Threat Analytics verze 1.9*
 
 > [!div class="step-by-step"]
 > [«Krok 7](vpn-integration-install-step.md)
 > [kroku 9»](install-ata-step9-samr.md)
 
 ## <a name="step-8-configure-ip-address-exclusions-and-honeytoken-user"></a>Krok 8: Konfigurace vyloučení IP adres a uživatele honeytokenu
+
 ATA umožňuje vyloučit z řady detekcí konkrétní IP adresy nebo uživatele. 
 
 Například při **vyloučení DNS Reconnaissance** se může jednat o kontrolu zabezpečení, která jako mechanismus pro prohledávání používá službu DNS. Vyloučení pomáhá službě ATA takové kontroly ignorovat. Příkladem vyloučení *Pass-the-Ticket* je zařízení NAT.    

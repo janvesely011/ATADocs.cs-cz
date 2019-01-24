@@ -11,18 +11,17 @@ ms.service: ''
 ms.prod: advanced-threat-analytics
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 7fd0ea627807b89a604ac32276bb43aa00262dd2
-ms.sourcegitcommit: 1b23381ca4551a902f6343428d98f44480077d30
+ms.openlocfilehash: 330d3cbc59c211eaa44ce3273c49bb7994c6bcec
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47403178"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840382"
 ---
+# <a name="ata-capacity-planning"></a>Plánování kapacity ATA
+
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
-
-
-# <a name="ata-capacity-planning"></a>Plánování kapacity ATA
 Tento článek pomůže určit, kolik serverů ATA potřebujete k monitorování sítě. Vám může pomoct zjistit, kolik komponent ATA Gateway a ATA Lightweight Gateway je potřebujete a jakou kapacitu serveru vyžadují ATA Center a komponenty ATA Gateway.
 
 > [!NOTE] 
@@ -31,10 +30,10 @@ Tento článek pomůže určit, kolik serverů ATA potřebujete k monitorování
 ## <a name="using-the-sizing-tool"></a>Použití nástroje pro změnu velikosti
 Doporučený a nejjednodušší způsob, jak určit kapacitu pro vaše nasazení ATA, je použití [nástroje pro změnu velikosti ATA](http://aka.ms/atasizingtool). Spusťte nástroj pro změnu velikosti ATA a z výsledků v excelovém souboru pomocí následujících polí určete potřebnou kapacitu ATA:
 
-- Procesor a paměť pro ATA Center: Porovnejte pole **Busy Packets/sec** (Počet paketů za sekundu při vytížení) v souboru výsledků s tabulkou pro ATA Center s polem **PACKETS PER SECOND** (Počet paketů za sekundu) v [tabulce pro ATA Center](#ata-center-sizing).
+- ATA Center procesoru a paměti: Shoda **zaneprázdněný Packets/sec** souboru výsledků pole v tabulce pro ATA Center **PAKETŮ za SEKUNDU** pole [tabulce pro ATA Center](#ata-center-sizing).
 
-- Úložiště pro ATA Center: Porovnejte pole **Avg Packets/sec** (Průměrný počet paketů za sekundu) v souboru výsledků s tabulkou pro ATA Center s polem **PACKETS PER SECOND** (Počet paketů za sekundu) v [tabulce pro ATA Center](#ata-center-sizing).
-- ATA Gateway: Porovnejte pole **Busy Packets/sec** (Počet paketů za sekundu při vytížení) v tabulce pro ATA Gateway v souboru výsledků s polem **PACKETS PER SECOND** (Počet paketů za sekundu) v [tabulce pro ATA Gateway](#ata-gateway-sizing) nebo v [tabulce pro ATA Lightweight Gateway](#ata-lightweight-gateway-sizing) podle [zvoleného typu brány](#choosing-the-right-gateway-type-for-your-deployment).
+- Úložiště pro ATA Center: Shoda **Avg Packets/sec** souboru výsledků pole v tabulce pro ATA Center **PAKETŮ za SEKUNDU** pole [tabulce pro ATA Center](#ata-center-sizing).
+- ATA Gateway: Shoda **zaneprázdněný Packets/sec** v tabulce pro ATA Gateway v souboru výsledků s **PAKETŮ za SEKUNDU** pole [tabulce pro ATA Gateway](#ata-gateway-sizing) nebo [ATA Lightweight Gateway tabulky](#ata-lightweight-gateway-sizing)podle toho, [zvoleného typu brány](#choosing-the-right-gateway-type-for-your-deployment).
 
 
 ![Ukázkový nástroj plánování kapacity](media/capacity tool.png)
@@ -58,7 +57,7 @@ Pro vypracování analýzy chování uživatelů vyžaduje ATA Center data za ne
 
 |Paketů za sekundu ze všech řadičů domény|Procesor (jádra&#42;)|Paměť (GB)|Úložiště databáze za den (GB)|Úložiště databáze za měsíc (GB)|IOPS&#42;&#42;|
 |---------------------------|-------------------------|-------------------|---------------------------------|-----------------------------------|-----------------------------------|
-|1 000|2|32|0.3|9|30 (100)
+|1 000|2|32|0.3|9|30 (100)
 |40,000|4|48|12|360|500 (750)
 |200 000|8|64|60|1 800|1 000 (1 500)
 |400 000|12|96|120|3 600|2 000 (2 500)
@@ -69,14 +68,14 @@ Pro vypracování analýzy chování uživatelů vyžaduje ATA Center data za ne
 
 &#42;&#42;Průměrné počty (počty ve špičce)
 > [!NOTE]
-> -   ATA Center dokáže zpracovat agregované maximum 1 milion paketů za sekundu ze všech monitorovaných řadičů domény. V některých prostředích může stejné ATA Center zpracovávat celkový provoz, který je vyšší než 1 milion. Pokud potřebujete s takovými prostředími pomoct, obraťte se na adresu askcesec@microsoft.com.
-> -   Pokud velikost volného místa dosáhne minimální hodnoty buď 20 %, nebo 200 GB, nejstarší kolekce dat se odstraní. Pokud není možné úspěšně snížit shromažďování dat pro tuto úroveň, budou zaznamenány výstrahu.  ATA bude dál fungovat až do prahovou hodnotu 5 % nebo 50 GB volného místa je dosaženo.  V tomto okamžiku ATA se zastaví naplnění databáze a další výstrahy budou vydány lístky.
+> - ATA Center dokáže zpracovat agregované maximum 1 milion paketů za sekundu ze všech monitorovaných řadičů domény. V některých prostředích může stejné ATA Center zpracovávat celkový provoz, který je vyšší než 1 milion. Pokud potřebujete s takovými prostředími pomoct, obraťte se na adresu askcesec@microsoft.com.
+> - Pokud velikost volného místa dosáhne minimální hodnoty buď 20 %, nebo 200 GB, nejstarší kolekce dat se odstraní. Pokud není možné úspěšně snížit shromažďování dat pro tuto úroveň, budou zaznamenány výstrahu.  ATA bude dál fungovat až do prahovou hodnotu 5 % nebo 50 GB volného místa je dosaženo.  V tomto okamžiku ATA se zastaví naplnění databáze a další výstrahy budou vydány lístky.
 > - ATA Center je možné nasadit na libovolného dodavatele IaaS, pokud jsou splněné požadavky na výkon popsané v tomto článku.
-> -   Latence úložiště pro čtení a zápisu aktivit musí být menší než 10 ms.
-> -   Poměr mezi čtením a zápisem aktivit je přibližně 1:3 při méně než 100 000 paketů za sekundu a 1:6 při více než 100 000 paketů za sekundu.
-> -   Pokud se spustí jako dynamická paměť virtuálního počítače nebo libovolná jiná paměť, funkce rozšiřování rozsahů stránek se nepodporuje.
-> -   K zajištění optimálního výkonu nastavte **možnost napájení**  pro ATA Center na hodnotu **Vysoký výkon**.<br>
-> -   Při práci na fyzickém serveru databáze ATA vyžaduje, abyste v systému BIOS **zakázali** neuniformní přístup k paměti (NUMA). Ve vašem systému se NUMA může označovat také jako prokládání uzlů. V takovém případě bude potřeba prokládání uzlů **povolit**, abyste NUMA zakázali. Další informace najdete v dokumentaci k systému BIOS. Tento postup není relevantní, pokud ATA Center běží na virtuálním serveru.
+> - Latence úložiště pro čtení a zápisu aktivit musí být menší než 10 ms.
+> - Poměr mezi čtením a zápisem aktivit je přibližně 1:3 při méně než 100 000 paketů za sekundu a 1:6 při více než 100 000 paketů za sekundu.
+> - Pokud se spustí jako dynamická paměť virtuálního počítače nebo libovolná jiná paměť, funkce rozšiřování rozsahů stránek se nepodporuje.
+> - K zajištění optimálního výkonu nastavte **možnost napájení**  pro ATA Center na hodnotu **Vysoký výkon**.<br>
+> - Při práci na fyzickém serveru databáze ATA vyžaduje, abyste v systému BIOS **zakázali** neuniformní přístup k paměti (NUMA). Ve vašem systému se NUMA může označovat také jako prokládání uzlů. V takovém případě bude potřeba prokládání uzlů **povolit**, abyste NUMA zakázali. Další informace najdete v dokumentaci k systému BIOS. Tento postup není relevantní, pokud ATA Center běží na virtuálním serveru.
 
 
 ## <a name="choosing-the-right-gateway-type-for-your-deployment"></a>Výběr vhodného typu brány pro vaše nasazení
@@ -114,7 +113,7 @@ ATA Lightweight Gateway může podporovat monitorování jednoho řadiče domén
 
 |Pakety za sekundu&#42;|Procesor (jádra&#42;&#42;)|Paměť (GB)&#42;&#42;&#42;|
 |---------------------------|-------------------------|---------------|
-|1 000|2|6|
+|1 000|2|6|
 |5,000|6|16|
     |10 000|10|24|
 

@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 4ba46d60-3a74-480e-8f0f-9a082d62f343
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: fd8b104522cf7c89cdf66cef7a1967946db24782
-ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
+ms.openlocfilehash: 20aa3616fa4b178982dc7a68ea753f2dd70c03ab
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54458746"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840399"
 ---
 # <a name="working-with-the-azure-atp-portal"></a>Práce s portálem Azure ATP
 
@@ -39,10 +39,10 @@ Chcete-li úspěšně přihlásit na portál ochrany ATP v programu Azure, budet
 1. Ochrana ATP v programu Azure portal můžete zadat buď po přihlášení k portálu [ https://portal.atp.azure.com ](https://portal.atp.azure.com) a výběr vašeho instance nebo přechodu na adresu URL instance: [https://*instancename*. ATP.Azure.com](https://*instancename*.atp.azure.com).
 
 
-2.  Azure ATP podporuje jednotné přihlašování integrované s ověřováním Windows – Pokud jste již přihlášení k počítači, ochrana ATP v programu Azure používá tento token pro přihlášení na portál ochrany ATP v programu Azure. K přihlášení můžete použít také čipovou kartu. Vaše oprávnění v Azure ATP odpovídají vaše [role správce](atp-role-groups.md).
+2. Azure ATP podporuje jednotné přihlašování integrované s ověřováním Windows – Pokud jste již přihlášení k počítači, ochrana ATP v programu Azure používá tento token pro přihlášení na portál ochrany ATP v programu Azure. K přihlášení můžete použít také čipovou kartu. Vaše oprávnění v Azure ATP odpovídají vaše [role správce](atp-role-groups.md).
 
- > [!NOTE]
- > Ujistěte se, že pro přihlášení k počítači, ze kterého chcete získat přístup k portálu ochrany ATP v programu Azure pomocí služby Azure ATP uživatelské jméno správce a hesla. Alternativně můžete spustit prohlížeč jako jiný uživatel nebo se odhlásit z Windows a protokolu se uživatel s rolí správce vaší služby Azure ATP. 
+   > [!NOTE]
+   > Ujistěte se, že pro přihlášení k počítači, ze kterého chcete získat přístup k portálu ochrany ATP v programu Azure pomocí služby Azure ATP uživatelské jméno správce a hesla. Alternativně můžete spustit prohlížeč jako jiný uživatel nebo se odhlásit z Windows a protokolu se uživatel s rolí správce vaší služby Azure ATP. 
 
 
 ### <a name="attack-time-line"></a>Časová osa útoků

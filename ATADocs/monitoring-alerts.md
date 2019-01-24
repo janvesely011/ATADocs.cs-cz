@@ -13,17 +13,17 @@ ms.technology: ''
 ms.assetid: b04fb8a4-b366-4b55-9d4c-6f054fa58a90
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: c79632191a56a4a2cc83e4c129038551997a800c
-ms.sourcegitcommit: b11433f7d454231a62f64c9d9bfa1355ecf91075
+ms.openlocfilehash: 1ce2fde6e459aa11f3d61d8331ece53469ee3e21
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54403831"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54841130"
 ---
+# <a name="understanding-ata-monitoring-alerts"></a>Principy monitorování výstrah ATA
+
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
-
-# <a name="understanding-ata-monitoring-alerts"></a>Principy monitorování výstrah ATA
 ATA Health Center vás vyvoláním monitorovacího upozornění informuje, pokud u nasazení ATA dojde k nějakému problému.
 Tento článek popisuje všechna monitorovací upozornění jednotlivých komponent včetně příčiny a postupu vedoucího k vyřešení problému.
 ## <a name="ata-center-issues"></a>Problémy komponenty ATA Center

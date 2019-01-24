@@ -13,18 +13,17 @@ ms.technology: ''
 ms.assetid: ebd41719-c91a-4fdd-bcab-2affa2a2cace
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: d37fade3dd287be77bda16ebcd2cda204de265f6
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: d40c21dc761b624eea2412bdfc0778774f2840ca
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133782"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54839616"
 ---
+# <a name="validate-port-mirroring"></a>Ověření zrcadlení portů
+
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
-
-
-# <a name="validate-port-mirroring"></a>Ověření zrcadlení portů
 > [!NOTE] 
 > Tento článek se týká jenom nasazení komponent ATA Gateway, nikoli komponent ATA Lightweight Gateway. Pokud chcete určit, jestli potřebujete ATA Gateway, přečtěte si téma [Volba vhodných bran pro vaše nasazení](ata-capacity-planning.md#choosing-the-right-gateway-type-for-your-deployment).
  
@@ -208,7 +207,7 @@ Ukázka spuštění tohoto skriptu:
 
         ![Obrázek karty Vytvořit nové zachytávání](media/ATA-Port-Mirroring-Capture.jpg)
 
-3.  V okně filtru zobrazení zadejte filtr **KerberosV5 nebo LDAP** a potom klikněte na **Použít**.
+3.  V okně filtru zobrazení zadejte filtr: **KerberosV5 nebo LDAP** a potom klikněte na tlačítko **použít**.
 
     ![Obrázek použití filtru KerberosV5 nebo LDAP](media/ATA-Port-Mirroring-filter-settings.jpg)
 

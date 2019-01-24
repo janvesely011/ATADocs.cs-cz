@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 4308f03e-b2a7-4e38-a750-540ff94faa81
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: aec544a31bdb11282e1259103ffa43411263f830
-ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
+ms.openlocfilehash: 27c6aea24162fa8b7dd564bdb65eb7c4bf602504
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54458559"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54839650"
 ---
 # <a name="set-azure-atp-notifications"></a>Nastavení oznámení služby Azure ATP
 
@@ -29,17 +29,17 @@ Pokud chcete dostávat oznámení na konkrétní e-mailovou adresu, nastavte ná
 
 1. Na portálu ochrany ATP v programu Azure, vyberte na panelu nástrojů a vyberte možnost nastavení **konfigurace**.
 
- ![Ikona nastavení konfigurace služby Azure ATP](media/atp-config-menu.png)
+   ![Ikona nastavení konfigurace služby Azure ATP](media/atp-config-menu.png)
 
 2. Klikněte na tlačítko **oznámení**.
 3. V části **Mail notifications**, určete oznámení, která se mají odesílat e-mailem – mohou být odesílány pro nové výstrahy (podezřelých aktivit) a nové problémy se stavem. 
  
- > [!NOTE]
- > E-mailové výstrahy pro podezřelé aktivity se odesílají jenom při vytvoření podezřelé aktivity.
+   > [!NOTE]
+   > E-mailové výstrahy pro podezřelé aktivity se odesílají jenom při vytvoření podezřelé aktivity.
  
 4. Klikněte na **Uložit**.
 
- ![Oznámení Azure ATP](media/atp-notifications.png)
+   ![Oznámení Azure ATP](media/atp-notifications.png)
 
 
 

@@ -13,19 +13,19 @@ ms.technology: ''
 ms.assetid: d6c783b2-46c5-4211-b21a-d6b17f08d03d
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 12d1a3f10cc3b9d99a20a2562ae4f81425ec9578
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 9d043ac8c780505f6e3443c354e02b89d3040b4c
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133490"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54839970"
 ---
-*Platí pro: Advanced Threat Analytics verze 1.9*
-
-
 # <a name="working-with-ata-system-health-and-events"></a>Práce se stavem a událostmi systému ATA
 
+*Platí pro: Advanced Threat Analytics verze 1.9*
+
 ## <a name="ata-health-center"></a>ATA Health Center
+
 ATA Health Center umožňuje sledovat, jak funguje služba ATA, a upozorňuje na problémy.
 
 ## <a name="working-with-the-ata-health-center"></a>Práce s ATA Health Center
@@ -38,14 +38,14 @@ Pokud chcete zkontrolovat celkový stav systému, klepněte na ikonu Health Cent
 
 -   Všechny otevřené výstrahy můžete spravovat jejich nastavením na **Zavřít**, **potlačit**, nebo **odstranit** kliknutím na tři tečky v pravém rohu výstrahy a zvolení požadované možnosti.
 
--   **Open** (Otevřeno): V tomto seznamu se zobrazí všechny nové podezřelé aktivity.
+-   **Otevřít**: V tomto seznamu se zobrazí všechny nové podezřelé aktivity.
 
--   **Zavřít**: slouží ke sledování podezřelých aktivit, které identifikovali, prozkoumali a opravili zmírnit.
+-   **Zavřít**: Slouží ke sledování podezřelých aktivit, které identifikovali, prozkoumali a opravili zmírnit.
 
     > [!NOTE]
     > ATA může znovu otevřít uzavřené aktivitu, pokud se stejná aktivita zjistí během krátké doby znovu.
 
--   **Suppressed** (Potlačeno): Potlačení aktivity znamená, že ji chcete prozatím ignorovat a upozornění chcete zobrazit, jenom pokud se bude jednat o novou instanci. Pokud je podobná upozornění ATA nebude ho znovu otevřít. Ale pokud výstrahy po dobu sedmi dní zastaví a pak se znovu objeví, budete upozorněni znovu.
+-   **Potlačit**: Potlačení aktivity znamená, že chcete prozatím ignorovat a pouze znovu upozorněni při novou instanci. Pokud je podobná upozornění ATA nebude ho znovu otevřít. Ale pokud výstrahy po dobu sedmi dní zastaví a pak se znovu objeví, budete upozorněni znovu.
 
 - **Odstranit**: Pokud výstrahu odstraníte, odstraní se ze systému, z databáze a nebudete moci obnovit. Po kliknutí na možnost pro odstranění budete moct odstranit všechny podezřelé aktivity stejného typu.
 

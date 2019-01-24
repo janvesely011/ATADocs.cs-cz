@@ -13,17 +13,17 @@ ms.technology: ''
 ms.assetid: 5d639e84-2e37-43a9-9667-49be6c4fa8b7
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 92c29881ab164bc3cb330c6533d2af6ba958a8e8
-ms.sourcegitcommit: b11433f7d454231a62f64c9d9bfa1355ecf91075
+ms.openlocfilehash: 9698f3905eebb9e1271ea3a401890b7829bde9a9
+ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54403746"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54840590"
 ---
-*Platí pro: Advanced Threat Analytics verze 1.9*
-
-
 # <a name="ata-event-id-reference"></a>ATA referenční informace o ID události
+
+
+*Platí pro: Advanced Threat Analytics verze 1.9*
 
 V prohlížeči událostí komponenty ATA Center protokoluje události pro ATA. Tento článek obsahuje seznam ID událostí a popis jednotlivých.
 
