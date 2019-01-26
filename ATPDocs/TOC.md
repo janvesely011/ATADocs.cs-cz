@@ -19,12 +19,20 @@
 ## [Integrace s Ochranou ATP v programu Windows Defender](integrate-wd-atp.md)
 ## [Integrace sítě VPN](install-atp-step6-vpn.md)
 ## [Integrace se Syslogem](setting-syslog.md)
-# Výukové kurzy
-## [Průvodce výstrahami zabezpečení](suspicious-activity-guide.md)
-## [Prošetřování cest taktity lateral movement](investigate-lateral-movement-path.md)
+# Kurzy
+## [Porozumění výstrahám zabezpečení](understanding-security-alerts.md)
+## [Výstrahy před hrozbami „osahávání“ (reconnaissance)](atp-reconnaissance-alerts.md)
+## [Výstrahy před ohrožením zabezpečení přihlašovacích údajů](atp-compromised-credentials-alerts.md)
+## [Výstrahy před taktikou lateral movement](atp-lateral-movement-alerts.md)
+## [Výstrahy před dominancí v doméně](atp-domain-dominance-alerts.md)
+## [Výstrahy před exfiltrací](atp-exfiltration-alerts.md)
+## [Prošetřování uživatelů](investigate-a-user.md)
+## [Prošetřování počítačů](investigate-a-computer.md)
+## [Prošetřování cest taktiky lateral movement](investigate-lateral-movement-path.md)
 ## [Prošetřování entit](investigate-entity.md)
 # Koncepty
 ## [Portál Azure ATP](workspace-portal.md)
+## [Výstrahy zabezpečení služby Azure ATP](suspicious-activity-guide.md)
 ## [Monitorované aktivity](monitored-activities.md)
 ## [Principy profilů entit](entity-profiles.md)
 ## [Cesty taktity lateral movement](use-case-lateral-movement-path.md)
@@ -32,8 +40,8 @@
 ## [Role uživatele](atp-role-groups.md)
 # Praktičtí průvodci
 ## [Správa výstrah zabezpečení](working-with-suspicious-activities.md)
-## [Správa citlivých účtů](sensitive-accounts.md)
 ## [Vyloučení entit z detekce](excluding-entities-from-detections.md)
+## [Správa citlivých účtů](sensitive-accounts.md)
 ## [Hledání a filtrování monitorovaných aktivit](atp-activities-search.md)
 ## [Použití vyloučení a účtů honeytoken](install-atp-step7.md)
 ## [Změna hesla připojení k doméně](modifying-atp-config-dcpassword.md)
