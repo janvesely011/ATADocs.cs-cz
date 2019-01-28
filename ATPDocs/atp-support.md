@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 1/7/2019
+ms.date: 1/27/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 8ae459ac-9fca-4923-9a1a-dc10d5c50b29
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 6e9ffb02c515c34dfa2847c9b93f55c3fa38fa44
-ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
+ms.openlocfilehash: 8c294c20efeac4fae17df84c6a3d6d8d656c9554
+ms.sourcegitcommit: 19ff0ed88e450506b5725bbcbb0d0bd2f0c5e4bb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54459205"
+ms.lasthandoff: 01/27/2019
+ms.locfileid: "55085465"
 ---
 # <a name="azure-advanced-threat-protection-information-and-support"></a>Azure Advanced Threat Protection informace a podpora 
 
@@ -27,7 +27,7 @@ Použijte v následujících zdrojích informací při další informace o nasaz
 
 |Provedete to tak...|...používat toto:|
 |----|----|
-|Projděte si naši dokumentaci nejoblíbenější|Přečtěte si pěti hlavních stránek:<br>- [Co je Azure Advanced Threat Protection?](what-is-atp.md)<br>- [Požadavky služby Azure ATP](atp-prerequisites.md)<br>- [Architektura služby Azure ATP](atp-architecture.md)<br>- [Plánování kapacity v Azure ATP](atp-capacity-planning.md)<br>- [Vytvoření instance](install-atp-step1.md)|
+|Projděte si naši dokumentaci nejoblíbenější|Číst prvních deset stránky:<br>- [Co je Azure Advanced Threat Protection?](what-is-atp.md)<br>- [Požadavky služby Azure ATP](atp-prerequisites.md)<br>- [Architektura služby Azure ATP](atp-architecture.md)<br>- [Plánování kapacity v Azure ATP](atp-capacity-planning.md)<br>-[Vytvoření instance](install-atp-step1.md)<br>-[Principy výstrah zabezpečení](understanding-security-alerts.md)<br>-[Upozornění zabezpečení v Azure ATP](suspicious-activity-guide.md)<br>-[Prozkoumat počítače](investigate-a-computer.md)<br>-[Prozkoumat uživatele](investigate-a-user.md)<br>-[Prozkoumat cesty laterální pohyb](investigate-lateral-movement-path.md)
 |Spolupracujte s týmem a kolegy|Přejděte [technické komunitě](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection) Azure rozšířené ochrany před internetovými útoky.|
 |Zkontrolujte informace o předplatném a získání seznamu, které funkce jsou podporovány|Zobrazit [informace o předplatném](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) a [seznam funkcí](https://www.microsoft.com/cloud-platform/azure-information-protection-features) z webu rozšířené ochrany před internetovými útoky pro Azure.|
 
@@ -36,7 +36,7 @@ Použijte v následujících zdrojích informací při další informace o nasaz
 Produktový tým Azure Advanced Threat Protection publikuje oznámení o nových verzích a aktualizacích na [Enterprise Mobility and Security blog.](https://cloudblogs.microsoft.com/enterprisemobility/author/microsoft-advanced-threat-analytics-team/)
 Příspěvky na blogu doplňují dokumentaci k produktu a informace o podpoře.
 
-Pro aktuální seznam nově vydané funkce a změny v ochrany ATP v programu Azure, podívejte se na [co je nového ve službě Azure Advanced Threat Protection](atp-whats-new.md).
+Pro aktuální seznam nově vydané funkce a nedávných změn ve ochrany ATP v programu Azure, podívejte se na [co je nového ve službě Azure Advanced Threat Protection](atp-whats-new.md).
 
 ## <a name="support-options-and-community-resources"></a>Možnosti podpory a zdroje poskytované komunitou
 

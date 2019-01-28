@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 10/04/2018
+ms.date: 1/24/2019
 ms.topic: conceptual
 ms.service: azure-advanced-threat-protection
 ms.prod: ''
 ms.assetid: da0ee438-35f8-4097-b3a1-1354ad59eb32
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 51ce0ca62d29c58475f8f426ee715515cf106193
-ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
+ms.openlocfilehash: c53fb85570a053fa6414855b2ababa0b8e75cdee
+ms.sourcegitcommit: 19ff0ed88e450506b5725bbcbb0d0bd2f0c5e4bb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54459086"
+ms.lasthandoff: 01/27/2019
+ms.locfileid: "55085193"
 ---
 # <a name="azure-atp-capacity-planning"></a>Plánování kapacity v Azure ATP
 Tento článek pomůže určit, kolik ochrany ATP v programu Azure senzory a samostatné senzory, které potřebujete.
@@ -55,7 +55,7 @@ Při určování typu nasazení ze senzorů, vezměte v úvahu následující v�
 Zvažte následující skutečnosti při rozhodování o tom, kolik senzorů samostatné ochrany ATP v programu Azure k nasazení.
 
 -   **Doménové struktury a domény služby Active Directory**<br>
-    Ochrana ATP v programu Azure může monitorovat provoz z několika domén v rámci více doménových struktur služby Active Directory pro každou instanci, kterou jste vytvořili. 
+    Ochrana ATP v programu Azure může monitorovat provoz z několika domén v rámci několika doménových strukturách služby Active Directory, pro každou instanci ochrany ATP v programu Azure, které vytvoříte. 
 
 -   **Zrcadlení portů**<br>
     Úvahy o zrcadlení portů může vyžadovat nasazení více senzorů samostatné ochrany ATP v programu Azure na datové centrum nebo pobočku Web.

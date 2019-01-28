@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 11/29/2018
+ms.date: 1/24/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,40 +13,42 @@ ms.technology: ''
 ms.assetid: 34dc152c-6b7f-4128-93fe-aad56c282730
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a61434b7b9c15516c115dcbc9ae58e8cc9815111
-ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
+ms.openlocfilehash: cdcba87d16c357205becdeb5683e655f6ca801a0
+ms.sourcegitcommit: 19ff0ed88e450506b5725bbcbb0d0bd2f0c5e4bb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54459038"
+ms.lasthandoff: 01/27/2019
+ms.locfileid: "55085278"
 ---
 # <a name="azure-atp-readiness-guide"></a>Příručka ke službě Azure ATP připravenosti
 
-Tento článek vám poskytne plány připravenosti, který vám poskytne seznam prostředků, které vám Začínáme se službou Azure Advanced Threat Protection. 
+Tento článek poskytuje asi plán připravenosti seznam prostředků, které vám pomůžou začít pracovat s rozšířené ochrany před internetovými útoky pro Azure. 
 
 ## <a name="understanding-azure-atp"></a>Principy Azure ATP
 
-Azure Protection pokročilé před internetovými útoky (ATP) je Cloudová služba, která pomáhá identifikovat a chránit váš podnik před různými typy pokročilých cílených kybernetických útoků a ohrožením zevnitř. Další informace o ochrany ATP v programu Azure: 
+Azure Protection pokročilé před internetovými útoky (ATP) je Cloudová služba, která pomáhá identifikovat a chránit váš podnik před různými typy pokročilých cílených kybernetických útoků a ohrožením zevnitř.
+ 
+Další informace o ochrany ATP v programu Azure: 
 - [Přehled služby Azure ATP](what-is-atp.md)
 - [Ochrana ATP v programu úvodní video Azure (25 minut) – úplná](https://www.youtube.com/watch?v=EGY2m8yU_KE)
 - [Podrobné informace o videu Azure ochrany ATP v programu (75 minut) – úplná](https://www.youtube.com/watch?v=QXZIfH0wP3Q)
 
 ## <a name="deployment-decisions"></a>Rozhodnutí o nasazení
 
-Ochrana ATP v programu Azure se skládá z cloudové služby, které se nacházejí v Azure a integrované senzory, které lze nainstalovat na řadič domény nebo samostatné senzorů na vyhrazené servery. Předtím, než je zprovoznění služby Azure ATP, je důležité, abyste zvolili typ snímače, nejlépe vyhovovalo vašim nasazení a potřebám. Azure ochrany ATP v programu integrované senzorů (senzorů služby Azure ATP) poskytují zvýšené zabezpečení, snížení provozních nákladů a nasazení než samostatné senzorů ochrany ATP v programu Azure. Azure senzorů samostatné ochrany ATP v programu vyžaduje fyzický hardware, additionl konfigurační kroky a zpracují náročnější provozní náklady. <br>Pokud používáte fyzické servery, plánování kapacity je velmi důležité. Získejte pomoc od nástroj pro změnu velikosti k přidělení místa pro vaše senzory: 
+Ochrana ATP v programu Azure se skládá z cloudové služby, které se nacházejí v Azure a integrované senzory, které mohou být nainstalovány na řadičích domény nebo samostatné senzorů na vyhrazené servery. Předtím, než je zprovoznění služby Azure ATP, je důležité, abyste zvolili typ snímače, nejlépe vyhovovalo vašim nasazení a potřebám. Azure ochrany ATP v programu integrované senzorů (senzorů služby Azure ATP) poskytují zvýšené zabezpečení, snížení provozních nákladů a nasazení než samostatné senzorů ochrany ATP v programu Azure. Azure senzorů samostatné ochrany ATP v programu vyžaduje fyzický hardware, další konfigurační kroky a zpracují náročnější provozní náklady. <br>Pokud používáte fyzické servery, plánování kapacity je velmi důležité. Získejte pomoc od nástroj pro změnu velikosti k přidělení místa pro vaše senzory: 
 - [Azure nástroje pro změnu velikosti ochrany ATP v programu](http://aka.ms/aatpsizingtool) – nástroj pro změnu velikosti automatizuje kolekce objem přenosů služby Azure ATP monitoruje. Automaticky poskytuje možnosti podpory a zdroje doporučení pro senzory. 
 - [Ochrana ATP v programu pokyny k plánování kapacity](atp-capacity-planning.md)
 
 ## <a name="deploy-azure-atp"></a>Nasazení služby Azure ATP
 
-Tyto prostředky vám pomůže nastavit ochrana ATP v programu Azure, připojit k Active Directory, stažení balíčku senzoru, nastavit shromažďování událostí a volitelně integrovat vaši síť VPN a nastavit vyloučení a účty honeytokenu. 
+Pomocí těchto prostředků můžete nastavení ochrany ATP v programu Azure, připojit ke službě Active Directory, stažení balíčku senzoru, nastavit shromažďování událostí a volitelně integrovat vaši síť VPN a nastavit vyloučení a honeytoken účty. 
 - [Vyzkoušejte Azure ATP (součástí EMS E5)](http://aka.ms/aatptrial) zkušební verze platí po dobu 90 dnů.
-- [Nastavení Azure ATP](install-atp-step1.md) nasazení služby Azure ATP ve vašem prostředí, následujícím postupem.
+- [Nastavení Azure ATP](install-atp-step1.md) postupujte podle těchto kroků nasadíte ochrany ATP v programu Azure ve vašem prostředí.
 - [Integrace ochrany ATP v programu Azure s programem Windows Defender ATP](integrate-wd-atp.md)
 
 ## <a name="azure-atp-settings"></a>Nastavení služby Azure ATP
 
-Základní nastavení potřebné v ochrany ATP v programu Azure se nakonfiguruje automaticky při vytváření instance. Existuje několik dalších konfigurovatelné nastavení v Azure ATP pro zlepšení detekce a přesnost výstrah pro vaše prostředí, jako je například integrace sítě VPN, SAM požadovaná oprávnění a nastavení zásad auditu. 
+Při vytváření instance vaší služby Azure ATP, základní nastavení potřebné nakonfigurují automaticky. Existuje několik dalších konfigurovatelné nastavení v Azure ATP pro zlepšení detekce a přesnost výstrah pro vaše prostředí, jako je například integrace sítě VPN, SAM požadovaná oprávnění a nastavení zásad auditu. 
 
 - [Integrace sítě VPN](install-atp-step6-vpn.md)
 - [SAM-R, vyžaduje oprávnění](install-atp-step8-samr.md)
@@ -54,7 +56,7 @@ Základní nastavení potřebné v ochrany ATP v programu Azure se nakonfiguruje
 
 ## <a name="work-with-azure-atp"></a>Práce s Azure ATP
 
-Po ochrany ATP v programu Azure je zapnutý a spuštěný, zobrazení výstrah zabezpečení v časové osy aktivity portálu ochrany ATP v programu Azure. Časové osy aktivity je výchozí cílová stránka po přihlášení na portál ochrany ATP v programu Azure. Ve výchozím nastavení jsou zobrazeny všechny výstrahy zabezpečení otevřít na časové ose útoku. Můžete také zobrazit závažnosti přiřazené jednotlivých výstrah. Zkontrolovat každé upozornění, že procházení k podrobnostem entitách (počítače, zařízení a uživatele) otevřete jejich profilové stránky s dalšími informacemi. Přesune taktiky Lateral Movement, které ukazují potenciální cesty, které lze provést v síti a ohrožení citlivých uživatelé. Prozkoumání a nápravu vystavení uding grafy zjišťování cesty laterální pohyb. Tyto materiály vám pomohou při práci s výstrahami zabezpečení služby Azure ATP: 
+Po ochrany ATP v programu Azure je zapnutý a spuštěný, zobrazení výstrah zabezpečení v časové osy aktivity portálu ochrany ATP v programu Azure. Časové osy aktivity je výchozí cílová stránka po přihlášení na portál ochrany ATP v programu Azure. Ve výchozím nastavení jsou zobrazeny všechny výstrahy zabezpečení otevřít na časové osy aktivity. Můžete také zobrazit závažnosti přiřazené jednotlivých výstrah. Zkontrolovat každé upozornění, že procházení k podrobnostem entitách (počítače, zařízení a uživatele) otevřete jejich profilové stránky s dalšími informacemi. Přesune taktiky Lateral Movement, které ukazují potenciální cesty, které lze provést v síti a ohrožení citlivých uživatelé. Prozkoumání a nápravu míru rizika pomocí grafů zjišťování cesty laterální pohyb. Tyto materiály vám pomohou při práci s výstrahami zabezpečení služby Azure ATP: 
 
 - [Azure Průvodce výstrah zabezpečení ochrany ATP v programu](suspicious-activity-guide.md) se naučíte, jak třídit a udělejte další kroky s detekcí vaší ochrany ATP v programu Azure.
 - [Cesty taktiky Lateral Movement Azure ATP](use-case-lateral-movement-path.md)

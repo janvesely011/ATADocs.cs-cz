@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: d7c95f8c-04f8-4946-9bae-c27ed362fcb0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c296dbe566676342c6b67be5adb1f54df7897675
-ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
+ms.openlocfilehash: cb9987645ffd1546b50117c984a138e8d3169657
+ms.sourcegitcommit: 19ff0ed88e450506b5725bbcbb0d0bd2f0c5e4bb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54840960"
+ms.lasthandoff: 01/27/2019
+ms.locfileid: "55085261"
 ---
 # <a name="install-azure-atp---step-5"></a>Instalace služby Azure ATP – krok 5
 
@@ -28,10 +28,10 @@ ms.locfileid: "54840960"
 
 
 
-## <a name="step-5-configure-the-azure-atp-sensor-settings"></a>Krok 5. Konfigurace nastavení senzoru služby Azure ATP
+## <a name="configure-azure-atp-sensor-settings"></a>Konfigurace nastavení senzoru služby Azure ATP
 Po dokončení instalace senzoru služby Azure ATP proveďte následující postup pro konfiguraci nastavení senzoru služby Azure ATP.
 
-1. Na portálu ochrany ATP v programu Azure, přejděte na **konfigurace** a v části **systému**vyberte **senzor**.
+1.  Na portálu ochrany ATP v programu Azure, přejděte na **konfigurace** a v části **systému** vyberte **senzorů**.
    
     ![Nakonfigurovat senzor nastavení image](media/atp-sensor-config.png)
 
@@ -49,14 +49,18 @@ Po dokončení instalace senzoru služby Azure ATP proveďte následující post
 
    - **Síťové adaptéry pro zachytávání** (povinné):
    
-     - Pro senzoru služby Azure ATP to mělo být všechny síťové adaptéry, které se používají ke komunikaci s dalšími počítači ve vaší organizaci.
-   - Pro Azure ATP samostatný senzor na vyhrazeném serveru vyberte síťové adaptéry, které jsou nakonfigurované jako cílový port zrcadlení. Tyto příjem provozu řadiče domény zrcadlené.
+    - Pro služby Azure ATP senzory všechny síťové adaptéry, které se používají ke komunikaci s dalšími počítači ve vaší organizaci.
+    - Samostatný senzor ochrany ATP v programu Azure na vyhrazený server vyberte síťové adaptéry, které jsou nakonfigurované jako cílový port zrcadlení. Tyto příjem provozu řadiče domény zrcadlené.
 
-   - **Kandidát na synchronizátora domény**: Ve výchozím nastavení senzory ochrany ATP v programu Azure nejsou uvedena kandidáti na synchronizátora domény, jsou samostatné senzorů ochrany ATP v programu Azure. Chcete-li vybrat ručně senzoru služby Azure ATP jako kandidát syncronizer domény, přepněte **kandidát na synchronizátora domény** přepněte možnost **ON** na obrazovce konfigurace. 
+  - **Kandidát na synchronizátora domény**: 
     
-       Synchronizátor domény je zodpovědná za synchronizaci mezi ochrany ATP v programu Azure a vaší domény služby Active Directory. Počáteční synchronizace v závislosti na velikosti domény může nějakou dobu trvat a je náročná. 
-     Doporučuje se, že zakážete všechny vzdálené lokality (čidly služby Azure ATP) nebudou kandidáti na synchronizátora domény.
-     Pokud je řadič domény jen pro čtení, nenastavujte ho jako kandidáta na synchronizátora domény. Další informace o synchronizaci služby Azure ATP domény najdete v tématu [architektura služby Azure ATP](atp-architecture.md#azure-atp-sensor-features)
+    - Synchronizátor domény je zodpovědná za synchronizaci mezi ochrany ATP v programu Azure a vaší domény služby Active Directory. V závislosti na velikosti domény počáteční synchronizace může nějakou dobu trvat a je náročná. Ochrana ATP v programu Azure doporučuje nastavení alespoň jeden řadič domény jako kandidát na synchronizátora domény na doménu. Nepodařilo se vybrat aspoň jeden řadič domény jako kandidát na synchronizátora domény znamená, že ochrana ATP v programu Azure bude jenom pasivně kontroly sítě a nemusí být schopen shromažďovat všechny změny Active Directory a podrobnosti o entitách. Alespoň jeden určené **kandidát na synchronizátora domény** doménu zajistí ochrana ATP v programu Azure aktivně hledá v síti po celou dobu a může shromažďovat všechny změny Active Directory a hodnoty entit.
+  
+    - Ve výchozím nastavení senzory ochrany ATP v programu Azure nejsou uvedena kandidáti na synchronizátora domény, jsou samostatné senzorů ochrany ATP v programu Azure. Chcete-li ručně nastavit senzoru služby Azure ATP jako kandidát na synchronizátora domény, přepněte **kandidát na synchronizátora domény** přepněte možnost **ON** na obrazovce konfigurace.   
+        
+    - Doporučuje se, že zakážete všechny vzdálené lokality (čidly služby Azure ATP) nebudou kandidáti na synchronizátora domény.
+   
+    - Nenastavujte řadiče domény jen pro čtení jako kandidáti na synchronizátora domény. Další informace o synchronizaci služby Azure ATP domény najdete v tématu [architektura služby Azure ATP](atp-architecture.md#azure-atp-sensor-features).
   
 3. Klikněte na **Uložit**.
 

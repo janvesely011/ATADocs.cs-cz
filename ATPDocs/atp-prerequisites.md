@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 06e31d44afba18cb44d2df6cde167c9a8babc92b
-ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
+ms.openlocfilehash: 829c3685d06ec49182895b4786c89b8281e2de2f
+ms.sourcegitcommit: 19ff0ed88e450506b5725bbcbb0d0bd2f0c5e4bb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54840722"
+ms.lasthandoff: 01/27/2019
+ms.locfileid: "55085380"
 ---
 # <a name="azure-atp-prerequisites"></a>Požadavky služby Azure ATP
 Tento článek popisuje požadavky pro úspěšné nasazení služby Azure ATP ve vašem prostředí.
@@ -110,7 +110,7 @@ Servery a řadiče domény, na kterých jsou nainstalované senzory, musí být 
 ### <a name="network-adapters"></a>Síťové adaptéry
 
 Senzoru služby Azure ATP monitoruje místní provoz na všech síťových adaptérech příslušného řadiče domény. <br>
-Po nasazení můžete použít portál ochrany ATP v programu Azure, pokud chcete změnit, které síťové adaptéry se monitorují.
+Po nasazení pomocí ochrany ATP v programu Azure portal upravit, které síťové adaptéry se monitorují.
 
 Senzor se nepodporuje v doméně, řadiče se systémem Windows 2008 R2 pomocí seskupování síťových adaptérů Broadcom povolena.
 

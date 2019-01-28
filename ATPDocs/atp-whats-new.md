@@ -1,11 +1,11 @@
 ---
-title: Co je nového v ochraně ATP v Azure | Dokumentace Microsoftu
+title: Co je nového ve službě Azure Advanced Threat Protection (služby Azure ATP) | Dokumentace Microsoftu
 description: Popisuje nejnovější verze ochrany ATP v programu Azure a poskytuje informace o novinkách v jednotlivých verzích.
 keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 1/20/2019
+ms.date: 1/27/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,19 +13,43 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 7bf903b1fde595e41c3b57d8163ed0f06f8e8ac8
-ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
+ms.openlocfilehash: 9d1a0f992bcb0d21ed31d5cdc5ed3e034c6bee8d
+ms.sourcegitcommit: 19ff0ed88e450506b5725bbcbb0d0bd2f0c5e4bb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54459171"
+ms.lasthandoff: 01/27/2019
+ms.locfileid: "55085431"
 ---
 # <a name="whats-new-in-azure-atp"></a>Co je nového v Azure ATP
+
+### <a name="azure-atp-release-263"></a>Verze ochrany ATP v programu Azure 2.63
+Vydáno 27. ledna 2019
+
+- **Nová funkce: Nedůvěryhodné doménové struktuře podpora – (preview)**<br>
+Podpora Azure ATP senzorů v nedůvěryhodných doménových strukturách je teď ve verzi public preview. Z portálu služby Azure ATP **adresářové služby** proveďte další sadu pověření k povolení ochrany ATP v programu Azure senzorů k připojení do různých doménových strukturách služby Active Directory a nahlásit službě ochrana ATP v programu Azure. Zobrazit [více doménovými strukturami služby Azure ATP](atp-multi-forest.md) Další informace. 
+
+- **Nová funkce: Pokrytí řadiče domény**<br>
+Ochrana ATP v programu Azure nyní poskytuje informace o pokrytí pro služby Azure ATP monitoruje řadiče domény.  
+Z portálu služby Azure ATP **senzorů** stránce, zobrazí se počet řadičů domény monitorovaných a nemonitorované detekoval ochrany ATP v programu Azure ve vašem prostředí. Stažení seznamu řadič domény monitorovaných k další analýze a k vytváření akční plán. Najdete v článku [monitorování řadiče domény](atp-sensor-monitoring.md) příručce s postupy pro další informace. 
+
+- **Vylepšení funkce: Rekognoskace výčtu účtů**<br>
+Detekce rekognoskace výčet účtů služby Azure ATP teď detekuje a vydá upozornění pro pokusy o výčet pomocí protokolů Kerberos a NTLM. Dříve zjišťování pouze pracoval pro pokusy o s použitím protokolu Kerberos. Zobrazit [ochrany ATP v programu Azure rekognoskace výstrahy](atp-reconnaissance-alerts.md#account-enumeration-reconnaissance-external-id-2003) Další informace. 
+
+- **Vylepšení funkce: Výstraha Pokus o spuštění vzdáleného kódu**<br>
+    - Všechny vzdálené spuštění aktivity, jako je například vytvoření služby, spuštění WMI a nové **Powershellu** provádění, byly přidány na časovou osu profil cílového počítače. Cílový počítač je že řadič domény příkazu se provedl u. 
+    - **Prostředí PowerShell** spuštění byl přidán do seznamu uvedená v upozornění ose profil entity aktivity spuštění vzdáleného kódu.
+    - Zobrazit [pokus o spuštění vzdáleného kódu](atp-domain-dominance-alerts.md#remote-code-execution-attempt-external-id-2019) Další informace.  
+
+- **Problém LSASS 2019 Windows serveru a služby Azure ATP**<br>
+V reakci na zpětnou vazbu od zákazníků týkající se používání služby Azure ATP s řadiče domény se systémem Windows Server 2019 tato aktualizace zahrnuje další logiku ke neměl spouštět ohlášené chování na počítačích systému Windows Server 2019. Plnou podporu pro senzoru služby Azure ATP 2019 systému Windows Server je plánovaná pro budoucí aktualizace ochrany ATP v programu Azure, ale instalaci a používání služby Azure ATP 2019 servery Windows **není** v tuto chvíli nepodporuje. Zobrazit [požadavky senzoru služby Azure ATP](atp-prerequisites.md#azure-atp-sensor-requirements) Další informace. 
+
+- Tato verze také zahrnuje vylepšení a opravy chyb pro interní senzor infrastruktury.
+
 
 ## <a name="azure-atp-release-262"></a>Verze ochrany ATP v programu Azure 2.62
 Vydáno 20. ledna 2019
 
-- **Nová výstraha zabezpečení: Vzdálené spuštění kódu nad DNS-(preview)**<br>
+- **Nová výstraha zabezpečení: Vzdálené spuštění kódu nad DNS – (preview)**<br>
 Azure ATP [vzdálené spuštění kódu nad DNS](atp-lateral-movement-alerts.md#remote-code-execution-over-dns-external-id-2036---preview) výstraha zabezpečení je teď ve verzi public preview. <br> V této detekce se aktivuje upozornění zabezpečení služby Azure ATP při dotazy DNS vzbuzovat podezření na zneužití ohrožení zabezpečení [CVE-2018-8626](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2018-8626) se provádí na řadiči domény v síti.
 
 - **Vylepšení funkce: 72 hodin zpožděné aktualizace senzorů** <br> Změněné možnost zpoždění senzor aktualizací na vybrané senzory až 72 hodin (místo zpoždění předchozích 24 hodin) po každé aktualizaci verze služby Azure ATP. Zobrazit [aktualizace senzoru služby Azure ATP](sensor-update.md) pokyny ke konfiguraci. 

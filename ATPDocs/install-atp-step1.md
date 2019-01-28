@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 15ee7d0b-9a0c-46b9-bc71-98d0b4619ed0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4c178d4ed874ae3d826e97a154ae2e17bd52f48c
-ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
+ms.openlocfilehash: df3e75970a797307991620e21629df589406cc40
+ms.sourcegitcommit: 19ff0ed88e450506b5725bbcbb0d0bd2f0c5e4bb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54840365"
+ms.lasthandoff: 01/27/2019
+ms.locfileid: "55085210"
 ---
 # <a name="creating-your-azure-atp-instance-in-the-azure-atp-portal---step-1"></a>Vytvoření instance vaší ochrany ATP v programu Azure na portálu ochrany ATP v programu Azure – krok 1
 
@@ -32,7 +32,7 @@ V ochraně ATP v Azure budete mít jednu instanci umožňuje spravovat několik 
 > [!NOTE]
 > V současné době datová centra ochrany ATP v programu Azure se nasazují do Evropy a Asie a Severní Amerika/střední Amerika/Karibská oblast. Vaše instance se automaticky vytvoří v datovém centru, který je geograficky nejblíže k AAD. Po vytvoření, Azure instance ochrany ATP v programu nejsou přesouvatelný. 
 
-## <a name="step-1-enter-the-azure-atp-portal"></a>Krok 1. Zadejte ochrany ATP v programu Azure portal
+## <a name="enter-the-azure-atp-portal"></a>Zadejte ochrany ATP v programu Azure portal
 
 Po ověření, že vaši síť splňuje požadavky senzoru pokračujte ve vytváření vaší instance služby Azure ATP.
 
@@ -44,7 +44,7 @@ Po ověření, že vaši síť splňuje požadavky senzoru pokračujte ve vytvá
 
 2.  Přihlaste se pomocí uživatelského účtu Azure Active Directory.
 
-## <a name="step-2-create-your-instance"></a>Krok 2. Vytvoření instance
+## <a name="create-your-instance"></a>Vytvoření instance
 
 1. Klikněte na tlačítko **vytvořit instanci**. 
 

@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 12/16/2018
+ms.date: 1/27/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 51911e39-76c7-4dcd-bc0b-ec6235d0403f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e5e1ee510ba52f541fb224754f82ebfddf553365
-ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
+ms.openlocfilehash: 5c357ea537c9fe9a23fc426670d47bf85d53f316
+ms.sourcegitcommit: 19ff0ed88e450506b5725bbcbb0d0bd2f0c5e4bb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54840509"
+ms.lasthandoff: 01/27/2019
+ms.locfileid: "55085244"
 ---
 # <a name="install-azure-atp---step-4"></a>Instalace služby Azure ATP – krok 4
 
@@ -26,7 +26,7 @@ ms.locfileid: "54840509"
 > [« Krok 3](install-atp-step3.md)
 > [Krok 5 »](install-atp-step5.md)
 
-## <a name="step-4-install-the-azure-atp-sensor"></a>Krok 4. Instalace senzoru služby Azure ATP
+## <a name="install-the-azure-atp-sensor"></a>Instalace senzoru služby Azure ATP
 
 > [!IMPORTANT]
 >Ujistěte se, že na počítači je nainstalované rozhraní Microsoft .net Framework 4.7. Pokud rozhraní .net Framework 4.7 není nainstalovaná, instalačního balíčku senzoru služby Azure ATP ho nainstaluje, která může vyžadovat restartování serveru.
@@ -56,20 +56,20 @@ Proveďte následující kroky na řadiči domény.
 
 5. Průvodce instalací automaticky kontroluje, zda je server řadičem domény nebo vyhrazený server. Pokud je řadič domény, nainstaluje se senzoru služby Azure ATP, pokud se jedná o vyhrazený server, Azure ATP samostatný senzor je nainstalovaný. 
     
-   Například pro Azure ATP samostatný senzor, se zobrazí následující obrazovka s oznámením, že Azure ATP samostatný senzor je nainstalovaný na vyhrazeném serveru:
+    Například senzoru Azure ATP se zobrazí následující obrazovka s oznámením, že Azure ATP senzor je nainstalovaný na vyhrazeném serveru:
     
-   ![Instalace samostatné senzoru služby Azure ochrany ATP v programu](media/sensor-install-deployment-type.png)
+    ![Instalace senzoru služby Azure ochrany ATP v programu](media/sensor-install-deployment-type.png)
 
    Klikněte na **Další**.
 
-   > [!NOTE] 
-   > Pokud řadič domény nebo vyhrazený server nesplňuje minimální požadavky na hardware pro instalaci, zobrazí se upozornění. Přesto můžete kliknout na tlačítko **Další** a pokračovat v instalaci. To může být správná volba pro instalaci služby Azure ATP v testovacím prostředí malé lab, ve kterém není třeba tolik místa pro ukládání dat. Pro produkční prostředí, důrazně doporučujeme pro práci s Azure ATP [plánování kapacity](atp-capacity-planning.md) Průvodce Ujistěte se, že řadiče domény nebo vyhrazené servery splňují nezbytné požadavky.
+    > [!NOTE] 
+    > Pokud řadič domény nebo vyhrazený server nesplňuje minimální požadavky na hardware pro instalaci, objeví se upozornění. Upozornění nezabrání kliknutím **Další**a pokračovat v instalaci. Správná volba pro instalaci služby Azure ATP v testovacím prostředí malé lab, ve kterém jsou vyžadována méně místa pro ukládání dat může být stále. Pro produkční prostředí, důrazně doporučujeme pro práci s Azure ATP [plánování kapacity](atp-capacity-planning.md) Průvodce Ujistěte se, že řadiče domény nebo vyhrazené servery splňují nezbytné požadavky.
 
 6. V části **Konfigurace senzoru**, zadejte instalační cestu a přístupový klíč, který jste zkopírovali v předchozím kroku, podle vašeho prostředí:
 
-   ![Azure ochrany ATP v programu samostatný senzor konfigurace image](media/sensor-install-config.png)
+    ![Obrázek Konfigurace senzoru Azure ochrany ATP v programu](media/sensor-install-config.png)
 
-     - Instalační cesta: Toto je umístění, kde je nainstalovaný samostatný senzor ochrany ATP v programu Azure. Ve výchozím nastavení to je %programfiles%\Azure Advanced Threat Protection senzoru. Nechte nastavenou výchozí hodnotu.
+      - Instalační cesta: Toto je umístění, kde je nainstalován senzoru služby Azure ATP. Ve výchozím nastavení to je %programfiles%\Azure Advanced Threat Protection senzoru. Nechte nastavenou výchozí hodnotu.
 
      - Přístupový klíč: To je načten z ochrany ATP v programu Azure portal v předchozím kroku.
     

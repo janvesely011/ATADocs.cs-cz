@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 95bb4ec1-841f-41b7-92fe-fbd144085724
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: dae89e22e7d5e331af3ec6d82455581396289486
-ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
+ms.openlocfilehash: 4816fe56b8a28d349c970be5a304d025875de748
+ms.sourcegitcommit: 19ff0ed88e450506b5725bbcbb0d0bd2f0c5e4bb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54458967"
+ms.lasthandoff: 01/27/2019
+ms.locfileid: "55085227"
 ---
 # <a name="install-azure-atp---step-3"></a>Instalace služby Azure ATP – krok 3
 
@@ -26,7 +26,7 @@ ms.locfileid: "54458967"
 > [« Krok 2](install-atp-step2.md)
 > [Krok 4 »](install-atp-step4.md)
 
-## <a name="step-3-download-the-azure-atp-sensor-setup-package"></a>Krok 3. Stažení instalačního balíčku senzoru služby Azure ATP
+## <a name="download-the-azure-atp-sensor-setup-package"></a>Stažení instalačního balíčku senzoru služby Azure ATP
 Po dokončení konfigurace nastavení připojení k doméně, můžete stáhnout instalační balíček senzoru služby Azure ATP. Instalačního balíčku senzoru služby Azure ATP můžete nainstalovat na vyhrazený server nebo na řadič domény. Při instalaci přímo na řadiče domény, je nainstalována jako senzoru služby Azure ATP při instalaci na vyhrazeném serveru a pomocí zrcadlení portů, je nainstalován jako samostatný senzor ochrany ATP v programu Azure. Další informace o senzoru služby Azure ATP najdete v tématu [Architektura ochrany ATP v programu Azure](atp-architecture.md). 
 
 Klikněte na tlačítko **Stáhnout** v seznamu kroků uvedených v horní části stránky a přejděte tak **senzor** stránky.

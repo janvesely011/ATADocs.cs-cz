@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: ae8a95f0-278c-4a12-ae69-14282364fba1
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 7ff0324da5cff1ac9ff6aa73fd32d0328279c12b
-ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
+ms.openlocfilehash: ada659d86088cb9f93eba4aca54dd2553e8fb69a
+ms.sourcegitcommit: 19ff0ed88e450506b5725bbcbb0d0bd2f0c5e4bb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54458678"
+ms.lasthandoff: 01/27/2019
+ms.locfileid: "55085448"
 ---
 # <a name="install-azure-atp---step-2"></a>Instalace služby Azure ATP – krok 2
 
@@ -26,7 +26,7 @@ ms.locfileid: "54458678"
 > [« Krok 1](install-atp-step1.md)
 > [Krok 3 »](install-atp-step3.md)
 
-## <a name="step-2-provide-a-username-and-password-to-connect-to-your-active-directory-forest"></a>Krok 2. Zadejte uživatelské jméno a heslo pro připojení k vaší doménové struktury služby Active Directory
+## <a name="provide-a-username-and-password-to-connect-to-your-active-directory-forest"></a>Zadejte uživatelské jméno a heslo pro připojení k vaší doménové struktury služby Active Directory
 
 Při prvním otevření ochrany ATP v programu Azure portal, zobrazí se následující obrazovka:
 
@@ -44,7 +44,7 @@ Při prvním otevření ochrany ATP v programu Azure portal, zobrazí se násled
     |**Heslo** (povinné)|Zadejte heslo pro uživatele jen pro čtení, například: **Pencil1**.|
     |**Doména** (povinné)|Zadejte doménu pro uživatele, který je jen pro čtení, například **contoso.com**. **Poznámka:** Je důležité, abyste zadali plně kvalifikovaný název domény, ve kterém se uživatel zdržuje. Pokud je například účet uživatele v doméně corp.contoso.com, musíte zadat `corp.contoso.com`, a ne contoso.com.|
 
-3. Na portálu ochrany ATP v programu Azure, klikněte na tlačítko **stáhnout instalaci senzoru a nainstalovat první senzor** pokračujte.
+2. Na portálu ochrany ATP v programu Azure, klikněte na tlačítko **stáhnout instalaci senzoru a nainstalovat první senzor** pokračujte.
 
 
 > [!div class="step-by-step"]

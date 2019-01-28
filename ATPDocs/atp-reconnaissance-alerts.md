@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: caf64977da89c88f3640430bf4aa68a76a51026e
-ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
+ms.openlocfilehash: 016388807b2e5d027e3fc113c7e34ebaa546e9d5
+ms.sourcegitcommit: 19ff0ed88e450506b5725bbcbb0d0bd2f0c5e4bb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54841147"
+ms.lasthandoff: 01/27/2019
+ms.locfileid: "55085346"
 ---
 # <a name="tutorial-reconnaissance-alerts"></a>Kurz: Rekognoskace výstrahy  
 
@@ -49,9 +49,13 @@ V tomto kurzu se dozvíte, jak porozumět, klasifikovat, opravit a brání násl
 
 **Popis**
 
-V rekognoskace výčet účtu útočník používá slovník s tisíci uživatelská jména nebo nástrojů, jako je KrbGuess ve snaze uhodnout uživatelská jména v doméně. Útočník vytvářejí požadavky protokolu Kerberos pomocí tyto názvy se pokouší vyhledat platné uživatelské jméno v doméně. Pokud odhad úspěšně Určuje uživatelské jméno, útočník získá Chyba protokolu Kerberos **požadované předběžné ověření** místo **neznámý objekt zabezpečení**.
+V rekognoskace výčet účtu útočník používá slovník s tisíci uživatelská jména nebo nástrojů, jako je KrbGuess ve snaze uhodnout uživatelská jména v doméně.
 
-Toto zjišťování zjistí ochrany ATP v programu Azure útok zaměřený na výčet účtů, odkud, celkový počet pokusů uhádnout a kolik pokusů se shoda našla. Pokud existuje příliš mnoho uživatelů neznámý, ochrana ATP v programu Azure rozpozná jako podezřelou aktivitu.
+**Protokol Kerberos**: Útočník se vytvářejí požadavky protokolu Kerberos pomocí tyto názvy se pokouší vyhledat platné uživatelské jméno v doméně. Při odhad úspěšně Určuje uživatelské jméno, útočník získá **požadované předběžné ověření** místo **neznámý objekt zabezpečení** Chyba protokolu Kerberos.
+
+**NTLM**: Útočník bude žádosti o ověření NTLM pomocí slovník názvů, které chcete najít platné uživatelské jméno v doméně. Pokud odhad úspěšně Určuje uživatelské jméno, útočník získá **WrongPassword (0xc000006a)** místo **NoSuchUser (0xc0000064)** chyba NTLM.
+
+V této výstrahy detekce ochrany ATP v programu Azure detekuje útok zaměřený na výčet účet, odkud, celkový počet pokusů uhádnout a kolik pokusů se shoda našla. Pokud existuje příliš mnoho uživatelů neznámý, ochrana ATP v programu Azure rozpozná jako podezřelou aktivitu.
 
 **TP, B-TP nebo FP**
 
