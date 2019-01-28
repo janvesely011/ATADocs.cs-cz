@@ -28,7 +28,7 @@
 ## [Výstrahy před exfiltrací](atp-exfiltration-alerts.md)
 ## [Prošetřování uživatelů](investigate-a-user.md)
 ## [Prošetřování počítačů](investigate-a-computer.md)
-## [Prošetřování cest taktiky lateral movement](investigate-lateral-movement-path.md)
+## [Prošetřování cest taktity lateral movement](investigate-lateral-movement-path.md)
 ## [Prošetřování entit](investigate-entity.md)
 # Koncepty
 ## [Portál Azure ATP](workspace-portal.md)
@@ -44,6 +44,7 @@
 ## [Správa citlivých účtů](sensitive-accounts.md)
 ## [Hledání a filtrování monitorovaných aktivit](atp-activities-search.md)
 ## [Použití vyloučení a účtů honeytoken](install-atp-step7.md)
+## [Monitorování řadičů domény](atp-sensor-monitoring.md)
 ## [Změna hesla připojení k doméně](modifying-atp-config-dcpassword.md)
 ## [Nastavení oznámení služby Azure ATP](notifications.md)
 ## [Práce s centrem stavu služby Azure ATP](atp-health-center.md)
