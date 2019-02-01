@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 24eca4c6-c949-42ea-97b9-41ef0fb611f1
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9bd886f4c8929af85a3f77e25052ff0fbc7a4c56
-ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
+ms.openlocfilehash: 1710b5f2f96814f2dbe3229473b06c8a963fd380
+ms.sourcegitcommit: cc5017770583042ef8bf90c9c0ece020a0166b91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54840671"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55480977"
 ---
 # <a name="azure-atp-switches-and-silent-installation"></a>Azure ATP přepínače a bezobslužná instalace
 Tento článek obsahuje pokyny pro služby Azure ATP přepínače a tichou instalaci.
@@ -50,11 +50,10 @@ Použijte následující příkaz k provedení plně tiché instalace senzoru sl
 
 **Syntaxe**:
 
-    Azure ATP sensor Setup.exe /AccessKey=<Access Key> /quiet NetFrameworkCommandLineArguments ="/q" 
-
+    "Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKey="<Access Key>"
 
 > [!NOTE]
-> Zkopírovat přístupový klíč z portálu ochrany ATP v programu Azure v rámci **konfigurace** a potom **senzor**.
+> Zkopírovat přístupový klíč z portálu služby Azure ATP **konfigurace** části **senzor** stránky.
 
 
 **Možnosti instalace**:
@@ -77,8 +76,7 @@ Použijte následující příkaz k provedení plně tiché instalace senzoru sl
 
 **Příklady**: Bezobslužná instalace senzoru služby Azure ATP použijte následující příkaz:
 
-    "Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" 
-    AccessKey="3WlO0uKW7lY6Lk0+dfkfkJQ0qZV6aSq5WxLf71+fuBhggCl/BMs9JxfAwi7oy9vYGviazUS1EPpzte7z8s4grw==" 
+    "Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKey="mmAOkLYCzfH8L/zUIsH24BIJBevlAWu7wUcSfIkRJufpuEojaDHYdjrNs0P3zpD+/bObKfLS0puD7biT5KDf3g=="
 
 
 ## <a name="update-the-azure-atp-sensor"></a>Aktualizace senzoru služby Azure ATP
