@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 1/20/2019
+ms.date: 02/03/2019
 ms.topic: tutorial
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 0b3a1db5-0d43-49af-b356-7094cc85f0a5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 929dfae084bbce8f831c55d042f7765ddfd64019
-ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
+ms.openlocfilehash: ae0d59748a4caaecd7c9f4e3cc1276c042a875c1
+ms.sourcegitcommit: 9236d279f5e01424b498ce23e9d84c407ebfcdf3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54840842"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55689434"
 ---
 # <a name="tutorial-domain-dominance-alerts"></a>Kurz: Upozornění dominance v doméně  
 
@@ -43,7 +43,7 @@ Výstrahy pomáhají identifikovat a napravit následující zabezpečení **dom
 > * Podezřelé použití lístku Golden (oslabení šifrování) (externí ID 2009)
 > * Podezřelé použití lístku Golden (falešných dat autorizace) (externí ID 2013)
 > * Podezřelé použití Golden Ticket (neexistující účet) (externí ID 2027)
-> * Podezřelé použití Golden Ticket (ticket anomálií) – ve verzi preview (. 2032 externí ID)
+> * Podezřelé použití Golden Ticket (ticket anomálií) (. 2032 externí ID)
 > * Podezřelé použití Golden Ticket (čas anomálií) (externí ID 2022)
 > * Podezření na útok typu Skeleton Key (oslabení šifrování) (externí ID)
 > * Podezřelé úprava citlivých skupin (externí ID 2024)
@@ -399,7 +399,7 @@ Pokud je odpověď **Ano**, k některému z předchozí dotazy, **Zavřít** vý
     - Obnovení účtu KRBTGT dvojím zruší platnost všechny lístky protokolu Kerberos v této doméně. Zrušení platnosti všechny lístky protokolu Kerberos v doméně znamená **všechny** služeb je nebude fungovat a nebudou až do jejich obnovování nebo v některých případech se restartuje službu znovu fungovat. Před provedením KRBTGT double resetovat, protože má vliv na všechny počítače, servery a uživatelů v rámci prostředí, naplánujte pečlivě.
 
  
-## <a name="suspected-golden-ticket-usage-ticket-anomaly-external-id-2032--preview"></a>Podezřelé použití Golden Ticket (ticket anomálií) (. 2032 externí ID) – Preview 
+## <a name="suspected-golden-ticket-usage-ticket-anomaly-external-id-2032"></a>Podezřelé použití Golden Ticket (ticket anomálií) (. 2032 externí ID) 
 
 **Popis** útočníci s právy správce domény může ohrozit účet KRBTGT. Pomocí účtu KRBTGT, můžete vytvořit lístek Kerberos udělující lístek (TGT), který poskytuje autorizaci k jakémukoli prostředku a nastavit dobu platnosti lístku do libovolného kdykoli. Tato falešných lístků TGT se nazývá "Zlatých lístků" a útočníkům umožňuje dosáhnout trvalého sítě. Falešných Zlatých lístků tohoto typu mají jedinečné charakteristiky, které toto zjišťování je navržená speciálně pro identifikaci.  
  

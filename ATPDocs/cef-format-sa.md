@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 1/20/2018
+ms.date: 02/04/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 3261155c-3c72-4327-ba29-c113c63a4e6d
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 2c957f90215b6c251eadff67f3e66fc450711373
-ms.sourcegitcommit: a0ebb0b6f140d4abf091ebd9d756b975b3d96b9d
+ms.openlocfilehash: 39b5394c876af8034317bc857ee33c93547d9262
+ms.sourcegitcommit: 9236d279f5e01424b498ce23e9d84c407ebfcdf3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54459188"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55689451"
 ---
 # <a name="azure-atp-siem-log-reference"></a>Referenční informace k protokolům Azure ATP SIEM
 
@@ -72,7 +72,7 @@ Do systému SIEM se předávají následující pole a jejich hodnoty:
 |[Podezřelé použití lístku Golden (oslabení šifrování)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-encryption-downgrade-external-id-2009)|Aktivita snížení úrovně šifrování (potenciální útok metodou golden ticket)|2009|
 |[Podezřelé použití lístku Golden (falešných dat autorizace)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-forged-authorization-data-external-id-2013) |Eskalace oprávnění prostřednictvím zfalšovaných dat autorizace|2013|
 |[Podezřelé použití Golden Ticket (neexistující účet)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-nonexistent-account-external-id-2027)|Protokol Kerberos Golden Ticket - neexistující účet|2027|
-|[Podezřelé použití Golden Ticket (ticket anomálií) – Preview](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-ticket-anomaly-external-id-2032--preview)|Není k dispozici|2032|
+|[Podezřelé použití Golden Ticket (ticket anomálií)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-ticket-anomaly-external-id-2032)|Není k dispozici|2032|
 |[Podezřelé použití Golden Ticket (čas anomálií)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-time-anomaly-external-id-2022)|Kerberos Golden Ticket – čas anomálií|2022|
 |[Krádež identity podezřelého softwaru (pass-the-hash)](atp-lateral-movement-alerts.md#suspected-identity-theft-pass-the-hash-external-id-2017)|Krádež identity pomocí útoku Pass-the-Hash|2017|
 |[Krádež identity podezřelého softwaru (pass-the-ticket)](atp-lateral-movement-alerts.md#suspected-identity-theft-pass-the-ticket-external-id-2018)|Krádež identity pomocí útoku Pass-the-Ticket|2018|
@@ -134,7 +134,7 @@ Priority:
 ### <a name="suspected-golden-ticket-usage-non-existent-account"></a>Podezřelé použití Golden Ticket (neexistující účet)
 07-01-2018 14:28:49 Auth.Error 192.168.0.100 1 2018-07-01T11:28:35.546638 + 00:00 CENTER CEF 38768 ForgedPrincipalSecurityAlert ï» ¿0 | Microsoft | Ochrana ATP v programu Azure | 2.39.0.0 | ForgedPrincipalSecurityAlert | Kerberos Golden Ticket - neexistujících účtů | 10 | start = 2018-07-01T09:48:31.2567987Z app = Kerberos suser=domain1.test.local\fake msg=domain1.test.local\fake, který neexistuje v Active Directory, používá lístek protokolu Kerberos. -The-ticket byla zjištěna z 2 počítače přístup k prostředkům 3. To může znamenat potenciální útok metodou Golden Ticket. externalId = 2027 cs1Label = url cs1 = https\://contoso-corp.atp.azure.com:13000/securityAlert/98f050d4-9134-429c-8e54-d8eeb19849c4 cs2Label = aktivační událost cs2 = aktualizace
 
-### <a name="suspected-golden-ticket-usage-ticket-anomaly---preview"></a>Podezřelé použití Golden Ticket (ticket anomálií) – preview
+### <a name="suspected-golden-ticket-usage-ticket-anomaly"></a>Podezřelé použití Golden Ticket (ticket anomálií) 
 1 2018-11-18T10:46:23.346946 + 00:00 MAXIMG 7050 CEF 24284 GoldenTicketSizeAnomalySecurityA 0 | Microsoft | Ochrana ATP v programu Azure | 2.56.0.0 | GoldenTicketSizeAnomalySecurityAlert | [PREVIEW] Podezřelé použití Golden Ticket (ticket anomálií) | 10 | start = 2018-11-18T10:44:12.9317797Z app = Kerberos shost CLIENT2 suser = RFosdyke msg = = Renzo Fosdyke (softwarový inženýr) pro přístup k ldap/domain1.test.local podezřelé lístek Kerberos z počítače CLIENT2. externalId =. 2032 cs1Label = url cs1 = https\://contoso-corp.atp.azure.com:13000/securityAlert/63600e03-f423-49bf-a92d-4010e1d52b9f cs2Label = aktivační událost cs2 = aktualizace
 
 ### <a name="suspected-golden-ticket-usage-time-anomaly"></a>Podezřelé použití Golden Ticket (čas anomálií) 

@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 11/29/2018
+ms.date: 02/04/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 6a9b5273-eb26-414e-9cdd-f64406e24ed8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4f551e27d6417f0fa1a65427998e8d1cb33dcf7c
-ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
+ms.openlocfilehash: 2e8405f46e404ef6d08ac2ce2517259ad20828b1
+ms.sourcegitcommit: 9236d279f5e01424b498ce23e9d84c407ebfcdf3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54840569"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55689315"
 ---
 # <a name="azure-atp-frequently-asked-questions"></a>Nejčastější dotazy k Azure ATP
 Tento článek obsahuje seznam častých otázek a odpovědí týkajících se ochrany ATP v programu Azure rozdělené do následujících catergories: 
@@ -131,16 +131,6 @@ S Azure Advanced Threat Protection není nutné k vytváření pravidel ani prah
 ### <a name="what-should-i-do-if-the-azure-atp-sensor-or-standalone-sensor-doesnt-start"></a>Co mám dělat, když ochrana ATP v programu Azure nebo samostatný senzor nespustí?
 Podívejte se na poslední chyba aktuální chybě [protokolu](troubleshooting-atp-using-logs.md) (kde služby Azure ATP je nainstalována ve složce "Protokoly").
 
-### <a name="how-can-i-test-azure-atp"></a>Jak můžu otestovat ochrany ATP v programu Azure?
-Začátku do konce testu můžete simulovat podezřelé aktivity. V následujícím scénáři se simuluje rekognoskace DNS:
-
-1. Ověření ochrany ATP v programu Azure senzorů jsou nainstalovaná a nakonfigurovaná na řadičích domény (nebo samostatné senzory a související zrcadlení portů jsou nainstalované a nakonfigurované)
-2. Otevřít CMD
-3. Spusťte následující příkaz: nslookup –<DC iP address>
-   - Stisknutím klávesy enter
-   - Zadejte: Is -d <FQDN>
-   - V závislosti na konfiguraci vašeho prostředí se odpovědi liší z "Bylo odmítnuto dotazu" na seznam záznamů DNS. 
-4. Zobrazte výstrahy související s Simulovaná rekognoskace DNS na portálu ochrany ATP v programu Azure. 
 
 ## <a name="see-also"></a>Viz také
 - [Požadavky služby Azure ATP](atp-prerequisites.md)

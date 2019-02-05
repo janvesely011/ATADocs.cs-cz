@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 1/15/2019
+ms.date: 02/04/2019
 ms.topic: tutorial
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 016388807b2e5d027e3fc113c7e34ebaa546e9d5
-ms.sourcegitcommit: 19ff0ed88e450506b5725bbcbb0d0bd2f0c5e4bb
+ms.openlocfilehash: c8e4d9fbc094e5bd1b58253b771cb5d693b7361c
+ms.sourcegitcommit: 9236d279f5e01424b498ce23e9d84c407ebfcdf3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/27/2019
-ms.locfileid: "55085346"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55689298"
 ---
 # <a name="tutorial-reconnaissance-alerts"></a>Kurz: Rekognoskace výstrahy  
 
@@ -115,7 +115,11 @@ Nyní podívejte se na účty:<br>
 
 DNS server obsahuje mapu všech počítačů, IP adresy a služby ve vaší síti. Tyto údaje používají útočníci ke zmapování struktury vaší sítě a zacílení zajímavých počítačů v pozdějších krocích útoku. 
  
-Protokol DNS obsahuje několik typů dotazů. Tato výstraha zabezpečení služby Azure ATP detekuje žádosti AXFR (přenos) pocházející z jiné servery než DNS.
+Protokol DNS obsahuje několik typů dotazů. Tato výstraha zabezpečení služby Azure ATP detekuje podezřelé žádosti AXFR (přenos) pocházející z jiné servery než DNS.
+
+**Období učení**
+
+Toto upozornění nemá období učení z 8 dní od samého začátku monitorování řadiče domény. 
 
 **TP, B-TP nebo FP**
 

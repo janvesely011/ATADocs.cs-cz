@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 12/13/2018
+ms.date: 02/04/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,13 +13,17 @@ ms.technology: ''
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 829c3685d06ec49182895b4786c89b8281e2de2f
-ms.sourcegitcommit: 19ff0ed88e450506b5725bbcbb0d0bd2f0c5e4bb
+ms.openlocfilehash: 20281444e969cce2adb9e3458e040dd4c9d36fd3
+ms.sourcegitcommit: 9236d279f5e01424b498ce23e9d84c407ebfcdf3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/27/2019
-ms.locfileid: "55085380"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55689366"
 ---
+*Platí pro: Azure Advanced Threat Protection*
+
+
+
 # <a name="azure-atp-prerequisites"></a>Požadavky služby Azure ATP
 Tento článek popisuje požadavky pro úspěšné nasazení služby Azure ATP ve vašem prostředí.
 
@@ -46,14 +50,14 @@ Tato část obsahuje informace, které byste měli získat, a také účty a sí
 
 - Získat licenci pro Enterprise Mobility + Security (EMS E5) 5 přímo prostřednictvím [portál služeb Office 365](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-pricing) nebo prostřednictvím licenčního modelu partnera CSP (Cloud Solution).  
 
-- Ověřte, že počet řadičů domény, které máte v úmyslu nainstalovat senzorů ochrany ATP v programu Azure jste připojení k Internetu ke cloudové službě ochrana ATP v programu Azure. Senzoru služby Azure ATP podporují použití proxy serveru. Další informace o konfiguraci proxy serveru najdete v tématu [konfiguraci proxy serveru pro služby Azure ATP](configure-proxy.md).  
+- Ověřte, že počet řadičů domény, které máte v úmyslu nainstalovat senzorů ochrany ATP v programu Azure jste připojení k Internetu ke cloudové službě ochrana ATP v programu Azure. Senzoru služby Azure ATP podporuje použití proxy serveru. Další informace o konfiguraci proxy serveru najdete v tématu [konfiguraci proxy serveru pro služby Azure ATP](configure-proxy.md).  
 
 -   **Místní** AD uživatelský účet a heslo s oprávněním ke čtení pro všechny objekty v monitorovaném domén.
 
     > [!NOTE]
     > Pokud jste pro různé organizační jednotky (OU) ve vaší doméně nastavili vlastní seznamy ACL, ujistěte se, že vybraný uživatel má pro tyto organizační jednotky oprávnění ke čtení.
 
--   Pokud spustíte Wireshark na služby Azure ATP samostatný senzor, je potřeba restartovat službu sensor rozšířené ochrany před internetovými útoky pro Azure po zastavení Wireshark zachycení. V opačném případě senzor Zastaví zachytávání provozu.
+-   Pokud spustíte Wireshark na služby Azure ATP samostatný senzor, restartujte službu sensor rozšířené ochrany před internetovými útoky pro Azure po zachycení Wireshark jste zastavení. Pokud není restartovat službu sensor, senzor Zastaví zachytávání provozu.
 
 - Pokud se pokusíte instalace senzoru služby Azure ATP do počítače nakonfigurované s adaptérem seskupování síťových adaptérů, obdržíte chybu instalace. Pokud chcete nainstalovat na počítač nakonfigurován s funkcí seskupování síťových adaptérů senzoru služby Azure ATP naleznete v tématu [senzoru služby Azure ATP seskupování problém NIC](troubleshooting-atp-known-issues.md#nic-teaming).
 
@@ -65,13 +69,13 @@ Tato část obsahuje informace, které byste měli získat, a také účty a sí
 
 ## <a name="azure-atp-portal-requirements"></a>Portálu požadavky služby Azure ATP
 Přístup k portálu ochrany ATP v programu Azure je prostřednictvím prohlížeče. podporují následující prohlížeče a nastavení:
-- Microsoft Edge
-- Internet Explorer verze 10 a novější
-- Google Chrome 4.0 a vyšší
-- Minimální rozlišení obrazovky na šířku 1 700 pixelů
-- Otevření brány firewall a proxy - komunikovat s cloudovou službou ochrany ATP v programu Azure *. musí být atp.azure.com port 443 otevřený ve firewallu nebo proxy serveru.
+-   Microsoft Edge
+-   Internet Explorer verze 10 a novější
+-   Google Chrome 4.0 a vyšší
+-   Minimální rozlišení obrazovky na šířku 1 700 pixelů
+-   Otevření brány firewall a proxy - komunikovat s cloudovou službou ochrany ATP v programu Azure *. musí být atp.azure.com port 443 otevřený ve firewallu nebo proxy serveru.
 
-  ![Diagram architektury Azure ATP](media/ATP-architecture-topology.png)
+ ![Diagram architektury Azure ATP](media/ATP-architecture-topology.png)
 
 
 > [!NOTE]
@@ -79,6 +83,7 @@ Přístup k portálu ochrany ATP v programu Azure je prostřednictvím prohlíž
 
 ## <a name="azure-atp-sensor-requirements"></a>Senzor požadavky služby Azure ATP
 V této části jsou uvedené požadavky senzoru služby Azure ATP.
+
 ### <a name="general"></a>Obecné
 Senzoru služby Azure ATP podporuje instalaci na řadičích domény se systémem Windows Server 2008 R2 SP1 (nikoli včetně jádra serveru), Windows Server 2012, Windows Server 2012 R2, Windows Server 2016 (včetně jádra, ale ne Nano).
 
@@ -94,9 +99,9 @@ Během instalace rozhraní .net Framework 4.7 je nainstalovaný a může vyžado
 
 ### <a name="server-specifications"></a>Specifikace serveru
 
-Senzoru služby Azure ATP vyžaduje minimálně dvě jádra a 6 GB paměti RAM nainstalované na řadiči domény.
+Senzoru služby Azure ATP vyžaduje nejméně 2 jádra a 6 GB paměti RAM nainstalované na řadiči domény.
 Pro zajištění optimálního výkonu nastavte **možnost vypnutí** senzoru služby Azure ATP k **vysoký výkon**.
-Senzoru služby Azure ATP můžete nasadit na řadiče domény různým zatížením i velikostí, v závislosti na objemu síťových přenosů do a z řadičů domény a množství prostředků, které jsou nainstalované na tomto řadiči domény.
+Azure senzorů ochrany ATP v programu je možné nasadit na řadiče domény různým zatížením i velikostí, v závislosti na objemu síťových přenosů do a z řadičů domény a množství prostředků, které jsou nainstalované.
 
 >[!NOTE] 
 > Spuštěná jako virtuální počítač s Dynamická paměť nebo jakékoli jiné funkce ballooning paměti se nepodporuje.
@@ -131,7 +136,7 @@ Následující tabulka uvádí minimální porty, které vyžaduje senzoru služ
 |Protokol TLS pro RDP port|TCP|3389|Všechna zařízení v síti|Obojí|
 
 ### <a name="windows-event-logs"></a>Protokoly událostí Windows
-Azure ATP detekce spoléhá na konkrétní Windows protokoly událostí, které mohou analyzovat senzor z řadiče domény. Pro správné události, které se Audituje a součástí og události Windows řadičů domény vyžadují nastavení přesné pokročilé zásady auditu. Další informace najdete v tématu [Advanced kontrol zásad auditu](atp-advanced-audit-policy.md).
+Azure ATP detekce spoléhá na konkrétní Windows protokoly událostí, které mohou analyzovat senzor z řadiče domény. Pro správné události, které se Audituje a součástí og události Windows řadičů domény vyžadují nastavení přesné pokročilé zásady auditu. Další informace najdete v tématu, [Advanced kontrol zásad auditu](atp-advanced-audit-policy.md).
 
 
 > [!NOTE]
@@ -143,6 +148,7 @@ Azure ATP detekce spoléhá na konkrétní Windows protokoly událostí, které 
 
 ## <a name="azure-atp-standalone-sensor-requirements"></a>Senzor požadavky samotné služby Azure ochrany ATP v programu
 Tato část uvádí požadavky pro samostatný senzor ochrany ATP v programu Azure.
+
 ### <a name="general"></a>Obecné
 Samostatný senzor ochrany ATP v programu Azure podporuje instalaci na serveru se systémem Windows Server 2012 R2 nebo Windows Server 2016 (včetně jádra serveru).
 Samostatný senzor ochrany ATP v programu Azure lze nainstalovat na server, který je členem domény nebo pracovní skupině.
@@ -158,7 +164,7 @@ Informace o používání virtuálních počítačů pomocí služby Azure ATP s
 
 ### <a name="server-specifications"></a>Specifikace serveru
 Pro zajištění optimálního výkonu nastavte **možnost vypnutí** ze samostatného senzoru služby Azure ATP k **vysoký výkon**.<br>
-Samostatný senzor ochrany ATP v programu Azure může podporovat monitorování několika řadičů domény, v závislosti na objemu síťových přenosů do a z řadičů domény.
+Azure senzorů samostatné ochrany ATP v programu může podporovat monitorování několika řadičů domény, v závislosti na objemu síťových přenosů do a z řadičů domény.
 
 >[!NOTE] 
 > Spuštěná jako virtuální počítač s Dynamická paměť nebo jakékoli jiné funkce ballooning paměti se nepodporuje.

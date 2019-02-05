@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: mbaldwin
-ms.date: 1/27/2019
+ms.date: 02/04/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,16 +13,39 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9d1a0f992bcb0d21ed31d5cdc5ed3e034c6bee8d
-ms.sourcegitcommit: 19ff0ed88e450506b5725bbcbb0d0bd2f0c5e4bb
+ms.openlocfilehash: ef2aa85c8695b86ba47d0c42c0a82208b188b893
+ms.sourcegitcommit: 9236d279f5e01424b498ce23e9d84c407ebfcdf3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/27/2019
-ms.locfileid: "55085431"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55689417"
 ---
 # <a name="whats-new-in-azure-atp"></a>Co je nového v Azure ATP
 
-### <a name="azure-atp-release-263"></a>Verze ochrany ATP v programu Azure 2.63
+## <a name="azure-atp-release-264"></a>Verze ochrany ATP v programu Azure 2.64
+vydáno 4. února 2019
+
+
+- **Obecná dostupnost: Podezřelé použití Golden Ticket (ticket anomálií)**<br>
+Tato výstraha je teď ve verzi GA (obecná dostupnost). Najdete v článku [podezřelý Golden Ticket využití (ticket anomálií) popis výstrahy stránky](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-ticket-anomaly-external-id-2032) podrobné informace a výstrah funkce. 
+
+- **Vylepšení funkce: Mapování sondování sítě (DNS)**<br>
+Vylepšená logika upozornění detekce nasazení pro tuto výstrahu, chcete-li minimalizovat false pozitivní a rušivé výstrahy. Tato výstraha teď má období učení z osm dní, než se upozornění aktivují pravděpodobně poprvé. Další informace o této výstraze najdete v části [síťové mapování rekognoskace (DNS) popis výstrahy stránky](atp-reconnaissance-alerts.md#network-mapping-reconnaissance-dns-external-id-2007). 
+
+    **Z důvodu vylepšení této výstrahy musí metoda nslookup už nebude používat k testování připojení služby Azure ATP během počáteční konfigurace.** 
+
+- **Vylepšení funkce:**<br>
+Tato verze zahrnuje přepracovaný stránek výstrah a nové poznatky, poskytuje lepší výstrahy vyšetřování. 
+    - [Podezřelý útok hrubou silou (SMB)](atp-compromised-credentials-alerts.md#suspected-brute-force-attack-smb-external-id-2033)
+    - [Podezření na stránce Golden Ticket využití (čas anomálií) popis výstrahy](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-time-anomaly-external-id-2022)
+    - [Podezření na útok overpass-the-hash (Kerberos)](atp-lateral-movement-alerts.md#suspected-overpass-the-hash-attack-kerberos-external-id-2002)
+    - [Podezřelé použití Metasploit hacking framework](atp-compromised-credentials-alerts.md#suspected-use-of-metasploit-hacking-framework-external-id-2034)
+    - [Podezření na útok WannaCry ransomwaru](atp-compromised-credentials-alerts.md#suspected-wannacry-ransomware-attack-external-id-2035)
+
+- Tato verze také zahrnuje vylepšení a opravy chyb pro interní senzor infrastruktury.
+
+
+## <a name="azure-atp-release-263"></a>Verze ochrany ATP v programu Azure 2.63
 Vydáno 27. ledna 2019
 
 - **Nová funkce: Nedůvěryhodné doménové struktuře podpora – (preview)**<br>
@@ -52,7 +75,7 @@ Vydáno 20. ledna 2019
 - **Nová výstraha zabezpečení: Vzdálené spuštění kódu nad DNS – (preview)**<br>
 Azure ATP [vzdálené spuštění kódu nad DNS](atp-lateral-movement-alerts.md#remote-code-execution-over-dns-external-id-2036---preview) výstraha zabezpečení je teď ve verzi public preview. <br> V této detekce se aktivuje upozornění zabezpečení služby Azure ATP při dotazy DNS vzbuzovat podezření na zneužití ohrožení zabezpečení [CVE-2018-8626](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2018-8626) se provádí na řadiči domény v síti.
 
-- **Vylepšení funkce: 72 hodin zpožděné aktualizace senzorů** <br> Změněné možnost zpoždění senzor aktualizací na vybrané senzory až 72 hodin (místo zpoždění předchozích 24 hodin) po každé aktualizaci verze služby Azure ATP. Zobrazit [aktualizace senzoru služby Azure ATP](sensor-update.md) pokyny ke konfiguraci. 
+- **Vylepšení funkce: 72 hodin zpožděné aktualizace senzorů** <br> Změněné možnost zpoždění senzor aktualizací na vybrané senzory až 72 hodin (místo předchozích 24 hodin zpožděním) po každé aktualizaci verze služby Azure ATP. Zobrazit [aktualizace senzoru služby Azure ATP](sensor-update.md) pokyny ke konfiguraci. 
 
 
 - Tato verze také zahrnuje vylepšení a opravy chyb pro interní senzor infrastruktury.
@@ -321,7 +344,7 @@ Vydáno 29. července 2018
 
 Vydáno 22. července 2018
 
-- **Podpora více doménovými strukturami Azure ochrany ATP v programu je postupně zavádí (preview)** <br> Ochrana ATP v programu Azure teď můžete podpořit organizace s víc doménovými strukturami, které poskytuje možnost monitorování aktivity a profily uživatelů napříč doménovými strukturami. Tato nová funkce umožňuje:
+- **Podpora více doménovými strukturami Azure ochrany ATP v programu je postupně zavádí (preview)** <br> Ochrana ATP v programu Azure teď můžete podpořit organizace s více doménovými strukturami, které poskytují možnost monitorování aktivity a profily uživatelů napříč doménovými strukturami. Tato nová funkce umožňuje:
 
   - Zobrazení a prošetřování aktivity prováděné uživateli napříč více doménovými strukturami z podokně ze skla.
   - Zlepšuje detekci a omezuje počet falešně pozitivních výsledků tím, že poskytuje pokročilé integrace služby Active Directory a účet řešení.
