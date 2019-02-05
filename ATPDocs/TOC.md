@@ -1,9 +1,8 @@
 
+# [Dokumentace služby Azure Advanced Threat Protection](index.yml)
 # Přehled
 ## [Co je Azure Advanced Threat Protection?](what-is-atp.md)
-## [Architektura služby Azure ATP](atp-architecture.md)
 ## [Co je nového v Azure ATP](atp-whats-new.md)
-## [Požadavky služby Azure ATP](atp-prerequisites.md)
 # Rychlý start
 ## [Plánování kapacity služby Azure ATP](atp-capacity-planning.md)
 ## [Vytvoření instance služby Azure ATP](install-atp-step1.md)
@@ -31,6 +30,8 @@
 ## [Prošetřování cest taktity lateral movement](investigate-lateral-movement-path.md)
 ## [Prošetřování entit](investigate-entity.md)
 # Koncepty
+## [Architektura služby Azure ATP](atp-architecture.md)
+## [Požadavky služby Azure ATP](atp-prerequisites.md)
 ## [Portál Azure ATP](workspace-portal.md)
 ## [Výstrahy zabezpečení služby Azure ATP](suspicious-activity-guide.md)
 ## [Monitorované aktivity](monitored-activities.md)
