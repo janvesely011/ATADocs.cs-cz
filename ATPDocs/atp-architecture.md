@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 90f68f2c-d421-4339-8e49-1888b84416e6
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 6988b41b64dc3d8afef5f7af614f78b41501e2af
-ms.sourcegitcommit: 19ff0ed88e450506b5725bbcbb0d0bd2f0c5e4bb
+ms.openlocfilehash: 11bcc25911f0b22c88a64f1429d0f6c5d478b067
+ms.sourcegitcommit: 96752da28f43896e7b8e5945947b32c4810bdff6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/27/2019
-ms.locfileid: "55085312"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55831476"
 ---
 # <a name="azure-atp-architecture"></a>Architektura služby Azure ATP
 
@@ -66,31 +66,33 @@ Senzoru služby Azure ATP má následující základní funkce:
 
  
 ## <a name="azure-atp-sensor-features"></a>Funkce Azure ochrany ATP v programu senzor
-Senzoru služby Azure ATP načte události místně bez nutnosti zakoupení a Udržovat další hardware ani konfigurace. Senzoru služby Azure ATP také podporuje trasování událostí pro Windows (ETW) poskytující informace o protokolu pro více detekcí. Trasování událostí pro Windows na základě detekce patří podezřelý DCShadow útoky pomocí žádosti o replikaci řadiče domény a povýšení řadiče domény.
+
+Senzoru služby Azure ATP načte události místně bez nutnosti zakoupení a Udržovat další hardware ani konfigurace. Senzoru služby Azure ATP také podporuje trasování událostí pro Windows (ETW) poskytující informace o protokolu pro více detekcí. Tématu detekce na základě trasování událostí pro Windows zahrnují podezřelý DCShadow útoky pomocí žádosti o replikaci řadiče domény a povýšení řadiče domény.
 
 ### <a name="domain-synchronizer-candidate"></a>Kandidát na synchronizátora domény
 
-    The domain synchronizer candidate is responsible for synchronizing all entities from a specific Active Directory domain proactively (similar to the mechanism used by the domain controllers themselves for replication). One sensor is chosen randomly, from the list of candidates, to serve as the domain synchronizer. 
+Kandidát na synchronizátora domény zodpovídá za proaktivní synchronizaci všech entity z konkrétní domény služby Active Directory (podobně jako mechanismu, který používá sami řadiče domény pro replikaci). Jeden senzor se náhodně vybere ze seznamu kandidátů, která bude sloužit jako synchronizátor domény. 
 
-    If the synchronizer is offline for more than 30 minutes, another candidate is chosen instead. If there is no domain synchronizer available for a specific domain, Azure ATP proactively synchronizes entities and their changes, however Azure ATP retrieves new entities as they are detected in the monitored traffic. 
+Pokud je synchronizátor více než 30 minut offline, vybere se jiný kandidát. Pokud žádný synchronizátor domény není k dispozici pro konkrétní doménu, ochrana ATP v programu Azure aktivně synchronizuje entit a jejich změny, ale ochrany ATP v programu Azure načítat nové entity, když jste zjistili v monitorovaném provozu.
     
-    If there is no domain synchronizer available, and you search for an entity that did not have any traffic related to it, no search results are displayed.
+Pokud není dostupný žádný synchronizátor domény a hledáte entitu, která nemají žádný provoz s ní spojené, se nezobrazí žádné výsledky hledání.
 
-    By default, Azure ATP sensors are not synchronizer candidates. To manually set an Azure ATP sensor as a domain synchronizer candidate, follow the steps in the [Azure ATP installation workflow](install-atp-step5.md#configure-azure-atp-sensor-settings).
+Ve výchozím nastavení nejsou ochrany ATP v programu Azure senzorů kandidáti na synchronizátora. K ručnímu nastavení senzoru služby Azure ATP jako kandidát na synchronizátora domény, postupujte podle kroků v [pracovní postup instalace služby Azure ATP](install-atp-step5.md).
 
 ### <a name="resource-limitations"></a>Omezení prostředků
 
-    The Azure ATP sensor includes a monitoring component that evaluates the available compute and memory capacity on the domain controller on which it is running. The monitoring process runs every 10 seconds and dynamically updates the CPU and memory utilization quota on the Azure ATP sensor process. The monitoring process makes sure the domain controller always has at least 15% of free compute and memory resources available.
+Senzoru služby Azure ATP zahrnuje monitorovací komponentu, která vyhodnotí dostupnou kapacitu výpočetní a paměťové prostředky na řadiči domény, na kterém je spuštěný. Proces monitorování spouští každých 10 sekund a dynamicky aktualizuje kvóty využití procesoru a paměti v procesu senzoru služby Azure ATP. Monitorování procesu je zajištěno, že řadič domény má vždy alespoň 15 % této bezplatné výpočetní a paměťové prostředky k dispozici.
 
-    No matter what occurs on the domain controller, the monitoring process continually frees up resources to make sure the domain controller's core functionality is never affected.
+Bez ohledu na to, co se stane v řadiči domény procesu monitorování průběžně uvolní prostředky, abyste měli jistotu, že nikdy je vliv na funkčnost základních řadič domény.
 
-    If the monitoring process causes the Azure ATP sensor to run out of resources, only partial traffic is monitored and the monitoring alert "Dropped port mirrored network traffic" appears in the Azure ATP portal Health page.
+Pokud proces monitorování způsobí, že se senzoru služby Azure ATP dojdou prostředky, se monitoruje provoz jenom částečně a monitorování výstrahy "zrušenou provoz prostřednictvím zrcadlení portů sítě" se zobrazí stavové stránce portálu ochrany ATP v programu Azure.
 
 ### <a name="windows-events"></a>Události Windows
 
-    To enhance Azure ATP detection coverage of suspected identity theft (pass-the-hash), suspicious authentication failures,modifications to sensitive groups, creation of suspicious services, and Honeytoken activity types of attack, Azure ATP needs to analyze the logs of the following Windows events: 4776,4732,4733,4728,4729,4756,4757, and 7045. These events are read automatically by Azure ATP sensors with correct [advanced audit policy settings](atp-advanced-audit-policy.md). 
+K vylepšení rozsahu zjišťování ochrany ATP v programu Azure na identity podezřelých krádež (pass-the-hash), podezřelá neúspěšná ověření, úpravy citlivých skupin, vytváření podezřelé služeb a typy aktivit Honeytokenu útoku, ochrana ATP v programu Azure potřebuje k analýze protokoly následující události Windows: 4776,4732,4733,4728,4729,4756,4757 a 7045. Tyto události jsou automaticky číst ochrany ATP v programu Azure snímačů správné [pokročilé zásady auditu](atp-advanced-audit-policy.md). 
 
-## <a name="see-also"></a>Viz také
+## <a name="next-steps"></a>Další postup
+
 - [Požadavky služby Azure ATP](atp-prerequisites.md)
 - [Nástroje pro změnu velikosti Azure ATP](http://aka.ms/trisizingtool)
 - [Plánování kapacity v Azure ATP](atp-capacity-planning.md)

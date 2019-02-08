@@ -1,22 +1,17 @@
 ---
 title: Plánování rychlý úvod k nasazení vaší rozšířené ochrany před internetovými útoky pro Azure | Dokumentace Microsoftu
 description: Pomůže vám naplánovat nasazení a rozhodnout, kolik serverů ochrany ATP v programu Azure bude potřeba k podpoře vaší sítě.
-keywords: ''
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
 ms.date: 1/24/2019
 ms.topic: quickstart
 ms.service: azure-advanced-threat-protection
-ms.prod: ''
-ms.reviewer: itargoet
-ms.suite: ems
-ms.openlocfilehash: c9930cff1341b0c721b4aaecae50ce00e99cb80f
-ms.sourcegitcommit: c16aab563149bbdfd99ae5b46e168cec700d3ae3
+ms.openlocfilehash: d161b9655a5be09567fb50a837f7d2063d11ee11
+ms.sourcegitcommit: 96752da28f43896e7b8e5945947b32c4810bdff6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55703329"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55831510"
 ---
 # <a name="quickstart-plan-capacity-for-azure-atp"></a>Rychlý start: Plánování kapacity pro služby Azure ATP
 
@@ -154,7 +149,7 @@ Chcete-li určit počet paketů za sekundu, proveďte následující kroky na ka
 V tomto rychlém startu jste zjistili, kolik ochrany ATP v programu Azure senzory a samostatné senzory, které potřebujete. Můžete také určit velikosti snímačům. Pokračujte k dalšímu rychlému startu pro vytvoření instance služby Azure ATP.
 
 > [!div class="nextstepaction"]
-> [Kurzy k virtuálním počítačům Azure Windows](install-atp-step1.md)
+> [Vytvoření instance služby Azure ATP](install-atp-step1.md)
 
 
 ## <a name="join-the-community"></a>Připojte se ke komunitě

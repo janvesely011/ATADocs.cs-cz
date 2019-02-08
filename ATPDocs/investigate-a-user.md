@@ -4,25 +4,27 @@ d|Description: This article explains how to user Azure ATP security alerts to in
 keywords: ''
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
-ms.date: 1/14/2019
+ms.date: 02/07/2019
 ms.topic: tutorial
-ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: ''
-ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 126653dd2831e0e3dbd9c777d84d32b1c2e74bd9
-ms.sourcegitcommit: 1ee052c4c6b04b290e2d5384c24b65a108b1f1f3
+ms.openlocfilehash: 99ebcfeb4220e547be06e8161636b12c843f292c
+ms.sourcegitcommit: 1da2f5414d27d58ac01ad43cafdb6bed242ce7c0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54253397"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55889869"
 ---
 # <a name="tutorial-investigate-a-user"></a>Kurz: Prozkoumat uživatele
 
-Došlo k napadení legitimaci a cesty taktiky Lateral Movement poskytnout jasné údaje při provedení podezřelé aktivity uživatele nebo údaje, které existují jeho účet Azure výstrah ochrany ATP v programu. Pomocí návrhy šetření určit rizika pro vaši organizaci, rozhodněte se, jak opravit a určit nejlepší způsob, jak zabránit budoucím útokům. podobné.  
+Došlo k napadení legitimaci a cesty taktiky Lateral Movement poskytnout jasné údaje při provedení podezřelé aktivity uživatele nebo údaje, které existují jeho účet Azure výstrah ochrany ATP v programu. V tomto kurzu použijete šetření návrhy pomůže určit rizika pro vaši organizaci, rozhodněte se, jak opravit a určit nejlepší způsob, jak zabránit budoucím útokům. podobné.  
+
+> [!div class="checklist"]
+> * Shromážděte informace o uživateli.
+> * Prozkoumejte aktivity, které uživatel provedl.
+> * Prozkoumejte prostředky uživatele získat přístup.
+> * Prošetřování laterálních průnikových.
 
 ## <a name="recommended-investigation-steps-for-suspicious-users"></a>Doporučená pomoc postup podezřelé uživatele
 
@@ -46,12 +48,12 @@ Zkontrolujte a prozkoumat profil uživatele pro následující údaje a aktivity
 
 ## <a name="see-also"></a>Viz také
 
-- [Prozkoumat počítače](investigate-a-computer.md)
+- [Prošetřování počítačů](investigate-a-computer.md)
 - [Práce s výstrahami zabezpečení](working-with-suspicious-activities.md)
 - [Práce s cesty taktiky Lateral Movement](use-case-lateral-movement-path.md)
-- [Rekognoskace výstrahy](atp-reconnaissance-alerts.md)
-- [Upozornění ohrožení zabezpečení přihlašovacích údajů](atp-compromised-credentials-alerts.md)
-- [Upozornění taktiky Lateral Movement](atp-lateral-movement-alerts.md)
-- [Upozornění dominance v doméně](atp-domain-dominance-alerts.md)
-- [Upozornění průsak ven](atp-exfiltration-alerts.md)
+- [Výstrahy před hrozbami „osahávání“ (reconnaissance)](atp-reconnaissance-alerts.md)
+- [Výstrahy před ohrožením zabezpečení přihlašovacích údajů](atp-compromised-credentials-alerts.md)
+- [Výstrahy před taktikou lateral movement](atp-lateral-movement-alerts.md)
+- [Výstrahy před dominancí v doméně](atp-domain-dominance-alerts.md)
+- [Výstrahy před exfiltrací](atp-exfiltration-alerts.md)
 - [Podívejte se na fórum služby Azure ATP.](https://aka.ms/azureatpcommunity)
