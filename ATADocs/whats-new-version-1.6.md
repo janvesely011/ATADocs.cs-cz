@@ -4,7 +4,7 @@ description: Uvádí novinky ATA verze 1.6 spolu se známými problémy.
 keywords: ''
 author: rkarlin
 ms.author: rkarlin
-manager: mbaldwin
+manager: barbkess
 ms.date: 01/23/2017
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 27b139e5-12b9-4953-8f53-eb58e8ce0038
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 5fd3b7a0abb3c70e87634e28273fe5ce8b6d4d9a
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 7b615f3f6e0fd3a7402a0c87a5df118431d566f3
+ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133612"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56078030"
 ---
 # <a name="whats-new-in-ata-version-16"></a>Novinky ATA verze 1.6
 Tyto poznámky k verzi obsahují informace o známých problémech v této verzi Advanced Threat Analytics.
@@ -100,11 +100,11 @@ V nasazeních ATA, ve kterých je cesta k databázi ručně přesunutá, se pro 
 ### <a name="migration-failure-when-updating-from-ata-15"></a>Selhání migrace při aktualizaci z ATA 1.5
 Při aktualizaci na ATA 1.6 může proces aktualizace selhat s následujícím kódem chyby:
 
-![Chyba aktualizace ATA na 1.6](http://i.imgur.com/QrLSApr.png) Pokud se zobrazí tato chybová zpráva, zkontrolujte protokol nasazení v adresáři **C:\Users\<User>\AppData\Local\Temp** a hledejte následující výjimku:
+![Aktualizace ATA na verzi 1.6 chyba](http://i.imgur.com/QrLSApr.png) Pokud se zobrazí tato chyba, zkontrolujte protokol nasazení v: **C:\Users\<uživatele > \AppData\Local\Temp**a hledejte následující výjimku:
 
     System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> MongoDB.Driver.MongoWriteException: A write operation resulted in an error. E11000 duplicate key error index: ATA.UniqueEntityProfile.$_id_ dup key: { : "<guid>" } ---> MongoDB.Driver.MongoBulkWriteException`1: A bulk write operation resulted in one or more errors.  E11000 duplicate key error index: ATA.UniqueEntityProfile.$_id_ dup key: { : " <guid> " }
 
-Může se také zobrazit chyba typu System.ArgumentNullException: Hodnota nemůže být null.
+Tato chyba může také zobrazit: System.ArgumentNullException: Hodnota nemůže být null.
     
 Pokud se zobrazí některá z těchto chyb, spusťte následující alternativní řešení:
 
@@ -124,7 +124,7 @@ Pokud se zobrazí některá z těchto chyb, spusťte následující alternativn�
 7.  Zkontrolujte protokoly a ověřte, že produkt běží bez chyb.
 8.  [Stažení](http://aka.ms/ataremoveduplicateprofiles "Stáhněte") nástroj RemoveDuplicateProfiles.exe a zkopírujte ho do hlavní instalační cesty (%ProgramFiles%\Microsoft Advanced Threat Analytics\Center).
 9.  Z příkazového řádku se zvýšenými oprávněními spusťte `RemoveDuplicateProfiles.exe` a počkejte, dokud nebude úplně zrušená.
-10. Z adresáře …\Microsoft Advanced Threat Analytics\Center\MongoDB\bin pro **Mongo ATA** zadejte následující příkaz:
+10. Odsud: ...\Microsoft Advanced Threat Analytics\Center\MongoDB\bin adresáře: **Mongo ATA**, zadejte následující příkaz:
 
           db.SuspiciousActivities.remove({ "_t" : "RemoteExecutionSuspiciousActivity", "DetailsRecords" : { "$elemMatch" : { "ReturnCode" : null } } }, { "_id" : 1 });
 

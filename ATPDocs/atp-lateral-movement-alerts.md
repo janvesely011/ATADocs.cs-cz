@@ -4,8 +4,8 @@ d|Description: This article explains the Azure ATP alerts issued when attacks ty
 keywords: ''
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
-ms.date: 1/20/2019
+manager: barbkess
+ms.date: 02/11/2019
 ms.topic: tutorial
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 2257eb00-8614-4577-b6a1-5c65085371f2
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e564307a62361cd8b1c872818225a2e1e63585fb
-ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
+ms.openlocfilehash: f3a8766a87070c460ca73fa73aad74643f27fb07
+ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54840773"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56078387"
 ---
 # <a name="tutorial-lateral-movement-alerts"></a>Kurz: Upozornění taktiky Lateral Movement  
 
@@ -35,13 +35,14 @@ Další informace o tom, jak pochopit strukturu a běžné součásti všech vý
 Výstrahy pomáhají identifikovat a napravit následující zabezpečení **taktiky Lateral Movement** fáze podezřelých aktivitách zjištěných ochrany ATP v programu Azure ve vaší síti. V tomto kurzu se dozvíte, jak pochopit, klasifikovat, opravit a brání následující typy útoků:
 
 > [!div class="checklist"]
-> * Vzdálené spuštění kódu nad DNS - preview (externí ID 2036)
+> * Vzdálené spuštění kódu nad DNS (externí ID 2036)
 > * Krádež identity podezřelého softwaru (pass-the-hash) (externí ID 2017)
 > * Krádež identity podezřelého softwaru (pass-the-ticket) (externí ID 2018)
+> * Podezření na útok přenosového protokolu NTLM (účet Exchange) (externí ID 2037) – preview
 > * Podezření na útok overpass-the-hash (oslabení šifrování) (externí ID 2008)
 > * Podezření na útok overpass-the-hash (Kerberos) (externí ID 2002)
 
-## <a name="remote-code-execution-over-dns-external-id-2036---preview"></a>Vzdálené spuštění kódu nad DNS (externí ID 2036) – preview
+## <a name="remote-code-execution-over-dns-external-id-2036"></a>Vzdálené spuštění kódu nad DNS (externí ID 2036)
 
 **Popis**
 
@@ -139,6 +140,34 @@ Existují vlastní aplikace, které dál lístky jménem uživatelů. Tyto aplik
 3. Najít nástroj, který provádí útoku a jeho odebrání.
 4. Vyhledejte uživatelé přihlášení přibližně ve stejnou dobu jako aktivity, jak může být ohrožena. Resetování hesel a povolení vícefaktorového ověřování.
 5. Pokud máte nainstalovaný – programu Windows Defender ATP použít **vyprázdnit klist.exe** odstranit všechny lístky zadané přihlašovací relace a zabránit dalším využívání lístky.
+
+## <a name="suspected-ntlm-relay-attack-exchange-account-external-id-2037---preview"></a>Podezření na útok přenosového protokolu NTLM (účet Exchange) (externí ID 2037) – preview
+
+**Popis**
+
+Exchange Server lze nastavit k aktivaci ověřování protokolem NTLM účtem systému Exchange Server vzdálené http serveru spustit ze strany útočníka. Tento server čeká na serveru Exchange Server komunikace předat vlastní citlivé ověřování na libovolný server nebo dokonce i další zajímavé ke službě Active Directory přes LDAP a získá informace o ověřování.
+
+Jakmile obdrží server předávací ověřování protokolem NTLM, poskytuje výzvu, který byl původně vytvořen na cílový server. Klient odpoví na výzvu, zabraňuje útočníkovi trvá odpověď a použít ho k pokračovat vyjednávání protokolu NTLM se cílového řadiče domény. 
+
+V této detekce se aktivuje upozornění při identifikaci ochrany ATP v programu Azure použijte přihlašovací údaje účtu Exchange z podezřelých zdroje.
+
+**TP, B-TP nebo FP?**
+
+1. Kontrola zdrojového počítače za bránou IP adresy. 
+    1. Pokud zdrojový počítač je Exchange Server, **Zavřít** dané výstraze zabezpečení jako **FP** aktivity.
+    2. Určuje, pokud zdrojový účet by měl ověřit pomocí protokolu NTLM z těchto počítačů? Pokud se musí ověřit, **Zavřít** zabezpečení výstrahy a vylučte tyto počítače jako **B-TP** aktivity.
+
+**Vysvětlení rozsahu porušení**
+
+1. Pokračovat [zkoumání zdrojových počítačích](investigate-a-computer.md) za používané IP adresy.  
+2. Prozkoumat [účet zdrojové](investigate-a-user.md).
+
+**Navrhované nápravné kroky a pro ochrany před únikem informací**
+
+1. Obsahují zdrojových počítačích
+    1. Najít nástroj, který provádí útoku a jeho odebrání.
+    2. Vyhledejte uživatelé přihlášení přibližně ve stejnou dobu aktivity došlo k chybě, protože může být ohrožena. Resetování hesel a povolení vícefaktorového ověřování.
+2. Vynutit používání zapečetěné NTLMv2 v doméně pomocí **zabezpečení sítě: Úroveň ověřování pro systém LAN Manager** zásady skupiny. Další informace najdete v tématu [úrovně pokyny programu LAN Manager ověřování](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-security-lan-manager-authentication-level) pro nastavení zásad skupiny pro řadiče domény. 
 
 ## <a name="suspected-overpass-the-hash-attack-encryption-downgrade-external-id-2008"></a>Podezření na útok overpass-the-hash (oslabení šifrování) (externí ID 2008) 
 

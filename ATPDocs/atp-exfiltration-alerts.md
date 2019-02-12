@@ -4,8 +4,8 @@ d|Description: This article explains the Azure ATP alerts issued when attacks ty
 keywords: ''
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
-ms.date: 1/15/2019
+manager: barbkess
+ms.date: 02/11/2019
 ms.topic: tutorial
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 452d951c-5f49-4a21-ae10-9fb38c3de302
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 67ba3c285577b683bc820ab272a498443b02c493
-ms.sourcegitcommit: e2daa0f93d97d552cfbf1577fbd05a547b63e95b
+ms.openlocfilehash: 214e3e10979f3508fad5f2b674d5d39b08a5715f
+ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54314291"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56075837"
 ---
 # <a name="tutorial-exfiltration-alerts"></a>Kurz: Upozornění průsak ven  
 
@@ -36,7 +36,7 @@ Výstrahy pomáhají identifikovat a napravit následující zabezpečení **pr�
 
 > [!div class="checklist"]
 > * Podezřelá komunikace prostřednictvím DNS (externí ID 2031)
-> * Průsak dat ven přes protokol SMB - Preview (externí ID 2030)
+> * Průsak dat ven přes protokol SMB (externí ID 2030)
 
 ## <a name="suspicious-communication-over-dns-external-id-2031"></a>Podezřelá komunikace prostřednictvím DNS (externí ID 2031) 
 
@@ -72,7 +72,7 @@ Některé společnosti oprávněně použití serveru DNS pro pravidelné komuni
 > [!NOTE]
 > *Podezřelá komunikace prostřednictvím DNS* výstrahy zabezpečení seznamu podezřelých domény. Nové domény nebo domény nedávno přidali, které nejsou dosud známé nebo rozpoznávaných ochrany ATP v programu Azure, ale jsou známé nebo součástí vaší organizaci se dá zavřít.
 
-## <a name="data-exfiltration-over-smb---preview-external-id-2030"></a>Průsak dat ven přes protokol SMB - Preview (externí ID 2030)
+## <a name="data-exfiltration-over-smb-external-id-2030"></a>Průsak dat ven přes protokol SMB (externí ID 2030)
 
 **Popis** řadičích domény se nachází nejcitlivější data organizace. Pro většinu útočníky jedním z nejdůležitějších úkolů jejich je k získání přístupu k řadiči domény, aby ukrást vaše nejcitlivější data. Cílem Ntds.dit soubor, uložený na řadiči domény, například umožňuje útočníkovi forge poskytující registraci tickets(TGT) prostředek lístek protokolu Kerberos. Falešných lístků TGT protokolu Kerberos povolit umožní nastavit dobu platnosti lístku do libovolného kdykoli. Azure ATP **průsak dat ven přes protokol SMB** aktivuje upozornění při podezřelých přenosy dat jsou dodržovány z monitorovaných řadičů domény.
 

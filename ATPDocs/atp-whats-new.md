@@ -4,7 +4,7 @@ description: Popisuje nejnovější verze ochrany ATP v programu Azure a poskytu
 keywords: ''
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/04/2019
 ms.topic: conceptual
 ms.prod: ''
@@ -13,18 +13,32 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ef2aa85c8695b86ba47d0c42c0a82208b188b893
-ms.sourcegitcommit: 9236d279f5e01424b498ce23e9d84c407ebfcdf3
+ms.openlocfilehash: c12cb4836e401fbfb788cc243bdc6d29622552bb
+ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55689417"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56077928"
 ---
 # <a name="whats-new-in-azure-atp"></a>Co je nového v Azure ATP
 
+## <a name="azure-atp-release-265"></a>Verze ochrany ATP v programu Azure 2.65
+Vydáno 10. února 2019
+
+- **Nová výstraha zabezpečení: Podezření na útok přenosového protokolu NTLM (účet Exchange) – (preview)**<br>
+Azure ATP [útoku relay vzbuzovat podezření na NTLM (účet Exchange) – ve verzi preview](atp-lateral-movement-alerts.md#suspected-ntlm-relay-attack-exchange-account-external-id-2037---preview) výstraha zabezpečení je teď ve verzi public preview. <br> V této detekce se aktivuje upozornění zabezpečení služby Azure ATP při zjištění použijte přihlašovací údaje účtu Exchange z podezřelých zdroje. Tyto typy útoků pokusí využít techniky NTLM relay k získání oprávnění exchange řadič domény a jsou označovány jako **ExchangePriv**. Další informace o **ExchangePriv** techniku z [ADV190007 poradce](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV190007) prvním publikování 31. ledna 2019 a [odpovědi upozornění služby Azure ATP](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/How-to-win-the-latest-security-race-over-NTLM-relay/ba-p/334511).  
+
+- **Obecná dostupnost: Vzdálené spuštění kódu v DNS**<br>
+Tato výstraha je teď ve verzi GA (obecná dostupnost). Zobrazit [vzdálené spuštění kódu v popisu výstrahy na stránce DNS](atp-lateral-movement-alerts.md#remote-code-execution-over-dns-external-id-2036) podrobné informace a výstrah funkce. 
+
+- **Obecná dostupnost: Průsak dat ven přes protokol SMB**<br>
+Tato výstraha je teď ve verzi GA (obecná dostupnost). Najdete v článku [průsak dat ven přes SMB popis výstrahy stránky](atp-exfiltration-alerts.md#data-exfiltration-over-smb-external-id-2030) podrobné informace a výstrah funkce.
+
+
+- Tato verze také zahrnuje vylepšení a opravy chyb pro interní senzor infrastruktury.
+
 ## <a name="azure-atp-release-264"></a>Verze ochrany ATP v programu Azure 2.64
 vydáno 4. února 2019
-
 
 - **Obecná dostupnost: Podezřelé použití Golden Ticket (ticket anomálií)**<br>
 Tato výstraha je teď ve verzi GA (obecná dostupnost). Najdete v článku [podezřelý Golden Ticket využití (ticket anomálií) popis výstrahy stránky](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-ticket-anomaly-external-id-2032) podrobné informace a výstrah funkce. 
@@ -73,7 +87,7 @@ V reakci na zpětnou vazbu od zákazníků týkající se používání služby 
 Vydáno 20. ledna 2019
 
 - **Nová výstraha zabezpečení: Vzdálené spuštění kódu nad DNS – (preview)**<br>
-Azure ATP [vzdálené spuštění kódu nad DNS](atp-lateral-movement-alerts.md#remote-code-execution-over-dns-external-id-2036---preview) výstraha zabezpečení je teď ve verzi public preview. <br> V této detekce se aktivuje upozornění zabezpečení služby Azure ATP při dotazy DNS vzbuzovat podezření na zneužití ohrožení zabezpečení [CVE-2018-8626](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2018-8626) se provádí na řadiči domény v síti.
+Azure ATP [vzdálené spuštění kódu nad DNS](atp-lateral-movement-alerts.md#remote-code-execution-over-dns-external-id-2036) výstraha zabezpečení je teď ve verzi public preview. <br> V této detekce se aktivuje upozornění zabezpečení služby Azure ATP při dotazy DNS vzbuzovat podezření na zneužití ohrožení zabezpečení [CVE-2018-8626](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2018-8626) se provádí na řadiči domény v síti.
 
 - **Vylepšení funkce: 72 hodin zpožděné aktualizace senzorů** <br> Změněné možnost zpoždění senzor aktualizací na vybrané senzory až 72 hodin (místo předchozích 24 hodin zpožděním) po každé aktualizaci verze služby Azure ATP. Zobrazit [aktualizace senzoru služby Azure ATP](sensor-update.md) pokyny ke konfiguraci. 
 

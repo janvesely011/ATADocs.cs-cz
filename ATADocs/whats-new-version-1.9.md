@@ -4,7 +4,7 @@ description: Uvádí novinky ATA verze 1.9 spolu se známými problémy
 keywords: ''
 author: rkarlin
 ms.author: rkarlin
-manager: mbaldwin
+manager: barbkess
 ms.date: 3/25/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 51de491c-49ba-4aff-aded-cc133a8ccf0b
 ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: 423f79ffc29af84fcb45a7103a07b1ef0ee0c546
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 4a21dbf96ae7897c6ab45feb306f43986f84c5f2
+ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133357"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56077350"
 ---
 # <a name="whats-new-in-ata-version-19"></a>Novinky ATA verze 1.9
 
@@ -28,7 +28,7 @@ Tyto poznámky k verzi obsahují informace o aktualizacích, nových funkcích, 
 
 ## <a name="new--updated-detections"></a>Nové a aktualizované detekce
 
--  **Podezřelé vytvoření služby**: útočníci pokusí spustit podezřelé služby ve vaší síti. ATA teď zobrazí upozornění, když zjistí, že někdo novou službu, který se zdá podezřelá, běží na řadiči domény. Tato detekce se zakládá na událostech (ne síťový provoz), další informace naleznete v tématu [Průvodce prošetřováním podezřelých aktivit](suspicious-activity-guide.md#suspicious-service-creation).
+-  **Podezřelé vytvoření služby**: Útočníci se pokusit o spuštění podezřelých služby ve vaší síti. ATA teď zobrazí upozornění, když zjistí, že někdo novou službu, který se zdá podezřelá, běží na řadiči domény. Tato detekce se zakládá na událostech (ne síťový provoz), další informace naleznete v tématu [Průvodce prošetřováním podezřelých aktivit](suspicious-activity-guide.md#suspicious-service-creation).
 
 
 ## <a name="new-reports-to-help-you-investigate"></a>Nové sestavy, které pomáhají s prošetřením 

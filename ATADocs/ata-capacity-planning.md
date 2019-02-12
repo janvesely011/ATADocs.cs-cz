@@ -4,19 +4,19 @@ description: Pomůže vám naplánovat nasazení a určit, kolik serverů ATA bu
 keywords: ''
 author: rkarlin
 ms.author: rkarlin
-manager: mbaldwin
+manager: barbkess
 ms.date: 3/21/2018
 ms.topic: conceptual
 ms.service: ''
 ms.prod: advanced-threat-analytics
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 330d3cbc59c211eaa44ce3273c49bb7994c6bcec
-ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
+ms.openlocfilehash: 93afbf108636c46ef93c88b17eb4faca2bc04a10
+ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54840382"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56077758"
 ---
 # <a name="ata-capacity-planning"></a>Plánování kapacity ATA
 

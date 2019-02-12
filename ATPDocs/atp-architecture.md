@@ -4,7 +4,7 @@ description: Popisuje architekturu z Azure Advanced Threat Analytics (ATP)
 keywords: ''
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
+manager: barbkess
 ms.date: 1/27/2019
 ms.topic: article
 ms.prod: ''
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 90f68f2c-d421-4339-8e49-1888b84416e6
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 11bcc25911f0b22c88a64f1429d0f6c5d478b067
-ms.sourcegitcommit: 96752da28f43896e7b8e5945947b32c4810bdff6
+ms.openlocfilehash: 6f50f186d777e8f6da3b0620b0bc384427eb3ff6
+ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55831476"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56078064"
 ---
 # <a name="azure-atp-architecture"></a>Architektura služby Azure ATP
 

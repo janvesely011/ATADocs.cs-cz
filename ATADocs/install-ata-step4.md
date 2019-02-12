@@ -4,7 +4,7 @@ description: Čtvrtý krok instalace ATA vám pomůže s instalací ATA Gateway.
 keywords: ''
 author: rkarlin
 ms.author: rkarlin
-manager: mbaldwin
+manager: barbkess
 ms.date: 3/21/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 6bbc50c3-bfa8-41db-a2f9-56eed68ef5d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 8c0139842094d42c2f7273e9f669267ca4fb092f
-ms.sourcegitcommit: f37127601166216e57e56611f85dd783c291114c
+ms.openlocfilehash: 3a0a2e3207e4cdb5c60396e2b063951cc56b1349
+ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54839369"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56077622"
 ---
 # <a name="install-ata---step-4"></a>Instalace ATA – krok 4
 

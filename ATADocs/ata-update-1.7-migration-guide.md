@@ -4,7 +4,7 @@ description: Postupy aktualizace ATA na verzi 1.7
 keywords: ''
 author: rkarlin
 ms.author: rkarlin
-manager: mbaldwin
+manager: barbkess
 ms.date: 01/23/2017
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 8eefcd45-7a4b-4074-ac5b-1ffc48e6654a
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: bb89f926c103fe120be780a7dadb5aa279941b48
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: c2da8e5b842a9b5497a5810c1a7897e4dba59d74
+ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133539"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56078098"
 ---
 # <a name="ata-update-to-17-migration-guide"></a>Průvodce migrací pro aktualizaci ATA na verzi 1.7
 Aktualizace ATA na verzi 1.7 přináší vylepšení v následujících oblastech:

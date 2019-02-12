@@ -4,7 +4,7 @@ description: Uvádí novinky ATA verze 1.5 spolu se známými problémy.
 keywords: ''
 author: rkarlin
 ms.author: rkarlin
-manager: mbaldwin
+manager: barbkess
 ms.date: 01/23/2017
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: a0d64aff-ca9e-4300-b3f8-eb3c8b8ae045
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 800d5d0ebf7eb044982c35e1f348b6c2faf14b07
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 987d73a4ad3fc970d6e4f03a19f9ef5f9a8fd59e
+ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133238"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56076653"
 ---
 # <a name="whats-new-in-ata-version-15"></a>Novinky ATA verze 1.5
 Tyto poznámky k verzi obsahují informace o známých problémech v této verzi Advanced Threat Analytics.
@@ -44,12 +44,12 @@ Aktualizace ATA 1.5 obsahuje vylepšení v následujících oblastech:
 V této verzi existují následující známé problémy.
 
 ### <a name="new-ata-gateway-installation-fails"></a>Instalace nové ATA Gateway se nezdaří
-Po aktualizaci nasazení ATA na verzi 1.5 se při instalaci nové ATA Gateway zobrazí následující chyba: Microsoft Advanced Threat Analytics Gateway se nenainstalovala.
+Po aktualizaci nasazení ATA na verzi 1.5 se při instalaci nové ATA Gateway zobrazí následující chyba: Microsoft Advanced Threat Analytics Gateway se nenainstalovala
 
 ![Chyba ATA GS](media/ata-install-error.png)
 
-<b>Alternativní řešení:</b> odeslat e-mailu <ataeval@microsoft.com> se žádost o kroky alternativního řešení.
-### <a name="deployment"></a>nasazení
+<b>Alternativní řešení:</b> Odeslání e-mailu <ataeval@microsoft.com> se žádost o kroky alternativního řešení.
+### <a name="deployment"></a>Nasazení
 Složka zadaná pro cestu k datům databáze a cestu k deníku databáze musí být prázdná (bez souborů a podsložek).
 Pokud není prázdná, nepostupuje nasazení.
 

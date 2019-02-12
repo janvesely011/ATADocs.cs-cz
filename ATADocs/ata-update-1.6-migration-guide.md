@@ -4,7 +4,7 @@ description: Postupy aktualizace ATA na verzi 1.6
 keywords: ''
 author: rkarlin
 ms.author: rkarlin
-manager: mbaldwin
+manager: barbkess
 ms.date: 01/23/2017
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 0756ef64-3aef-4a69-8981-24fa8f285c6a
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: b32e8db898df1cea25e3d8dbb61a7c2293128aeb
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: 1d3e0cd545a932daae71fa4242abb43b4dc15bae
+ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133984"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56077690"
 ---
 # <a name="ata-update-to-16-migration-guide"></a>Průvodce migrací pro aktualizaci ATA na verzi 1.6
 Aktualizace ATA na verzi 1.6 přináší vylepšení v následujících oblastech:
@@ -88,7 +88,7 @@ V této verzi se k instalaci nového nasazení ATA a upgradu stávajících nasa
     5.  Před zahájením instalace ATA provede kontrolu připravenosti. Zkontrolovat výsledky kontroly a ujistěte se, že požadované součásti jsou správně a že máte alespoň minimální množství místa na disku. 
     ![Obrázek kontroly připravenosti ATA](media/ata_install_readinesschecks.png)
 
-    6.  Klikněte na **Aktualizovat**. Po klepnutí na Aktualizovat bude ATA až do dokončení aktualizace offline.
+    6.  Klikněte na tlačítko **aktualizace**. Po klepnutí na Aktualizovat bude ATA až do dokončení aktualizace offline.
 
 3.  Po aktualizaci ATA Center budou komponenty ATA Gateway hlásit, že jsou nyní zastaralé.
 
@@ -97,7 +97,7 @@ V této verzi se k instalaci nového nasazení ATA a upgradu stávajících nasa
 > [!IMPORTANT] 
 > Aktualizujte všechny komponenty ATA Gateway, aby se zajistila správná funkce ATA.
 
-### <a name="step-2-download-the-ata-gateway-setup-package"></a>Krok 2: Stažení instalačního balíčku ATA Gateway
+### <a name="step-2-download-the-ata-gateway-setup-package"></a>Krok 2. Stažení instalačního balíčku ATA Gateway
 Po konfiguraci nastavení připojení k doméně si můžete stáhnout instalační balíček ATA Gateway.
 
 Stažení instalačního balíčku ATA Gateway:

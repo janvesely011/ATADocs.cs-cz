@@ -4,7 +4,7 @@ description: Tento článek obsahuje seznam novinek ATA verze 1.8 spolu se znám
 keywords: ''
 author: rkarlin
 ms.author: rkarlin
-manager: mbaldwin
+manager: barbkess
 ms.date: 9/03/2017
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 9592d413-df0e-4cec-8e03-be1ae00ba5dc
 ms.reviewer: ''
 ms.suite: ems
-ms.openlocfilehash: b8c9d879014934f681ae1dce3d7d3e0de3f0b2b0
-ms.sourcegitcommit: 959b1f7753b9a8ad94870d2014376d55296fbbd4
+ms.openlocfilehash: c787db603f8a6dc0e531d5c27b4b582b2d86753c
+ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46133884"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56077061"
 ---
 # <a name="whats-new-in-ata-version-18"></a>Novinky ATA verze 1.8
 
@@ -86,23 +86,23 @@ Tato zpráva k vydání verze obsahuje informace o aktualizacích, nových funkc
 
 ### <a name="ata-gateway-on-windows-server-core"></a>ATA Gateway na jádru Windows Serveru
 
-**Příznaky**: Upgrade ATA Gateway na verzi 1.8 na jádru Windows Serveru 2012R2 s .Net Frameworkem 4.7 může selhat s chybou: *Microsoft Advanced Threat Analytics Gateway has stopped working* (Microsoft ATA Gateway přestal fungovat). 
+**Příznaky**: Upgrade ATA Gateway na verzi 1.8 na jádra Windows serveru 2012R2 s .net Frameworkem 4.7 může selhat s touto chybou: *Microsoft Advanced Threat Analytics Gateway přestala fungovat*. 
 
 ![Chyba jádra a Gateway](./media/gateway-core-error.png)
 
 Na jádru Windows Serveru 2016 se chyba nemusí zobrazit, ale proces se při pokusu o instalaci selže a do protokolu událostí aplikace na serveru se zaznamenají události 1000 a 1001 (chybové ukončení procesu).
 
-**Popis**: Vyskytl se problém s .NET Frameworkem 4.7, který způsobuje, že aplikace (jako je ATA) využívající technologii WPF na nepodaří zavést. Více informací najdete v článku [KB 4034015](https://support.microsoft.com/help/4034015/wpf-window-can-t-be-loaded-after-you-install-the-net-framework-4-7-on). 
+**Popis**: Je nějaký problém s rozhraním .NET framework 4.7, který způsobí, že aplikace využívající technologii WPF (jako je ATA) na nepodaří zavést. Více informací najdete v článku [KB 4034015](https://support.microsoft.com/help/4034015/wpf-window-can-t-be-loaded-after-you-install-the-net-framework-4-7-on). 
 
-**Alternativní řešení**: Odinstalujte .Net 4.7. Podle článku [KB 3186497](https://support.microsoft.com/help/3186497/the-net-framework-4-7-offline-installer-for-windows) vraťte .Net na verzi 4.6.2 a pak aktualizujte ATA Gateway na verzi 1.8. Po upgradu ATA můžete .Net 4.7 znovu nainstalovat.  Tento problém bude odstraněn aktualizací v budoucí verzi.
+**Alternativní řešení:** Odinstalujte .net 4.7 [najdete v článku KB 3186497](https://support.microsoft.com/help/3186497/the-net-framework-4-7-offline-installer-for-windows) vrátit .NET na verzi .NET 4.6.2 a pak aktualizujte ATA Gateway na verzi 1.8. Po upgradu ATA můžete .Net 4.7 znovu nainstalovat.  Tento problém bude odstraněn aktualizací v budoucí verzi.
 
 ### <a name="lightweight-gateway-event-log-permissions"></a>Oprávnění protokolu událostí Lightweight Gateway
 
-**Příznaky**: Při upgradu ATA na verzi 1.8 mohou aplikace nebo služby, které dříve měly oprávnění pro přístup k protokolu událostí zabezpečení, tato oprávnění ztratit. 
+**Příznaky**: Při upgradu ATA na verzi 1.8, aplikacím nebo službám, které dříve měly oprávnění pro přístup k protokolu událostí zabezpečení tato oprávnění ztratit. 
 
-**Popis**: Kvůli usnadnění nasazení ATA přistupuje ATA 1.8 k protokolu událostí zabezpečení přímo, aniž by se vyžadovala konfigurace předávání událostí Windows. Současně ATA kvůli zachování přísnějšího zabezpečení běží jako místní služba s nízkou úrovní oprávnění. Aby měla služba ATA přístup ke čtení událostí, udělí si oprávnění pro protokol událostí zabezpečení. Přitom se mohou zakázat dříve nastavená oprávnění pro jiné služby.
+**Popis**: Pokud chcete usnadnit nasazení ATA, přistupuje ATA 1.8 k protokolu událostí zabezpečení přímo, aniž by se vyžadovala konfigurace předávání událostí Windows. Současně ATA kvůli zachování přísnějšího zabezpečení běží jako místní služba s nízkou úrovní oprávnění. Aby měla služba ATA přístup ke čtení událostí, udělí si oprávnění pro protokol událostí zabezpečení. Přitom se mohou zakázat dříve nastavená oprávnění pro jiné služby.
 
-**Alternativní řešení**: Spusťte následující příkaz Windows PowerShellu. Tím se z ATA v registru odeberou nesprávně přidaná oprávnění a přidají se prostřednictvím jiného rozhraní API. Oprávnění pro jiné aplikace se tak můžou obnovit. Pokud ne, bude je nutné obnovit ručně. Tento problém bude odstraněn aktualizací v budoucí verzi. 
+**Alternativní řešení:** Spusťte následující skript prostředí Windows PowerShell. Tím se z ATA v registru odeberou nesprávně přidaná oprávnění a přidají se prostřednictvím jiného rozhraní API. Oprávnění pro jiné aplikace se tak můžou obnovit. Pokud ne, bude je nutné obnovit ručně. Tento problém bude odstraněn aktualizací v budoucí verzi. 
 
        $ATADaclEntry = "(A;;0x1;;;S-1-5-80-1717699148-1527177629-2874996750-2971184233-2178472682)"
         try {
@@ -122,19 +122,19 @@ Na jádru Windows Serveru 2016 se chyba nemusí zobrazit, ale proces se při pok
 
 ### <a name="proxy-interference"></a>Interference proxy serveru
 
-**Příznaky**: Po upgradu na ATA 1.8 se službu ATA Gateway nemusí podařit spustit. V protokolu chyb ATA se může zobrazit následující výjimka: *System.Net.Http.HttpRequestException: Při odesílání požadavku došlo k chybě. ---> System.Net.WebException: Vzdálený server vrátil chybu: (407) Vyžadováno ověřování proxy serveru*
+**Příznaky**: Po upgradu ATA Gateway na ATA 1.8 služby nemusí podařit spustit. V protokolu chyb ATA se může zobrazit následující výjimka: *System.Net.Http.HttpRequestException: Při odesílání požadavku došlo k chybě. ---> System.Net.WebException: Vzdálený server vrátil chybu: Vyžadováno ověřování proxy serveru (407).*
 
-**Popis**: Od verze ATA 1.8 komunikuje ATA Gateway s ATA Center pomocí protokolu http. Pokud počítač, na kterém je brána ATA Gateway nainstalovaná, používá pro připojení k ATA Center proxy server, může dojít k narušení této komunikace. 
+**Popis**: Spuštění z ATA 1.8 komunikuje ATA Gateway ve službě ATA Center pomocí protokolu http. Pokud počítač, na kterém je brána ATA Gateway nainstalovaná, používá pro připojení k ATA Center proxy server, může dojít k narušení této komunikace. 
 
-**Alternativní řešení**: Vypněte používání proxy serveru v účtu služby ATA Gateway. Tento problém bude odstraněn aktualizací v budoucí verzi.
+**Alternativní řešení:** Zakážete používání proxy serveru v účtu služby ATA Gateway. Tento problém bude odstraněn aktualizací v budoucí verzi.
 
 ### <a name="report-settings-reset"></a>Obnovení nastavení sestavy
 
-**Příznaky**: všechna nastavení, které byly provedeny naplánované sestavy jsou vymazány při aktualizaci 1,8 update 1.
+**Příznaky**: Všechna nastavení, které byly provedeny naplánované sestavy jsou vymazány při aktualizaci 1,8 update 1.
 
-**Popis**: aktualizace 1,8 update 1 z 1.8 resetování sestavy nastavení plánu.
+**Popis**: Aktualizace na 1.8 update 1 z 1.8 resetování sestavy nastavení plánu.
 
-**Alternativní řešení**: před aktualizací na 1.8 update 1, vytvořte kopii sestavy nastavení a zadejte je znovu, může jít prostřednictvím skriptu, další informace najdete v tématu [Export a Import konfigurace ATA](ata-configuration-file.md).
+**Alternativní řešení:** Před aktualizací na 1.8 update 1, vytvořte kopii sestavy nastavení a zadejte je znovu, může jít prostřednictvím skriptu, další informace najdete v tématu [Export a Import konfigurace ATA](ata-configuration-file.md).
 
 
 ## <a name="see-also"></a>Viz také

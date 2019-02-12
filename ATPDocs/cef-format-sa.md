@@ -4,8 +4,8 @@ description: Obsahuje ukázky protokolů podezřelých aktivit odeslaných ze sl
 keywords: ''
 author: mlottner
 ms.author: mlottner
-manager: mbaldwin
-ms.date: 02/04/2019
+manager: barbkess
+ms.date: 02/11/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 3261155c-3c72-4327-ba29-c113c63a4e6d
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 39b5394c876af8034317bc857ee33c93547d9262
-ms.sourcegitcommit: 9236d279f5e01424b498ce23e9d84c407ebfcdf3
+ms.openlocfilehash: 05d2faf35a9db898f951c6f7da6951ec9360be3b
+ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55689451"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56077894"
 ---
 # <a name="azure-atp-siem-log-reference"></a>Referenční informace k protokolům Azure ATP SIEM
 
@@ -57,12 +57,12 @@ Do systému SIEM se předávají následující pole a jejich hodnoty:
 |Nový název výstrahy zabezpečení|Předchozí název výstrahy zabezpečení|Jedinečné ID externí|
 |---------|----------|---------|
 |[Rekognoskace výčtu účtů](atp-reconnaissance-alerts.md#account-enumeration-reconnaissance-external-id-2003)|Rekognoskace pomocí výčtu účtů|2003|
-|[Průsak dat ven přes protokol SMB](atp-exfiltration-alerts.md#data-exfiltration-over-smb---preview-external-id-2030)| Není k dispozici| 2030|
+|[Průsak dat ven přes protokol SMB](atp-exfiltration-alerts.md#data-exfiltration-over-smb-external-id-2030)| Není k dispozici| 2030|
 |[Aktivita Honeytokenu](atp-compromised-credentials-alerts.md#honeytoken-activity-external-id-2014)|Aktivita Honeytokenu|2014|
 |[Škodlivá žádost Data Protection API hlavní klíč](atp-domain-dominance-alerts.md#malicious-request-of-data-protection-api-master-key-external-id-2020)|Škodlivá žádost o soukromé informace přes Data Protection|2020|
 |[Mapování sondování sítě (DNS)](atp-reconnaissance-alerts.md#network-mapping-reconnaissance-dns-external-id-2007)|Rekognoskace pomocí DNS|2007|
 |[Pokus o spuštění vzdáleného kódu](atp-domain-dominance-alerts.md#remote-code-execution-attempt-external-id-2019)|Pokus o spuštění vzdáleného kódu|2019|
-|[Vzdálené spuštění kódu nad DNS – preview](atp-lateral-movement-alerts.md#remote-code-execution-over-dns-external-id-2036---preview)|Není k dispozici|2036|
+|[Vzdálené spuštění kódu v DNS](atp-lateral-movement-alerts.md#remote-code-execution-over-dns-external-id-2036)|Není k dispozici|2036|
 |[Podezřelý útok hrubou silou (LDAP)](atp-compromised-credentials-alerts.md#suspected-brute-force-attack-ldap-external-id-2004)|Útok hrubou silou pomocí jednoduché vazby LDAP.|2004|
 |[Podezřelý útok hrubou silou (pomocí protokolu Kerberos, NTLM)](atp-compromised-credentials-alerts.md#suspected-brute-force-attack-kerberos-ntlm-external-id-2023)|Podezřelé chyby ověřování|2023|
 |[Podezřelý útok hrubou silou (SMB)](atp-compromised-credentials-alerts.md#suspected-brute-force-attack-smb-external-id-2033)|Neobvyklá implementace protokolu (potenciální použití škodlivých nástrojů, jako je Hydra)|2033|
@@ -81,6 +81,7 @@ Do systému SIEM se předávají následující pole a jejich hodnoty:
 |[Podezřelé použití Metasploit hacking framework](atp-compromised-credentials-alerts.md#suspected-use-of-metasploit-hacking-framework-external-id-2034)|Neobvyklá implementace protokolu (potenciální použijte Metasploit hacking nástroje)|2034|
 |[Útoku typu skeleton key podezřelého softwaru (oslabení šifrování)](atp-domain-dominance-alerts.md#suspected-skeleton-key-attack-encryption-downgrade-external-id-2010)|Aktivita snížení úrovně šifrování (potenciální útoku typu skeleton key)|2010|
 |[Podezření na útok WannaCry ransomwaru](atp-compromised-credentials-alerts.md#suspected-wannacry-ransomware-attack-external-id-2035)|Neobvyklá implementace protokolu (možný útok ransomwarem WannaCry)|2035|
+|[Podezření na útok relay NTLM (účet Exchange) – preview](atp-lateral-movement-alerts.md#suspected-ntlm-relay-attack-exchange-account-external-id-2037---preview)|Není k dispozici|2037|
 |[Podezřelá komunikace prostřednictvím DNS](atp-exfiltration-alerts.md#suspicious-communication-over-dns-external-id-2031)|Podezřelá komunikace prostřednictvím DNS|2031|
 |[Podezřelé úprava citlivých skupin](atp-domain-dominance-alerts.md#suspicious-modification-of-sensitive-groups-external-id-2024)|Podezřelé úprava citlivých skupin|2024|
 |[Podezřelé vytvoření služby](atp-domain-dominance-alerts.md#suspicious-service-creation-external-id-2026)|Podezřelé vytvoření služby|2026|
@@ -119,7 +120,7 @@ Priority:
 ### <a name="remote-code-execution-attempt"></a>Pokus o spuštění vzdáleného kódu
 10 – 29 – 2018 11:22:04 Auth.Warning 192.168.0.202 1 2018-10-29T09:22:00.100856 + 00:00 DC3 CEF 3908 RemoteExecutionSecurityAlert ï» ¿0 | Microsoft | Ochrana ATP v programu Azure | 2.52.5704.46184 | RemoteExecutionSecurityAlert | Pokus o spuštění vzdáleného kódu | 5 | start = 2018-10-29T09:19:45.0552367Z shost = CLIENT1 msg = následující vzdálené spuštění kódu došlo k pokusům na počítači DC1 z CLIENT1:\r\nSuccessful vzdálené plánování jeden nebo více úloh podle user1.\r\nFailed vzdálené jeden nebo více úloh plánování podle user1.\r\nSuccessful vzdálené spuštění jedné nebo více metod WMI uživatele User1. externalId = 2019 cs1Label = url cs1 = https\://contoso-corp.atp.azure.com/securityAlert/f063c778-830c-4e9f-98d1-bc6c11c94e11 cs2Label aktivační událost cs2 = = nový
 
-### <a name="remote-code-execution-over-dns---preview"></a>Vzdálené spuštění kódu nad DNS – preview
+### <a name="remote-code-execution-over-dns"></a>Vzdálené spuštění kódu v DNS
 1-17 – 2019 08:24:54 Auth.Warning 192.168.0.202 1 2019-01-17T08:24:54.100856 + 00:00 DC3 CEF 3908 DnsRemoteCodeExecutionSecurityAlert ï» ¿0 | Microsoft | Ochrana ATP v programu Azure | 2.63.0.0 | DnsRemoteCodeExecutionSecurityAlert | [PREVIEW] Vzdálené spuštění kódu přes DNS | 5 | start = 2019-01-17T08:24:54.5293800Z app = Dns shost = CLIENT1 msg = prvek "actor" se pokusil spustit příkazy vzdáleně na počítači CLIENT1 od řadiče domény DC1, protokolu DNS. externalId=2036 cs1Label=url cs1=https\:////contoso-corp.atp.azure.com:13000/securityAlert/591f9769-d904-40b1-89fa-c307c2ca814f cs2Label=trigger cs2=new
 
 ### <a name="suspected-brute-force-attack-ldap"></a>Podezřelý útok hrubou silou (LDAP)

@@ -4,7 +4,7 @@ description: Postupy aktualizace ATA na verzi 1.5
 keywords: ''
 author: rkarlin
 ms.author: rkarlin
-manager: mbaldwin
+manager: barbkess
 ms.date: 01/23/2017
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: fb65eb41-b215-4530-93a2-0b8991f4e980
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: cdf7966b9e3cfc68a9cb593cb12ef76aecddb1d9
-ms.sourcegitcommit: 59ed430fa0cd8ac34a70609026ec5fc2f5972f57
+ms.openlocfilehash: dee659bb3940a177084eae93411a4cf2c65f6aae
+ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/21/2018
-ms.locfileid: "49480714"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56076850"
 ---
 # <a name="ata-update-to-15-migration-guide"></a>Průvodce migrací pro aktualizaci ATA na verzi 1.5
 Aktualizace ATA na verzi 1.5 přináší vylepšení v následujících oblastech:
@@ -81,7 +81,7 @@ Podle těchto kroků provedete aktualizaci ATA na verzi 1.5:
 
         -   Pokud spustíte **úplné** migrace, budete potřebovat další místo na disku, pro vás spočítané na stránce upgradu a migrace může trvat déle, v závislosti na síťový provoz. Úplná migrace uchovává všechny dříve shromážděná data a zachovají se profily chování uživatelů, což znamená, že ATA nebude potřebovat další čas pro učení profilů chování a neobvyklé chování bude možné zjišťovat okamžitě po aktualizaci.
 
-3.  Klikněte na **Aktualizovat**. Po klepnutí na Aktualizovat bude ATA až do dokončení aktualizace offline.
+3.  Klikněte na tlačítko **aktualizace**. Po klepnutí na Aktualizovat bude ATA až do dokončení aktualizace offline.
 
 4.  Po aktualizaci ATA Center budou komponenty ATA Gateway hlásit, že jsou nyní zastaralé.
 
@@ -90,7 +90,7 @@ Podle těchto kroků provedete aktualizaci ATA na verzi 1.5:
 > [!IMPORTANT]
 > - Aktualizujte všechny komponenty ATA Gateway, aby se zajistila správná funkce ATA.
 
-### <a name="step-2-download-the-ata-gateway-setup-package"></a>Krok 2: Stažení instalačního balíčku ATA Gateway
+### <a name="step-2-download-the-ata-gateway-setup-package"></a>Krok 2. Stažení instalačního balíčku ATA Gateway
 Po konfiguraci nastavení připojení k doméně si můžete stáhnout instalační balíček ATA Gateway.
 
 Stažení instalačního balíčku ATA Gateway:
