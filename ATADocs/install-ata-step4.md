@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 6bbc50c3-bfa8-41db-a2f9-56eed68ef5d2
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 3a0a2e3207e4cdb5c60396e2b063951cc56b1349
-ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
+ms.openlocfilehash: 3cd5f8dd7334d93277d29a63817a061fc6fdf820
+ms.sourcegitcommit: 143ee5c3bf381eaba7d0530c88722e959bc47a18
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56077622"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56227926"
 ---
 # <a name="install-ata---step-4"></a>Instalace ATA – krok 4
 
@@ -63,11 +63,11 @@ Na serveru ATA Gateway proveďte tento postup.
     
    > [!NOTE]
    > Při nasazení komponenty ATA Gateway, není nutné zadat přihlašovací údaje. Pokud instalaci ATA Gateway nepovede načíst vaše přihlašovací údaje pomocí jednotného přihlašování (například k tomu může dojít, pokud ATA Center není v doméně, pokud ATA Gateway není v doméně, nemáte přihlašovací údaje správce ATA), zobrazí se výzva k zadání přihlašovací údaje, jako na následující obrazovce: 
-    
-   ![Zadání přihlašovacích údajů ATA gateway](media/ata-install-credentials.png)
-    
-   - Instalační cesta: Toto je umístění, kde je nainstalován ATA Gateway. Ve výchozím nastavení je to %programfiles%\Microsoft Advanced Threat Analytics\Gateway. Nechte nastavenou výchozí hodnotu.
-    
+   
+    ![Zadání přihlašovacích údajů ATA gateway](media/ata-install-credentials.png)
+   
+    - Instalační cesta: Toto je umístění, kde je nainstalován ATA Gateway. Ve výchozím nastavení je to %programfiles%\Microsoft Advanced Threat Analytics\Gateway. Nechte nastavenou výchozí hodnotu.
+   
 6. Klikněte na tlačítko **Nainstalovat**. Během instalace ATA Gateway se instalují a konfigurují následující komponenty:
     
     -   KB 3047154 (pouze pro Windows Server 2012 R2)
