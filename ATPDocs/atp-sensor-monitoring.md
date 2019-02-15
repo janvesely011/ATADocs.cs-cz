@@ -7,18 +7,19 @@ ms.author: mlottner
 manager: barbkess
 ms.date: 1/27/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
 ms.technology: ''
 ms.assetid: 92decce8-b3ae-4d32-8407-a95314a66863
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e4e33e79a5ed4dbb80214e50dbccee0f067670fd
-ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
+ms.openlocfilehash: bab484d4546ad7060676c104ec68252dff527099
+ms.sourcegitcommit: c48db18274edb2284e281960c6262d97f96e01d2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56077911"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56263892"
 ---
 # <a name="monitoring-your-domain-controller-coverage"></a>Monitorování pokrytí řadiče domény
 

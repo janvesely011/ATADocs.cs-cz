@@ -7,18 +7,19 @@ ms.author: mlottner
 manager: barbkess
 ms.date: 1/24/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
 ms.technology: ''
 ms.assetid: effca0f2-fcae-4fca-92c1-c37306decf84
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a8dfd4852b5a6bf5414876547212a3c5b0a07034
-ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
+ms.openlocfilehash: b539b9ce6e021daee49f027ca6a0c3017874b225
+ms.sourcegitcommit: c48db18274edb2284e281960c6262d97f96e01d2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56077299"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56263858"
 ---
 # <a name="azure-advanced-threat-protection-multi-forest-support"></a>Podpora více doménovými strukturami Azure Advanced Threat Protection
 

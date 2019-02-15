@@ -7,18 +7,19 @@ ms.author: mlottner
 manager: barbkess
 ms.date: 02/03/2019
 ms.topic: tutorial
+ms.collection: M365-security-compliance
 ms.prod: ''
 ms.service: azure-advanced-threat-protection
 ms.technology: ''
 ms.assetid: 0b3a1db5-0d43-49af-b356-7094cc85f0a5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 04c0bebbb017441b7494535a7c970478e8de12f8
-ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
+ms.openlocfilehash: 1d1b26fd2e5597baa1f8bbd335fc3e6a604a51ab
+ms.sourcegitcommit: c48db18274edb2284e281960c6262d97f96e01d2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56077775"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56263280"
 ---
 # <a name="tutorial-domain-dominance-alerts"></a>Kurz: Upozornění dominance v doméně  
 
