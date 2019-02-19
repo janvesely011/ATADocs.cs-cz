@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 1/27/2019
+ms.date: 02/13/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.prod: ''
@@ -14,18 +14,18 @@ ms.technology: ''
 ms.assetid: 92decce8-b3ae-4d32-8407-a95314a66863
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: bab484d4546ad7060676c104ec68252dff527099
-ms.sourcegitcommit: c48db18274edb2284e281960c6262d97f96e01d2
+ms.openlocfilehash: b371cb5f2bfeef9ddc14ee11623b609c3f49dbfb
+ms.sourcegitcommit: 5d3607b3a2c9d1a35dd36287f4a5fc68fca67eb0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56263892"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56334421"
 ---
 # <a name="monitoring-your-domain-controller-coverage"></a>Monitorování pokrytí řadiče domény
 
-Jakmile vaše první senzor ochrany ATP v programu Azure je nainstalovaný a nakonfigurovaný na všech řadičích domény v síti, ochrany ATP v programu Azure zahájí monitorování vašeho prostředí pro řadiče domény. 
+Jakmile první služby Azure ATP senzor je nainstalovaný a nakonfigurovaný na všech řadičích domény v síti, ochrana ATP v programu Azure zahájí monitorování vašeho prostředí pro řadiče domény. 
 
-Během instalace doporučujeme vybrat alespoň jeden řadič domény senzoru služby Azure ATP jako kandidát na synchronizátora domény na doménu. Jedna z úloh senzor synchronizátor domény je zajistit této domény, které řadiče aktivně se vyhledávají pro tento konkrétní senzoru. Řadiče domény můžete přepnout do a z stav Release candidate synchronizátor domény po počáteční konfiguraci. Zobrazit [Konfigurace senzoru služby Azure ATP](install-atp-step5.md) Další informace o konfiguraci Azure ze senzorů a nastavíte ho jako **kandidát na synchronizátora domény**. 
+Během instalace doporučujeme vybrat alespoň jeden řadič domény senzoru služby Azure ATP jako kandidát na synchronizátora domény na doménu. Jedna z úloh senzor synchronizátor domény je zajistit této domény, které řadiče aktivně se vyhledávají pro tento konkrétní senzoru. Řadiče domény můžete přepnout do a z stav Release candidate synchronizátor domény po počáteční konfiguraci. Žádný řadič domény je vybrán jako kandidát na synchronizátora domény, probíhá pouze pasivní monitorování síťových aktivit na řadičích domény. Zobrazit [Konfigurace senzoru služby Azure ATP](install-atp-step5.md) Další informace o konfiguraci Azure ze senzorů a nastavíte ho jako **kandidát na synchronizátora domény**. 
 
 Jakmile senzoru služby Azure ATP nainstalovaná a nakonfigurovaná na řadiči domény v síti, senzor komunikuje se službou ochrana ATP v programu Azure na základě konstantní odesílání informací o stavu, stavu a verze senzor a shromažďují události služby Active Directory a změny.  
 

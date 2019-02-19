@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 02/04/2019
+ms.date: 02/13/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.prod: ''
@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 6a9b5273-eb26-414e-9cdd-f64406e24ed8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 8167225f5c3753bedf4cd1f6007b5efa371468ad
-ms.sourcegitcommit: c48db18274edb2284e281960c6262d97f96e01d2
+ms.openlocfilehash: db9792192c1f56d13327d57747622e79c72a1c3e
+ms.sourcegitcommit: 5d3607b3a2c9d1a35dd36287f4a5fc68fca67eb0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56263518"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56334455"
 ---
 # <a name="azure-atp-frequently-asked-questions"></a>Nejčastější dotazy k Azure ATP
 Tento článek obsahuje seznam častých otázek a odpovědí týkajících se ochrany ATP v programu Azure rozdělené do následujících catergories: 
@@ -110,7 +110,7 @@ Pro řadiče domény ke komunikaci s cloudovou službou, je nutné otevřít: *.
 Senzoru služby Azure ATP Ano, můžete použít k monitorování řadičů domény, které jsou v libovolném řešení IaaS.
 
 ### <a name="can-azure-atp-support-multi-domain-and-multi-forest"></a>Ochrana ATP v programu Azure může podporovat víc domén a doménových struktur?
-Azure Advanced Threat Protection podporuje prostředí s více doménami a několik doménových struktur. Tato funkce je aktuálně ve verzi public preview. Další informace a známých omezeních najdete v tématu [podporu více doménovými strukturami](atp-multi-forest.md).
+Azure Advanced Threat Protection podporuje prostředí s více doménami a několik doménových struktur. Další informace a důvěryhodnost požadavky najdete v tématu [podporu více doménovými strukturami](atp-multi-forest.md).
 
 ### <a name="can-you-see-the-overall-health-of-the-deployment"></a>Dá se zjistit celkový stav nasazení?
 Ano, můžete zobrazit celkový stav nasazení a také konkrétní problémy související s konfigurací, připojení atd. kde se zobrazí výstraha při jejich výskytu pomocí upozornění na stav ochrany ATP v programu Azure.

@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 02/04/2019
+ms.date: 02/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.prod: ''
@@ -14,26 +14,34 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 1dd68ac851d02712fb7c2f76e0a18aee892c86af
-ms.sourcegitcommit: c48db18274edb2284e281960c6262d97f96e01d2
+ms.openlocfilehash: be11b073171a192e71656d731619797f077054ab
+ms.sourcegitcommit: 5d3607b3a2c9d1a35dd36287f4a5fc68fca67eb0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56263382"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56334523"
 ---
 # <a name="whats-new-in-azure-atp"></a>Co je nového v Azure ATP
+
+## <a name="azure-atp-release-266"></a>Verze ochrany ATP v programu Azure 2,66
+Vydáno 17. února 2019
+
+- **Vylepšení funkce: Podezřelý upozornění DCSync útoku (replikace adresářových služeb)**<br>
+Vylepšení použitelnosti byly provedeny na tuto výstrahu zabezpečení, včetně revidované popis zřídit další zdroje informací, nové infografika a další fakta. Další informace o [DCSync vzbuzovat podezření na útok (replikace adresářových služeb)](atp-domain-dominance-alerts.md#suspected-dcsync-attack-replication-of-directory-services-external-id-2006) výstrahy zabezpečení. 
+
+- Tato verze také zahrnuje vylepšení a opravy chyb pro interní senzor infrastruktury.
 
 ## <a name="azure-atp-release-265"></a>Verze ochrany ATP v programu Azure 2.65
 Vydáno 10. února 2019
 
 - **Nová výstraha zabezpečení: Podezření na útok přenosového protokolu NTLM (účet Exchange) – (preview)**<br>
-Azure ATP [útoku relay vzbuzovat podezření na NTLM (účet Exchange) – ve verzi preview](atp-lateral-movement-alerts.md#suspected-ntlm-relay-attack-exchange-account-external-id-2037---preview) výstraha zabezpečení je teď ve verzi public preview. <br> V této detekce se aktivuje upozornění zabezpečení služby Azure ATP při zjištění použijte přihlašovací údaje účtu Exchange z podezřelých zdroje. Tyto typy útoků pokusí využít techniky NTLM relay k získání oprávnění exchange řadič domény a jsou označovány jako **ExchangePriv**. Další informace o **ExchangePriv** techniku z [ADV190007 poradce](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV190007) prvním publikování 31. ledna 2019 a [odpovědi upozornění služby Azure ATP](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/How-to-win-the-latest-security-race-over-NTLM-relay/ba-p/334511).  
+Azure ATP [útoku relay vzbuzovat podezření na NTLM (účet Exchange) – ve verzi preview](atp-lateral-movement-alerts.md#suspected-ntlm-relay-attack-exchange-account-external-id-2037---preview) výstraha zabezpečení je teď ve verzi public preview. <br> V této detekce se aktivuje upozornění zabezpečení služby Azure ATP při zjištění použijte přihlašovací údaje účtu Exchange z podezřelých zdroje. Tyto typy útoků pokusí využít techniky NTLM relay k získání oprávnění exchange řadič domény a jsou označovány jako **ExchangePriv**. Další informace o **ExchangePriv** techniku z [ADV190007 poradce](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV190007) publikován do 31. ledna 2019 a [odpovědi upozornění služby Azure ATP](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/How-to-win-the-latest-security-race-over-NTLM-relay/ba-p/334511).  
 
 - **Obecná dostupnost: Vzdálené spuštění kódu v DNS**<br>
-Tato výstraha je teď ve verzi GA (obecná dostupnost). Zobrazit [vzdálené spuštění kódu v popisu výstrahy na stránce DNS](atp-lateral-movement-alerts.md#remote-code-execution-over-dns-external-id-2036) podrobné informace a výstrah funkce. 
+Tato výstraha je teď ve verzi GA (obecná dostupnost). Další informace a výstrah funkce, najdete v článku [vzdálené spuštění kódu v popisu výstrahy na stránce DNS](atp-lateral-movement-alerts.md#remote-code-execution-over-dns-external-id-2036). 
 
 - **Obecná dostupnost: Průsak dat ven přes protokol SMB**<br>
-Tato výstraha je teď ve verzi GA (obecná dostupnost). Najdete v článku [průsak dat ven přes SMB popis výstrahy stránky](atp-exfiltration-alerts.md#data-exfiltration-over-smb-external-id-2030) podrobné informace a výstrah funkce.
+Tato výstraha je teď ve verzi GA (obecná dostupnost). Další informace a výstrah funkce, najdete v článku [průsak dat ven přes SMB popis výstrahy stránky](atp-exfiltration-alerts.md#data-exfiltration-over-smb-external-id-2030).
 
 
 - Tato verze také zahrnuje vylepšení a opravy chyb pro interní senzor infrastruktury.
@@ -42,7 +50,7 @@ Tato výstraha je teď ve verzi GA (obecná dostupnost). Najdete v článku [pr�
 vydáno 4. února 2019
 
 - **Obecná dostupnost: Podezřelé použití Golden Ticket (ticket anomálií)**<br>
-Tato výstraha je teď ve verzi GA (obecná dostupnost). Najdete v článku [podezřelý Golden Ticket využití (ticket anomálií) popis výstrahy stránky](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-ticket-anomaly-external-id-2032) podrobné informace a výstrah funkce. 
+Tato výstraha je teď ve verzi GA (obecná dostupnost). Další informace a výstrah funkce, najdete v článku [podezřelý Golden Ticket využití (ticket anomálií) popis výstrahy stránky](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-ticket-anomaly-external-id-2032). 
 
 - **Vylepšení funkce: Mapování sondování sítě (DNS)**<br>
 Vylepšená logika upozornění detekce nasazení pro tuto výstrahu, chcete-li minimalizovat false pozitivní a rušivé výstrahy. Tato výstraha teď má období učení z osm dní, než se upozornění aktivují pravděpodobně poprvé. Další informace o této výstraze najdete v části [síťové mapování rekognoskace (DNS) popis výstrahy stránky](atp-reconnaissance-alerts.md#network-mapping-reconnaissance-dns-external-id-2007). 

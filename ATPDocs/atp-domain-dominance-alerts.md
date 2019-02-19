@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 0b3a1db5-0d43-49af-b356-7094cc85f0a5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 1d1b26fd2e5597baa1f8bbd335fc3e6a604a51ab
-ms.sourcegitcommit: c48db18274edb2284e281960c6262d97f96e01d2
+ms.openlocfilehash: 4360441bc078fa9d0cc09a9be8874d3d9999fab7
+ms.sourcegitcommit: 5d3607b3a2c9d1a35dd36287f4a5fc68fca67eb0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56263280"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56334506"
 ---
 # <a name="tutorial-domain-dominance-alerts"></a>Kurz: Upozornění dominance v doméně  
 
@@ -46,7 +46,7 @@ Výstrahy pomáhají identifikovat a napravit následující zabezpečení **dom
 > * Podezřelé použití Golden Ticket (neexistující účet) (externí ID 2027)
 > * Podezřelé použití Golden Ticket (ticket anomálií) (. 2032 externí ID)
 > * Podezřelé použití Golden Ticket (čas anomálií) (externí ID 2022)
-> * Podezření na útok typu Skeleton Key (oslabení šifrování) (externí ID)
+> * Podezření na útok typu Skeleton Key (oslabení šifrování) (externí 2010 ID)
 > * Podezřelé úprava citlivých skupin (externí ID 2024)
 > * Podezřelé vytvoření služby (externí ID 2026)
 
@@ -355,7 +355,7 @@ Popis známé chyby zabezpečení ve starších verzích Windows serveru umožň
 Některé operační systémy nebo aplikace se ví, upravovat data autorizace. Například se systémy Linux a Unix služby mají své vlastní autorizační mechanismus, který může aktivovat výstrahu. 
 
 1. Běží zdrojovém počítači operačního systému nebo aplikace, která má svůj vlastní autorizační mechanismus?  
-    - Pokud zdrojovém počítači běží tento typ počítače, zvažte možnost upgradovat operační systém nebo opravy konfigurace aplikace. **Zavřít** výstrahu jako **B-TP** aktivity. 
+    - Pokud zdrojovém počítači běží tento typ autorizační mechanismus, zvažte možnost upgradovat operační systém nebo opravy konfigurace aplikace. **Zavřít** výstrahu jako **B-TP** aktivity. 
   
 **Vysvětlení rozsahu porušení**
 1. Prozkoumat [zdrojový počítač](investigate-a-computer.md). 

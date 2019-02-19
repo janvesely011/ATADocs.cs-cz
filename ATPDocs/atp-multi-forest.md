@@ -1,5 +1,5 @@
 ---
-title: Podpora vícenásobného doménovými strukturami Azure rozšířené ochrany před internetovými útoky | Dokumentace Microsoftu
+title: Podpora více doménovými strukturami Azure rozšířené ochrany před internetovými útoky | Dokumentace Microsoftu
 description: Podpora několika doménových struktur služby Active Directory do služby Azure ATP.
 keywords: ''
 author: mlottner
@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: effca0f2-fcae-4fca-92c1-c37306decf84
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: b539b9ce6e021daee49f027ca6a0c3017874b225
-ms.sourcegitcommit: c48db18274edb2284e281960c6262d97f96e01d2
+ms.openlocfilehash: e35cb4cc277253543bf24eaccfe67d9808b64af4
+ms.sourcegitcommit: 5d3607b3a2c9d1a35dd36287f4a5fc68fca67eb0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56263858"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56334438"
 ---
 # <a name="azure-advanced-threat-protection-multi-forest-support"></a>Podpora více doménovými strukturami Azure Advanced Threat Protection
 
@@ -44,6 +44,7 @@ Ke zjištění aktivity mezi doménovými strukturami, senzory ochrany ATP v pro
 - Přidáte přihlašovací údaje na stránce adresáře služby pro všechny doménové struktury ve vašem prostředí. 
     - Přihlašovacích údajů se vyžaduje pro každou doménovou strukturu s obousměrným vztahem důvěryhodnosti. 
     - Další přihlašovací údaje jsou požadovány pro každou doménovou strukturu s důvěryhodností protokolu Kerberos nebo žádný vztah důvěryhodnosti. 
+    - Limit 10 doménové struktury na instanci služby Azure ATP. Pokud má vaše organizace více než 10 doménových struktur, obraťte se na podporu. 
 
 ![Azure ATP úvodní fáze 1](media/directory-services-add-no-trust-forests.png)
 
