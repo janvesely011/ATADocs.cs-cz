@@ -2,23 +2,24 @@
 title: Vysvětlení monitorovacích upozornění | Dokumentace Microsoftu
 description: Popisuje, jak můžete protokoly ATA použít k řešení potíží.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: barbkess
-ms.date: 3/21/2018
+ms.date: 02/20/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.prod: advanced-threat-analytics
 ms.service: ''
 ms.technology: ''
 ms.assetid: b04fb8a4-b366-4b55-9d4c-6f054fa58a90
-ms.reviewer: bennyl
+ms.reviewer: elofek
 ms.suite: ems
-ms.openlocfilehash: b62ee7b8b3ab4ee93f05d81efbac983824d9adcd
-ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
+ms.openlocfilehash: 736951f8f74f9493bb07a75e68601c9814793ed3
+ms.sourcegitcommit: c59d67fc58e759b5597917f96089d67e28e4cce8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56078370"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56443466"
 ---
 # <a name="understanding-ata-monitoring-alerts"></a>Principy monitorování výstrah ATA
 
@@ -52,7 +53,7 @@ Tento článek popisuje všechna monitorovací upozornění jednotlivých kompon
 ### <a name="ata-center-certificate-expired"></a>Vypršení platnosti certifikátu komponenty ATA Center
 |Výstrahy|Popis|Řešení|Severity|
 |----|----|----|----|
-|Platnost certifikátu komponenty ATA Center vypršela.|Po vypršení platnosti certifikátu: Připojení z komponent ATA Gateway na ATA Center selže. Dojde k chybě procesu ATA Center a všechny funkce ATA se zastaví.|[Vyměňte certifikát komponenty ATA Center](modifying-ata-center-configuration.md).|Vysoká|
+|Platnost certifikátu komponenty ATA Center vypršela.|Po vypršení platnosti certifikátu: Připojení z komponent ATA Gateway na ATA Center selže. Dojde k chybě procesu ATA Center a všechny funkce ATA se zastaví.|[Opětovné nasazení komponenty ATA Center](install-ata-step1.md)|Vysoká|
 ## <a name="ata-gateway-issues"></a>Problémy komponenty ATA Gateway
 ### <a name="read-only-user-password-to-expire-shortly"></a>Brzy vyprší platnost hesla uživatele jen pro čtení
 |Výstrahy|Popis|Řešení|Severity|
