@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 02/04/2019
+ms.date: 02/24/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.prod: ''
@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 09649f57041ca53ae7cdd183e60584ff37be9c9f
-ms.sourcegitcommit: c48db18274edb2284e281960c6262d97f96e01d2
+ms.openlocfilehash: 36f7d273273e11d57c681e75cc762e853a127616
+ms.sourcegitcommit: 5e954f2f0cc14e42d68d2575dd1c2ed9eaabe891
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56264028"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56754408"
 ---
 # <a name="tutorial-reconnaissance-alerts"></a>Kurz: Rekognoskace výstrahy  
 
@@ -40,8 +40,10 @@ V tomto kurzu se dozvíte, jak porozumět, klasifikovat, opravit a brání násl
 > [!div class="checklist"]
 > * Rekognoskace výčet účtu (externí ID 2003)
 > * Mapování sondování sítě (DNS) (externí ID 2007)
+> * Rekognoskace instančního objektu zabezpečení (LDAP) (externí ID 2038) – preview
 > * Uživatele a IP adres pro rekognoskaci (SMB) (externí ID 2012)
 > * Rekognoskace členství uživatelů a skupin (SAMR) (externí ID 2021)
+> * 
 
 ## <a name="account-enumeration-reconnaissance-external-id-2003"></a>Rekognoskace výčet účtu (externí ID 2003) 
 
@@ -109,14 +111,13 @@ Nyní podívejte se na účty:<br>
 
 ## <a name="network-mapping-reconnaissance-dns-external-id-2007"></a>Mapování sondování sítě (DNS) (externí ID 2007) 
 
-
 *Předchozí název:* Rekognoskace pomocí DNS
 
 **Popis**
 
 DNS server obsahuje mapu všech počítačů, IP adresy a služby ve vaší síti. Tyto údaje používají útočníci ke zmapování struktury vaší sítě a zacílení zajímavých počítačů v pozdějších krocích útoku. 
  
-Protokol DNS obsahuje několik typů dotazů. Tato výstraha zabezpečení služby Azure ATP detekuje podezřelé žádosti AXFR (přenos) pocházející z jiné servery než DNS.
+Protokol DNS obsahuje několik typů dotazů. Tato výstraha zabezpečení služby Azure ATP detekuje podezřelé požadavky, buď požadavky pomocí AXFR (přenos) pocházející z jiné servery než DNS nebo těm, kteří používají nadměrné množství požadavků.
 
 **Období učení**
 
@@ -142,16 +143,43 @@ Dotazy DNS můžete vygenerovat bezpečnostní skenery a oprávněné aplikace.
 **Navrhované nápravné kroky a pro ochrany před únikem informací**
 
 **Náprava:**
-1. Obsahují zdrojový počítač. 
+- Obsahují zdrojový počítač. 
     - Najít nástroj, který provádí útoku a jeho odebrání.
     - Vyhledejte uživatele, kteří byli přihlášeni přibližně ve stejnou dobu aktivity došlo k chybě, protože tyto uživatele může také dojít k ohrožení. Resetování hesel a povolení vícefaktorového ověřování.
 
-**Ochrany před únikem informací:** Je důležité zabránit budoucím útokům pomocí dotazů AXFR díky zabezpečení interní server DNS.
+**Ochrany před únikem informací:**<br>
+Je důležité zabránit budoucím útokům pomocí dotazů AXFR díky zabezpečení interní server DNS.
 
-1. Zabezpečení interní server DNS pro rekognoskaci pomocí DNS tím, že zakážete přenosů zóny nebo podle [omezení přenosů zóny](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee649273(v=ws.10)) pouze na zadané IP adresy. Úprava přenosů zóny je jedním z úkolů na kontrolním seznamu, která by měla být určena pro [zabezpečení před útoky interních i externích serverů DNS](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee649273(v=ws.10)).
+- Zabezpečení interní server DNS pro rekognoskaci pomocí DNS tím, že zakážete přenosů zóny nebo podle [omezení přenosů zóny](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee649273(v=ws.10)) pouze na zadané IP adresy. Úprava přenosů zóny je jedním z úkolů na kontrolním seznamu, která by měla být určena pro [zabezpečení před útoky interních i externích serverů DNS](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee649273(v=ws.10)).
+
+## <a name="security-principal-reconnaissance-ldap-external-id-2038---preview"></a>Rekognoskace instančního objektu zabezpečení (LDAP) (externí ID 2038) – preview
+
+**Popis** rekognoskace instančního objektu zabezpečení je útočníci získat důležité informace o prostředí domény. Informace, které pomůžou útočníci namapovat na doménovou strukturu, jakož i identifikovat privilegovaných účtů pro použití v dalších krocích v jejich řetězu událostí útoku. Adresář přístup protokolu LDAP (Lightweight) je nejoblíbenější metody používá pro účely legitimní a škodlivý dotaz službě Active Directory.  LDAP, zaměřuje zabezpečení, rekognoskace instančního objektu se často používá jako první fáze Kerberoasting útoku. Útoky Kerberoasting slouží k získání seznamu cílové názvy objektu zabezpečení (SPN), což útočníci se pak pokusí získat lístky Server udělování lístků (TGS) pro.
+
+Žádné výstrahy tohoto typu se zobrazí v prvních 10 dnů po nasazení služby Azure ATP, aby ochrana ATP v programu Azure přesně profilu a další oprávněným uživatelům. Po dokončení fáze učení ochrany ATP v programu Azure výstrahy jsou generovány na počítačích, které provádění podezřelých dotazů protokolu LDAP výčet nebo dotazy cílené na citlivých skupin, které nejsou pomocí metod dříve pozorováno.  
+
+**Období učení** 10 dní na jeden počítač, počínaje dnem první událost zjištěnými z počítače. 
+
+**TP, B-TP nebo FP**
+1.  Klikněte na zdrojový počítač a přejděte na stránku jeho profil. 
+    1. Očekává se tento zdrojový počítač k vygenerování této aktivity? 
+    2. Pokud se očekává, počítače a aktivity, **Zavřít** zabezpečení výstrahy a vyloučit tento počítač jako **B-TP** aktivity. 
+
+**Vysvětlení rozsahu porušení**
+
+1.  Zkontrolujte dotazy, které se prováděly (například Domain admins nebo pro všechny uživatele v doméně) a určit, pokud dotazy byly úspěšné. Prozkoumání jednotlivých hledání vystavené skupiny pro podezřelé aktivity provedené ve skupině nebo uživateli člen skupiny.
+2. Prozkoumat [zdrojový počítač](investigate-a-computer.md). 
+    - Pomocí dotazů protokolu LDAP, zaškrtněte, pokud žádnou aktivitu přístup k prostředku došlo k chybě u některého vystavené hlavní názvy služby.
+
+**Navrhované nápravné kroky a pro ochrany před únikem informací**
+
+1.  Obsahují zdrojový počítač
+    1. Najít nástroj, který provádí útoku a jeho odebrání.
+    2. Je počítač se službou prohledávací nástroj, který provádí širokou škálu dotazů protokolu LDAP?
+    3. Vyhledejte uživatelé přihlášení přibližně ve stejnou dobu jako k aktivitě došlo, protože může být ohrožena. Resetování hesel a povolení vícefaktorového ověřování.
+2.  Resetovat heslo, pokud přístup k prostředkům hlavního názvu služby byla provedena, na kterém běží pod účtem uživatele (ne účet počítače).
 
 ## <a name="user-and-ip-address-reconnaissance-smb-external-id-2012"></a>Uživatele a IP adres pro rekognoskaci (SMB) (externí ID 2012) 
-
 
 *Předchozí název:* Rekognoskace pomocí výčtu relací SMB
 

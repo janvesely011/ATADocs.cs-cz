@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 02/17/2019
+ms.date: 02/25/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.prod: ''
@@ -14,14 +14,31 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: be11b073171a192e71656d731619797f077054ab
-ms.sourcegitcommit: 5d3607b3a2c9d1a35dd36287f4a5fc68fca67eb0
+ms.openlocfilehash: 27c0513a5a70e09b7c890eda42b14f5b7265e663
+ms.sourcegitcommit: 5e954f2f0cc14e42d68d2575dd1c2ed9eaabe891
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56334523"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56754442"
 ---
 # <a name="whats-new-in-azure-atp"></a>Co je nového v Azure ATP
+
+## <a name="azure-atp-release-267"></a>Verze ochrany ATP v programu Azure 2.67
+Vydáno 24. února 2019
+
+- **Nová výstraha zabezpečení: Rekognoskace instančního objektu zabezpečení (LMP) – (preview)**<br>
+
+    Azure ATP [rekognoskace instančního objektu zabezpečení (LDAP) – ve verzi preview](atp-reconnaissance-alerts.md#security-principal-reconnaissance-ldap-external-id-2038---preview) výstraha zabezpečení je teď ve verzi public preview. <br> V této detekce se aktivuje upozornění zabezpečení služby Azure ATP při použití instančního objektu zabezpečení rekognoskace útočníci získat důležité informace o prostředí domény. Tyto informace pomáhají útočníci namapovat na doménovou strukturu, stejně jako identifikovat privilegovaných účtů pro použití v dalších krocích v jejich řetězu událostí útoku. 
+
+    Adresář přístup protokolu LDAP (Lightweight) je nejoblíbenější metody používá pro účely legitimní a škodlivý dotaz službě Active Directory. LDAP, zaměřuje zabezpečení, rekognoskace instančního objektu se často používá jako první fáze Kerberoasting útoku. Útoky Kerberoasting slouží k získání seznamu cílové názvy objektu zabezpečení (SPN), což útočníci se pak pokusí získat lístky Server udělování lístků (TGS) pro.
+
+- **Vylepšení funkce: Výstraha rekognoskace (NTLM) výčtu účtů** <br> 
+    Vylepšené **účet rekognoskace výčet (NTLM)** výstrah pomocí další analýzy a vylepšenou detekční logiku ke snížení **B-TP** a **FP** jejich výsledky. 
+ 
+- **Vylepšení funkce: Výstraha rekognoskace (DNS) mapování sítě** <br>
+    Nové typy detekcí přidán do výstrahy rekognoskace (DNS) mapování sítě. Kromě zjišťování podezřelých žádosti AXFR ochrany ATP v programu Azure teď detekuje podezřelé typy požadavků pocházejících z jiné servery než DNS používají nadměrné množství požadavků.
+
+ - Tato verze také zahrnuje vylepšení a opravy chyb pro interní senzor infrastruktury.
 
 ## <a name="azure-atp-release-266"></a>Verze ochrany ATP v programu Azure 2,66
 Vydáno 17. února 2019

@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 12/17/2018
+ms.date: 02/25/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.prod: ''
@@ -14,18 +14,25 @@ ms.technology: ''
 ms.assetid: feea1982-ba23-48be-a468-98d2586cf840
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 1689d2d2bd4becd42812010dc8fd6e13f0483ef5
-ms.sourcegitcommit: c48db18274edb2284e281960c6262d97f96e01d2
+ms.openlocfilehash: 916a7a2b8f9782b66867860cdb7575e0069a30d4
+ms.sourcegitcommit: 5e954f2f0cc14e42d68d2575dd1c2ed9eaabe891
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56263926"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56754357"
 ---
 # <a name="azure-atp-known-issues"></a>Azure – ochrana ATP v programu známé problémy
 
 Ochrana ATP v programu Azure má občas inženýrství nebo funkce omezení, které mohou omezit nebo změnit způsob, jak vaše organizace používá služby Azure ATP. Známá omezení potíže, které mají žádné známé alternativní řešení nebo stav probíhající práce bez časové osy konkrétní aktualizace jsou zde popsány. 
 
 Služby Azure ATP známé problémy s známé alternativní řešení, najdete v části [řešení potíží s Azure ATP známé problémy](troubleshooting-atp-known-issues.md). Chcete-li zkontrolovat stav tenanta ochrany ATP v programu Azure, navštivte [Health Center ochrany ATP v programu Azure](atp-health-center.md). 
+
+## <a name="dns-reconnaissance-alert"></a>Výstraha rekognoskace DNS
+> [!div class="mx-tableFixed"] 
+
+|Problém|Stav|
+|----|----|
+*Rekognoskace DNS* problém se týká zákazníky pomocí opakovaných falešně pozitivní výstrahu zabezpečení **výstrahy rekognoskace DNS** z jednoho počítače. Pokud ve špičce **výstrahy rekognoskace DNS** jsou generovány z jednoho počítače, zavřete reakce či odstranit tyto výstrahy, dokud aktualizace 2.67 nasazuje a řeší tento problém. | Aktualizace 2.67 řeší tento problém.|
 
 ## <a name="suspected-brute-force-attack-ldap-security-alert-display"></a>Podezřelý útok hrubou silou výstraha zabezpečení zobrazení útoku (LDAP)
 > [!div class="mx-tableFixed"] 

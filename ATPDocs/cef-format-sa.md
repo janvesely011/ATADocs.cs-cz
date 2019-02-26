@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 02/11/2019
+ms.date: 02/25/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.prod: ''
@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 3261155c-3c72-4327-ba29-c113c63a4e6d
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 4b2e3177b269581b849944c257cdc52c11ea8b5b
-ms.sourcegitcommit: c48db18274edb2284e281960c6262d97f96e01d2
+ms.openlocfilehash: becf8a945367d37bbb09bf55a2a2e8f3d52421e7
+ms.sourcegitcommit: 5e954f2f0cc14e42d68d2575dd1c2ed9eaabe891
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56264113"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56754374"
 ---
 # <a name="azure-atp-siem-log-reference"></a>Referenční informace k protokolům Azure ATP SIEM
 
@@ -64,6 +64,7 @@ Do systému SIEM se předávají následující pole a jejich hodnoty:
 |[Mapování sondování sítě (DNS)](atp-reconnaissance-alerts.md#network-mapping-reconnaissance-dns-external-id-2007)|Rekognoskace pomocí DNS|2007|
 |[Pokus o spuštění vzdáleného kódu](atp-domain-dominance-alerts.md#remote-code-execution-attempt-external-id-2019)|Pokus o spuštění vzdáleného kódu|2019|
 |[Vzdálené spuštění kódu v DNS](atp-lateral-movement-alerts.md#remote-code-execution-over-dns-external-id-2036)|Není k dispozici|2036|
+|[Rekognoskace instančního objektu zabezpečení (LDAP) – preview](atp-reconnaissance-alerts.md#security-principal-reconnaissance-ldap-external-id-2038---preview)|Není k dispozici|2038|
 |[Podezřelý útok hrubou silou (LDAP)](atp-compromised-credentials-alerts.md#suspected-brute-force-attack-ldap-external-id-2004)|Útok hrubou silou pomocí jednoduché vazby LDAP.|2004|
 |[Podezřelý útok hrubou silou (pomocí protokolu Kerberos, NTLM)](atp-compromised-credentials-alerts.md#suspected-brute-force-attack-kerberos-ntlm-external-id-2023)|Podezřelé chyby ověřování|2023|
 |[Podezřelý útok hrubou silou (SMB)](atp-compromised-credentials-alerts.md#suspected-brute-force-attack-smb-external-id-2033)|Neobvyklá implementace protokolu (potenciální použití škodlivých nástrojů, jako je Hydra)|2033|
@@ -123,6 +124,9 @@ Priority:
 
 ### <a name="remote-code-execution-over-dns"></a>Vzdálené spuštění kódu v DNS
 1-17 – 2019 08:24:54 Auth.Warning 192.168.0.202 1 2019-01-17T08:24:54.100856 + 00:00 DC3 CEF 3908 DnsRemoteCodeExecutionSecurityAlert ï» ¿0 | Microsoft | Ochrana ATP v programu Azure | 2.63.0.0 | DnsRemoteCodeExecutionSecurityAlert | [PREVIEW] Vzdálené spuštění kódu přes DNS | 5 | start = 2019-01-17T08:24:54.5293800Z app = Dns shost = CLIENT1 msg = prvek "actor" se pokusil spustit příkazy vzdáleně na počítači CLIENT1 od řadiče domény DC1, protokolu DNS. externalId=2036 cs1Label=url cs1=https\:////contoso-corp.atp.azure.com:13000/securityAlert/591f9769-d904-40b1-89fa-c307c2ca814f cs2Label=trigger cs2=new
+
+### <a name="security-principal-reconnaissance-ldap---preview"></a>Rekognoskace instančního objektu zabezpečení (LDAP) – preview 
+02-18-2019 16:48:08 Auth.Warning 127.0.0.1 1 2019-02-18T14:48:02.912264 + 00:00 DC1 CEF 4656 LdapSearchReconnaissanceSecurity ï» ¿0 | Microsoft | Ochrana ATP v programu Azure | 2.66.0.0 | LdapSearchReconnaissanceSecurityAlert | [PREVIEW] Rekognoskace pomocí dotazů protokolu LDAP | 5 | start = 2019-02-18T14:46:29.4644276Z aplikace ldapsearch – shost = CLIENT1 msg = = prvek "actor" na počítači CLIENT1 odeslané podezřelých dotazů protokolu LDAP na řadiče domény DC1, hledání pro 4 typy výčet a Server Operators (členové mohou spravovat domény servery) v 2 domén externalId = 2038 cs1Label = url cs1 = https\://contoso-corp.atp.azure..com:13000/securityAlert/81ea99c4-ce1f-4581-ac8f-7440fbed7cd0 cs2Label = aktivační událost cs2 = nový
 
 ### <a name="suspected-brute-force-attack-ldap"></a>Podezřelý útok hrubou silou (LDAP)
 02 – 21 – 2018 16:20:21 Auth.Warning 192.168.0.220 1 2018-02-21T14:20:06.156238 + 00:00 CENTER CEF 6076 LdapBruteForceSecurityAlert ï» ¿0 | Microsoft | Ochrana ATP v programu Azure | 2.22.4228.22540 | LdapBruteForceSecurityAlert | Útok hrubou silou pomocí jednoduché vazby LDAP | 5 | start = 2018-02-21T14:19:41.7422810Z app = Ldap suser Wofford Thurston shost = = CLIENT1 msg = na Wofford Thurston (softwarový inženýr) pomocí protokolu Ldap protokolu došlo k pokusu o útok hrubou silou z počítače CLIENT1 (100 odhad pokusy o). CNT = 100 externalId = 2004 cs1Label = url cs1 = https\://contoso-corp.atp.azure.com/securityAlert/57b8ac96-7907-4971-9b27-ec77ad8c029a cs2Label = aktivační událost cs2 = aktualizace
