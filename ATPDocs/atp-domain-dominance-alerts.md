@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 0b3a1db5-0d43-49af-b356-7094cc85f0a5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4360441bc078fa9d0cc09a9be8874d3d9999fab7
-ms.sourcegitcommit: 5d3607b3a2c9d1a35dd36287f4a5fc68fca67eb0
+ms.openlocfilehash: 1c3e4fbf435c22ec57a90653d7a1e8133d9acbf3
+ms.sourcegitcommit: 478878e685d1e4d52b5cd0429b9bf7304e5d8552
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56334506"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56852693"
 ---
 # <a name="tutorial-domain-dominance-alerts"></a>Kurz: Upozornění dominance v doméně  
 
@@ -433,11 +433,11 @@ Předchozí název: Protokol Kerberos golden ticket
 **Popis** útočníci s právy správce domény může ohrozit účet KRBTGT. Pomocí účtu KRBTGT, můžete vytvořit lístek Kerberos udělující lístek (TGT), který poskytuje autorizaci k jakémukoli prostředku a nastavit dobu platnosti lístku do libovolného kdykoli. Tato falešných lístků TGT se nazývá "Zlatých lístků" a útočníkům umožňuje dosáhnout trvalého sítě. Tato výstraha se aktivuje, když lístek Kerberos udělující lístek slouží pro delší než povolený čas povoleny, jak je uvedeno v maximální doba života lístku uživatele. 
  
 **TP, B-TP nebo FP**
-1. Za posledních několik hodin, byla existuje všechny změny provedené **maximální doba života lístku uživatele** nastavení v zásadách skupiny, které můžou ovlivnit upozornění?  
+1. Za posledních několik hodin, byla existuje všechny změny provedené **maximální doba života lístku uživatele** nastavení v zásadách skupiny, které můžou ovlivnit upozornění?  
 2. Samostatný senzor ochrany ATP v programu Azure účastnící se tato výstraha je virtuální počítač? 
     - Pokud se jedná o samostatný senzor ochrany ATP v programu Azure, se nedávno obnovena v uloženém stavu?  
 3. Existuje problém se synchronizací čas v síti, kde se synchronizují všechny počítače? 
-    - Klikněte na tlačítko **stáhnout podrobnosti o** tlačítko zobrazit výstraha zabezpečení soubor sestavy aplikace Excel, zobrazení souvisejících síťových aktivit a zkontrolujte, jestli je rozdíl mezi "StartTime" a "DomainControllerStartTime".
+    - Klikněte na tlačítko **stáhnout podrobnosti o** tlačítko zobrazit výstraha zabezpečení soubor sestavy aplikace Excel, zobrazení souvisejících síťových aktivit a zkontrolujte, jestli je rozdíl mezi "StartTime" a "DomainControllerStartTime".
 
 Pokud je odpověď na předchozí otázky **Ano**, **Zavřít** dané výstraze zabezpečení jako **B-TP** aktivity. 
  
