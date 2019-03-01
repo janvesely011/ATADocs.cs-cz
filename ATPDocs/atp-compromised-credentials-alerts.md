@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 80cc0a73712d12f3d4f2722f8756c1b403f90c44
-ms.sourcegitcommit: c48db18274edb2284e281960c6262d97f96e01d2
+ms.openlocfilehash: d20359547696f7fe3cafd75a638563d400f0ed82
+ms.sourcegitcommit: 0e77ed44ee73ac84923fa7379e555f5ed9602aca
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56264011"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017298"
 ---
 # <a name="tutorial-compromised-credential-alerts"></a>Kurz: Upozornění ohrožení zabezpečení přihlašovacích údajů  
 
@@ -132,7 +132,7 @@ V této detekce se aktivuje upozornění, když zjistí velké množství jednod
 
 Je důležité zkontrolovat, pokud ukončení všech pokusů o přihlášení pomocí ověřování úspěšné.
 
-1. Pokud všechny pokusy o přihlášení skončila úspěšně, jsou všechny **odhadnuté účty** běžně používaný z tohoto zdrojového počítače?
+1. Pokud všechny pokusy o přihlášení skončila úspěšně, jsou všechny **odhadnuté účty** běžně používaný z tohoto zdrojového počítače?
    - Je pravděpodobné, že tyto účty se nezdařila, protože byl použit chybného hesla?  
    - Obraťte se na uživatele, pokud se vygeneruje aktivity (přihlášení několikrát se nezdařilo a pak bylo úspěšné).
 

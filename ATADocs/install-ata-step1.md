@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 1/17/2019
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.service: ''
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: a2f880c4e0df1647f99b0847a8eec71c6b8428bc
-ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
+ms.openlocfilehash: dc1ee8c4c0610f1d6289319fadf92e2b7aae6072
+ms.sourcegitcommit: 8681c4ed6ede58ace737f31eeff9a680b8e4256d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56077996"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57007479"
 ---
 # <a name="install-ata---step-1"></a>Instalace ATA – krok 1
 
@@ -71,6 +71,9 @@ Na serveru ATA Center proveďte tento postup.
    |Certifikát SSL služby Center|Jedná se o certifikát, který je používán službou konzole ATA a komponenty ATA Center.|Klikněte na ikonu klíče a vyberte nainstalovaný certifikát nebo vytvořit certifikát podepsaný svým držitelem pomocí zaškrtávacího políčka.|
         
    ![Obrázek konfigurace ATA Center](media/ATA-Center-Configuration.png)
+
+> [!NOTE]   
+> Ujistěte se, že je potřeba věnovat pozornost monitorování výstrahy týkající se upozornění stavu a vypršení platnosti certifikátu SSL služby Center. Pokud platnost certifikátu vyprší, bude nutné zcela konfiguraci znovu nasaďte ATA. 
 
 10. Kliknutím na **Instalovat** nainstalujete ATA Center a všechny jeho komponenty.
    Během instalace ATA Center se instalují a konfigurují následující komponenty:
