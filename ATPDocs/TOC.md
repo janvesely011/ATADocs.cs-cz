@@ -13,7 +13,6 @@
 ## [Instalace senzoru služby Azure ATP](install-atp-step4.md)
 ## [Konfigurace senzoru služby Azure ATP](install-atp-step5.md)
 # Kurzy
-## [Porozumění výstrahám zabezpečení](understanding-security-alerts.md)
 ## [Výstrahy před hrozbami „osahávání“ (reconnaissance)](atp-reconnaissance-alerts.md)
 ## [Výstrahy před ohrožením zabezpečení přihlašovacích údajů](atp-compromised-credentials-alerts.md)
 ## [Výstrahy před taktikou lateral movement](atp-lateral-movement-alerts.md)
@@ -59,6 +58,13 @@
 ### [Ověření zrcadlení portů](validate-port-mirroring.md)
 ### [Konfigurace shromažďování událostí](configure-event-collection.md)
 ### [Konfigurace předávání událostí Windows](configure-event-forwarding.md)
+## [Porozumění výstrahám zabezpečení](understanding-security-alerts.md)
+## Testovací prostředí výstrah zabezpečení
+### [Přehled testovacího prostředí](atp-playbook-lab-overview.md)
+### [1 – Nastavení testovacího prostředí](atp-playbook-setup-lab.md)
+### [2 – Playbook k výstrahám před hrozbami „osahávání“ (reconnaissance)](atp-playbook-reconnaissance.md)
+### [3 – Playbook k cestám taktiky lateral movement](atp-playbook-lateral-movement.md)
+### [4 – Playbook k výstrahám před dominancí v doméně](atp-playbook-domain-dominance.md)
 # Reference
 ## [Referenční informace k protokolům pro SIEM](cef-format-sa.md)
 ## [Známé problémy služby Azure ATP](known-issues.md)
