@@ -3,18 +3,18 @@ title: Konfigurace ochrany ATP v programu Azure quickstart nastavení senzor | D
 description: Krok 5 instalace ochrany ATP v programu Azure vám pomůže nakonfigurovat nastavení pro samostatný senzor vaší ochrany ATP v programu Azure.
 author: mlottner
 ms.author: mlottner
-ms.date: 02/06/2018
+ms.date: 03/03/2018
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 381cf39f29edb36c704ce2de7f6c2aca31d4f19d
-ms.sourcegitcommit: c48db18274edb2284e281960c6262d97f96e01d2
+ms.openlocfilehash: 9b51c781cee16d4f158cc0e0528d4f80683aabad
+ms.sourcegitcommit: 929f28783110c7e114ab36d4cccd50563f4030df
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56263342"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57253942"
 ---
 # <a name="quickstart-configure-azure-atp-sensor-settings"></a>Rychlý start: Konfigurace nastavení senzoru služby Azure ATP
 
@@ -27,14 +27,16 @@ V tomto rychlém startu budete konfigurovat nastavení senzoru služby Azure ATP
 
 ## <a name="configure-sensor-settings"></a>Konfigurace nastavení senzor
 
-Po dokončení instalace senzoru služby Azure ATP, proveďte následující kroky ke konfiguraci nastavení senzoru služby Azure ATP.
+Po dokončení instalace senzoru služby Azure ATP proveďte následující příkaz pro konfiguraci nastavení senzoru služby Azure ATP.
 
-1.  Na portálu ochrany ATP v programu Azure, přejděte na **konfigurace** a v části **systému** vyberte **senzorů**.
+1. Klikněte na tlačítko **spuštění** otevřete prohlížeč a přihlaste se k portálu ochrany ATP v programu Azure.
+
+2.  Na portálu ochrany ATP v programu Azure, přejděte na **konfigurace** a v části **systému** vyberte **senzorů**.
    
     ![Nakonfigurovat senzor nastavení image](media/atp-sensor-config.png)
 
 
-2. Po kliknutí na senzor, který chcete nakonfigurovat a zadejte následující informace:
+3. Po kliknutí na senzor, který chcete nakonfigurovat a zadejte následující informace:
 
    ![Nakonfigurovat senzor nastavení image](media/atp-sensor-config-2.png)
 
@@ -64,7 +66,7 @@ Po dokončení instalace senzoru služby Azure ATP, proveďte následující kro
 
 
 ## <a name="validate-installations"></a>Ověření instalací
-Pokud chcete ověřit, že se úspěšně nasadil senzoru služby Azure ATP, zkontrolujte následující kroky:
+Pokud chcete ověřit, že se úspěšně nasadil senzoru služby Azure ATP, zkontrolujte následující:
 
 1. Zkontrolujte, zda je služba **rozšířené ochrany před internetovými útoky pro Azure senzor** běží. Po uložení nastavení senzoru služby Azure ATP, může trvat několik sekund pro službu spustit.
 
@@ -74,6 +76,19 @@ Pokud chcete ověřit, že se úspěšně nasadil senzoru služby Azure ATP, zko
    > Verze služby Azure ATP aktualizace často, zkontrolujte nejnovější verzi portálu ochrany ATP v programu Azure, přejděte na **konfigurace** a potom **o**. 
 
 3. Přejděte na adresu URL instance služby Azure ATP. Na portálu ochrany ATP v programu Azure něco vyhledejte v panelu vyhledávání, třeba na uživatele nebo skupinu ve vaší doméně.
+
+4. Ověření připojení ochrany ATP v programu na libovolném zařízení domény pomocí následujících kroků:
+    1. Otevřete příkazový řádek
+    2. Typ ```nslookup```
+    3. Typ **server** pak plně kvalifikovaný název domény nebo IP adresu řadiče domény, ve kterém jsou nainstalované senzory ochrany ATP v programu. Například ```server contosodc.contoso.azure```.
+        - Nezapomeňte nahradit contosodc.contoso.azure a contoso.azure plně kvalifikovaný název domény vaší služby Azure ATP ze senzorů a název domény v uvedeném pořadí.
+    4. Typ ```ls -d contoso.azure```
+    5. Zopakujte kroky 3 a 4 pro každý senzor, který chcete testovat.  
+    6. Otevřete profil entity pro počítač, na kterém jste spustili test připojení z z konzoly služby Azure ATP. 
+    7. Zkontrolovat související logické aktivit a ověřte připojení. 
+
+    > [!NOTE] 
+    >Pokud je řadič domény, kterou chcete testovat vaše první nasazený senzor, počkejte aspoň 15 minut, aby databáze back-end na dokončení počáteční nasazení nezbytné mikroslužeb před pokusem o ověření související logické aktivitu pro tuto doménu kontroler.
 
 ## <a name="next-steps"></a>Další postup
 

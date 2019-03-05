@@ -5,14 +5,14 @@ ms.service: azure-advanced-threat-protection
 ms.topic: tutorial
 author: mlottner
 ms.author: mlottner
-ms.date: 02/28/2019
+ms.date: 03/03/2019
 ms.reviewer: itargoet
-ms.openlocfilehash: 556ec9d8eb8cfa06131adf2c94b032e378edb714
-ms.sourcegitcommit: 4711f0ff4331e0bcc84663f46054216b7db9f98e
+ms.openlocfilehash: d7243b74c14a1782b8902473cc6f098d0e12832f
+ms.sourcegitcommit: 984d7b91b81457832aed5f23cdec698770fd92c9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56989080"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57318049"
 ---
 # <a name="tutorial-lateral-movement-playbook"></a>Kurz: Playbook taktiky Lateral Movement
 
@@ -255,7 +255,7 @@ Azure detekce ochrany ATP v programu a informace o výstrahách jsou kritické h
 V další fázi v řetězu událostí útoku je dominance v doméně.
 
 > [!div class="nextstepaction"]
-> [Playbook Azure Dominance v doméně ochrany ATP v programu](atp-playbook-lateral-movement.md)
+> [Playbook Azure Dominance v doméně ochrany ATP v programu](atp-playbook-domain-dominance.md)
 
 ## <a name="join-the-community"></a>Připojte se ke komunitě
 

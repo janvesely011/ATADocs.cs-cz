@@ -5,14 +5,14 @@ ms.service: azure-advanced-threat-protection
 ms.topic: tutorial
 author: mlottner
 ms.author: mlottner
-ms.date: 02/28/2019
+ms.date: 03/03/2019
 ms.reviewer: itargoet
-ms.openlocfilehash: f96bfadf10acac015ca1ad5315aa7ef7759075d2
-ms.sourcegitcommit: 4711f0ff4331e0bcc84663f46054216b7db9f98e
+ms.openlocfilehash: 20e91bc710dc184fa710cf7fd59cb9bd9d625d20
+ms.sourcegitcommit: 929f28783110c7e114ab36d4cccd50563f4030df
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56989087"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57253959"
 ---
 # <a name="tutorial-reconnaissance-playbook"></a>Kurz: Rekognoskace playbook
 
@@ -68,9 +68,9 @@ Pojďme si vyzkoušet přenést domény.
 ls -d contoso.azure
 ```
 
-- Měli byste nahradit contosodc.contoso.azure a contoso.azure plně kvalifikovaný název domény vaší služby Azure ATP ze senzorů a název domény v uvedeném pořadí.
+- Nahraďte contosodc.contoso.azure a contoso.azure s plně kvalifikovaný název domény vaší služby Azure ATP ze senzorů a název domény.
 
- ![Pokus o příkaz nslookup pro výpis DNS server – chyba](media/playbook-recon-nslookup.png)
+ ![Pokus o příkaz nslookup kopírování DNS server – chyba](media/playbook-recon-nslookup.png)
 
 Pokud **ContsoDC** je vaší první nasazený senzor, počkejte 15 minut, aby databáze back-end pro dokončení nasazení nezbytné mikroslužeb.
 

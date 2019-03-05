@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 02/25/2019
+ms.date: 03/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.prod: ''
@@ -14,19 +14,33 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 27c0513a5a70e09b7c890eda42b14f5b7265e663
-ms.sourcegitcommit: 5e954f2f0cc14e42d68d2575dd1c2ed9eaabe891
+ms.openlocfilehash: 1edc9d7848721426e47cb82730b6de1db87e1874
+ms.sourcegitcommit: 929f28783110c7e114ab36d4cccd50563f4030df
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56754442"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57253993"
 ---
 # <a name="whats-new-in-azure-atp"></a>Co je nového v Azure ATP
+
+## <a name="azure-atp-release-268"></a>Verze ochrany ATP v programu Azure 2.68
+3. března 2019 všeobecně dostupné
+
+- **Vylepšení funkce: Podezření na útok hrubou silou upozornění útoku (LDAP)**<br>
+Vylepšení použitelnosti významné provedly se tato výstraha zabezpečení, včetně revidované popis, zřídit další zdroje informací a podrobnosti pokusů o uhádnutí pro rychlejší opravy. Další informace o [vzbuzovat podezření na útok hrubou silou (LDAP)](atp-compromised-credentials-alerts.md#suspected-brute-force-attack-ldap-external-id-2004) výstrahy zabezpečení. 
+
+- **Funkce nové dokumentace: Oznámení testovacího prostředí zabezpečení**<br>
+
+    Výkon služby Azure ATP vysvětlují zjistit skutečné hrozby pro vaše pracovní prostředí, přidali jsme novou **lab výstrah zabezpečení** do této dokumentace. **Lab výstrah zabezpečení** vám pomůže rychle nastavit testovací prostředí nebo testovací prostředí a vysvětluje, nejlepší obranné posturing proti common, skutečná hrozeb a útoků.  
+
+    [Podrobné lab](atp-playbook-lab-overview.md) je navržený tak, aby strávíte minimální čas při vytváření a další čas získání informací o světě hrozeb a k dispozici oznámení služby Azure ATP a ochrany. Jsme rádi bychom znali váš názor.
+
+- Tato verze také zahrnuje vylepšení a opravy chyb pro interní senzor infrastruktury.
 
 ## <a name="azure-atp-release-267"></a>Verze ochrany ATP v programu Azure 2.67
 Vydáno 24. února 2019
 
-- **Nová výstraha zabezpečení: Rekognoskace instančního objektu zabezpečení (LMP) – (preview)**<br>
+- **Nová výstraha zabezpečení: Rekognoskace instančního objektu zabezpečení (LDAP) – (preview)**<br>
 
     Azure ATP [rekognoskace instančního objektu zabezpečení (LDAP) – ve verzi preview](atp-reconnaissance-alerts.md#security-principal-reconnaissance-ldap-external-id-2038---preview) výstraha zabezpečení je teď ve verzi public preview. <br> V této detekce se aktivuje upozornění zabezpečení služby Azure ATP při použití instančního objektu zabezpečení rekognoskace útočníci získat důležité informace o prostředí domény. Tyto informace pomáhají útočníci namapovat na doménovou strukturu, stejně jako identifikovat privilegovaných účtů pro použití v dalších krocích v jejich řetězu událostí útoku. 
 
@@ -36,7 +50,7 @@ Vydáno 24. února 2019
     Vylepšené **účet rekognoskace výčet (NTLM)** výstrah pomocí další analýzy a vylepšenou detekční logiku ke snížení **B-TP** a **FP** jejich výsledky. 
  
 - **Vylepšení funkce: Výstraha rekognoskace (DNS) mapování sítě** <br>
-    Nové typy detekcí přidán do výstrahy rekognoskace (DNS) mapování sítě. Kromě zjišťování podezřelých žádosti AXFR ochrany ATP v programu Azure teď detekuje podezřelé typy požadavků pocházejících z jiné servery než DNS používají nadměrné množství požadavků.
+    Nové typy detekcí přidán do výstrahy rekognoskace (DNS) mapování sítě. Kromě zjišťování podezřelých žádosti AXFR ochrany ATP v programu Azure teď detekuje podezřelé typy požadavků pocházejících z jiné servery než DNS pomocí odesílá nadměrný počet požadavků.
 
  - Tato verze také zahrnuje vylepšení a opravy chyb pro interní senzor infrastruktury.
 
