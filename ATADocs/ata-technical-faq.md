@@ -2,10 +2,10 @@
 title: Nejčastější dotazy k Advanced Threat Analytics | Dokumentace Microsoftu
 description: Seznam nejčastějších dotazů týkajících se ATA a související odpovědi
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: barbkess
-ms.date: 5/6/2018
+ms.date: 03/07/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.service: ''
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: a7d378ec-68ed-4a7b-a0db-f5e439c3e852
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: b69d78bc5af42b8775c30f49838ba8c7754fe313
-ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
+ms.openlocfilehash: 3db8a52c87e45635d632ad5b2d2f1ba7a82d2706
+ms.sourcegitcommit: 76b818e4a95842e2175e0efb4db142704b66daa2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56077860"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57562274"
 ---
 # <a name="ata-frequently-asked-questions"></a>Nejčastější dotazy k ATA
 
@@ -31,7 +31,7 @@ Tento článek obsahuje seznam nejčastějších dotazů týkajících se ATA a 
 
 Pokud máte aktivní smlouvu Enterprise, můžete si tento software stáhnout z centra multilicencí Microsoftu (VLSC).
 
-Pokud jste licenci na Microsoft Enterprise Mobility + Security (EMS) pořídili přímo přes portál Office 365 nebo prostřednictvím licenčního modelu partnera cloudových řešení (CSP) a nemáte k ATA přístup přes centrum multilicencí Microsoftu (VLSC), požádejte zákaznickou podporu Microsoftu o zpracování aktivace řešení ATA (Advanced Threat Analytics).
+Pokud jste získali licenci pro Enterprise Mobility + Security (EMS) přímo přes portál Microsoft 365 nebo prostřednictvím licenčního modelu partnera CSP (Cloud Solution) a nemáte přístup k ATA prostřednictvím Microsoft Volume Licensing Center (VLSC), obraťte se na Zákaznická podpora Microsoftu získat zpracování aktivace Advanced Threat Analytics (ATA).
 
 ## <a name="what-should-i-do-if-the-ata-gateway-wont-start"></a>Co mám dělat, když se ATA Gateway nespustí?
 Podívejte se na poslední chybu v aktuálním protokolu chyb (ve složce Logs tam, je software ATA nainstalovaný).

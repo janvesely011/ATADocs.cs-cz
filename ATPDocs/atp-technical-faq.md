@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 02/13/2019
+ms.date: 03/07/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.prod: ''
@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 6a9b5273-eb26-414e-9cdd-f64406e24ed8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: db9792192c1f56d13327d57747622e79c72a1c3e
-ms.sourcegitcommit: 5d3607b3a2c9d1a35dd36287f4a5fc68fca67eb0
+ms.openlocfilehash: 10db395065b7d5038aee662d52a5f6350f845a1a
+ms.sourcegitcommit: 76b818e4a95842e2175e0efb4db142704b66daa2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56334455"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57562223"
 ---
 # <a name="azure-atp-frequently-asked-questions"></a>Nejčastější dotazy k Azure ATP
 Tento článek obsahuje seznam častých otázek a odpovědí týkajících se ochrany ATP v programu Azure rozdělené do následujících catergories: 
@@ -59,7 +59,7 @@ Ano. Protože počítače účty (stejně jako ostatní entity) lze použít k p
 ## <a name="licensing-and-privacy"></a>Licencování a ochrany osobních údajů 
 ### <a name="where-can-i-get-a-license-for-azure-advanced-threat-protection-atp"></a>Kde získám licenci pro Azure Advanced Threat Protection (ATP)?
 
-Ochrana ATP v programu Azure je k dispozici jako součást řešení Enterprise Mobility + Security 5 suite (EMS E5) a jako samostatnou licenci. Můžete získat licence přímo od [portál služeb Office 365](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-pricing) nebo prostřednictvím licenčního modelu partnera CSP (Cloud Solution).
+Ochrana ATP v programu Azure je k dispozici jako součást řešení Enterprise Mobility + Security 5 suite (EMS E5) a jako samostatnou licenci. Můžete získat licence přímo od [portálu služeb Microsoft 365](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-pricing) nebo prostřednictvím licenčního modelu partnera CSP (Cloud Solution).
 
 ### <a name="is-this-going-to-be-a-part-of-azure-active-directory-or-on-premises-active-directory"></a>Bude součástí Azure Active Directory nebo místní služby Active Directory?
 Toto řešení ochrany ATP v programu Azure je momentálně samostatné nabídky. Není součástí Azure Active Directory nebo místní služby Active Directory.

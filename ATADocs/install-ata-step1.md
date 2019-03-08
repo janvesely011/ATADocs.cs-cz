@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 02/28/2019
+ms.date: 03/07/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.service: ''
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: dc1ee8c4c0610f1d6289319fadf92e2b7aae6072
-ms.sourcegitcommit: 8681c4ed6ede58ace737f31eeff9a680b8e4256d
+ms.openlocfilehash: 81029f1f651f3138688b6952d47bba05a32e7efd
+ms.sourcegitcommit: 76b818e4a95842e2175e0efb4db142704b66daa2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "57007479"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57562257"
 ---
 # <a name="install-ata---step-1"></a>Instalace ATA – krok 1
 
@@ -37,7 +37,7 @@ Tento instalační postup uvádí pokyny pro novou instalaci ATA 1.9. Informace 
 Po ověření, že server splňuje požadavky, můžete pokračovat v instalaci ATA Center.
     
 > [!NOTE]
->Pokud jste licenci na Microsoft Enterprise Mobility + Security (EMS) pořídili přímo přes portál Office 365 nebo prostřednictvím licenčního modelu partnera cloudových řešení (CSP) a nemáte k ATA přístup přes centrum multilicencí Microsoftu (VLSC), požádejte zákaznickou podporu Microsoftu o zpracování aktivace řešení ATA (Advanced Threat Analytics).
+>Pokud jste získali licenci pro Enterprise Mobility + Security (EMS) přímo přes portál Microsoft 365 nebo prostřednictvím licenčního modelu partnera CSP (Cloud Solution) a nemáte přístup k ATA prostřednictvím Microsoft Volume Licensing Center (VLSC), obraťte se na Zákaznická podpora Microsoftu získat zpracování aktivace Advanced Threat Analytics (ATA).
 
 Na serveru ATA Center proveďte tento postup.
 
