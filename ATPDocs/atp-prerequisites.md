@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 03/07/2019
+ms.date: 03/10/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.prod: ''
@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c9235bc149e1c324de1bb46a98ac72ac3f77fc9f
-ms.sourcegitcommit: 76b818e4a95842e2175e0efb4db142704b66daa2
+ms.openlocfilehash: 073a7e6c6d0257e4dddcae726b939109884f8b6d
+ms.sourcegitcommit: aad7a417addae3f21f81ea2b7336c3d83659f592
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562240"
+ms.lasthandoff: 03/10/2019
+ms.locfileid: "57725598"
 ---
 # <a name="azure-atp-prerequisites"></a>Požadavky služby Azure ATP
 
@@ -83,7 +83,7 @@ Přístup k portálu ochrany ATP v programu Azure je prostřednictvím prohlíž
 V této části jsou uvedené požadavky senzoru služby Azure ATP.
 
 ### <a name="general"></a>Obecné
-Senzoru služby Azure ATP podporuje instalaci na řadičích domény se systémem Windows Server 2008 R2 SP1 (nikoli včetně jádra serveru), Windows Server 2012, Windows Server 2012 R2, Windows Server 2016 (včetně jádra, ale ne Nano).
+Senzoru služby Azure ATP podporuje instalaci na řadičích domény se systémem Windows Server 2008 R2 SP1 (nikoli včetně jádra serveru), Windows Server 2012, Windows Server 2012 R2, Windows Server 2016 (včetně jádra, ale ne Nano). Windows Server 2019 se momentálně nepodporuje. 
 
 Řadič domény může být řadič domény jen pro čtení (RODC).
 

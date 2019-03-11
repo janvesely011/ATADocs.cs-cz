@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 03/03/2019
+ms.date: 03/10/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.prod: ''
@@ -14,14 +14,27 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 1edc9d7848721426e47cb82730b6de1db87e1874
-ms.sourcegitcommit: 929f28783110c7e114ab36d4cccd50563f4030df
+ms.openlocfilehash: 804f8855ae11b36c01ac52f30590dc36aa4160e1
+ms.sourcegitcommit: aad7a417addae3f21f81ea2b7336c3d83659f592
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57253993"
+ms.lasthandoff: 03/10/2019
+ms.locfileid: "57725667"
 ---
 # <a name="whats-new-in-azure-atp"></a>Co je nového v Azure ATP
+
+## <a name="azure-atp-release-269"></a>Verze ochrany ATP v programu Azure 2.69
+Vydáno 10. března 2019
+
+- **Vylepšení funkce: Upozornění (pass-the-ticket) krádeží podezřelý identity**<br> Toto upozornění se teď nabízí nové poznatky s podrobnostmi o připojení pomocí protokolu vzdálené plochy (RDP). Přidání důkazy usnadňuje napravit známý problém (B-TP) Benign True pozitivní výstrahy způsobené použití vzdáleného Credential Guard přes připojení RDP. 
+
+- **Vylepšení funkce: Vzdálené spuštění kódu přes upozornění DNS**<br> Toto upozornění se teď nabízí nové poznatky ukazující stav aktualizace zabezpečení informací, kdy mají být aktualizace požadované řadiče domény.   
+
+- **Funkce nové dokumentace: Azure MITRE at upozornění zabezpečení ochrany ATP v programu & CK Matrix™**<br>
+
+    Vysvětlují a zjednodušíme proces mapování vztah mezi výstrah zabezpečení služby Azure ATP a zkušenosti MITRE AT & gentní Zámek matice, přidali jsme relevantní MITRE techniky pro výpisy výstrah zabezpečení služby Azure ATP. Tento odkaz na další usnadňuje pochopit techniku podezřelý útok potenciálně používán, když se aktivuje upozornění zabezpečení služby Azure ATP. Další informace o [Průvodce výstrah zabezpečení služby Azure ATP](suspicious-activity-guide.md).  
+
+- Tato verze také zahrnuje vylepšení a opravy chyb pro interní senzor infrastruktury.
 
 ## <a name="azure-atp-release-268"></a>Verze ochrany ATP v programu Azure 2.68
 3. března 2019 všeobecně dostupné

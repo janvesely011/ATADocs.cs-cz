@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 36f7d273273e11d57c681e75cc762e853a127616
-ms.sourcegitcommit: 5e954f2f0cc14e42d68d2575dd1c2ed9eaabe891
+ms.openlocfilehash: ee5daa580b37db15fde0e4b276e49f4688c7189b
+ms.sourcegitcommit: aad7a417addae3f21f81ea2b7336c3d83659f592
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56754408"
+ms.lasthandoff: 03/10/2019
+ms.locfileid: "57725586"
 ---
 # <a name="tutorial-reconnaissance-alerts"></a>Kurz: Rekognoskace výstrahy  
 
@@ -43,7 +43,7 @@ V tomto kurzu se dozvíte, jak porozumět, klasifikovat, opravit a brání násl
 > * Rekognoskace instančního objektu zabezpečení (LDAP) (externí ID 2038) – preview
 > * Uživatele a IP adres pro rekognoskaci (SMB) (externí ID 2012)
 > * Rekognoskace členství uživatelů a skupin (SAMR) (externí ID 2021)
-> * 
+ 
 
 ## <a name="account-enumeration-reconnaissance-external-id-2003"></a>Rekognoskace výčet účtu (externí ID 2003) 
 

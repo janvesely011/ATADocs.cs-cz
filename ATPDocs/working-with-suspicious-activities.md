@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 1/1/2019
+ms.date: 03/10/2019
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.prod: ''
@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: a06004bd-9f77-4e8e-a0e5-4727d6651a0f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f6782a5096349974a5810b5fe9f816f6762f5c4d
-ms.sourcegitcommit: c48db18274edb2284e281960c6262d97f96e01d2
+ms.openlocfilehash: e37bc18c93d8dad04d0e51c1bdb07b2147bcd2bc
+ms.sourcegitcommit: aad7a417addae3f21f81ea2b7336c3d83659f592
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56264077"
+ms.lasthandoff: 03/10/2019
+ms.locfileid: "57725587"
 ---
 # <a name="working-with-security-alerts"></a>Práce s výstrahami zabezpečení
 
@@ -46,8 +46,8 @@ Každá výstraha zabezpečení obsahuje následující informace:
     - Stáhněte si výstrahy zabezpečení ve formátu aplikace Excel.
 
 > [!NOTE]
-> - Když najedete myší nad uživatele nebo počítač, se zobrazí zkrácený profil entity, která poskytuje další informace o entitě a zahrnuje počet výstrah zabezpečení, které je entita propojená.
-> - Pokud kliknete na entitu, tím přejdete na profil entity pro uživatele nebo počítače.
+> - Když myší najedete myší uživatele nebo počítač, zobrazí se profil mini entity. Zkrácený profil obsahuje další informace o entitě a počet výstrah zabezpečení, které je entita propojená.
+> - Kliknutím na entitu, přejdete na profil entity pro uživatele nebo počítače.
 
 ![Obrázek časové osy výstrahy zabezpečení sady Azure ochrany ATP v programu](media/atp-sa-timeline.png)
 
@@ -55,11 +55,11 @@ Každá výstraha zabezpečení obsahuje následující informace:
 
 Upozornění zabezpečení v Azure ochrany ATP v programu jsou rozdělené do následujících kategorií nebo fází, jako je fáze v řetězu událostí typické internetového útoku. 
 
-- Rekognoskace výstrahy
-- Upozornění ohrožení zabezpečení přihlašovacích údajů
-- Upozornění taktiky Lateral Movement
-- Upozornění dominance v doméně
-- Upozornění průsak ven
+- [Výstrahy před hrozbami „osahávání“ (reconnaissance)](atp-reconnaissance-alerts.md)
+- [Výstrahy před ohrožením zabezpečení přihlašovacích údajů](atp-compromised-credentials-alerts.md)
+- [Výstrahy před taktikou lateral movement](atp-lateral-movement-alerts.md)
+- [Výstrahy před dominancí v doméně](atp-domain-dominance-alerts.md)
+- [Výstrahy před exfiltrací](atp-exfiltration-alerts.md)
 
 ## Detekce ve verzi Preview <a name="preview-detections"></a>
 
