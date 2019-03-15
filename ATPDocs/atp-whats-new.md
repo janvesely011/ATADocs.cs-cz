@@ -15,11 +15,11 @@ ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
 ms.openlocfilehash: 804f8855ae11b36c01ac52f30590dc36aa4160e1
-ms.sourcegitcommit: aad7a417addae3f21f81ea2b7336c3d83659f592
+ms.sourcegitcommit: 1b9a79932a0e14d79c5c919cd14bc606b1c51103
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/10/2019
-ms.locfileid: "57725667"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57981217"
 ---
 # <a name="whats-new-in-azure-atp"></a>Co je nového v Azure ATP
 

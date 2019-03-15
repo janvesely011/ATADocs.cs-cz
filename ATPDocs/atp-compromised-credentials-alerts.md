@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d20359547696f7fe3cafd75a638563d400f0ed82
-ms.sourcegitcommit: 0e77ed44ee73ac84923fa7379e555f5ed9602aca
+ms.openlocfilehash: de426a06fb7d0893d56b82fcaa9599f523054774
+ms.sourcegitcommit: 1b9a79932a0e14d79c5c919cd14bc606b1c51103
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017298"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57981200"
 ---
 # <a name="tutorial-compromised-credential-alerts"></a>Kurz: Upozornění ohrožení zabezpečení přihlašovacích údajů  
 
@@ -90,7 +90,7 @@ Heslo zařízení po úspěšně výčet seznamu platní uživatelé z řadiče 
 
 Je důležité zkontrolovat, pokud ukončení všech pokusů o přihlášení pomocí ověřování úspěšné.
 
-1. Pokud všech pokusů o přihlášení skončila úspěšně, zkontrolujte, zda má některý **odhadnuté účty** se obvykle používají z tohoto zdrojového počítače.
+1. Pokud všech pokusů o přihlášení skončila úspěšně, zkontrolujte, zda má některý **odhadnuté účty** se obvykle používají z tohoto zdrojového počítače.
    - Je pravděpodobné, že tyto účty se nezdařila, protože byl použit chybného hesla?  
    - Obraťte se na uživatele, pokud se vygeneruje aktivity (fe doby přihlášení se nezdařilo a pak bylo úspěšné). 
 
