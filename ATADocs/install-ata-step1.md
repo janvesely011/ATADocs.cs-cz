@@ -14,11 +14,11 @@ ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
 ms.openlocfilehash: 81029f1f651f3138688b6952d47bba05a32e7efd
-ms.sourcegitcommit: 76b818e4a95842e2175e0efb4db142704b66daa2
+ms.sourcegitcommit: aad7a417addae3f21f81ea2b7336c3d83659f592
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562257"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57828205"
 ---
 # <a name="install-ata---step-1"></a>Instalace ATA – krok 1
 
