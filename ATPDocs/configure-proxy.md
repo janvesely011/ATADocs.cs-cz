@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 12/02/2018
+ms.date: 03/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.prod: ''
@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 9c173d28-a944-491a-92c1-9690eb06b151
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: bc4e207a636d6c6641ccb8c6ac4e1695d82ec0d6
-ms.sourcegitcommit: c48db18274edb2284e281960c6262d97f96e01d2
+ms.openlocfilehash: 5490688653edddae020a8b63191a1c9a7b6e9f8a
+ms.sourcegitcommit: 9252c74620abb99d8fa2b8d2cc2169018078bec9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56263744"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58136803"
 ---
 # <a name="configure-endpoint-proxy-and-internet-connectivity-settings-for-your-azure-atp-sensor"></a>Konfigurace koncového bodu proxy serveru a nastavení připojení k Internetu pro vaše senzor ochrany ATP v programu Azure
 
@@ -58,18 +58,19 @@ Statické proxy je možné konfigurovat pomocí registru. Konfigurace proxy serv
 
 ## <a name="enable-access-to-azure-atp-service-urls-in-the-proxy-server"></a>Povolit přístup k adresám URL služby ochrany ATP v programu Azure v proxy serveru
 
-Pokud proxy server nebo brána firewall blokuje veškerý provoz ve výchozím nastavení a umožňuje pouze konkrétní domény prostřednictvím nebo je povolenou komunikací HTTPS vyhledávání (kontroly protokolu SSL), ujistěte se, že následující adresy URL jsou uvedené prázdné, aby umožňovala komunikaci se službou Azure ATP v port 443:
+Chcete-li povolit přístup do služby Azure ATP povolený provoz spojený se následující adresy URL:
 
-|Umístění služby|.Atp.Azure.com DNS record|
+- \<your-instance-name >. atp.azure.com – pro připojení konzoly. Například "Contoso-corp.atp.azure.com"
+
+- \<your-instance-name > sensorapi.atp.azure.com – senzorů připojení. Například "contoso-corpsensorapi.atp.azure.com"
+
+Předchozí adresy URL se automaticky mapují na umístění správnou službu pro vaši instanci služby Azure ATP. Pokud potřebujete podrobnější řízení, vezměte v úvahu povoluje provoz do příslušných koncových bodů v následující tabulce:
+
+|Umístění služby|*.atp.azure.com DNS record|
 |----|----|
 |USA |triprd1wcusw1sensorapi.atp.azure.com<br>triprd1wcuswb1sensorapi.atp.azure.com<br>triprd1wcuse1sensorapi.atp.azure.com|
 |Evropa|triprd1wceun1sensorapi.atp.azure.com<br>triprd1wceuw1sensorapi.atp.azure.com|
 |Asie|triprd1wcasse1sensorapi.atp.azure.com|
-
-
-Můžete také posílit ochranu firewall nebo proxy pravidla pro konkrétní instanci, že kterou jste vytvořili, tak, že vytvoříte pravidlo pro následující záznamy DNS:
-- \<your-instance-name >. atp.azure.com – pro připojení konzoly. Například "Contoso-corp.atp.azure.com"
-- \<your-instance-name > sensorapi.atp.azure.com – senzorů připojení. Například "contoso-corpsensorapi.atp.azure.com"
 
  
 > [!NOTE]

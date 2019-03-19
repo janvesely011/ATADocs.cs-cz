@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 02/24/2019
+ms.date: 03/17/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.prod: ''
@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ee5daa580b37db15fde0e4b276e49f4688c7189b
-ms.sourcegitcommit: aad7a417addae3f21f81ea2b7336c3d83659f592
+ms.openlocfilehash: 8d61fb120179ee8e53aa42e50d2a0841197b8032
+ms.sourcegitcommit: 9252c74620abb99d8fa2b8d2cc2169018078bec9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/10/2019
-ms.locfileid: "57725586"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58136858"
 ---
 # <a name="tutorial-reconnaissance-alerts"></a>Kurz: Rekognoskace výstrahy  
 
@@ -143,24 +143,31 @@ Dotazy DNS můžete vygenerovat bezpečnostní skenery a oprávněné aplikace.
 **Navrhované nápravné kroky a pro ochrany před únikem informací**
 
 **Náprava:**
+
 - Obsahují zdrojový počítač. 
     - Najít nástroj, který provádí útoku a jeho odebrání.
     - Vyhledejte uživatele, kteří byli přihlášeni přibližně ve stejnou dobu aktivity došlo k chybě, protože tyto uživatele může také dojít k ohrožení. Resetování hesel a povolení vícefaktorového ověřování.
 
 **Ochrany před únikem informací:**<br>
+
 Je důležité zabránit budoucím útokům pomocí dotazů AXFR díky zabezpečení interní server DNS.
 
 - Zabezpečení interní server DNS pro rekognoskaci pomocí DNS tím, že zakážete přenosů zóny nebo podle [omezení přenosů zóny](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee649273(v=ws.10)) pouze na zadané IP adresy. Úprava přenosů zóny je jedním z úkolů na kontrolním seznamu, která by měla být určena pro [zabezpečení před útoky interních i externích serverů DNS](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee649273(v=ws.10)).
 
 ## <a name="security-principal-reconnaissance-ldap-external-id-2038---preview"></a>Rekognoskace instančního objektu zabezpečení (LDAP) (externí ID 2038) – preview
 
-**Popis** rekognoskace instančního objektu zabezpečení je útočníci získat důležité informace o prostředí domény. Informace, které pomůžou útočníci namapovat na doménovou strukturu, jakož i identifikovat privilegovaných účtů pro použití v dalších krocích v jejich řetězu událostí útoku. Adresář přístup protokolu LDAP (Lightweight) je nejoblíbenější metody používá pro účely legitimní a škodlivý dotaz službě Active Directory.  LDAP, zaměřuje zabezpečení, rekognoskace instančního objektu se často používá jako první fáze Kerberoasting útoku. Útoky Kerberoasting slouží k získání seznamu cílové názvy objektu zabezpečení (SPN), což útočníci se pak pokusí získat lístky Server udělování lístků (TGS) pro.
+**Popis**
+
+Zabezpečení hlavní rekognoskace se útočníci získat důležité informace o prostředí domény. Informace, které pomůžou útočníci namapovat na doménovou strukturu, jakož i identifikovat privilegovaných účtů pro použití v dalších krocích v jejich řetězu událostí útoku. Adresář přístup protokolu LDAP (Lightweight) je nejoblíbenější metody používá pro účely legitimní a škodlivý dotaz službě Active Directory.  LDAP, zaměřuje zabezpečení, rekognoskace instančního objektu se často používá jako první fáze Kerberoasting útoku. Útoky Kerberoasting slouží k získání seznamu cílové názvy objektu zabezpečení (SPN), což útočníci se pak pokusí získat lístky Server udělování lístků (TGS) pro.
 
 Žádné výstrahy tohoto typu se zobrazí v prvních 10 dnů po nasazení služby Azure ATP, aby ochrana ATP v programu Azure přesně profilu a další oprávněným uživatelům. Po dokončení fáze učení ochrany ATP v programu Azure výstrahy jsou generovány na počítačích, které provádění podezřelých dotazů protokolu LDAP výčet nebo dotazy cílené na citlivých skupin, které nejsou pomocí metod dříve pozorováno.  
 
-**Období učení** 10 dní na jeden počítač, počínaje dnem první událost zjištěnými z počítače. 
+**Období učení**
+
+10 dní na jeden počítač, počínaje dnem první událost v počítači. 
 
 **TP, B-TP nebo FP**
+
 1.  Klikněte na zdrojový počítač a přejděte na stránku jeho profil. 
     1. Očekává se tento zdrojový počítač k vygenerování této aktivity? 
     2. Pokud se očekává, počítače a aktivity, **Zavřít** zabezpečení výstrahy a vyloučit tento počítač jako **B-TP** aktivity. 
@@ -214,7 +221,9 @@ Použití [Net ukončí nástroj](https://gallery.technet.microsoft.com/Net-Ceas
 
 *Předchozí název:* Rekognoskace pomocí dotazů na adresářové služby 
 
-**Popis** uživatele a skupiny členství rekognoskace se útočníci používají ke zmapování struktury adresáře a zacílení privilegovaných účtů pro pozdější kroky útoku. Protokol vzdáleného správce zabezpečení účtů (SAM-R) je jedna z metod používaných k dotazování adresáře k provedení tohoto typu mapování.  
+**Popis**
+ 
+Uživatele a skupiny členství rekognoskace se útočníci používají ke zmapování struktury adresáře a zacílení privilegovaných účtů pro pozdější kroky útoku. Protokol vzdáleného správce zabezpečení účtů (SAM-R) je jedna z metod používaných k dotazování adresáře k provedení tohoto typu mapování.  
 Při zjišťování žádné výstrahy týkající se aktivují první měsíc po nasazení služby Azure ATP (období učení). Během učení období, ochrana ATP v programu Azure profily které dotazy SAM-R se sestavují z které počítače výčet a jednotlivé dotazy citlivých účtů. 
 
 **Období učení**

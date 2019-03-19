@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 12/02/2018
+ms.date: 03/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.prod: ''
@@ -14,18 +14,21 @@ ms.technology: ''
 ms.assetid: b09adce3-0fbc-40e3-a53f-31f57fe79ca3
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0f8174da066f35b2776678717a7d68b114decd10
-ms.sourcegitcommit: c48db18274edb2284e281960c6262d97f96e01d2
+ms.openlocfilehash: 1f4af08074828593bab9a4672df3da4751166ef4
+ms.sourcegitcommit: 9252c74620abb99d8fa2b8d2cc2169018078bec9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56263819"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58136786"
 ---
 # <a name="configure-azure-atp-to-make-remote-calls-to-sam"></a>Konfigurace ochrany ATP v programu Azure k vzdáleně volat SAM
 Ochrana ATP v programu Azure [cesty laterální pohyb](use-case-lateral-movement-path.md) detekce spoléhá na dotazy, které identifikují místními správci na konkrétní počítače. Tyto dotazy se provádí pomocí protokolu SAM-R, pomocí účtu služby ochrany ATP v programu Azure vytvoří během instalace služby Azure ATP [kroku 2. Připojení ke službě AD](install-atp-step2.md).
 
 ## <a name="configure-sam-r-required-permissions"></a>Konfigurace SAM-R, vyžaduje oprávnění
 K zajištění Windows klienty a servery povolit váš účet služby Azure ATP provádět SAM-R, úpravy **zásad skupiny** přidání účtu služby Azure ATP kromě zobrazené v nakonfigurované účty se musí provádět  **Přístup k síti** zásad.
+
+> [!Note]
+> Ještě před vynucením nové zásady, jako je ten, je velmi důležité, abyste měli jistotu, že prostředí zůstalo zabezpečené a všechny změny nebude mít vliv na kompatibilitu vašich aplikací. K tomu prvním povolení a ověřením kompatibility navrhovaných změn v režimu auditování, před provedením změn v provozním prostředí.
 
 1. Vyhledejte zásady:
 
@@ -40,8 +43,7 @@ K zajištění Windows klienty a servery povolit váš účet služby Azure ATP 
 
 3. **Služba AATP** (službu ochrany ATP v programu Azure vytvoří během instalace) má teď oprávnění potřebná k provedení SAM-R v prostředí.
 
-> [!NOTE]
-> Ještě před vynucením nové zásady, ujistěte se, že vaše prostředí zůstalo zabezpečené, aniž by to ovlivnilo vaše kompatibilita aplikací povolením a ověření navrhovaných změn v režimu auditování.
+
 
 Další informace o SAM-R a tyto zásady skupiny, najdete v článku [přístup k síti: Omezit klienti můžou vzdáleně volat SAM](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls).
 

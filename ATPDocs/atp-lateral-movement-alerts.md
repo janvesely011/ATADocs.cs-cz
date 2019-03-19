@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 02/11/2019
+ms.date: 03/18/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.prod: ''
@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 2257eb00-8614-4577-b6a1-5c65085371f2
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 58c8445fc47a7dfb45730c96b4c438f32d539ee5
-ms.sourcegitcommit: c48db18274edb2284e281960c6262d97f96e01d2
+ms.openlocfilehash: 3e2dffff3d9c2c784709c323877ec74601781a05
+ms.sourcegitcommit: 9252c74620abb99d8fa2b8d2cc2169018078bec9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56263195"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58136857"
 ---
 # <a name="tutorial-lateral-movement-alerts"></a>Kurz: Upozornění taktiky Lateral Movement  
 
@@ -121,6 +121,12 @@ Pass-the-Ticket je technika laterálního pohybu, kdy útočník získá lístek
 3. Řešení není senzor nejméně jeden z cílové IP adresy? Pokud cílová IP adresa není vyřešen, může to znamenat, že správné porty mezi ze senzorů a zařízení nejsou otevřené správně. 
 
     Pokud je odpověď na všechny předchozí otázky **Ano**, zkontrolujte, jestli počítače zdroje a cíle jsou stejné. Pokud se shodují, je **FP** nebyly žádné skutečné pokusy o **pass-the-ticket**. 
+
+[Vzdálené Credential Guard](https://docs.microsoft.com/windows/security/identity-protection/remote-credential-guard) funkce připojení RDP, když použít spolu s Windows 10 na Windows serveru 2016 a novější, může způsobit **B-TP** výstrahy. Používání výstrah důkazy, zkontrolujte, pokud uživatel provést připojení ke vzdálené ploše ze zdrojového počítače do cílového počítače.
+
+1. Kontrola pro korelaci důkaz.
+2. Pokud je existuje korelace důkazy, podívejte se, pokud bylo navázáno připojení RDP pomocí vzdáleného Credential Guard. 
+3. Pokud odpovíte Ano, **Zavřít** dané výstraze zabezpečení jako **T BP** aktivity. 
 
 Existují vlastní aplikace, které dál lístky jménem uživatelů. Tyto aplikace mají oprávnění pro delegování do uživatelských lístků.
 
