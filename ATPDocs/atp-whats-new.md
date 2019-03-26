@@ -5,7 +5,7 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 03/10/2019
+ms.date: 03/24/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.prod: ''
@@ -14,14 +14,45 @@ ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 804f8855ae11b36c01ac52f30590dc36aa4160e1
-ms.sourcegitcommit: 1b9a79932a0e14d79c5c919cd14bc606b1c51103
+ms.openlocfilehash: b39c51d725a652fe1e936437ad3d0bf0c7d86db7
+ms.sourcegitcommit: 6975497acaf298af393f96573e1790ab617fa5b4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57981217"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58406633"
 ---
 # <a name="whats-new-in-azure-atp"></a>Co je nového v Azure ATP
+
+## <a name="azure-atp-release-271"></a>Verze ochrany ATP v programu Azure 2.71
+Vydáno 24. března 2019
+
+- **Vylepšení funkce: Síť název řešení ÚTOKŮ výstrah monitorování**<br>
+Monitorovací upozornění byly přidány pro přidružené výstrahy zabezpečení ochrany ATP v programu Azure, které jsou založeny na NNR úrovně spolehlivosti. Každé monitorování upozornění obsahuje praktické a podrobné doporučení, který vám pomůže vyřešit nízké úspěšnosti NNR. 
+
+    Zobrazit [novinky překlad síťových názvů](atp-nnr-policy.md) získat další informace o používání služby Azure ATP ÚTOKŮ a proč je důležité pro přesnost výstrah. 
+
+- **Podpora serveru: Podpora přidání pro 2019 serveru s využitím KB4487044**<br>
+Byla přidána podpora pro použití systému Windows Server 2019, s úroveň opravy KB4487044. Použití serveru 2019 bez opravy není podporována a blokovaný od této aktualizace. 
+
+- **Vylepšení funkce: Upozornění vyloučení založené na uživatelích**<br>
+– Možnosti vyjmutí rozšířené výstrah nyní umožňují vyloučení konkrétních uživatelů z konkrétní výstrahy. Vyloučení může pomoci zabránit situacích, kde použití nebo konfigurace určitých typů interní opakovaně aktivuje Výstrahy neškodné zabezpečení.
+
+- Tato verze také zahrnuje vylepšení a opravy chyb pro interní senzor infrastruktury.
+
+## <a name="azure-atp-release-270"></a>Verze ochrany ATP v programu Azure 2.70
+Vydáno 17. březnu 2019
+
+- **Vylepšení funkce: Úroveň spolehlivosti název řešení ÚTOKŮ sítě je přidán do více výstrah**<br> Překlad síťových názvů nebo (NNR) slouží ke snadnější identifikaci identity entity zdroje podezřelý útoků. Přidáním úrovně spolehlivosti NNR do služby Azure ATP výstrah důkazy seznamů můžete nyní okamžitě vyhodnotit a zjistili, jakou úroveň spolehlivosti NNR týkající se možných zdrojů identifikovat a opravit odpovídajícím způsobem. 
+
+    Legitimace úrovně spolehlivosti NNR byl přidán do následující výstrahy:
+  - [Mapování sondování sítě (DNS)](atp-reconnaissance-alerts.md#network-mapping-reconnaissance-dns-external-id-2007)
+  - [Krádež identity podezřelého softwaru (pass-the-ticket)](atp-lateral-movement-alerts.md#suspected-identity-theft-pass-the-ticket-external-id-2018) 
+  - [Podezření na útok relay NTLM (účet Exchange) – preview](atp-lateral-movement-alerts.md#suspected-ntlm-relay-attack-exchange-account-external-id-2037---preview)
+  - [Podezřelý útok DCSync (replikace adresářových služeb)](atp-domain-dominance-alerts.md#suspected-dcsync-attack-replication-of-directory-services-external-id-2006)
+
+- **Další stav výstrahy scénář: Azure službu sensor ochrany ATP v programu se nepodařilo spustit**<br>V případech, kdy se nespustila kvůli sítě zachytávání ovladačem senzoru služby Azure ATP se teď aktivuje upozornění na stav senzoru. [Řešení potíží senzoru služby Azure ATP s protokoly ochrany ATP v programu Azure](troubleshooting-atp-using-logs.md) Další informace o protokolech ochrany ATP v programu Azure a způsob jejich použití. 
+  
+- Tato verze také zahrnuje vylepšení a opravy chyb pro interní senzor infrastruktury.
 
 ## <a name="azure-atp-release-269"></a>Verze ochrany ATP v programu Azure 2.69
 Vydáno 10. března 2019

@@ -60,6 +60,8 @@ items:
     href: entity-profiles.md
   - name: Cesty taktiky Lateral Movement
     href: use-case-lateral-movement-path.md
+  - name: Překlad síťových názvů Principy (NNR)
+    href: atp-nnr-policy.md
   - name: Sestavy
     href: reports.md
   - name: Role uživatelů
@@ -148,9 +150,9 @@ items:
     href: atp-resources.md
   - name: Zabezpečení dat ve službě Azure ATP a ochrana osobních údajů
     href: atp-privacy-compliance.md
-ms.openlocfilehash: bdf00229e59fda2490ee75aa19f466a6c0c5a789
-ms.sourcegitcommit: 5f45f48aa9047bb60c74f4cae899d90d5f7b891c
+ms.openlocfilehash: c78dcb52783d3f63184f3f16b1f0719731908c37
+ms.sourcegitcommit: 6975497acaf298af393f96573e1790ab617fa5b4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58073728"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58406582"

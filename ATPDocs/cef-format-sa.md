@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 3261155c-3c72-4327-ba29-c113c63a4e6d
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: eeb158ed3da07b57a3071b5fa9f60b8ec9d20db7
-ms.sourcegitcommit: 9252c74620abb99d8fa2b8d2cc2169018078bec9
+ms.openlocfilehash: b057fdc6362e8b5199b1323f09e3c81a09291e5d
+ms.sourcegitcommit: 6975497acaf298af393f96573e1790ab617fa5b4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58136888"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58406616"
 ---
 # <a name="azure-atp-siem-log-reference"></a>Referenční informace k protokolům Azure ATP SIEM
 
@@ -51,7 +51,7 @@ Do systému SIEM se předávají následující pole a jejich hodnoty:
 > [!NOTE]
 > Pokud budete chtít vytvořit automatizace nebo skriptů pro protokolů SIEM ochrany ATP v programu Azure, doporučujeme použít **externalId** pole k identifikaci typu výstrahy místo názvu upozornění pro tento účel. Upozornění názvy mohou být občas upravit, zatímco **externalId** jednotlivých výstrah je trvalá.  
 
-## <a name="azure-atp-security-alert-unique-externalids"></a>Azure ATP zabezpečení výstrah jedinečný externalIds
+## <a name="azure-atp-security-alert-unique-external-ids"></a>Jedinečná externí ID výstrahy zabezpečení služby Azure ATP
 
 > [!div class="mx-tableFixed"] 
 
@@ -59,7 +59,7 @@ Do systému SIEM se předávají následující pole a jejich hodnoty:
 |---------|----------|---------|---------|
 |[Rekognoskace výčtu účtů](atp-reconnaissance-alerts.md#account-enumeration-reconnaissance-external-id-2003)|Rekognoskace pomocí výčtu účtů|2003|Zjišťování|
 |[Průsak dat ven přes protokol SMB](atp-exfiltration-alerts.md#data-exfiltration-over-smb-external-id-2030)| Není k dispozici| 2030|Průsak ven,<br>Laterální pohyb<br>Příkazy a ovládání|
-|[Aktivita Honeytokenu](atp-compromised-credentials-alerts.md#honeytoken-activity-external-id-2014)|Aktivita Honeytokenu|2014||
+|[Aktivita Honeytokenu](atp-compromised-credentials-alerts.md#honeytoken-activity-external-id-2014)|Aktivita Honeytokenu|2014|Přihlašovací údaje přístup<br> Zjišťování|
 |[Škodlivá žádost Data Protection API hlavní klíč](atp-domain-dominance-alerts.md#malicious-request-of-data-protection-api-master-key-external-id-2020)|Škodlivá žádost o soukromé informace přes Data Protection|2020|Přihlašovací údaje přístup|
 |[Mapování sondování sítě (DNS)](atp-reconnaissance-alerts.md#network-mapping-reconnaissance-dns-external-id-2007)|Rekognoskace pomocí DNS|2007|Zjišťování|
 |[Pokus o spuštění vzdáleného kódu](atp-domain-dominance-alerts.md#remote-code-execution-attempt-external-id-2019)|Pokus o spuštění vzdáleného kódu|2019|Spuštění,<br> Trvalost,<br> Zvýšení úrovně oprávnění<br> Únik obrany<br> Laterální pohyb|
@@ -70,20 +70,20 @@ Do systému SIEM se předávají následující pole a jejich hodnoty:
 |[Podezřelý útok hrubou silou (SMB)](atp-compromised-credentials-alerts.md#suspected-brute-force-attack-smb-external-id-2033)|Neobvyklá implementace protokolu (potenciální použití škodlivých nástrojů, jako je Hydra)|2033|Laterální pohyb|
 |[Podezřelý útok DCShadow (povýšení řadiče domény)](atp-domain-dominance-alerts.md#suspected-dcshadow-attack-domain-controller-promotion-external-id-2028)|Povýšení řadiče domény podezřelé (možný útok DCShadow)|2028|Únik obrany|
 |[Podezřelý útok DCShadow (žádost o replikaci řadiče domény)](atp-domain-dominance-alerts.md#suspected-dcshadow-attack-domain-controller-replication-request-external-id-2029)|Žádost o replikaci řadiče domény podezřelé (možný útok DCShadow)|2029|Únik obrany|
-|[Podezřelý útok DCSync (replikace adresářových služeb)](atp-domain-dominance-alerts.md#suspected-dcsync-attack-replication-of-directory-services-external-id-2006)|Škodlivá replikace adresářových služeb|2006||
-|[Podezřelé použití lístku Golden (oslabení šifrování)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-encryption-downgrade-external-id-2009)|Aktivita snížení úrovně šifrování (potenciální útok metodou golden ticket)|2009|
-|[Podezřelé použití lístku Golden (falešných dat autorizace)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-forged-authorization-data-external-id-2013) |Eskalace oprávnění prostřednictvím zfalšovaných dat autorizace|2013|Zvýšení úrovně oprávnění<br>Laterální pohyb||
-|[Podezřelé použití Golden Ticket (neexistující účet)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-nonexistent-account-external-id-2027)|Protokol Kerberos Golden Ticket - neexistující účet|2027||
-|[Podezřelé použití Golden Ticket (ticket anomálií)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-ticket-anomaly-external-id-2032)|Není k dispozici|2032||
-|[Podezřelé použití Golden Ticket (čas anomálií)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-time-anomaly-external-id-2022)|Kerberos Golden Ticket – čas anomálií|2022||
+|[Podezřelý útok DCSync (replikace adresářových služeb)](atp-domain-dominance-alerts.md#suspected-dcsync-attack-replication-of-directory-services-external-id-2006)|Škodlivá replikace adresářových služeb|2006|Trvalost,<br> Přihlašovací údaje přístup|
+|[Podezřelé použití lístku Golden (oslabení šifrování)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-encryption-downgrade-external-id-2009)|Aktivita snížení úrovně šifrování (potenciální útok metodou golden ticket)|2009|Zvýšení úrovně oprávnění<br> Laterální pohyb<br>Trvalost|
+|[Podezřelé použití lístku Golden (falešných dat autorizace)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-forged-authorization-data-external-id-2013)|Eskalace oprávnění prostřednictvím zfalšovaných dat autorizace|2013|Zvýšení úrovně oprávnění<br>Laterální pohyb<br>Trvalost|
+|[Podezřelé použití Golden Ticket (neexistující účet)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-nonexistent-account-external-id-2027)|Protokol Kerberos Golden Ticket - neexistující účet|2027|Zvýšení úrovně oprávnění<br> Laterální pohyb<br>Trvalost|
+|[Podezřelé použití Golden Ticket (ticket anomálií)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-ticket-anomaly-external-id-2032)|Není k dispozici|2032|Zvýšení úrovně oprávnění<br> Laterální pohyb<br>Trvalost|
+|[Podezřelé použití Golden Ticket (čas anomálií)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-time-anomaly-external-id-2022)|Kerberos Golden Ticket – čas anomálií|2022|Zvýšení úrovně oprávnění<br> Laterální pohyb<br>Trvalost|
 |[Krádež identity podezřelého softwaru (pass-the-hash)](atp-lateral-movement-alerts.md#suspected-identity-theft-pass-the-hash-external-id-2017)|Krádež identity pomocí útoku Pass-the-Hash|2017|Laterální pohyb|
 |[Krádež identity podezřelého softwaru (pass-the-ticket)](atp-lateral-movement-alerts.md#suspected-identity-theft-pass-the-ticket-external-id-2018)|Krádež identity pomocí útoku Pass-the-Ticket|2018|Laterální pohyb|
-|[Podezření na útok over-pass-the-hash (oslabení šifrování)](atp-lateral-movement-alerts.md#suspected-overpass-the-hash-attack-encryption-downgrade-external-id-2008)|Aktivita snížení úrovně šifrování (možný útok overpass-the-hash)|2008||
+|[Podezření na útok over-pass-the-hash (oslabení šifrování)](atp-lateral-movement-alerts.md#suspected-overpass-the-hash-attack-encryption-downgrade-external-id-2008)|Aktivita snížení úrovně šifrování (možný útok overpass-the-hash)|2008|Laterální pohyb|
 |[Podezření na útok overpass-the-hash (Kerberos)](atp-lateral-movement-alerts.md#suspected-overpass-the-hash-attack-kerberos-external-id-2002)|Neobvyklá implementace protokolu Kerberos (možný útok overpass-the-hash)|2002|Laterální pohyb|
-|[Útoku typu skeleton key podezřelého softwaru (oslabení šifrování)](atp-domain-dominance-alerts.md#suspected-skeleton-key-attack-encryption-downgrade-external-id-2010)|Aktivita snížení úrovně šifrování (potenciální útoku typu skeleton key)|2010||
+|[Útoku typu skeleton key podezřelého softwaru (oslabení šifrování)](atp-domain-dominance-alerts.md#suspected-skeleton-key-attack-encryption-downgrade-external-id-2010)|Aktivita snížení úrovně šifrování (potenciální útoku typu skeleton key)|2010|Laterální pohyb<br> Trvalost|
 |[Podezřelé použití Metasploit hacking framework](atp-compromised-credentials-alerts.md#suspected-use-of-metasploit-hacking-framework-external-id-2034)|Neobvyklá implementace protokolu (potenciální použijte Metasploit hacking nástroje)|2034|Laterální pohyb|
-|[Podezření na útok WannaCry ransomwaru](atp-compromised-credentials-alerts.md#suspected-wannacry-ransomware-attack-external-id-2035)|Neobvyklá implementace protokolu (možný útok ransomwarem WannaCry)|2035||
-|[Podezření na útok relay NTLM (účet Exchange) – preview](atp-lateral-movement-alerts.md#suspected-ntlm-relay-attack-exchange-account-external-id-2037---preview)|Není k dispozici|2037||
+|[Podezření na útok relay NTLM (účet Exchange) – preview](atp-lateral-movement-alerts.md#suspected-ntlm-relay-attack-exchange-account-external-id-2037---preview)|Není k dispozici|2037|Zvýšení úrovně oprávnění <br> Laterální pohyb|
+|[Podezření na útok WannaCry ransomwaru](atp-compromised-credentials-alerts.md#suspected-wannacry-ransomware-attack-external-id-2035)|Neobvyklá implementace protokolu (možný útok ransomwarem WannaCry)|2035|Laterální pohyb|
 |[Podezřelá komunikace prostřednictvím DNS](atp-exfiltration-alerts.md#suspicious-communication-over-dns-external-id-2031)|Podezřelá komunikace prostřednictvím DNS|2031|Průsak ven|
 |[Podezřelé úprava citlivých skupin](atp-domain-dominance-alerts.md#suspicious-modification-of-sensitive-groups-external-id-2024)|Podezřelé úprava citlivých skupin|2024|Přihlašovací údaje přístup<br>Trvalost|
 |[Podezřelé vytvoření služby](atp-domain-dominance-alerts.md#suspicious-service-creation-external-id-2026)|Podezřelé vytvoření služby|2026|Spuštění,<br> Trvalost,<br> Zvýšení úrovně oprávnění<br> Únik obrany<br>Laterální pohyb|
