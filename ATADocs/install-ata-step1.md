@@ -8,17 +8,16 @@ manager: barbkess
 ms.date: 03/07/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
-ms.service: ''
 ms.technology: ''
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 81029f1f651f3138688b6952d47bba05a32e7efd
-ms.sourcegitcommit: aad7a417addae3f21f81ea2b7336c3d83659f592
+ms.openlocfilehash: 7ff9f08ca231f64076e29250ae8d09f192d8cf4e
+ms.sourcegitcommit: b468d9060eb784c16b64a9cc46dbe2d246046cdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57828205"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58674567"
 ---
 # <a name="install-ata---step-1"></a>Instalace ATA – krok 1
 

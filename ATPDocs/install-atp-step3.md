@@ -7,16 +7,14 @@ ms.author: mlottner
 ms.date: 02/05/2019
 ms.topic: get-started-article
 ms.collection: M365-security-compliance
-ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: ''
 ms.assetid: 95bb4ec1-841f-41b7-92fe-fbd144085724
-ms.openlocfilehash: 24aab8277d412bf245db3e260412e085f049e082
-ms.sourcegitcommit: c48db18274edb2284e281960c6262d97f96e01d2
+ms.openlocfilehash: fe18595d82c71c0680cd7e66f33b06f96007ad62
+ms.sourcegitcommit: b468d9060eb784c16b64a9cc46dbe2d246046cdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56263748"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58674410"
 ---
 # <a name="quickstart-download-the-azure-atp-sensor-setup-package"></a>Rychlý start: Stažení instalačního balíčku senzoru služby Azure ATP
 

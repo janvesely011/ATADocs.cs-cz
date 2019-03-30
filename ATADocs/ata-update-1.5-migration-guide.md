@@ -8,17 +8,16 @@ manager: barbkess
 ms.date: 01/23/2017
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
-ms.service: ''
 ms.technology: ''
 ms.assetid: fb65eb41-b215-4530-93a2-0b8991f4e980
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: dee659bb3940a177084eae93411a4cf2c65f6aae
-ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
+ms.openlocfilehash: ed876730dd23ba53c0c486a92e16a98fa4232a42
+ms.sourcegitcommit: 62b631f64a639f5df04bf805755f26c69b40e8e4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56076850"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58638809"
 ---
 # <a name="ata-update-to-15-migration-guide"></a>Průvodce migrací pro aktualizaci ATA na verzi 1.5
 Aktualizace ATA na verzi 1.5 přináší vylepšení v následujících oblastech:

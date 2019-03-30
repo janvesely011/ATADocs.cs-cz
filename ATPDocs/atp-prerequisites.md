@@ -8,18 +8,16 @@ manager: barbkess
 ms.date: 03/24/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
-ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: ''
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 7619c0bf7f1e8a6cf90956124c683400bc5c686d
-ms.sourcegitcommit: 6975497acaf298af393f96573e1790ab617fa5b4
+ms.openlocfilehash: 2f5c1ca28c770272b9d9271f08edad444704e971
+ms.sourcegitcommit: b468d9060eb784c16b64a9cc46dbe2d246046cdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58406599"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58675162"
 ---
 # <a name="azure-atp-prerequisites"></a>Požadavky služby Azure ATP
 

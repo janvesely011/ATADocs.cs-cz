@@ -8,18 +8,16 @@ manager: barbkess
 ms.date: 03/24/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
-ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: ''
 ms.assetid: 1ac873fc-b763-41d7-878e-7c08da421cb5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d3f6b3fda2dbfca0250069ba08d027b1b16d5659
-ms.sourcegitcommit: 6975497acaf298af393f96573e1790ab617fa5b4
+ms.openlocfilehash: 7a6be64ed92fc194d3849ff1f38fa4c9d7ee9c1b
+ms.sourcegitcommit: b468d9060eb784c16b64a9cc46dbe2d246046cdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58406667"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58674754"
 ---
 # <a name="what-is-network-name-resolution"></a>Co je překlad síťových názvů?
 

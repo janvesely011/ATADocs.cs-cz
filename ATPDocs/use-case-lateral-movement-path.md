@@ -8,18 +8,16 @@ manager: barbkess
 ms.date: 11/25/2018
 ms.topic: conceptual
 ms.collection: M365-security-compliance
-ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: ''
 ms.assetid: de15c920-8904-4124-8bdc-03abd9f667cf
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c115584dd4898e7453325125888667a1bb9a53d6
-ms.sourcegitcommit: c48db18274edb2284e281960c6262d97f96e01d2
+ms.openlocfilehash: ec73947f21d67b5cfef51dfe761c87ad1b30cca4
+ms.sourcegitcommit: b468d9060eb784c16b64a9cc46dbe2d246046cdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56263399"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58674703"
 ---
 # <a name="azure-atp-lateral-movement-paths-lmps"></a>Azure ATP laterální pohyb cesty (LMPs) 
 

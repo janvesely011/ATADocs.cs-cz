@@ -8,18 +8,16 @@ manager: barbkess
 ms.date: 11/11/2018
 ms.topic: conceptual
 ms.collection: M365-security-compliance
-ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: ''
 ms.assetid: cae3ed45-8fbc-4f25-ba24-3cc407c6ea93
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 959205b6ca909609894c486c2f676dd718f6abe4
-ms.sourcegitcommit: c48db18274edb2284e281960c6262d97f96e01d2
+ms.openlocfilehash: 9e0c59fb435167f0bd66d58a710b8a3c6109ba76
+ms.sourcegitcommit: b468d9060eb784c16b64a9cc46dbe2d246046cdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56263709"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58674652"
 ---
 # <a name="excluding-entities-from-detections"></a>Vyloučení entit z detekce
 Tento článek vysvětluje, jak vyloučení entit, která aktivuje upozornění. Některé entity budou vyloučeny, chcete-li minimalizovat neškodné pravdivě pozitivní během provádění, je možné zachytit pravdivě pozitivní. Pokud chcete zabránit vytvoření šumu o aktivitách, které určitých uživatelů, může být součástí vaší běžné podnikové činnosti ochrany ATP v programu Azure, můžete potlačit – nebo vyloučit – konkrétní entity nemají vyvolávat výstrahy. Kromě toho jsou vyloučeny některé oblíbené entity ve výchozím nastavení. 

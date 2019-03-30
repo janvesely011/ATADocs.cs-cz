@@ -8,17 +8,16 @@ manager: barbkess
 ms.date: 7/25/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
-ms.service: ''
 ms.technology: ''
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: bf014e43711d45b74d5bb5efa7a93d7c3e1532d7
-ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
+ms.openlocfilehash: 223374f564c6014f11387a6afdac0c5db4debed7
+ms.sourcegitcommit: b468d9060eb784c16b64a9cc46dbe2d246046cdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56077724"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58675026"
 ---
 # <a name="troubleshooting-ata-known-issues"></a>Řešení známých problémů ATA
 

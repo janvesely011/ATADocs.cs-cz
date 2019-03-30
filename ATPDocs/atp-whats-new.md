@@ -8,18 +8,16 @@ manager: barbkess
 ms.date: 03/24/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
-ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: ''
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: b39c51d725a652fe1e936437ad3d0bf0c7d86db7
-ms.sourcegitcommit: 6975497acaf298af393f96573e1790ab617fa5b4
+ms.openlocfilehash: fe04b41a64854daf7a98fc83d7ef8e2d96465927
+ms.sourcegitcommit: b468d9060eb784c16b64a9cc46dbe2d246046cdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58406633"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58675230"
 ---
 # <a name="whats-new-in-azure-atp"></a>Co je nového v Azure ATP
 

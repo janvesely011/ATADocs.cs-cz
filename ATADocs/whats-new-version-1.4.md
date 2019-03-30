@@ -8,17 +8,16 @@ manager: barbkess
 ms.date: 01/23/2017
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
-ms.service: ''
 ms.technology: ''
 ms.assetid: cbea47f9-34c1-42b6-ae9e-6a472b49e1a5
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 207d3b16ae217fc4f032461736631a6e8b2b1768
-ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
+ms.openlocfilehash: 380ad2bcc5327f2157db6396921ac638dbbab091
+ms.sourcegitcommit: b468d9060eb784c16b64a9cc46dbe2d246046cdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56076364"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58674091"
 ---
 # <a name="what39s-new-in-ata-version-14"></a>Novinky ATA verze 1.4
 Tyto poznámky k verzi obsahují informace o známých problémech ve verzi 1.4 Advanced Threat Analytics.

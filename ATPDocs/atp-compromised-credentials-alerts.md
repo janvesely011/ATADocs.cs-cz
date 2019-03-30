@@ -8,18 +8,16 @@ manager: barbkess
 ms.date: 1/15/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
-ms.prod: ''
 ms.service: azure-advanced-threat-protection
-ms.technology: ''
 ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: de426a06fb7d0893d56b82fcaa9599f523054774
-ms.sourcegitcommit: 1b9a79932a0e14d79c5c919cd14bc606b1c51103
+ms.openlocfilehash: c92ca6cb208d2a23de38ad39b9ce39dffbca0710
+ms.sourcegitcommit: b468d9060eb784c16b64a9cc46dbe2d246046cdd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57981200"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58675213"
 ---
 # <a name="tutorial-compromised-credential-alerts"></a>Kurz: Upozornění ohrožení zabezpečení přihlašovacích údajů  
 
