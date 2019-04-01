@@ -3,6 +3,7 @@
 ## [Jaké hrozby ATA detekuje?](ata-threats.md)
 ## Novinky ATA
 ### [Novinky ATA verze 1.9](whats-new-version-1.9.md)
+#### [Aktualizace na ATA 1.9.2 – průvodce migrací](ata-update-1.9.2-migration-guide.md)
 #### [Aktualizace na ATA 1.9.1 – průvodce migrací](ata-update-1.9.1-migration-guide.md)
 #### [Aktualizace na ATA 1.9 – průvodce migrací](ata-update-1.9-migration-guide.md)
 ### [Novinky ATA verze 1.8](whats-new-version-1.8.md)
@@ -52,7 +53,7 @@
 ## [Práce s podezřelými aktivitami](working-with-suspicious-activities.md)
 ## [Práce s konzolou ATA](working-with-ata-console.md)
 ### [Profily entit](entity-profiles.md)
-##[Zabránění laterálním průnikovým trasám](use-case-lateral-movement-path.md)
+## [Zabránění laterálním průnikovým trasám](use-case-lateral-movement-path.md)
 ## ATA referenční informace
 ### [Referenční informace k protokolům pro SIEM](cef-format-sa.md)
 ### [Reference ID události](event-id-reference.md)
