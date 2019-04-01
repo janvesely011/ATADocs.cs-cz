@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 1ac873fc-b763-41d7-878e-7c08da421cb5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 7a6be64ed92fc194d3849ff1f38fa4c9d7ee9c1b
-ms.sourcegitcommit: b468d9060eb784c16b64a9cc46dbe2d246046cdd
+ms.openlocfilehash: c484d1e2c184358531d4f4a746f49760f47ea4dd
+ms.sourcegitcommit: a0d1ae7e221fd8bbaf81bf8ae4833ae77fb80ae8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58674754"
+ms.lasthandoff: 03/31/2019
+ms.locfileid: "58752230"
 ---
 # <a name="what-is-network-name-resolution"></a>Co je překlad síťových názvů?
 
@@ -68,7 +68,7 @@ Každé monitorování výstraha poskytuje konkrétní podrobnosti metody, senzo
     - Zkontrolujte, že je Port 135 otevřené pro příchozí komunikace ze senzorů ochrany ATP v programu Azure, na všech počítačích v prostředí.
     - Zkontrolujte, že všechny sítě (Brána firewall), protože to může zabránit komunikaci na příslušné porty.
 
--Rozhraní NetBIOS:
+- NetBIOS:
     - Zkontrolujte, že je Port 137 otevřené pro příchozí komunikace ze senzorů ochrany ATP v programu Azure, na všech počítačích v prostředí.
     - Zkontrolujte, že všechny sítě (Brána firewall), protože to může zabránit komunikaci na příslušné porty.
 - Reverzní DNS:

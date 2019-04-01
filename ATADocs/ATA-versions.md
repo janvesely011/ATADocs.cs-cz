@@ -1,29 +1,29 @@
 ---
 title: Verze Advanced Threat Analytics | Dokumentace Microsoftu
 description: Toto téma popisuje různé možnosti podpory pro verze Microsoft Advanced Threat Analytics (ATA).
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: barbkess
-ms.date: 7/15/2018
+ms.date: 03/28/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: a8afbd91-c888-4dfc-94ab-72e38745163e
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 377d95f1ef6a57d9aa41f75b4d934909224ec22e
-ms.sourcegitcommit: b468d9060eb784c16b64a9cc46dbe2d246046cdd
+ms.openlocfilehash: 5ac40a7a6d170dab23630283d31704eb18507e45
+ms.sourcegitcommit: a0d1ae7e221fd8bbaf81bf8ae4833ae77fb80ae8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58674720"
+ms.lasthandoff: 03/31/2019
+ms.locfileid: "58752242"
 ---
 # <a name="support-for-microsoft-advanced-threat-analytics-ata-versions"></a>Podpora pro verze Microsoft Advanced Threat Analytics (ATA)
 
 
 *Platí pro: Advanced Threat Analytics verze 1.9*
 
-Microsoft má v plánu vydávat aktualizace ATA párkrát za rok s tím, že každá verze aktualizace bude podporována po dobu 12 měsíců od data jejího vydání s obecnou dostupností. Technická podpora je poskytována po celých 12 měsíců. Naše struktura podpory je teď ale dynamická – rozvíjí se do dvou různých fází údržby, které závisejí na dostupnosti nejnovější verze.
+Aktualizace Microsoft ATA párkrát za rok s tím každá verze aktualizace bude podporována po dobu 12 měsíců od data jejího vydání s obecnou dostupnost (GA). Technická podpora je poskytována po celých 12 měsíců. Naše struktura podpory je teď ale dynamická – rozvíjí se do dvou různých fází údržby, které závisejí na dostupnosti nejnovější verze.
 
 -   Zabezpečení a fáze údržby důležité aktualizace – když spustíte nejnovější verzi ATA, zobrazí se zabezpečení a důležité aktualizace.
 
@@ -47,6 +47,7 @@ Microsoft má v plánu vydávat aktualizace ATA párkrát za rok s tím, že ka�
 |1.8.1|1.8.6765|02. SRPNA 2017|02. SRPNA 2018|
 |1.9|1.9.7312|21-MAR-2018|21-MAR-2019|
 |1.9.1|1.9.7412|01. ČERVENCE 2018|01. ČERVENCE 2019|
+|1.9.2|1.9.7475|28. BŘEZNA 2019|28-MAR-2020|
 
 
 
