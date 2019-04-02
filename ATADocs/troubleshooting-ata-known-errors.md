@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 7/25/2018
+ms.date: 03/31/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 223374f564c6014f11387a6afdac0c5db4debed7
-ms.sourcegitcommit: b468d9060eb784c16b64a9cc46dbe2d246046cdd
+ms.openlocfilehash: edac28031e9faa3e5c23bbbd82ef4ce023f1f249
+ms.sourcegitcommit: db60935a92fe43fe149f6a4d3114fe0edaa1d331
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58675026"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58763997"
 ---
 # <a name="troubleshooting-ata-known-issues"></a>Řešení známých problémů ATA
 
@@ -64,6 +64,8 @@ Tato část podrobně popisuje možné chyby v nasazení ATA a kroky potřebné 
 > |System.Net.Http.HttpRequestException: Při odesílání požadavku došlo k chybě. ---> System.Net.WebException: Vzdálený server vrátil chybu: Vyžadováno ověřování proxy serveru (407).|Procesu nasazení vypršel časový limit, protože kvůli chybné konfiguraci proxy serveru nebyla komponenta ATA Center dosažitelná.|Před nasazením zakažte konfiguraci proxy serveru a pak ji znovu povolte. Alternativně můžete v proxy serveru nakonfigurovat výjimku.|
 > |System.Net.Sockets.SocketException: Stávající připojení vynuceně zavřel vzdálený hostitel||Použijte jednu z následujících možností: </br>Povolení protokolu TLS 1.0 na bráně ATA Gateway </br>Protokol TLS 1.2 na rozhraní .net nastavením klíčů registru použít výchozí nastavení operačního systému pro protokol SSL a TLS, následujícím způsobem:</br> `[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`</br> `[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`</br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SchUseStrongCrypto"=dword:00000001` </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] " SchUseStrongCrypto"=dword:00000001`|
 > |Chyby [\[] DeploymentModel [\]] se nezdařilo ověřování pro správu [\[] CurrentlyLoggedOnUser =<domain>\<uživatelské jméno > Stav = FailedAuthentication výjimka = [\]]|Procesu nasazení komponenty ATA Gateway nebo ATA Lightweight Gateway se nepovedlo úspěšně ověřit komponentě ATA Center|Z počítače, na kterém procesu nasazení se nepodařilo otevřít prohlížeč a zobrazit, pokud se lze připojit konzolu ATA. </br>V opačném případě spusťte řešení potíží zobrazíte, proč se v prohlížeči nemůže ověřit komponentě ATA Center. </br>Co je potřeba zkontrolovat: </br>Konfigurace proxy serveru</br>Problémy sítě</br>Nastavení zásad skupiny pro ověřování v daném počítači, který se liší od komponenty ATA Center.|
+> | Chyby [\[] DeploymentModel [\]] se nezdařilo ověřování pro správu|Ověřování certifikátu Center se nezdařilo.|Certifikát Center vyžaduje pro ověření připojení k Internetu. Ujistěte se, že vaše služba brány má konfiguraci proxy serveru správná umožňující připojení a ověřování.|
+
 
 
 ## <a name="ata-center-errors"></a>Chyby komponenty ATA Center

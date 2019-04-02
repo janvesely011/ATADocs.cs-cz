@@ -7,12 +7,12 @@ author: mlottner
 ms.author: mlottner
 ms.date: 02/28/2019
 ms.reviewer: itargoet
-ms.openlocfilehash: 2bfbbc994ea4ec9aea57541f8f5a35590c397f84
-ms.sourcegitcommit: 8681c4ed6ede58ace737f31eeff9a680b8e4256d
+ms.openlocfilehash: b3ea5b1d2f33f9647fb9dea8927a80aeae76ee03
+ms.sourcegitcommit: 38b68d96fbf04fe40e1f9a62a1af3d1d00e63614
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "57007462"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58808253"
 ---
 # <a name="tutorial-domain-dominance-playbook"></a>Kurz: Playbook dominance v doméně
 
@@ -194,7 +194,7 @@ Ochrana ATP v programu Azure se úspěšně zjistilo podezřelé předběžné o
 
 ### <a name="golden-ticket---existing-user"></a>Zlatý lístek - existujícího uživatele
 
-Po krádeži "Zlatých lístků" ("krbtgt" účet vysvětlení [zde prostřednictvím škodlivou replikaci](#Malicious-Replication), útočník se moct přihlásit lístky *jako v případě, že jsou řadiče domény*. **Nástroj Mimikatz**, identifikátor SID domény a účet odcizeného "krbtgt" jsou všechny požadované k provedení tohoto útoku. Nejenže jsme generování lístků pro uživatele, budeme vytvářet lístky pro uživatele, kteří ještě neexistují.
+Po krádeži "Zlatých lístků" ("krbtgt" účet vysvětlení [zde prostřednictvím škodlivou replikaci](#malicious-replication), útočník se moct přihlásit lístky *jako v případě, že jsou řadiče domény*. **Nástroj Mimikatz**, identifikátor SID domény a účet odcizeného "krbtgt" jsou všechny požadované k provedení tohoto útoku. Nejenže jsme generování lístků pro uživatele, budeme vytvářet lístky pro uživatele, kteří ještě neexistují.
 
 1. Jako JeffL, spusťte následující příkaz na **VictimPC** získat identifikátorem SID domény:
 

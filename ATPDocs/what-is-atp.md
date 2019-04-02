@@ -12,15 +12,15 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 2d14d0e9-1b03-4bcc-ae97-8fd41526ffc5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: aff7fead200205e3b60c23b054049b273f9277c4
-ms.sourcegitcommit: b468d9060eb784c16b64a9cc46dbe2d246046cdd
+ms.openlocfilehash: 13ef41fd698945c2517318f8c68a61d807557e08
+ms.sourcegitcommit: db60935a92fe43fe149f6a4d3114fe0edaa1d331
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58674975"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58763980"
 ---
 # <a name="what-is-azure-advanced-threat-protection"></a>Co je Azure Advanced Threat Protection?
-Azure Protection pokročilé před internetovými útoky (ATP) je řešení cloudového zabezpečení, které identifikuje a detekuje, vám pomůže prozkoumat důmyslné hrozby, ohrožení zabezpečení identity a zlými úmysly akce zaměřené na vaší organizaci. Ochrana ATP v programu Azure umožňuje analytikům SecOp a jenom pro detekci pokročilých útoků v hybridních prostředích pro odborníky v oblasti zabezpečení:  
+Azure Protection pokročilé před internetovými útoky (ATP) je řešení cloudového zabezpečení, které využívá vaše na pracoviště signály služby Active Directory identifikovat, detekujte a prošetřete důmyslné hrozby, ohrožení zabezpečení identity a akce zlými úmysly, zaměřuje na vaše organizace. Ochrana ATP v programu Azure umožňuje analytikům SecOp a jenom pro detekci pokročilých útoků v hybridních prostředích pro odborníky v oblasti zabezpečení:  
 - Sledování uživatelů, chování entit a aktivity s analýzy založené na učení  
 - Ochrana identit uživatelů a přihlašovací údaje uložené ve službě Active Directory  
 - Vyhledávání nežádoucími aktivitami uživatelů a rozšířeným útokům v celém řetězu událostí 

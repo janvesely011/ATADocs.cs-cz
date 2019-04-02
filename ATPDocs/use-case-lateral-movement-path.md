@@ -1,23 +1,23 @@
 ---
-title: Úvod do cesty taktiky Lateral Movement pomocí ochrany ATP v programu Azure | Dokumentace Microsoftu
+title: Principy a použití cesty taktiky Lateral Movement pomocí služby Azure ATP | Dokumentace Microsoftu
 description: Tento článek popisuje potenciální Laterálním Průnikovým trasám (LMPs) z Azure Advanced Threat Protection (ATP).
 keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 11/25/2018
+ms.date: 03/31/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: de15c920-8904-4124-8bdc-03abd9f667cf
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ec73947f21d67b5cfef51dfe761c87ad1b30cca4
-ms.sourcegitcommit: b468d9060eb784c16b64a9cc46dbe2d246046cdd
+ms.openlocfilehash: 4a24f542576a716ff7a9ffdcde542e6317d394c0
+ms.sourcegitcommit: db60935a92fe43fe149f6a4d3114fe0edaa1d331
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58674703"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58764014"
 ---
 # <a name="azure-atp-lateral-movement-paths-lmps"></a>Azure ATP laterální pohyb cesty (LMPs) 
 
@@ -48,12 +48,11 @@ Zjistíte, kdy byly zjištěny možné LMPs a potenciálně souvisejících enti
 ## <a name="lmp-discovery"></a>LMP zjišťování
 
 Na kartě aktivit je přiřazena jako ukazatel toho, když se identifikovat nové potenciální LMP:
-- Citliví uživatelé – když novou cestu, kterou jste našli na citlivého uživatele
+- Citliví uživatelé – když se zjistí novou cestu, citlivé uživatele
 
 ![Azure identifikovat citlivé na ochrany ATP v programu cesty laterální pohyb (LMP)](./media/atp-lmp-activities.png)
 
-
-- Uživatelé a počítače – když tuto entitu byl identifikován v potenciální LMP, což vede k citlivé uživatele.
+- Uživatelé a počítače – když tato entita je identifikován v potenciální LMP, což vede k citlivé uživatele.
 
 ![Azure ochrany ATP v programu cesty laterální pohyb (LMP) nejsou citliví identifikovat](./media/atp-lateral-non-sensitive.png)
 

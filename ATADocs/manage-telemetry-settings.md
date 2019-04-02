@@ -7,16 +7,16 @@ ms.author: mlottner
 manager: barbkess
 ms.date: 8/19/2018
 ms.topic: article
-ms.service: advanced-threat-analytics
+ms.prod: advanced-threat-analytics
 ms.assetid: 8c1c7a1b-a3de-4105-9fd0-08a061952172
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 8b27b65393862ec9b78ebe578715b7ab29c29f70
-ms.sourcegitcommit: b468d9060eb784c16b64a9cc46dbe2d246046cdd
+ms.openlocfilehash: e5766e409a1e2bb3f463e10459045f5a233c1fe1
+ms.sourcegitcommit: 38b68d96fbf04fe40e1f9a62a1af3d1d00e63614
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58673989"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58808134"
 ---
 # <a name="manage-system-generated-logs"></a>Správa systémem generovaných protokolů
 

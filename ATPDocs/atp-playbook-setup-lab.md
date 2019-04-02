@@ -7,12 +7,12 @@ author: mlottner
 ms.author: mlottner
 ms.date: 02/28/2019
 ms.reviewer: itargoet
-ms.openlocfilehash: 30b0fcb47ae735d4e9090a38f14f9658c64864f5
-ms.sourcegitcommit: 4711f0ff4331e0bcc84663f46054216b7db9f98e
+ms.openlocfilehash: 9ae630711b6ee7b7f84a233998d188e498af0a9e
+ms.sourcegitcommit: 38b68d96fbf04fe40e1f9a62a1af3d1d00e63614
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56989101"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58808270"
 ---
 # <a name="tutorial-setup-an-atp-security-alert-lab"></a>Kurz: Instalační program ochrany ATP v programu testovacího prostředí výstrahy zabezpečení 
 
@@ -30,7 +30,7 @@ V tomto kurzu provedete následující:
 
 ## <a name="prerequisites"></a>Požadavky
 
-1. [Řadič domény testovacího prostředí a dvě pracovní stanice lab](#Server-and-Computers).
+1. [Řadič domény testovacího prostředí a dvě pracovní stanice lab](#servers-and-computers).
    - Pokračujte a [hydrate Active Directory (AD) s uživateli](#bkmk_hydrate).
 1. [Instance služby Azure ATP](install-atp-step1.md) , který je [připojení k AD](install-atp-step2.md).
 1. [Stáhněte si](install-atp-step3.md) a [nainstalujte nejnovější verzi senzoru služby Azure ATP](install-atp-step4.md) na řadiči domény testovacího prostředí.

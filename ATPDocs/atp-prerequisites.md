@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 03/24/2019
+ms.date: 03/31/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 2f5c1ca28c770272b9d9271f08edad444704e971
-ms.sourcegitcommit: b468d9060eb784c16b64a9cc46dbe2d246046cdd
+ms.openlocfilehash: 63d9c5c565c2f241ad7387f1cb64824ee825b025
+ms.sourcegitcommit: db60935a92fe43fe149f6a4d3114fe0edaa1d331
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58675162"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58764031"
 ---
 # <a name="azure-atp-prerequisites"></a>Požadavky služby Azure ATP
 
@@ -28,6 +28,8 @@ Tento článek popisuje požadavky pro úspěšné nasazení služby Azure ATP v
 
 
 Ochrana ATP v programu Azure se skládá z cloudové službě ochrana ATP v programu Azure, který se skládá z ochrany ATP v programu Azure portal, senzoru služby Azure ATP a/nebo samostatného senzoru služby Azure ATP. Další informace o jednotlivých součástech ochrany ATP v programu Azure najdete v tématu [architektura služby Azure ATP](atp-architecture.md).
+
+Ochrana ATP v programu Azure chrání vaše uživatele služby Active Directory na pracoviště a/nebo uživatelů synchronizované do Azure Active Directory. Pokud chcete chránit prostředí tvořené pouze uživatele AAD, naleznete v tématu [AAD Identity Protection] (https://docs.microsoft.com/azure/active-directory/identity-protection/overview). 
 
 K vytvoření instance služby Azure ATP, budete potřebovat minimálně jeden globální zabezpečení a správce tenanta služby AAD. Každá instance služby Azure ATP podporuje více hranice doménové struktury služby Active Directory a doménovou strukturu funkční úroveň (ffl) v systémech Windows 2003 a novějších. 
 
@@ -75,7 +77,7 @@ Přístup k portálu ochrany ATP v programu Azure je prostřednictvím prohlíž
 
 
 > [!NOTE]
-> Ve výchozím nastavení ochrany ATP v programu Azure podporuje až 100 senzorů. Pokud chcete nainstalovat více, kontaktujte podporu služby Azure ATP.
+> Ve výchozím nastavení ochrany ATP v programu Azure podporuje až 200 senzory. Pokud chcete nainstalovat více, kontaktujte podporu služby Azure ATP.
 
 ## <a name="azure-atp-sensor-requirements"></a>Senzor požadavky služby Azure ATP
 V této části jsou uvedené požadavky senzoru služby Azure ATP.
@@ -83,9 +85,9 @@ V této části jsou uvedené požadavky senzoru služby Azure ATP.
 ### <a name="general"></a>Obecné
 
 > [!NOTE]
-> Ujistěte se, že je nainstalovaný KB4487044, při použití serveru 2019. Azure ochrany ATP v programu senzorů již nainstalované na serverech 2019 bez KB4487044 se automaticky zastaví.
+> Ujistěte se, že [KB4487044](https://support.microsoft.com/help/4487044/windows-10-update-kb4487044) je nainstalován při použití serveru 2019 nebo znalostní BÁZE, který zahrnuje KB4487044 jako [KB4489899](https://support.microsoft.com/help/4489899/windows-10-update-kb4489899). Azure ochrany ATP v programu senzorů již nainstalované na serverech 2019 bez této aktualizace se automaticky zastaví.
  
-Senzoru služby Azure ATP podporuje instalaci na řadičích domény se systémem Windows Server 2008 R2 SP1 (nikoli včetně jádra serveru), Windows Server 2012, Windows Server 2012 R2, Windows Server 2016 (včetně jádra, ale ne Nano), 2019 serveru systému Windows (včetně jádra, ale Ne Nano).
+Senzoru služby Azure ATP podporuje instalaci na řadičích domény se systémem Windows Server 2008 R2 SP1 (nikoli včetně jádra serveru), Windows Server 2012, Windows Server 2012 R2, Windows Server 2016 (včetně jádra serveru systému Windows, ale nikoli Windows Nano Server), Windows 2019 serveru (včetně jádra Windows, ale nikoli Windows Nano Server).
 
 Řadič domény může být řadič domény jen pro čtení (RODC).
 

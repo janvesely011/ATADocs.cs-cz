@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c92ca6cb208d2a23de38ad39b9ce39dffbca0710
-ms.sourcegitcommit: b468d9060eb784c16b64a9cc46dbe2d246046cdd
+ms.openlocfilehash: 23de55308ffe48f73b7db06a1a15790c14ecc8a0
+ms.sourcegitcommit: 38b68d96fbf04fe40e1f9a62a1af3d1d00e63614
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58675213"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58808236"
 ---
 # <a name="tutorial-compromised-credential-alerts"></a>Kurz: Upozornění ohrožení zabezpečení přihlašovacích údajů  
 
@@ -167,7 +167,7 @@ Je důležité zkontrolovat, pokud ukončení všech pokusů o přihlášení po
 **TP, B-TP nebo FP**
 
 1. Zkontrolujte, jestli zdrojovém počítači běží nástroj útoku, jako je například Hydra.
-   1. Pokud zdrojovém počítači běží nástroj útoku, je tato výstraha **TP**. Postupujte podle pokynů v [pochopit tak rozsah porušení](#understand-the-scope-of-the-breach).
+   1. Pokud zdrojovém počítači běží nástroj útoku, je tato výstraha **TP**. Postupujte podle pokynů v **pochopit tak rozsah porušení**výše.
 
 V některých případech aplikace implementovat vlastní ověřování protokolem NTLM nebo SMB zásobníku.
 
@@ -202,7 +202,7 @@ V některých případech aplikace implementovat vlastní ověřování protokol
 
 1. Kontrola, zda je na zdrojovém počítači spuštěná WannaCry. 
 
-    - Pokud WannaCry běží, je tato výstraha **TP**. Postupujte podle pokynů v [pochopit tak rozsah porušení](#understand-the-scope-of-the-breach).
+    - Pokud WannaCry běží, je tato výstraha **TP**. Postupujte podle pokynů v **pochopit tak rozsah porušení**výše.
 
 V některých případech aplikace implementovat vlastní ověřování protokolem NTLM nebo SMB zásobníku.
 
@@ -236,7 +236,7 @@ V některých případech aplikace implementovat vlastní ověřování protokol
 
 1. Zkontrolujte, jestli zdrojovém počítači běží nástroj útoku, třeba Metasploit nebo Medusa.
 
-2. Pokud ano, jde o pravdivě pozitivní upozornění. Postupujte podle pokynů v [pochopit tak rozsah porušení](#understand-the-scope-of-the-breach).
+2. Pokud ano, jde o pravdivě pozitivní upozornění. Postupujte podle pokynů v **pochopit tak rozsah porušení**výše.
 
 V některých případech aplikace implementovat vlastní ověřování protokolem NTLM nebo SMB zásobníku.
 

@@ -6,18 +6,18 @@ author: mlottner
 ms.author: mlottner
 manager: barbkess
 ms.date: 10/04/2018
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 88692d1a-45a3-4d54-a549-4b5bba6c037b
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 29fd19796457390370c3e1933af4b927a4ffb9ed
-ms.sourcegitcommit: b468d9060eb784c16b64a9cc46dbe2d246046cdd
+ms.openlocfilehash: 40eef8bde4caa76fccef29667f178c3a31b03c30
+ms.sourcegitcommit: 38b68d96fbf04fe40e1f9a62a1af3d1d00e63614
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58674839"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58808168"
 ---
 # <a name="configure-event-collection"></a>Konfigurace shromažďování událostí
 

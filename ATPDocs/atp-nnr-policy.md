@@ -5,32 +5,25 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 03/24/2019
+ms.date: 03/31/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 1ac873fc-b763-41d7-878e-7c08da421cb5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c484d1e2c184358531d4f4a746f49760f47ea4dd
-ms.sourcegitcommit: a0d1ae7e221fd8bbaf81bf8ae4833ae77fb80ae8
+ms.openlocfilehash: 7dd41fea1a2a7f8c4a2e122ec75d8735fb49c37d
+ms.sourcegitcommit: db60935a92fe43fe149f6a4d3114fe0edaa1d331
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/31/2019
-ms.locfileid: "58752230"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58763946"
 ---
 # <a name="what-is-network-name-resolution"></a>Co je překlad síťových názvů?
 
 Překlad síťových názvů nebo (NNR) je hlavní součástí služby Azure ATP funkce. Ochrana ATP v programu Azure zaznamenává aktivity na základě síťového provozu, Windows, událostí a trasování událostí pro Windows – tyto aktivity obvykle obsahují data IP adresy.  
 
 Použití ÚTOKŮ, ochrana ATP v programu Azure je možnost provést korelaci mezi nezpracovaná aktivity (který obsahuje IP adresy) a relevantní počítačů zahrnutých v každé aktivity. Založené na aktivitách nezpracovaná, ochrana ATP v programu Azure profily entit, včetně počítačů a generuje upozornění zabezpečení na podezřelé aktivity.
-
-NNR dat je zásadní pro detekci hrozeb následující:
-
-- Krádež identity podezřelého softwaru (pass-the-ticket)
-- Podezřelý útok DCSync (replikace adresářových služeb)
-- Mapování sondování sítě (DNS)
-- Podezření na útok přenosového protokolu NTLM (účet Exchange)
 
 K překladu IP adres na názvy počítačů, senzory ochrany ATP v programu dotazu IP adresu pro název počítače "za" IP adresu, pomocí jedné z následujících metod:
 
@@ -43,6 +36,25 @@ K překladu IP adres na názvy počítačů, senzory ochrany ATP v programu dota
 >Na všech portech neprobíhá žádné ověřování.
 
 Po načtení názvu počítače, senzoru služby Azure ATP ověří ve službě Active Directory a zjistěte, jestli je objekt korelační počítače se stejným názvem počítače. Pokud senzor najde korelace, související senzor tato IP adresa na tento objekt počítače.
+
+NNR dat je zásadní pro detekci hrozeb následující:
+
+- Krádež identity podezřelého softwaru (pass-the-ticket)
+- Podezřelý útok DCSync (replikace adresářových služeb)
+- Mapování sondování sítě (DNS)
+
+Ke zlepšení vaší schopnosti určit, pokud je výstraha **kladnou hodnotu True (TP)** nebo **falešně pozitivní (FP)**, ochrana ATP v programu Azure zahrnuje do jaké míry jistoty pojmenování řešení do doklad o každé zabezpečení počítačů upozornění. 
+ 
+Například když jsou názvy počítačů se **vysokou jistoty** to zvyšuje sebejistotu ve výsledné výstrahy zabezpečení jako **True kladné** nebo **TP**. 
+
+Legitimace obsahuje čas, IP a název počítače, které se přeložila na IP adresu. Při překladu jistoty **nízké**, pomocí těchto informací můžete prozkoumat a ověřit, které zařízení se v tuto chvíli true zdrojové IP adresy. Po potvrzení zařízení, můžete určit Pokud je výstraha **falešně pozitivní** nebo **FP**, podobně jako v následujících příkladech:
+
+- Podezření na krádež identity (pass-the-ticket) – pro stejný počítač aktivaci výstrahy.
+- Podezření na útok DCSync (replikace adresářových služeb) – byla výstraha z řadiče domény.
+- Mapování rekognoskace (DNS) – oznámení sítě byla spuštěna ze serveru DNS.
+
+    ![Legitimace jistoty](media/nnr-high-certainty.png)
+
 
 ### <a name="prerequisites"></a>Požadavky
 |Protocol (Protokol)|  Přenos|  Port|   Zařízení| Direction|
