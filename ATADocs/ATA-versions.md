@@ -4,19 +4,19 @@ description: Toto téma popisuje různé možnosti podpory pro verze Microsoft A
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 03/28/2019
+ms.date: 04/02/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: a8afbd91-c888-4dfc-94ab-72e38745163e
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 5ac40a7a6d170dab23630283d31704eb18507e45
-ms.sourcegitcommit: a0d1ae7e221fd8bbaf81bf8ae4833ae77fb80ae8
+ms.openlocfilehash: 0750603c525bc0388efabe924a00df3b87404a4c
+ms.sourcegitcommit: c4a0b3eff3e9c4de37e3ca53405ba47992c22b46
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/31/2019
-ms.locfileid: "58752242"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872864"
 ---
 # <a name="support-for-microsoft-advanced-threat-analytics-ata-versions"></a>Podpora pro verze Microsoft Advanced Threat Analytics (ATA)
 
@@ -47,7 +47,7 @@ Aktualizace Microsoft ATA párkrát za rok s tím každá verze aktualizace bude
 |1.8.1|1.8.6765|02. SRPNA 2017|02. SRPNA 2018|
 |1.9|1.9.7312|21-MAR-2018|21-MAR-2019|
 |1.9.1|1.9.7412|01. ČERVENCE 2018|01. ČERVENCE 2019|
-|1.9.2|1.9.7475|28. BŘEZNA 2019|28-MAR-2020|
+|1.9.2|1.9.7478|28. BŘEZNA 2019|28-MAR-2020|
 
 
 

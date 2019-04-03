@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 63d9c5c565c2f241ad7387f1cb64824ee825b025
-ms.sourcegitcommit: db60935a92fe43fe149f6a4d3114fe0edaa1d331
+ms.openlocfilehash: b4a5f7c74329d846caaa25a8b1181e0e516d2b08
+ms.sourcegitcommit: c4a0b3eff3e9c4de37e3ca53405ba47992c22b46
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58764031"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872881"
 ---
 # <a name="azure-atp-prerequisites"></a>Požadavky služby Azure ATP
 
@@ -85,7 +85,7 @@ V této části jsou uvedené požadavky senzoru služby Azure ATP.
 ### <a name="general"></a>Obecné
 
 > [!NOTE]
-> Ujistěte se, že [KB4487044](https://support.microsoft.com/help/4487044/windows-10-update-kb4487044) je nainstalován při použití serveru 2019 nebo znalostní BÁZE, který zahrnuje KB4487044 jako [KB4489899](https://support.microsoft.com/help/4489899/windows-10-update-kb4489899). Azure ochrany ATP v programu senzorů již nainstalované na serverech 2019 bez této aktualizace se automaticky zastaví.
+> Ujistěte se, že [KB4487044](https://support.microsoft.com/help/4487044/windows-10-update-kb4487044) je nainstalován při použití serveru 2019. Azure ochrany ATP v programu senzorů již nainstalované na serverech 2019 bez této aktualizace se automaticky zastaví.
  
 Senzoru služby Azure ATP podporuje instalaci na řadičích domény se systémem Windows Server 2008 R2 SP1 (nikoli včetně jádra serveru), Windows Server 2012, Windows Server 2012 R2, Windows Server 2016 (včetně jádra serveru systému Windows, ale nikoli Windows Nano Server), Windows 2019 serveru (včetně jádra Windows, ale nikoli Windows Nano Server).
 
@@ -176,7 +176,6 @@ Další informace o požadavcích na hardware senzoru služby Azure ATP samostat
 ### <a name="time-synchronization"></a>Časová synchronizace
 
 Servery a řadiče domény, na kterých jsou nainstalované senzory, musí být časově synchronizované do pěti minut od sebe navzájem.
-
 
 ### <a name="network-adapters"></a>Síťové adaptéry
 Samostatný senzor ochrany ATP v programu Azure vyžaduje minimálně jeden adaptér pro správu a nejméně jeden adaptér pro zachytávání:
