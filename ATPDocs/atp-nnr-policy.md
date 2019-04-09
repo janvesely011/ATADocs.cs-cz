@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 1ac873fc-b763-41d7-878e-7c08da421cb5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 7dd41fea1a2a7f8c4a2e122ec75d8735fb49c37d
-ms.sourcegitcommit: db60935a92fe43fe149f6a4d3114fe0edaa1d331
+ms.openlocfilehash: c985dfc4a7d847113838befb3040931434603a7f
+ms.sourcegitcommit: 4072bb8accd439590412f1380694f19aeaaa7a28
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58763946"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59233169"
 ---
 # <a name="what-is-network-name-resolution"></a>Co je překlad síťových názvů?
 
@@ -71,7 +71,7 @@ Ujistěte se, že služby Azure ATP v ideálním případě funguje a je prostř
 
 Každé monitorování výstraha poskytuje konkrétní podrobnosti metody, senzory, problematické zásady stejně jako doporučené konfigurace.
 
-![Upozornění na nízkou úspěšnost sítě název řešení ÚTOKŮ](media/atp-health-alert-audit-policy.png)
+![Upozornění na nízkou úspěšnost sítě název řešení ÚTOKŮ](media/atp-nnr-success-rate.png)
 
 
 ### <a name="configuration-recommendations"></a>Doporučené konfigurace

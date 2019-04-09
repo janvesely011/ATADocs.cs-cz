@@ -5,23 +5,30 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 03/31/2019
+ms.date: 04/08/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ec0a64b0b4467ae27642dd59281b150fc6953f64
-ms.sourcegitcommit: db60935a92fe43fe149f6a4d3114fe0edaa1d331
+ms.openlocfilehash: 5b2af0b89f2a6cef149a206d110d9f9455e9c43f
+ms.sourcegitcommit: a52e0332fc1df15d062c6ad7b7c3db977a509341
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58764065"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59289362"
 ---
 # <a name="whats-new-in-azure-atp"></a>Co je nového v Azure ATP
 
+## <a name="azure-atp-release-273"></a>Verze ochrany ATP v programu Azure 2,73
+
+Uvolnění 10. dubna 2019
+
+- Tato verze obsahuje vylepšení a opravy chyb pro interní senzor infrastruktury.
+
 ## <a name="azure-atp-release-272"></a>Verze ochrany ATP v programu Azure 2.72
+
 Vydáno 31. března 2019
 
 - **Vylepšení funkce: Obor hloubka cesty laterální pohyb (LMP)**<br>
@@ -32,6 +39,7 @@ Cesty taktiky Lateral Movement (LMP) jsou klíče metodu zjišťování hrozeb a
 - Tato verze také zahrnuje vylepšení a opravy chyb pro interní senzor infrastruktury.
 
 ## <a name="azure-atp-release-271"></a>Verze ochrany ATP v programu Azure 2.71
+
 Vydáno 24. března 2019
 
 - **Vylepšení funkce: Síť název řešení ÚTOKŮ výstrah monitorování**<br>

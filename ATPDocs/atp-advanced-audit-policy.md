@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 1/24/2019
+ms.date: 04/07/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: ab1e8dd9-a6c2-4c68-89d5-343b8ec56142
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d2dbd84cf771e86a5615a081b6e8500247ee2026
-ms.sourcegitcommit: b468d9060eb784c16b64a9cc46dbe2d246046cdd
+ms.openlocfilehash: 4d3bac024e94f0aec2fb01f827fb5456527c5356
+ms.sourcegitcommit: 4072bb8accd439590412f1380694f19aeaaa7a28
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58674669"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59233322"
 ---
 # <a name="azure-atp-advanced-audit-policy-check"></a>Kontrola zásad auditu rozšířené ochrany ATP v programu Azure
 
@@ -25,7 +25,7 @@ Azure ATP detekce spoléhá na konkrétní Windows protokoly událostí pro vidi
 
 Aby bylo snazší a ověřit aktuální stav každé ze zásad auditu Advanced řadič domény, ochrana ATP v programu Azure automaticky kontroluje existující upozornění stavu pokročilé zásady auditu a problémy pro nastavení zásad, které vyžadují úpravu. Jednotlivé výstrahy stavu poskytuje konkrétní podrobnosti řadič domény, problematický zásady stejně jako návrhy nápravu.
 
-![Upozornění na stav zásad auditu Upřesnit](media/atp-health-alert-audit-policy.png)
+![Upozornění na stav zásad auditu Upřesnit](media/atp-health-alert-audit.png)
 
 
 Pokročilé zásady auditu zabezpečení povolená přes **výchozí zásada řadičů domény** objektu zásad skupiny. Tyto auditování, události se zaznamenávají v řadiči domény Windows události. 
@@ -54,6 +54,9 @@ Upravte zásady auditu Upřesnit vaše řadiče domény pomocí následujících
 
     > [!NOTE]
     > Pokud se rozhodnete použít místní zásady, nezapomeňte přidat **přihlášení k účtu** a **správu účtů** protokoly v místních zásad auditu. Pokud konfigurujete zásady auditu pokročilé, ujistěte se, že chcete vynutit [podkategorie zásad auditu](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/audit-force-audit-policy-subcategory-settings-to-override).
+    
+    > [!NOTE] 
+    > Pokud pomocí zásad jiné než výchozí zásady řadiče domény provádět pokročilé zásady auditu, výsledný upozornění na stav ochrany ATP v programu Azure můžete ignorovat. 
 
 7. Po použití pomocí objektu zásad skupiny, nové události jsou viditelné v rámci vaší **protokoly událostí Windows**.
 

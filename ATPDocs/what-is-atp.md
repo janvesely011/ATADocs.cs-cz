@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 1/3/2019
+ms.date: 04/07/2019
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 2d14d0e9-1b03-4bcc-ae97-8fd41526ffc5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 13ef41fd698945c2517318f8c68a61d807557e08
-ms.sourcegitcommit: db60935a92fe43fe149f6a4d3114fe0edaa1d331
+ms.openlocfilehash: 309e77b9595f425470194778f946e0f707b1a72e
+ms.sourcegitcommit: 4072bb8accd439590412f1380694f19aeaaa7a28
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58763980"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59233135"
 ---
 # <a name="what-is-azure-advanced-threat-protection"></a>Co je Azure Advanced Threat Protection?
 Azure Protection pokročilé před internetovými útoky (ATP) je řešení cloudového zabezpečení, které využívá vaše na pracoviště signály služby Active Directory identifikovat, detekujte a prošetřete důmyslné hrozby, ohrožení zabezpečení identity a akce zlými úmysly, zaměřuje na vaše organizace. Ochrana ATP v programu Azure umožňuje analytikům SecOp a jenom pro detekci pokročilých útoků v hybridních prostředích pro odborníky v oblasti zabezpečení:  
