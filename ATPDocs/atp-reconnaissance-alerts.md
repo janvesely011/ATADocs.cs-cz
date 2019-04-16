@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 72c5a0de163e53ed60fb3871e3a70cb691513806
-ms.sourcegitcommit: b468d9060eb784c16b64a9cc46dbe2d246046cdd
+ms.openlocfilehash: 2b2d78f7f9f6191f13a9a187ce7e1e7f60dfcaf7
+ms.sourcegitcommit: 7a32dcb65edc38fb9b3d340763045b21ea92feee
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58675196"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59577258"
 ---
 # <a name="tutorial-reconnaissance-alerts"></a>Kurz: Rekognoskace výstrahy  
 
@@ -178,11 +178,18 @@ Zabezpečení hlavní rekognoskace se útočníci získat důležité informace 
 
 **Navrhované nápravné kroky a pro ochrany před únikem informací**
 
-1.  Obsahují zdrojový počítač
+1. Obsahují zdrojový počítač
     1. Najít nástroj, který provádí útoku a jeho odebrání.
     2. Je počítač se službou prohledávací nástroj, který provádí širokou škálu dotazů protokolu LDAP?
     3. Vyhledejte uživatelé přihlášení přibližně ve stejnou dobu jako k aktivitě došlo, protože může být ohrožena. Resetování hesel a povolení vícefaktorového ověřování.
-2.  Resetovat heslo, pokud přístup k prostředkům hlavního názvu služby byla provedena, na kterém běží pod účtem uživatele (ne účet počítače).
+2. Resetovat heslo, pokud přístup k prostředkům hlavního názvu služby byla provedena, na kterém běží pod účtem uživatele (ne účet počítače).
+
+**Kerberoasting konkrétní navrhované kroky pro ochrany před únikem informací a nápravu**
+
+1. Vynutit resetování hesla na ohrožení bezpečnosti účtu  
+2. Požadovat, aby používal [dlouhá a složitá hesla pro uživatele s účty instančních objektů](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/minimum-password-length).  
+3. [Nahraďte uživatelský účet pomocí skupinový účet spravované služby (gMSA)](https://docs.microsoft.com/windows-server/security/group-managed-service-accounts/group-managed-service-accounts-overview). 
+
 
 ## <a name="user-and-ip-address-reconnaissance-smb-external-id-2012"></a>Uživatele a IP adres pro rekognoskaci (SMB) (externí ID 2012) 
 
