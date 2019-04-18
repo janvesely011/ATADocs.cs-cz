@@ -13,11 +13,11 @@ ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: arzinger
 ms.suite: ems
 ms.openlocfilehash: edac28031e9faa3e5c23bbbd82ef4ce023f1f249
-ms.sourcegitcommit: db60935a92fe43fe149f6a4d3114fe0edaa1d331
+ms.sourcegitcommit: 7a32dcb65edc38fb9b3d340763045b21ea92feee
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58763997"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59745445"
 ---
 # <a name="troubleshooting-ata-known-issues"></a>Řešení známých problémů ATA
 

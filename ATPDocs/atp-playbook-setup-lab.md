@@ -8,11 +8,11 @@ ms.author: mlottner
 ms.date: 02/28/2019
 ms.reviewer: itargoet
 ms.openlocfilehash: 9ae630711b6ee7b7f84a233998d188e498af0a9e
-ms.sourcegitcommit: 38b68d96fbf04fe40e1f9a62a1af3d1d00e63614
+ms.sourcegitcommit: 7a32dcb65edc38fb9b3d340763045b21ea92feee
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58808270"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59745584"
 ---
 # <a name="tutorial-setup-an-atp-security-alert-lab"></a>Kurz: Instalační program ochrany ATP v programu testovacího prostředí výstrahy zabezpečení 
 

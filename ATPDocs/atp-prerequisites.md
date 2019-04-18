@@ -13,11 +13,11 @@ ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
 ms.openlocfilehash: b4a5f7c74329d846caaa25a8b1181e0e516d2b08
-ms.sourcegitcommit: c4a0b3eff3e9c4de37e3ca53405ba47992c22b46
+ms.sourcegitcommit: 7a32dcb65edc38fb9b3d340763045b21ea92feee
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58872881"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59745666"
 ---
 # <a name="azure-atp-prerequisites"></a>Požadavky služby Azure ATP
 
@@ -134,7 +134,7 @@ Následující tabulka uvádí minimální porty, které vyžaduje senzoru služ
 |NTLM přes RPC|TCP|135|Všechna zařízení v síti|Obojí|
 |NetBIOS|UDP|137|Všechna zařízení v síti|Obojí|
 |Syslog (volitelné)|TCP/UDP|514, v závislosti na konfiguraci|Server SIEM|Příchozí|
-|POMOCÍ PROTOKOLU RADIUS|UDP|1813|POMOCÍ PROTOKOLU RADIUS|Příchozí|
+|Protokol RADIUS|UDP|1813|Protokol RADIUS|Příchozí|
 |
 
 ### <a name="windows-event-logs"></a>Protokoly událostí Windows
@@ -218,7 +218,7 @@ Následující tabulka uvádí minimální porty, které vyžaduje samostatný s
 |NTLM přes RPC|TCP|135|Všechna zařízení v síti|Obojí|
 |NetBIOS|UDP|137|Všechna zařízení v síti|Obojí|
 |Syslog (volitelné)|TCP/UDP|514, v závislosti na konfiguraci|Server SIEM|Příchozí|
-|POMOCÍ PROTOKOLU RADIUS|UDP|1813|POMOCÍ PROTOKOLU RADIUS|Příchozí|
+|Protokol RADIUS|UDP|1813|Protokol RADIUS|Příchozí|
 |Protokol TLS pro protokol RDP|TCP|3389|Všechna zařízení v síti|Obojí|
 
 > [!NOTE]

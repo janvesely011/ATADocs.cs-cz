@@ -13,11 +13,11 @@ ms.assetid: 6a9b5273-eb26-414e-9cdd-f64406e24ed8
 ms.reviewer: itargoet
 ms.suite: ems
 ms.openlocfilehash: 677dec4468fa272b55d5f9c20c3163fea5770f20
-ms.sourcegitcommit: 4072bb8accd439590412f1380694f19aeaaa7a28
+ms.sourcegitcommit: 7a32dcb65edc38fb9b3d340763045b21ea92feee
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59233339"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59745802"
 ---
 # <a name="azure-atp-frequently-asked-questions"></a>Nejčastější dotazy k Azure ATP
 Tento článek obsahuje seznam častých otázek a odpovědí týkajících se ochrany ATP v programu Azure rozdělené do následujících catergories: 
@@ -149,7 +149,7 @@ Ochrana ATP v programu Azure generuje provoz z řadičů domény do počítačů
 3. **Dotazování služby Active Directory pomocí protokolu LDAP** pro entitu dat<br>
     Azure ATP senzorů dotaz na řadič domény z domény, kam patří entity. Může být snímač stejný nebo jiný řadič domény v této doméně. 
 
-|Protocol (Protokol)|Služba|Port|Zdroj| Direction|
+|Protocol (Protokol)|Služba|Port|Source| Direction|
 |---------|---------|---------|---------|--------|
 |LDAP|TCP a UDP|389|Řadiče domény|Odchozí|
 |Zabezpečený LDAP (LDAPS)|TCP|636|Řadiče domény|Odchozí|
