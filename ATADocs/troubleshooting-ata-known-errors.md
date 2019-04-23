@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: barbkess
-ms.date: 03/31/2019
+ms.date: 04/18/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: edac28031e9faa3e5c23bbbd82ef4ce023f1f249
-ms.sourcegitcommit: 7a32dcb65edc38fb9b3d340763045b21ea92feee
+ms.openlocfilehash: b7769c953a27e3739db32c6db0bcbc0ef82679d4
+ms.sourcegitcommit: 8fa812fb4e898e40239febc6dc0fb0bdfcae3e55
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59745445"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59902103"
 ---
 # <a name="troubleshooting-ata-known-issues"></a>Řešení známých problémů ATA
 
@@ -63,9 +63,8 @@ Tato část podrobně popisuje možné chyby v nasazení ATA a kroky potřebné 
 > |System.Threading.Tasks.TaskCanceledException: Úloha byla zrušena|Procesu nasazení vypršel časový limit, protože komponenta ATA Center nebyla dosažitelná.|1.    Zkontrolujte síťové připojení komponenty ATA Center tím, že na ni přejdete pomocí její IP adresy. <br></br>2.    Zkontrolujte konfiguraci proxy serveru nebo firewallu.|
 > |System.Net.Http.HttpRequestException: Při odesílání požadavku došlo k chybě. ---> System.Net.WebException: Vzdálený server vrátil chybu: Vyžadováno ověřování proxy serveru (407).|Procesu nasazení vypršel časový limit, protože kvůli chybné konfiguraci proxy serveru nebyla komponenta ATA Center dosažitelná.|Před nasazením zakažte konfiguraci proxy serveru a pak ji znovu povolte. Alternativně můžete v proxy serveru nakonfigurovat výjimku.|
 > |System.Net.Sockets.SocketException: Stávající připojení vynuceně zavřel vzdálený hostitel||Použijte jednu z následujících možností: </br>Povolení protokolu TLS 1.0 na bráně ATA Gateway </br>Protokol TLS 1.2 na rozhraní .net nastavením klíčů registru použít výchozí nastavení operačního systému pro protokol SSL a TLS, následujícím způsobem:</br> `[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`</br> `[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`</br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SchUseStrongCrypto"=dword:00000001` </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] " SchUseStrongCrypto"=dword:00000001`|
-> |Chyby [\[] DeploymentModel [\]] se nezdařilo ověřování pro správu [\[] CurrentlyLoggedOnUser =<domain>\<uživatelské jméno > Stav = FailedAuthentication výjimka = [\]]|Procesu nasazení komponenty ATA Gateway nebo ATA Lightweight Gateway se nepovedlo úspěšně ověřit komponentě ATA Center|Z počítače, na kterém procesu nasazení se nepodařilo otevřít prohlížeč a zobrazit, pokud se lze připojit konzolu ATA. </br>V opačném případě spusťte řešení potíží zobrazíte, proč se v prohlížeči nemůže ověřit komponentě ATA Center. </br>Co je potřeba zkontrolovat: </br>Konfigurace proxy serveru</br>Problémy sítě</br>Nastavení zásad skupiny pro ověřování v daném počítači, který se liší od komponenty ATA Center.|
-> | Chyby [\[] DeploymentModel [\]] se nezdařilo ověřování pro správu|Ověřování certifikátu Center se nezdařilo.|Certifikát Center vyžaduje pro ověření připojení k Internetu. Ujistěte se, že vaše služba brány má konfiguraci proxy serveru správná umožňující připojení a ověřování.|
-
+> |Chyby [\\[] DeploymentModel [\\]] se nezdařilo ověřování pro správu [\\[] CurrentlyLoggedOnUser =<domain>\\<username>stav = FailedAuthentication výjimka = [\\]]|Procesu nasazení komponenty ATA Gateway nebo ATA Lightweight Gateway se nepovedlo úspěšně ověřit komponentě ATA Center|Z počítače, na kterém procesu nasazení se nepodařilo otevřít prohlížeč a zobrazit, pokud se lze připojit konzolu ATA. </br>V opačném případě spusťte řešení potíží zobrazíte, proč se v prohlížeči nemůže ověřit komponentě ATA Center. </br>Co je potřeba zkontrolovat: </br>Konfigurace proxy serveru</br>Problémy sítě</br>Nastavení zásad skupiny pro ověřování v daném počítači, který se liší od komponenty ATA Center.|
+> | Chyby [\\DeploymentModel [] [\\]] se nezdařilo ověřování pro správu|System Center certifikát ověření se nezdařilo|Certifikát Center může vyžadovat připojení k Internetu pro ověření. Ujistěte se, že vaše služba brány má konfiguraci proxy serveru správná umožňující připojení a ověřování.|
 
 
 ## <a name="ata-center-errors"></a>Chyby komponenty ATA Center
@@ -73,7 +72,7 @@ Tato část podrobně popisuje možné chyby v nasazení ATA a kroky potřebné 
 > 
 > |Chyba|Popis|Řešení|
 > |-------------|----------|---------|
-> |System.Security.Cryptography.CryptographicException: Přístup se odepřel.|Komponenty ATA Center se nepodařilo použít se zapisuje certifikát vydaný pro dešifrování. K tomu pravděpodobně dojít z důvodu použití certifikátu s specifikace klíče (KeyNumber) nastavena na podpis (na\_podpis) což není podporováno pro dešifrování, namísto použití pro výměnu (na\_pro výměnu).|1.    Zastavte službu ATA Center. <br></br>2.     Odstraníte certifikát ATA Center z úložiště certifikátů System center. (Před odstraněním, ujistěte se, že certifikát zálohovány pomocí soukromého klíče v souboru PFX.) <br></br>3.    Otevřete příkazový řádek se zvýšenými oprávněními a spusťte příkaz certutil - importpfx "CenterCertificate.pfx" AT\_pro výměnu <br></br>4.     Spuštění služby ATA Center. <br></br>5.     Ověřte, že všechno, co teď funguje podle očekávání.|
+> |System.Security.Cryptography.CryptographicException: Přístup se odepřel.|Komponenty ATA Center se nepodařilo použít se zapisuje certifikát vydaný pro dešifrování. K tomu pravděpodobně dojít z důvodu použití certifikátu s specifikace klíče (KeyNumber) nastavena na podpis (na\\_SIGNATURE) což není podporováno pro dešifrování, namísto použití pro výměnu (na\\_KEYEXCHANGE).|1.    Zastavte službu ATA Center. <br></br>2.     Odstraníte certifikát ATA Center z úložiště certifikátů System center. (Před odstraněním, ujistěte se, že certifikát zálohovány pomocí soukromého klíče v souboru PFX.) <br></br>3.    Otevřete příkazový řádek se zvýšenými oprávněními a spusťte příkaz certutil - importpfx "CenterCertificate.pfx" AT\\_KEYEXCHANGE <br></br>4.     Spuštění služby ATA Center. <br></br>5.     Ověřte, že všechno, co teď funguje podle očekávání.|
 
 
 ## <a name="ata-gateway-and-lightweight-gateway-issues"></a>Problémy související s ATA Gateway a Lightweight Gateway
@@ -84,6 +83,7 @@ Tato část podrobně popisuje možné chyby v nasazení ATA a kroky potřebné 
 > |-------------|----------|---------|
 > |Z řadiče domény se nepřijímá žádný provoz, jsou ale pozorována monitorovací upozornění|    Z řadiče domény nebyl pomocí zrcadlení portů přes ATA Gateway přijat žádný provoz|U síťové karty pro zachytávání na ATA Gateway zakažte v oblasti **Upřesnit nastavení** tyto funkce:<br></br>Slučování příjmových segmentů (IPv4)<br></br>Slučování příjmových segmentů (IPv6)|
 > |Zobrazí se toto monitorovací upozornění: Některý síťový provoz se neanalyzuje|Pokud máte ATA Gateway a Lightweight Gateway na virtuálních počítačích VMware, může se zobrazit toto monitorovací upozornění. K tomu dochází kvůli neshodě v konfiguraci ve VMware.|Nastavte následující nastavení 0 nebo jsou zakázaná v konfiguraci virtuálního počítače síťovou kartu: TsoEnable, LargeSendOffload, TSO Offload a Giant TSO Offload TLS 1.0 je zakázaný v komponentě ATA Gateway, ale rozhraní .net je nastavené na použití protokolu TLS 1.2|
+
 
 
 
