@@ -4,7 +4,7 @@ description: Popisuje, jak můžete k řešení potíží pomocí protokolů slu
 keywords: ''
 author: mlottner
 ms.author: mlottner
-manager: barbkess
+manager: rkarlin
 ms.date: 10/04/2018
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: de796346-647d-48e1-970a-8f072e990f1e
 ms.reviewer: ''
 ms.suite: ''
-ms.openlocfilehash: 3db046f28e61c7462d84d1116162874eba103b29
-ms.sourcegitcommit: b468d9060eb784c16b64a9cc46dbe2d246046cdd
+ms.openlocfilehash: 2590e877ba39fda2fee41d8e617690a2b8d4a892
+ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58674482"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65196563"
 ---
 # <a name="troubleshooting-azure-advanced-threat-protection-atp-sensor-using-the-atp-logs"></a>Řešení problémů s Azure Advanced Threat Protection (ATP) ze senzorů pomocí protokolů ochrany ATP v programu
 Ochrana ATP v programu protokoly poskytují přehled o tom, co jednotlivé komponenty senzoru služby Azure ATP dělá v libovolném časovém okamžiku v čase.

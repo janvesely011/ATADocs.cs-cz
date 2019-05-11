@@ -4,7 +4,7 @@ description: Popisuje způsob přihlášení ke konzole ATA a její komponenty.
 keywords: ''
 author: rkarlin
 ms.author: rkarlin
-manager: barbkess
+manager: rkarlin
 ms.date: 3/21/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 1bf264d9-9697-44b5-9533-e1c498da4f07
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 7dc43d5924da037433f1d84bcd87c5ff29a1626d
-ms.sourcegitcommit: b468d9060eb784c16b64a9cc46dbe2d246046cdd
+ms.openlocfilehash: 3908cc6ad907111fc7f6e32fd562ce0d6298dea7
+ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58675128"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65197134"
 ---
 # <a name="working-with-the-ata-console"></a>Práce s konzolou ATA
 
@@ -128,7 +128,7 @@ Pokud myší najedete myší entity, kdekoli v konzole níž se nachází jedna 
 
 ![Obrázek miniprofilu ATA](media/ATA-mini-profile.jpg)
 
--   Name
+-   Název
 
 -   Obrázek
 

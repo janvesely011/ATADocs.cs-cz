@@ -4,7 +4,7 @@ description: Popisuje, jak vám má ATA doručovat upozornění (e-mailem nebo p
 keywords: ''
 author: rkarlin
 ms.author: rkarlin
-manager: barbkess
+manager: rkarlin
 ms.date: 3/21/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: bff20bf7-8b53-49da-81e5-b818a1c3b24e
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: c02fdd1481b1e4c76576b8fa000499becd5a0666
-ms.sourcegitcommit: b468d9060eb784c16b64a9cc46dbe2d246046cdd
+ms.openlocfilehash: 2f60b7450c430793c9c14139f9cf268908a5dbc4
+ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58674499"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65195685"
 ---
 # <a name="provide-ata-with-your-email-server-settings"></a>Nastavení e-mailového serveru pro ATA
 
@@ -36,7 +36,7 @@ ATA vás může upozornit, když zjistí podezřelou aktivitu. Aby řešení ATA
 4. V části **Oznámení** pod položkou **Poštovní server** vyplňte následující pole:
 
 
-   |              Pole              |                                                                                                 Popis                                                                                                  |               Hodnota                |
+   |              Pole              |                                                                                                 Popis                                                                                                  |               Value                |
    |---------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------|
    | Koncový bod serveru SMTP (povinné) |                                                            Zadejte plně kvalifikovaný název domény serveru SMTP a volitelně změňte číslo portu (výchozí hodnota 25).                                                            | Příklad:<br />smtp.contoso.com |
    |               SSL               |                                              Přepněte SSL, pokud SMTP server vyžaduje protokol SSL. **Poznámka:** Pokud povolíte protokol SSL, musíte taky změnit číslo portu.                                               |        Ve výchozím nastavení je zakázáno.         |

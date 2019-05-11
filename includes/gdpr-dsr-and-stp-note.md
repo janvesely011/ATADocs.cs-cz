@@ -1,8 +1,8 @@
 ---
- Title: zahrnují popis souboru: zahrnují souborové služby: služby active directory Autor: eross msft
+ Title: obsahovat popis souboru: patří souborové služby: active-directory Autor: eross msft
  
-MS.Service: služby active directory ms.topic: zahrnují ms.date: 04/24/2018 ms.author: lizross ms.custom: zahrnout soubor
+MS.Service: active-directory ms.topic: zahrnují ms.date: 04/24/2018 ms.author: lizross ms.custom: soubor k zahrnutí
 ---
 
 >[!Note] 
->Pokud vás zajímá zobrazení nebo odstranění osobní údaje, zkontrolujte [Azure dat subjektu požadavky GDPR](https://docs.microsoft.com/microsoft-365/compliance/gdpr-dsr-azure) článku. Pokud hledáte obecné informace o GDPR, přečtěte si téma [GDPR části portálu služby důvěřovat](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
+>Pokud si chcete prohlédnout nebo odstranit osobní údaje, přečtěte si článek o [žádostech subjektů údajů v Azure pro GDPR](https://docs.microsoft.com/microsoft-365/compliance/gdpr-dsr-azure). Pokud hledáte obecné informace o nařízení GDPR, přejděte na [část věnovanou GDPR na portálu Service Trust Portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).

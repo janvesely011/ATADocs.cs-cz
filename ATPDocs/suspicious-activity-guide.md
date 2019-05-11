@@ -4,7 +4,7 @@ d|Description: This article provides a list of the security alerts issued by Azu
 keywords: ''
 author: mlottner
 ms.author: mlottner
-manager: barbkess
+manager: rkarlin
 ms.date: 04/07/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -12,18 +12,19 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0dcdd37bdad7c52325c527b3fa768f851000ff3a
-ms.sourcegitcommit: 7a32dcb65edc38fb9b3d340763045b21ea92feee
+ms.openlocfilehash: 0dd8d987472ef88108f2cb3541bd590d1a816726
+ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59745819"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65196639"
 ---
 # <a name="azure-atp-security-alerts"></a>Výstrahy zabezpečení služby Azure ATP
 
 Upozornění zabezpečení v Azure ochrany ATP v programu popisují podezřelých aktivitách zjištěných ochrany ATP v programu Azure senzorů v síti a objekty actor a počítačů zahrnutých v každém útoky.   Upozornění důkazy seznamy obsahovat přímé odkazy na související uživatelé a počítače, abyste se mohli vaše šetření, snadno a s přímým přístupem.
 
 Upozornění zabezpečení v Azure ochrany ATP v programu jsou rozdělené do následujících kategorií nebo fází, jako je fáze v řetězu událostí typické internetového útoku. Další informace o každé fáze, výstrahy, které jsou navržené k detekování každého útoku a jak používat výstrahy k ochraně sítě pomocí následujících odkazů:
+
   1. [Upozornění fáze rekognoskace](atp-reconnaissance-alerts.md)
   2. [Ohrožení zabezpečení přihlašovacích údajů Fáze oznámení](atp-compromised-credentials-alerts.md)
   3. [Laterální pohyb fáze oznámení](atp-lateral-movement-alerts.md)

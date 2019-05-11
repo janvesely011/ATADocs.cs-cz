@@ -4,7 +4,7 @@ description: Popisuje, jak nastavit výstrahy ATA, abyste byli při zjištění 
 keywords: ''
 author: rkarlin
 ms.author: rkarlin
-manager: barbkess
+manager: rkarlin
 ms.date: 3/21/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 14cb7513-5dc8-49cb-b3e0-94f469c443dd
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 82ff51678a2ab9bc59fab0cc22d118112e2b6b3b
-ms.sourcegitcommit: b468d9060eb784c16b64a9cc46dbe2d246046cdd
+ms.openlocfilehash: 7dbc98d61319c40a3d3691ace28e1300bce72b73
+ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58674278"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65197079"
 ---
 # <a name="set-ata-notifications"></a>Nastavení oznámení ATA
 

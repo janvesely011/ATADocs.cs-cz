@@ -4,22 +4,38 @@ description: Popisuje nejnovější verze ochrany ATP v programu Azure a poskytu
 keywords: ''
 author: mlottner
 ms.author: mlottner
-manager: barbkess
-ms.date: 04/14/2019
+manager: rkarlin
+ms.date: 05/07/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 426f89a61d2cdcd5b52d12e8c7a9c2cfede69940
-ms.sourcegitcommit: 7a32dcb65edc38fb9b3d340763045b21ea92feee
+ms.openlocfilehash: 86c76a14403e7539156c7f882a30d022842a5771
+ms.sourcegitcommit: fa9b880e52d4b615409cc247fc73993407df0ae5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59577276"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65226786"
 ---
 # <a name="whats-new-in-azure-atp"></a>Co je nového v Azure ATP
+
+## <a name="azure-atp-release-276"></a>Verze ochrany ATP v programu Azure 2.76
+
+vydáno 6. května 2019
+
+- Tato verze obsahuje vylepšení a opravy chyb pro interní senzor infrastruktury.
+
+## <a name="azure-atp-release-275"></a>Verze ochrany ATP v programu Azure 2,75
+
+Vydáno 28. dubna 2019
+
+- **Vylepšení funkce: Citlivých entit**<br> Počínaje touto verzí (2,75), počítačů, které jsou identifikovány jako servery systému Exchange pomocí ochrany ATP v programu Azure jsou nyní automaticky označené jako **citlivé**.  
+
+    Entity, které jsou automaticky označené jako **citlivé** vzhledem k tomu, že fungují jako servery Exchange seznamu této klasifikace jako z důvodu jsou označené. 
+
+- Tato verze obsahuje vylepšení a opravy chyb pro interní senzor infrastruktury.
 
 ## <a name="azure-atp-release-274"></a>Verze ochrany ATP v programu Azure 2.74
 

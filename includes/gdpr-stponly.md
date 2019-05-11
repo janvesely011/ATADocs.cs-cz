@@ -1,8 +1,8 @@
 ---
- Title: zahrnují popis souboru: zahrnují souborové služby: služby active directory Autor: eross msft
+ Title: obsahovat popis souboru: patří souborové služby: active-directory Autor: eross msft
  
-MS.Service: služby active directory ms.topic: zahrnují ms.date: 04/24/2018 ms.author: lizross ms.custom: zahrnout soubor
+MS.Service: active-directory ms.topic: zahrnují ms.date: 04/24/2018 ms.author: lizross ms.custom: soubor k zahrnutí
 ---
 
 >[!Note] 
->Pokud hledáte obecné informace o GDPR, přečtěte si téma [GDPR části portálu služby důvěřovat](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
+>Pokud hledáte obecné informace o nařízení GDPR, přejděte na [část věnovanou GDPR na portálu Service Trust Portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).

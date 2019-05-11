@@ -4,7 +4,7 @@ description: Popisuje postup při bezobslužné instalaci služby Azure ATP.
 keywords: ''
 author: mlottner
 ms.author: mlottner
-manager: barbkess
+manager: rkarlin
 ms.date: 12/05/2018
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 24eca4c6-c949-42ea-97b9-41ef0fb611f1
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ba000ae4ac118b8591a97b456d791966e2c53550
-ms.sourcegitcommit: b468d9060eb784c16b64a9cc46dbe2d246046cdd
+ms.openlocfilehash: a15129852315fa958b8f5bed810c9f69e185e73e
+ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58674737"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65195486"
 ---
 # <a name="azure-atp-switches-and-silent-installation"></a>Azure ATP přepínače a bezobslužná instalace
 Tento článek obsahuje pokyny pro služby Azure ATP přepínače a tichou instalaci.
@@ -59,10 +59,10 @@ Použijte následující příkaz k provedení plně tiché instalace senzoru sl
 
 > [!div class="mx-tableFixed"]
 > 
-> |Name|Syntaxe|Povinné pro bezobslužnou instalaci?|Popis|
+> |Název|Syntaxe|Povinné pro bezobslužnou instalaci?|Popis|
 > |-------------|----------|---------|---------|
 > |Quiet|/quiet|Ano|Spustí instalační program, který nezobrazuje žádné uživatelské rozhraní ani výzvy.|
-> |Nápověda|/help|Ne|Poskytuje nápovědu a stručnou referenční příručku. Zobrazí správné použití instalačních příkazů včetně seznamu všech možností a jejich chování.|
+> |Help|/help|Ne|Poskytuje nápovědu a stručnou referenční příručku. Zobrazí správné použití instalačních příkazů včetně seznamu všech možností a jejich chování.|
 > |NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Ano|Určuje parametry pro instalaci rozhraní .Net Framework. K vynucení bezobslužné instalace rozhraní .Net Framework musí být nastavené.|
 
 **Parametry instalace**:
@@ -91,10 +91,10 @@ K bezobslužné aktualizaci senzoru služby Azure ATP použijte následující p
 
 > [!div class="mx-tableFixed"]
 > 
-> |Name|Syntaxe|Povinné pro bezobslužnou instalaci?|Popis|
+> |Název|Syntaxe|Povinné pro bezobslužnou instalaci?|Popis|
 > |-------------|----------|---------|---------|
 > |Quiet|/quiet|Ano|Spustí instalační program, který nezobrazuje žádné uživatelské rozhraní ani výzvy.|
-> |Nápověda|/help|Ne|Poskytuje nápovědu a stručnou referenční příručku. Zobrazí správné použití instalačních příkazů včetně seznamu všech možností a jejich chování.|
+> |Help|/help|Ne|Poskytuje nápovědu a stručnou referenční příručku. Zobrazí správné použití instalačních příkazů včetně seznamu všech možností a jejich chování.|
 > |NetFrameworkCommandLineArguments="/q"|NetFrameworkCommandLineArguments="/q"|Ano|Určuje parametry pro instalaci rozhraní .Net Framework. K vynucení bezobslužné instalace rozhraní .Net Framework musí být nastavené.|
 
 
@@ -112,11 +112,11 @@ Použijte následující příkaz k provedení bezobslužné odinstalace senzoru
 
 > [!div class="mx-tableFixed"]
 > 
-> |Name|Syntaxe|Povinné pro bezobslužnou odinstalaci?|Popis|
+> |Název|Syntaxe|Povinné pro bezobslužnou odinstalaci?|Popis|
 > |-------------|----------|---------|---------|
 > |Quiet|/quiet|Ano|Spustí odinstalační program, který nezobrazuje žádné uživatelské rozhraní ani výzvy.|
 > |Odinstalace|/uninstall|Ano|Spustí bezobslužnou odinstalaci senzoru služby Azure ATP ze serveru.|
-> |Nápověda|/help|Ne|Poskytuje nápovědu a stručnou referenční příručku. Zobrazí správné použití instalačních příkazů včetně seznamu všech možností a jejich chování.|
+> |Help|/help|Ne|Poskytuje nápovědu a stručnou referenční příručku. Zobrazí správné použití instalačních příkazů včetně seznamu všech možností a jejich chování.|
 
 **Příklady**: Bezobslužná odinstalace senzoru služby Azure ATP ze serveru:
 

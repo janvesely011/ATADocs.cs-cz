@@ -4,7 +4,7 @@ description: Popisuje, jak nastavit brány firewall nebo proxy a povolit komunik
 keywords: ''
 author: mlottner
 ms.author: mlottner
-manager: barbkess
+manager: rkarlin
 ms.date: 03/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 9c173d28-a944-491a-92c1-9690eb06b151
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 4bb2c2941cc0571b066f2fa4806217a67ebc7849
-ms.sourcegitcommit: b468d9060eb784c16b64a9cc46dbe2d246046cdd
+ms.openlocfilehash: 7598c10724295312b19a2ccb0fbdd57328edd9a4
+ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58673784"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65196740"
 ---
 # <a name="configure-endpoint-proxy-and-internet-connectivity-settings-for-your-azure-atp-sensor"></a>Konfigurace koncového bodu proxy serveru a nastavení připojení k Internetu pro vaše senzor ochrany ATP v programu Azure
 

@@ -4,7 +4,7 @@ description: V tomto kroku instalace ATA nakonfigurujete zdroje dat.
 keywords: ''
 author: rkarlin
 ms.author: rkarlin
-manager: barbkess
+manager: rkarlin
 ms.date: 3/21/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 0481668b3156c616d2556155b615e7a0c58cf459
-ms.sourcegitcommit: b468d9060eb784c16b64a9cc46dbe2d246046cdd
+ms.openlocfilehash: bd6cc7021a024755a931fd9a56db27c0825d10a4
+ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58675009"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65195938"
 ---
 # <a name="install-ata---step-6"></a>Instalace ATA – krok 6
 

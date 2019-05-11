@@ -1,10 +1,4 @@
 ### YamlMime:YamlDocument
-ms.openlocfilehash: 135fc9fb96bb71ebb7025de9b3353a247f61ee0f
-ms.sourcegitcommit: 78748bfd75ae68230d72ad11010ead37d96b0c58
-ms.translationtype: MT
-ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56077231"
 documentType: LandingData
 title: Dokumentace služby Azure Advanced Threat Protection
 metadata:
@@ -12,7 +6,7 @@ metadata:
   description: Chraňte svá podniková hybridní prostředí před různými typy pokročilých cílených kybernetických útoků a ohrožením zevnitř.
   services: azure-advanced-threat-protection
   author: msmbaldwin
-  manager: barbkess
+  manager: rkarlin
   ms.prod: azure-advanced-threat-protection
   ms.tgt_pltfrm: na
   ms.devlang: na
@@ -21,60 +15,60 @@ metadata:
   ms.author: mbaldwin
   layout: LandingPage
 abstract:
-  description: Azure Advanced Threat Protection (ATP) je cloudová služba, která pomáhá chránit podniková hybridní prostředí před různými typy pokročilých cílených kybernetických útoků a ohrožením zevnitř.
+  description: 'Azure Advanced Threat Protection (ATP) je cloudová služba, která pomáhá chránit podniková hybridní prostředí před různými typy pokročilých cílených kybernetických útoků a ohrožením zevnitř.'
 sections:
-- title: Víc se uč
-  items:
-  - type: list
-    style: cards
-    className: cardsFTitle
+  - title: Víc se uč
     items:
-    - title: Další informace o službě Azure Advanced Threat Protection
-      href: what-is-atp.md
-      image:
-        src: https://docs.microsoft.com/media/common/i_learn-about.svg
-        href: what-is-atp.md
-    - title: Architektura služby Azure ATP
-      href: atp-architecture.md
-      image:
-        src: https://docs.microsoft.com/media/common/i_architecture.svg
-        href: atp-architecture.md
-    - title: Co je nového v Azure ATP
-      href: atp-whats-new.md
-      image:
-        src: https://docs.microsoft.com/media/common/i_whats-new.svg
-        href: atp-whats-new.md
-    - title: Prozkoumejte službu Microsoft 365, úplné řešení, které zahrnuje Azure Advanced Threat Protection
-      href: https://docs.microsoft.com/microsoft-365/
-      image:
-        src: /office/media/icons/caret-right-blue.svg
-        href: https://docs.microsoft.com/microsoft-365/
-- title: 5minutové rychlé starty
-  items:
-  - type: paragraph
-    text: Naučte se základy Azure Advanced Threat Protection pomocí těchto rychlých startech.
-  - type: list
-    style: icon48
+      - type: list
+        style: cards
+        className: cardsFTitle
+        items:
+          - title: Další informace o službě Azure Advanced Threat Protection
+            href: what-is-atp.md
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_learn-about.svg'
+              href: what-is-atp.md
+          - title: Architektura služby Azure ATP
+            href: atp-architecture.md
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_architecture.svg'
+              href: atp-architecture.md
+          - title: Co je nového v Azure ATP
+            href: atp-whats-new.md
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_whats-new.svg'
+              href: atp-whats-new.md
+          - title: 'Prozkoumejte službu Microsoft 365, úplné řešení, které zahrnuje Azure Advanced Threat Protection'
+            href: 'https://docs.microsoft.com/microsoft-365/'
+            image:
+              src: /office/media/icons/caret-right-blue.svg
+              href: 'https://docs.microsoft.com/microsoft-365/'
+  - title: 5minutové rychlé starty
     items:
-    - image:
-        src: https://docs.microsoft.com/media/common/i_design.svg
-      text: Plánování kapacity
-      href: atp-capacity-planning.md
-    - image:
-        src: https://docs.microsoft.com/media/common/i_event.svg
-      text: Vytvoření instance služby Azure ATP
-      href: install-atp-step1.md
-    - image:
-        src: https://docs.microsoft.com/media/common/i_config-tools.svg
-      text: Připojení ke službě Active Directory
-      href: install-atp-step2
-- title: Podrobné kurzy
-  items:
-  - type: paragraph
-    text: Zjistěte, jak porozumět používání upozornění a provádět šetření prostřednictvím těchto kurzů.
-  - type: list
-    style: unordered
+      - type: paragraph
+        text: Naučte se základy Azure Advanced Threat Protection pomocí těchto rychlých startech.
+      - type: list
+        style: icon48
+        items:
+          - image:
+              src: 'https://docs.microsoft.com/media/common/i_design.svg'
+            text: Plánování kapacity
+            href: atp-capacity-planning.md
+          - image:
+              src: 'https://docs.microsoft.com/media/common/i_event.svg'
+            text: Vytvoření instance služby Azure ATP
+            href: install-atp-step1.md
+          - image:
+              src: 'https://docs.microsoft.com/media/common/i_config-tools.svg'
+            text: Připojení ke službě Active Directory
+            href: install-atp-step2
+  - title: Podrobné kurzy
     items:
-    - html: <a href="/azure-advanced-threat-protection/understanding-security-alerts">Vysvětlení výstrah zabezpečení</a>
-    - html: <a href="/azure-advanced-threat-protection/investigate-a-user">Prošetřování uživatelů</a>
-    - html: <a href="/azure-advanced-threat-protection/investigate-a-computer">Prošetřování počítačů</a>
+      - type: paragraph
+        text: 'Zjistěte, jak porozumět používání upozornění a provádět šetření prostřednictvím těchto kurzů.'
+      - type: list
+        style: unordered
+        items:
+          - html: <a href="/azure-advanced-threat-protection/understanding-security-alerts">Vysvětlení výstrah zabezpečení</a>
+          - html: <a href="/azure-advanced-threat-protection/investigate-a-user">Prošetřování uživatelů</a>
+          - html: <a href="/azure-advanced-threat-protection/investigate-a-computer">Prošetřování počítačů</a>

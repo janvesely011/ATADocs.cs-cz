@@ -4,26 +4,26 @@ description: Popisuje, jak k označování citlivých účtů pomocí Azure Adva
 keywords: ''
 author: mlottner
 ms.author: mlottner
-manager: barbkess
-ms.date: 10/04/2018
+manager: rkarlin
+ms.date: 04/29/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 43e57f87-ca85-4922-8ed0-9830139fe7cb
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d7f0d0d677692aeb7406824f5bd18e493934a195
-ms.sourcegitcommit: b468d9060eb784c16b64a9cc46dbe2d246046cdd
+ms.openlocfilehash: 2342a10f932664568065d2ef906d863a875c8096
+ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58673705"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65196448"
 ---
 # <a name="working-with-sensitive-accounts"></a>Práce s citlivými účty
 
-## <a name="sensitive-groups"></a>Citlivé skupiny
+## <a name="sensitive-entites"></a>Citlivých entit
 
-Následující seznam skupin se považují za citlivé ochrany ATP v programu Azure. Za citlivou se považuje každá entita, která je členem těchto skupin:
+Následující seznam skupin jsou považovány za **citlivé** pomocí služby Azure ATP. Každá entita, která je členem jedné z těchto skupin se považuje za citlivé:
 
 - Správci
 - Power Users
@@ -41,13 +41,14 @@ Následující seznam skupin se považují za citlivé ochrany ATP v programu Az
 - Enterprise Read-only Domain Controllers 
 - Schema Admins 
 - Enterprise Admins
+- Microsoft Exchange Servers
 
   > [!NOTE]
   > Do září 2018 Remote Desktop Users byly také automaticky považují za citlivé pomocí služby Azure ATP. Vzdálené plochy entity nebo přidat po tohoto data již nebude automaticky označené jako citlivé při vzdálené plochy entity nebo skupiny přidat před tímto datem může zůstat označeno jako citlivé. Toto citlivá nastavení lze změnit teď ručně.  
 
 ## <a name="tagging-sensitive-accounts"></a>Označování citlivých účtů
 
-Kromě těchto skupin můžete ručně označit skupiny nebo účty jako citlivé vylepšit detekce. To je důležité, protože využívají některé služby Azure ATP detekce, jako je například zjišťování úpravy citlivých skupin a cesty laterální pohyb, které skupiny a účty se považují za citlivé. Můžete ručně označit jiné uživatele nebo skupiny jako citlivé, jako je například členů vedení společnosti, ředitel pro prodej, atd., a ochrana ATP v programu Azure je považuje za citlivé.
+Kromě těchto skupin můžete ručně označit skupiny nebo účty jako citlivé vylepšit detekce. To je důležité, protože využívají některé služby Azure ATP detekce, jako je například citlivou skupinu úpravy detekce a laterální pohyb cesty, které skupiny a účty se považují za citlivé. Můžete ručně označit jiné uživatele nebo skupiny jako citlivé, jako je například členů vedení společnosti, ředitel pro prodej, atd., a ochrana ATP v programu Azure je považuje za citlivé.
 
 1.  Na portálu ochrany ATP v programu Azure klikněte **konfigurace** ozubeného kola v panelu nabídek.
 

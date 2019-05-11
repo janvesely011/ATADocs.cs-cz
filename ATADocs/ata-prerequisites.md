@@ -4,7 +4,7 @@ description: Popisuje požadavky pro úspěšné nasazení ATA ve vašem prostř
 keywords: ''
 author: mlottner
 ms.author: mlottner
-manager: barbkess
+manager: rkarlin
 ms.date: 9/27/2018
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 8d1db39dfe29b1641d2eb94ebf7afd5cea55535f
-ms.sourcegitcommit: 62b631f64a639f5df04bf805755f26c69b40e8e4
+ms.openlocfilehash: ec1e15804aed63209b1cd675c902fc91dab376bd
+ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58639149"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65196710"
 ---
 # <a name="ata-prerequisites"></a>Požadavky ATA
 
@@ -57,7 +57,7 @@ Tato část uvádí informace, které byste měli získat, a také účty a sí�
 
 -   Neinstalujte na ATA Gateway nebo Lightweight Gateway Microsoft Message Analyzer. Message Analyzer ovladač je v konfliktu s ovladači komponent ATA Gateway a Lightweight Gateway. Pokud na komponentě ATA Gateway spustíte Wireshark a následně zastavíte jeho zachytávání, budete muset restartovat službu Microsoft Advanced Threat Analytics Gateway. Pokud ne, brána přestane zachytávání provozu. Wireshark běžící na ATA Lightweight Gateway nijak nenarušuje ATA Lightweight Gateway.
 
--    Doporučené: Uživatel by měl mít ke kontejneru odstraněných objektů oprávnění jen pro čtení. To umožňuje ATA detekovat hromadné odstranění objektů v doméně. Informace o konfiguraci oprávnění jen pro čtení pro kontejner odstraněných objektů najdete v tématu **Změna oprávnění pro kontejner odstraněných objektů** tématu [zobrazení nebo nastavení oprávnění u objektu adresáře](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) článku.
+-    Doporučujeme: Uživatel by měl mít ke kontejneru odstraněných objektů oprávnění jen pro čtení. To umožňuje ATA detekovat hromadné odstranění objektů v doméně. Informace o konfiguraci oprávnění jen pro čtení pro kontejner odstraněných objektů najdete v tématu **Změna oprávnění pro kontejner odstraněných objektů** tématu [zobrazení nebo nastavení oprávnění u objektu adresáře](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) článku.
 
 -   Volitelné: Uživatelský účet uživatele s žádné síťové aktivity. Tento účet se dají konfigurovat jako uživatel Honeytokenu ATA. Při konfiguraci účtu jako uživatel Honeytokenu, pouze uživatelské jméno je povinné. Informace o konfiguraci Honeytokenu, naleznete v tématu [vyloučení konfigurace IP adres a uživatele Honeytokenu](install-ata-step7.md).
 
