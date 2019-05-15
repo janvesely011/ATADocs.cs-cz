@@ -2,20 +2,21 @@
 title: Plánování nasazení Advanced Threat Analytics | Dokumentace Microsoftu
 description: Pomůže vám naplánovat nasazení a určit, kolik serverů ATA bude potřeba k podpoře vaší sítě.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: rkarlin
-ms.date: 3/21/2018
+ms.date: 05/12/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
+ms.assetid: 1b5b24ff-0df8-4660-b4f8-64d68cc72f65
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 069f6b179ab48b2c19b06e1bbcc64f4336954574
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
+ms.openlocfilehash: cd6dbac4fec45b4e3bc3e4ee6818ac0a5e9d18a4
+ms.sourcegitcommit: ef6d041d5ecde7ec909fd0f90848ce422c0c4774
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65195838"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65613452"
 ---
 # <a name="ata-capacity-planning"></a>Plánování kapacity ATA
 
@@ -35,7 +36,7 @@ Doporučený a nejjednodušší způsob, jak určit kapacitu pro vaše nasazení
 - ATA Gateway: Shoda **zaneprázdněný Packets/sec** v tabulce pro ATA Gateway v souboru výsledků s **PAKETŮ za SEKUNDU** pole [tabulce pro ATA Gateway](#ata-gateway-sizing) nebo [ATA Lightweight Gateway tabulky](#ata-lightweight-gateway-sizing)podle toho, [zvoleného typu brány](#choosing-the-right-gateway-type-for-your-deployment).
 
 
-![Ukázkový nástroj plánování kapacity](media/capacity tool.png)
+![Ukázkový nástroj plánování kapacity](media/capacity-tool.png)
 
 
 > [!NOTE]

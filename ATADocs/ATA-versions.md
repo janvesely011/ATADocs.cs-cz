@@ -4,19 +4,19 @@ description: Toto téma popisuje různé možnosti podpory pro verze Microsoft A
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 04/02/2019
+ms.date: 05/12/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: a8afbd91-c888-4dfc-94ab-72e38745163e
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 03a7ab3be33d012aac49b4559af3e4baeaadbf79
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
+ms.openlocfilehash: 7ff497426d55dd9610082198257d3b393676385f
+ms.sourcegitcommit: ef6d041d5ecde7ec909fd0f90848ce422c0c4774
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65195700"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65613419"
 ---
 # <a name="support-for-microsoft-advanced-threat-analytics-ata-versions"></a>Podpora pro verze Microsoft Advanced Threat Analytics (ATA)
 

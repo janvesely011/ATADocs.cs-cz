@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 9/27/2018
+ms.date: 05/12/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: ec1e15804aed63209b1cd675c902fc91dab376bd
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
+ms.openlocfilehash: 9da60a0d20a85d1294cf0feee66699dd3a2c38cc
+ms.sourcegitcommit: ef6d041d5ecde7ec909fd0f90848ce422c0c4774
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65196710"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65613439"
 ---
 # <a name="ata-prerequisites"></a>Požadavky ATA
 
@@ -34,7 +34,7 @@ ATA se skládá z komponenty ATA Center, ATA Gateway a/nebo ATA Lightweight Gate
 Systém ATA funguje na hranici doménové struktury ve službě Active Directory a podporuje funkční úroveň doménové struktury (FFL) v systémech Windows 2003 a novějších.
 
 
-[Než začnete](#before-you-start): V této části jsou uvedené informace, které byste měli získat, a účty a síťové entity, které byste měli mít před zahájením instalace ATA.
+[Než začnete](#before-you-start): Tato část obsahuje informace, které byste měli získat a účty a síťové entity, které byste měli mít před zahájením instalace ATA.
 
 [ATA Center](#ata-center-requirements): Tato část obsahuje seznam ATA Center na hardware, požadavky na software, jakož i nastavení, které je potřeba nakonfigurovat na serveru ATA Center.
 
@@ -67,7 +67,7 @@ Tato část uvádí informace, které byste měli získat, a také účty a sí�
 ## <a name="ata-center-requirements"></a>Požadavky pro ATA Center
 V této části je uveden seznam požadavků pro ATA Center.
 ### <a name="general"></a>Obecné
-ATA Center podporuje instalaci na serveru s Windows Serverem 2012 R2 nebo Windows Serverem 2016. 
+ATA Center podporuje instalaci na serveru se systémem Windows Server 2012 R2, Windows Server 2016 a Windows Server 2019. 
 
  > [!NOTE]
  > Komponenty ATA Center nepodporuje jádra serveru systému Windows.

@@ -5,21 +5,27 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 05/07/2019
+ms.date: 05/12/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 86c76a14403e7539156c7f882a30d022842a5771
-ms.sourcegitcommit: fa9b880e52d4b615409cc247fc73993407df0ae5
+ms.openlocfilehash: fc0aad92cfbd415d02068daf091c7e95e265c992
+ms.sourcegitcommit: ef6d041d5ecde7ec909fd0f90848ce422c0c4774
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65226786"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65613386"
 ---
 # <a name="whats-new-in-azure-atp"></a>Co je nového v Azure ATP
+
+## <a name="azure-atp-release-277"></a>Verze ochrany ATP v programu Azure 2.77
+
+Vydáno 12. května 2019
+
+- Tato verze obsahuje vylepšení a opravy chyb pro interní senzor infrastruktury.
 
 ## <a name="azure-atp-release-276"></a>Verze ochrany ATP v programu Azure 2.76
 
