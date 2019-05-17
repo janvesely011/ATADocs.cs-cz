@@ -5,25 +5,25 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/17/2019
+ms.date: 05/16/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: b09adce3-0fbc-40e3-a53f-31f57fe79ca3
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: cc560bb061be672bb5db66076de8212be40f34d3
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
+ms.openlocfilehash: 95579a90534a04449edd08968948498c4d33bb64
+ms.sourcegitcommit: 5d93b0e59080c2d872672bf77a1a40c548c1016d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65193581"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65760308"
 ---
 # <a name="configure-azure-atp-to-make-remote-calls-to-sam"></a>Konfigurace ochrany ATP v programu Azure k vzdáleně volat SAM
 Ochrana ATP v programu Azure [cesty laterální pohyb](use-case-lateral-movement-path.md) detekce spoléhá na dotazy, které identifikují místními správci na konkrétní počítače. Tyto dotazy se provádí pomocí protokolu SAM-R, pomocí účtu služby ochrany ATP v programu Azure vytvoří během instalace služby Azure ATP [kroku 2. Připojení ke službě AD](install-atp-step2.md).
 
 ## <a name="configure-sam-r-required-permissions"></a>Konfigurace SAM-R, vyžaduje oprávnění
-K zajištění Windows klienty a servery povolit váš účet služby Azure ATP provádět SAM-R, úpravy **zásad skupiny** přidání účtu služby Azure ATP kromě zobrazené v nakonfigurované účty se musí provádět  **Přístup k síti** zásad.
+K zajištění Windows klienty a servery povolit váš účet služby Azure ATP provádět SAM-R, úpravy **zásad skupiny** přidání účtu služby Azure ATP kromě zobrazené v nakonfigurované účty se musí provádět  **Přístup k síti** zásad. Ujistěte se, že chcete použít zásady skupiny pro všechny počítače. 
 
 > [!Note]
 > Ještě před vynucením nové zásady, jako je ten, je velmi důležité, abyste měli jistotu, že prostředí zůstalo zabezpečené a všechny změny nebude mít vliv na kompatibilitu vašich aplikací. K tomu prvním povolení a ověřením kompatibility navrhovaných změn v režimu auditování, před provedením změn v provozním prostředí.

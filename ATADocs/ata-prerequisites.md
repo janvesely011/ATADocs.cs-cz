@@ -12,12 +12,12 @@ ms.technology: ''
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 9da60a0d20a85d1294cf0feee66699dd3a2c38cc
-ms.sourcegitcommit: ef6d041d5ecde7ec909fd0f90848ce422c0c4774
+ms.openlocfilehash: 153f53715bc33b735bb7cf2796dcb1f983d67915
+ms.sourcegitcommit: 5d93b0e59080c2d872672bf77a1a40c548c1016d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65613439"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65760334"
 ---
 # <a name="ata-prerequisites"></a>Požadavky ATA
 
@@ -108,7 +108,7 @@ Měli byste následující:
 ### <a name="ports"></a>Porty
 Následující tabulka uvádí minimální porty, které musí být otevřené, aby služba ATA Center fungovala správně.
 
-|Protocol (Protokol)|Přenos|Port|Směr|Direction|
+|Protocol|Přenos|Port|Směr|Direction|
 |------------|-------------|--------|-----------|-------------|
 |**SSL** (komunikace ATA)|TCP|443|ATA Gateway|Příchozí|
 |**HTTP** (volitelné)|TCP|80|Podniková síť|Příchozí|
@@ -130,7 +130,7 @@ Následující tabulka uvádí minimální porty, které musí být otevřené, 
 Při instalaci a rychlejší nasazení ATA, můžete během instalace nainstalovat certifikáty podepsané svým držitelem. Pokud jste se rozhodli použít certifikáty podepsané svým držitelem, po počátečním nasazení doporučujeme nahradit certifikáty podepsané svým držitelem certifikáty od certifikační autority používané komponenty ATA Center.
 
 
-Ujistěte se, že ATA Center a ATA Gateway mají přístup k seznamu odvolaných certifikátů distribučnímu bodu. Pokud nemají přístup k Internetu, postupujte podle [postup pro ruční import seznamu CRL](https://technet.microsoft.com/library/aa996972%28v=exchg.65%29.aspx), dbejte na to nainstalovat všechny seznamu CRL distribuční body pro celý řetězec.
+Ujistěte se, že ATA Center a ATA Gateway mají přístup k seznamu odvolaných certifikátů distribučnímu bodu. Pokud nemají přístup k Internetu, postupujte podle [postup pro ruční import seznamu CRL](https://technet.microsoft.com/library/aa996972%28v=exchg.65%29.aspx), přičemž to, abyste nainstalovali všechny distribuční body CRL pro celý řetězec.
 
 Certifikát musí mít:
 -   Privátní klíč
@@ -152,7 +152,7 @@ Například můžete použít standardní **webový server** nebo **počítače*
 ## <a name="ata-gateway-requirements"></a>Požadavky na ATA Gateway
 V této části je uveden seznam požadavků pro ATA Gateway.
 ### <a name="general"></a>Obecné
-ATA Gateway podporuje instalaci na serveru se systémem Windows Server 2012 R2 nebo Windows Server 2016 (včetně jádra serveru).
+ATA Gateway podporuje instalaci na serveru se systémem Windows Server 2012 R2 nebo Windows Server 2016 a Windows Server 2019 (včetně jádra serveru).
 ATA Gateway se dá nainstalovat na server, který je členem domény nebo pracovní skupiny.
 ATA Gateway můžete použít k monitorování řadičů domény pomocí funkční úrovně domény v systému Windows 2003 a novějším.
 
@@ -203,7 +203,7 @@ ATA Gateway vyžaduje nejméně jen adaptér pro správu a jeden adaptér pro za
 ### <a name="ports"></a>Porty
 Následující tabulka uvádí minimální porty, u kterých ATA Gateway vyžaduje, aby byly nakonfigurované na adaptéru pro správu:
 
-|Protocol (Protokol)|Přenos|Port|Směr|Direction|
+|Protocol|Přenos|Port|Směr|Direction|
 |------------|-------------|--------|-----------|-------------|
 |LDAP|TCP a UDP|389|Řadiče domény|Odchozí|
 |Zabezpečený LDAP (LDAPS)|TCP|636|Řadiče domény|Odchozí|
@@ -232,7 +232,7 @@ Následující tabulka uvádí minimální porty, u kterých ATA Gateway vyžadu
 ## <a name="ata-lightweight-gateway-requirements"></a>Požadavky pro ATA Lightweight Gateway
 V této části je uveden seznam požadavků pro ATA Lightweight Gateway.
 ### <a name="general"></a>Obecné
-ATA Lightweight Gateway podporuje instalaci na řadičích domény se systémem Windows Server 2008 R2 SP1 (kromě jádra serveru), Windows Server 2012, Windows Server 2012 R2 nebo Windows Server 2016 (včetně jádra, ale ne Nano).
+ATA Lightweight Gateway podporuje instalaci na řadičích domény se systémem Windows Server 2008 R2 SP1 (nikoli včetně jádra serveru), Windows Server 2012, Windows Server 2012 R2, Windows Server 2016 a 2019 serveru systému Windows (včetně jádra, ale ne Nano).
 
 Řadič domény může být řadič domény jen pro čtení (RODC).
 
@@ -277,7 +277,7 @@ Po nasazení můžete pomocí konzoly ATA případně změnit, které síťové 
 ### <a name="ports"></a>Porty
 Následující tabulka uvádí minimální porty, které ATA Lightweight Gateway vyžaduje:
 
-|Protocol (Protokol)|Přenos|Port|Směr|Direction|
+|Protocol|Přenos|Port|Směr|Direction|
 |------------|-------------|--------|-----------|-------------|
 |DNS|TCP a UDP|53|Servery DNS|Odchozí|
 |NTLM přes RPC|TCP|135|Všechna zařízení v síti|Obojí|
