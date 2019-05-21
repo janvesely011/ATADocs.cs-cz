@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/15/2019
+ms.date: 05/20/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: aa4f9c18e0695092ddbaa9ef8505b403e206cb8c
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
+ms.openlocfilehash: a977ff49c385ababfd753d05caf3518825e9def9
+ms.sourcegitcommit: 122974e5bec49a1d613a38debc37d91ff838b05f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65196849"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65933626"
 ---
 # <a name="tutorial-compromised-credential-alerts"></a>Kurz: Upozornění ohrožení zabezpečení přihlašovacích údajů  
 
@@ -103,10 +103,13 @@ Je důležité zkontrolovat, pokud ukončení všech pokusů o přihlášení po
 1. Prozkoumejte zdrojový počítač.  
 2. Na stránce výstrahy zkontrolujte, které, pokud existuje, uživatelé úspěšně uhádl.
     - Každý uživatel, který byl úspěšně, uhodnout [zkontrolujte svůj profil](investigate-a-user.md) dále prozkoumat.
-3. Pokud se provádí ověřování pomocí protokolu NTLM, někdy zobrazení výstrahy v mnoha případech, nebude existovat dostatek informací o serveru, které na zdrojovém počítači se pokusili získat přístup k dispozici.
-    1. Získat tyto informace, ujistěte se, že chcete povolit auditování na řadičích domény používané protokolu NTLM.  
-    2. Pokud chcete povolit auditování protokolu NTLM, zapněte události 8004 (NTLM authentication událost, která obsahuje informace o zdrojovém počítači, uživatelský účet a serveru, na kterém se pokusili získat přístup na zdrojovém počítači).
-    3. Když zjistíte, které server odeslal ověření ověřování, prozkoumejte serveru tak, že zkontrolujete události, například události 4624, aby lépe porozumět procesu ověřování.
+1. Pokud ověřování pomocí protokolu NTLM, v některých scénářích, pravděpodobně není dostatek informací o serveru, které zdrojovém počítači se pokusili získat přístup k dispozici. Ochrana ATP v programu Azure zaznamená data o zdrojového počítače založené na události Windows 4776, který obsahuje název zdrojového počítače.
+
+    Pokud chcete získat název počítače zdrojového, ujistěte se, že chcete povolit auditování protokolu NTLM na příslušných řadičích domény.
+    
+    Chcete-li povolit auditování protokolu NTLM, zapněte 8004 událostí Windows (NTLM authentication událost, která obsahuje informace o zdrojovém počítači, uživatelský účet a serveru, že zdrojový počítač se pokusil o přístup).
+    
+    Když zjistíte, které server odeslal ověření ověřování, prozkoumejte serveru tak, že zkontrolujete události, jako je například 4624 události Windows, abyste lépe pochopili proces ověřování. Zaškrtněte, pokud tento server je přístupný z Internetu pomocí otevřené porty. Například je otevřít serveru pomocí protokolu RDP k Internetu?
 
 **Navrhované nápravné kroky a pro ochrany před únikem informací**
 
@@ -124,6 +127,7 @@ Je důležité zkontrolovat, pokud ukončení všech pokusů o přihlášení po
 **Popis**
 
 V rámci útoku hrubou silou se útočník pokusí ověření pomocí mnoha různých hesel pro různé účty, dokud nebude nalezen správné heslo pro alespoň jeden účet. Jednou najde, útočník může přihlásit pomocí tohoto účtu.  
+
 V této detekce se aktivuje upozornění, když zjistí velké množství jednoduché vazby ověřování ochrana ATP v programu Azure. Tato výstraha detekuje útok hrubou silou provést buď *vodorovně* s menší skupinou hesel mezi mnoha uživateli *svisle* s rozsáhlou sadou hesla u několika uživatelů či libovolnou kombinaci Tyto dvě možnosti.
 
 **TP, B-TP nebo FP**

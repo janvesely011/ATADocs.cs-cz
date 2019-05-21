@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/31/2019
+ms.date: 05/19/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 1ac873fc-b763-41d7-878e-7c08da421cb5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 1489f1b24065a153734bdd46975576d469b57f24
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
+ms.openlocfilehash: 0c497d55142eb13867e904917aca890bc157ad63
+ms.sourcegitcommit: 122974e5bec49a1d613a38debc37d91ff838b05f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65196941"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65933704"
 ---
 # <a name="what-is-network-name-resolution"></a>Co je překlad síťových názvů?
 
@@ -25,17 +25,17 @@ Překlad síťových názvů nebo (NNR) je hlavní součástí služby Azure ATP
 
 Použití ÚTOKŮ, ochrana ATP v programu Azure je možnost provést korelaci mezi nezpracovaná aktivity (který obsahuje IP adresy) a relevantní počítačů zahrnutých v každé aktivity. Založené na aktivitách nezpracovaná, ochrana ATP v programu Azure profily entit, včetně počítačů a generuje upozornění zabezpečení na podezřelé aktivity.
 
-K překladu IP adres na názvy počítačů, senzory ochrany ATP v programu dotazu IP adresu pro název počítače "za" IP adresu, pomocí jedné z následujících metod:
+Přeložit IP adresy na názvy počítačů, služby Azure ATP senzorů dotazu IP adresu pro název počítače "za" IP adresu, pomocí jedné z následujících metod:
 
 1. NTLM přes RPC (port TCP 135)
 2. NetBIOS (port UDP 137)
 3. Protokol RDP (portu TCP 3389) – jenom první paket **Client hello**
-4. Zadat dotaz na server DNS pomocí zpětného vyhledávání DNS IP adresy (UDP 53)
+4. Dotazy DNS server pomocí zpětného vyhledávání DNS IP adresy (UDP 53)
 
 > [!NOTE]
 >Na všech portech neprobíhá žádné ověřování.
 
-Po načtení názvu počítače, senzoru služby Azure ATP ověří ve službě Active Directory a zjistěte, jestli je objekt korelační počítače se stejným názvem počítače. Pokud senzor najde korelace, související senzor tato IP adresa na tento objekt počítače.
+Po načtení názvu počítače, senzoru služby Azure ATP ověří ve službě Active Directory a zjistěte, jestli je objekt korelační počítače se stejným názvem počítače. Pokud senzor najde korelace, přidruží senzor tato IP adresa na tento objekt počítače.
 
 NNR dat je zásadní pro detekci hrozeb následující:
 
@@ -57,7 +57,7 @@ Legitimace obsahuje čas, IP a název počítače, které se přeložila na IP a
 
 
 ### <a name="prerequisites"></a>Požadavky
-|Protocol (Protokol)|  Přenos|  Port|   Zařízení| Direction|
+|Protocol|  Přenos|  Port|   Zařízení| Direction|
 |--------|--------|------|-------|------|
 |NTLM přes RPC| TCP |135|   Všechna zařízení v síti| Příchozí|
 |NetBIOS|   UDP|    137|    Všechna zařízení v síti| Příchozí|
@@ -77,11 +77,11 @@ Každé monitorování výstraha poskytuje konkrétní podrobnosti metody, senzo
 ### <a name="configuration-recommendations"></a>Doporučené konfigurace
 
 - RPC přes protokol NTLM:
-    - Zkontrolujte, že je Port 135 otevřené pro příchozí komunikace ze senzorů ochrany ATP v programu Azure, na všech počítačích v prostředí.
+    - Zkontrolujte, že je TCP Port 135 otevřené pro příchozí komunikace ze senzorů ochrany ATP v programu Azure, na všech počítačích v prostředí.
     - Zkontrolujte, že všechny sítě (Brána firewall), protože to může zabránit komunikaci na příslušné porty.
 
 - NetBIOS:
-    - Zkontrolujte, že je Port 137 otevřené pro příchozí komunikace ze senzorů ochrany ATP v programu Azure, na všech počítačích v prostředí.
+    - Zkontrolujte, že UDP Port 137 je otevřené pro příchozí komunikace ze senzorů ochrany ATP v programu Azure, na všech počítačích v prostředí.
     - Zkontrolujte, že všechny sítě (Brána firewall), protože to může zabránit komunikaci na příslušné porty.
 - Reverzní DNS:
     - Zkontrolujte, že senzor můžete připojit k serveru DNS a že jsou povolené zóny zpětného vyhledávání.

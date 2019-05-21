@@ -5,21 +5,38 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 05/12/2019
+ms.date: 05/20/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
-ms.reviewer: itargoet
+ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: fc0aad92cfbd415d02068daf091c7e95e265c992
-ms.sourcegitcommit: ef6d041d5ecde7ec909fd0f90848ce422c0c4774
+ms.openlocfilehash: 8f9426a51f0bd709685c365a39d2f4aad1dbf8cb
+ms.sourcegitcommit: 122974e5bec49a1d613a38debc37d91ff838b05f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65613386"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65933661"
 ---
 # <a name="whats-new-in-azure-atp"></a>Co je nového v Azure ATP
+
+## <a name="azure-atp-release-278"></a>Verze ochrany ATP v programu Azure 2.78
+
+Vydáno 19. května 2019
+
+- **Vylepšení funkce: Citlivých entit**<br> Ruční citlivé označí pro servery systému Exchange
+
+    Nově můžete ručně označit entity jako servery systému Exchange během konfigurace.
+
+    Chcete-li ručně označit entity jako serveru Exchange Server:
+    1. Na portálu ochrany ATP v programu Azure, přístup **konfigurace** nabídky.
+    2. V části **detekce**vyberte **značky entit**a pak vyberte **citlivé**.
+    3. Vyberte **servery Exchange** a pak přidejte entity, které chcete ke značce.
+
+    Po označení počítače jako Exchange Server, byla označená jako citlivá a zobrazení, že byla označena jako serveru Exchange Server.  Citlivé značky se zobrazí v profil entity počítače a počítače se budou považovat za v všechna nalezení, které jsou založeny na citlivé účty a cesty taktiky Lateral Movement.
+
+- Tato verze také zahrnuje vylepšení a opravy chyb pro interní senzor infrastruktury.
 
 ## <a name="azure-atp-release-277"></a>Verze ochrany ATP v programu Azure 2.77
 
