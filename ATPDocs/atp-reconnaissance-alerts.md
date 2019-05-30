@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 05/20/2019
+ms.date: 05/27/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 95b34c65c0f13c58034e29acb662c77d65253c70
-ms.sourcegitcommit: 122974e5bec49a1d613a38debc37d91ff838b05f
+ms.openlocfilehash: 8d1c3d5d39819cc065f2bbd7bfe92cdec19d5941
+ms.sourcegitcommit: 07abbd941d91299475df2af469ee5a9a99e07e0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65933681"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66264905"
 ---
 # <a name="tutorial-reconnaissance-alerts"></a>Kurz: Rekognoskace výstrahy  
 
@@ -38,7 +38,7 @@ V tomto kurzu se dozvíte, jak porozumět, klasifikovat, opravit a brání násl
 > [!div class="checklist"]
 > * Rekognoskace výčet účtu (externí ID 2003)
 > * Mapování sondování sítě (DNS) (externí ID 2007)
-> * Rekognoskace instančního objektu zabezpečení (LDAP) (externí ID 2038) – preview
+> * Rekognoskace instančního objektu zabezpečení (LDAP) (externí ID 2038)
 > * Uživatele a IP adres pro rekognoskaci (SMB) (externí ID 2012)
 > * Rekognoskace členství uživatelů a skupin (SAMR) (externí ID 2021)
  
@@ -161,7 +161,7 @@ Je důležité zabránit budoucím útokům pomocí dotazů AXFR díky zabezpeč
 
 - Zabezpečení interní server DNS pro rekognoskaci pomocí DNS tím, že zakážete přenosů zóny nebo podle [omezení přenosů zóny](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee649273(v=ws.10)) pouze na zadané IP adresy. Úprava přenosů zóny je jedním z úkolů na kontrolním seznamu, která by měla být určena pro [zabezpečení před útoky interních i externích serverů DNS](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee649273(v=ws.10)).
 
-## <a name="security-principal-reconnaissance-ldap-external-id-2038---preview"></a>Rekognoskace instančního objektu zabezpečení (LDAP) (externí ID 2038) – preview
+## <a name="security-principal-reconnaissance-ldap-external-id-2038"></a>Rekognoskace instančního objektu zabezpečení (LDAP) (externí ID 2038)
 
 **Popis**
 

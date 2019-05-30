@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 04/07/2019
+ms.date: 05/27/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0dd8d987472ef88108f2cb3541bd590d1a816726
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
+ms.openlocfilehash: e72e3e03d52f41eae1fe9823feae6dffd181b31f
+ms.sourcegitcommit: 07abbd941d91299475df2af469ee5a9a99e07e0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65196639"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66264940"
 ---
 # <a name="azure-atp-security-alerts"></a>Výstrahy zabezpečení služby Azure ATP
 
@@ -48,7 +48,7 @@ Ve verzi 2.56 všechny existující výstrahy zabezpečení služby Azure ATP by
 |[Mapování sondování sítě (DNS)](atp-reconnaissance-alerts.md#network-mapping-reconnaissance-dns-external-id-2007)|Rekognoskace pomocí DNS|2007|Střední|Zjišťování|
 |[Pokus o spuštění vzdáleného kódu](atp-domain-dominance-alerts.md#remote-code-execution-attempt-external-id-2019)|Pokus o spuštění vzdáleného kódu|2019|Střední|Spuštění,<br> Trvalost,<br> Zvýšení úrovně oprávnění<br> Únik obrany<br> Laterální pohyb|
 |[Vzdálené spuštění kódu v DNS](atp-lateral-movement-alerts.md#remote-code-execution-over-dns-external-id-2036)|Není k dispozici|2036|Střední|Zvýšení úrovně oprávnění<br> Laterální pohyb|
-|[Rekognoskace instančního objektu zabezpečení (LDAP) – preview](atp-reconnaissance-alerts.md#security-principal-reconnaissance-ldap-external-id-2038---preview)|Není k dispozici|2038|Střední|Přihlašovací údaje přístup|
+|[Rekognoskace instančního objektu zabezpečení (LDAP)](atp-reconnaissance-alerts.md#security-principal-reconnaissance-ldap-external-id-2038)|Není k dispozici|2038|Střední|Přihlašovací údaje přístup|
 |[Podezřelý útok hrubou silou (pomocí protokolu Kerberos, NTLM)](atp-compromised-credentials-alerts.md#suspected-brute-force-attack-kerberos-ntlm-external-id-2023)|Podezřelé chyby ověřování|2023|Střední|Přihlašovací údaje přístup|
 |[Podezřelý útok hrubou silou (LDAP)](atp-compromised-credentials-alerts.md#suspected-brute-force-attack-ldap-external-id-2004)|Útok hrubou silou pomocí jednoduché vazby LDAP.|2004|Střední|Přihlašovací údaje přístup|
 |[Podezřelý útok hrubou silou (SMB)](atp-compromised-credentials-alerts.md#suspected-brute-force-attack-smb-external-id-2033)|Neobvyklá implementace protokolu (potenciální použití škodlivých nástrojů, jako je Hydra)|2033|Střední|Laterální pohyb|

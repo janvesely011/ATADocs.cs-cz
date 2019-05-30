@@ -5,21 +5,30 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 05/20/2019
+ms.date: 05/27/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: 8f9426a51f0bd709685c365a39d2f4aad1dbf8cb
-ms.sourcegitcommit: 122974e5bec49a1d613a38debc37d91ff838b05f
+ms.openlocfilehash: 63a1dfa60d96e7f34cb406b0ccbc5a3584fbbb5b
+ms.sourcegitcommit: 07abbd941d91299475df2af469ee5a9a99e07e0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65933661"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66264929"
 ---
 # <a name="whats-new-in-azure-atp"></a>Co je nového v Azure ATP
+
+## <a name="azure-atp-release-279"></a>Verze ochrany ATP v programu Azure 2.79
+Vydáno 26. května 2019
+
+- **Obecná dostupnost: Rekognoskace instančního objektu zabezpečení (LDAP) (externí ID 2038)**
+
+    Tato výstraha je teď ve verzi GA (obecná dostupnost). Další informace o upozornění, oznámení funkcí a navrhované nápravné a ochrany před únikem informací najdete v článku [rekognoskace instančního objektu zabezpečení (LDAP) popis výstrahy](atp-reconnaissance-alerts.md#security-principal-reconnaissance-ldap-external-id-2038)
+
+- Tato verze také zahrnuje vylepšení a opravy chyb pro interní senzor infrastruktury.
 
 ## <a name="azure-atp-release-278"></a>Verze ochrany ATP v programu Azure 2.78
 
@@ -147,7 +156,7 @@ Vydáno 24. února 2019
 
 - **Nová výstraha zabezpečení: Rekognoskace instančního objektu zabezpečení (LDAP) – (preview)**<br>
 
-    Azure ATP [rekognoskace instančního objektu zabezpečení (LDAP) – ve verzi preview](atp-reconnaissance-alerts.md#security-principal-reconnaissance-ldap-external-id-2038---preview) výstraha zabezpečení je teď ve verzi public preview. <br> V této detekce se aktivuje upozornění zabezpečení služby Azure ATP při použití instančního objektu zabezpečení rekognoskace útočníci získat důležité informace o prostředí domény. Tyto informace pomáhají útočníci namapovat na doménovou strukturu, stejně jako identifikovat privilegovaných účtů pro použití v dalších krocích v jejich řetězu událostí útoku. 
+    Azure ATP [rekognoskace instančního objektu zabezpečení (LDAP) – ve verzi preview](atp-reconnaissance-alerts.md#security-principal-reconnaissance-ldap-external-id-2038) výstraha zabezpečení je teď ve verzi public preview. <br> V této detekce se aktivuje upozornění zabezpečení služby Azure ATP při použití instančního objektu zabezpečení rekognoskace útočníci získat důležité informace o prostředí domény. Tyto informace pomáhají útočníci namapovat na doménovou strukturu, stejně jako identifikovat privilegovaných účtů pro použití v dalších krocích v jejich řetězu událostí útoku. 
 
     Adresář přístup protokolu LDAP (Lightweight) je nejoblíbenější metody používá pro účely legitimní a škodlivý dotaz službě Active Directory. LDAP, zaměřuje zabezpečení, rekognoskace instančního objektu se často používá jako první fáze Kerberoasting útoku. Útoky Kerberoasting slouží k získání seznamu cílové názvy objektu zabezpečení (SPN), což útočníci se pak pokusí získat lístky Server udělování lístků (TGS) pro.
 

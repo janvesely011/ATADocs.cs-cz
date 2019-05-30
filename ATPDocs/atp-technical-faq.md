@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 6a9b5273-eb26-414e-9cdd-f64406e24ed8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c844aa445378643200997d4389a3bee1aae45099
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
+ms.openlocfilehash: b44f2cb271d10b3414ba307dd2ff39c2e9abcd39
+ms.sourcegitcommit: 07abbd941d91299475df2af469ee5a9a99e07e0f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65195505"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66265013"
 ---
 # <a name="azure-atp-frequently-asked-questions"></a>Nejčastější dotazy k Azure ATP
 Tento článek obsahuje seznam častých otázek a odpovědí týkajících se ochrany ATP v programu Azure rozdělené do následujících catergories: 
@@ -142,14 +142,14 @@ Ochrana ATP v programu Azure generuje provoz z řadičů domény do počítačů
     - Protokol RDP (portu TCP 3389)
     - Zadat dotaz na server DNS pomocí zpětného vyhledávání DNS IP adresy (UDP 53)
     
-    Po přijetí název počítače, služby Azure ATP snímače různé podrobnosti ve službě Active Directory, jestli je objekt korelační počítače se stejným názvem počítače. Pokud se najde shoda, lze vytvářet spojení mezi IP adresu a objekt odpovídající počítače.
+    Po získání názvu počítače, služby Azure ATP senzorů různé podrobnosti ve službě Active Directory, jestli je objekt korelační počítače se stejným názvem počítače. Pokud se najde shoda, lze vytvářet spojení mezi IP adresu a objekt odpovídající počítače.
 2. **Cesty taktiky Lateral Movement (LMP)**<br>
     Ochrana ATP v programu Azure k sestavení potenciální LMPs pro citlivé uživatele, vyžaduje informace o místní správci na počítačích. V tomto scénáři používá senzoru služby Azure ATP SAM-R (TCP 445) k dotazování IP adresu podle síťového provozu, aby bylo možné zjistit místní správci počítači. Další informace o ochrany ATP v programu Azure a SAM-R, najdete v článku [konfigurace SAM-R požadovaná oprávnění](install-atp-step8-samr.md). 
 
 3. **Dotazování služby Active Directory pomocí protokolu LDAP** pro entitu dat<br>
     Azure ATP senzorů dotaz na řadič domény z domény, kam patří entity. Může být snímač stejný nebo jiný řadič domény v této doméně. 
 
-|Protocol (Protokol)|Služba|Port|Source| Direction|
+|Protocol|Služba|Port|Source| Direction|
 |---------|---------|---------|---------|--------|
 |LDAP|TCP a UDP|389|Řadiče domény|Odchozí|
 |Zabezpečený LDAP (LDAPS)|TCP|636|Řadiče domény|Odchozí|
