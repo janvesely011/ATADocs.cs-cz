@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 04/07/2019
+ms.date: 05/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 6a9b5273-eb26-414e-9cdd-f64406e24ed8
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: b44f2cb271d10b3414ba307dd2ff39c2e9abcd39
-ms.sourcegitcommit: 07abbd941d91299475df2af469ee5a9a99e07e0f
+ms.openlocfilehash: 297df34b92ebbe1be93667d54eedd51a605e5bf1
+ms.sourcegitcommit: b021f8dfc54e59de429f93cc5fc0d733d92b00b8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66265013"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66403521"
 ---
 # <a name="azure-atp-frequently-asked-questions"></a>Nejčastější dotazy k Azure ATP
 Tento článek obsahuje seznam častých otázek a odpovědí týkajících se ochrany ATP v programu Azure rozdělené do následujících catergories: 
@@ -90,7 +90,7 @@ Kromě toho Microsoft provádí kontroly podstupovaly ověřování u správců 
 Každý řadič domény v prostředí měly být pokryté komponentami ochrany ATP v programu nebo samostatného senzoru. Další informace najdete v tématu [velikosti senzoru služby Azure ATP](atp-capacity-planning.md#sizing). 
 
 ### <a name="does-azure-atp-work-with-encrypted-traffic"></a>Služba Ochrana ATP v programu Azure funguje při šifrovaném provozu?
-Síťové protokoly s šifrovaný provoz (například LDAPS nebo IPSEC) nejsou dešifrovat, ale jsou analyzovány senzory.
+Síťové protokoly při šifrovaném provozu (třeba AtSvc a WMI) nejsou dešifrovat, ale jsou analyzovány senzory.
 
 ### <a name="does-azure-atp-work-with-kerberos-armoring"></a>Služba Ochrana ATP v programu Azure funguje s obranou protokolu Kerberos?
 Povolení obrany protokolu Kerberos, označované také jako FAST Flexible Authentication Secure Tunneling (), je podporována ochrana ATP v programu Azure, s výjimkou pass typu over-pass-the hash detekce, což nefunguje s obranou protokolu Kerberos.

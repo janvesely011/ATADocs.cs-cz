@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 05/20/2019
+ms.date: 05/30/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: e9cf68d2-36bd-4b0d-b36e-7cf7ded2618e
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a977ff49c385ababfd753d05caf3518825e9def9
-ms.sourcegitcommit: 122974e5bec49a1d613a38debc37d91ff838b05f
+ms.openlocfilehash: 6e55ebfaeac540d15a8539ee2c5b1450ee0c3f10
+ms.sourcegitcommit: b021f8dfc54e59de429f93cc5fc0d733d92b00b8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65933626"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66403554"
 ---
 # <a name="tutorial-compromised-credential-alerts"></a>Kurz: Upozornění ohrožení zabezpečení přihlašovacích údajů  
 
@@ -63,6 +63,11 @@ Další informace o honeytokenové účty, najdete v části [konfigurovat vylou
 1. Prozkoumat [zdrojový uživatel](investigate-a-user.md).
 2. Prozkoumat [zdrojový počítač](investigate-a-computer.md).
 
+> [!NOTE]
+    > Pokud ověřování pomocí protokolu NTLM, v některých scénářích, pravděpodobně není dostatek informací o serveru, které zdrojovém počítači se pokusili získat přístup k dispozici. Ochrana ATP v programu Azure zaznamená data o zdrojového počítače založené na události Windows 4776, který obsahuje název počítače definované zdrojového počítače.
+    > Pomocí Windows událost 4776 zaznamenat tyto informace, zdrojové pole pro tyto informace příležitostně přepíše zařízení nebo software pro zobrazení pouze pracovní stanice nebo MSTSC. Pokud máte často zařízení, která se zobrazí jako pracovní stanice nebo MSTSC, ujistěte se, že chcete povolit auditování protokolu NTLM na příslušných řadičích domény se získat název počítače zdrojového true.    
+    > Chcete-li povolit auditování protokolu NTLM, zapněte 8004 událostí Windows (NTLM authentication událost, která obsahuje informace o zdrojovém počítači, uživatelský účet a serveru, že zdrojový počítač se pokusil o přístup).
+
 **Navrhované nápravné kroky a pro ochrany před únikem informací**
 
 1. Obsahují zdrojový počítač.
@@ -101,15 +106,17 @@ Je důležité zkontrolovat, pokud ukončení všech pokusů o přihlášení po
 **Vysvětlení rozsahu porušení**
 
 1. Prozkoumejte zdrojový počítač.  
-2. Na stránce výstrahy zkontrolujte, které, pokud existuje, uživatelé úspěšně uhádl.
+1. Na stránce výstrahy zkontrolujte, které, pokud existuje, uživatelé úspěšně uhádl.
     - Každý uživatel, který byl úspěšně, uhodnout [zkontrolujte svůj profil](investigate-a-user.md) dále prozkoumat.
-1. Pokud ověřování pomocí protokolu NTLM, v některých scénářích, pravděpodobně není dostatek informací o serveru, které zdrojovém počítači se pokusili získat přístup k dispozici. Ochrana ATP v programu Azure zaznamená data o zdrojového počítače založené na události Windows 4776, který obsahuje název zdrojového počítače.
 
-    Pokud chcete získat název počítače zdrojového, ujistěte se, že chcete povolit auditování protokolu NTLM na příslušných řadičích domény.
+    > [!NOTE]
+    > Pokud ověřování pomocí protokolu NTLM, v některých scénářích, pravděpodobně není dostatek informací o serveru, které zdrojovém počítači se pokusili získat přístup k dispozici. Ochrana ATP v programu Azure zaznamená data o zdrojového počítače založené na události Windows 4776, který obsahuje název počítače definované zdrojového počítače.
+    > Pomocí Windows událost 4776 zaznamenat tyto informace, zdrojové pole pro tyto informace příležitostně přepíše zařízení nebo software pro zobrazení pouze pracovní stanice nebo MSTSC. Pokud máte často zařízení, která se zobrazí jako pracovní stanice nebo MSTSC, ujistěte se, že chcete povolit auditování protokolu NTLM na příslušných řadičích domény se získat název počítače zdrojového true.    
+    > Chcete-li povolit auditování protokolu NTLM, zapněte 8004 událostí Windows (NTLM authentication událost, která obsahuje informace o zdrojovém počítači, uživatelský účet a serveru, že zdrojový počítač se pokusil o přístup).
     
-    Chcete-li povolit auditování protokolu NTLM, zapněte 8004 událostí Windows (NTLM authentication událost, která obsahuje informace o zdrojovém počítači, uživatelský účet a serveru, že zdrojový počítač se pokusil o přístup).
-    
-    Když zjistíte, které server odeslal ověření ověřování, prozkoumejte serveru tak, že zkontrolujete události, jako je například 4624 události Windows, abyste lépe pochopili proces ověřování. Zaškrtněte, pokud tento server je přístupný z Internetu pomocí otevřené porty. Například je otevřít serveru pomocí protokolu RDP k Internetu?
+1. Když zjistíte, které server odeslal ověření ověřování, prozkoumejte serveru tak, že zkontrolujete události, jako je například 4624 události Windows, abyste lépe pochopili proces ověřování. 
+1. Zaškrtněte, pokud tento server je přístupný z Internetu pomocí otevřené porty. 
+    Například je otevřít serveru pomocí protokolu RDP k Internetu?
 
 **Navrhované nápravné kroky a pro ochrany před únikem informací**
 

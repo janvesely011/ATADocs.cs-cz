@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 04/18/2019
+ms.date: 05/29/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: d89e7aff-a6ef-48a3-ae87-6ac2e39f3bdb
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 9a788e76c4cc7d15d43d90b023927d9e76c422b9
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
+ms.openlocfilehash: e6a286b4468476cd0b2ac9a350c018e4c04a265e
+ms.sourcegitcommit: b021f8dfc54e59de429f93cc5fc0d733d92b00b8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65195772"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66403598"
 ---
 # <a name="troubleshooting-ata-known-issues"></a>Řešení známých problémů ATA
 
@@ -46,7 +46,7 @@ Tato část podrobně popisuje možné chyby v nasazení ATA a kroky potřebné 
 > |System.InvalidOperationException: Instance 'Microsoft.Tri.Gateway' v určené kategorii neexistuje.|Pro názvy procesů v bráně ATA byl povolen identifikátor PID|PID v názvech procesů zakážete pomocí [KB281884](https://support.microsoft.com/kb/281884)|
 > |System.InvalidOperationException: Kategorie neexistuje.|Čítače můžou být v registru zakázané|Čítače výkonu znovu sestavíte pomocí [KB2554336](https://support.microsoft.com/kb/2554336)|
 > |System.ApplicationException: Nepovedlo se spustit relaci ETW MMA-ETW-Livecapture-a4f595bd-f567-49a7-b963-20fa4e370329|V souboru hostitelů se nachází položka hostitele odkazující na krátký název počítače|Odeberte položku hostitele ze souboru C:\Windows\System32\drivers\etc\HOSTS nebo ji změňte na FQDN.|
-> |System.IO.IOException: Ověření se nezdařilo, protože vzdálená strana uzavřela přenosový stream.|Protokol TLS 1.0 je zakázaný v komponentě ATA Gateway, ale rozhraní .net je nastavené na použití protokolu TLS 1.2|Použijte jednu z následujících možností: </br> Povolení protokolu TLS 1.0 na bráně ATA Gateway </br>Protokol TLS 1.2 na rozhraní .net nastavením klíčů registru použít výchozí nastavení operačního systému pro protokol SSL a TLS, následujícím způsobem: </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001` </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`</br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SchUseStrongCrypto"=dword:00000001 `</br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] " SchUseStrongCrypto"=dword:00000001`|
+> |System.IO.IOException: Ověření se nezdařilo, protože vzdálená strana uzavřela přenosový stream nebo nelze vytvořit zabezpečený kanál SSL/TLS|Protokol TLS 1.0 je zakázaný v komponentě ATA Gateway, ale rozhraní .net je nastavené na použití protokolu TLS 1.2|Použijte jednu z následujících možností: </br> Povolení protokolu TLS 1.0 na bráně ATA Gateway </br>Protokol TLS 1.2 na rozhraní .net nastavením klíčů registru použít výchozí nastavení operačního systému pro protokol SSL a TLS, následujícím způsobem: </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001` </br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001`</br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319] "SchUseStrongCrypto"=dword:00000001 `</br>`[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319] " SchUseStrongCrypto"=dword:00000001`|
 > |System.TypeLoadException: Nelze načíst typ 'Microsoft.Opn.Runtime.Values.BinaryValueBufferManager' ze sestavení ' Microsoft.Opn.Runtime, verze = 4.0.0.0, Culture = neutral, PublicKeyToken = 31bf3856ad364e35 "|Komponentě ATA Gateway se nepodařilo načíst požadované parsovací soubory.|Zkontrolujte, jestli je nainstalovaný Microsoft Message Analyzer. Instalace nástroje Message Analyzer společně s komponentami ATA Gateway / Lightweight Gateway není podporovaná. Odinstalujte Message Analyzer a restartujte službu Gateway.|
 > |System.Net.WebException: Vzdálený server vrátil chybu: Vyžadováno ověřování proxy serveru (407)|Komunikaci mezi ATA Gateway a ATA Center ruší proxy server.|Vypněte proxy server na počítači s ATA Gateway. <br></br>Nastavení proxy serveru můžou záviset na konkrétním účtu.|
 > |System.IO.DirectoryNotFoundException: Systém nemůže najít zadanou cestu. (Výjimka z HRESULT: 0x80070003)|Jednu nebo více služeb potřebných pro provoz ATA se nepodařilo spustit.|Spusťte tyto služby: <br></br>Výstrahy a protokolování výkonu, Plánovač úloh.|
