@@ -5,21 +5,30 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 05/27/2019
+ms.date: 06/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: 63a1dfa60d96e7f34cb406b0ccbc5a3584fbbb5b
-ms.sourcegitcommit: 07abbd941d91299475df2af469ee5a9a99e07e0f
+ms.openlocfilehash: b781b91196dad4556462d425cb5778bd0f3da26c
+ms.sourcegitcommit: 37b572e0e9e4bb874c7965f66de0ee8b6fbe5416
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66264929"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66500676"
 ---
 # <a name="whats-new-in-azure-atp"></a>Co je nového v Azure ATP
+
+## <a name="azure-atp-release-280"></a>Verze ochrany ATP v programu Azure 2,80
+
+Vydáno 2. června 2019
+
+- **Vylepšení funkce: Podezřelé výstraha připojení VPN**<br>
+   Tato výstraha nyní obsahuje rozšířené legitimaci a texty pro lepší použitelnost. Další informace o funkcích výstrahy a navrhované nápravné kroky a ochrany před únikem informací najdete v tématu [popis výstrahy připojení VPN podezřelé](atp-compromised-credentials-alerts.md#suspicious-vpn-connection-external-id-2025).
+
+- Tato verze také zahrnuje vylepšení a opravy chyb pro interní senzor infrastruktury.
 
 ## <a name="azure-atp-release-279"></a>Verze ochrany ATP v programu Azure 2.79
 Vydáno 26. května 2019
