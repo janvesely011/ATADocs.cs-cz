@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 05/01/2019
+ms.date: 06/11/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 420c162e3dc5b7869b46453e3eeda67e1fdc692c
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
+ms.openlocfilehash: 515ab93de375f6ac286cb11e6394e868e095cf48
+ms.sourcegitcommit: 3e0a19e496bc7713bb227c501ca4dd7da223aac8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65195568"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66830388"
 ---
 # <a name="azure-atp-prerequisites"></a>Požadavky služby Azure ATP
 
@@ -29,7 +29,7 @@ Tento článek popisuje požadavky pro úspěšné nasazení služby Azure ATP v
 
 Ochrana ATP v programu Azure se skládá z cloudové službě ochrana ATP v programu Azure, který se skládá z ochrany ATP v programu Azure portal, senzoru služby Azure ATP a/nebo samostatného senzoru služby Azure ATP. Další informace o jednotlivých součástech ochrany ATP v programu Azure najdete v tématu [architektura služby Azure ATP](atp-architecture.md).
 
-Ochrana ATP v programu Azure chrání vaše místní služby Active Directory uživatele a/nebo uživatelů synchronizované do Azure Active Directory. Pokud chcete chránit prostředí tvořené pouze uživatele AAD, naleznete v tématu [AAD Identity Protection] (https://docs.microsoft.com/azure/active-directory/identity-protection/overview). 
+Ochrana ATP v programu Azure chrání vaše místní služby Active Directory uživatele a/nebo uživatelů synchronizované do Azure Active Directory. K ochraně prostředí tvořené pouze uživatele AAD, naleznete v tématu [ochranu Identity AAD](https://docs.microsoft.com/azure/active-directory/identity-protection/overview). 
 
 K vytvoření instance služby Azure ATP, budete potřebovat minimálně jeden globální zabezpečení a správce tenanta služby AAD. Každá instance služby Azure ATP podporuje více hranice doménové struktury služby Active Directory a doménovou strukturu funkční úroveň (ffl) v systémech Windows 2003 a novějších. 
 
@@ -124,7 +124,7 @@ Senzor se nepodporuje v doméně, řadiče se systémem Windows 2008 R2 pomocí 
 ### <a name="ports"></a>Porty
 Následující tabulka uvádí minimální porty, které vyžaduje senzoru služby Azure ATP:
 
-|Protocol (Protokol)|Přenos|Port|Směr|Direction|
+|Protocol|Přenos|Port|Směr|Direction|
 |------------|-------------|--------|-----------|-------------|
 |**Porty Internet**|||||
 |SSL (*.atp.azure.com)|TCP|443|Cloudovou službu Azure ATP|Odchozí|
@@ -202,7 +202,7 @@ Samostatný senzor ochrany ATP v programu Azure vyžaduje minimálně jeden adap
 ### <a name="ports"></a>Porty
 Následující tabulka uvádí minimální porty, které vyžaduje samostatný senzor ochrany ATP v programu Azure nakonfigurovaná na adaptéru pro správu:
 
-|Protocol (Protokol)|Přenos|Port|Směr|Direction|
+|Protocol|Přenos|Port|Směr|Direction|
 |------------|-------------|--------|-----------|-------------|
 |**Porty Internet**|||||
 |SSL (*.atp.azure.com)|TCP|443|Cloudovou službu Azure ATP|Odchozí|
