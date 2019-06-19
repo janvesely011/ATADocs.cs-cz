@@ -5,21 +5,33 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 06/10/2019
+ms.date: 06/18/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: faf89ddb152e002a818d79a83b5447c65a143b32
-ms.sourcegitcommit: 3e0a19e496bc7713bb227c501ca4dd7da223aac8
+ms.openlocfilehash: 1fed88a774b1ffa88b52879a44de6697b1b615f6
+ms.sourcegitcommit: 87756e27894570997b7039d128f223de0664639f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66830384"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67192783"
 ---
 # <a name="whats-new-in-azure-atp"></a>Co je nového v Azure ATP
+
+## <a name="azure-atp-release-282"></a>Verze ochrany ATP v programu Azure 2.82
+
+Vydáno 18. června 2019
+
+- **Nová verze public preview**<br>
+Možnosti pro zkoumání hrozeb služby Azure ATP identity je teď v **ve verzi Public Preview**a k dispozici pro všechny tenanty Azure ATP chráněné. Zobrazit [možnosti pro zkoumání Azure ochrany ATP v programu Microsoft Cloud App Security](atp-mcas-integration.md) Další informace. 
+
+- **Obecná dostupnost**<br>
+Podpora ochrany ATP v programu Azure pro nedůvěryhodných doménových strukturách jsou teď obecně dostupné. Zobrazit [více doménovými strukturami služby Azure ATP](atp-multi-forest.md) Další informace. 
+
+- Tato verze obsahuje vylepšení a opravy chyb pro interní senzor infrastruktury.
 
 ## <a name="azure-atp-release-281"></a>Verze ochrany ATP v programu Azure 2.81
 
@@ -153,7 +165,7 @@ Vydáno 10. března 2019
 - Tato verze také zahrnuje vylepšení a opravy chyb pro interní senzor infrastruktury.
 
 ## <a name="azure-atp-release-268"></a>Verze ochrany ATP v programu Azure 2.68
-3. března 2019 všeobecně dostupné
+3\. března 2019 všeobecně dostupné
 
 - **Vylepšení funkce: Podezření na útok hrubou silou upozornění útoku (LDAP)**<br>
 Vylepšení použitelnosti významné provedly se tato výstraha zabezpečení, včetně revidované popis, zřídit další zdroje informací a podrobnosti pokusů o uhádnutí pro rychlejší opravy. Další informace o [vzbuzovat podezření na útok hrubou silou (LDAP)](atp-compromised-credentials-alerts.md#suspected-brute-force-attack-ldap-external-id-2004) výstrahy zabezpečení. 
