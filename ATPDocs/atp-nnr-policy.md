@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 05/19/2019
+ms.date: 06/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 1ac873fc-b763-41d7-878e-7c08da421cb5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0c497d55142eb13867e904917aca890bc157ad63
-ms.sourcegitcommit: 122974e5bec49a1d613a38debc37d91ff838b05f
+ms.openlocfilehash: 0bf34a64f1140b0d2e3358196d23589de629588d
+ms.sourcegitcommit: 139e8dd63c06a5d9c9a3c348958e4f7fd74041b8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65933704"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67155845"
 ---
 # <a name="what-is-network-name-resolution"></a>Co je překlad síťových názvů?
 
@@ -35,7 +35,11 @@ Přeložit IP adresy na názvy počítačů, služby Azure ATP senzorů dotazu I
 > [!NOTE]
 >Na všech portech neprobíhá žádné ověřování.
 
-Po načtení názvu počítače, senzoru služby Azure ATP ověří ve službě Active Directory a zjistěte, jestli je objekt korelační počítače se stejným názvem počítače. Pokud senzor najde korelace, přidruží senzor tato IP adresa na tento objekt počítače.
+V případech, kde je načten žádný název **nevyřešené profilu počítače podle IP** je vytvořen s IP adresu a relevantní zjišťované aktivity.
+
+Po načtení názvu počítače, senzoru služby Azure ATP ověří ve službě Active Directory a zjistěte, jestli je objekt korelační počítače se stejným názvem počítače. Pokud senzor najde korelace, přidruží senzor tato IP adresa na tento objekt počítače. V případech, kde není nalezen žádný objekt počítače s tímto názvem **nevyřešené profilu počítače podle názvu** je vytvořen s tímto názvem a příslušnými zjišťované aktivity. 
+
+![Profil nevyřešené počítače](media/unresolved-computer-profile.png)
 
 NNR dat je zásadní pro detekci hrozeb následující:
 
@@ -43,7 +47,7 @@ NNR dat je zásadní pro detekci hrozeb následující:
 - Podezřelý útok DCSync (replikace adresářových služeb)
 - Mapování sondování sítě (DNS)
 
-Ke zlepšení vaší schopnosti určit, pokud je výstraha **kladnou hodnotu True (TP)** nebo **falešně pozitivní (FP)**, ochrana ATP v programu Azure zahrnuje do jaké míry jistoty pojmenování řešení do doklad o každé zabezpečení počítačů upozornění. 
+Ke zlepšení vaší schopnosti určit, pokud je výstraha **kladnou hodnotu True (TP)** nebo **falešně pozitivní (FP)** , ochrana ATP v programu Azure zahrnuje do jaké míry jistoty pojmenování řešení do doklad o každé zabezpečení počítačů upozornění. 
  
 Například když jsou názvy počítačů se **vysokou jistoty** to zvyšuje sebejistotu ve výsledné výstrahy zabezpečení jako **True kladné** nebo **TP**. 
 

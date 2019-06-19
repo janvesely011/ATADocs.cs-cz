@@ -12,18 +12,18 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: de796346-647d-48e1-970a-8f072e990f1e
 ms.reviewer: ''
 ms.suite: ''
-ms.openlocfilehash: 2590e877ba39fda2fee41d8e617690a2b8d4a892
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
+ms.openlocfilehash: e461aa7302ee515f33e2ad69f0f2c0c9f83ceaf8
+ms.sourcegitcommit: 139e8dd63c06a5d9c9a3c348958e4f7fd74041b8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65196563"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67155888"
 ---
 # <a name="troubleshooting-azure-advanced-threat-protection-atp-sensor-using-the-atp-logs"></a>Řešení problémů s Azure Advanced Threat Protection (ATP) ze senzorů pomocí protokolů ochrany ATP v programu
 Ochrana ATP v programu protokoly poskytují přehled o tom, co jednotlivé komponenty senzoru služby Azure ATP dělá v libovolném časovém okamžiku v čase.
 
 
-Ochrana ATP v programu Azure protokoly jsou umístěné v podsložce s názvem **protokoly** kde je nainstalován ochrany ATP v programu; výchozí umístění je: **C:\Program Files\Azure Advanced Threat Protection Sensor\\**. Ve výchozím umístění instalace můžete najít na: **C:\Program Files\Azure Advanced Threat Protection Sensor\version number\Logs**.
+Ochrana ATP v programu Azure protokoly jsou umístěné v podsložce s názvem **protokoly** kde je nainstalován ochrany ATP v programu; výchozí umístění je: **C:\Program Files\Azure Advanced Threat Protection Sensor\\** . Ve výchozím umístění instalace můžete najít na: **C:\Program Files\Azure Advanced Threat Protection Sensor\version number\Logs**.
 
 Senzoru služby Azure ATP využívá tyto protokoly:
 
@@ -43,6 +43,8 @@ Senzoru služby Azure ATP využívá tyto protokoly:
 Protokoly nasazení služby Azure ATP jsou umístěné v adresáři temp uživatele, který příslušný produkt nainstaloval. Ve výchozím umístění instalace můžete najít na: **C:\Users\Administrator\AppData\Local\Temp** (nebo jednomu adresáři % temp %).
 
 Protokoly nasazení senzoru Azure ochrany ATP v programu:
+
+-  **Azure Protection Advanced Threat-Microsoft.Tri.Sensor.Deployment.Deployer_YYYYMMDDHHMMSS.log** – tento protokol obsahuje celý proces nasazení senzoru a najdete ve složce temp již bylo zmíněno dříve, nebo C:\Windows\Temp. 
 
 -   **Azure Protection Advanced Threat-Sensor_YYYYMMDDHHMMSS.log** -tomto protokolu jsou uvedené kroky procesu nasazení senzoru služby Azure ATP. Nejčastěji se ke sledování procesu nasazení senzoru služby Azure ATP.
 
