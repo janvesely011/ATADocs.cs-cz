@@ -10,7 +10,7 @@
       href: atp-prerequisites.md
     - name: Co je nového v Azure ATP
       href: atp-whats-new.md
-- name: Šablony Rychlý start
+- name: Rychlý start
   expanded: true
   items:
     - name: Plánování kapacity služby Azure ATP
@@ -27,59 +27,65 @@
       href: install-atp-step5.md
 - name: Kurzy
   items:
-    - name: Rekognoskace výstrahy
+    - name: Výstrahy před průzkumnými hrozbami
       href: atp-reconnaissance-alerts.md
-    - name: Upozornění ohrožení zabezpečení přihlašovacích údajů
+    - name: Výstrahy před ohrožením zabezpečení přihlašovacích údajů
       href: atp-compromised-credentials-alerts.md
-    - name: Upozornění taktiky Lateral Movement
+    - name: Výstrahy před taktikou lateral movement
       href: atp-lateral-movement-alerts.md
-    - name: Upozornění dominance v doméně
+    - name: Výstrahy před dominancí v doméně
       href: atp-domain-dominance-alerts.md
-    - name: Upozornění průsak ven
+    - name: Výstrahy před exfiltrací
       href: atp-exfiltration-alerts.md
-    - name: Prozkoumat uživatele
+    - name: Prošetřování uživatelů
       href: investigate-a-user.md
-    - name: Prozkoumat počítače
+    - name: Prošetřování počítačů
       href: investigate-a-computer.md
-    - name: Prošetřování laterálních průnikových
+    - name: Prošetřování cest taktiky lateral movement
       href: investigate-lateral-movement-path.md
     - name: Prošetřování entit
       href: investigate-entity.md
 - name: Koncepty
   items:
-    - name: Podpora více doménovými strukturami Azure ochrany ATP v programu
-      href: atp-multi-forest.md
     - name: Portál Azure ATP
       href: workspace-portal.md
     - name: Výstrahy zabezpečení služby Azure ATP
       href: suspicious-activity-guide.md
-    - name: Monitorovaných aktivit
+    - name: Monitorované aktivity
       href: monitored-activities.md
-    - name: Principy profily entit
+    - name: Principy profilů entit
       href: entity-profiles.md
-    - name: Cesty taktiky Lateral Movement
+    - name: Cesty taktiky lateral movement
       href: use-case-lateral-movement-path.md
-    - name: Překlad síťových názvů Principy (NNR)
+    - name: Principy překladu síťových názvů (NNR)
       href: atp-nnr-policy.md
-    - name: Sestavy
+    - name: sestavy
       href: reports.md
     - name: Role uživatelů
       href: atp-role-groups.md
-- name: Návody
+    - name: Podpora více doménových struktur v Azure ATP
+      href: atp-multi-forest.md
+- name: Praktičtí průvodci
   items:
+    - name: Využití Microsoft Cloud App Security v Azure ATP
+      items:
+        - name: Použití Azure ATP s Cloud App Security
+          href: atp-mcas-integration.md
+        - name: Filtrování aktivit a nastavení zásad
+          href: atp-activities-filtering-mcas.md
     - name: Testovací prostředí výstrah zabezpečení
       items:
-        - name: Přehled testovacího prostředí
+        - name: Testovací prostředí – přehled
           href: atp-playbook-lab-overview.md
-        - name: 1 - nastavení testovacího prostředí
+        - name: 1 – Nastavení testovacího prostředí
           href: atp-playbook-setup-lab.md
-        - name: 2 - rekognoskace playbook
+        - name: 2 – Playbook k průzkumným hrozbám
           href: atp-playbook-reconnaissance.md
-        - name: 3 - playbook taktiky Lateral Movement
+        - name: 3 – Playbook k cestám taktiky lateral movement
           href: atp-playbook-lateral-movement.md
-        - name: 4 - playbook dominance v doméně
+        - name: 4 – Playbook k výstrahám před dominancí v doméně
           href: atp-playbook-domain-dominance.md
-    - name: Principy výstrah zabezpečení
+    - name: Porozumění výstrahám zabezpečení
       href: understanding-security-alerts.md
     - name: Správa výstrah zabezpečení
       href: working-with-suspicious-activities.md
@@ -89,7 +95,7 @@
       href: sensitive-accounts.md
     - name: Hledání a filtrování monitorovaných aktivit
       href: atp-activities-search.md
-    - name: Použití vyloučení a účty honeytoken
+    - name: Použití vyloučení a účtů honeytoken
       href: install-atp-step7.md
     - name: Monitorování řadičů domény
       href: atp-sensor-monitoring.md
@@ -99,19 +105,19 @@
       href: notifications.md
     - name: Upozornění na stav
       items:
-        - name: Práce s Azure ATP health center
+        - name: Práce s centrem stavu služby Azure ATP
           href: atp-health-center.md
-        - name: Správa výstrah stavu služby Azure ATP
+        - name: Správa upozornění na stav služby Azure ATP
           href: monitoring-alerts.md
-    - name: Aktualizace Azure senzor zpožděné ochrany ATP v programu
+    - name: Opožděná aktualizace senzoru služby Azure ATP
       href: sensor-update.md
     - name: Řešení známých problémů
       href: troubleshooting-atp-known-issues.md
-    - name: Odstraňování potíží pomocí protokolů
+    - name: Řešení problémů pomocí protokolů
       href: troubleshooting-atp-using-logs.md
     - name: Integrace s Ochranou ATP v programu Windows Defender
       href: integrate-wd-atp.md
-    - name: Integrace sady VPN
+    - name: Integrace sítě VPN
       href: install-atp-step6-vpn.md
     - name: Integrace se Syslogem
       href: setting-syslog.md
@@ -123,7 +129,7 @@
           href: configure-proxy.md
         - name: Kontrola pokročilých zásad auditu
           href: atp-advanced-audit-policy.md
-        - name: Konfigurace ochrany ATP v programu Azure k vzdáleně volat SAM
+        - name: Konfigurace služby Azure ATP pro vzdálená volání do SAM
           href: install-atp-step8-samr.md
     - name: Nastavení samostatného senzoru služby Azure ATP
       items:
@@ -137,17 +143,17 @@
           href: configure-event-forwarding.md
 - name: Reference
   items:
-    - name: Referenční informace k protokolům SIEM
+    - name: Referenční informace k protokolům pro SIEM
       href: cef-format-sa.md
-    - name: Známé problémy s Azure ATP
+    - name: Známé problémy služby Azure ATP
       href: known-issues.md
-- name: Zdroje a prostředky
+- name: Prostředky
   items:
     - name: Podpora a informace
       href: atp-support.md
     - name: Nejčastější dotazy
       href: atp-technical-faq.md
-    - name: Plán připravenosti služby Azure ATP
+    - name: Plán připravenosti na Azure ATP
       href: atp-resources.md
-    - name: Zabezpečení dat ve službě Azure ATP a ochrana osobních údajů
+    - name: Zabezpečení dat a ochrana osobních údajů v Azure ATP
       href: atp-privacy-compliance.md
