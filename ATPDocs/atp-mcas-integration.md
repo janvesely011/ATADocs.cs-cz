@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 06/18/2019
+ms.date: 06/25/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 5169dffc-75c4-4eb0-b997-b5359cecda97
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 1e64ccfd3f559f59b0091e49a51e2016ef3f8745
-ms.sourcegitcommit: 87756e27894570997b7039d128f223de0664639f
+ms.openlocfilehash: edce75d46470c007a05c61d5ea1e0ea52033b8b2
+ms.sourcegitcommit: 0bb9a524508cc6bfd3d9f579fc51b33309fc66b8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67193568"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67396627"
 ---
 # <a name="using-azure-atp-with-microsoft-cloud-app-security"></a>Ochrana ATP v programu Azure pomocí Microsoft Cloud App Security 
 
@@ -43,7 +43,7 @@ Integrace s Azure ATP, portál Cloud App Security nabízí výstrahy a přehledy
 
 ## <a name="access-azure-atp"></a>Přístup k Azure ATP
 
-Zvolte možnost k pokračování využití služby Azure ATP v rámci ochrany ATP v programu Azure portal nebo teď dostanete upozornění služby Azure ATP a vyhodnocování identit na portálu Microsoft Cloud App Security. V obou pracovních postupů nastavení a konfiguraci úlohy ochrany ATP v programu Azure nadále zpracovávány v rámci ochrany ATP v programu Azure portal. 
+Zvolte možnost k pokračování využití služby Azure ATP v rámci ochrany ATP v programu Azure portal nebo upozornění služby Azure ATP a vyhodnocování identit na portálu Microsoft Cloud App Security můžete přistupovat. V obou pracovních postupů nastavení a konfiguraci úlohy ochrany ATP v programu Azure nadále zpracovávány v rámci ochrany ATP v programu Azure portal. 
 
 ## <a name="prerequisites"></a>Požadavky
 
@@ -54,7 +54,7 @@ Zvolte možnost k pokračování využití služby Azure ATP v rámci ochrany AT
 >[!NOTE]
 >Pokud nemáte předplatné pro Cloud App Security, bude ji moct prozkoumat upozornění ochrany ATP v programu Azure pomocí portálu Cloud App Security a podívejte se na uživatele a jejich místní spravovat aktivit, ale neobdržíte žádné související přehledy z vašeho cloudu aplikace.
 
-Zobrazit [integrace služby Azure ATP](https://docs.microsoft.com/cloud-app-security/aatp-integration/enable-azure-advanced-threat-protection) se naučíte rychle povolit Azure ATP v Cloud App Security.  
+Zobrazit [integrace služby Azure ATP](https://docs.microsoft.com/cloud-app-security/aatp-integration) se naučíte rychle povolit Azure ATP v Cloud App Security.  
  
 ## <a name="azure-atp-in-cloud-app-security"></a>Azure ATP v Cloud App Security 
 
