@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 515ab93de375f6ac286cb11e6394e868e095cf48
-ms.sourcegitcommit: 3e0a19e496bc7713bb227c501ca4dd7da223aac8
+ms.openlocfilehash: 7fc42aaf16e269b2d61f6a321e6a4e4af4f5b8ca
+ms.sourcegitcommit: 3b59121a37328f80389c993f2e31622e6f1a9f13
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66830388"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486381"
 ---
 # <a name="azure-atp-prerequisites"></a>Požadavky služby Azure ATP
 
@@ -146,7 +146,7 @@ Azure ATP detekce spoléhá na konkrétní Windows protokoly událostí, které 
 > - Tyto porty musí být otevřené příchozí na zařízeních v síti ze senzorů ochrany ATP v programu Azure:
 >   -   NTLM přes RPC (TCP Port 135) pro účely řešení
 >   -   NetBIOS (UDP port 137) pro účely řešení
->   -   Protokol RDP (portu TCP 3389), pouze první paket *Client hello*, pro účely řešení<br> Všimněte si, že na všech portech neprobíhá žádné ověřování.
+<br> Všimněte si, že na všech portech neprobíhá žádné ověřování.
 
 ## <a name="azure-atp-standalone-sensor-requirements"></a>Senzor požadavky samotné služby Azure ochrany ATP v programu
 Tato část uvádí požadavky pro samostatný senzor ochrany ATP v programu Azure.
@@ -219,14 +219,14 @@ Následující tabulka uvádí minimální porty, které vyžaduje samostatný s
 |NetBIOS|UDP|137|Všechna zařízení v síti|Obojí|
 |Syslog (volitelné)|TCP/UDP|514, v závislosti na konfiguraci|Server SIEM|Příchozí|
 |Protokol RADIUS|UDP|1813|Protokol RADIUS|Příchozí|
-|Protokol TLS pro protokol RDP|TCP|3389|Všechna zařízení v síti|Obojí|
+|
 
 > [!NOTE]
 > - Pomocí uživatelského účtu služby adresáře, dotazuje senzor koncových bodů ve vaší organizaci pro použití SAM-R (přihlášení k síti) k vytvoření místního správce [grafu cesty laterální pohyb](use-case-lateral-movement-path.md). Další informace najdete v tématu [konfigurace SAM-R požadovaná oprávnění](install-atp-step8-samr.md).
 > - Tyto porty musí být otevřít příchozí na zařízeních v síti ze senzorů samostatné ochrany ATP v programu Azure:
 >   -   NTLM přes RPC (TCP Port 135) pro účely řešení
 >   -   NetBIOS (UDP port 137) pro účely řešení
->   -   Protokol RDP (portu TCP 3389), pouze první paket *Client hello*, pro účely řešení<br> Všimněte si, že na všech portech neprobíhá žádné ověřování.
+<br> Všimněte si, že na všech portech neprobíhá žádné ověřování.
 
 
 
