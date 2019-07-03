@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 06/25/2019
+ms.date: 07/01/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 5169dffc-75c4-4eb0-b997-b5359cecda97
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: edce75d46470c007a05c61d5ea1e0ea52033b8b2
-ms.sourcegitcommit: 0bb9a524508cc6bfd3d9f579fc51b33309fc66b8
+ms.openlocfilehash: b66b2f0a087bbaacc09eda54958824da693209b3
+ms.sourcegitcommit: f60835d655e68ffaa8ed8c43bd9fa20233d7e495
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67396627"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506503"
 ---
 # <a name="using-azure-atp-with-microsoft-cloud-app-security"></a>Ochrana ATP v programu Azure pomocí Microsoft Cloud App Security 
 
@@ -45,6 +45,8 @@ Integrace s Azure ATP, portál Cloud App Security nabízí výstrahy a přehledy
 
 Zvolte možnost k pokračování využití služby Azure ATP v rámci ochrany ATP v programu Azure portal nebo upozornění služby Azure ATP a vyhodnocování identit na portálu Microsoft Cloud App Security můžete přistupovat. V obou pracovních postupů nastavení a konfiguraci úlohy ochrany ATP v programu Azure nadále zpracovávány v rámci ochrany ATP v programu Azure portal. 
 
+ 
+
 ## <a name="prerequisites"></a>Požadavky
 
 Úplné uživatelské funkce šetření napříč hybridním prostředím musíte mít:
@@ -64,8 +66,14 @@ Přístup k vaší ochrany ATP v programu Azure datům a nových funkcích pro h
 
 ## <a name="alerts"></a>Upozornění
 
-Upozornění Azure ochrany ATP v programu se zobrazí v Cloud App Security **výstrahy** fronty. Další možnosti filtrování výstrah jsou k dispozici pouze při zobrazení výstrah pomocí Cloud App Security. Upozornění ochrany ATP v programu Azure jsou filtrovány pomocí filtru, který aplikace do služby Azure ATP. 
+Upozornění Azure ochrany ATP v programu se zobrazí v Cloud App Security **výstrahy** fronty. Další možnosti filtrování výstrah jsou k dispozici pouze při zobrazení výstrah pomocí Cloud App Security. Upozornění ochrany ATP v programu Azure jsou filtrovány pomocí filtru, který aplikace k **služby Active Directory**. 
 
+## <a name="alert-management"></a>Správa výstrah
+Při použití služby Azure ATP s Cloud app security, zavírání výstrah v jedné službě nebude automaticky zavře je v jiné službě. Rozhodněte, kam ke správě a náprava výstrahy a vyhněte se duplicitním úsilí. 
+
+## <a name="siem-notification"></a>Oznámení SIEM
+
+Pokud obě služby (ochrany ATP v programu Azure a Cloud App Security) jsou aktuálně nakonfigurované k odeslání oznámení do systému SIEM, po povolení integrace služby Azure ATP v Cloud App Security, budete začít přijímat duplicitní SIEM oznámení pro stejnou výstrahu. Jedna výstraha něhož budou vydány z každé služby a budou mít různé ID výstrah. Nechcete duplicity a provádí nejasnosti, rozhodněte, kam chcete provádět Správa výstrah a poté zastavte SIEM oznámení odeslané z jiné služby.  
 
 ## <a name="activities"></a>Aktivity
 
