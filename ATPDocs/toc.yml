@@ -141,6 +141,10 @@
           href: configure-event-collection.md
         - name: Konfigurace předávání událostí Windows
           href: configure-event-forwarding.md
+    - name: Přechod z ATA na Azure ATP
+      items:
+        - name: Z ATA (Advanced Threat Analytics) na Azure ATP
+          href: ata-atp-move-overview.md
 - name: Reference
   items:
     - name: Referenční informace k protokolům pro SIEM
