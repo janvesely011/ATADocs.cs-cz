@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 3261155c-3c72-4327-ba29-c113c63a4e6d
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 750d593e635df3921e27258943e778ce87b7ebcc
-ms.sourcegitcommit: 07abbd941d91299475df2af469ee5a9a99e07e0f
+ms.openlocfilehash: 6904572852598e9151a6857961c079f7cd3da953
+ms.sourcegitcommit: 52bc20dfa1f64ff3e8c16eb5edea2813d54ba308
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66264891"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67562203"
 ---
 # <a name="azure-atp-siem-log-reference"></a>Referenční informace k protokolům Azure ATP SIEM
 
@@ -53,7 +53,7 @@ Do systému SIEM se předávají následující pole a jejich hodnoty:
 
 > [!div class="mx-tableFixed"] 
 
-|Nový název výstrahy zabezpečení|Předchozí název výstrahy zabezpečení|Jedinečné ID externí|Severity|MITRE ATT&CK Matrix™ |
+|Nový název výstrahy zabezpečení|Předchozí název výstrahy zabezpečení|Jedinečné ID externí|severity|MITRE ATT&CK Matrix™ |
 |---------|----------|---------|---------|---------|
 |[Rekognoskace výčtu účtů](atp-reconnaissance-alerts.md#account-enumeration-reconnaissance-external-id-2003)|Rekognoskace pomocí výčtu účtů|2003|Střední|Zjišťování|
 |[Průsak dat ven přes protokol SMB](atp-exfiltration-alerts.md#data-exfiltration-over-smb-external-id-2030)| Není k dispozici| 2030|Vysoká|Průsak ven,<br>Laterální pohyb<br>Příkazy a ovládání|
@@ -83,7 +83,7 @@ Do systému SIEM se předávají následující pole a jejich hodnoty:
 |[Podezření na útok relay NTLM (účet Exchange) – preview](atp-lateral-movement-alerts.md#suspected-ntlm-relay-attack-exchange-account-external-id-2037---preview)|Není k dispozici|2037|Střední nebo Nízká, pokud pomocí podepsané protokolu NTLM v2|Zvýšení úrovně oprávnění <br> Laterální pohyb|
 |[Podezření na útok WannaCry ransomwaru](atp-compromised-credentials-alerts.md#suspected-wannacry-ransomware-attack-external-id-2035)|Neobvyklá implementace protokolu (možný útok ransomwarem WannaCry)|2035|Střední|Laterální pohyb|
 |[Podezřelá komunikace prostřednictvím DNS](atp-exfiltration-alerts.md#suspicious-communication-over-dns-external-id-2031)|Podezřelá komunikace prostřednictvím DNS|2031|Střední|Průsak ven|
-|[Podezřelé úprava citlivých skupin](atp-domain-dominance-alerts.md#suspicious-modification-of-sensitive-groups-external-id-2024)|Podezřelé úprava citlivých skupin|2024|Střední|Přihlašovací údaje přístup<br>Trvalost|
+|[Podezřelé členové citlivých skupin](atp-domain-dominance-alerts.md#suspicious-additions-to-sensitive-groups-external-id-2024)|Podezřelé členové citlivých skupin|2024|Střední|Přihlašovací údaje přístup<br>Trvalost|
 |[Podezřelé vytvoření služby](atp-domain-dominance-alerts.md#suspicious-service-creation-external-id-2026)|Podezřelé vytvoření služby|2026|Střední|Spuštění,<br> Trvalost,<br> Zvýšení úrovně oprávnění<br> Únik obrany<br>Laterální pohyb|
 |[Podezřelé připojení k síti VPN](atp-compromised-credentials-alerts.md#suspicious-vpn-connection-external-id-2025)|Podezřelé připojení k síti VPN|2025|Střední|Trvalost,<br>Únik obrany|
 |[Rekognoskace členství uživatelů a skupin (SAMR)](atp-reconnaissance-alerts.md#user-and-group-membership-reconnaissance-samr-external-id-2021)|Rekognoskace pomocí dotazů na adresářové služby|2021|Střední|Zjišťování|
@@ -170,16 +170,16 @@ Priority:
 10-04-2018 14:49:38 Auth.Warning 192.168.0.202 1 2018-10-04T11:49:25.954059 + 00:00 DC3 CEF 3604 DnsSuspiciousCommunicationSecuri ï» ¿0 | Microsoft | Ochrana ATP v programu Azure | 2.49.5589.58606 | DnsSuspiciousCommunicationSecurityAlert | Podezřelá komunikace prostřednictvím DNS | 5 | start = 2018-10-04T11:49:11.0822077Z aplikace DnsEvent dhost = suspiciousdomainname msg = CLIENT1 odeslané podezřelých dotazů DNS řešení suspiciousdomainname externalId = 2031 cs1Label = = url cs1 = https\:/ / contoso-corp.atp.azure.com/securityAlert/0fc77777-49ca-40b3-a7ba-7644f355539e cs2Label = aktivační událost cs2 = nový
 
 ### <a name="suspicious-domain-controller-promotion-potential-dcshadow-attack"></a>Povýšení řadiče domény podezřelé (možný útok DcShadow)
-07-12-2018 11:18:07 Auth.Error 192.168.0.200 1 2018-07-12T08:18:06.883880 + 00:00 DC1 CEF 3868 DirectoryServicesRoguePromotionS ï» ¿0 | Microsoft | Ochrana ATP v programu Azure | 2.40.0.0 | DirectoryServicesRoguePromotionSecurityAlert | **Povýšení řadiče domény podezřelé (možný útok DcShadow)**| 10 | start = 2018-07-12T08:17:55.4067092Z app = Ldap shost = CLIENT1 msg = počítači CLIENT1 je počítač v domain1.test.local zaregistrovaný jako řadič domény na počítači DC1. externalId = 2028 cs1Label = url cs1 = https\://contoso-corp.atp.azure.com:13000/securityAlert/97c59b43-dc18-44ee-9826-8fd5d03bd53 cs2Label = aktivační událost cs2 = aktualizace
+07-12-2018 11:18:07 Auth.Error 192.168.0.200 1 2018-07-12T08:18:06.883880 + 00:00 DC1 CEF 3868 DirectoryServicesRoguePromotionS ï» ¿0 | Microsoft | Ochrana ATP v programu Azure | 2.40.0.0 | DirectoryServicesRoguePromotionSecurityAlert | **Povýšení řadiče domény podezřelé (možný útok DcShadow)** | 10 | start = 2018-07-12T08:17:55.4067092Z app = Ldap shost = CLIENT1 msg = počítači CLIENT1 je počítač v domain1.test.local zaregistrovaný jako řadič domény na počítači DC1. externalId = 2028 cs1Label = url cs1 = https\://contoso-corp.atp.azure.com:13000/securityAlert/97c59b43-dc18-44ee-9826-8fd5d03bd53 cs2Label = aktivační událost cs2 = aktualizace
 
-### <a name="suspicious-modification-of-sensitive-groups"></a>Podezřelé úprava citlivých skupin
+### <a name="suspicious-additions-to-sensitive-groups"></a>Podezřelé členové citlivých skupin
 10 – 29 – 2018 11:21:03 Auth.Warning 192.168.0.202 1 2018-10-29T09:20:49.667014 + 00:00 DC3 CEF 3908 AbnormalSensitiveGroupMembership ï» ¿0 | Microsoft | Ochrana ATP v programu Azure | 2.52.5704.46184 | AbnormalSensitiveGroupMembershipChangeSecurityAlert | Podezřelé úprava citlivých skupin | 5 | start = 2018-10-29T09:19:43.3013729Z aplikace GroupMembershipChangeEvent suser = user1 msg = = user1 má neobvykle upravená citlivá členství ve skupinách. externalId = 2024 cs1Label = url cs1 = https\://contoso-corp.atp.azure.com/securityAlert/6f7e677e-f068-41e5-bada-708cd5a322b9 cs2Label = aktivační událost cs2 = nový
 
 ### <a name="suspicious-replication-of-directory-services"></a>Podezřelá replikace adresářových služeb
 02 – 21 – 2018 16:21:22 Auth.Error 192.168.0.220 1 2018-02-21T14:21:13.978554 + 00:00 CENTER CEF 6076 DirectoryServicesReplicationSecu ï» ¿0 | Microsoft | Ochrana ATP v programu Azure | 2.22.4228.22540 | DirectoryServicesReplicationSecurityAlert | Škodlivá replikace adresářových služeb | 10 | start = 2018-02-21T14:19:03.9975656Z aplikace Drsr shost = CLIENT1 msg = = škodlivou replikaci požadavků úspěšně provedl uživatel1, z počítače CLIENT1 proti DC1. výsledek = úspěch externalId = 2006 cs1Label = url cs1 = https\://contoso-corp.atp.azure.com/securityAlert/cb95648e-1b6f-4d3b-81b9-7605532787d7 cs2Label aktivační událost cs2 = = nový
 
 ### <a name="suspicious-replication-request-potential-dcshadow-attack"></a>Podezřelá replikace požadavku (možný útok DcShadow)
-07-12-2018 11:18:37 Auth.Error 192.168.0.200 1 2018-07-12T08:18:32.265989 + 00:00 DC1 CEF 3868 DirectoryServicesRogueReplicatio ï» ¿0 | Microsoft | Ochrana ATP v programu Azure | 2.40.0.0 | DirectoryServicesRogueReplicationSecurityAlert | **Podezřelá replikace požadavku (možný útok DcShadow)**| 10 | start = 2018-07-12T08:17:55.3816102Z **aplikace = aktivity replikace** shost = CLIENT1 msg = CLIENT1, která není platnou doménu. kontroler v domain1.test.local, odeslat změny objektů adresáře na počítači DC1. externalId = 2029 cs1Label = url cs1 = https\://contoso-corp.atp.azure.com:13000/securityAlert/1d5d1444-12cf-4db9-be48-39ebc2f51515 cs2Label = aktivační událost cs2 = nový
+07-12-2018 11:18:37 Auth.Error 192.168.0.200 1 2018-07-12T08:18:32.265989 + 00:00 DC1 CEF 3868 DirectoryServicesRogueReplicatio ï» ¿0 | Microsoft | Ochrana ATP v programu Azure | 2.40.0.0 | DirectoryServicesRogueReplicationSecurityAlert | **Podezřelá replikace požadavku (možný útok DcShadow)** | 10 | start = 2018-07-12T08:17:55.3816102Z **aplikace = aktivity replikace** shost = CLIENT1 msg = CLIENT1, která není platnou doménu. kontroler v domain1.test.local, odeslat změny objektů adresáře na počítači DC1. externalId = 2029 cs1Label = url cs1 = https\://contoso-corp.atp.azure.com:13000/securityAlert/1d5d1444-12cf-4db9-be48-39ebc2f51515 cs2Label = aktivační událost cs2 = nový
 
 ### <a name="suspicious-service-creation"></a>Podezřelé vytvoření služby 
 10 – 29 – 2018 11:20:02 Auth.Warning 192.168.0.202 1 2018-10-29T09:19:59.164874 + 00:00 DC3 CEF 3908 MaliciousServiceCreationSecurity ï» ¿0 | Microsoft | Ochrana ATP v programu Azure | 2.52.5704.46184 | MaliciousServiceCreationSecurityAlert | Podezřelé vytvoření služby | 5 | start = 2018-10-29T09:19:44.9471965Z aplikace = ServiceInstalledEvent shost = CLIENT1 msg = user1 vytvořili MaliciousService mohl spustit potenciálně škodlivé příkazy na počítači CLIENT1. externalId = 2026 cs1Label = url cs1 = https\://contoso-corp.atp.azure.com/securityAlert/118bbe3d-fe72-40de-80d0-2678b68aa027 cs2Label = aktivační událost cs2 = nový

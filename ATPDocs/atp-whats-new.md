@@ -5,21 +5,49 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 06/18/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: 1fed88a774b1ffa88b52879a44de6697b1b615f6
-ms.sourcegitcommit: 87756e27894570997b7039d128f223de0664639f
+ms.openlocfilehash: d6fb2a51a47c97c52a3665c55522094fd5a856f1
+ms.sourcegitcommit: 52bc20dfa1f64ff3e8c16eb5edea2813d54ba308
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67192783"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67562194"
 ---
 # <a name="whats-new-in-azure-atp"></a>Co je nového v Azure ATP
+
+## <a name="azure-atp-release-284"></a>Verze ochrany ATP v programu Azure 2.84
+
+Vydáno 1. července 2019
+
+- **Nová podpora umístění: Azure Spojené království datového centra**<br>
+    Instance služby Azure ATP jsou nyní podporovány v datovém centru Azure Spojené království. Další informace o vytváření instancí služby Azure ATP a jejich odpovídající datacentrum v umístění najdete v tématu [kroku 1 Azure ATP instalace](https://docs.microsoft.com/azure-advanced-threat-protection/install-atp-step10).
+
+- **Vylepšení funkce: Nový název a funkce pro podezřelé dodatky k upozornění citlivých skupin (externí ID 2024)**<br> 
+    **Podezřelé členové citlivých skupin** výstraha se dříve nazýval **podezřelé úpravy citlivých skupin** upozornění. Externí ID upozornění (ID 2024) zůstává stejná. Změnit popisný název přesněji odpovídá účelem upozorňování na doplňky vaší **citlivé** skupiny. Vylepšené výstraha obsahuje taky nové poznatky a vylepšené popisy. Další informace najdete v tématu [podezřelé členové citlivých skupin](https://docs.microsoft.com/azure-advanced-threat-protection/atp-domain-dominance-alerts#suspicious-additions-to-sensitive-groups-external-id-2024).  
+
+- **Funkce nové dokumentace: Příručka pro přechod do ochrany ATP v programu Azure Advanced Threat Analytics**<br>
+    Tento nový článek obsahuje požadavky, plánování pokyny, jakož i postup konfigurace a ověření pro přesun z ATA ke službě ochrana ATP v programu Azure. Další informace najdete v tématu [přesunout z ATA do služby Azure ATP](https://docs.microsoft.com/azure-advanced-threat-protection/ata-atp-move-overview).   
+
+- Tato verze také zahrnuje vylepšení a opravy chyb pro interní senzor infrastruktury.
+
+## <a name="azure-atp-release-283"></a>Verze ochrany ATP v programu Azure 2,83
+
+vydáno 23. června 2019
+
+- **Vylepšení funkce: Vytvoření upozornění na podezřelé služby (externí ID 2026)**<br> 
+    Tato výstraha teď nabízí vylepšené výstrahy stránky s další legitimaci a nový popis. Další informace najdete v tématu [upozornění na podezřelé služby vytváření zabezpečení](https://docs.microsoft.com/azure-advanced-threat-protection/atp-domain-dominance-alerts#suspicious-service-creation-external-id-2026).
+
+-  **Podpora názvů instancí: Přidané pro předponu pouze domény číslice**<br>
+    Byla přidána podpora pro vytvoření instance služby Azure ATP pomocí počáteční doména předpony, které obsahovat pouze číslice. Například použití pouze počáteční domény číslice předpon, jako je 123456.contoso.com jsou nyní podporovány. 
+
+- Tato verze také zahrnuje vylepšení a opravy chyb pro interní senzor infrastruktury.
+
 
 ## <a name="azure-atp-release-282"></a>Verze ochrany ATP v programu Azure 2.82
 

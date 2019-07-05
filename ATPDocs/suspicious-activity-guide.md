@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e72e3e03d52f41eae1fe9823feae6dffd181b31f
-ms.sourcegitcommit: 07abbd941d91299475df2af469ee5a9a99e07e0f
+ms.openlocfilehash: 7d8550113e1ea7cce6cb7ca1c6e497a9fc8e3708
+ms.sourcegitcommit: 52bc20dfa1f64ff3e8c16eb5edea2813d54ba308
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66264940"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67562169"
 ---
 # <a name="azure-atp-security-alerts"></a>Výstrahy zabezpečení služby Azure ATP
 
@@ -39,7 +39,7 @@ Ve verzi 2.56 všechny existující výstrahy zabezpečení služby Azure ATP by
 
 > [!div class="mx-tableFixed"] 
 
-|Nový název výstrahy zabezpečení|Předchozí název výstrahy zabezpečení|Jedinečné ID externí|Severity|MITRE ATT&CK Matrix™ |
+|Nový název výstrahy zabezpečení|Předchozí název výstrahy zabezpečení|Jedinečné ID externí|severity|MITRE ATT&CK Matrix™ |
 |---------|----------|---------|---------|---------|
 |[Rekognoskace výčtu účtů](atp-reconnaissance-alerts.md#account-enumeration-reconnaissance-external-id-2003)|Rekognoskace pomocí výčtu účtů|2003|Střední|Zjišťování|
 |[Průsak dat ven přes protokol SMB](atp-exfiltration-alerts.md#data-exfiltration-over-smb-external-id-2030)| Není k dispozici| 2030|Vysoká|Průsak ven,<br>Laterální pohyb<br>Příkazy a ovládání|
@@ -69,7 +69,7 @@ Ve verzi 2.56 všechny existující výstrahy zabezpečení služby Azure ATP by
 |[Podezření na útok relay NTLM (účet Exchange) – preview](atp-lateral-movement-alerts.md#suspected-ntlm-relay-attack-exchange-account-external-id-2037---preview)|Není k dispozici|2037|Střední nebo Nízká, pokud pomocí podepsané protokolu NTLM v2|Zvýšení úrovně oprávnění <br> Laterální pohyb|
 |[Podezření na útok WannaCry ransomwaru](atp-compromised-credentials-alerts.md#suspected-wannacry-ransomware-attack-external-id-2035)|Neobvyklá implementace protokolu (možný útok ransomwarem WannaCry)|2035|Střední|Laterální pohyb|
 |[Podezřelá komunikace prostřednictvím DNS](atp-exfiltration-alerts.md#suspicious-communication-over-dns-external-id-2031)|Podezřelá komunikace prostřednictvím DNS|2031|Střední|Průsak ven|
-|[Podezřelé úprava citlivých skupin](atp-domain-dominance-alerts.md#suspicious-modification-of-sensitive-groups-external-id-2024)|Podezřelé úprava citlivých skupin|2024|Střední|Přihlašovací údaje přístup<br>Trvalost|
+|[Podezřelé členové citlivých skupin](atp-domain-dominance-alerts.md#suspicious-additions-to-sensitive-groups-external-id-2024)|Podezřelé členové citlivých skupin|2024|Střední|Přihlašovací údaje přístup<br>Trvalost|
 |[Podezřelé vytvoření služby](atp-domain-dominance-alerts.md#suspicious-service-creation-external-id-2026)|Podezřelé vytvoření služby|2026|Střední|Spuštění,<br> Trvalost,<br> Zvýšení úrovně oprávnění<br> Únik obrany<br>Laterální pohyb|
 |[Podezřelé připojení k síti VPN](atp-compromised-credentials-alerts.md#suspicious-vpn-connection-external-id-2025)|Podezřelé připojení k síti VPN|2025|Střední|Trvalost,<br>Únik obrany|
 |[Rekognoskace členství uživatelů a skupin (SAMR)](atp-reconnaissance-alerts.md#user-and-group-membership-reconnaissance-samr-external-id-2021)|Rekognoskace pomocí dotazů na adresářové služby|2021|Střední|Zjišťování|

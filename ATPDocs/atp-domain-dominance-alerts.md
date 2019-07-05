@@ -12,14 +12,14 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 0b3a1db5-0d43-49af-b356-7094cc85f0a5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ec1d2bc0de905a32181749e435d0f88afe5a80fc
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
+ms.openlocfilehash: a415e880f669d4f02cd2cd319f49137ba26da1d7
+ms.sourcegitcommit: 52bc20dfa1f64ff3e8c16eb5edea2813d54ba308
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65195537"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67562157"
 ---
-# <a name="tutorial-domain-dominance-alerts"></a>Kurz: Upozornění dominance v doméně  
+# <a name="tutorial-domain-dominance-alerts"></a>Kurz: Výstrahy před dominancí v doméně  
 
 Obvykle kybernetických útoků jsou spouštěny proti jakémukoli subjektu přístupné, jako je například uživatel s nízkým oprávněním a potom rychle následně k laterálnímu pohybu dokud útočník získá přístup k cenný majetek, který. Cenný majetek, který může být citlivých účtů, správci domény nebo vysoce citlivá data. Ochrana ATP v programu Azure identifikuje tyto důmyslných hrozeb ve zdrojovém kódu v celém řetězu událostí útoku a klasifikuje do následujících fází:
 
@@ -45,7 +45,7 @@ Výstrahy pomáhají identifikovat a napravit následující zabezpečení **dom
 > * Podezřelé použití Golden Ticket (ticket anomálií) (. 2032 externí ID)
 > * Podezřelé použití Golden Ticket (čas anomálií) (externí ID 2022)
 > * Podezření na útok typu Skeleton Key (oslabení šifrování) (externí 2010 ID)
-> * Podezřelé úprava citlivých skupin (externí ID 2024)
+> * Podezřelé členové citlivých skupin (externí ID 2024)
 > * Podezřelé vytvoření služby (externí ID 2026)
 
 ## <a name="malicious-request-of-data-protection-api-master-key-external-id-2020"></a>Škodlivá žádost hlavní klíč rozhraní Data Protection API (2020 externí ID) 
@@ -474,7 +474,7 @@ Skeleton Key je malware, který běží na řadičích domény a umožňuje ově
     - Odstraňte malware. Další informace najdete v tématu [analýzy Malware Skeleton Key](https://www.virusbulletin.com/virusbulletin/2016/01/paper-digital-bian-lian-face-changing-skeleton-key-malware).
     - Vyhledejte uživatelé přihlášení přibližně ve stejnou dobu podezřelé aktivity došlo k chybě, protože může být ohrožena. Resetování hesel a povolení vícefaktorového ověřování.
 
-## <a name="suspicious-modification-of-sensitive-groups-external-id-2024"></a>Podezřelé úprava citlivých skupin (externí ID 2024)
+## <a name="suspicious-additions-to-sensitive-groups-external-id-2024"></a>Podezřelé členové citlivých skupin (externí ID 2024)
 
 **Popis** útočníci přidat uživatele do skupiny s vysokou úrovní oprávnění. Přidávání uživatelů slouží k získání přístupu k více prostředkům a získat průniku do sítě. Tato detekce spoléhá na profilaci aktivity Změna skupiny uživatelů a upozorní při viděli doplněk neobvyklé citlivých skupin. Azure ATP profily průběžně.  
  
