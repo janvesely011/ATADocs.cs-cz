@@ -358,7 +358,7 @@ Některé operační systémy nebo aplikace jsou známé pro úpravu autorizačn
 **Pochopení rozsahu porušení**
 1. Prozkoumejte [zdrojový počítač](investigate-a-computer.md). 
 2. Pokud existuje [zdrojový uživatel](investigate-a-user.md), prozkoumejte. 
-3. Zkontrolujte, ke kterým prostředkům byly úspěšně [](investigate-a-computer.md)přistupovaly, a prozkoumejte je.   
+3. Zkontrolujte, ke kterým prostředkům byly úspěšně přistupovaly, a [prozkoumejte je](investigate-a-computer.md).   
  
 **Navrhovaná náprava a kroky pro prevenci** 
 1. Resetujte heslo ke zdrojovému uživateli a povolte MFA. 
