@@ -1,96 +1,92 @@
 ---
-title: Architektura služby Azure Advanced Threat Protection | Dokumentace Microsoftu
-description: Popisuje architekturu z Azure Advanced Threat Analytics (ATP)
+title: Architektura rozšířené ochrany před internetovými útoky Azure | Microsoft Docs
+description: Popisuje architekturu Azure Advanced Threat Analytics (ATP).
 keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/27/2019
+ms.date: 07/17/2019
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 90f68f2c-d421-4339-8e49-1888b84416e6
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: c80fe761b9e54b2031e6385bcc32d845ccf52872
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
+ms.openlocfilehash: 38a1790194d739ac31c66df60cf0d9c2911344c7
+ms.sourcegitcommit: b7b3d4a401faaa3edb4bd669a1a003a6d21a4322
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65197194"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68298896"
 ---
-# <a name="azure-atp-architecture"></a>Architektura služby Azure ATP
+# <a name="azure-atp-architecture"></a>Architektura ATP Azure
 
-Ochrana ATP v programu Azure monitoruje řadiče domény tak, že zachycení a parsování síťového provozu a využití události Windows přímo z řadičů domény a pak analyzuje data útoky a hrozbami. Využitím profilace deterministickou detekci, strojové učení a behaviorální algoritmy, které služby Azure ATP učí o síti, umožňuje detekovat anomálie a upozorní vás na podezřelé aktivity.
+Azure ATP monitoruje řadiče domény zachytáváním a analýzou síťového provozu a využitím událostí Windows přímo z řadičů domény a pak analyzuje data pro útoky a hrozby. Využití profilování, deterministické detekce, strojového učení a behaviorálních algoritmů chování Azure ATP o vaší síti, umožňuje detekci anomálií a upozorňuje vás na podezřelé aktivity.
 
-Architektura služby Azure Advanced Threat Protection:
+Architektura rozšířené ochrany před internetovými útoky Azure:
 
 ![Diagram topologie architektury Azure ATP](media/atp-architecture-topology.png)
 
-Tato část popisuje, jak funguje toku sítě a zaznamenávání událostí služby Azure ATP a operací k podrobnému popisu funkce základních komponent: ochrana ATP v programu Azure portal, senzoru služby Azure ATP a cloudové služby Azure ATP. 
+V této části se dozvíte, jak funguje tok služby Azure ATP a zachytávání událostí a podrobněji popisuje funkce hlavních součástí: portál Azure ATP, senzor Azure ATP a cloudová služba Azure ATP. 
 
-Nainstalovat přímo na řadiče domény, senzoru služby Azure ATP přistupuje k protokoly událostí, které vyžaduje přímo z řadiče domény. Po protokoly a přenosech v síti jsou analyzovány pomocí senzor, ochrana ATP v programu Azure odesílá pouze analyzované informace ke cloudové službě ochrana ATP v programu Azure (pouze procento protokoly jsou odeslány). 
+Senzor ATP Azure, který je nainstalovaný přímo na řadičích domény, přistupuje k protokolům událostí, které vyžaduje přímo z řadiče domény. Po analýze protokolů a síťového provozu senzorem Azure ATP pošle do cloudové služby Azure ATP jenom analyzované informace (pošle se jenom procento protokolů). 
 
-## <a name="azure-atp-components"></a>Komponenty služby Azure ATP
-Ochrana ATP v programu Azure se skládá z následujících součástí:
+## <a name="azure-atp-components"></a>Komponenty ATP Azure
+ATP v Azure se skládá z následujících součástí:
 
 -   **Portál Azure ATP** <br>
-Ochrana ATP v programu Azure portal umožňuje vytvoření instance služby Azure ATP, zobrazí data přijatá ze senzorů ochrany ATP v programu Azure a umožňuje monitorovat, spravovat a prozkoumejte hrozby ve vašem síťovém prostředí.  
--   **Senzoru služby Azure ATP**<br>
-Azure ATP senzorů instalují přímo na řadiče domény. Senzor monitoruje přímo provoz na řadiči domény, bez nutnosti vyhrazený server nebo konfigurovat zrcadlení portů.
+Portál Azure ATP umožňuje vytvoření instance ATP Azure, zobrazuje data získaná ze senzorů ATP Azure a umožňuje monitorovat, spravovat a zkoumat hrozby ve vašem síťovém prostředí.  
+-   **Senzor ATP Azure**<br>
+Senzory Azure ATP se instalují přímo na řadiče domény. Senzor přímo monitoruje provoz řadiče domény bez nutnosti vyhrazeného serveru nebo konfigurace zrcadlení portů.
 
--   **Cloudovou službu Azure ATP**<br>
-Cloudovou službu Azure ATP běží na infrastrukturu Azure a je aktuálně nasazené v USA, Evropa a Asie. Cloudovou službu Azure ochrany ATP v programu je připojený ke společnosti Microsoft intelligent security graph. 
+-   **Cloudová služba Azure ATP**<br>
+Cloudová služba Azure ATP běží v infrastruktuře Azure a je aktuálně nasazená v USA, Evropě a Asii. Cloudová služba Azure ATP je připojená k inteligentnímu grafu zabezpečení Microsoftu. 
 
 ## <a name="azure-atp-portal"></a>Portál Azure ATP 
-Pomocí portálu ochrany ATP v programu Azure:
+Použijte portál Azure ATP k těmto akcím:
 - Vytvoření instance služby Azure ATP
-- Integrace s jinými službami zabezpečení Microsoftu 
-- Spravovat nastavení konfigurace senzoru služby Azure ATP 
-- Zobrazit data přijatá ze senzorů služby Azure ATP
-- Monitorování detekované podezřelé aktivity a podezřelé útoků na základě modelu kill řetězu útoku
-- **Volitelné**: na portálu můžete také nakonfigurovat na odesílání e-mailů a událostí při zjištění zabezpečení výstrahy nebo problémy se stavem
+- Integrace s dalšími službami zabezpečení společnosti Microsoft 
+- Správa nastavení konfigurace senzoru ATP Azure 
+- Zobrazit data přijatá ze senzorů Azure ATP
+- Monitorování zjistilo podezřelé aktivity a podezřelé útoky na základě modelu dezaktivačního řetězu útoků.
+- **Volitelné**: portál se dá nakonfigurovat taky pro posílání e-mailů a událostí, když se zjistí výstrahy zabezpečení nebo problémy se stavem.
 
 > [!NOTE]
-> - Pokud žádný senzor je nainstalovaný na instanci služby Azure ATP během 60 dnů, můžou se odstranit instance a bude nutné ho znovu vytvořit.
+> - Pokud do vaší instance služby Azure ATP během 60 dnů není nainstalovaný žádný senzor, může být instance odstraněna a budete ji muset znovu vytvořit.
 
-## <a name="azure-atp-sensor"></a>Senzoru služby Azure ATP
-Senzoru služby Azure ATP má následující základní funkce:
-- Zachytávají a prošetřují síťový provoz na řadiči domény (místní provoz řadiče domény)
-- Příjem událostí Windows přímo z řadičů domény 
-- Zobrazí informace o monitorování účtů protokolu RADIUS od poskytovatele připojení VPN
+## <a name="azure-atp-sensor"></a>Senzor ATP Azure
+Senzor Azure ATP má následující základní funkce:
+- Zaznamenání a Kontrola síťového provozu řadiče domény (místní provoz řadiče domény)
+- Příjem událostí systému Windows přímo z řadičů domény 
+- Získat informace o monitorování účtů RADIUS od poskytovatele sítě VPN
 - Získávají data o uživatelích a počítačích z domény Active Directory.
 - Provádějí rozpoznání síťových entit (uživatelů, skupin a počítačů).
-- Přenášejí relevantní data do cloudové služby Azure ATP
+- Přenos relevantních dat do cloudové služby Azure ATP
 
  
-## <a name="azure-atp-sensor-features"></a>Funkce Azure ochrany ATP v programu senzor
+## <a name="azure-atp-sensor-features"></a>Funkce snímače ATP Azure
 
-Senzoru služby Azure ATP načte události místně bez nutnosti zakoupení a Udržovat další hardware ani konfigurace. Senzoru služby Azure ATP také podporuje trasování událostí pro Windows (ETW) poskytující informace o protokolu pro více detekcí. Tématu detekce na základě trasování událostí pro Windows zahrnují podezřelý DCShadow útoky pomocí žádosti o replikaci řadiče domény a povýšení řadiče domény.
+Senzor ATP Azure čte události místně bez nutnosti kupovat a udržovat další hardware nebo konfigurace. Senzor ATP Azure také podporuje trasování událostí pro Windows (ETW), které poskytuje informace protokolu pro více zjišťování. Detekce založené na ETW zahrnují podezřelé útoky DCShadow pomocí požadavků na replikaci řadiče domény a povýšení řadiče domény.
 
-### <a name="domain-synchronizer-candidate"></a>Kandidát na synchronizátora domény
+### <a name="domain-synchronizer-process"></a>Proces synchronizátoru domény
 
-Kandidát na synchronizátora domény zodpovídá za proaktivní synchronizaci všech entity z konkrétní domény služby Active Directory (podobně jako mechanismu, který používá sami řadiče domény pro replikaci). Jeden senzor se náhodně vybere ze seznamu kandidátů, která bude sloužit jako synchronizátor domény. 
+Proces synchronizátoru domény zodpovídá za proaktivní synchronizaci všech entit z konkrétní domény služby Active Directory (podobně jako mechanismus používaný řadiči domény samotný pro replikaci). Jeden senzor se automaticky vybere náhodně ze všech vašich oprávněných senzorů, aby mohl sloužit jako synchronizátor domény. 
 
-Pokud je synchronizátor více než 30 minut offline, vybere se jiný kandidát. Pokud žádný synchronizátor domény není k dispozici pro konkrétní doménu, ochrana ATP v programu Azure aktivně synchronizuje entit a jejich změny, ale ochrany ATP v programu Azure načítat nové entity, když jste zjistili v monitorovaném provozu.
+Pokud je synchronizátor domény offline po dobu delší než 30 minut, vybere se místo toho automaticky jiný snímač. 
     
-Pokud není dostupný žádný synchronizátor domény a hledáte entitu, která nemají žádný provoz s ní spojené, se nezobrazí žádné výsledky hledání.
-
-Ve výchozím nastavení nejsou ochrany ATP v programu Azure senzorů kandidáti na synchronizátora. K ručnímu nastavení senzoru služby Azure ATP jako kandidát na synchronizátora domény, postupujte podle kroků v [pracovní postup instalace služby Azure ATP](install-atp-step5.md).
-
 ### <a name="resource-limitations"></a>Omezení prostředků
 
-Senzoru služby Azure ATP zahrnuje monitorovací komponentu, která vyhodnotí dostupnou kapacitu výpočetní a paměťové prostředky na řadiči domény, na kterém je spuštěný. Proces monitorování spouští každých 10 sekund a dynamicky aktualizuje kvóty využití procesoru a paměti v procesu senzoru služby Azure ATP. Monitorování procesu je zajištěno, že řadič domény má vždy alespoň 15 % této bezplatné výpočetní a paměťové prostředky k dispozici.
+Senzor ATP Azure zahrnuje monitorovací komponentu, která vyhodnocuje dostupnou výpočetní a paměťovou kapacitu na řadiči domény, na kterém běží. Proces monitorování se spouští každých 10 sekund a dynamicky aktualizuje kvótu využití procesoru a paměti v procesu senzoru ATP Azure. Proces monitorování zajišťuje, že řadič domény má vždy alespoň 15% volných výpočetních prostředků a dostupných prostředků paměti.
 
-Bez ohledu na to, co se stane v řadiči domény procesu monitorování průběžně uvolní prostředky, abyste měli jistotu, že nikdy je vliv na funkčnost základních řadič domény.
+Bez ohledu na to, co se děje na řadiči domény, proces monitorování průběžně uvolňuje prostředky, aby se zajistilo, že základní funkce řadiče domény nebudou nikdy ovlivněny.
 
-Pokud proces monitorování způsobí, že se senzoru služby Azure ATP dojdou prostředky, se monitoruje provoz jenom částečně a monitorování výstrahy "zrušenou provoz prostřednictvím zrcadlení portů sítě" se zobrazí stavové stránce portálu ochrany ATP v programu Azure.
+Pokud proces monitorování způsobí, že senzor služby Azure ATP vyčerpá prostředky, monitoruje se jenom částečný provoz a na stránce Stav portálu Azure ATP se zobrazí výstraha monitorování "vynechané síťové přenosy se zrcadlením portů".
 
-### <a name="windows-events"></a>Události Windows
+### <a name="windows-events"></a>Události systému Windows
 
-K vylepšení rozsahu zjišťování ochrany ATP v programu Azure na identity podezřelých krádež (pass-the-hash), podezřelá neúspěšná ověření, úpravy citlivých skupin, vytváření podezřelé služeb a typy aktivit Honeytokenu útoku, ochrana ATP v programu Azure potřebuje k analýze protokoly následující události Windows: 4776,4732,4733,4728,4729,4756,4757 a 7045. Tyto události jsou automaticky číst ochrany ATP v programu Azure snímačů správné [pokročilé zásady auditu](atp-advanced-audit-policy.md). 
+Aby bylo možné vylepšit detekci ATP v Azure, je nutné, aby se při podezřelých chybách ověřování, změnách citlivých skupin, vytváření podezřelých služeb a Honeytokenu typů útoků provádělo podezření na neúspěšnou autentizaci. protokoly následujících událostí systému Windows: 4776, 4732, 4733, 4728, 4729, 4756, 4757 a 7045. Tyto události jsou automaticky čteny senzory Azure ATP se správnými [nastaveními zásad auditu](atp-advanced-audit-policy.md). 
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
 - [Požadavky služby Azure ATP](atp-prerequisites.md)
 - [Nástroje pro změnu velikosti Azure ATP](http://aka.ms/trisizingtool)

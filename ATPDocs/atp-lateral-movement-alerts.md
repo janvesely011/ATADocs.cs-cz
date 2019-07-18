@@ -1,84 +1,85 @@
 ---
-title: Ochrana ATP v programu Azure laterální pohyb výstrahy zabezpečení | Dokumentace Microsoftu
+title: Výstrahy zabezpečení na bočním místě Azure ATP | Microsoft Docs
 d|Description: This article explains the Azure ATP alerts issued when attacks typically part of lateral movement phase efforts are detected against your organization.
 keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/18/2019
+ms.date: 07/17/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 2257eb00-8614-4577-b6a1-5c65085371f2
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 3b58433239fb2f7f3d2f55c87ddf73ea38840176
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
+ms.openlocfilehash: 7e791dafcd8c3e05a7e05d5d50e82fae05aa5c89
+ms.sourcegitcommit: c1368baac1fa4e54eb9eb4e34a7b471e56b22ac2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65196837"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68299358"
 ---
-# <a name="tutorial-lateral-movement-alerts"></a>Kurz: Upozornění taktiky Lateral Movement  
+# <a name="tutorial-lateral-movement-alerts"></a>Návodu Výstrahy před taktikou lateral movement  
 
-Obvykle kybernetických útoků jsou spouštěny proti jakémukoli subjektu přístupné, jako je například uživatel s nízkým oprávněním a potom rychle následně k laterálnímu pohybu dokud útočník získá přístup k cenný majetek, který. Cenný majetek, který může být citlivých účtů, správci domény nebo vysoce citlivá data. Ochrana ATP v programu Azure identifikuje tyto důmyslných hrozeb ve zdrojovém kódu v celém řetězu událostí útoku a klasifikuje do následujících fází:
+Obvykle se internetoví útoky spouští na jakékoli přístupné entitě, jako je uživatel s nízkým oprávněním, a pak se rychle přesune později, dokud útočník nezíská přístup k cenným assetům. Cenné prostředky můžou být citlivé účty, správci domény nebo citlivá data. Azure ATP identifikuje tyto rozšířené hrozby ve zdroji v celém rámci celého řetězce dezaktivačního útoku a klasifikuje je v následujících fázích:
 
 1. [Rekognoskace](atp-reconnaissance-alerts.md)
-2. [Zneužití přihlašovacích údajů](atp-compromised-credentials-alerts.md)
-3. **Taktiky Lateral Movement**
-4. [Dominance v doméně](atp-domain-dominance-alerts.md)
-5. [Průsak ven](atp-exfiltration-alerts.md)
+2. [Napadené přihlašovací údaje](atp-compromised-credentials-alerts.md)
+3. **Boční pohyb**
+4. [Dominantní doména](atp-domain-dominance-alerts.md)
+5. [Exfiltrace](atp-exfiltration-alerts.md)
 
-Další informace o tom, jak pochopit strukturu a běžné součásti všech výstrah zabezpečení ochrany ATP v programu Azure najdete v tématu [Principy výstrah zabezpečení](understanding-security-alerts.md).
+Další informace o tom, jak pochopit strukturu a společné komponenty všech výstrah zabezpečení Azure ATP, najdete v tématu [Vysvětlení výstrah zabezpečení](understanding-security-alerts.md).
 
-Výstrahy pomáhají identifikovat a napravit následující zabezpečení **taktiky Lateral Movement** fáze podezřelých aktivitách zjištěných ochrany ATP v programu Azure ve vaší síti. V tomto kurzu se dozvíte, jak pochopit, klasifikovat, opravit a brání následující typy útoků:
+Následující výstrahy zabezpečení vám pomůžou identifikovat a opravit podezřelé aktivity fáze **přesunu** zjištěné službou Azure ATP ve vaší síti. V tomto kurzu se dozvíte, jak pochopit, klasifikovat, opravit a zabránit těmto typům útoků:
 
 > [!div class="checklist"]
-> * Vzdálené spuštění kódu nad DNS (externí ID 2036)
-> * Krádež identity podezřelého softwaru (pass-the-hash) (externí ID 2017)
-> * Krádež identity podezřelého softwaru (pass-the-ticket) (externí ID 2018)
-> * Podezření na útok přenosového protokolu NTLM (účet Exchange) (externí ID 2037) – preview
-> * Podezření na útok overpass-the-hash (oslabení šifrování) (externí ID 2008)
-> * Podezření na útok overpass-the-hash (Kerberos) (externí ID 2002)
+> * Vzdálené spuštění kódu přes DNS (externí ID 2036)
+> * Podezření na krádež identity (pass-the-hash) (externí ID 2017)
+> * Podezření na krádež identity (pass-the-Ticket) (externí ID 2018)
+> * Podezření na manipulaci s ověřováním NTLM (externí ID 2039) – Preview
+> * Podezření na útok pomocí protokolu NTLM (External ID 2037) – Preview
+> * Podezřelý útok Overpass-the-hash (v downgradu šifrování) (externí ID 2008)
+> * Podezřelá Overpass-the-hash – útok (Kerberos) (externí ID 2002)
 
-## <a name="remote-code-execution-over-dns-external-id-2036"></a>Vzdálené spuštění kódu nad DNS (externí ID 2036)
+## <a name="remote-code-execution-over-dns-external-id-2036"></a>Vzdálené spuštění kódu přes DNS (externí ID 2036)
 
 **Popis**
 
-Publikované 12/11/2018 Microsoft [CVE-2018-8626](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2018-8626), oznamujeme, že existuje nově zjištěných vzdálené spuštění kódu na serverech Windows systému DNS (Domain Name). V toto ohrožení zabezpečení servery nepodaří správně zpracovávat požadavky. Útočník, který tuto chybu zabezpečení úspěšně zneužije, může spustit libovolný kód v kontextu místního systémového účtu. Servery Windows aktuálně nakonfigurované jako servery DNS vystavují se riziku toto ohrožení zabezpečení.
+12/11/2018 společnost Microsoft zveřejnila [CVE-2018-8626](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2018-8626)a oznamuje, že nově zjištěná zranitelnost vzdáleného spuštění kódu existuje v serverech DNS (Domain Name System) systému Windows. V této chybě zabezpečení nejsou servery správně zpracovávat požadavky. Útočník, který úspěšně zneužije chybu zabezpečení, může spustit libovolný kód v kontextu místního systémového účtu. Pro tuto chybu zabezpečení jsou ohroženy servery Windows aktuálně nakonfigurované jako servery DNS.
 
-V této detekce se aktivuje upozornění zabezpečení služby Azure ATP při podezření na zneužití ohrožení zabezpečení CVE-2018-8626 dotazy DNS se provádí na řadiči domény v síti.
+V tomto zjišťování se aktivuje výstraha zabezpečení Azure ATP, když se dotazy DNS, které jsou podezřelé z zneužití chyby zabezpečení CVE-2018-8626, provedou na řadiči domény v síti.
 
 **TP, B-TP nebo FP**
 
-1. Cílové počítače jsou aktuální a patched proti CVE-2018-8626? 
-    - Pokud jsou počítače v aktuálním stavu a opravou, **Zavřít** dané výstraze zabezpečení jako **FP**.
-2. Byla služba vytvořena nebo neznámého proces spuštěn v době výskytu útoku
-    - Pokud se nenajde žádné nové služby nebo neznámého procesu, **Zavřít** dané výstraze zabezpečení jako **FP**. 
-3. Tento typ útoku může dojít k selhání služby DNS před recyklováním úspěšně provádění kódu.
-    - Zaškrtněte, pokud několikrát v době výskytu útoku se restartoval službu DNS.
-    - Pokud DNS byl restartován, byl pravděpodobně pokus o zneužití CVE-2018-8626. Vezměte v úvahu tuto výstrahu **TP** a postupujte podle pokynů v **pochopit tak rozsah porušení**. 
+1. Jsou cílové počítače aktuální a jsou opravené oproti CVE-2018-8626? 
+    - Pokud jsou počítače v aktuálním stavu a opraveny, **zavřete** výstrahu zabezpečení jako **FP**.
+2. Byla vytvořena služba nebo nebyl spuštěn neznámý proces kolem doby útoku.
+    - Pokud se nenajde žádná nová služba ani neznámý proces, **zavřete** výstrahu zabezpečení jako **FP**. 
+3. Tento typ útoku může způsobit chybu služby DNS před tím, než úspěšně vykonávání kódu.
+    - Ověřte, zda se služba DNS několikrát restartovala okolo doby útoku.
+    - Pokud byl server DNS restartován, byl nejspíš pokus o zneužití CVE-2018-8626. Zvažte toto upozornění v **transakčním** programu a postupujte podle pokynů v tématu **pochopení rozsahu porušení**. 
 
-**Vysvětlení rozsahu porušení**
+**Pochopení rozsahu porušení**
 
-- Prozkoumat [zdrojový a cílový počítač](investigate-a-computer.md).
+- Prozkoumejte [zdrojový a cílový počítač](investigate-a-computer.md).
 
-**Navrhované nápravné kroky a pro ochrany před únikem informací**
+**Navrhovaná náprava a kroky pro prevenci**
 
 **Náprava**
 
-1. Obsahovat řadiče domény. 
-    1. Opravte pokus o spuštění vzdáleného kódu.
-    2. Vyhledejte uživatelé také přihlášení přibližně ve stejnou dobu jako podezřelou aktivitu, jak může být ohrožena. Resetování hesel a povolení vícefaktorového ověřování. 
+1. Obsahuje řadiče domény. 
+    1. Opravte pokus o vzdálené spuštění kódu.
+    2. Hledání uživatelů se také může přihlásilo přibližně ve stejnou dobu jako podezřelá aktivita, jak mohou být ohroženy také. Resetujte hesla a povolte MFA. 
 2. Obsahují zdrojový počítač.
     1. Najít nástroj, který provádí útoku a jeho odebrání.
-    2. Vyhledejte uživatelé také přihlášení přibližně ve stejnou dobu jako podezřelou aktivitu, jak může být ohrožena. Resetování hesel a povolení vícefaktorového ověřování.
+    2. Hledání uživatelů se také může přihlásilo přibližně ve stejnou dobu jako podezřelá aktivita, jak mohou být ohroženy také. Resetujte hesla a povolte MFA.
 
-**Ochrany před únikem informací**
+**Únikem**
 
-- Ujistěte se, že všechny servery DNS v prostředí jsou aktuální a patched proti [CVE-2018-8626](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2018-8626). 
+- Zajistěte, aby všechny servery DNS v prostředí byly aktuální a byly opraveny v porovnání [s CVE-2018-8626](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2018-8626). 
 
-## <a name="suspected-identity-theft-pass-the-hash-external-id-2017"></a>Krádež identity podezřelého softwaru (pass-the-hash) (externí ID 2017)
+## <a name="suspected-identity-theft-pass-the-hash-external-id-2017"></a>Podezření na krádež identity (pass-the-hash) (externí ID 2017)
 
 *Předchozí název:* Krádež identity pomocí útoku Pass-the-Hash
 
@@ -86,23 +87,23 @@ V této detekce se aktivuje upozornění zabezpečení služby Azure ATP při po
 
 Pass-the-Hash je technika laterálního pohybu, kdy útočník získá NTLM hash uživatele z jednoho počítače a použije ho k získání přístupu k jinému počítači.
 
-**TP, B-TP nebo FP?**
-1. Určit, pokud byl použit-the-hash z počítače, které uživatel používá pravidelně? 
-    - Pokud byl použit algoritmus hash z počítačů používat pravidelně, **Zavřít** výstrahu jako **FP**.  
+**TRANSAKČNÍ program, B-TP nebo FP?**
+1. Určete, jestli se hodnota hash použila z počítačů, které uživatel pravidelně používá? 
+    - Pokud byl algoritmus hash použit z pravidelně používaných počítačů, **zavřete** výstrahu jako **FP**.  
  
-**Vysvětlení rozsahu porušení**
+**Pochopení rozsahu porušení**
 
-1. Prozkoumat [zdrojový a cílový počítač](investigate-a-computer.md) dále.  
-2. Prozkoumat [dojde k ohrožení bezpečnosti uživatelského](investigate-a-computer.md).
+1. Podrobněji Prozkoumejte [zdrojové a cílové počítače](investigate-a-computer.md) .  
+2. Prozkoumejte [ohroženého uživatele](investigate-a-computer.md).
  
-**Navrhované nápravné kroky a pro ochrany před únikem informací**
+**Navrhovaná náprava a kroky pro prevenci**
 
-1. Resetovat heslo uživatele, zdroje a povolit vícefaktorové ověřování.
-2. Obsahují zdrojový a cílový počítač.
+1. Resetujte heslo ke zdrojovému uživateli a povolte MFA.
+2. Obsahují zdrojové a cílové počítače.
 3. Najít nástroj, který provádí útoku a jeho odebrání.
-4. Hledejte uživatele přihlášené přibližně ve stejnou dobu aktivity, jak může být ohrožena. Resetování hesel a povolení vícefaktorového ověřování.
+4. Vyhledat uživatele přihlášené kolem stejné doby aktivity, jak mohou být ohroženy také. Resetujte hesla a povolte MFA.
 
-## <a name="suspected-identity-theft-pass-the-ticket-external-id-2018"></a>Krádež identity podezřelého softwaru (pass-the-ticket) (externí ID 2018)
+## <a name="suspected-identity-theft-pass-the-ticket-external-id-2018"></a>Podezření na krádež identity (pass-the-Ticket) (externí ID 2018)
 
 *Předchozí název:* Krádež identity pomocí útoku Pass-the-Ticket
 
@@ -110,152 +111,178 @@ Pass-the-Hash je technika laterálního pohybu, kdy útočník získá NTLM hash
 
 Pass-the-Ticket je technika laterálního pohybu, kdy útočník získá lístek Kerberos z jednoho počítače a použije ho k získání přístupu k jinému počítači opětovným použitím odcizených lístků. Při zjišťování je zobrazena lístek protokolu Kerberos používá na dvou (nebo více) různých počítačích.
 
-**TP, B-TP nebo FP?**
+**TRANSAKČNÍ program, B-TP nebo FP?**
 
-Úspěšně překladu IP adres počítačům v organizaci je důležitá pro identifikaci útoků pass-the-ticket z jednoho počítače do jiného. 
+Úspěšné překladu IP adres na počítače v organizaci je důležité k identifikaci útoků typu Pass-The-Ticket z jednoho počítače do druhého. 
 
-1. Zaškrtněte, pokud jeden nebo oba počítače IP adresa patří k podsíti, která je přidělena z nedostatečné velikosti fondu adres DHCP, například VPN, Wi-Fi nebo VDI? 
-2. IP adresa sdílí (například zařízení NAT)?  
-3. Řešení není senzor nejméně jeden z cílové IP adresy? Pokud cílová IP adresa není vyřešen, může to znamenat, že správné porty mezi ze senzorů a zařízení nejsou otevřené správně. 
+1. Ověřte, jestli IP adresa jednoho nebo obou počítačů patří do podsítě, která je přidělená z nedostatečného fondu DHCP, například VPN, VDI nebo Wi-Fi? 
+2. Sdílí se IP adresa (například zařízením NAT)?  
+3. Neřeší tento senzor jednu nebo více cílových IP adres? Pokud cílová IP adresa není vyřešená, může to znamenat, že se správně neotevřou správné porty mezi senzorem a zařízeními. 
 
-    Pokud je odpověď na všechny předchozí otázky **Ano**, zkontrolujte, jestli počítače zdroje a cíle jsou stejné. Pokud se shodují, je **FP** nebyly žádné skutečné pokusy o **pass-the-ticket**. 
+    Pokud je odpověď na některou z předchozích otázek **Ano**, ověřte, zda jsou zdrojové a cílové počítače stejné. Pokud jsou stejné, jedná se o **FP** a při **průchodu Pass-The-Ticket**se neobjevily žádné reálné pokusy. 
 
-[Vzdálené Credential Guard](https://docs.microsoft.com/windows/security/identity-protection/remote-credential-guard) funkce připojení RDP, když použít spolu s Windows 10 na Windows serveru 2016 a novější, může způsobit **B-TP** výstrahy. Používání výstrah důkazy, zkontrolujte, pokud uživatel provést připojení ke vzdálené ploše ze zdrojového počítače do cílového počítače.
+Funkce [Remote Credential Guard](https://docs.microsoft.com/windows/security/identity-protection/remote-credential-guard) připojení RDP, pokud se používá s Windows 10 na windows serveru 2016 a novějším, může způsobovat výstrahy **B-TP** . Pomocí legitimace výstrahy ověřte, zda uživatel provedl připojení ke vzdálené ploše ze zdrojového počítače do cílového počítače.
 
-1. Kontrola pro korelaci důkaz.
-2. Pokud je existuje korelace důkazy, podívejte se, pokud bylo navázáno připojení RDP pomocí vzdáleného Credential Guard. 
-3. Pokud odpovíte Ano, **Zavřít** dané výstraze zabezpečení jako **T BP** aktivity. 
+1. Podívejte se na korelační legitimace.
+2. Pokud existuje korelace, ověřte, zda bylo připojení RDP provedeno pomocí vzdálené ochrany přihlašovacích údajů. 
+3. Pokud je odpověď ano, **zavřete** výstrahu zabezpečení jako aktivitu **T-BP** . 
 
-Existují vlastní aplikace, které dál lístky jménem uživatelů. Tyto aplikace mají oprávnění pro delegování do uživatelských lístků.
+K dispozici jsou vlastní aplikace, které předávají lístky jménem uživatelů. Tyto aplikace mají pro lístky uživatele práva pro delegování.
 
-1. Je typ vlastní aplikace jako ten výše popsaný, aktuálně na cílových počítačích? Služby, které je aplikace spuštěna? Jsou služby jednají jménem uživatelů, například přístupu do databází?
-    - Pokud odpovíte Ano, **Zavřít** dané výstraze zabezpečení jako **T BP** aktivity.
-2. Je cílový počítač delegování server?
-    - Pokud odpovíte Ano, **Zavřít** zabezpečení výstrahy a vyloučit tento počítač jako **T BP** aktivity.
+1. Je vlastní typ aplikace, například dříve popsaná, aktuálně na cílových počítačích? Které služby aplikace spouští? Mají služby, které jednají jménem uživatelů, například přístup k databázím?
+    - Pokud je odpověď ano, **zavřete** výstrahu zabezpečení jako aktivitu **T-BP** .
+2. Je cílový počítač serverem delegování?
+    - Pokud je odpověď ano, **zavřete** výstrahu zabezpečení a vylučte tento počítač jako aktivitu **T-BP** .
  
-**Vysvětlení rozsahu porušení**
+**Pochopení rozsahu porušení**
 
-1. Prozkoumat [zdrojový a cílový počítač](investigate-a-computer.md).  
-2. Prozkoumat [dojde k ohrožení bezpečnosti uživatelského](investigate-a-computer.md). 
+1. Prozkoumejte [zdrojový a cílový počítač](investigate-a-computer.md).  
+2. Prozkoumejte [ohroženého uživatele](investigate-a-computer.md). 
 
-**Navrhované nápravné kroky a pro ochrany před únikem informací**
+**Navrhovaná náprava a kroky pro prevenci**
 
-1. Resetovat heslo uživatele, zdroje a povolit vícefaktorové ověřování.
-2. Obsahují zdrojový a cílový počítač.
+1. Resetujte heslo ke zdrojovému uživateli a povolte MFA.
+2. Obsahují zdrojové a cílové počítače.
 3. Najít nástroj, který provádí útoku a jeho odebrání.
-4. Vyhledejte uživatelé přihlášení přibližně ve stejnou dobu jako aktivity, jak může být ohrožena. Resetování hesel a povolení vícefaktorového ověřování.
-5. Pokud máte nainstalovaný – programu Windows Defender ATP použít **vyprázdnit klist.exe** odstranit všechny lístky zadané přihlašovací relace a zabránit dalším využívání lístky.
+4. Vyhledejte uživatele přihlášené přibližně ve stejnou dobu jako aktivita, jak mohou být ohroženy také. Resetujte hesla a povolte MFA.
+5. Pokud máte nainstalované ochrany ATP v programu Windows Defender – pomocí **příkaz Klist (. exe** odstraňte všechny lístky zadané přihlašovací relace a zabraňte budoucímu používání lístků.
 
-## <a name="suspected-ntlm-relay-attack-exchange-account-external-id-2037---preview"></a>Podezření na útok přenosového protokolu NTLM (účet Exchange) (externí ID 2037) – preview
+## <a name="suspected-ntlm-authentication-tampering-external-id-2039---preview"></a>Podezření na manipulaci s ověřováním NTLM (externí ID 2039) – Preview
 
-**Popis**
+V červnu 2019 mohla společnost Microsoft zveřejnila [bezpečnostní ohrožení zabezpečení CVE-2019-1040](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2019-1040)a oznamuje zjišťování nové chyby zabezpečení v systému Microsoft Windows, když útok "man-in-the-middle" dokáže úspěšně obejít mikrofon protokolu NTLM (kontrola integrity zpráv). antivirový.
 
-Exchange Server lze nastavit k aktivaci ověřování protokolem NTLM účtem systému Exchange Server vzdálené http serveru spustit ze strany útočníka. Tento server čeká na serveru Exchange Server komunikace předat vlastní citlivé ověřování na libovolný server nebo dokonce i další zajímavé ke službě Active Directory přes LDAP a získá informace o ověřování.
+Škodlivé objekty actor, které úspěšně využívají tuto chybu zabezpečení, mají možnost downgradovat funkce zabezpečení NTLM a můžou úspěšně vytvářet ověřené relace jménem jiných účtů. Neopravované servery Windows jsou ohrožené touto chybou zabezpečení.
+ 
+V tomto zjišťování se aktivuje výstraha zabezpečení ATP Azure ATP, když žádosti o ověření NTLM podezřelé z zneužití chyby zabezpečení zjištěné v [CVE-2019-1040](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2019-1040) probíhají na řadiči domény v síti.
 
-Jakmile obdrží server předávací ověřování protokolem NTLM, poskytuje výzvu, který byl původně vytvořen na cílový server. Klient odpoví na výzvu, zabraňuje útočníkovi trvá odpověď a použít ho k pokračovat vyjednávání protokolu NTLM se cílového řadiče domény. 
+**TRANSAKČNÍ program, B-TP nebo FP?**
 
-V této detekce se aktivuje upozornění při identifikaci ochrany ATP v programu Azure použijte přihlašovací údaje účtu Exchange z podezřelých zdroje.
+1.  Jsou zahrnuté počítače, včetně řadičů domény, aktualizované a opravené oproti [CVE-2019-1040](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2019-1040)? v případě, že jsou počítače v aktuálním stavu a opraveny, očekáváme, že ověřování selže. Pokud se ailed ověřování, **zavřete** výstrahu zabezpečení jako neúspěšný pokus.
+ 
+**Pochopení rozsahu porušení**
+1.  Prozkoumejte [zdrojové počítače](investigate-a-computer.md).
+2.  Prozkoumejte [zdrojový účet](investigate-a-user.md).
 
-**TP, B-TP nebo FP?**
-
-1. Kontrola zdrojového počítače za bránou IP adresy. 
-    1. Pokud zdrojový počítač je Exchange Server, **Zavřít** dané výstraze zabezpečení jako **FP** aktivity.
-    2. Určuje, pokud zdrojový účet by měl ověřit pomocí protokolu NTLM z těchto počítačů? Pokud se musí ověřit, **Zavřít** zabezpečení výstrahy a vylučte tyto počítače jako **B-TP** aktivity.
-
-**Vysvětlení rozsahu porušení**
-
-1. Pokračovat [zkoumání zdrojových počítačích](investigate-a-computer.md) za používané IP adresy.  
-2. Prozkoumat [účet zdrojové](investigate-a-user.md).
-
-**Navrhované nápravné kroky a pro ochrany před únikem informací**
-
-1. Obsahují zdrojových počítačích
-    1. Najít nástroj, který provádí útoku a jeho odebrání.
-    2. Vyhledejte uživatelé přihlášení přibližně ve stejnou dobu aktivity došlo k chybě, protože může být ohrožena. Resetování hesel a povolení vícefaktorového ověřování.
-2. Vynutit používání zapečetěné NTLMv2 v doméně pomocí **zabezpečení sítě: Úroveň ověřování pro systém LAN Manager** zásady skupiny. Další informace najdete v tématu [úrovně pokyny programu LAN Manager ověřování](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-security-lan-manager-authentication-level) pro nastavení zásad skupiny pro řadiče domény. 
-
-## <a name="suspected-overpass-the-hash-attack-encryption-downgrade-external-id-2008"></a>Podezření na útok overpass-the-hash (oslabení šifrování) (externí ID 2008) 
-
-*Předchozí název:* Aktivita snížení úrovně šifrování
-
-**Popis**
-
-Oslabení šifrování je metoda oslabení oslabení šifrování různých polí protokolu, obvykle šifrována pomocí nejvyšší úrovně šifrování pomocí protokolu Kerberos. Oslabeným šifrované pole může být snazší target na offline útoky hrubou silou při pokusech. Různých metod útoku zvýšit využití slabé šifrování doklad protokolu Kerberos. V tomto zjišťování služby Azure ATP učí typy šifrování pomocí protokolu Kerberos, počítačů a uživatelů a upozornění, že vás, když je slabší šifrovací používá server, který neobvyklé, že u zdrojového počítače nebo uživatele a odpovídá techniky známých útoků. 
-
-V over-pass-the-hash útok útočník využije k vytvoření lístku silné žádost Kerberos AS slabé odcizené hodnoty hash. Při zjišťování jsou zjištěny instance, kde je downgradovat typ šifrování zprávy AS_REQ ze zdrojového počítače, ve srovnání s dřív zjištěné chování (počítač používá AES).
-
-**TP, B-TP nebo FP?**
-1. Určete, jestli nedávno změnit konfiguraci čipové karty. 
-   - Účty používané nedávno mají změny konfigurace pomocí čipové karty?  
-    
-     Pokud odpovíte Ano, **Zavřít** dané výstraze zabezpečení jako **T BP** aktivity. 
-
-Některé legitimní materiálů nepodporují silné šifrování šifry a toto upozornění mohou aktivovat. 
-
-2. Všechny zdroje uživatelé sdílet něco? 
-   1. Například všechny marketingové pracovníky ve vaší organizaci přistupují konkrétní prostředek, který by mohl způsobit aktivovat upozornění?
-   2. Podívejte se na zdroje přistupuje těchto lístků. 
-       - Zaškrtnutím tohoto políčka ve službě Active Directory tak, že zkontrolujete atribut *msDS-SupportedEncryptionTypes*, prostředků účtu služby.
-   3. Pokud existuje pouze jeden prostředek používaná, zkontrolujte, zda není platný prostředek pro tyto uživatele bude možné získat přístup.   
-
-      Pokud je odpověď na jednu z předchozí otázky **Ano**, je pravděpodobné, že **T BP** aktivity. Zkontrolujte prostředku může podporovat silné šifrování šifer s nižší sílou,-li implementovat šifer s nižší sílou silnější šifrování, kde je to možné, a **Zavřít** dané výstraze zabezpečení.
-
-**Vysvětlení rozsahu porušení**
-
-1. Prozkoumat [zdrojový počítač](investigate-a-computer.md).  
-2. Prozkoumat [dojde k ohrožení bezpečnosti uživatelského](investigate-a-computer.md). 
-
-**Navrhované nápravné kroky a pro ochrany před únikem informací** 
+**Navrhovaná náprava a kroky pro prevenci**
 
 **Náprava**
-1. Resetovat heslo uživatele, zdroje a povolit vícefaktorové ověřování. 
+1.  Obsahuje zdrojové počítače.
+2.  Najít nástroj, který provádí útoku a jeho odebrání.
+3.  Vyhledejte uživatele přihlášené přibližně ve stejnou dobu, jako by došlo k aktivitě, protože mohou být ohroženy také. Resetujte hesla a povolte MFA.
+4.  Vynutit použití zapečetěných NTLMv2 v doméně pomocí **zabezpečení sítě: Zásady** skupiny pro ověřování LAN Manager. Další informace najdete v tématu [pokyny pro ověřování v programu LAN Manager](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-security-lan-manager-authentication-level) pro nastavení zásad skupiny pro řadiče domény.
+ 
+**Prevence** • zajistěte, aby všechna zařízení v prostředí byla aktuální, a byla opravena s chybou [CVE-2019-1040](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2019-1040).
+
+## <a name="suspected-ntlm-relay-attack-exchange-account-external-id-2037---preview"></a>Podezření na útok pomocí protokolu NTLM (External ID 2037) – Preview
+
+**Popis**
+
+Systém Exchange Server je možné nakonfigurovat tak, aby aktivoval ověřování NTLM s účtem Exchange serveru na vzdálený server http spuštěný útočníkem. Tento server počká, než komunikace s Exchange serverem přenáší své vlastní citlivé ověřování na jakýkoli jiný server nebo ještě více zájmů služby Active Directory přes protokol LDAP, a připraví ověřovací údaje.
+
+Jakmile Server Relay obdrží ověřování NTLM, poskytne mu výzvu, která byla původně vytvořena cílovým serverem. Klient odpoví na výzvu, zabrání útočníkovi v přijetí odpovědi a použije ho k pokračování vyjednávání protokolu NTLM s cílovým řadičem domény. 
+
+V tomto zjišťování se aktivuje výstraha, když Azure ATP identifikuje přihlašovací údaje účtu Exchange z podezřelého zdroje.
+
+**TRANSAKČNÍ program, B-TP nebo FP?**
+
+1. Kontrolovat zdrojové počítače za IP adresami. 
+    1. Pokud je zdrojový počítač Exchange Server, **zavřete** výstrahu zabezpečení jako aktivitu **FP** .
+    2. Určete, jestli se má zdrojový účet ověřit pomocí protokolu NTLM z těchto počítačů? Pokud by se měly ověřit, **zavřete** výstrahu zabezpečení a Vylučte tyto počítače jako aktivitu **B-TP** .
+
+**Pochopení rozsahu porušení**
+
+1. Pokračujte [ve zkoumání zdrojových počítačů](investigate-a-computer.md) za IP adresami, které jsou v něm zapojené.  
+2. Prozkoumejte [zdrojový účet](investigate-a-user.md).
+
+**Navrhovaná náprava a kroky pro prevenci**
+
+1. Obsahuje zdrojové počítače.
+    1. Najděte nástroj, který předá útok, a odeberte ho.
+    2. Vyhledejte uživatele přihlášené přibližně ve stejnou dobu, jako by došlo k aktivitě, protože mohou být ohroženy také. Resetujte hesla a povolte MFA.
+2. Vynutit použití zapečetěných NTLMv2 v doméně pomocí **zabezpečení sítě: Zásady** skupiny pro ověřování LAN Manager. Další informace najdete v tématu [pokyny pro ověřování v programu LAN Manager](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-security-lan-manager-authentication-level) pro nastavení zásad skupiny pro řadiče domény. 
+
+## <a name="suspected-overpass-the-hash-attack-encryption-downgrade-external-id-2008"></a>Podezřelý útok Overpass-the-hash (v downgradu šifrování) (externí ID 2008) 
+
+*Předchozí název:* Aktivita v downgradu šifrování
+
+**Popis**
+
+Downgrade šifrování je metoda oslabení protokolu Kerberos pomocí šifrování. downgrade různých polí protokolu se obvykle šifrují pomocí nejvyšší úrovně šifrování. Oslabeným šifrované pole může být snazší target na offline útoky hrubou silou při pokusech. Různých metod útoku zvýšit využití slabé šifrování doklad protokolu Kerberos. V této detekci zjistí Azure ATP typy šifrování Kerberos používané počítači a uživateli a upozorní vás, když se použije slabší šifrováním, který je pro zdrojový počítač neobvyklý, a/nebo uživatel a odpovídá známým technikům útoku. 
+
+V případě útoku over-pass-the-hash může útočník použít slabý autentizační algoritmus hash k vytvoření silného lístku s protokolem Kerberos jako žádosti. V takovém případě se instance zjišťují, kde se v porovnání s dříve zjištěným chováním (počítač používal AES) downgrade typ šifrování zprávy AS_REQ ze zdrojového počítače.
+
+**TRANSAKČNÍ program, B-TP nebo FP?**
+1. Zjistěte, jestli se nedávno změnila konfigurace čipové karty. 
+   - Zahrnovaly tyto účty nedávno změny konfigurace čipové karty?  
+    
+     Pokud je odpověď ano, **zavřete** výstrahu zabezpečení jako aktivitu **T-BP** . 
+
+Některé legitimní prostředky nepodporují silné šifrovací šifry a mohou aktivovat tuto výstrahu. 
+
+2. Sdílí všichni zdrojový uživatel něco? 
+   1. Například všichni vaši pracovníci marketingu přistupují k určitému prostředku, který by mohl způsobit aktivaci výstrahy?
+   2. Podívejte se na zdroje přistupuje těchto lístků. 
+       - Zaškrtnutím tohoto políčka ve službě Active Directory tak, že zkontrolujete atribut *msDS-SupportedEncryptionTypes*, prostředků účtu služby.
+   3. Pokud je k dispozici pouze jeden prostředek, ověřte, zda se jedná o platný prostředek pro přístup k těmto uživatelům.   
+
+      Pokud je odpověď na jednu z předchozích otázek **Ano**, může to být aktivita **T-BP** . Ověřte, zda prostředek může podporovat silné šifrovací šifrování, pokud je to možné, implementujte silnější šifrovací šifru a **zavřete** výstrahu zabezpečení.
+
+**Pochopení rozsahu porušení**
+
+1. Prozkoumejte [zdrojový počítač](investigate-a-computer.md).  
+2. Prozkoumejte [ohroženého uživatele](investigate-a-computer.md). 
+
+**Navrhovaná náprava a kroky pro prevenci** 
+
+**Náprava**
+1. Resetujte heslo ke zdrojovému uživateli a povolte MFA. 
 2. Obsahují zdrojový počítač. 
 3. Najít nástroj, který provádí útoku a jeho odebrání. 
-4. Vyhledejte uživatelé přihlášení v době aktivity, jak může být ohrožena. Resetování hesel a povolení vícefaktorového ověřování  
+4. Vyhledejte uživatele přihlášené kolem doby aktivity, jak mohou být ohroženy také. Resetování hesel a povolení vícefaktorového ověřování  
 
-**Ochrany před únikem informací**
+**Únikem**
  
-1. Konfigurace vaší domény pro podporu silného šifrování doklad a odebrat *šifrování pomocí protokolu Kerberos DES*. Další informace o [typy šifrování a protokolu Kerberos](https://blogs.msdn.microsoft.com/openspecification/2011/05/30/windows-configurations-for-kerberos-supported-encryption-type/). 
-2. Ujistěte se, že je úroveň funkčnosti domény nastavená pro podporu silného šifrování doklad.  
-3. Dávat přednost použití aplikace, které podporují doklad silné šifrování.
+1. Nakonfigurujte doménu tak, aby podporovala silné šifrování cyphers, a odeberte *použití typů šifrování Kerberos DES*. Přečtěte si další informace o [typech šifrování a protokolu Kerberos](https://blogs.msdn.microsoft.com/openspecification/2011/05/30/windows-configurations-for-kerberos-supported-encryption-type/). 
+2. Ujistěte se, že je úroveň funkčnosti domény nastavená tak, aby podporovala silné šifrování cyphers.  
+3. Poskytněte přednost používání aplikací, které podporují silné šifrování cyphers.
 
-## <a name="suspected-overpass-the-hash-attack-kerberos-external-id-2002"></a>Podezření na útok overpass-the-hash (Kerberos) (externí ID 2002) 
+## <a name="suspected-overpass-the-hash-attack-kerberos-external-id-2002"></a>Podezřelá Overpass-the-hash – útok (Kerberos) (externí ID 2002) 
 
 *Předchozí název:* Neobvyklá implementace protokolu Kerberos (možný útok overpass-the-hash)
 
 **Popis**
 
-Útočníci používají nástroje, které implementují nestandardním způsobem různé protokoly, například pomocí protokolů Kerberos a protokolu SMB. Microsoft Windows přijímá tento typ síťového provozu bez upozornění, je ochrana ATP v programu Azure rozpoznat potenciální škodlivým činnostem. Chování je indikátorem techniky, jako je například over-pass-the-hash, útoky hrubou silou a zneužití pokročilé ransomwaru například WannaCry, se používají.
+Útočníci používají nástroje, které implementují nestandardním způsobem různé protokoly, například pomocí protokolů Kerberos a protokolu SMB. I když Microsoft Windows akceptuje tento typ síťového provozu bez upozornění, může Azure ATP rozpoznat potenciální škodlivý záměr. Chování je popsána v části techniky, jako je například metoda over-Pass-hash, hrubá síla a rozšířená ransomwarem zneužití, jako je například WannaCry, se používají.
 
-**TP, B-TP nebo FP?**
+**TRANSAKČNÍ program, B-TP nebo FP?**
 
 Někdy aplikace implementovat vlastní zásobník protokolu Kerberos, není v souladu s RFC protokolu Kerberos. 
 
-1. Zaškrtněte, pokud zdrojovém počítači běží aplikace s vlastní zásobník protokolu Kerberos, není v souladu s RFC protokolu Kerberos.  
-2. Pokud zdrojovém počítači běží takové aplikace, a měla by **není** to udělat, opravte konfiguraci aplikace. **Zavřít** dané výstraze zabezpečení jako **T BP** aktivity.  
-3. Pokud zdrojovém počítači běží takovou aplikaci a mělo by to uděláte tak, **Zavřít** dané výstraze zabezpečení jako **T BP** aktivity a vyloučit počítače. 
+1. Ověřte, zda na zdrojovém počítači běží aplikace s vlastním zásobníkem protokolu Kerberos, nikoli v souladu se specifikací RFC protokolu Kerberos.  
+2. Pokud na zdrojovém počítači běží taková aplikace a nemělo by **to udělat,** Opravte konfiguraci aplikace. **Zavřete** výstrahu zabezpečení jako aktivitu **T-BP** .  
+3. Pokud na zdrojovém počítači běží taková aplikace a mělo by to pokračovat, **zavřete** výstrahu zabezpečení jako aktivitu **T-BP** a vylučte počítač. 
 
-**Vysvětlení rozsahu porušení**
+**Pochopení rozsahu porušení**
 
-1. Prozkoumat [zdrojový počítač](investigate-a-computer.md).  
-2. Pokud je [zdrojový uživatel](investigate-a-user.md), prozkoumat. 
+1. Prozkoumejte [zdrojový počítač](investigate-a-computer.md).  
+2. Pokud existuje [zdrojový uživatel](investigate-a-user.md), prozkoumejte. 
 
-**Navrhované nápravné kroky a pro ochrany před únikem informací** 
+**Navrhovaná náprava a kroky pro prevenci** 
 
-1. Resetovat hesla ohrožených uživatelů a povolte vícefaktorové ověřování.
+1. Resetujte hesla ohrožených uživatelů a povolte MFA.
 2. Obsahují zdrojový počítač.
 3. Najít nástroj, který provádí útoku a jeho odebrání.
-4. Vyhledejte uživatelé přihlášení přibližně ve stejnou dobu jako podezřelou aktivitu, jak může být ohrožena. Resetování hesel a povolení vícefaktorového ověřování.  
-5. Resetování hesel uživateli zdroje a povolit vícefaktorové ověřování.
+4. Hledání uživatelů přihlášených přibližně ve stejnou dobu jako podezřelá aktivita, jak mohou být ohroženy také. Resetujte hesla a povolte MFA.  
+5. Resetujte hesla zdrojového uživatele a povolte MFA.
 
 > [!div class="nextstepaction"]
-> [Upozornění kurzu dominance v doméně](atp-domain-dominance-alerts.md)
+> [Kurz pro upozornění na dominantní doménu](atp-domain-dominance-alerts.md)
 
 ## <a name="see-also"></a>Viz také
 
 - [Prošetřování počítačů](investigate-a-computer.md)
 - [Práce s výstrahami zabezpečení](working-with-suspicious-activities.md)
-- [Práce s cesty taktiky Lateral Movement](use-case-lateral-movement-path.md)
+- [Práce s cestami k příčnému přesunu](use-case-lateral-movement-path.md)
 - [Výstrahy před hrozbami „osahávání“ (reconnaissance)](atp-reconnaissance-alerts.md)
 - [Výstrahy před ohrožením zabezpečení přihlašovacích údajů](atp-compromised-credentials-alerts.md)
 - [Výstrahy před dominancí v doméně](atp-domain-dominance-alerts.md)

@@ -1,110 +1,104 @@
 ---
-title: Principy Azure ochrany ATP v programu Sledování výstrah | Dokumentace Microsoftu
-description: Popisuje, jak můžete k řešení potíží pomocí protokolů služby Azure ATP
+title: Principy výstrah monitorování ATP Azure | Microsoft Docs
+description: Popisuje, jak můžete pomocí protokolů ATP Azure řešit problémy.
 keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 05/29/2019
+ms.date: 07/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: d0551e91-3b21-47d5-ad9d-3362df6d47c0
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 46778e0dcafca7fcff8b7f7611a50ca0e23140d8
-ms.sourcegitcommit: b021f8dfc54e59de429f93cc5fc0d733d92b00b8
+ms.openlocfilehash: 65279895689e230a3a28871a61f4cffe36d6042c
+ms.sourcegitcommit: b7b3d4a401faaa3edb4bd669a1a003a6d21a4322
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66403562"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68298760"
 ---
-# <a name="understanding-azure-atp-sensor-and-standalone-sensor-monitoring-alerts"></a>Principy senzoru služby Azure ATP a samostatný senzor výstrah monitorování
+# <a name="understanding-azure-atp-sensor-and-standalone-sensor-monitoring-alerts"></a>Principy výstrah monitorování a samostatného senzoru ATP pro Azure ATP
 
-Health Center ochrany ATP v programu Azure vám umožňuje vědět, že dojde k nějakému problému s vaší instancí služby Azure ATP vyvoláním monitorovacího upozornění. Tento článek popisuje všechna monitorovací upozornění jednotlivých komponent včetně příčiny a postupu vedoucího k vyřešení problému.
+Služba Azure ATP Health Center vám umožní zjistit, v případě problémů s vaší instancí služby Azure ATP, vyvoláním výstrahy monitorování. Tento článek popisuje všechna monitorovací upozornění jednotlivých komponent včetně příčiny a postupu vedoucího k vyřešení problému.
 
-## <a name="domain-synchronizer-not-assigned"></a>Nepřiřazený synchronizátor domény
+## <a name="all-domain-controllers-are-unreachable-by-a-sensor"></a>Senzor nedosažitelný pro všechny řadiče domény
 
-|Výstrahy|Popis|Řešení|Severity|
+|Výstrahy|Popis|Řešení|severity|
 |----|----|----|----|
-|Žádný synchronizátor domény je přiřazený k žádnému senzoru služby Azure ATP. K tomu může dojít, pokud neexistuje žádný senzor ochrany ATP v programu Azure nakonfigurovaný jako kandidát na synchronizátora domény.|Když se doména nesynchronizuje, změny entit může způsobit informací o entitách v Azure ATP se zastaralé nebo chybí, ale nemá vliv na žádné zjišťování.|Ujistěte se, že tento aspoň jeden senzor ochrany ATP v programu Azure je nastaven jako [synchronizátor domény](install-atp-step5.md).|Nízká|
+|Senzor ATP Azure je teď v režimu offline kvůli problémům s připojením ke všem nakonfigurovaným řadičům domény.|To má vliv na schopnost Azure ATP rozpoznat podezřelé aktivity související s řadiči domény, které monitoruje tento senzor Azure ATP.| Zajistěte, aby řadiče domény byly v provozu a aby se tento senzor ATP Azure mohl na ně připojit pomocí protokolu LDAP. Kromě toho v **Nastavení** nezapomeňte nakonfigurovat účet adresářové služby pro každou nasazenou doménovou strukturu.|Střední|
 
-## <a name="all-domain-controllers-are-unreachable-by-a-sensor"></a>Všechny řadiče domény se nemůže připojit k žádnému senzoru
+## <a name="allsome-of-the-capture-network-adapters-on-a-sensor-are-not-available"></a>Všechny/některé síťové adaptéry pro zachytávání na senzoru nejsou k dispozici.
 
-|Výstrahy|Popis|Řešení|Severity|
+|Výstrahy|Popis|Řešení|severity|
 |----|----|----|----|
-|Snímač ochrany ATP v programu Azure je momentálně offline z důvodu problémů s připojením ke všem nakonfigurovaným řadičům domény.|To má vliv na služby Azure ATP schopnost detekce podezřelých aktivit souvisejících s řadiči domény sledováno tento senzoru služby Azure ATP.| Ujistěte se, že řadiče domény jsou spuštěné a, že tento senzoru služby Azure ATP můžete otevřít připojení LDAP na ně. Kromě toho v **nastavení** Ujistěte se, že ke konfiguraci účtu služby adresáře pro každé nasazené doménové struktuře.|Střední|
-
-## <a name="allsome-of-the-capture-network-adapters-on-a-sensor-are-not-available"></a>Všechny nebo některé ze síťových adaptérů pro zachytávání na senzoru, která nejsou k dispozici
-
-|Výstrahy|Popis|Řešení|Severity|
-|----|----|----|----|
-|Všechny nebo některé vybrané síťové adaptéry pro zachytávání na senzoru služby Azure ATP jsou zakázané nebo odpojené.|Senzoru služby Azure ATP je už nezachytává síťový provoz všech nebo některých řadičů domény. To má vliv na schopnost detekce podezřelých aktivit souvisejících s těmito řadiči domény.|Ujistěte se, že tyto vybrané síťové adaptéry pro zachytávání na senzoru služby Azure ATP povolené a připojené.|Střední|
+|Všechny/některé vybrané síťové adaptéry pro zachytávání na senzoru ATP Azure jsou zakázané nebo odpojené.|Síťový provoz pro některé nebo všechny řadiče domény už není zachycený senzorem Azure ATP. To má vliv na schopnost detekovat podezřelé aktivity související s těmito řadiči domény.|Ujistěte se, že jsou vybrané síťové adaptéry pro zachytávání na senzoru ATP v Azure povolené a připojené.|Střední|
 
 ## <a name="no-traffic-received-from-domain-controller"></a>Z řadiče domény se nepřijímá žádný provoz
 
-|Výstrahy|Popis|Řešení|Severity|
+|Výstrahy|Popis|Řešení|severity|
 |----|----|----|----|
-|Z řadiče domény přes tento senzoru služby Azure ATP nebyl přijat žádný provoz.|To může znamenat, že zrcadlení portů z řadičů domény na senzor ochrany ATP v programu Azure ještě nemáte nakonfigurovaný nebo nepracuje.|Ověřte, že je na [síťových zařízeních správně nakonfigurované zrcadlení portů](configure-port-mirroring.md).<br></br>Na senzoru služby Azure ATP síťové karty pro zachytávání, zakázání těchto funkcí v upřesňujícím nastavení:<br></br>Slučování příjmových segmentů (IPv4)<br></br>Slučování příjmových segmentů (IPv6)|Střední|
+|Z řadiče domény se přes tento senzor Azure ATP nepřijal žádný provoz.|To může znamenat, že zrcadlení portů z řadičů domény do senzoru ATP Azure ještě není nakonfigurované nebo nefunguje.|Ověřte, že je na [síťových zařízeních správně nakonfigurované zrcadlení portů](configure-port-mirroring.md).<br></br>V síťovém adaptéru pro zachytávání senzorů Azure ATP zakažte tyto funkce v upřesňujících nastaveních:<br></br>Slučování příjmových segmentů (IPv4)<br></br>Slučování příjmových segmentů (IPv6)|Střední|
 
-## <a name="read-only-user-password-to-expire-shortly"></a>Brzy vyprší platnost hesla uživatele jen pro čtení
+## <a name="read-only-user-password-to-expire-shortly"></a>Brzo vyprší platnost hesla uživatele jen pro čtení
 
-|Výstrahy|Popis|Řešení|Severity|
+|Výstrahy|Popis|Řešení|severity|
 |----|----|----|----|
-|Platnost hesla uživatele jen pro čtení, který se používá k rozpoznávání entit ve službě Active Directory, vyprší za méně než 30 dnů.|Pokud heslo pro tohoto uživatele vyprší, zastaví všechny služby Azure ATP senzory a shromažďovat žádná nová data.|[Změna hesla připojení k doméně](modifying-atp-config-dcpassword.md) a pak aktualizujte heslo na portálu ochrany ATP v programu Azure.|Střední|
+|Platnost hesla uživatele jen pro čtení, který se používá k rozpoznávání entit ve službě Active Directory, vyprší za méně než 30 dnů.|Pokud platnost hesla pro tohoto uživatele vyprší, všechny senzory Azure ATP přestanou běžet a nebudou shromažďována žádná nová data.|[Změňte heslo připojení k doméně](modifying-atp-config-dcpassword.md) a pak aktualizujte heslo na portálu Azure atp.|Střední|
 
 ## <a name="read-only-user-password-expired"></a>Vypršení platnosti hesla uživatele jen pro čtení
 
-|Výstrahy|Popis|Řešení|Severity|
+|Výstrahy|Popis|Řešení|severity|
 |----|----|----|----|
-|Platnost hesla uživatele jen pro čtení, který se používá k získání dat z adresáře, vypršela.|Zastaví všechny senzory ochrany ATP v programu Azure (nebo se zastaví brzy) a shromažďovat žádná nová data.|[Změna hesla připojení k doméně](modifying-atp-config-dcpassword.md) a pak aktualizujte heslo na portálu ochrany ATP v programu Azure.|Vysoká|
+|Platnost hesla uživatele jen pro čtení, který se používá k získání dat z adresáře, vypršela.|Všechny senzory Azure ATP přestanou běžet (nebo se brzy ukončí) a nebudou shromažďována žádná nová data.|[Změňte heslo připojení k doméně](modifying-atp-config-dcpassword.md) a pak aktualizujte heslo na portálu Azure atp.|Vysoká|
 
-## <a name="sensor-outdated"></a>senzor zastaralé
+## <a name="sensor-outdated"></a>Senzor zastaralý
 
-|Výstrahy|Popis|Řešení|Severity|
+|Výstrahy|Popis|Řešení|severity|
 |----|----|----|----|
-|Senzoru služby Azure ATP je zastaralá.|Senzoru služby Azure ATP je spuštěna verze, která je zastaralá o tři nebo více verzí.|Ručně aktualizujte ze senzorů a zjistěte, proč senzor neaktualizují automaticky. Pokud to nepomůže, stáhněte si nejnovější instalační balíček ze senzorů a odinstalovat a senzoru. Další informace najdete v tématu [instalace senzoru služby Azure ATP](install-atp-step4.md).|Střední|
+|Senzor ATP Azure je zastaralý.|Ve snímači ATP Azure je spuštěná verze, která je tři nebo víc verzí zastaralá.|Ručně aktualizujte senzor a zkontrolujte, proč se senzor neaktualizuje automaticky. Pokud to nepomůže, Stáhněte si nejnovější instalační balíček senzorů a odinstalujte a znovu nainstalujte senzor. Další informace najdete v tématu [Instalace senzoru ATP Azure](install-atp-step4.md).|Střední|
 
-## <a name="sensor-reached-a-memory-resource-limit"></a>Senzor dosáhl limitu prostředků paměti
+## <a name="sensor-reached-a-memory-resource-limit"></a>Senzor dosáhl limitu prostředků paměti.
 
-|Výstrahy|Popis|Řešení|Severity|
+|Výstrahy|Popis|Řešení|severity|
 |----|----|----|----|
-|Senzoru služby Azure ATP zastavil a automaticky restartuje, které řadič domény z ke stavu nedostatku paměti.|Senzoru služby Azure ATP vynucuje omezení paměti, aby řadič domény chránila před omezením prostředků. To se stane, když má řadič domény velkou spotřebu paměti. Data z tohoto řadiče domény jsou monitorovaná jen částečně.|Zvětšete kapacitu paměti (RAM) řadiče domény nebo do této lokality přidejte další řadiče domény, aby zatížení tohoto řadiče domény bylo rovnoměrněji rozdělené.|Střední|
+|Senzor ATP Azure se sám zastavil a automaticky se restartuje, aby se chránil řadič domény před nedostatkem paměti.|Senzor ATP Azure vynutil na sebe omezení paměti, aby řadičům domény nedocházelo k omezením prostředků. To se stane, když má řadič domény velkou spotřebu paměti. Data z tohoto řadiče domény jsou monitorovaná jen částečně.|Zvětšete kapacitu paměti (RAM) řadiče domény nebo do této lokality přidejte další řadiče domény, aby zatížení tohoto řadiče domény bylo rovnoměrněji rozdělené.|Střední|
 
-## <a name="sensor-service-failed-to-start"></a>Nepovedlo se spustit službu Sensor
+## <a name="sensor-service-failed-to-start"></a>Službu snímače se nepovedlo spustit.
 
-|Výstrahy|Popis|Řešení|Severity|
+|Výstrahy|Popis|Řešení|severity|
 |----|----|----|----|
-|Službu sensor ochrany ATP v programu Azure se nepodařilo spustit aspoň 30 minut.|To může mít vliv na schopnost detekce podezřelých aktivit pocházejících od řadičů domény, které sleduje tato senzoru služby Azure ATP.|Monitorování ochrany ATP v programu Azure senzor protokoluje události do najdete hlavní příčinu, ochrana ATP v programu Azure služba sensor selhala.|Vysoká|
+|Službu Azure ATP snímače se nepovedlo spustit aspoň 30 minut.|To může mít vliv na schopnost detekovat podezřelé aktivity pocházející z řadičů domény monitorovaných tímto senzorem Azure ATP.|Sledujte protokoly senzorů Azure ATP, abyste porozuměli hlavní příčině selhání služby Azure ATP snímače.|Vysoká|
 
-## <a name="sensor-stopped-communicating"></a>Senzor přestal komunikovat
+## <a name="sensor-stopped-communicating"></a>Senzor přestal komunikovat.
 
-|Výstrahy|Popis|Řešení|Severity|
+|Výstrahy|Popis|Řešení|severity|
 |----|----|----|----|
-|Žádná komunikace pocházející od senzoru služby Azure ATP došlo. Výchozí časové rozpětí tohoto upozornění je 5 minut.|Síťový adaptér na senzoru služby Azure ATP je už nezachytává síťový provoz. To má vliv na schopnost detekce podezřelých aktivit, protože síťový provoz, nebudou moci kontaktovat cloudové službě ochrana ATP v programu Azure.|Zkontrolujte, že port používaný pro komunikaci mezi senzoru služby Azure ATP a cloudovou službou ochrany ATP v programu Azure neblokuje směrovači nebo firewally.|Střední|
+|Nedošlo k žádné komunikaci ze senzoru služby Azure ATP. Výchozí časové rozpětí tohoto upozornění je 5 minut.|Síťový adaptér na senzoru ATP Azure již nezachycuje síťový provoz. To má vliv na schopnost ATA detekovat podezřelé aktivity, protože síťový provoz nebude schopný získat přístup ke cloudové službě Azure ATP.|Ověřte, že port, který se používá pro komunikaci mezi senzorem ATP Azure a cloudovou službou Azure ATP, není blokovaný pro žádné směrovače ani brány firewall.|Střední|
 
-## <a name="some-domain-controllers-are-unreachable-by-a-sensor"></a>Některé řadiče domény se nemůže připojit k žádnému senzoru
+## <a name="some-domain-controllers-are-unreachable-by-a-sensor"></a>Některé řadiče domény jsou nedosažitelné senzorem.
 
-|Výstrahy|Popis|Řešení|Severity|
+|Výstrahy|Popis|Řešení|severity|
 |----|----|----|----|
-|Senzoru služby Azure ATP má omezenou funkčnost kvůli problémům s připojením k některým nakonfigurovaným řadičům domény.|Předání hodnoty Hash zjišťování může být méně přesné při nemůže dotazovat některé řadiče domény senzoru služby Azure ATP.|Ujistěte se, že řadiče domény jsou spuštěné a, že tento senzoru služby Azure ATP můžete otevřít připojení LDAP na ně.|Střední|
+|Senzor ATP Azure má omezené funkce kvůli problémům s připojením k některým nakonfigurovaným řadičům domény.|Předání detekce hodnoty hash může být méně přesné, pokud se na některé řadiče domény nedokáže senzor ATP Azure dotazovat.|Zajistěte, aby řadiče domény byly v provozu a aby se tento senzor ATP Azure mohl na ně připojit pomocí protokolu LDAP.|Střední|
 
 ## <a name="some-forwarded-events-are-not-being-analyzed"></a>Některé předané události se neanalyzují
 
-|Výstrahy|Popis|Řešení|Severity|
+|Výstrahy|Popis|Řešení|severity|
 |----|----|----|----|
-|Senzoru služby Azure ATP přijímá více událostí, než dokáže zpracovat.|Některé předané události se neanalyzují, což může mít vliv na schopnost detekce podezřelých aktivit pocházejících od řadičů domény, které sleduje tato senzoru služby Azure ATP.|Ověřte, že jen požadované události se předávají do senzoru služby Azure ATP nebo zkuste některé události, které mají jiný senzoru služby Azure ATP předávat.|Střední|
+|Senzor ATP Azure získává více událostí, než dokáže zpracovat.|Některé předané události se neanalyzují, což může mít vliv na schopnost detekovat podezřelé aktivity pocházející z řadičů domény, které tento senzor Azure ATP monitoruje.|Ověřte, že se do snímače ATP Azure předávají jenom požadované události, nebo se zkuste některé z těchto událostí předejte jinému senzoru ATP Azure.|Střední|
 
 ## <a name="some-network-traffic-is-not-being-analyzed"></a>Některý síťový provoz se neanalyzuje
 
-|Výstrahy|Popis|Řešení|Severity|
+|Výstrahy|Popis|Řešení|severity|
 |----|----|----|----|
-|Senzoru služby Azure ATP přijímá více síťového provozu, než dokáže zpracovat.|Některý síťový provoz se neanalyzuje, což může mít vliv na schopnost detekce podezřelých aktivit pocházejících od řadičů domény, které sleduje tato senzoru služby Azure ATP.|Podle potřeby zvažte [přidání dalších procesorů a paměti](atp-capacity-planning.md). Pokud je to ochrana ATP v programu Azure samostatný senzor, omezte počet monitorovaných řadičů domény.<br></br>To může také dojít, pokud používáte řadiče domény na virtuálních počítačích VMware. Pokud se chcete těmto upozorněním vyhnout, zkontrolujte, že následující nastavení mají hodnotu 0 nebo jsou na virtuálním počítači zakázaná:<br></br>-TsoEnable<br></br>-LargeSendOffload(IPv4)<br></br>– TSO Offload protokolu IPv4<br></br>Zvažte také zakázání procesu IPv4 Giant TSO Offload. Další informace najdete v dokumentaci k VMware.|Střední|
+|Senzor ATP Azure získává více síťových přenosů, než dokáže zpracovat.|Některý síťový provoz se neanalyzuje, což může mít vliv na schopnost detekovat podezřelé aktivity pocházející z řadičů domény monitorovaných tímto senzorem Azure ATP.|Podle potřeby zvažte [přidání dalších procesorů a paměti](atp-capacity-planning.md). Pokud se jedná o samostatný senzor Azure ATP, snižte počet monitorovaných řadičů domény.<br></br>K tomu může dojít také v případě, že používáte řadiče domény na virtuálních počítačích VMware. Pokud se chcete těmto upozorněním vyhnout, zkontrolujte, že následující nastavení mají hodnotu 0 nebo jsou na virtuálním počítači zakázaná:<br></br>– TsoEnable<br></br>-LargeSendOffload (IPv4)<br></br>– Snižování zátěže IPv4 TSO<br></br>Zvažte také zakázání procesu IPv4 Giant TSO Offload. Další informace najdete v dokumentaci k VMware.|Střední|
 
-## <a name="windows-events-missing-from-domain-controller-audit-policy"></a>Události Windows z řadiče domény chybí zásady auditu
-|Výstrahy|Popis|Řešení|Severity|
+## <a name="windows-events-missing-from-domain-controller-audit-policy"></a>Chybí události Windows ze zásad auditu řadiče domény.
+|Výstrahy|Popis|Řešení|severity|
 |----|----|----|----|
-| Události Windows z řadiče domény chybí zásady auditu|Pro správné události, které mají být auditovat a zahrnuty v protokolu událostí Windows řadiče domény vyžadují nastavení přesné pokročilé zásady auditu. Nesprávné nastavení Pokročilé zásady auditu ponechte kritické události z protokolů a výsledků v pokrytí nebudou úplná ochrany ATP v programu Azure.|Zkontrolujte vaše [zásady auditu Advanced](atp-advanced-audit-policy.md) a podle potřeby upravte. | Střední|
+| Chybí události Windows ze zásad auditu řadiče domény.|Chcete-li auditovat správné události a zahrnout je do protokolu událostí systému Windows, vyžadují řadiče domény přesné rozšířené nastavení zásad auditu. Nesprávná Pokročilá nastavení zásad auditu ponechají z vašich protokolů kritické události a výsledkem je nedokončené pokrytí ATP Azure.|Projděte si [zásady pokročilého auditu](atp-advanced-audit-policy.md) a podle potřeby je upravte. | Střední|
 
 
 

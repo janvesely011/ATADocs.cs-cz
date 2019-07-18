@@ -1,27 +1,34 @@
 ---
-title: Nastavení protokolu syslog v rozšířené ochrany před internetovými útoky pro Azure | Dokumentace Microsoftu
-description: Popisuje, jak máte služby Azure ATP upozornění (e-mailem nebo předáváním událostí služby Azure ATP) při zjištění podezřelých aktivit
+title: Nastavení nastavení syslog v Rozšířené ochraně před internetovými útoky Azure | Microsoft Docs
+description: Popisuje, jak vám Azure ATP upozorní (e-mailem nebo předáváním událostí v Azure ATP), když detekuje podezřelé aktivity.
 keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 12/02/2018
+ms.date: 07/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: a2d29c9c-7ecb-4804-b74b-fde899b28648
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 7a17f5156f7060028e10a66907776f23a9709442
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
+ms.openlocfilehash: d87950cae8918338468258df77e14a503d7db8df
+ms.sourcegitcommit: b7b3d4a401faaa3edb4bd669a1a003a6d21a4322
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65196431"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68298792"
 ---
 # <a name="integrate-with-syslog"></a>Integrace se Syslogem
 
-Ochrana ATP v programu Azure může upozornit při zjištění podezřelých aktivit a výstrahy zabezpečení problémy, stejně jako upozornění na stav zasláním oznámení na váš server Syslog. Pokud povolíte upozornění pro Syslog, můžete nastavit následující:
+Azure ATP vás může informovat, když detekuje podezřelé aktivity a vystavuje výstrahy zabezpečení a také výstrahy týkající se stavu odesláním oznámení na server syslog. Pokud povolíte oznámení syslog, můžete nastavit následující:
+
+   |Pole|Popis|
+   |---------|---------------|
+   |Elektrické|Vyberte určený senzor, který bude zodpovědný za agregaci všech událostí syslog a jejich předání na server SIEM.|
+   |Koncový bod služby|Plně kvalifikovaný název domény serveru Syslog a volitelně změňte číslo portu (výchozí hodnota 514)|
+   |Přenos|Může být UDP, TCP nebo TLS (zabezpečený syslog)|
+   |Formát|Jedná se o formát, který Azure ATP používá k posílání událostí na server SIEM – RFC 5424 nebo RFC 3164.|
 
 1. Před konfigurací upozornění pro Syslog zjistěte ve spolupráci s vaším správcem systému SIEM následující informace:
 
@@ -29,33 +36,31 @@ Ochrana ATP v programu Azure může upozornit při zjištění podezřelých akt
 
    -   Port, na kterém naslouchá server SIEM
 
-   -   Používaného přenosu: UDP, TCP nebo TLS (zabezpečený Syslog)
+   -   Jaký přenos se má použít: UDP, TCP nebo TLS (zabezpečený syslog)
 
    -   Formát odesílání dat: RFC 3164 nebo 5424
 
-2. Zadejte adresu URL instance.
+1. Otevřete portál Azure ATP. 
+2. Klikněte na **Nastavení**.
+3. V dílčí nabídce **oznámení a sestavy** vyberte **oznámení**. 
+1. V možnosti **Služba Syslog** klikněte na **Konfigurovat**.
+1. Vyberte **senzor**. 
+1. Zadejte adresu URL **koncového bodu služby** .
+1. Vyberte **Transportní** protokol (TCP nebo UDP). 
+1. Vyberte formát (RFC 3164 nebo RFC 5424). 
+1. Vyberte **Odeslat text zprávy syslog** a pak ověřte, že se zpráva obdrží v řešení infrastruktury syslog. 
+1. Klikněte na **Uložit**. 
 
-3. Zadejte svoje služby Azure Active Directory uživatelské jméno a heslo a klikněte na tlačítko **přihlášení**.
+Chcete-li zkontrolovat nebo změnit nastavení syslogu.  
 
-4. Na panelu nástrojů vyberte možnost nastavení a vyberte **Konfigurace**.
+3. Klikněte na **oznámení**a potom v části **oznámení syslog** klikněte na **Konfigurovat** a zadejte následující informace:
 
-   ![Ikona nastavení konfigurace služby Azure ATP](media/ATP-config-menu.png)
+   ![Obrázek nastavení serveru syslog pro Azure ATP](media/atp-syslog.png)
 
-5. Klikněte na tlačítko **oznámení**a pak v části **oznámení Syslogu** klikněte na tlačítko **konfigurovat** a zadejte následující informace:
-
-   |Pole|Popis|
-   |---------|---------------|
-   |Senzor|Vyberte určené senzoru odpovědný za agregaci všechny události protokolu Syslog a předává je na váš server SIEM.|
-   |Koncový bod služby|Plně kvalifikovaný název domény serveru Syslog a volitelně změňte číslo portu (výchozí hodnota 514)|
-   |Přenos|Může být UDP, TCP nebo TLS (Syslog se zabezpečením)|
-   |Formát|To je formát, který ochrany ATP v programu Azure používá k odesílání událostí na server SIEM – RFC 5424, nebo RFC 3164.|
-
-   ![Obrázek nastavení serveru Azure ochrany ATP v programu Syslog](media/atp-syslog.png)
-
-6. Můžete vybrat, které události odesílat na váš server Syslog. V části **oznámení Syslogu**, určete oznámení, která se mají odesílat na váš server Syslog – nové výstrahy zabezpečení, výstrah zabezpečení se aktualizovalo a nové problémy v oblasti stavu.
+4. Můžete vybrat, které události se mají odeslat na váš server syslog. V části **oznámení syslogu**určete, která oznámení se mají odeslat na váš server syslog – nové výstrahy zabezpečení, aktualizované výstrahy zabezpečení a nové problémy se stavem.
 
 > [!NOTE]
-> Pokud budete chtít vytvořit automatizace nebo skriptů pro protokolů SIEM ochrany ATP v programu Azure, doporučujeme použít **externalId** pole k identifikaci typu výstrahy místo názvu upozornění pro tento účel. Upozornění názvy mohou být občas upravit, zatímco **externalId** jednotlivých výstrah je trvalá. Další informace najdete v tématu [referenční informace k protokolům SIEM ochrany ATP v programu Azure](cef-format-sa.md). 
+> Pokud budete chtít vytvořit automatizace nebo skriptů pro protokolů SIEM ochrany ATP v programu Azure, doporučujeme použít **externalId** pole k identifikaci typu výstrahy místo názvu upozornění pro tento účel. Upozornění názvy mohou být občas upravit, zatímco **externalId** jednotlivých výstrah je trvalá. Další informace najdete v tématu [Přehled protokolu Azure ATP Siem](cef-format-sa.md). 
 
 
 ## <a name="see-also"></a>Viz také

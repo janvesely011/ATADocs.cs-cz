@@ -1,102 +1,93 @@
 ---
-title: Konfigurace ochrany ATP v programu Azure quickstart nastavení senzor | Dokumentace Microsoftu
-description: Krok 5 instalace ochrany ATP v programu Azure vám pomůže nakonfigurovat nastavení pro samostatný senzor vaší ochrany ATP v programu Azure.
+title: Konfigurace rychlého startu nastavení senzorů Azure ATP | Microsoft Docs
+description: Krok pět pro instalaci Azure ATP vám pomůže nakonfigurovat nastavení pro samostatný senzor Azure ATP.
 author: mlottner
 ms.author: mlottner
-ms.date: 03/03/2018
+ms.date: 07/17/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9b51c781cee16d4f158cc0e0528d4f80683aabad
-ms.sourcegitcommit: 929f28783110c7e114ab36d4cccd50563f4030df
+ms.openlocfilehash: 1c9f8d0928e7439afe9eb0745c07fad2c515169a
+ms.sourcegitcommit: b7b3d4a401faaa3edb4bd669a1a003a6d21a4322
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57253942"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68298913"
 ---
-# <a name="quickstart-configure-azure-atp-sensor-settings"></a>Rychlý start: Konfigurace nastavení senzoru služby Azure ATP
+# <a name="quickstart-configure-azure-atp-sensor-settings"></a>Rychlý Start Konfigurace nastavení snímače ATP Azure
 
-V tomto rychlém startu budete konfigurovat nastavení senzoru služby Azure ATP se data začnou zobrazovat. Bude potřeba provést další konfiguraci a integraci a využijte výhod možností služby Azure ATP.  
+V tomto rychlém startu nakonfigurujete nastavení senzoru ATP Azure a začnete zobrazovat data. Abyste mohli využívat možnosti služby Azure ATP, budete muset provést další konfiguraci a integraci.  
 
 ## <a name="prerequisites"></a>Požadavky
 
-- [Instance služby Azure ATP](install-atp-step1.md) to [připojeným ke službě Active Directory](install-atp-step2.md).
-- Stažený kopie vašeho [ochrany ATP v programu senzor instalační balíček](install-atp-step3.md) a přístupový klíč.
+- [Instance ATP Azure](install-atp-step1.md) , která je [připojená ke službě Active Directory](install-atp-step2.md).
+- Stažená kopie balíčku pro [instalaci senzoru ATP](install-atp-step3.md) a přístupový klíč.
 
-## <a name="configure-sensor-settings"></a>Konfigurace nastavení senzor
+## <a name="configure-sensor-settings"></a>Konfigurovat nastavení senzoru
 
-Po dokončení instalace senzoru služby Azure ATP proveďte následující příkaz pro konfiguraci nastavení senzoru služby Azure ATP.
+Po instalaci senzoru služby Azure ATP proveďte následující postup konfigurace nastavení senzoru ATP Azure.
 
-1. Klikněte na tlačítko **spuštění** otevřete prohlížeč a přihlaste se k portálu ochrany ATP v programu Azure.
+1. Kliknutím na **Spustit** otevřete prohlížeč a přihlaste se k portálu Azure atp.
 
-2.  Na portálu ochrany ATP v programu Azure, přejděte na **konfigurace** a v části **systému** vyberte **senzorů**.
+1.  Na portálu Azure ATP klikněte na **Konfigurace** a v části **systém** vyberte **senzory**.
    
-    ![Nakonfigurovat senzor nastavení image](media/atp-sensor-config.png)
+    ![Obrázek konfigurace nastavení senzoru](media/atp-sensor-config.png)
 
 
-3. Po kliknutí na senzor, který chcete nakonfigurovat a zadejte následující informace:
+1. Klikněte na senzor, který chcete nakonfigurovat, a zadejte následující informace:
 
-   ![Nakonfigurovat senzor nastavení image](media/atp-sensor-config-2.png)
+   ![Obrázek konfigurace nastavení senzoru](media/atp-sensor-config-2.png)
 
-   - **Popis**: Zadejte popis (nepovinné) senzoru služby Azure ATP.
-   - **Řadiče domény (FQDN)** (vyžadováno pro služby Azure ATP samostatný senzor, toto chování nelze změnit pro senzoru služby Azure ATP): Zadejte úplný plně kvalifikovaný název domény řadiči domény a kliknutím na symbol plus ho přidejte do seznamu. Například **dc01.contoso.com**.
+   - **Popis**: Zadejte popis snímače ATP Azure (volitelné).
+   - **Řadiče domény (FQDN)** (vyžaduje se pro samostatný senzor Azure ATP, ale nedá se změnit pro senzor Azure ATP.): Zadejte úplný plně kvalifikovaný název domény řadiči domény a kliknutím na symbol plus ho přidejte do seznamu. Například **dc01.contoso.com**.
 
      Následující informace platí pro servery, které zadáte do seznamu **Řadiče domény**:
-     - Všechny řadiče domény, jejichž provoz se monitoruje přes zrcadlení portů samostatný senzor ochrany ATP v programu Azure, musí být uvedené v **řadiče domény** seznamu. Pokud řadič domény není uvedený v **řadiče domény** seznamu, detekce podezřelých aktivit nemusí fungovat podle očekávání.
-     - Nejméně jeden řadič domény v seznamu by měl být globální katalog. To umožňuje ochrany ATP v programu Azure k vyřešení objekty počítačů a uživatelů v jiných doménách v doménové struktuře.
+     - Všechny řadiče domény, jejichž provoz se monitoruje pomocí zrcadlení portů, musí být v seznamu **řadiče domény** uvedeni. Pokud řadič domény není uvedený v seznamu **řadiče domény** , detekce podezřelých aktivit nemusí fungovat podle očekávání.
+     - Nejméně jeden řadič domény v seznamu by měl být globální katalog. Díky tomu může Azure ATP vyřešit objekty počítačů a uživatelů v jiných doménách v doménové struktuře.
 
    - **Síťové adaptéry pro zachytávání** (povinné):
    
-    - Pro služby Azure ATP senzory všechny síťové adaptéry, které se používají ke komunikaci s dalšími počítači ve vaší organizaci.
-    - Samostatný senzor ochrany ATP v programu Azure na vyhrazený server vyberte síťové adaptéry, které jsou nakonfigurované jako cílový port zrcadlení. Tyto síťové adaptéry příjem provozu řadiče domény zrcadlené.
+    - Pro senzory Azure ATP všechny síťové adaptéry, které se používají ke komunikaci s ostatními počítači ve vaší organizaci.
+    - U samostatného senzoru služby Azure ATP na vyhrazeném serveru vyberte síťové adaptéry, které jsou nakonfigurované jako cílový port zrcadlení. Tyto síťové adaptéry dostanou zrcadlený provoz řadiče domény.
 
-  - **Kandidát na synchronizátora domény**: 
-    
-    - Synchronizátor domény je zodpovědná za synchronizaci mezi ochrany ATP v programu Azure a vaší domény služby Active Directory. V závislosti na velikosti domény počáteční synchronizace může nějakou dobu trvat a je náročná. Ochrana ATP v programu Azure doporučuje nastavení alespoň jeden řadič domény jako kandidát na synchronizátora domény na doménu. Nepodařilo se vybrat aspoň jeden řadič domény jako kandidát na synchronizátora domény znamená, že ochrana ATP v programu Azure bude jenom pasivně kontroly sítě a nemusí být schopen shromažďovat všechny změny Active Directory a podrobnosti o entitách. Alespoň jeden určené **kandidát na synchronizátora domény** doménu zajistí ochrana ATP v programu Azure aktivně hledá v síti po celou dobu a může shromažďovat všechny změny Active Directory a hodnoty entit.
-  
-    - Ve výchozím nastavení senzory ochrany ATP v programu Azure nejsou kandidáti na synchronizátora domény, jsou samostatné senzorů ochrany ATP v programu Azure. Chcete-li ručně nastavit senzoru služby Azure ATP jako kandidát na synchronizátora domény, přepněte **kandidát na synchronizátora domény** přepněte možnost **ON** na obrazovce konfigurace.
-        
-    - Doporučuje se, že zakážete všechny vzdálené lokality (čidly služby Azure ATP) nebudou kandidáti na synchronizátora domény.
-   
-    - Řadiče domény jen pro čtení nemají nastavený jako kandidáti na synchronizátora domény. Další informace o synchronizaci služby Azure ATP domény najdete v tématu [architektura služby Azure ATP](atp-architecture.md#azure-atp-sensor-features).
-  
-3. Klikněte na **Uložit**.
+ 
+1. Klikněte na **Uložit**.
 
 
 ## <a name="validate-installations"></a>Ověření instalací
-Pokud chcete ověřit, že se úspěšně nasadil senzoru služby Azure ATP, zkontrolujte následující:
+Pokud chcete ověřit, jestli se senzor Azure ATP úspěšně nasadil, zkontrolujte následující:
 
-1. Zkontrolujte, zda je služba **rozšířené ochrany před internetovými útoky pro Azure senzor** běží. Po uložení nastavení senzoru služby Azure ATP, může trvat několik sekund pro službu spustit.
+1. Ověřte, že je spuštěná služba s názvem **Azure Advanced Threat Protection snímač** . Po uložení nastavení senzoru Azure ATP může trvat několik sekund, než se služba spustí.
 
-2. Pokud se služba nespustí, zkontrolujte soubor "Microsoft.Tri.sensor-Errors.log" umístěný v následující výchozí složce "%programfiles%\Azure rozšířené ochrany před internetovými útoky sensor\Version X\Logs".
+1. Pokud se služba nespustí, zkontrolujte soubor Microsoft. Tri. sensor-Errors. log umístěný v následující výchozí složce, "%programfiles%\Azure Advanced Threat Protection sensor\Version X\Logs".
  
    >[!NOTE]
-   > Verze služby Azure ATP aktualizace často, zkontrolujte nejnovější verzi portálu ochrany ATP v programu Azure, přejděte na **konfigurace** a potom **o**. 
+   > Pravidelně se aktualizují verze Azure ATP, aby bylo možné zjistit nejnovější verzi, na portálu Azure ATP, přejít na **Konfigurace** a potom **o produktu**. 
 
-3. Přejděte na adresu URL instance služby Azure ATP. Na portálu ochrany ATP v programu Azure něco vyhledejte v panelu vyhledávání, třeba na uživatele nebo skupinu ve vaší doméně.
+1. Přejít na adresu URL vaší instance ATP Azure ATP. Na portálu Azure ATP vyhledejte něco na panelu hledání, například uživatele nebo skupinu ve vaší doméně.
 
-4. Ověření připojení ochrany ATP v programu na libovolném zařízení domény pomocí následujících kroků:
-    1. Otevřete příkazový řádek
-    2. Typ ```nslookup```
-    3. Typ **server** pak plně kvalifikovaný název domény nebo IP adresu řadiče domény, ve kterém jsou nainstalované senzory ochrany ATP v programu. Například ```server contosodc.contoso.azure```.
-        - Nezapomeňte nahradit contosodc.contoso.azure a contoso.azure plně kvalifikovaný název domény vaší služby Azure ATP ze senzorů a název domény v uvedeném pořadí.
-    4. Typ ```ls -d contoso.azure```
-    5. Zopakujte kroky 3 a 4 pro každý senzor, který chcete testovat.  
-    6. Otevřete profil entity pro počítač, na kterém jste spustili test připojení z z konzoly služby Azure ATP. 
-    7. Zkontrolovat související logické aktivit a ověřte připojení. 
+1. Pomocí následujících kroků ověřte připojení ATP na libovolném zařízení s doménami:
+    1. Otevření příkazového řádku
+    1. Typ ```nslookup```
+    1. Jako typ **Server** zadejte plně kvalifikovaný název domény nebo IP adresu řadiče domény, na kterém je senzor ATP nainstalovaný. Například ```server contosodc.contoso.azure```.
+        - Nezapomeňte nahradit ContosoDC. contoso. Azure a contoso. Azure pomocí plně kvalifikovaného názvu domény vašeho senzoru ATP a názvu domény v uvedeném pořadí.
+    1. Typ ```ls -d contoso.azure```
+    1. Zopakujte kroky 3 a 4 pro každý senzor, který chcete testovat.  
+    1. Z konzoly Azure ATP otevřete profil entity pro počítač, ze kterého jste spustili test připojení. 
+    1. Zkontrolujte související logickou aktivitu a potvrďte připojení. 
 
     > [!NOTE] 
-    >Pokud je řadič domény, kterou chcete testovat vaše první nasazený senzor, počkejte aspoň 15 minut, aby databáze back-end na dokončení počáteční nasazení nezbytné mikroslužeb před pokusem o ověření související logické aktivitu pro tuto doménu kontroler.
+    >Pokud je řadič domény, který chcete otestovat, vaším prvním nasazeným senzorem, počkejte aspoň 15 minut, než se dokončí pokus o ověření související logické aktivity pro tuto doménu, aby back-end dokončil počáteční nasazení nezbytných mikroslužeb. kontrolér.
 
 ## <a name="next-steps"></a>Další postup
 
 - [Konfigurace proxy serveru](configure-proxy.md)
-- [Pokročilé zásady auditu](atp-advanced-audit-policy.md)
+- [Rozšířené zásady auditu](atp-advanced-audit-policy.md)
 - [Konfigurace služby Azure ATP pro vzdálená volání do SAM](install-atp-step8-samr.md)
 
 
 ## <a name="join-the-community"></a>Připojte se ke komunitě
 
-Máte další dotazy nebo zájem o diskuze o ochrany ATP v programu Azure a souvisejícího zabezpečení s ostatními? Připojte se k [komunita ochrany ATP v programu Azure](https://aka.ms/azureatpcommunity) ještě dnes!
+Máte k dispozici další otázky nebo zájem o projednávání Azure ATP a souvisejícího zabezpečení s ostatními? Připojte se ke [komunitě ATP Azure](https://aka.ms/azureatpcommunity) ještě dnes!
