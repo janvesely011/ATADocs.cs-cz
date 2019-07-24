@@ -1,63 +1,64 @@
 ---
-title: Azure Advanced překlad názvů sítě ochrany před internetovými útoky | Dokumentace Microsoftu
-description: Tento článek obsahuje přehled služby Azure ATP překlad síťových názvů pokročilé funkce a používá.
+title: Překlad názvu sítě rozšířené ochrany před internetovými útoky pro Azure | Microsoft Docs
+description: Tento článek obsahuje přehled pokročilé funkce překladu síťových názvů v Azure ATP a používá nástroj.
 keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 06/17/2019
+ms.date: 07/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 1ac873fc-b763-41d7-878e-7c08da421cb5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0bf34a64f1140b0d2e3358196d23589de629588d
-ms.sourcegitcommit: 139e8dd63c06a5d9c9a3c348958e4f7fd74041b8
+ms.openlocfilehash: 0161c0f63e652bd62ee8ccf4a6677f2ec0d90f4d
+ms.sourcegitcommit: b7b3d4a401faaa3edb4bd669a1a003a6d21a4322
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67155845"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68298948"
 ---
 # <a name="what-is-network-name-resolution"></a>Co je překlad síťových názvů?
 
-Překlad síťových názvů nebo (NNR) je hlavní součástí služby Azure ATP funkce. Ochrana ATP v programu Azure zaznamenává aktivity na základě síťového provozu, Windows, událostí a trasování událostí pro Windows – tyto aktivity obvykle obsahují data IP adresy.  
+Překlad názvu sítě nebo (útoků) je hlavní součástí funkcí Azure ATP. Azure ATP zachycuje aktivity na základě síťového provozu, událostí Windows a ETW – tyto aktivity obvykle obsahují data IP.  
 
-Použití ÚTOKŮ, ochrana ATP v programu Azure je možnost provést korelaci mezi nezpracovaná aktivity (který obsahuje IP adresy) a relevantní počítačů zahrnutých v každé aktivity. Založené na aktivitách nezpracovaná, ochrana ATP v programu Azure profily entit, včetně počítačů a generuje upozornění zabezpečení na podezřelé aktivity.
+Pomocí útoků může Azure ATP korelovat mezi nezpracovanými aktivitami (obsahujícími IP adresami) a souvisejícími počítači, které se podílejí na jednotlivých činnostech. Na základě nezpracovaných aktivit, entit profilů ATP Azure, včetně počítačů, a vygeneruje výstrahy zabezpečení pro podezřelé aktivity.
 
-Přeložit IP adresy na názvy počítačů, služby Azure ATP senzorů dotazu IP adresu pro název počítače "za" IP adresu, pomocí jedné z následujících metod:
+K překladu IP adres na názvy počítačů se senzory Azure ATP dotazují IP adresu názvu počítače za "za" IP adresy, a to pomocí jedné z následujících metod:
 
 1. NTLM přes RPC (port TCP 135)
 2. NetBIOS (port UDP 137)
-3. Protokol RDP (portu TCP 3389) – jenom první paket **Client hello**
-4. Dotazy DNS server pomocí zpětného vyhledávání DNS IP adresy (UDP 53)
+3. RDP (TCP port 3389) – pouze první paket **klienta Hello**
+4. Zadá dotaz na server DNS pomocí zpětného vyhledávání DNS IP adresy (UDP 53).
 
 > [!NOTE]
->Na všech portech neprobíhá žádné ověřování.
+>Na žádném z portů se neprovede žádné ověřování.
 
-V případech, kde je načten žádný název **nevyřešené profilu počítače podle IP** je vytvořen s IP adresu a relevantní zjišťované aktivity.
+Azure ATP vyhodnocuje a určuje operační systém zařízení na základě síťového provozu. Po načtení názvu počítače zkontroluje senzor Azure ATP službu Active Directory a použije otisky prstů TCP, aby bylo možné zjistit, zda existuje korelační objekt počítače se stejným názvem počítače. Použití otisků prstů TCP pomáhá identifikovat neregistrovaná zařízení a jiná zařízení než Windows a přispěje v procesu šetření. Když senzor ATP Azure najde korelaci, připojí se k objektu počítače IP. 
 
-Po načtení názvu počítače, senzoru služby Azure ATP ověří ve službě Active Directory a zjistěte, jestli je objekt korelační počítače se stejným názvem počítače. Pokud senzor najde korelace, přidruží senzor tato IP adresa na tento objekt počítače. V případech, kde není nalezen žádný objekt počítače s tímto názvem **nevyřešené profilu počítače podle názvu** je vytvořen s tímto názvem a příslušnými zjišťované aktivity. 
+V případech, kdy se žádný název nenačte, vytvoří se **nerozpoznaný profil počítače podle IP** adresy a příslušné zjištěné aktivity.
 
-![Profil nevyřešené počítače](media/unresolved-computer-profile.png)
+![Nerozpoznaný profil počítače](media/unresolved-computer-profile.png)
 
-NNR dat je zásadní pro detekci hrozeb následující:
+
+ÚTOKŮ data jsou zásadní pro detekci následujících hrozeb:
 
 - Krádež identity podezřelého softwaru (pass-the-ticket)
 - Podezřelý útok DCSync (replikace adresářových služeb)
-- Mapování sondování sítě (DNS)
+- Mapování sítě rekognoskace (DNS)
 
-Ke zlepšení vaší schopnosti určit, pokud je výstraha **kladnou hodnotu True (TP)** nebo **falešně pozitivní (FP)** , ochrana ATP v programu Azure zahrnuje do jaké míry jistoty pojmenování řešení do doklad o každé zabezpečení počítačů upozornění. 
+Aby bylo možné zjistit, zda je výstraha falešně **pozitivní (transakční)** nebo **falešně pozitivní (FP)** , Azure ATP zahrnuje stupeň jistoty při překladu názvů počítačů do legitimace jednotlivých výstrah zabezpečení. 
  
-Například když jsou názvy počítačů se **vysokou jistoty** to zvyšuje sebejistotu ve výsledné výstrahy zabezpečení jako **True kladné** nebo **TP**. 
+Například když jsou názvy počítačů vyřešeny s **vysokou jistotou** , zvyšuje se spolehlivost výsledné výstrahy zabezpečení jako **skutečný pozitivní** nebo **transakční**program. 
 
-Legitimace obsahuje čas, IP a název počítače, které se přeložila na IP adresu. Při překladu jistoty **nízké**, pomocí těchto informací můžete prozkoumat a ověřit, které zařízení se v tuto chvíli true zdrojové IP adresy. Po potvrzení zařízení, můžete určit Pokud je výstraha **falešně pozitivní** nebo **FP**, podobně jako v následujících příkladech:
+Legitimace obsahuje čas, IP adresu a název počítače, na které byla IP adresa přeložena. Pokud je jistota řešení **Nízká**, pomocí těchto informací Prozkoumejte a ověřte, které zařízení bylo v tuto chvíli skutečným zdrojem IP adresy. Po potvrzení zařízení můžete zjistit, zda je výstraha **falešně pozitivní** nebo **FP**, podobně jako v následujících příkladech:
 
-- Podezření na krádež identity (pass-the-ticket) – pro stejný počítač aktivaci výstrahy.
-- Podezření na útok DCSync (replikace adresářových služeb) – byla výstraha z řadiče domény.
-- Mapování rekognoskace (DNS) – oznámení sítě byla spuštěna ze serveru DNS.
+- Podezření na krádež identity (pass-the-Ticket) – výstraha se aktivovala pro stejný počítač.
+- Podezřelý útok DCSync (replikace adresářových služeb) – výstraha se aktivovala z řadiče domény.
+- Mapování sítě rekognoskace (DNS) – výstraha se aktivovala ze serveru DNS.
 
-    ![Legitimace jistoty](media/nnr-high-certainty.png)
+    ![Jistota legitimace](media/nnr-high-certainty.png)
 
 
 ### <a name="prerequisites"></a>Požadavky
@@ -68,30 +69,30 @@ Legitimace obsahuje čas, IP a název počítače, které se přeložila na IP a
 |DNS|   UDP|    53| Řadiče domény| Odchozí|
 |
 
-Když se otevře port 3389 na zařízení ve vašem prostředí, senzoru služby Azure ATP pomocí pro účely řešení název sítě.
-Otevření portu 3389 **není povinné**, je jenom další metodu, která můžete zadat název počítače, pokud port je již otevřen pro jiné účely.
+Když je na zařízeních v prostředí otevřený port 3389, senzor služby Azure ATP, který ho používá pro účely překladu síťových názvů.
+Otevření portu 3389 není požadavkem, jedná se pouze o další metodu, která může zadat název počítače, pokud je již port otevřen pro jiné účely.
 
-Ujistěte se, že služby Azure ATP v ideálním případě funguje a je prostředí správně nakonfigurováno, ochrany ATP v programu Azure kontroluje stav řešení každý ze souboru a vydává monitorovací upozornění pro jednu metodu, proto poskytuje seznam senzorů ochrany ATP v programu Azure s nízkou úspěšnost aktivní názvu rozlišení použití každé metody.
+Abyste se ujistili, že služba Azure ATP je v ideálním prostředí a že je prostředí správně nakonfigurované, Azure ATP kontroluje stav řešení každého senzoru a vydává výstrahu monitorování na jednotlivé metody. poskytuje seznam senzorů ATP Azure s nízkou mírou úspěšnosti aktivního názvu. rozlišení pomocí jednotlivých metod.
 
-Každé monitorování výstraha poskytuje konkrétní podrobnosti metody, senzory, problematické zásady stejně jako doporučené konfigurace.
+Každá výstraha monitorování poskytuje konkrétní podrobnosti o metodě, senzorech, problematických zásadách a také doporučeních pro konfiguraci.
 
-![Upozornění na nízkou úspěšnost sítě název řešení ÚTOKŮ](media/atp-nnr-success-rate.png)
+![Výstraha pro rozlišení síťového názvu sítě (útoků) s nízkou mírou úspěšnosti](media/atp-nnr-success-rate.png)
 
 
-### <a name="configuration-recommendations"></a>Doporučené konfigurace
+### <a name="configuration-recommendations"></a>Doporučení pro konfiguraci
 
-- RPC přes protokol NTLM:
-    - Zkontrolujte, že je TCP Port 135 otevřené pro příchozí komunikace ze senzorů ochrany ATP v programu Azure, na všech počítačích v prostředí.
-    - Zkontrolujte, že všechny sítě (Brána firewall), protože to může zabránit komunikaci na příslušné porty.
+- RPC over NTLM:
+    - Ověřte, že je port TCP 135 otevřený pro příchozí komunikaci ze senzorů Azure ATP na všech počítačích v prostředí.
+    - Ověřte všechny konfigurace sítě (brány firewall), protože to může zabránit komunikaci s příslušnými porty.
 
-- NetBIOS:
-    - Zkontrolujte, že UDP Port 137 je otevřené pro příchozí komunikace ze senzorů ochrany ATP v programu Azure, na všech počítačích v prostředí.
-    - Zkontrolujte, že všechny sítě (Brána firewall), protože to může zabránit komunikaci na příslušné porty.
+- Názv
+    - Ověřte, že je na všech počítačích v prostředí otevřený port UDP 137 pro příchozí komunikaci ze senzorů Azure ATP.
+    - Ověřte všechny konfigurace sítě (brány firewall), protože to může zabránit komunikaci s příslušnými porty.
 - Reverzní DNS:
-    - Zkontrolujte, že senzor můžete připojit k serveru DNS a že jsou povolené zóny zpětného vyhledávání.
+    - Ověřte, že senzor má přístup k serveru DNS a že jsou povolené zóny zpětného vyhledávání.
 
 
 ## <a name="see-also"></a>Viz také
 - [Požadavky služby Azure ATP](atp-prerequisites.md)
 - [Konfigurace shromažďování událostí](configure-event-collection.md)
-- [Podívejte se na fórum ochrany ATP v programu.](https://aka.ms/azureatpcommunity)
+- [Podívejte se na fórum ATP!](https://aka.ms/azureatpcommunity)
