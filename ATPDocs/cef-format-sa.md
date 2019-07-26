@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 05/27/2019
+ms.date: 07/25/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 3261155c-3c72-4327-ba29-c113c63a4e6d
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: 112cc5225ea845ccee6a37da7a419689110c67a4
-ms.sourcegitcommit: b7b3d4a401faaa3edb4bd669a1a003a6d21a4322
+ms.openlocfilehash: eedc9c5ddae1947ace50b15efc6a8e0967af357a
+ms.sourcegitcommit: 4662ad41addf92727367874d909937fa331fb866
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68298848"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68485080"
 ---
 # <a name="azure-atp-siem-log-reference"></a>Referenční informace k protokolům Azure ATP SIEM
 
@@ -76,13 +76,12 @@ Do systému SIEM se předávají následující pole a jejich hodnoty:
 |[Podezřelé použití zlatého lístku (časová anomálie)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-time-anomaly-external-id-2022)|Protokol Kerberos – anomálie času lístku|2022|Vysoká|Eskalace oprávnění,<br> Boční pohyb,<br>Dočasné|
 |[Podezření na krádež identity (pass-the-hash)](atp-lateral-movement-alerts.md#suspected-identity-theft-pass-the-hash-external-id-2017)|Krádež identity pomocí útoku Pass-the-Hash|2017|Vysoká|Laterální pohyb|
 |[Podezření na krádež identity (pass-the-Ticket)](atp-lateral-movement-alerts.md#suspected-identity-theft-pass-the-ticket-external-id-2018)|Krádež identity pomocí útoku Pass-the-Ticket|2018|Vysoká nebo střední|Laterální pohyb|
-|[Podezření na manipulaci s ověřováním NTLM – Preview](atp-lateral-movement-alerts.md#suspected-ntlm-authentication-tampering-external-id-2039---preview)|Není k dispozici|2039|Střední|Laterální pohyb|
-|[Podezření na útok přes protokol NTLM – Preview](atp-lateral-movement-alerts.md#suspected-ntlm-relay-attack-exchange-account-external-id-2037---preview)|Není k dispozici|2037|Střední nebo nízká, je-li zjištěno pomocí podepsaného protokolu NTLM v2|Eskalace oprávnění, <br> Laterální pohyb|
+|[Podezření na manipulaci s ověřováním NTLM – Preview](atp-lateral-movement-alerts.md#suspected-ntlm-authentication-tampering-external-id-2039---preview)|Není k dispozici|2039|Střední|Eskalace oprávnění,<br> Laterální pohyb|
+|[Podezřelý útok na Relay protokolu NTLM](atp-lateral-movement-alerts.md#suspected-ntlm-relay-attack-exchange-account-external-id-2037)|Není k dispozici|2037|Střední nebo nízká, je-li zjištěno pomocí podepsaného protokolu NTLM v2|Eskalace oprávnění, <br> Laterální pohyb|
 |[Podezření na útok přes pass-the-hash (downgrade šifrování)](atp-lateral-movement-alerts.md#suspected-overpass-the-hash-attack-encryption-downgrade-external-id-2008)|Aktivita snížení úrovně šifrování (možný útok overpass-the-hash)|2008|Střední|Laterální pohyb|
 |[Podezřelá Overpass-the-hash – útok (Kerberos)](atp-lateral-movement-alerts.md#suspected-overpass-the-hash-attack-kerberos-external-id-2002)|Neobvyklá implementace protokolu Kerberos (možný útok overpass-the-hash)|2002|Střední|Laterální pohyb|
 |[Podezřelý útok z podklíče šifrování (downgrade)](atp-domain-dominance-alerts.md#suspected-skeleton-key-attack-encryption-downgrade-external-id-2010)|Aktivita snížení úrovně šifrování (potenciální útoku typu skeleton key)|2010|Střední|Boční pohyb,<br> Dočasné|
 |[Podezření na použití rozhraní Metasploit pro hackery](atp-compromised-credentials-alerts.md#suspected-use-of-metasploit-hacking-framework-external-id-2034)|Neobvyklá implementace protokolu (potenciální použijte Metasploit hacking nástroje)|2034|Střední|Laterální pohyb|
-|[Podezření na útok pomocí protokolu NTLM (účet Exchange) – Preview](atp-lateral-movement-alerts.md#suspected-ntlm-relay-attack-exchange-account-external-id-2037---preview)|Není k dispozici|2037|Střední nebo nízká, je-li zjištěno pomocí podepsaného protokolu NTLM v2|Eskalace oprávnění, <br> Laterální pohyb|
 |[Podezřelý útok WannaCry ransomwarem](atp-compromised-credentials-alerts.md#suspected-wannacry-ransomware-attack-external-id-2035)|Neobvyklá implementace protokolu (možný útok ransomwarem WannaCry)|2035|Střední|Laterální pohyb|
 |[Podezřelá komunikace přes DNS](atp-exfiltration-alerts.md#suspicious-communication-over-dns-external-id-2031)|Podezřelá komunikace prostřednictvím DNS|2031|Střední|Exfiltrace|
 |[Podezřelé přídavky citlivých skupin](atp-domain-dominance-alerts.md#suspicious-additions-to-sensitive-groups-external-id-2024)|Podezřelé přídavky citlivých skupin|2024|Střední|Přístup k přihlašovacím údajům<br>Dočasné|

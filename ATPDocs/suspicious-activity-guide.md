@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 6260f40a9113aa3deda21da226aeb4b3d146353c
-ms.sourcegitcommit: b7b3d4a401faaa3edb4bd669a1a003a6d21a4322
+ms.openlocfilehash: d9be7cd54a286f9ff800b340ab856f50de595d9d
+ms.sourcegitcommit: 4662ad41addf92727367874d909937fa331fb866
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68298824"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68484996"
 ---
 # <a name="azure-atp-security-alerts"></a>Výstrahy zabezpečení Azure ATP
 
@@ -62,8 +62,8 @@ Ve verzi 2.56 všechny existující výstrahy zabezpečení služby Azure ATP by
 |[Podezřelé použití zlatého lístku (časová anomálie)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-time-anomaly-external-id-2022)|Protokol Kerberos – anomálie času lístku|2022|Vysoká|Eskalace oprávnění,<br> Boční pohyb,<br>Dočasné|
 |[Podezření na krádež identity (pass-the-hash)](atp-lateral-movement-alerts.md#suspected-identity-theft-pass-the-hash-external-id-2017)|Krádež identity pomocí útoku Pass-the-Hash|2017|Vysoká|Laterální pohyb|
 |[Podezření na krádež identity (pass-the-Ticket)](atp-lateral-movement-alerts.md#suspected-identity-theft-pass-the-ticket-external-id-2018)|Krádež identity pomocí útoku Pass-the-Ticket|2018|Vysoká nebo střední|Laterální pohyb|
-|[Podezření na manipulaci s ověřováním NTLM – Preview](atp-lateral-movement-alerts.md#suspected-ntlm-authentication-tampering-external-id-2039---preview)|Není k dispozici|2039|Střední|Laterální pohyb|
-|[Podezření na útok přes protokol NTLM – Preview](atp-lateral-movement-alerts.md#suspected-ntlm-relay-attack-exchange-account-external-id-2037---preview)|Není k dispozici|2037|Střední nebo nízká, je-li zjištěno pomocí podepsaného protokolu NTLM v2|Eskalace oprávnění, <br> Laterální pohyb|
+|[Podezření na manipulaci s ověřováním NTLM – Preview](atp-lateral-movement-alerts.md#suspected-ntlm-authentication-tampering-external-id-2039---preview)|Není k dispozici|2039|Střední|Eskalace oprávnění, <br>Laterální pohyb|
+|[Podezřelý útok na Relay protokolu NTLM](atp-lateral-movement-alerts.md#suspected-ntlm-relay-attack-exchange-account-external-id-2037)|Není k dispozici|2037|Střední nebo nízká, je-li zjištěno pomocí podepsaného protokolu NTLM v2|Eskalace oprávnění, <br> Laterální pohyb|
 |[Podezření na útok přes pass-the-hash (downgrade šifrování)](atp-lateral-movement-alerts.md#suspected-overpass-the-hash-attack-encryption-downgrade-external-id-2008)|Aktivita snížení úrovně šifrování (možný útok overpass-the-hash)|2008|Střední|Laterální pohyb|
 |[Podezřelá Overpass-the-hash – útok (Kerberos)](atp-lateral-movement-alerts.md#suspected-overpass-the-hash-attack-kerberos-external-id-2002)|Neobvyklá implementace protokolu Kerberos (možný útok overpass-the-hash)|2002|Střední|Laterální pohyb|
 |[Podezřelý útok z podklíče šifrování (downgrade)](atp-domain-dominance-alerts.md#suspected-skeleton-key-attack-encryption-downgrade-external-id-2010)|Aktivita snížení úrovně šifrování (potenciální útoku typu skeleton key)|2010|Střední|Boční pohyb,<br> Dočasné|

@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 24eca4c6-c949-42ea-97b9-41ef0fb611f1
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d60a2ecf2302e6db39baccbc394bf8db14fa87f6
-ms.sourcegitcommit: b7b3d4a401faaa3edb4bd669a1a003a6d21a4322
+ms.openlocfilehash: 6fca63fb488aef6fb26f4f501c4f6af896e223bd
+ms.sourcegitcommit: 4662ad41addf92727367874d909937fa331fb866
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68298803"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68485066"
 ---
 # <a name="azure-atp-switches-and-silent-installation"></a>Přepínače Azure ATP a bezobslužná instalace
 Tento článek poskytuje pokyny a pokyny pro přepínače Azure ATP a tichou instalaci.
@@ -88,9 +88,9 @@ K dokončení ověřování proxy použijte následující příkazy:
 > 
 > |Name|Syntaxe|Povinné pro bezobslužnou instalaci?|Popis|
 > |-------------|----------|---------|---------|
-> |ProxyUrl|/quiet|Ano|Určuje ProxyUrl a číslo portu snímače ATP Azure.|
-> |ProxyUserName|/help|Ne|Pokud vaše proxy služba vyžaduje ověření, zadejte uživatelské jméno ve formátu doména \ uživatel.|
-> |ProxyUserPassword|NetFrameworkCommandLineArguments="/q"|Ano|Určuje heslo pro uživatelské jméno proxy serveru. \* Přihlašovací údaje jsou šifrované a ukládají se místně pomocí snímače ATP Azure.|
+> |ProxyUrl|ProxyUrl = "https\://proxy.contoso.com:8080"|Ne|Určuje ProxyUrl a číslo portu snímače ATP Azure.|
+> |ProxyUserName|ProxyUserName = "Contoso\ProxyUser"|Ne|Pokud vaše proxy služba vyžaduje ověření, zadejte uživatelské jméno ve formátu doména \ uživatel.|
+> |ProxyUserPassword|ProxyUserPassword = "P@ssw0rd"|Ne|Určuje heslo pro uživatelské jméno proxy serveru. \* Přihlašovací údaje jsou šifrované a ukládají se místně pomocí snímače ATP Azure.|
 
 ## <a name="update-the-azure-atp-sensor"></a>Aktualizace snímače ATP Azure
 

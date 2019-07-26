@@ -1,68 +1,69 @@
 ---
-title: Konfigurace proxy serveru nebo brány firewall k umožnění komunikace služby Azure ATP s daným senzorem | Dokumentace Microsoftu
-description: Popisuje, jak nastavit brány firewall nebo proxy a povolit komunikaci mezi ochrany ATP v programu Azure cloudové služby a služby Azure ATP senzorů
+title: Konfigurace proxy serveru nebo brány firewall pro povolení komunikace ATP Azure se senzorem | Microsoft Docs
+description: Popisuje, jak nastavit bránu firewall nebo proxy server tak, aby umožňovala komunikaci mezi cloudovou službou Azure ATP a senzory Azure ATP.
 keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/17/2019
+ms.date: 07/25/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 9c173d28-a944-491a-92c1-9690eb06b151
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 7598c10724295312b19a2ccb0fbdd57328edd9a4
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
+ms.openlocfilehash: 347f46b51267762760783fdc44b689e213ba29d8
+ms.sourcegitcommit: 4662ad41addf92727367874d909937fa331fb866
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65196740"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68485042"
 ---
-# <a name="configure-endpoint-proxy-and-internet-connectivity-settings-for-your-azure-atp-sensor"></a>Konfigurace koncového bodu proxy serveru a nastavení připojení k Internetu pro vaše senzor ochrany ATP v programu Azure
+# <a name="configure-endpoint-proxy-and-internet-connectivity-settings-for-your-azure-atp-sensor"></a>Konfigurace nastavení proxy serveru Endpoint a připojení k Internetu pro senzor ATP Azure
 
-Každý ze senzorů Azure Advanced Threat Protection (ATP) vyžaduje připojení k Internetu ke cloudové službě ochrana ATP v programu Azure správně fungovala. V některých organizacích řadiče domény nejsou připojené přímo k Internetu, ale jsou připojené prostřednictvím připojení k proxy serveru webových. Každý senzoru služby Azure ATP vyžaduje používat konfiguraci proxy serveru Microsoft Windows Internet (WinINET) na data ze senzorů sestavy a komunikovat se službou ochrana ATP v programu Azure. Pokud používáte konfiguraci proxy serveru WinHTTP, stále potřebujete ke konfiguraci proxy nastavení prohlížeče Internet Windows (WinINet) pro komunikaci mezi senzorem a cloudové službě ochrana ATP v programu Azure.
+Každý senzor služby Azure Advanced Threat Protection (ATP) vyžaduje k úspěšnému fungování cloudové službě Azure ATP připojení k Internetu. V některých organizacích nejsou řadiče domény přímo připojené k Internetu, ale jsou připojené prostřednictvím připojení k webovému proxy serveru. Každý senzor Azure ATP vyžaduje, abyste pomocí konfigurace Microsoft Windows Internet (WinINET) proxy serveru nahlásili data ze senzorů a komunikovali se službou Azure ATP. Pokud pro konfiguraci proxy serveru použijete WinHTTP, budete muset pro komunikaci mezi senzorem a cloudovou službou Azure ATP nakonfigurovat nastavení proxy prohlížeče pro Windows Internet (WinINet).
 
-
-Při konfiguraci proxy serveru, budete muset vědět, že vložené službu sensor ochrany ATP v programu Azure běží v kontextu systému pomocí **LocalService** účet a službu Updater senzor ochrany ATP v programu Azure běží v kontextu systému pomocí  **LocalSystem** účtu. 
+Při konfiguraci proxy serveru musíte mít jistotu, že vložená služba senzorů Azure ATP se spouští v kontextu systému pomocí účtu **LocalService** a že služba aktualizace senzorů Azure ATP běží v kontextu systému pomocí účtu **LocalSystem** . 
 
 > [!NOTE]
-> Pokud používáte transparentní proxy server nebo WPAD v topologii vaší sítě, není nutné konfigurovat WinINET pro váš proxy server.
+> Pokud používáte transparentní proxy nebo WPAD v síťové topologii, nemusíte pro svůj proxy server nakonfigurovat rozhraní WinINET.
 
 ## <a name="configure-the-proxy"></a>Konfigurace proxy serveru 
 
-Konfigurace proxy serveru ručně pomocí založenou na registru statické proxy pro povolení ochrany ATP v programu Azure ze senzorů do sestavy diagnostická data a komunikovat s cloudovou službou ochrany ATP v programu Azure, když počítač není povolené pro připojení k Internetu.
+Nastavení proxy serveru můžete nakonfigurovat během instalace senzoru pomocí parametrů definovaných v [tiché instalaci, nastavení ověřování proxy serveru](https://docs.microsoft.com/azure-advanced-threat-protection/atp-silent-installation#proxy-authentication).
+
+Proxy server můžete také nakonfigurovat ručně pomocí statického proxy serveru založeného na registru, aby senzor ATP v Azure mohl nahlásit diagnostická data a komunikovat s cloudovou službou Azure ATP, když počítač nemá oprávnění k připojení k Internetu.
 
 > [!NOTE]
-> Následující změny v registru, bude použito pouze do LocalService a LocalSystem.
+> Změny registru by se měly aplikovat jenom na LocalService a LocalSystem.
 
-Statické proxy je možné konfigurovat pomocí registru. Konfigurace proxy serveru, který používáte v kontextu uživatele musíte zkopírovat do localservice a localsystem. Zkopírování uživatelského kontextu nastavení serveru proxy:
+Statický proxy server lze konfigurovat prostřednictvím registru. Musíte zkopírovat konfiguraci proxy serveru, který používáte v kontextu uživatele, na LocalSystem a LocalService. Kopírování nastavení proxy kontextu uživatele:
 
-1.   Ujistěte se, že k zálohování klíčů registru, před jejich úpravou.
+1.   Před úpravou klíče registru nezapomeňte zálohovat.
 
-2. V registru, vyhledejte hodnotu `DefaultConnectionSettings` jako REG_BINARY v klíči registru `HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Connections\DefaultConnectionSettings` a zkopírujte ho.
+2. V registru vyhledejte v klíči `DefaultConnectionSettings` `HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Connections\DefaultConnectionSettings` registru hodnotu REG_BINARY a zkopírujte ji.
  
-2.  Pokud LocalSystem nemá žádné nastavení proxy serveru správná (buď nejsou nakonfigurovány nebo jsou odlišné od Current_User), zkopírujte nastavení z Current_User k systému LocalSystem proxy serveru. V klíči registru `HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Connections\DefaultConnectionSettings`.
+2.  Pokud účet LocalSystem nemá správné nastavení proxy serveru (buď nejsou nakonfigurované, nebo se liší od Current_User), zkopírujte nastavení proxy serveru z Current_User na LocalSystem. Pod klíčem `HKU\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Connections\DefaultConnectionSettings`registru.
 
 3.  Vložte hodnotu z Current_user `DefaultConnectionSettings` jako REG_BINARY.
 
-4.  Pokud LocalService nemá žádné nastavení proxy serveru správná, zkopírujte nastavení z Current_User do LocalService proxy serveru. V klíči registru `HKU\S-1-5-19\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Connections\DefaultConnectionSettings`.
+4.  Pokud LocalService nemá správné nastavení proxy serveru, zkopírujte nastavení proxy serveru z Current_User do LocalService. Pod klíčem `HKU\S-1-5-19\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Connections\DefaultConnectionSettings`registru.
 
 5.  Vložte hodnotu z Current_User `DefaultConnectionSettings` jako REG_BINARY.
 
 > [!NOTE]
-> To ovlivní všechny aplikace, včetně služby Windows, které používají rozhraní WinINET s LocalService, LocalSytem kontextu.
+> Tato akce bude mít vliv na všechny aplikace včetně služeb systému Windows, které využívají rozhraní WinINET s LocalSytem kontextem LocalService.
 
 
-## <a name="enable-access-to-azure-atp-service-urls-in-the-proxy-server"></a>Povolit přístup k adresám URL služby ochrany ATP v programu Azure v proxy serveru
+## <a name="enable-access-to-azure-atp-service-urls-in-the-proxy-server"></a>Povolení přístupu k adresám URL služby Azure ATP v proxy server
 
-Chcete-li povolit přístup do služby Azure ATP povolený provoz spojený se následující adresy URL:
+Pokud chcete povolit přístup ke službě Azure ATP, povolte provoz na následujících adresách URL:
 
-- \<your-instance-name >. atp.azure.com – pro připojení konzoly. Například "Contoso-corp.atp.azure.com"
+- \<název-instance >. atp. Azure. com – pro připojení konzoly. Například "Contoso-corp.atp.azure.com"
 
-- \<your-instance-name > sensorapi.atp.azure.com – senzorů připojení. Například "contoso-corpsensorapi.atp.azure.com"
+- \<název-instance > sensorapi. atp. Azure. com – pro připojení senzorů. Například "contoso-corpsensorapi.atp.azure.com"
 
-Předchozí adresy URL se automaticky mapují na umístění správnou službu pro vaši instanci služby Azure ATP. Pokud potřebujete podrobnější řízení, vezměte v úvahu povoluje provoz do příslušných koncových bodů v následující tabulce:
+Předchozí adresy URL se automaticky mapují na správné umístění služby pro vaši instanci ATP Azure. Pokud potřebujete podrobnější kontrolu, zvažte povolení provozu do relevantních koncových bodů z následující tabulky:
 
 |Umístění služby|*.atp.azure.com DNS record|
 |----|----|
@@ -72,7 +73,7 @@ Předchozí adresy URL se automaticky mapují na umístění správnou službu p
 
  
 > [!NOTE]
-> Provádí kontrolu SSL na síťový provoz služby Azure ATP (mezi senzorem a službu ochrany ATP v programu Azure), musí podporovat kontrolu SSL vzájemné kontroly.
+> Při provádění kontroly SSL na provozu v síti Azure ATP (mezi senzorem a službou Azure ATP) musí kontrola SSL podporovat vzájemnou kontrolu.
 
 
 ## <a name="see-also"></a>Viz také
