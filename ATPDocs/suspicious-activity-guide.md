@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 07/17/2019
+ms.date: 07/25/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: ca5d1c7b-11a9-4df3-84a5-f53feaf6e561
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d9be7cd54a286f9ff800b340ab856f50de595d9d
-ms.sourcegitcommit: 4662ad41addf92727367874d909937fa331fb866
+ms.openlocfilehash: 2ac458831e47db99c0b61d56cd390c5d01ed8ca1
+ms.sourcegitcommit: dd8c94db68e85752c20bba3446b678cd1edcd932
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68484996"
+ms.lasthandoff: 07/29/2019
+ms.locfileid: "68604348"
 ---
 # <a name="azure-atp-security-alerts"></a>Výstrahy zabezpečení Azure ATP
 

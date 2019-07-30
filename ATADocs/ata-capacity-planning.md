@@ -5,24 +5,24 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 05/12/2019
+ms.date: 07/28/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.assetid: 1b5b24ff-0df8-4660-b4f8-64d68cc72f65
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: cd6dbac4fec45b4e3bc3e4ee6818ac0a5e9d18a4
-ms.sourcegitcommit: ef6d041d5ecde7ec909fd0f90848ce422c0c4774
+ms.openlocfilehash: c77f855066f8385925dc9039c6532f1981ac0dfe
+ms.sourcegitcommit: dd8c94db68e85752c20bba3446b678cd1edcd932
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65613452"
+ms.lasthandoff: 07/29/2019
+ms.locfileid: "68604368"
 ---
 # <a name="ata-capacity-planning"></a>Plánování kapacity ATA
 
-*Platí pro: Advanced Threat Analytics verze 1.9*
+*Platí pro: Advanced Threat Analytics verze 1,9*
 
-Tento článek pomůže určit, kolik serverů ATA potřebujete k monitorování sítě. Vám může pomoct zjistit, kolik komponent ATA Gateway a ATA Lightweight Gateway je potřebujete a jakou kapacitu serveru vyžadují ATA Center a komponenty ATA Gateway.
+Tento článek vám pomůže určit, kolik serverů ATA je potřeba k monitorování vaší sítě. Pomůže vám zjistit, kolik komponent ATA Gateway a/nebo ATA Lightweight Gateway potřebujete, a kapacitu serveru pro komponenty ATA Center a komponenty ATA Gateway.
 
 > [!NOTE] 
 > ATA Center se dá nasadit na libovolného dodavatele IaaS, pokud jsou splněné požadavky na výkon popsané v tomto článku.
@@ -30,17 +30,17 @@ Tento článek pomůže určit, kolik serverů ATA potřebujete k monitorování
 ## <a name="using-the-sizing-tool"></a>Použití nástroje pro změnu velikosti
 Doporučený a nejjednodušší způsob, jak určit kapacitu pro vaše nasazení ATA, je použití [nástroje pro změnu velikosti ATA](http://aka.ms/atasizingtool). Spusťte nástroj pro změnu velikosti ATA a z výsledků v excelovém souboru pomocí následujících polí určete potřebnou kapacitu ATA:
 
-- ATA Center procesoru a paměti: Shoda **zaneprázdněný Packets/sec** souboru výsledků pole v tabulce pro ATA Center **PAKETŮ za SEKUNDU** pole [tabulce pro ATA Center](#ata-center-sizing).
+- PROCESOR a paměť pro ATA Center: Porovnává pole počet **zaneprázdněných paketů/s** v souboru výsledků tabulky ATA Center do pole **pakety za sekundu** v [tabulce ATA Center](#ata-center-sizing).
 
-- Úložiště pro ATA Center: Shoda **Avg Packets/sec** souboru výsledků pole v tabulce pro ATA Center **PAKETŮ za SEKUNDU** pole [tabulce pro ATA Center](#ata-center-sizing).
-- ATA Gateway: Shoda **zaneprázdněný Packets/sec** v tabulce pro ATA Gateway v souboru výsledků s **PAKETŮ za SEKUNDU** pole [tabulce pro ATA Gateway](#ata-gateway-sizing) nebo [ATA Lightweight Gateway tabulky](#ata-lightweight-gateway-sizing)podle toho, [zvoleného typu brány](#choosing-the-right-gateway-type-for-your-deployment).
+- Úložiště ATA Center: Porovnává pole počet **paketů/s** v souboru výsledků tabulky ATA Center s polem **pakety za sekundu** v [tabulce ATA Center](#ata-center-sizing).
+- ATA Gateway: V závislosti na [zvoleném typu brány](#choosing-the-right-gateway-type-for-your-deployment)se porovnává pole počet **zaneprázdněných paketů/s** v tabulce ATA Gateway v souboru výsledků až do pole **pakety za sekundu** v [tabulce ATA Gateway](#ata-gateway-sizing) nebo v [tabulce ATA Lightweight Gateway](#ata-lightweight-gateway-sizing).
 
 
 ![Ukázkový nástroj plánování kapacity](media/capacity-tool.png)
 
 
 > [!NOTE]
-> Protože různými prostředími liší a mají více vlastnosti provozu speciální a neočekávané síti, po počátečním nasazení ATA a spusťte nástroj pro změnu velikosti, budete muset nastavit a vyladit vaše nasazení kapacity.
+> Vzhledem k tomu, že různá prostředí se liší a mají více speciálních a neočekávaných vlastností síťového provozu, po počátečním nasazení ATA a spuštění nástroje pro změnu velikosti může být nutné upravit a vyladit nasazení pro kapacitu.
 
 
 Pokud z nějakého důvodu nemůžete použít nástroj pro změnu velikosti ATA, ručně shromažďujte údaje čítače paketů za sekundu ze všech řadičů domény po dobu 24 hodin s nízkým intervalem sběru hodnot (přibližně 5 sekund). Pak u každého řadiče domény musíte vypočítat denní průměr a průměr za nejvytíženější období (15 minut).
@@ -48,7 +48,7 @@ Následující části uvádějí pokyny, jak shromáždit čítač paketů za s
 
 
 > [!NOTE]
-> Protože různými prostředími liší a mají více vlastnosti provozu speciální a neočekávané síti, po počátečním nasazení ATA a spusťte nástroj pro změnu velikosti, budete muset nastavit a vyladit vaše nasazení kapacity.
+> Vzhledem k tomu, že různá prostředí se liší a mají více speciálních a neočekávaných vlastností síťového provozu, po počátečním nasazení ATA a spuštění nástroje pro změnu velikosti může být nutné upravit a vyladit nasazení pro kapacitu.
 
 
 ### <a name="ata-center-sizing"></a>Nastavení velikosti ATA Center
@@ -68,13 +68,13 @@ Pro vypracování analýzy chování uživatelů vyžaduje ATA Center data za ne
 
 &#42;&#42;Průměrné počty (počty ve špičce)
 > [!NOTE]
-> - ATA Center dokáže zpracovat agregované maximum 1 milion paketů za sekundu ze všech monitorovaných řadičů domény. V některých prostředích může stejné ATA Center zpracovávat celkový provoz, který je vyšší než 1 milion. Pokud potřebujete s takovými prostředími pomoct, obraťte se na adresu askcesec@microsoft.com.
-> - Pokud velikost volného místa dosáhne minimální hodnoty buď 20 %, nebo 200 GB, nejstarší kolekce dat se odstraní. Pokud není možné úspěšně snížit shromažďování dat pro tuto úroveň, budou zaznamenány výstrahu.  ATA bude dál fungovat až do prahovou hodnotu 5 % nebo 50 GB volného místa je dosaženo.  V tomto okamžiku ATA se zastaví naplnění databáze a další výstrahy budou vydány lístky.
+> - ATA Center dokáže zpracovat agregované maximum 1 milion paketů za sekundu ze všech monitorovaných řadičů domény. V některých prostředích může stejné ATA Center zpracovávat celkový provoz, který je vyšší než 1M. Pokud potřebujete s takovými prostředími pomoct, obraťte se na adresu askcesec@microsoft.com.
+> - Pokud velikost volného místa dosáhne minimální hodnoty buď 20%, nebo 200 GB, nejstarší kolekce dat se odstraní. Pokud není možné úspěšně omezit shromažďování dat na tuto úroveň, bude zaznamenána výstraha.  ATA bude dál fungovat, dokud nebude dosaženo prahové hodnoty 5% nebo 50 GB volného místa.  V tomto okamžiku ATA zastaví naplnění databáze a vydá se další výstraha.
 > - ATA Center je možné nasadit na libovolného dodavatele IaaS, pokud jsou splněné požadavky na výkon popsané v tomto článku.
 > - Latence úložiště pro čtení a zápisu aktivit musí být menší než 10 ms.
 > - Poměr mezi čtením a zápisem aktivit je přibližně 1:3 při méně než 100 000 paketů za sekundu a 1:6 při více než 100 000 paketů za sekundu.
-> - Pokud se spustí jako dynamická paměť virtuálního počítače nebo libovolná jiná paměť, funkce rozšiřování rozsahů stránek se nepodporuje.
-> - K zajištění optimálního výkonu nastavte **možnost napájení**  pro ATA Center na hodnotu **Vysoký výkon**.<br>
+> - Pokud se spustí jako dynamická paměť virtuálního počítače nebo libovolná jiná paměť, funkce rozšiřování rozsahů stránek se nepodporuje. Další informace o spuštění ATA Center jako virtuálního počítače najdete v tématu [požadavky na ATA Center](https://docs.microsoft.com/advanced-threat-analytics/ata-prerequisites#ata-center-requirements) .
+> - K zajištění optimálního výkonu nastavte **možnost napájení** pro ATA Center na hodnotu **Vysoký výkon**.<br>
 > - Při práci na fyzickém serveru databáze ATA vyžaduje, abyste v systému BIOS **zakázali** neuniformní přístup k paměti (NUMA). Ve vašem systému se NUMA může označovat také jako prokládání uzlů. V takovém případě bude potřeba prokládání uzlů **povolit**, abyste NUMA zakázali. Další informace najdete v dokumentaci k systému BIOS. Tento postup není relevantní, pokud ATA Center běží na virtuálním serveru.
 
 
@@ -125,9 +125,9 @@ ATA Lightweight Gateway může podporovat monitorování jednoho řadiče domén
 
 > [!NOTE]   
 > -   Pokud řadič domény nemá prostředky, které ATA Lightweight Gateway vyžaduje, výkon řadiče domény to neovlivní, ale ATA Lightweight Gateway nemusí fungovat podle očekávání.
-> -   Pokud se spustí jako dynamická paměť virtuálního počítače nebo libovolná jiná paměť, funkce rozšiřování rozsahů stránek se nepodporuje.
+> -   Pokud se spustí jako dynamická paměť virtuálního počítače nebo libovolná jiná paměť, funkce rozšiřování rozsahů stránek se nepodporuje. Další informace o spuštění ATA Center jako virtuálního počítače najdete v tématu [požadavky na ATA Center](https://docs.microsoft.com/advanced-threat-analytics/ata-prerequisites#ata-center-requirements) .
 > -   K zajištění optimálního výkonu nastavte **možnost napájení** pro ATA Lightweight Gateway na hodnotu **Vysoký výkon**.
-> -   Minimálně 5 GB místa je povinný a doporučuje 10 GB včetně místa potřebného pro binární soubory ATA, [protokoly ATA](troubleshooting-ata-using-logs.md), a [protokolování výkonu](troubleshooting-ata-using-perf-counters.md).
+> -   Vyžaduje se minimálně 5 GB místa a doporučuje se 10 GB, včetně místa potřebného pro binární soubory ATA, [protokoly ATA](troubleshooting-ata-using-logs.md)a [protokoly výkonu](troubleshooting-ata-using-perf-counters.md).
 
 
 ### <a name="ata-gateway-sizing"></a>Nastavení velikosti ATA Gateway
@@ -163,16 +163,16 @@ Aspekty zrcadlení portů můžou vyžadovat, abyste pro datové centrum nebo po
 > [!NOTE] 
 > -   Dynamická paměť se nepodporuje.
 > -   K zajištění optimálního výkonu nastavte **možnost napájení** pro ATA Gateway na hodnotu **Vysoký výkon**.
-> -   Minimálně 5 GB místa je povinný a doporučuje 10 GB včetně místa potřebného pro binární soubory ATA, [protokoly ATA](troubleshooting-ata-using-logs.md), a [protokolování výkonu](troubleshooting-ata-using-perf-counters.md).
+> -   Vyžaduje se minimálně 5 GB místa a doporučuje se 10 GB, včetně místa potřebného pro binární soubory ATA, [protokoly ATA](troubleshooting-ata-using-logs.md)a [protokoly výkonu](troubleshooting-ata-using-perf-counters.md).
 
 
 
 ## <a name="related-videos"></a>Související videa
-- [Volba správného typu komponenty ATA Gateway](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
+- [Výběr správného typu ATA Gateway](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
 
 ## <a name="see-also"></a>Viz také
-- [Nástroje pro změnu velikosti ATA](http://aka.ms/atasizingtool)
+- [Nástroj pro změnu velikosti ATA](http://aka.ms/atasizingtool)
 - [Požadavky ATA](ata-prerequisites.md)
 - [Architektura ATA](ata-architecture.md)
 - [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
