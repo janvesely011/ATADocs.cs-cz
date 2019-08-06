@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 3261155c-3c72-4327-ba29-c113c63a4e6d
 ms.reviewer: arzinger
 ms.suite: ems
-ms.openlocfilehash: eedc9c5ddae1947ace50b15efc6a8e0967af357a
-ms.sourcegitcommit: 4662ad41addf92727367874d909937fa331fb866
+ms.openlocfilehash: 3b2df6ec2beddd276e1e4acdb0a38feb4a3511a3
+ms.sourcegitcommit: 8df26fb312472b8df1da70e581517223d26de8c2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68485080"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68781889"
 ---
 # <a name="azure-atp-siem-log-reference"></a>Referenční informace k protokolům Azure ATP SIEM
 
@@ -76,7 +76,7 @@ Do systému SIEM se předávají následující pole a jejich hodnoty:
 |[Podezřelé použití zlatého lístku (časová anomálie)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-time-anomaly-external-id-2022)|Protokol Kerberos – anomálie času lístku|2022|Vysoká|Eskalace oprávnění,<br> Boční pohyb,<br>Dočasné|
 |[Podezření na krádež identity (pass-the-hash)](atp-lateral-movement-alerts.md#suspected-identity-theft-pass-the-hash-external-id-2017)|Krádež identity pomocí útoku Pass-the-Hash|2017|Vysoká|Laterální pohyb|
 |[Podezření na krádež identity (pass-the-Ticket)](atp-lateral-movement-alerts.md#suspected-identity-theft-pass-the-ticket-external-id-2018)|Krádež identity pomocí útoku Pass-the-Ticket|2018|Vysoká nebo střední|Laterální pohyb|
-|[Podezření na manipulaci s ověřováním NTLM – Preview](atp-lateral-movement-alerts.md#suspected-ntlm-authentication-tampering-external-id-2039---preview)|Není k dispozici|2039|Střední|Eskalace oprávnění,<br> Laterální pohyb|
+|[Podezření na manipulaci s ověřováním NTLM](atp-lateral-movement-alerts.md#suspected-ntlm-authentication-tampering-external-id-2039)|Není k dispozici|2039|Střední|Eskalace oprávnění,<br> Laterální pohyb|
 |[Podezřelý útok na Relay protokolu NTLM](atp-lateral-movement-alerts.md#suspected-ntlm-relay-attack-exchange-account-external-id-2037)|Není k dispozici|2037|Střední nebo nízká, je-li zjištěno pomocí podepsaného protokolu NTLM v2|Eskalace oprávnění, <br> Laterální pohyb|
 |[Podezření na útok přes pass-the-hash (downgrade šifrování)](atp-lateral-movement-alerts.md#suspected-overpass-the-hash-attack-encryption-downgrade-external-id-2008)|Aktivita snížení úrovně šifrování (možný útok overpass-the-hash)|2008|Střední|Laterální pohyb|
 |[Podezřelá Overpass-the-hash – útok (Kerberos)](atp-lateral-movement-alerts.md#suspected-overpass-the-hash-attack-kerberos-external-id-2002)|Neobvyklá implementace protokolu Kerberos (možný útok overpass-the-hash)|2002|Střední|Laterální pohyb|
@@ -125,7 +125,7 @@ Priority:
 ### <a name="remote-code-execution-over-dns"></a>Vzdálené spuštění kódu přes DNS
 1-17-2019 08:24:54 auth. Warning 192.168.0.202 1 2019-01-17T08:24:54.100856 + 00:00 DC3 CEF 3908 DnsRemoteCodeExecutionSecurityAlert ï»® 0 | Microsoft | ATP Azure | 2.63.0.0 | DnsRemoteCodeExecutionSecurityAlert | Tisk Vzdálené spuštění kódu přes DNS | 5 | Start = 2019-01-17T08:24:54.5293800 Z App = DNS shost = KLIENT1 MSG = objekt actor se pokusil spustit příkazy vzdáleně v počítači KLIENT1 z řadiče domény DC1 a protokolu DNS. externalId=2036 cs1Label=url cs1=https\:////contoso-corp.atp.azure.com:13000/securityAlert/591f9769-d904-40b1-89fa-c307c2ca814f cs2Label=trigger cs2=new
 
-### <a name="security-principal-reconnaissance-ldap---preview"></a>Security Principal rekognoskace (LDAP) – Preview 
+### <a name="security-principal-reconnaissance-ldap"></a>Objekt zabezpečení rekognoskace (LDAP)
 02-18-2019 16:48:08 ověření. upozornění 127.0.0.1 1 2019-02-18T14:48:02.912264 + 00:00 DC1 CEF 4656 LdapSearchReconnaissanceSecurity ï»-0 | Microsoft | ATP Azure | 2.66.0.0 | LdapSearchReconnaissanceSecurityAlert | Tisk Rekognoskace pomocí dotazů LDAP | 5 | Start = 2019-02-18T14:46:29.4644276 Z aplikace = LdapSearch shost = KLIENT1 MSG = v počítači KLIENT1 byly odeslány podezřelé dotazy LDAP do řadiče domény DC1, hledání 4 typů výčtu a operátorů serveru (členové mohou spravovat doménu servery) ve 2 doménách externalId = 2038 cs1Label = URL CS1 =\:https//Contoso-Corp.atp.Azure..com:13000/securityAlert/81ea99c4-CE1F-4581-ac8f-7440fbed7cd0 cs2Label = Trigger CS2 = New
 
 ### <a name="suspected-brute-force-attack-ldap"></a>Podezřelý útok hrubou silou (LDAP)
@@ -158,7 +158,7 @@ Priority:
 ### <a name="suspected-identity-theft-pass-the-ticket"></a>Krádež identity podezřelého softwaru (Pass-the-Ticket) 
 02 – 21 – 2018 17:04:47 Auth.Error 192.168.0.220 1 2018-02-21T15:04:33.537583 + 00:00 CENTER CEF 6076 PassTheTicketSecurityAlert ï» ¿0 | Microsoft | Ochrana ATP v programu Azure | 2.22.4228.22540 | PassTheTicketSecurityAlert | Krádež identity pomocí útoku Pass-the-Ticket | 10 | start = 2018-02-21T15:02:22.2577465Z aplikace = Kerberos suser = msg Eugene Jenkins = Kerberos Eugene Jenkins (softwarový inženýr) pro lístky byly odcizeny z Admin-PC do Victim-PC a používá pro přístup k účtu krbtgt/Doména1. TEST. MÍSTNÍ. externalId = 2018 cs1Label = url cs1 = https\://contoso-corp.atp.azure.com/securityAlert/511f1487-2915-477d-be2e-04cfba702ccd cs2Label = aktivační událost cs2 = nový
 
-### <a name="suspected-ntlm-authentication-tampering-preview"></a>Podezření na manipulaci s ověřováním NTLM (Preview)
+### <a name="suspected-ntlm-authentication-tampering"></a>Podezření na manipulaci s ověřováním NTLM
 07-17-2019 18:18:44 auth. Warning 192.168.0.77 1 2019-07-09T15:18:30.967118 + 00:00 CENTER CEF 7144 AbnormalNtlmSigningSecurityAlert ï»-0 | Microsoft | ATP Azure | 2.86.0.0 | AbnormalNtlmSigningSecurityAlert | Tisk Podezření na manipulaci s ověřováním NTLM | 5 | Start = 2019-07-09T15:14:57.5280720 Z App = NTLM shost = KLIENT1 msg = 2 účty na počítači KLIENT1 se při pokusu o ověření proti 2 počítačům přes protokol NTLM podezřelě nedotazují. externalId = 2039 cs1Label = URL CS1 = https\://Contoso-Corp.atp.Azure.com:13000/securityAlert/d4ce6252-2c0f-47f6-a534-47ee8ad983be cs2Label = Trigger CS2 = New
 
 ### <a name="suspected-over-pass-the-hash-attack-encryption-downgrade"></a>Podezření na útok over-pass-the-Hash (oslabení šifrování) 

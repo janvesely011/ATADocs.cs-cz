@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 07/29/2019
+ms.date: 08/05/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 9d1dfcf20a45dde213db7db2d43ff973ebfcbe11
-ms.sourcegitcommit: dd8c94db68e85752c20bba3446b678cd1edcd932
+ms.openlocfilehash: 3f0076091ced915776ea54578a58ea3a3fa5856f
+ms.sourcegitcommit: 8df26fb312472b8df1da70e581517223d26de8c2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68604383"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68781849"
 ---
 # <a name="ata-prerequisites"></a>Požadavky ATA
 
@@ -66,6 +66,7 @@ V této části jsou uvedené informace, které byste měli shromažďovat, a ta
 
 ## <a name="ata-center-requirements"></a>Požadavky pro ATA Center
 V této části je uveden seznam požadavků pro ATA Center.
+
 ### <a name="general"></a>Obecné
 ATA Center podporuje instalaci na serveru se systémem Windows Server 2012 R2 Windows Server 2016 a Windows Server 2019. 
 
@@ -80,8 +81,10 @@ Toto ověření můžete provést spuštěním následující rutiny Windows Pow
 
 Instalace komponenty ATA Center jako virtuálního počítače se podporuje. 
 
+### <a name="dynamic-memory"></a>Dynamická paměť
+
 > [!NOTE] 
-> Když centrum spouštíte jako virtuální počítač (VM), vyžaduje to, aby se k VIRTUÁLNÍmu počítači přidělila veškerá paměť. 
+> Když centrum spouštíte jako virtuální počítač (VM), vyžaduje to, aby se k VIRTUÁLNÍmu počítači přidělila veškerá paměť.
 
 |Virtuální počítač spuštěný v|Popis|
 |------------|-------------|
@@ -177,8 +180,7 @@ Informace o používání virtuálních počítačů se službou ATA Gateway naj
 K zajištění optimálního výkonu nastavte **možnost napájení** pro ATA Gateway na hodnotu **Vysoký výkon**.<br>
 ATA Gateway může podporovat monitorování několika řadičů domény, v závislosti na objemu síťových přenosů z a do řadičů domény.
 
-> [!NOTE] 
-> Pokud se spustí jako dynamická paměť virtuálního počítače nebo libovolná jiná paměť, funkce rozšiřování rozsahů stránek se nepodporuje.
+Další informace o dynamické paměti nebo jakékoli jiné funkci pro vybublinování paměti najdete v tématu [dynamická paměť](#dynamic-memory).
 
 Další informace o požadavcích na hardware ATA Gateway najdete v tématu [plánování kapacity ATA](ata-capacity-planning.md).
 
@@ -264,8 +266,7 @@ ATA Lightweight Gateway vyžaduje nejméně 2 jádra a 6 GB paměti RAM nainstal
 K zajištění optimálního výkonu nastavte **možnost napájení** pro ATA Lightweight Gateway na hodnotu **Vysoký výkon**.
 Komponenta ATA Lightweight Gateway se dá nasadit na řadiče domény s různým zatížením i velikostí, v závislosti na objemu síťového přenosu dat do a z řadiče domény a na počtu prostředků, které jsou na příslušném řadiči domény nainstalované.
 
-> [!NOTE] 
-> Pokud se spustí jako dynamická paměť virtuálního počítače nebo libovolná jiná paměť, funkce rozšiřování rozsahů stránek se nepodporuje.
+Další informace o dynamické paměti nebo jakékoli jiné funkci pro vybublinování paměti najdete v tématu [dynamická paměť](#dynamic-memory).
 
 Další informace o požadavcích na hardware ATA Lightweight Gateway najdete v tématu [plánování kapacity ATA](ata-capacity-planning.md).
 

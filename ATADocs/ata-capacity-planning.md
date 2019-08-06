@@ -5,18 +5,18 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 07/28/2019
+ms.date: 08/05/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.assetid: 1b5b24ff-0df8-4660-b4f8-64d68cc72f65
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: c77f855066f8385925dc9039c6532f1981ac0dfe
-ms.sourcegitcommit: dd8c94db68e85752c20bba3446b678cd1edcd932
+ms.openlocfilehash: 3f5e493993acfb6bbb440691f11053d46bf5e1ba
+ms.sourcegitcommit: 8df26fb312472b8df1da70e581517223d26de8c2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68604368"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68781825"
 ---
 # <a name="ata-capacity-planning"></a>Plánování kapacity ATA
 
@@ -73,7 +73,7 @@ Pro vypracování analýzy chování uživatelů vyžaduje ATA Center data za ne
 > - ATA Center je možné nasadit na libovolného dodavatele IaaS, pokud jsou splněné požadavky na výkon popsané v tomto článku.
 > - Latence úložiště pro čtení a zápisu aktivit musí být menší než 10 ms.
 > - Poměr mezi čtením a zápisem aktivit je přibližně 1:3 při méně než 100 000 paketů za sekundu a 1:6 při více než 100 000 paketů za sekundu.
-> - Pokud se spustí jako dynamická paměť virtuálního počítače nebo libovolná jiná paměť, funkce rozšiřování rozsahů stránek se nepodporuje. Další informace o spuštění ATA Center jako virtuálního počítače najdete v tématu [požadavky na ATA Center](https://docs.microsoft.com/advanced-threat-analytics/ata-prerequisites#ata-center-requirements) .
+> - Když centrum spouštíte jako virtuální počítač (VM), vyžaduje to, aby se k VIRTUÁLNÍmu počítači přidělila veškerá paměť. Další informace o spuštění ATA Center jako virtuálního počítače najdete v tématu [požadavky na ATA Center](https://docs.microsoft.com/advanced-threat-analytics/ata-prerequisites#dynamic-memory) .
 > - K zajištění optimálního výkonu nastavte **možnost napájení** pro ATA Center na hodnotu **Vysoký výkon**.<br>
 > - Při práci na fyzickém serveru databáze ATA vyžaduje, abyste v systému BIOS **zakázali** neuniformní přístup k paměti (NUMA). Ve vašem systému se NUMA může označovat také jako prokládání uzlů. V takovém případě bude potřeba prokládání uzlů **povolit**, abyste NUMA zakázali. Další informace najdete v dokumentaci k systému BIOS. Tento postup není relevantní, pokud ATA Center běží na virtuálním serveru.
 
@@ -125,7 +125,7 @@ ATA Lightweight Gateway může podporovat monitorování jednoho řadiče domén
 
 > [!NOTE]   
 > -   Pokud řadič domény nemá prostředky, které ATA Lightweight Gateway vyžaduje, výkon řadiče domény to neovlivní, ale ATA Lightweight Gateway nemusí fungovat podle očekávání.
-> -   Pokud se spustí jako dynamická paměť virtuálního počítače nebo libovolná jiná paměť, funkce rozšiřování rozsahů stránek se nepodporuje. Další informace o spuštění ATA Center jako virtuálního počítače najdete v tématu [požadavky na ATA Center](https://docs.microsoft.com/advanced-threat-analytics/ata-prerequisites#ata-center-requirements) .
+> -   Když centrum spouštíte jako virtuální počítač (VM), vyžaduje to, aby se k VIRTUÁLNÍmu počítači přidělila veškerá paměť. Další informace o spuštění ATA Center jako virtuálního počítače najdete v tématu [požadavky na ATA Center](https://docs.microsoft.com/advanced-threat-analytics/ata-prerequisites#dynamic-memory).)
 > -   K zajištění optimálního výkonu nastavte **možnost napájení** pro ATA Lightweight Gateway na hodnotu **Vysoký výkon**.
 > -   Vyžaduje se minimálně 5 GB místa a doporučuje se 10 GB, včetně místa potřebného pro binární soubory ATA, [protokoly ATA](troubleshooting-ata-using-logs.md)a [protokoly výkonu](troubleshooting-ata-using-perf-counters.md).
 
@@ -161,7 +161,7 @@ Aspekty zrcadlení portů můžou vyžadovat, abyste pro datové centrum nebo po
 &#42;&#42;Technologie Hyper-Threading musí být zakázaná.
 
 > [!NOTE] 
-> -   Dynamická paměť se nepodporuje.
+> -   Když centrum spouštíte jako virtuální počítač (VM), vyžaduje to, aby se k VIRTUÁLNÍmu počítači přidělila veškerá paměť. Další informace o spuštění ATA Center jako virtuálního počítače najdete v tématu [požadavky na ATA Center](https://docs.microsoft.com/advanced-threat-analytics/ata-prerequisites#dynamic-memory) .
 > -   K zajištění optimálního výkonu nastavte **možnost napájení** pro ATA Gateway na hodnotu **Vysoký výkon**.
 > -   Vyžaduje se minimálně 5 GB místa a doporučuje se 10 GB, včetně místa potřebného pro binární soubory ATA, [protokoly ATA](troubleshooting-ata-using-logs.md)a [protokoly výkonu](troubleshooting-ata-using-perf-counters.md).
 

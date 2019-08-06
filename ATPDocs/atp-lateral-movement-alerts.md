@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 07/25/2019
+ms.date: 08/05/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 2257eb00-8614-4577-b6a1-5c65085371f2
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: cf6d57113fc3457d7aeb097e77b7668fa012b546
-ms.sourcegitcommit: 4662ad41addf92727367874d909937fa331fb866
+ms.openlocfilehash: dd78f2d18010b043dc58bfb6fac24429a36ba2f1
+ms.sourcegitcommit: 8df26fb312472b8df1da70e581517223d26de8c2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68485002"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68781841"
 ---
 # <a name="tutorial-lateral-movement-alerts"></a>Návodu Výstrahy před taktikou lateral movement  
 
@@ -37,7 +37,7 @@ Následující výstrahy zabezpečení vám pomůžou identifikovat a opravit po
 > * Vzdálené spuštění kódu přes DNS (externí ID 2036)
 > * Podezření na krádež identity (pass-the-hash) (externí ID 2017)
 > * Podezření na krádež identity (pass-the-Ticket) (externí ID 2018)
-> * Podezření na manipulaci s ověřováním NTLM (externí ID 2039) – Preview
+> * Podezření na manipulaci s ověřováním NTLM (externí ID 2039) 
 > * Podezřelý útok útoku NTLM (účet Exchange) (externí ID 2037)
 > * Podezřelý útok Overpass-the-hash (v downgradu šifrování) (externí ID 2008)
 > * Podezřelá Overpass-the-hash – útok (Kerberos) (externí ID 2002)
@@ -147,7 +147,7 @@ K dispozici jsou vlastní aplikace, které předávají lístky jménem uživate
 4. Vyhledejte uživatele přihlášené přibližně ve stejnou dobu jako aktivita, jak mohou být ohroženy také. Resetujte hesla a povolte MFA.
 5. Pokud máte nainstalované ochrany ATP v programu Windows Defender – pomocí **příkaz Klist (. exe** odstraňte všechny lístky zadané přihlašovací relace a zabraňte budoucímu používání lístků.
 
-## <a name="suspected-ntlm-authentication-tampering-external-id-2039---preview"></a>Podezření na manipulaci s ověřováním NTLM (externí ID 2039) – Preview
+## <a name="suspected-ntlm-authentication-tampering-external-id-2039"></a>Podezření na manipulaci s ověřováním NTLM (externí ID 2039)
 
 V červnu 2019 mohla společnost Microsoft zveřejnila [bezpečnostní ohrožení zabezpečení CVE-2019-1040](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2019-1040)a oznamuje zjišťování nové chyby zabezpečení v systému Microsoft Windows, když útok "man-in-the-middle" dokáže úspěšně obejít mikrofon protokolu NTLM (kontrola integrity zpráv). antivirový.
 
@@ -259,7 +259,7 @@ Některé legitimní prostředky nepodporují silné šifrovací šifry a mohou 
 Někdy aplikace implementovat vlastní zásobník protokolu Kerberos, není v souladu s RFC protokolu Kerberos. 
 
 1. Ověřte, zda na zdrojovém počítači běží aplikace s vlastním zásobníkem protokolu Kerberos, nikoli v souladu se specifikací RFC protokolu Kerberos.  
-2. Pokud na zdrojovém počítači běží taková aplikace a nemělo by **to udělat,** Opravte konfiguraci aplikace. **Zavřete** výstrahu zabezpečení jako aktivitu **T-BP** .  
+2. Pokud na zdrojovém počítači běží taková aplikace a nemělo by to udělat , opravte konfiguraci aplikace. **Zavřete** výstrahu zabezpečení jako aktivitu **T-BP** .  
 3. Pokud na zdrojovém počítači běží taková aplikace a mělo by to pokračovat, **zavřete** výstrahu zabezpečení jako aktivitu **T-BP** a vylučte počítač. 
 
 **Pochopení rozsahu porušení**
