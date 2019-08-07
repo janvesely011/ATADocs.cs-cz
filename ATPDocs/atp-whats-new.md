@@ -5,21 +5,33 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 07/28/2019
+ms.date: 08/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: 6f96afa04a3f9179246caddb82dfca1115e20164
-ms.sourcegitcommit: dd8c94db68e85752c20bba3446b678cd1edcd932
+ms.openlocfilehash: 23feedf3b48c3b21f594d764321f0e241e8408cb
+ms.sourcegitcommit: 8df26fb312472b8df1da70e581517223d26de8c2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68604410"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68781905"
 ---
 # <a name="whats-new-in-azure-atp"></a>Co je nového v Azure ATP
+
+Vydáno 4. srpna 2019
+
+## <a name="azure-atp-release-289"></a>Azure ATP verze 2,89
+
+- **Vylepšení metod zjišťování**<br>Aby se zabránilo nadměrnému generování provozu protokolu NTLM při vytváření přesného přenosu cest LMP (), byly vylepšení v logice senzorů Azure ATP, aby se co nejvíce využívalo méně využívání protokolu NTLM a bylo výraznější používání protokolu Kerberos.  
+
+- **Vylepšení výstrahy: Podezřelé používání lístku (neexistující účet)**<br>Do podporovaných typů legitimace uvedených v tomto typu výstrahy byly přidány změny názvu SAM. Další informace o výstraze, včetně toho, jak zabránit tomuto typu aktivity a opravit, najdete v tématu [podezřelé použití lístku (neexistující účet)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-nonexistent-account-external-id-2027).
+
+- **Obecná dostupnost: Podezření na manipulaci s ověřováním NTLM**<br> Podezřelá výstraha na [manipulaci s ověřováním NTLM](atp-lateral-movement-alerts.md#suspected-ntlm-authentication-tampering-external-id-2039) už není v režimu náhledu a je teď všeobecně dostupná. 
+
+- Verze zahrnuje vylepšení a opravy chyb pro infrastrukturu interního senzoru.
 
 
 Vydáno 28. července 2019
@@ -40,8 +52,8 @@ Vydáno 21. července 2019
 
 Vydáno 14. července 2019
 
-- **Nové upozornění zabezpečení: Podezření na manipulaci s ověřováním NTLM (externí ID 2039) – Preview**<br>
-Nově podezřelá výstraha zabezpečení [ověřování NTLM](atp-lateral-movement-alerts.md#suspected-ntlm-authentication-tampering-external-id-2039---preview) v Azure ATP je teď ve verzi Public Preview. <br> V tomto detekci se aktivuje výstraha zabezpečení Azure ATP, pokud použití útoku "man-in-the-middle" vychází z úspěšného obejít kontrolu integrity zprávy NTLM (MIC), což je zabezpečení popsané v Microsoft [CVE-2019-040](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-1040). Tyto typy útoků se snaží o downgrade funkcí zabezpečení NTLM a jejich úspěšné ověření s konečným cílem provést úspěšné navýšení pohybů. 
+- **Nové upozornění zabezpečení: Podezření na manipulaci s ověřováním NTLM (externí ID 2039)**<br>
+Nově podezřelá výstraha zabezpečení [ověřování NTLM](atp-lateral-movement-alerts.md#suspected-ntlm-authentication-tampering-external-id-2039) v Azure ATP je teď ve verzi Public Preview. <br> V tomto detekci se aktivuje výstraha zabezpečení Azure ATP, pokud použití útoku "man-in-the-middle" vychází z úspěšného obejít kontrolu integrity zprávy NTLM (MIC), což je zabezpečení popsané v Microsoft [CVE-2019-040](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2019-1040). Tyto typy útoků se snaží o downgrade funkcí zabezpečení NTLM a jejich úspěšné ověření s konečným cílem provést úspěšné navýšení pohybů. 
 
 - **Vylepšení funkcí: Identifikace operačního systému obohaceného zařízení**<br> Dokud teď služba Azure ATP poskytla informace o operačním systému zařízení entity na základě dostupného atributu ve službě Active Directory. Pokud se dřív ve službě Active Directory nepoužily informace o operačním systému, tyto informace byly na stránkách entit ATP Azure také nedostupné. Od této verze poskytuje Azure ATP tyto informace pro zařízení, ve kterých služba Active Directory nemá informace, nebo nejsou zaregistrovaná ve službě Active Directory pomocí metod identifikace operačního systému obohaceného zařízení. 
  
@@ -325,7 +337,7 @@ Detekce výčtu účtů Azure ATP rekognoskace nyní detekuje a vydává výstra
     - Další informace najdete v tématu [o spuštění vzdáleného kódu](atp-domain-dominance-alerts.md#remote-code-execution-attempt-external-id-2019) .  
 
 - **Problémy s Windows serverem 2019 LSASS a Azure ATP**<br>
-V reakci na zpětnou vazbu od zákazníků týkající se využití ATP Azure s řadiči domény s Windows serverem 2019 obsahuje tato aktualizace další logiku, která neumožňuje aktivovat nahlášené chování na počítačích s Windows serverem 2019. Na Windows serveru 2019 se plánuje plná podpora snímače ATP pro Azure ATP, ale instalace a provozování Azure ATP na Windows serverech 2019 **se momentálně nepodporuje** . Další informace najdete v tématu [požadavky na senzor ATP Azure](atp-prerequisites.md#azure-atp-sensor-requirements) . 
+V reakci na zpětnou vazbu od zákazníků týkající se využití ATP Azure s řadiči domény s Windows serverem 2019 obsahuje tato aktualizace další logiku, která neumožňuje aktivovat nahlášené chování na počítačích s Windows serverem 2019. Na Windows serveru 2019 se plánuje plná podpora snímače ATP pro Azure ATP, ale instalace a provozování Azure ATP na Windows serverech 2019 se momentálně nepodporuje. Další informace najdete v tématu [požadavky na senzor ATP Azure](atp-prerequisites.md#azure-atp-sensor-requirements) . 
 
 - Tato verze také zahrnuje vylepšení a opravy chyb pro interní senzor infrastruktury.
 
@@ -529,7 +541,7 @@ Vydáno 7. října 2018
 Vydáno 16. září 2018
 - **Výstraha zabezpečení:** Rekognoskace pomocí dotazů na adresářové služby
 
-  Tato výstraha zabezpečení teď vylepšili infografiky a doklady. 
+  Toto upozornění zabezpečení teď má vylepšenou informační grafiku a legitimaci. 
 
 - **Vyloučení entit z detekce** 
 
