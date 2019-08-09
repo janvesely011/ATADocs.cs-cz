@@ -1,62 +1,62 @@
 ---
-title: Konfigurace SAM-R povolit zjišťování cesty laterální pohyb v Advanced Threat Analytics | Dokumentace Microsoftu
-description: Popisuje postup konfigurace SAM-R povolit zjišťování cesty laterální pohyb v Advanced Threat Analytics (ATA)
+title: Konfigurace SAM-R pro povolení detekce cesty bočního pohybu v Advanced Threat Analytics | Microsoft Docs
+description: Popisuje, jak nakonfigurovat SAM-R, aby bylo možné v Advanced Threat Analytics povolit detekci cest po pohybu (ATA).
 keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 7/30/2018
+ms.date: 08/08/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: 7597ed25-87f5-472c-a496-d5f205c9c391
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 623e5b3623238ec8a1e12c1154a76e0aeb6b57bb
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
+ms.openlocfilehash: bd47ebbe059014015b180ad568e4c519ba1b95b7
+ms.sourcegitcommit: db35bae8354fa35644e9334bfc37b9ffbafdaacc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65195893"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68862586"
 ---
 # <a name="install-ata---step-9"></a>Instalace ATA – krok 9
 
-*Platí pro: Advanced Threat Analytics verze 1.9*
+*Platí pro: Advanced Threat Analytics verze 1,9*
 
 > [!div class="step-by-step"]
 > [«Krok 8](install-ata-step7.md)
 
-## <a name="step-9-configure-sam-r-required-permissions"></a>Krok 9: Konfigurace SAM-R, vyžaduje oprávnění
+> [!NOTE]
+> Než začnete s vynucováním nové zásady, ujistěte se, že vaše prostředí zůstane zabezpečené, aniž by to mělo vliv na kompatibilitu aplikací, a to tak, že nejprve povolíte a ověříte navrhované změny v režimu auditování. 
 
-[Cesty laterální pohyb](use-case-lateral-movement-path.md) detekce spoléhá na dotazy, které identifikují místními správci na konkrétní počítače. Tyto dotazy se provádí pomocí protokolu SAM-R, prostřednictvím vytvořené v účtu služby ATA [kroku 2. Připojení ke službě AD](install-ata-step2.md).
+## <a name="step-9-configure-sam-r-required-permissions"></a>Krok 9: Konfigurace požadovaných oprávnění SAM-R
+
+Detekce [cesty bočního pohybu](use-case-lateral-movement-path.md) spoléhá na dotazy, které identifikují místní správce na určitých počítačích. Tyto dotazy se provádějí pomocí protokolu Sam-R prostřednictvím účtu služby ATA vytvořeného v [kroku 2. Připojte se ke](install-ata-step2.md)službě AD.
  
-K zajištění, že Windows klienty a servery povolit účet služby ATA k provedení této operace SAM-R, úpravy vaše **zásady skupiny** musí být provedeny, který přidá účet služby ATA kromě nakonfigurované účty uvedené v **přístup k síti** zásad.
+Aby bylo zajištěno, že klienti a servery systému Windows umožňují účtu služby ATA provádět tuto operaci SAM-R, je nutné provést úpravy **zásad skupiny** , které kromě nakonfigurovaných účtů uvedených v síti přidávají účet služby ATA.  **zásady přístupu** .
 
-1. Vyhledejte zásady:
+1. Vyhledejte zásadu:
 
-   - Název zásad: Přístup k síti – omezovat klienty moct vzdáleně volat SAM
-   - Umístění: Konfigurace nastavení Windows, nastavení zabezpečení, místní zásady, možnosti zabezpečení
+   - Název zásady: Přístup k síti – omezení klientů, kteří mají povoleno provádět Vzdálená volání do SAM
+   - Oblasti Konfigurace počítače, nastavení systému Windows, nastavení zabezpečení, místní zásady, možnosti zabezpečení
   
-   ![Vyhledejte zásady](./media/samr-policy-location.png)
+   ![Vyhledat zásadu](./media/samr-policy-location.png)
 
-2. Služba ATA přidáte do seznamu schválených účtů schopen provést tuto akci do moderního systému Windows.
+2. Přidejte ATA Service do seznamu schválených účtů, které můžou tuto akci provést v moderních systémech Windows.
  
    ![Přidat službu](./media/samr-add-service.png)
 
-3. **Služba ATA** (služba ATA vytvoří během instalace) teď má správná oprávnění k provedení SAM-R v prostředí.
+3. **Služba ATA** (služba ATA vytvořená během instalace) teď má správná oprávnění k provádění Sam-R v prostředí.
 
-> [!NOTE]
-> Ještě před vynucením nové zásady, ujistěte se, že vaše prostředí zůstalo zabezpečené, aniž by to ovlivnilo kompatibilita aplikací umožňující a ověření vašich navrhovaných změn v režimu auditování. 
-
- Další informace o SAM-R a zásadami skupiny, najdete v části [přístup k síti: Omezit klienti můžou vzdáleně volat SAM](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls).
+ Další informace o Sam-R a zásady skupiny najdete v tématu [přístup k síti: Omezí počet klientů, kteří mají povoleno provádět Vzdálená](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls)volání do Sam.
 
 
 > [!div class="step-by-step"]
 > [«Krok 8](install-ata-step7.md)
 
 ## <a name="see-also"></a>Viz také
-- [Průvodce nasazením ATA POC](http://aka.ms/atapoc)
-- [Nástroje pro změnu velikosti ATA](http://aka.ms/atasizingtool)
+- [Průvodce nasazením pro ATA podle ověření](http://aka.ms/atapoc)
+- [Nástroj pro změnu velikosti ATA](http://aka.ms/atasizingtool)
 - [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurace shromažďování událostí](configure-event-collection.md)
 - [Požadavky ATA](ata-prerequisites.md)
