@@ -1,31 +1,35 @@
 ---
 title: Co je nového v Azure Advanced Threat Protection (Azure ATP) | Microsoft Docs
-description: Popisuje nejnovější verze ochrany ATP v programu Azure a poskytuje informace o novinkách v jednotlivých verzích.
+description: Tento článek se často aktualizuje, aby vám věděl, co je nového v nejnovější verzi Azure Advanced Threat Protection (Azure ATP).
 keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 08/05/2019
+ms.date: 08/07/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: 23feedf3b48c3b21f594d764321f0e241e8408cb
-ms.sourcegitcommit: 8df26fb312472b8df1da70e581517223d26de8c2
-ms.translationtype: MT
+ms.openlocfilehash: 6ffc56c7ca8f6dcca76e1d200c3ba6f8cdf167ea
+ms.sourcegitcommit: db35bae8354fa35644e9334bfc37b9ffbafdaacc
+ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68781905"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68862612"
 ---
-# <a name="whats-new-in-azure-atp"></a>Co je nového v Azure ATP
+# <a name="whats-new-in-azure-advanced-threat-protection-azure-atp"></a>Co je nového v Azure Advanced Threat Protection (ATP Azure)
+
+Tento článek se často aktualizuje, aby vám věděl, co je nového v nejnovější verzi služby Azure ATP.
+
+Informační kanál RSS: Po aktualizaci této stránky se zobrazí oznámení zkopírováním a vložením následující adresy URL do čtečky informačních kanálů:`https://docs.microsoft.com/api/search/rss?search=%22This+article+is+updated+frequently+to+let+you+know+what%27s+new+in+the+latest+release+of+Azure+ATP%22&locale=en-us`
 
 Vydáno 4. srpna 2019
 
 ## <a name="azure-atp-release-289"></a>Azure ATP verze 2,89
 
-- **Vylepšení metod zjišťování**<br>Aby se zabránilo nadměrnému generování provozu protokolu NTLM při vytváření přesného přenosu cest LMP (), byly vylepšení v logice senzorů Azure ATP, aby se co nejvíce využívalo méně využívání protokolu NTLM a bylo výraznější používání protokolu Kerberos.  
+- **Vylepšení metod senzorů**<br>Aby se zabránilo nadměrnému generování provozu protokolu NTLM při tvorbě přesného přenosu cest LMP (), byly vylepšení pro metody senzoru ATP v Azure, která využívají méně využívání protokolu NTLM a významně využívají protokol Kerberos.  
 
 - **Vylepšení výstrahy: Podezřelé používání lístku (neexistující účet)**<br>Do podporovaných typů legitimace uvedených v tomto typu výstrahy byly přidány změny názvu SAM. Další informace o výstraze, včetně toho, jak zabránit tomuto typu aktivity a opravit, najdete v tématu [podezřelé použití lístku (neexistující účet)](atp-domain-dominance-alerts.md#suspected-golden-ticket-usage-nonexistent-account-external-id-2027).
 
