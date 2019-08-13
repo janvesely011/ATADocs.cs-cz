@@ -1,6 +1,6 @@
 ---
-title: Řešení potíží – známé problémy ochrany ATP v Azure | Dokumentace Microsoftu
-description: Popisuje, jak můžete řešit problémy v ochrany ATP v programu Azure.
+title: Řešení známých problémů služby Azure ATP | Microsoft Docs
+description: Popisuje, jak můžete řešit problémy v Azure ATP.
 keywords: ''
 author: mlottner
 ms.author: mlottner
@@ -13,71 +13,71 @@ ms.assetid: 23386e36-2756-4291-923f-fa8607b5518a
 ms.reviewer: itargoet
 ms.suite: ems
 ms.openlocfilehash: 639dc38eeb9f4944cdd011074463953a13a49966
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
+ms.sourcegitcommit: e185d6cf13ef0c40206a5d1980e3953ef8834a48
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 08/12/2019
 ms.locfileid: "65196619"
 ---
-# <a name="troubleshooting-azure-atp-known-issues"></a>Řešení potíží s Azure – ochrana ATP v programu známé problémy 
+# <a name="troubleshooting-azure-atp-known-issues"></a>Řešení známých problémů Azure ATP 
 
 
 ## <a name="deployment-log-location"></a>Umístění protokolu nasazení
  
-Protokoly nasazení služby Azure ATP jsou umístěné v adresáři temp uživatele, který příslušný produkt nainstaloval. Ve výchozím umístění instalace můžete najít na: C:\Users\Administrator\AppData\Local\Temp (nebo v jednom adresáři % temp %). Další informace najdete v tématu [analytických řešení potíží pomocí protokolů](troubleshooting-atp-using-logs.md)
+Protokoly nasazení ATP Azure jsou umístěné v dočasném adresáři uživatele, který produkt nainstaloval. Ve výchozím umístění instalace je možné ji najít na adrese: C:\Users\Administrator\AppData\Local\Temp (nebo jeden adresář nad% Temp%). Další informace najdete v tématu [řešení potíží s ATP pomocí protokolů](troubleshooting-atp-using-logs.md) .
 
-## <a name="proxy-authentication-problem-presents-as-a-licensing-error"></a>Problém s ověřováním proxy prezentuje jako chybu licencování
+## <a name="proxy-authentication-problem-presents-as-a-licensing-error"></a>Potíže s ověřováním proxy serveru představují chybu licencování
 
-Pokud během instalace senzoru se zobrazí následující chyba:  **Zaregistrovat kvůli problémům s licencováním se senzor nepovedlo.**
+Při instalaci senzorů se zobrazí následující chyba:  **Nepovedlo se zaregistrovat senzor z důvodu problémů s licencováním.**
 
-Položky protokolu nasazení: [1C 60: 1AA8] [2018-03-24T23:59:13] i000: 2018-03-25 02:59:13.1237 Info  InteractiveDeploymentManager ValidateCreateSensorAsync returned [\[]validateCreateSensorResult=LicenseInvalid[\]] [1C60:1AA8][2018-03-24T23:59:56]i000: 2018-03-25 02:59:56.4856 Info  InteractiveDeploymentManager ValidateCreateSensorAsync returned [\[]validateCreateSensorResult=LicenseInvalid[\]] [1C60:1AA8][2018-03-25T00:27:56]i000: 2018-03-25 03:27:56.7399 Debug SensorBootstrapperApplication Engine.Quit [\[]deploymentResultStatus=1602 isRestartRequired=False[\]] [1C60:15B8][2018-03-25T00:27:56]i500: Vypíná, ukončovací kód: 0x642
+Položky protokolu nasazení: [1C60:1AA8] [2018-03-24T23:59:13] i000: 2018-03-25 02:59:13.1237 Info  InteractiveDeploymentManager ValidateCreateSensorAsync returned [\[]validateCreateSensorResult=LicenseInvalid[\]] [1C60:1AA8][2018-03-24T23:59:56]i000: 2018-03-25 02:59:56.4856 Info  InteractiveDeploymentManager ValidateCreateSensorAsync returned [\[]validateCreateSensorResult=LicenseInvalid[\]] [1C60:1AA8][2018-03-25T00:27:56]i000: 2018-03-25 03:27:56.7399 Debug SensorBootstrapperApplication Engine.Quit [\[]deploymentResultStatus=1602 isRestartRequired=False[\]] [1C60:15B8][2018-03-25T00:27:56]i500: Vypínání, ukončovací kód: 0x642
 
 
-**Příčina:**
+**Způsobit**
 
-V některých případech se při komunikaci přes proxy server během ověřování může odpovídat na senzoru služby Azure ATP s chybou 401 nebo 403 místo chyby 407. Senzoru služby Azure ATP interpretovaly chyba 401 nebo 403 jako licencování problém a ne jako problém ověřování proxy serveru. 
+V některých případech při komunikaci prostřednictvím proxy serveru může během ověřování reagovat na senzor ATP Azure s chybou 401 nebo 403 namísto chyby 407. Senzor ATP Azure bude interpretovat chybu 401 nebo 403 jako problém s licencováním a ne jako problém s ověřováním proxy serveru. 
 
 **Řešení:**
 
-Ujistěte se, že senzor můžete přejít na *. atp.azure.com pomocí nakonfigurovaného proxy serveru bez ověřování. Další informace najdete v tématu [konfigurace proxy serveru k umožnění komunikace](configure-proxy.md).
+Zajistěte, aby senzor mohl procházet do *. atp.azure.com prostřednictvím nakonfigurovaného proxy serveru bez ověřování. Další informace najdete v tématu [konfigurace proxy serveru pro povolení komunikace](configure-proxy.md).
 
 
 
 
-## Azure ochrany ATP v programu senzor seskupování problém síťové karty <a name="nic-teaming"></a>
+## Problém seskupování síťových adaptérů senzorů ATP Azure<a name="nic-teaming"></a>
 
-Pokud se pokusíte nainstalovat senzor ochrany ATP v programu na počítači nakonfigurované s adaptérem seskupování síťových adaptérů, obdržíte chybu instalace. Pokud chcete nainstalovat na počítač nakonfigurovaný pomocí seskupování síťových adaptérů senzor ochrany ATP v programu, postupujte podle těchto pokynů:
+Pokud se pokusíte nainstalovat senzor ATP na počítač nakonfigurovaný pomocí adaptéru pro seskupování síťových adaptérů, dojde k chybě instalace. Pokud chcete senzor ATP nainstalovat na počítač nakonfigurovaný se seskupováním síťových adaptérů, postupujte podle těchto pokynů:
 
 Pokud jste ještě nenainstalovali senzor:
 
-1.  Stáhněte si Npcap z [ https://nmap.org/npcap/ ](https://nmap.org/npcap/).
-2.  WinPcap, odinstalujte, pokud byla nainstalována.
-3.  Instalace Npcap pomocí následujících možností: loopback_support = č & winpcap_mode = Ano
-4.  Instalace balíčku senzoru.
+1.  Stáhněte si Npcap [https://nmap.org/npcap/](https://nmap.org/npcap/)z.
+2.  Odinstalujte WinPcap, pokud byl nainstalován.
+3.  Nainstalujte Npcap s následujícími možnostmi: loopback_support = No & winpcap_mode = Yes.
+4.  Nainstalujte balíček senzoru.
 
-Pokud jste již nainstalovali senzor:
+Pokud jste už senzor nainstalovali:
 
-1.  Stáhněte si Npcap z [ https://nmap.org/npcap/ ](https://nmap.org/npcap/).
-2.  Odinstalujte senzoru.
-3.  WinPcap, odinstalujte.
-4.  Instalace Npcap pomocí následujících možností: loopback_support = č & winpcap_mode = Ano
-5.  Přeinstalujte balíčku senzoru.
+1.  Stáhněte si Npcap [https://nmap.org/npcap/](https://nmap.org/npcap/)z.
+2.  Odinstalujte senzor.
+3.  Odinstalujte WinPcap.
+4.  Nainstalujte Npcap s následujícími možnostmi: loopback_support = No & winpcap_mode = Yes.
+5.  Přeinstalujte balíček senzorů.
 
-## <a name="windows-defender-atp-integration-issue"></a>Problémy s integrací ochrany ATP v programu Windows Defender
+## <a name="windows-defender-atp-integration-issue"></a>Problém s integrací ochrany ATP v programu Windows Defender
 
-Azure Advanced Threat Protection umožňuje integrovat Azure ATP s ochrany ATP v programu Windows Defender. Zobrazit [integrace služby Azure ATP s ochrany ATP v programu Windows Defender](integrate-wd-atp.md) Další informace. 
+Rozšířená ochrana před internetovými útoky v Azure umožňuje integrovat Azure ATP s ochranou ATP v programu Windows Defender. Další informace najdete v tématu [integrace služby Azure ATP s ochranou ATP v programu Windows Defender](integrate-wd-atp.md) . 
 
-## <a name="vmware-virtual-machine-sensor-issue"></a>Problém senzor virtuálního počítače VMware
+## <a name="vmware-virtual-machine-sensor-issue"></a>Problém senzoru virtuálních počítačů VMware
 
-Pokud máte senzoru služby Azure ATP na virtuálních počítačích VMware, můžou se zobrazit monitorovací upozornění **některý síťový provoz se neanalyzuje**. K tomu dochází kvůli neshodě v konfiguraci ve VMware.
+Pokud máte senzor ATP Azure na virtuálních počítačích VMware, může se zobrazit výstraha monitorování. **některé síťové přenosy se**neanalyzují. K tomu dochází z důvodu neshody konfigurace ve VMware.
 
-Řešení tohoto problému:
+Problém vyřešíte takto:
 
-Nastavte následující nastavení na **0** nebo **zakázané** v konfiguraci síťové karty virtuálního počítače: TsoEnable, LargeSendOffload, TSO Offload, Giant TSO Offload.
+Nastavte následující nastavení na **hodnotu 0** nebo **zakázáno** v konfiguraci síťových adaptérů virtuálního počítače: TsoEnable, LargeSendOffload, TSO Offload, Obří TSO snižování zátěže.
 > [!NOTE]
-> Pro služby Azure ATP senzory, potřebujete jenom zakázat **IPv4, TSO Offload** v části konfigurace síťové karty.
+> V případě senzorů Azure ATP stačí v konfiguraci síťových adaptérů vypnout **snižování zátěže protokolu IPv4 TSO** .
 
- ![Problém senzor VMware](./media/vm-sensor-issue.png)
+ ![Problém se senzorem VMware](./media/vm-sensor-issue.png)
 
 ## <a name="see-also"></a>Viz také
 - [Požadavky služby Azure ATP](atp-prerequisites.md)

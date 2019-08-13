@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 08/07/2019
+ms.date: 08/11/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 377ae8f07022b8a4cdd0e83a225a2e027dfef445
-ms.sourcegitcommit: db35bae8354fa35644e9334bfc37b9ffbafdaacc
+ms.openlocfilehash: b4e9b7af867693dd41740fcf54dd0cdb47b06e34
+ms.sourcegitcommit: e185d6cf13ef0c40206a5d1980e3953ef8834a48
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68862635"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68951277"
 ---
 # <a name="azure-atp-prerequisites"></a>Požadavky služby Azure ATP
 
@@ -59,9 +59,9 @@ V této části jsou uvedené informace, které byste měli shromažďovat a tak
 
 - Pokud se pokusíte nainstalovat senzor Azure ATP na počítač nakonfigurovaný s adaptérem pro seskupování síťových adaptérů, dojde k chybě instalace. Pokud chcete senzor Azure ATP nainstalovat na počítač nakonfigurovaný se seskupováním síťových adaptérů, přečtěte si [problém seskupování síťových adaptérů senzorů Azure ATP](troubleshooting-atp-known-issues.md#nic-teaming).
 
-- Doporučujeme: Uživatel by měl mít oprávnění jen pro čtení pro kontejner odstraněných objektů. Díky tomu může Azure ATP detekovat odstranění uživatelů ze služby Active Directory. Informace o konfiguraci oprávnění jen pro čtení pro kontejner odstraněných objektů naleznete v části **Změna oprávnění v kontejneru odstraněného objektu** v článku [zobrazení nebo nastavení oprávnění pro objekt adresáře](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) .
+- Doporučení kontejneru odstraněných **objektů** : Uživatel by měl mít oprávnění jen pro čtení pro kontejner odstraněných objektů. Oprávnění jen pro čtení tohoto kontejneru umožňují službě Azure ATP detekovat odstranění uživatelů ze služby Active Directory. Informace o konfiguraci oprávnění jen pro čtení u kontejneru odstraněných objektů najdete v části **Změna oprávnění v kontejneru odstraněného objektu** v tématu [zobrazení nebo nastavení oprávnění pro objekt adresáře](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) .
 
-- Volitelné: Uživatelský účet uživatele, který nemá žádné síťové aktivity. Tento účet je nakonfigurovaný jako Honeytokenu uživatel Azure ATP. Další informace najdete v tématu [konfigurace vyloučení a honeytokenu uživatele](install-atp-step7.md).
+- Volitelné **honeytokenu**: Uživatelský účet uživatele, který nemá žádné síťové aktivity. Tento účet je nakonfigurovaný jako Honeytokenu uživatel Azure ATP. Další informace o použití Honeytokens najdete v tématu [konfigurace vyloučení a uživatel honeytokenu](install-atp-step7.md).
 
 - Volitelné: Při nasazování samostatného senzoru je nutné předávat události systému Windows 4776, 4732, 4733, 4728, 4729, 4756, 4757 a 7045 do služby Azure ATP, aby bylo možné dále vylepšit Azure ATP pass-the-hash, hrubou silou, úpravu citlivých skupin, Honeytokens detekci a Vytvoření škodlivé služby. Senzor ATP Azure tyto události přijímá automaticky. V rámci samostatného senzoru Azure ATP můžete tyto události přijímat z SIEM nebo nastavením předávání událostí systému Windows z řadiče domény. Shromážděné události poskytují Azure ATP dalšími informacemi, které nejsou k dispozici prostřednictvím síťového provozu řadiče domény.
 

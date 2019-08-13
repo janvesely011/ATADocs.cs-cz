@@ -5,25 +5,31 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 08/07/2019
+ms.date: 08/11/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: 6ffc56c7ca8f6dcca76e1d200c3ba6f8cdf167ea
-ms.sourcegitcommit: db35bae8354fa35644e9334bfc37b9ffbafdaacc
-ms.translationtype: HT
+ms.openlocfilehash: b190258096e7e3ea0d42c52931f02c148a725f21
+ms.sourcegitcommit: e185d6cf13ef0c40206a5d1980e3953ef8834a48
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68862612"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68951236"
 ---
 # <a name="whats-new-in-azure-advanced-threat-protection-azure-atp"></a>Co je nového v Azure Advanced Threat Protection (ATP Azure)
 
 Tento článek se často aktualizuje, aby vám věděl, co je nového v nejnovější verzi služby Azure ATP.
 
 Informační kanál RSS: Po aktualizaci této stránky se zobrazí oznámení zkopírováním a vložením následující adresy URL do čtečky informačních kanálů:`https://docs.microsoft.com/api/search/rss?search=%22This+article+is+updated+frequently+to+let+you+know+what%27s+new+in+the+latest+release+of+Azure+ATP%22&locale=en-us`
+
+Vydáno 11. srpna 2019
+
+## <a name="azure-atp-release-290"></a>Azure ATP verze 2,90
+
+- Verze zahrnuje vylepšení a opravy chyb pro infrastrukturu interního senzoru.
 
 Vydáno 4. srpna 2019
 

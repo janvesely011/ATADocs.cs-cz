@@ -1,53 +1,55 @@
 ---
-title: Azure osobní údaje zásady rozšířené ochrany před internetovými útoky | Dokumentace Microsoftu
-description: Obsahuje odkazy na informace o tom, jak odstranit soukromé informace a osobní data ze služby Azure ATP.
+title: Zásady osobních údajů rozšířené ochrany před internetovými útoky v Azure | Microsoft Docs
+description: Obsahuje odkazy na informace o tom, jak odstranit soukromé informace a osobní údaje z Azure ATP.
 keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 10/04/2018
+ms.date: 08/11/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 224e629a-0e82-458c-bb03-b67070a9241d
 ms.reviewer: ophirp
 ms.suite: ems
-ms.openlocfilehash: 6758527b61e2b1ab440898ed23aa7d507d8f3b3c
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
+ms.openlocfilehash: af8481be19535903ca1e992a62a813acb473fcf0
+ms.sourcegitcommit: e185d6cf13ef0c40206a5d1980e3953ef8834a48
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65196798"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68951259"
 ---
-# <a name="azure-atp-data-security-and-privacy"></a>Zabezpečení dat ve službě Azure ATP a ochrana osobních údajů
+# <a name="azure-atp-data-security-and-privacy"></a>Zabezpečení dat a ochrana osobních údajů v Azure ATP
 
 [!INCLUDE [Handle personal data](../includes/gdpr-intro-sentence.md)]
 
-## <a name="search-for-and-identify-personal-data"></a>Vyhledat a identifikovat osobní údaje 
+## <a name="search-for-and-identify-personal-data"></a>Hledání a identifikace osobních údajů 
 
-V rozšířené ochrany před internetovými útoky pro Azure můžete zobrazit identifikovatelné osobní údaje [ochrany ATP v programu Azure portal](workspace-portal.md) pomocí [vyhledávacího](workspace-portal.md#search-bar). 
+Rozšířená ochrana před internetovými útoky v Azure vám umožní zobrazit identifikovatelné osobní údaje z [portálu Azure ATP](workspace-portal.md) pomocí [panelu hledání](workspace-portal.md#search-bar). 
 
-Vyhledat konkrétního uživatele nebo počítače a klikněte na některou entitu, aby vám uživatele nebo počítače [stránku profilu](entity-profiles.md). Profil, který vám poskytne komplexní podrobnosti o entitě ze služby Active Directory, včetně síťové aktivity související s touto entitou a jeho historie.
+Vyhledejte konkrétního uživatele nebo počítač a kliknutím na entitu se přepněte na [stránku profil](entity-profiles.md)uživatele nebo počítače. Profil poskytuje podrobné informace o entitě ze služby Active Directory, včetně síťové aktivity spojené s touto entitou a její historií.
 
-Azure ATP osobních údajů je získané ze služby Active Directory pomocí senzoru služby Azure ATP a uloženy v databázi back-endu.
+Osobní údaje z Azure ATP se shromažďují ze služby Active Directory prostřednictvím snímače ATP Azure a ukládají se do back-endu databáze.
 
-## <a name="update-personal-data"></a>Aktualizovat osobní údaje 
+## <a name="update-personal-data"></a>Aktualizace osobních údajů 
 
-Azure ATP osobní uživatelské data jsou odvozena z objektu uživatele ve službě Active Directory organizace. Proto se projeví změny provedené v profilu uživatele v organizaci AD v ochrany ATP v programu Azure.
+Data osobního uživatele v Azure ATP jsou odvozená od objektu uživatele ve službě Active Directory organizace. Změny provedené v profilu uživatele v organizačním prostředí se proto projeví ve službě Azure ATP.
 
 
-## <a name="delete-personal-data"></a>Odstranění osobních údajů 
+## <a name="delete-personal-data"></a>Odstranit osobní údaje 
 
-Po odstranění uživatele ze služby Active Directory organizace ochrany ATP v programu Azure automaticky odstraní profil uživatele a všechny související síťové aktivity v roce. Můžete také [odstranit](working-with-suspicious-activities.md#review-suspicious-activities-on-the-attack-time-line) všechny výstrahy zabezpečení, které obsahují osobní údaje. 
+- Po odstranění uživatele ze služby Active Directory organizace Azure ATP automaticky odstraní profil uživatele a všechny související síťové aktivity v roce. Můžete také [Odstranit](working-with-suspicious-activities.md#review-suspicious-activities-on-the-attack-time-line) všechny výstrahy zabezpečení, které obsahují osobní údaje. 
+
+- Doporučuje se oprávnění **jen pro čtení** na kontejneru odstraněných **objektů** . Další informace o tom, jak se ve službě Azure ATP používá oprávnění kontejneru odstraněné objekty * *, najdete v tématu doporučení kontejneru odstraněných objektů v tématu [požadavky Azure ATP](https://docs.microsoft.com/azure-advanced-threat-protection/atp-prerequisites#before-you-start).
 
 ## <a name="export-personal-data"></a>Export osobních dat 
 
-V ochraně ATP v Azure máte možnost [exportovat](working-with-suspicious-activities.md#review-suspicious-activities-on-the-attack-time-line) informace o výstrahách zabezpečení do aplikace Excel. Tato funkce zároveň exportuje osobní údaje. 
+V Azure ATP máte možnost [exportovat](working-with-suspicious-activities.md#review-suspicious-activities-on-the-attack-time-line) informace o výstrahách zabezpečení do Excelu. Tato funkce také exportuje osobní údaje. 
  
 ## <a name="audit-personal-data"></a>Audit osobních dat
 
-Ochrana ATP v programu Azure implementuje auditu změn osobní údaje, včetně, odstraňování a export záznamů osobní údaje. Doba uchování záznamu pro audit je 90 dní. Auditování v ochrany ATP v programu Azure je funkce back-end a není k dispozici zákazníkům.
+Azure ATP implementuje Audit změn osobních údajů, včetně odstranění a exportu osobních záznamů. Doba uchovávání záznamu auditu je 90 dní. Auditování v Azure ATP je back-endové funkce a není pro ně přístupná pro zákazníky.
  
 ## <a name="additional-resources"></a>Další zdroje
 
-- Informace o důvěryhodnosti ochrany ATP v programu Azure a dodržování předpisů, najdete v článku [portálu důvěryhodnosti služeb](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted) a [dodržování předpisů GDPR pro Microsoft 365 Enterprise lokality](https://docs.microsoft.com/microsoft-365/compliance/compliance-solutions-overview).
+- Informace o důvěryhodnosti a dodržování předpisů v Azure ATP najdete na [portálu Trust Service](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted) a na [webu dodržování předpisů Microsoft 365 Enterprise GDPR](https://docs.microsoft.com/microsoft-365/compliance/compliance-solutions-overview).
