@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 07/25/2019
+ms.date: 08/20/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 9c173d28-a944-491a-92c1-9690eb06b151
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 347f46b51267762760783fdc44b689e213ba29d8
-ms.sourcegitcommit: 4662ad41addf92727367874d909937fa331fb866
+ms.openlocfilehash: ba1c8ac59dcf762103cd4d0e7a5a54c2b02e1e9a
+ms.sourcegitcommit: 2aab3c4244db694616ec02a9b8ae2e266d6fdddc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68485042"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69629304"
 ---
 # <a name="configure-endpoint-proxy-and-internet-connectivity-settings-for-your-azure-atp-sensor"></a>Konfigurace nastavení proxy serveru Endpoint a připojení k Internetu pro senzor ATP Azure
 
@@ -73,7 +73,8 @@ Předchozí adresy URL se automaticky mapují na správné umístění služby p
 
  
 > [!NOTE]
-> Při provádění kontroly SSL na provozu v síti Azure ATP (mezi senzorem a službou Azure ATP) musí kontrola SSL podporovat vzájemnou kontrolu.
+> Za účelem zajištění maximálního zabezpečení a ochrany osobních údajů využívá Azure ATP vzájemné ověřování na základě certifikátů mezi jednotlivými senzory Azure ATP a cloudovým back-endu Azure ATP. Pokud se ve vašem prostředí používá kontrola SSL, ujistěte se, že je kontrola nakonfigurovaná pro vzájemné ověřování, takže není v procesu ověřování narušena.
+
 
 
 ## <a name="see-also"></a>Viz také

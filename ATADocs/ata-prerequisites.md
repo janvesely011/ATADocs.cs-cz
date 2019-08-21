@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 08/07/2019
+ms.date: 08/20/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: a5f90544-1c70-4aff-8bf3-c59dd7abd687
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 139ea7e4eaecadeaf3fd57fb8ed7afe1dd8ea096
-ms.sourcegitcommit: db35bae8354fa35644e9334bfc37b9ffbafdaacc
+ms.openlocfilehash: e08668199056c59093caa202123cf01a4ed303cc
+ms.sourcegitcommit: 2aab3c4244db694616ec02a9b8ae2e266d6fdddc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68862570"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69629327"
 ---
 # <a name="ata-prerequisites"></a>Požadavky ATA
 
@@ -102,6 +102,7 @@ Při práci na fyzickém serveru databáze ATA vyžaduje, abyste v systému BIOS
 K zajištění optimálního výkonu nastavte **možnost napájení** pro ATA Center na hodnotu **Vysoký výkon**.<br>
 Počet řadičů domény, které sledujete, a zatížení jednotlivých řadičů domény určuje, jaké požadavky na serveru jsou potřeba. Další informace najdete v tématu [plánování kapacity ATA](ata-capacity-planning.md).
 
+V operačních systémech Windows 2008 R2 a 2012 není brána podporovaná v režimu [více procesorů](https://docs.microsoft.com/windows/win32/procthread/processor-groups) . Další informace o režimu skupiny s více procesory najdete v tématu [řešení potíží](troubleshooting-ata-known-errors.md##multi-processor-group-mode). 
 
 ### <a name="time-synchronization"></a>Časová synchronizace
 

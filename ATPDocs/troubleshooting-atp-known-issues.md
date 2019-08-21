@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 23386e36-2756-4291-923f-fa8607b5518a
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 639dc38eeb9f4944cdd011074463953a13a49966
-ms.sourcegitcommit: e185d6cf13ef0c40206a5d1980e3953ef8834a48
+ms.openlocfilehash: b78b7f39b7d5c94e2709e080677344919dd422cf
+ms.sourcegitcommit: 2aab3c4244db694616ec02a9b8ae2e266d6fdddc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "65196619"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69629308"
 ---
 # <a name="troubleshooting-azure-atp-known-issues"></a>Řešení známých problémů Azure ATP 
 
@@ -62,6 +62,14 @@ Pokud jste už senzor nainstalovali:
 3.  Odinstalujte WinPcap.
 4.  Nainstalujte Npcap s následujícími možnostmi: loopback_support = No & winpcap_mode = Yes.
 5.  Přeinstalujte balíček senzorů.
+
+## <a name="multi-processor-group-mode"></a>Režim více procesorů 
+Pro operační systémy Windows 2008 R2 a 2012 není senzor Azure ATP podporován v režimu více procesorů.
+
+Navrhovaná možná řešení:
+- Je-li technologie Hyper-Threading zapnutá, vypněte ji. To může snížit počet logických jader dostatečně, aby nedocházelo k tomu, že byste museli spouštět v režimu **více procesorů** . 
+
+- Pokud má váš počítač méně než 64 logických jader a běží na hostiteli HP, možná budete moct změnit nastavení systému BIOS **Optimalizace velikosti skupiny NUMA** z výchozí hodnoty **CLUSTERED** na **plochý**. 
 
 ## <a name="windows-defender-atp-integration-issue"></a>Problém s integrací ochrany ATP v programu Windows Defender
 

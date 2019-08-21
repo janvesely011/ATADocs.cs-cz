@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: b4e9b7af867693dd41740fcf54dd0cdb47b06e34
-ms.sourcegitcommit: e185d6cf13ef0c40206a5d1980e3953ef8834a48
+ms.openlocfilehash: ad130b0956020696c30709627e9671ff1e46b1cc
+ms.sourcegitcommit: 2aab3c4244db694616ec02a9b8ae2e266d6fdddc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68951277"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69629348"
 ---
 # <a name="azure-atp-prerequisites"></a>Požadavky služby Azure ATP
 
@@ -103,7 +103,10 @@ Během instalace je nainstalováno rozhraní .NET Framework 4,7 a může vyžado
 
 Senzor ATP Azure vyžaduje minimálně 2 jádra a 6 GB paměti RAM nainstalované na řadiči domény.
 Pro zajištění optimálního výkonu nastavte **možnost napájení** snímače ATP Azure na **vysoký výkon**.
+
 Senzory Azure ATP se dají nasadit na řadiče domény různých zatížení a velikostí v závislosti na objemu síťových přenosů do a z řadičů domény a na množství nainstalovaných prostředků.
+
+Pro operační systémy Windows 2008 R2 a 2012 není senzor Azure ATP podporován v režimu [více procesorů](https://docs.microsoft.com/windows/win32/procthread/processor-groups) . Další informace o režimu skupiny s více procesory najdete v tématu [řešení potíží](troubleshooting-atp-known-issues.md##multi-processor-group-mode). 
 
 >[!NOTE] 
 > Při spuštění jako virtuální počítač není podporována dynamická paměť nebo jakákoli jiná funkce pro vybublinování paměti.
