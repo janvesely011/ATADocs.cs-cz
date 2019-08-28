@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 08/11/2019
+ms.date: 08/27/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ad130b0956020696c30709627e9671ff1e46b1cc
-ms.sourcegitcommit: 2aab3c4244db694616ec02a9b8ae2e266d6fdddc
+ms.openlocfilehash: e48b05e17b9edc5ad1ef2436284c60a98a7f68aa
+ms.sourcegitcommit: 033ac9277effa00c4423caf6f2a3febd796ca3db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69629348"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70052428"
 ---
 # <a name="azure-atp-prerequisites"></a>Požadavky služby Azure ATP
 
@@ -73,7 +73,7 @@ Přístup k portálu Azure ATP je prostřednictvím prohlížeče, který podpor
 -   Minimální rozlišení obrazovky na šířku 1 700 pixelů
 -   Brána firewall/proxy Open-ke komunikaci s cloudovou službou Azure ATP *. atp.azure.com port 443 musí být v bráně firewall nebo proxy serveru otevřené.
 
- ![Diagram architektury Azure ATP](media/ATP-architecture-topology.png)
+ ![Diagram architektury Azure ATP](media/azure-atp-architecture.png)
 
 
 > [!NOTE]

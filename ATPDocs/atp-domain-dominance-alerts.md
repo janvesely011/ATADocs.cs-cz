@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 07/07/2019
+ms.date: 08/26/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 0b3a1db5-0d43-49af-b356-7094cc85f0a5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: f53d4930ed6fc4492f6360b3aab12e9c3655b390
-ms.sourcegitcommit: 09275d3400534200fa6ea572e89e440b3cc58360
+ms.openlocfilehash: 1bfed94e29200a52eba6de8758e1241b14084264
+ms.sourcegitcommit: 033ac9277effa00c4423caf6f2a3febd796ca3db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67786401"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70052389"
 ---
 # <a name="tutorial-domain-dominance-alerts"></a>Návodu Výstrahy před dominancí v doméně  
 
@@ -339,9 +339,9 @@ Aplikace se můžou ověřovat pomocí nižší šifrovací šifry. Některé js
 
 ## <a name="suspected-golden-ticket-usage-forged-authorization-data-external-id-2013"></a>Podezřelé použití zlatého lístku (data s falešným oprávněním) (externí ID 2013)
 
-*Předchozí název:* Eskalace oprávnění prostřednictvím zfalšovaných dat autorizace
+Předchozí název: Eskalace oprávnění prostřednictvím zfalšovaných dat autorizace
 
-Popis známých chyb zabezpečení ve starších verzích Windows serveru umožňuje útočníkům manipulovat s privilegovaným certifikátem (PAC), polem v lístku Kerberos, který obsahuje data autorizace uživatele (ve službě Active Directory se jedná o členství ve skupině). a udělení dalších oprávnění útočníkům. 
+**Popis** Známá ohrožení zabezpečení ve starších verzích systému Windows Server umožňují útočníkům manipulovat s privilegovaným certifikátem (PAC), polem v lístku protokolu Kerberos, který obsahuje data autorizace uživatele (ve službě Active Directory se jedná o členství ve skupině), udělení Další oprávnění útočníci. 
  
 **TP, B-TP nebo FP**
 <br>Pro počítače, které jsou opravené pomocí MS14-068 (řadič domény) nebo MS11-013 (Server), se nezdaří a vygeneruje se chyba protokolu Kerberos. 

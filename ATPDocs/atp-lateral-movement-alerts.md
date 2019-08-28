@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 08/05/2019
+ms.date: 08/26/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 2257eb00-8614-4577-b6a1-5c65085371f2
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: dd78f2d18010b043dc58bfb6fac24429a36ba2f1
-ms.sourcegitcommit: 8df26fb312472b8df1da70e581517223d26de8c2
+ms.openlocfilehash: a20c26d45f8cc0ddda05b103e03fa16f9de569b8
+ms.sourcegitcommit: 033ac9277effa00c4423caf6f2a3febd796ca3db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68781841"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70052445"
 ---
 # <a name="tutorial-lateral-movement-alerts"></a>Návodu Výstrahy před taktikou lateral movement  
 
@@ -177,7 +177,7 @@ V tomto zjišťování se aktivuje výstraha zabezpečení ATP Azure ATP, když 
 
 **Popis**
 
-Systém Exchange Server je možné nakonfigurovat tak, aby aktivoval ověřování NTLM s účtem Exchange serveru na vzdálený server http spuštěný útočníkem. Tento server počká, než komunikace s Exchange serverem přenáší své vlastní citlivé ověřování na jakýkoli jiný server nebo ještě více zájmů služby Active Directory přes protokol LDAP, a připraví ověřovací údaje.
+Systém Exchange Server je možné nakonfigurovat tak, aby aktivoval ověřování NTLM pomocí účtu Exchange serveru na vzdálený server http, a to prostřednictvím útočníka. Server počká, než komunikace s Exchange serverem přenáší své vlastní citlivé ověřování na jakýkoli jiný server nebo ještě více zájmů služby Active Directory přes protokol LDAP, a přenese informace o ověřování.
 
 Jakmile Server Relay obdrží ověřování NTLM, poskytne mu výzvu, která byla původně vytvořena cílovým serverem. Klient odpoví na výzvu, zabrání útočníkovi v přijetí odpovědi a použije ho k pokračování vyjednávání protokolu NTLM s cílovým řadičem domény. 
 
