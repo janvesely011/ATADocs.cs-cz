@@ -5,30 +5,30 @@ keywords: ''
 author: rkarlin
 ms.author: rkarlin
 manager: rkarlin
-ms.date: 3/21/2018
+ms.date: 8/27/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: b8ad5511-8893-4d1d-81ee-b9a86e378347
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: 307e7ff1e41b166088cb31822070116f134b36e3
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
+ms.openlocfilehash: cd4af40af83b060093b0b5822d0e9110a4ada4f0
+ms.sourcegitcommit: bb33e24591acf11688955318b5938bc3d662a398
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65195622"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70076644"
 ---
 # <a name="troubleshooting-ata-using-the-ata-logs"></a>Řešení potíží s ATA pomocí protokolů ATA
 
-*Platí pro: Advanced Threat Analytics verze 1.9*
+*Platí pro: Advanced Threat Analytics verze 1,9*
 
 Protokoly ATA poskytují přehled o tom, co jednotlivé komponenty ATA v libovolném časovém okamžiku dělají.
 
 ## <a name="ata-gateway-logs"></a>Protokoly ATA Gateway
 V této části všechny odkazy na ATA Gateway platí také pro ATA Lightweight Gateway. 
 
-Protokoly ATA Gateway jsou umístěné v podsložce s názvem **protokoly** kde je služba ATA nainstalovaná; výchozí umístění je: **C:\Program Files\Microsoft Advanced Threat Analytics\\**. Ve výchozím umístění instalace můžete najít na: **C:\Program Files\Microsoft Advanced Threat Analytics\Gateway\Logs**.
+Protokoly ATA Gateway jsou umístěné v podsložce s názvem **protokoly** , kde je nainstalovaný ATA. výchozí umístění je: **C:\Program Files\Microsoft Advanced Threat Analytics\\** . Ve výchozím umístění instalace je možné ji najít na adrese: **C:\Program Files\Microsoft Advanced Threat Analytics\Gateway\Logs**.
 
 ATA Gateway využívá tyto protokoly:
 
@@ -40,14 +40,14 @@ ATA Gateway využívá tyto protokoly:
 
 -   **Microsoft.Tri.Gateway-ExceptionStatistics.log** – V tomto protokolu jsou seskupeny všechny podobné chyby a výjimky a je zjištěn jejich počet.
     Tento protokol je při každém spuštění služby ATA Gateway prázdný a aktualizuje se každou minutu. Nejčastěji se využívá ke zjištění, jestli v komponentě ATA Gateway dochází k nějakým novým chybám nebo problémům (vzhledem k tomu, že chyby jsou seskupené, jsou přehlednější a je jednodušší zjistit, jestli dochází k nějakým novým problémům).
--   **Microsoft.Tri.Gateway.Updater.log** – tento protokol se používá pro aktualizační proces brány, který je zodpovědný za automatickou aktualizaci ATA Gateway, pokud k tomu automaticky nakonfigurované. V případě ATA Lightweight Gateway je aktualizační proces také odpovědný za omezení prostředků ATA Lightweight Gateway.
+-   **Microsoft. Tri. Gateway.** provedet. log – Tento protokol se používá pro proces aktualizace brány, který zodpovídá za aktualizaci komponenty ATA Gateway, pokud je nakonfigurovaná tak, aby se automaticky provede. V případě ATA Lightweight Gateway je aktualizační proces také odpovědný za omezení prostředků ATA Lightweight Gateway.
 -   **Microsoft.Tri.Gateway.Updater-ExceptionStatistics.log** – V tomto protokolu jsou seskupeny všechny podobné chyby a výjimky a je zjištěn jejich počet. Tento protokol je při každém spuštění služby ATA Updater prázdný a aktualizuje se každou minutu. Umožňuje zjistit, jestli ve službě ATA Updater nedošlo k novým chybám nebo problémům. Chyby jsou seskupené, jsou přehlednější a je jednodušší zjistit, jestli došlo k chybám nebo problémům nového typu.
 
 > [!NOTE]
 > První tři soubory protokolů mají maximální velikost až 50 MB. Při dosažení této velikosti se otevře nový soubor protokolu a předchozí je přejmenován na &lt;původní název souboru&gt;-Archived-00000 (číslo při každém přejmenování zvětší). Pokud již existuje více než 10 souborů stejného typu, budou nejstarší z nich ve výchozím nastavení odstraněny.
 
 ## <a name="ata-center-logs"></a>Protokoly ATA Center
-Protokoly ATA Center jsou umístěné v podsložce s názvem **Logs**. Ve výchozím umístění instalace můžete najít na: **C:\Program Files\Microsoft Advanced Threat Analytics\Center\Logs**".
+Protokoly ATA Center jsou umístěné v podsložce s názvem **Logs**. Ve výchozím umístění instalace je možné ji najít na adrese: **C:\Program Files\Microsoft Advanced Threat Analytics\Center\Logs**".
 > [!Note]
 > Protokoly konzoly ATA, které se dříve ukládaly v protokolech služby IIS, se teď nachází v protokolech služby ATA Center.
 
@@ -60,14 +60,14 @@ ATA Center využívá tyto protokoly:
 -   **Microsoft.Tri.Center-Errors.log** – Tento protokol obsahuje jenom chyby, které zachytila komponenta ATA Center. Nejčastěji se využívá k provádění kontroly stavu a zkoumání příčin problémů, které je potřeba časově zařadit.
 
 -   **Microsoft.Tri.Center-ExceptionStatistics.log** – V tomto protokolu jsou seskupeny všechny podobné chyby a výjimky a je zjištěn jejich počet.
-    Tento protokol je při každém spuštění služby ATA Center prázdný a aktualizuje se každou minutu. Nejčastěji se ke zjištění, pokud existují nějakým novým chybám nebo problémům ve službě ATA Center – vzhledem k tomu, že chyby jsou seskupené, je jednodušší rychle zjistit, pokud je nové chybě nebo problému.
+    Tento protokol je při každém spuštění služby ATA Center prázdný a aktualizuje se každou minutu. Jeho hlavní použití je porozumění v případě, že došlo k nějakým novým chybám nebo problémům s komponentou ATA Center – protože chyby jsou seskupené, je snazší rychle pochopit, jestli došlo k nové chybě nebo problému.
 
 > [!NOTE]
 > První tři soubory protokolů mají maximální velikost až 50 MB. Při dosažení této velikosti se otevře nový soubor protokolu a předchozí je přejmenován na &lt;původní název souboru&gt;-Archived-00000 (číslo při každém přejmenování zvětší). Pokud již existuje více než 10 souborů stejného typu, budou nejstarší z nich ve výchozím nastavení odstraněny.
 
 
 ## <a name="ata-deployment-logs"></a>Protokoly nasazení ATA
-Protokoly nasazení ATA jsou umístěné v adresáři temp uživatele, který příslušný produkt nainstaloval. Ve výchozím umístění instalace můžete najít na: **C:\Users\Administrator\AppData\Local\Temp** (nebo jednomu adresáři % temp %).
+Protokoly nasazení ATA jsou umístěné v adresáři temp uživatele, který příslušný produkt nainstaloval. Ve výchozím umístění instalace je možné ji najít na adrese: C:\Users přihlášeného **uživatele>\AppData\Local\Temp(nebojedenadresářnad%Temp%)\<** .
 
 Protokoly nasazení komponenty ATA Center:
 

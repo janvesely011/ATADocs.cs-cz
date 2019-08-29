@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 10/04/2018
+ms.date: 08/28/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 23386e36-2756-4291-923f-fa8607b5518a
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: b78b7f39b7d5c94e2709e080677344919dd422cf
-ms.sourcegitcommit: 2aab3c4244db694616ec02a9b8ae2e266d6fdddc
+ms.openlocfilehash: b5709955763015870067490ab458c1e94cdf567b
+ms.sourcegitcommit: bb33e24591acf11688955318b5938bc3d662a398
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69629308"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70076662"
 ---
 # <a name="troubleshooting-azure-atp-known-issues"></a>Řešení známých problémů Azure ATP 
 
@@ -41,8 +41,18 @@ V některých případech při komunikaci prostřednictvím proxy serveru může
 
 Zajistěte, aby senzor mohl procházet do *. atp.azure.com prostřednictvím nakonfigurovaného proxy serveru bez ověřování. Další informace najdete v tématu [konfigurace proxy serveru pro povolení komunikace](configure-proxy.md).
 
+## <a name="silent-installation-error-when-attempting-to-use-powershell"></a>Při pokusu o použití prostředí PowerShell došlo k chybě tiché instalace.  
+
+Pokud se při instalaci tichého senzoru pokusíte použít PowerShell a obdržíte tuto chybu: 
 
 
+    "Azure ATP sensor Setup.exe" "/quiet" NetFrameworkCommandLineArguments="/q" Acce ...           Unexpected token '"/quiet"' in expression or statement."
+
+**Způsobit** Při použití PowerShellu se nepovedlo zahrnout předponu./, která se vyžaduje k instalaci. 
+
+**Řešení:** K úspěšné instalaci použijte příkaz dokončit. 
+
+    ./"Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKey="<Access Key>"
 
 ## Problém seskupování síťových adaptérů senzorů ATP Azure<a name="nic-teaming"></a>
 
