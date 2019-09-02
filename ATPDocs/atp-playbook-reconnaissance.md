@@ -1,207 +1,209 @@
 ---
-title: Kurz služby Azure ATP Rekognoskace playbook | Dokumentace Microsoftu
-description: Kurz playbook Rekognoskace ochrany ATP v programu Azure popisuje, jak simulovat Rekognoskace hrozeb pro zjišťování pomocí služby Azure ATP.
+title: Kurz k Azure ATP rekognoskace PlayBook | Microsoft Docs
+description: Kurz Azure ATP rekognoskace PlayBook popisuje, jak simulovat rekognoskace hrozby pro detekci pomocí Azure ATP.
 ms.service: azure-advanced-threat-protection
 ms.topic: tutorial
 author: mlottner
 ms.author: mlottner
-ms.date: 03/03/2019
+ms.date: 09/01/2019
 ms.reviewer: itargoet
-ms.openlocfilehash: 20e91bc710dc184fa710cf7fd59cb9bd9d625d20
-ms.sourcegitcommit: 929f28783110c7e114ab36d4cccd50563f4030df
+ms.openlocfilehash: 11312f033261dd74f13dc0b3b9c093617e2c281c
+ms.sourcegitcommit: f7c75bc5715c5bda0b3110364e2aebddddce8a13
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57253959"
+ms.lasthandoff: 09/01/2019
+ms.locfileid: "70209244"
 ---
-# <a name="tutorial-reconnaissance-playbook"></a>Kurz: Rekognoskace playbook
+# <a name="tutorial-reconnaissance-playbook"></a>Návodu Rekognoskace PlayBook
 
-Druhé části kurzu této série čtyř částí pro výstrahy zabezpečení služby Azure ATP se playbook rekognoskace. Účelem ochrany ATP v programu Azure testovacího prostředí výstrahy zabezpečení je pro ilustraci **ochrany ATP v programu Azure**možnosti v identifikace a detekce podezřelých aktivit a potenciální útoky na vaší síti. Playbook vysvětluje, jak testujeme funkčnost ve některé služby Azure ATP *diskrétní* detekce a zaměřuje se na služby Azure ATP *podpis*– na základě funkcí. Playbook neobsahuje výstrahy nebo detekcí podle rozšířené strojové učení nebo uživatele/entity na základě behaviorální způsoby detekce, potřebují období učení s skutečné síťový provoz po dobu až 30 dnů. Další informace o jednotlivých kurzu této série najdete v článku [přehled výstrah laboratoře zabezpečení ochrany ATP v programu](atp-playbook-lab-overview.md).
+Druhý kurz v této čtyřech řadách pro výstrahy zabezpečení služby Azure ATP je rekognoskace PlayBook. Účelem testovacího prostředí pro výstrahy zabezpečení Azure ATP je Ukázat možnosti **ATP Azure**při identifikaci a detekci podezřelých aktivit a potenciálních útoků proti vaší síti. PlayBook vysvětluje, jak testovat z některých diskrétních detekcí služby Azure ATP a zaměřuje se na funkce založené na podpisechAzure atp. Tato PlayBook nezahrnuje výstrahy nebo detekce na základě pokročilých detekcí strojového učení nebo rozpoznávání chování založeného na uživateli nebo entitách, protože vyžadují období učení se skutečným provozem sítě po dobu až 30 dnů. Další informace o jednotlivých kurzech v této sérii najdete v tématu [Přehled testovacího prostředí výstrah zabezpečení ATP](atp-playbook-lab-overview.md).
 
-Playbook ukazuje detekce hrozeb a výstrahy zabezpečení služby ochrany ATP v programu Azure pro simulované útoků z běžné každodenní praxe, veřejně dostupné nástroje hackerů a útoku.
+Tento PlayBook ilustruje detekci hrozeb a bezpečnostní výstrahy služby Azure ATP pro simulované útoky ze běžných a veřejně dostupných nástrojů pro hackery a útoky.
 
-V tomto kurzu provedete následující:
+V tomto kurzu provedete tyto kroky:
 > [!div class="checklist"]
-> * Simulovat sondování mapování sítě
-> * Simulovat rekognoskace adresářové služby
-> * Simulace uživatelů a rekognoskace IP adresa (SMB)
-> * Zkontrolujte výstrahy zabezpečení ze simulovaného rekognoskace v Azure ATP
+> * Simulovat mapování sítě rekognoskace
+> * Simulace rekognoskace adresářové služby
+> * Simulace uživatele a IP adresy (SMB) rekognoskace
+> * Kontrola výstrah zabezpečení z simulovaných rekognoskace v Azure ATP
 
 ## <a name="prerequisites"></a>Požadavky
 
-[Dokončení ochrany ATP v programu zabezpečení oznámení testovacího prostředí](atp-playbook-setup-lab.md)
-  - Co možná nejvíce doporučujeme postupujte podle pokynů pro nastavení testovacího prostředí. Čím blíž testovacího prostředí je nastavení navrhované testovacího prostředí, tím snazší bude dodržovat testovacích postupů ochrany ATP v Azure.
+[Dokončené testovací prostředí výstrah zabezpečení ATP](atp-playbook-setup-lab.md)
+  - Doporučujeme co nejpřesněji sledovat pokyny k instalaci testovacího prostředí. Tím, jak vaše testovací prostředí slouží k navrhovanému nastavení testovacího prostředí, je snazší postupovat podle testovacích postupů Azure ATP.
 
-## <a name="simulate-a-reconnaissance-attack"></a>Simulace útoku Rekognoskace
+## <a name="simulate-a-reconnaissance-attack"></a>Simulace útoku rekognoskace
 
-Jakmile útočník získá přítomnost ve vašem prostředí, začíná jejich kampaň rekognoskace. V této fázi útočník bude obvykle stráví, zkoumání. Se pokusí zjistit počítače, které vás zajímají, vytvořit výčet uživatelů a skupin, shromažďovat důležité IP adresy a mapování prostředků vaší organizace a slabá místa. Aktivity rekognoskace umožnit, aby Seznamte se podrobně a dokončete mapování prostředí pro pozdější použití.
+Jakmile útočník získá v prostředí přítomnost, zahájí jejich rekognoskace kampaň. V této fázi bude útočník obvykle ztrácet čas prohledáním. Snaží se najít počítače, které vás zajímají, vytvořit výčet uživatelů a skupin, shromáždit důležité IP adresy a namapovat prostředky a slabé stránky vaší organizace. Rekognoskace aktivity umožňují útočníkům získat důkladné porozumění a úplné mapování vašeho prostředí pro pozdější použití.
 
-Rekognoskace útoku testovací metody:
+Metody testování útoků rekognoskace:
 
-* Rekognoskace mapování sítě
-* Rekognoskace služby adresáře
-* Rekognoskace uživatele a IP adresa (SMB)
+* Mapování sítě rekognoskace
+* Rekognoskace adresářové služby
+* Uživatel a IP adresa (SMB) rekognoskace
 
 ## <a name="network-mapping-reconnaissance-dns"></a>Rekognoskace mapování sítě (DNS)
 
-Jeden z prvních věcí, které se útočník pokusí je pokusit se získat kopii všech informací DNS. V případě úspěchu, že útočník získá rozsáhlé informace o vašem prostředí, která potenciálně zahrnuje podobné informace o vašich prostředí nebo sítí.
+Jedním z prvních věcí, které by se útočník pokusil vyzkoušet, je pokusit se získat kopii všech informací DNS. Po úspěšném útočníkovi získá rozsáhlé informace o vašem prostředí, které potenciálně obsahují podobné informace o vašich dalších prostředích nebo sítích.
 
-### <a name="run-nslookup-from-victimpc"></a>Spusťte nslookup z VictimPC
+Azure ATP potlačí rekognoskaceou síťovou službu mapování sítě z **časové osy podezřelé aktivity** , dokud se nedokončí období učení na osm dní. Ve výukovém období zjistí Azure ATP, co je pro vaši síť normální a neobvyklé. Po osmi dnech výukového období neobvyklá událost rekognoskace mapování sítě vyvolá související výstrahu zabezpečení. 
 
-K otestování rekognoskace DNS, použijeme nástroj příkazového řádku nativních *nslookup*, k zahájení přenosu zóny DNS. Servery DNS se správnou konfigurací odmítne dotazy tohoto typu a neumožní pokusit o přenos zóny.  
+### <a name="run-nslookup-from-victimpc"></a>Spuštění příkazu nslookup z VictimPC
 
-Přihlaste se do **VictimPC**, pomocí zneužití přihlašovacích údajů JeffL. Spusťte následující příkaz:
+K otestování služby DNS rekognoskace použijeme nativní nástroj příkazového řádku *nslookup*, který spustí přenos zóny DNS. Servery DNS se správnou konfigurací budou odmítat dotazy tohoto typu a neumožní pokus o přenos zóny.  
+
+Přihlaste se k **VictimPC**pomocí ohrožených pověření Jan. Spusťte následující příkaz:
 
 ``` cmd
 nslookup
 ```
 
-Typ **server** pak plně kvalifikovaný název domény nebo IP adresu řadiče domény, ve kterém jsou nainstalované senzory ochrany ATP v programu.
+Jako typ **Server** zadejte plně kvalifikovaný název domény nebo IP adresu řadiče domény, na kterém je senzor ATP nainstalovaný.
 
 ```nslookup
 server contosodc.contoso.azure
 ```
 
-Pojďme si vyzkoušet přenést domény.
+Zkusíme přenést doménu.
 
 ```nslookup
 ls -d contoso.azure
 ```
 
-- Nahraďte contosodc.contoso.azure a contoso.azure s plně kvalifikovaný název domény vaší služby Azure ATP ze senzorů a název domény.
+- Nahraďte ContosoDC. contoso. Azure a contoso. Azure za plně kvalifikovaným názvem domény vašeho senzoru ATP a názvu domény v uvedeném pořadí.
 
- ![Pokus o příkaz nslookup kopírování DNS server – chyba](media/playbook-recon-nslookup.png)
+ ![příkaz nslookup se pokusil zkopírovat server DNS – chyba](media/playbook-recon-nslookup.png)
 
-Pokud **ContsoDC** je vaší první nasazený senzor, počkejte 15 minut, aby databáze back-end pro dokončení nasazení nezbytné mikroslužeb.
+Pokud je **ContsoDC** vaším prvním nasazeným senzorem, počkejte 15 minut, než se povolí back-end databáze pro dokončení nasazení nezbytných mikroslužeb.
 
-### <a name="network-mapping-reconnaissance-dns-detected-in-azure-atp"></a>Mapování sítě rekognoskace (DNS) v Azure ATP
+### <a name="network-mapping-reconnaissance-dns-detected-in-azure-atp"></a>Služba DNS (Network-Mapping rekognoskace) zjištěná v Azure ATP
 
-Viditelnost tohoto typu pokus (neúspěšné nebo úspěšné) je důležitá pro doménovou ochranu před internetovými útoky. Protože se právě nainstalovaná prostředí, nám budete muset přejít na časové ose logické aktivity můžete vidět aktivitu. 
+Získání přehledu o tomto typu pokusu (neúspěšné nebo úspěšné) je důležité pro ochranu před hrozbami v doméně. Po poslední instalaci prostředí budete muset pro zobrazení zjištěné aktivity přejít na časovou osu **logických aktivit** . 
 
-Ve službě Azure Search ochrany ATP v programu, zadejte **VictimPC**, pak klikněte na něj a zobrazit časovou osu.
+Ve vyhledávání ATP Azure zadejte **VictimPC**a kliknutím na ni Zobrazte časovou osu.
 
-![Rekognoskace DNS detekoval AATP vyšší úroveň zobrazení](media/playbook-recon-nslookupdetection1.png)
+![Rekognoskace DNS zjištěné AATP, zobrazení na nejvyšší úrovni](media/playbook-recon-nslookupdetection1.png)
 
-Vyhledejte "Dotaz AXFR" aktivity. Ochrana ATP v programu Azure zjistí tento druh rekognoskace proti serveru DNS. 
-  - Pokud máte velké množství aktivit, klikněte na tlačítko **filtrovat podle** a zrušte zaškrtnutí všech typů s výjimkou "Dotaz DNS".
+Vyhledejte aktivitu "AXFR Query". Azure ATP detekuje tento typ rekognoskacey proti vašemu serveru DNS. 
+  - Pokud máte velký počet aktivit, klikněte na **filtrovat podle** a zrušte výběr všech typů s výjimkou **dotazu DNS**.
 
 ![Podrobné zobrazení detekce rekognoskace DNS v AATP](media/playbook-recon-nslookupdetection2.png)
 
-Pokud bezpečnostní analytik určit tuto aktivitu pocházející z kontrolu zabezpečení, můžete z další výstrahy detekce vyloučit konkrétní zařízení. V pravé horní části oblasti výstrahy klikněte na tři tečky. Vyberte **zavřít a vyloučit MySecurityScanner**. Zajištění toto upozornění nezobrazí akci při zjištění z "MySecurityScanner".
+Pokud váš analytik zabezpečení tuto aktivitu určil z bezpečnostního skeneru, konkrétní zařízení je možné vyloučit z dalších upozornění na detekci. V pravé horní oblasti výstrahy klikněte na tři tečky. Pak vyberte **Zavřít a vyloučit MySecurityScanner**. Kontrola, že se tato výstraha po rozpoznání z "MySecurityScanner" nezobrazuje znovu.
 
-Rozpoznání nezdařených útoků může být například přehledné jako rozpoznání úspěšných útoků proti prostředí. Na portálu ochrany ATP v programu Azure umožňuje přesnou výsledek akce, které provádí možné útočník. V našich simulované DNS reconnaissance útoku scénáře můžeme funguje jako útočníci, jste zastavili z výpis záznamů DNS domény. Váš tým SecOps dozvěděla o našich pokusu o útok a které jsme použili v našich pokus o z dané výstraze zabezpečení služby Azure ATP počítače.
+Rozpoznání selhání může být jako přehledné při zjišťování úspěšných útoků na prostředí. Portál Azure ATP nám umožňuje zobrazit přesný výsledek akcí, které udělal případný útočník. V našem scénáři útoku DNS na rekognoskace jsme postupovali jako útočníci a zastavili jsme výpis záznamů DNS domény. Váš tým SecOps se dozvěděl o našem pokusu o útokech a o tom, který počítač jsme použili při pokusu z výstrahy zabezpečení Azure ATP.
 
-## <a name="directory-service-reconnaissance"></a>Rekognoskace služby adresáře
+## <a name="directory-service-reconnaissance"></a>Rekognoskace adresářové služby
 
-Funguje jako útočník, dalším cílem rekognoskace je pokus o vytvoření výčtu všech uživatelů a skupin v doménové struktuře. Ochrana ATP v programu Azure potlačí aktivita výčtu adresářové služby z časové osy podezřelých aktivit learning 30denního období je dokončen. V období učení ochrany ATP v programu Azure učí, co je běžné a neobvyklé pro vaši síť. Po uplynutí 30denní learning neobvyklé události výčet adresářová služba vyvolat výstrahu zabezpečení. Během období učení 30denní uvidíte ochrany ATP v programu Azure detekce těchto aktivit pomocí časové osy aktivity entity v síti. Detekce služby Azure ATP tyto aktivity jsou uvedeny v tomto testovacím prostředí.
+Dalším cílem rekognoskace je pokus o výčet všech uživatelů a skupin v doménové struktuře. Azure ATP potlačuje aktivitu výčtu adresářových služeb z časové osy podezřelé aktivity, dokud se nedokončí období učení na 30 dní. Ve výukovém období zjistí Azure ATP, co je pro vaši síť normální a neobvyklé. Po uplynutí 30 dnů kurzu vyvolala abnormální události výčtu adresářových služeb výstrahu zabezpečení. Během 30 dnů učení se můžete podívat na detekci ATP Azure u těchto aktivit pomocí časové osy aktivity entity ve vaší síti. V tomto testovacím prostředí se zobrazí detekce ATP pro Azure.
 
-Abychom si předvedli běžnou metodu rekognoskace adresářové služby, použijeme nativní binární soubor Microsoft *net*. Po našem pokus o zkoumání časové osy aktivity JeffL, naše ohrožených uživatelů, se zobrazí detekování této aktivity služby Azure ATP.
+K předvedení běžné rekognoskace metody adresářové služby použijeme nativní binární *síť*Microsoft. Po našem pokusu se podíváme na časovou osu aktivity Jan, náš ohrožený uživatel, zobrazí ATP Azure s detekcí této aktivity.
 
-### <a name="directory-service-enumeration-via-net-from-victimpc"></a>Vytváření výčtu adresářových služeb prostřednictvím *net* z VictimPC
+### <a name="directory-service-enumeration-via-net-from-victimpc"></a>Výčet adresářové služby prostřednictvím *sítě* z VictimPC
 
-Všechny ověřené uživatele nebo počítače mohou potenciálně výčet další uživatelé a skupiny v doméně. Tato schopnost výčet se vyžaduje pro většinu aplikací fungovat správně. Ohrožení uživatelských JeffL, je účet bez oprávnění umožňovala zvlášť domény. V simulované útoku, uvidíme právě jak i bez oprávnění umožňovala zvlášť doménový účet může stále poskytovat cenné datových bodů útočníkovi.
+Každý ověřený uživatel nebo počítač může zobrazit výčet dalších uživatelů a skupin v doméně. Tato schopnost výčtu je nutná, aby většina aplikací fungovala správně. Náš ohrožený uživatel je Jan, jedná se o Neprivilegovaný účet domény. V tomto simulovaném útoku přesně uvidíte, jak dokonce Neprivilegovaný účet domény může stále poskytovat cenné datové body útočníkovi.
 
-1. Z **VictimPC**, spusťte následující příkaz:
+1. Z **VictimPC**spusťte následující příkaz:
 
     ``` cmd
     net user /domain
     ```
 
-   Výstup zobrazuje všechny uživatele v doméně Contoso.Azure.
+   Výstup zobrazuje všechny uživatele v doméně contoso. Azure.
 
-   ![Vytvoření výčtu všech uživatelů v doméně](media/playbook-recon-dsenumeration-netusers.png)
+   ![Zobrazit výčet všech uživatelů v doméně](media/playbook-recon-dsenumeration-netusers.png)
 
-2. Zkusme vytvořit výčet všech skupin v doméně. Spusťte následující příkaz:
+2. Zkusíme vytvořit výčet všech skupin v doméně. Spusťte následující příkaz:
 
     ``` cmd
     net group /domain
     ```
 
-   Výstup zobrazuje všechny skupiny v doméně Contoso.Azure. Všimněte si, že jednu skupinu zabezpečení, který není výchozí skupiny: **HelpDesk**.
+   Výstup zobrazuje všechny skupiny v doméně contoso. Azure. Všimněte si jedné skupiny zabezpečení, která není výchozí skupinou: **Helpdesk**.
 
-   ![Vytvořit výčet všech skupin v doméně](media/playbook-recon-dsenumeration-netgroups.png)
+   ![Zobrazit výčet všech skupin v doméně](media/playbook-recon-dsenumeration-netgroups.png)
 
-3. Teď vyzkoušíme chcete získat výčet jenom skupiny Domain Admins. Spusťte následující příkaz:
+3. Nyní se pokusíme vytvořit výčet pouze skupiny Domain Admins. Spusťte následující příkaz:
 
     ``` cmd
     net group "Domain Admins" /domain
     ```
 
-   ![Zobrazení výčtu všichni členové skupiny Domain Admins](media/playbook-recon-dsenumeration-netdomainadmins.png)
+   ![Zobrazit výčet všech členů skupiny Domain Admins](media/playbook-recon-dsenumeration-netdomainadmins.png)
 
-    Funguje jako útočník, naučili jsme se, že nejsou dva členy skupiny Domain Admins: **SamiraA** a **ContosoAdmin** (předdefinovaného účtu Administrator pro řadič domény). Vědomím, že neexistuje žádná hranice zabezpečení mezi naše domény a doménové struktury, je pokusit se výčet Enterprise Admins i náš Další.
+    Zjistili jsme, že máme dva členy skupiny Domain Admins: **SamiraA** a **ContosoAdmin** (integrovaný správce pro řadič domény). Mezi naší doménou a doménovou strukturou neexistují žádné hranice zabezpečení, naší další přestupnější je zkusit vytvořit výčet Enterprise Admins.
 
-4. Pokus o zobrazení výčtu Enterprise Admins, spusťte následující příkaz:
+4. Pokud se chcete pokusit vytvořit výčet podnikových správců, spusťte následující příkaz:
 
     ``` cmd
    net group "Enterprise Admins" /domain
    ```
 
-   Jsme zjistili, že existuje pouze jeden správce podniku, ContosoAdmin. Tyto informace nebyl důležité, protože již věděl, že není k dispozici hranice zabezpečení mezi naše domény a doménové struktury.
+   Zjistili jsme, že existuje jenom jeden podnikový správce, ContosoAdmin. Tyto informace nejsou důležité, protože už jsme věděli, že mezi naší doménou a doménovou strukturou není hranice zabezpečení.
 
-   ![Enterprise Admins v doméně ve výčtu](media/playbook-recon-dsenumeration-netenterpriseadmins.png)
+   ![Skupiny Enterprise Admins jsou v doméně výčtové.](media/playbook-recon-dsenumeration-netenterpriseadmins.png)
 
-Informace shromážděné v našich rekognoskace víme o skupině zabezpečení Helpdesk. I když tyto informace není zajímavé *ještě*. Taky víme, že **SamiraA** je členem skupiny Domain Admins. Pokud nám můžete získat od SamiraA přihlašovacích údajů, jsme získat přístup samotný řadič domény.
+S informacemi shromážděnými v našich rekognoskace nyní ví o skupině zabezpečení helpdesk. I když tyto informace *ještě*nejsou zajímavé. Víme také, že **SamiraA** je členem skupiny Domain Admins. Pokud můžeme shromažďovat přihlašovací údaje pro SamiraA, můžeme získat přístup k samotnému řadiči domény.
 
-### <a name="directory-service-enumeration-detected-in-azure-atp"></a>Vytváření výčtu adresářových služeb v Azure ATP
+### <a name="directory-service-enumeration-detected-in-azure-atp"></a>V Azure ATP se zjistil výčet adresářové služby.
 
-Pokud naše laboratorní *reálné živé aktivity po dobu 30 dnů pomocí služby Azure ATP nainstalované*, právě předvedl, jak JeffL by potenciálně klasifikovat jako neobvyklé aktivity. Neobvyklá aktivita by se objevoval na časové ose podezřelé aktivity. Ale protože právě nainstalovaná prostředí, jsme budete muset přejít na časové ose logické aktivity.
+Pokud má naše laboratoř *skutečná živá aktivita po dobu 30 dnů s nainstalovanou službou Azure ATP*, aktivita, kterou jsme právě nastavili jako Jan, by mohla být klasifikována jako abnormální. V časové ose podezřelé aktivity se zobrazí neobvyklé aktivity. Vzhledem k tomu, že jsme ale prostředí právě nainstalovali, musíme přejít na časovou osu logických aktivit.
 
-Ve službě Azure Search ochrany ATP v programu Podívejme se časové osy pro JeffL logické aktivity, která bude vypadat jako:
+Ve vyhledávání ATP Azure se podívejme na to, jak vypadá časová osa logických aktivit.
 
-![Vyhledat logické aktivity časovou osu pro konkrétní entitu](media/playbook-recon-dsenumeration-searchlogicalactivity.png)
+![Vyhledejte časovou osu logické aktivity konkrétní entity.](media/playbook-recon-dsenumeration-searchlogicalactivity.png)
 
-Můžeme vidět při JeffL podepsané na VictimPC, pomocí protokolu Kerberos. Kromě toho vidíme, že JeffL z VictimPC, vytvořil výčet všech uživatelů v doméně.
+V případě, že je Jan přihlášený k VictimPC pomocí protokolu Kerberos, můžeme vidět. Kromě toho vidíme, že Jan z VictimPC vyčísluje všechny uživatele v doméně.
 
-![Časové osy pro JeffL logické aktivity](media/playbook-recon-dsenumeration-jeffvlogicalactivity.png)
+![Časová osa logických aktivit Jan](media/playbook-recon-dsenumeration-jeffvlogicalactivity.png)
 
-Řada aktivit jsou protokolovány v časové osy logické aktivity díky tomu je to hlavní schopnost provádění digitálních forenzních a odpověď Incident (DFIR). Můžete dokonce vidět aktivity při počátečním zjišťování nebyl z ochrany ATP v programu Azure, ale z ochrany ATP v programu Windows Defender, Office 365 a dalších.
+Mnoho aktivit je zaznamenáno v časové ose logických aktivit, což má zásadní schopnost provádět digitální forenzní a reakci na incidenty (DFIR). Můžete dokonce zobrazit aktivity, když počáteční zjišťování nevzniklo z Azure ATP, ale z ochrany ATP v programu Windows Defender, Office 365 a dalších.
 
-A podívejte se na **ContosoDC na stránce**, můžeme také vidět počítače JeffL přihlášení.
+Když se podíváte na **stránku ContosoDC**, můžeme taky zobrazit počítače, které se přihlásily do.
 
-![Počítače s přihlášením JeffL](media/playbook-recon-dsenumeration-jeffvloggedin.png)
+![Jan přihlášený počítač](media/playbook-recon-dsenumeration-jeffvloggedin.png)
 
-Také jsme můžete získání dat z adresáře, včetně členství ve skupinách a řízení přístupu na JeffL vše z v rámci ochrany ATP v programu Azure.
+Také můžeme získat data adresáře, včetně členství Jan a řízení přístupu, a to všechno v rámci služby Azure ATP.
 
-![Společnosti JeffL datům adresáře v AATP](media/playbook-recon-dsenumeration-jeffvdirectorydata.png)
+![Data adresáře Jan v AATP](media/playbook-recon-dsenumeration-jeffvdirectorydata.png)
 
-Nyní bude naši pozornost Posun směrem k výčet relací SMB.
+Nyní bude tato pozornost posunuta k výčtu relací SMB.
 
-## <a name="user-and-ip-address-reconnaissance-smb"></a>Rekognoskace uživatele a IP adresa (SMB)
+## <a name="user-and-ip-address-reconnaissance-smb"></a>Uživatel a IP adresa rekognoskace (SMB)
 
-Složka sysvol služby Active Directory je jedním z prvku, pokud není *a* nejdůležitější sdílené síťové složce v prostředí. Všechny počítače a uživatele, musí mít pro přístup k této sdílené složce konkrétního síťového stáhnout zásady skupiny. Útočník může získat goldmine informací od výčet, který má aktivní relace ve složce sysvol.
+Složka adresáře SYSVOL služby Active Directory je jedním z, pokud neníto nejdůležitější síťová sdílená složka v prostředí. Každý počítač a uživatel musí mít přístup k této konkrétní sdílené síťové složce, aby vypnuli zásady skupiny. Útočník může získat Goldmine informace ze zobrazení výčtu aktivních relací se složkou SYSVOL.
 
-Naším dalším krokem je výčet relací SMB proti ContosoDC prostředku. Chceme, aby se dozvíte, kdo jiný používá relace s sdílené složce protokolu SMB a *z jaké IP adresy*.
+Náš další krok je výčet relací SMB pro prostředek ContosoDC. Chceme vědět, kdo jiný má relace se sdílenou složkou SMB a *z jaké IP adresy*.
 
-### <a name="use-joewares-netsessexe-from-victimpc"></a>Použít na JoeWare NetSess.exe z VictimPC
+### <a name="use-joewares-netsessexe-from-victimpc"></a>Použijte NetSess. exe JoeWare z VictimPC
 
-Spustit na JoeWare **NetSess** nástroj proti ContosoDC v kontextu ověřeného uživatele, v tomto případě ContosoDC:
+Spustit nástroj JoeWare **NetSess** Tool proti ContosoDC v kontextu ověřeného uživatele, v tomto případě ContosoDC:
 
 ``` cmd
 NetSess.exe ContosoDC
 ```
 
-![Útočníci používají protokol SMB rekognoskace k identifikaci uživatelů a jejich IP adresy](media/playbook-recon-smbrecon.png)
+![Útočníci používají SMB rekognoskace k identifikaci uživatelů a jejich IP adres](media/playbook-recon-smbrecon.png)
 
-Již víme, že SamiraA se správce domény. Tento útok nám zajistila SamiraA na IP adresu jako 10.0.24.6. Jako útočník jsme zjistili, přesně, které jsme ohrozit. My také síťové umístění, kde je přihlášen tyto přihlašovací údaje.
+Už víme, že SamiraA je správcem domény. Tento útok zavedl IP adresu SamiraA jako 10.0.24.6. Jako útočník jsme se dozvěděli přesně, kdo potřebuje napadnout. Máme taky síťové umístění, kde se přihlašovací údaje přihlásily.
 
-### <a name="user-and-ip-address-reconnaissance-smb-detected-in-azure-atp"></a>Rekognoskace uživatele a IP adresa (SMB) v Azure ATP
+### <a name="user-and-ip-address-reconnaissance-smb-detected-in-azure-atp"></a>V Azure ATP se zjistilo, že uživatel a IP adresa rekognoskace (SMB).
 
-Teď vidíme, co nám zjistil ochrany ATP v programu Azure:
+Teď můžeme zjistit, co pro nás zjistilo Azure ATP:
 
-![Rekognoskace AATP zjišťování SMB](media/playbook-recon-smbrecon-detection1.png)
+![AATP zjišťování protokolu SMB rekognoskace](media/playbook-recon-smbrecon-detection1.png)
 
-Nejenže jsme upozorněni na tuto aktivitu jsme také upozorněni na odhalené účty a jejich příslušné IP adresy *od tohoto okamžiku v čase*. Jako zabezpečení Operations Center (SOC), právě nemáme pokus a její stav, ale také co byla odeslána zpět pro útočníka. Tyto informace je výhodné šetřením.
+K této aktivitě jsme upozorněni, ale v *daném časovém*okamžiku se také zobrazí upozornění na vystavené účty a příslušné IP adresy. Jako středisko Security Center (SOC) nepotřebujeme jenom tento pokus a jeho stav, ale také to, co se do útočníku poslalo zpátky. Tyto informace se dotýkaly našeho šetření.
 
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
-V další fázi v řetězu událostí útoku je obvykle k pokusu o taktiky Lateral Movement.
+Další fází v řetězci dezaktivačního útoku je obvykle pokus při pohybu.
 
 > [!div class="nextstepaction"]
-> [Playbook Azure ATP taktiky Lateral Movement](atp-playbook-lateral-movement.md)
+> [Playbooky Azure ATP – boční pohyb](atp-playbook-lateral-movement.md)
 
 ## <a name="join-the-community"></a>Připojte se ke komunitě
 
-Máte další dotazy nebo zájem o diskuze o ochrany ATP v programu Azure a souvisejícího zabezpečení s ostatními? Připojte se k [komunita ochrany ATP v programu Azure](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection) ještě dnes!
+Máte k dispozici další otázky nebo zájem o projednávání Azure ATP a souvisejícího zabezpečení s ostatními? Připojte se ke [komunitě ATP Azure](https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection) ještě dnes!
 

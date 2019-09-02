@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 08/27/2019
+ms.date: 09/01/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: e48b05e17b9edc5ad1ef2436284c60a98a7f68aa
-ms.sourcegitcommit: 033ac9277effa00c4423caf6f2a3febd796ca3db
+ms.openlocfilehash: 0ccb4339e1190bc1bc92684cd939b58c88394354
+ms.sourcegitcommit: f7c75bc5715c5bda0b3110364e2aebddddce8a13
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70052428"
+ms.lasthandoff: 09/01/2019
+ms.locfileid: "70209218"
 ---
 # <a name="azure-atp-prerequisites"></a>Požadavky služby Azure ATP
 
@@ -79,6 +79,16 @@ Přístup k portálu Azure ATP je prostřednictvím prohlížeče, který podpor
 > [!NOTE]
 > Ve výchozím nastavení podporuje Azure ATP až 200 senzorů. Pokud chcete nainstalovat víc, obraťte se na podporu ATP Azure.
 
+
+## <a name="azure-atp-network-name-resolution-nnr-requirements"></a>Požadavky na překlad síťových adres pro Azure ATP (útoků)
+Překlad síťových adres (útoků) je hlavní součástí funkcí služby Azure ATP. Aby služba Azure ATP pracovala správně, musí být pro senzory ATP v Azure dostupná aspoň jedna z následujících metod útoků:
+1. **TLM přes RPC** (Port TCP 135)
+2. **Rozhraní NetBIOS** (Port UDP 137)
+3. Protokol **RDP** (Port TCP 3389) – pouze první paket klienta Hello
+4. **Dotazy serveru DNS pomocí zpětného vyhledávání DNS IP adresy** (UDP 53)
+
+Aby metody 1, 2 a 3 fungovaly, musí být příslušné porty otevřené od senzorů Azure ATP až po zařízení v síti. Další informace o službě Azure ATP a útoků najdete v tématu [zásady útoků pro Azure ATP](atp-nnr-policy.md). 
+
 ## <a name="azure-atp-sensor-requirements"></a>Požadavky na senzor ATP Azure
 V této části jsou uvedené požadavky na senzor ATP Azure.
 
@@ -134,8 +144,6 @@ Následující tabulka uvádí minimální porty, které vyžaduje senzor Azure 
 |**Interní porty**|||||
 |DNS|TCP a UDP|53|Servery DNS|Odchozí|
 |Netlogon (SMB, CIFS, SAM-R)|TCP/UDP|445|Všechna zařízení v síti|Odchozí|
-|NTLM přes RPC|TCP|135|Všechna zařízení v síti|Obojí|
-|NetBIOS|UDP|137|Všechna zařízení v síti|Obojí|
 |Syslog (volitelné)|TCP/UDP|514, v závislosti na konfiguraci|Server SIEM|Příchozí|
 |Protokol RADIUS|UDP|1813|Protokol RADIUS|Příchozí|
 |
@@ -218,8 +226,6 @@ Následující tabulka uvádí minimální porty, které vyžaduje samostatný s
 |Netlogon (SMB, CIFS, SAM-R)|TCP a UDP|445|Všechna zařízení v síti|Odchozí|
 |Čas Windows|UDP|123|Řadiče domény|Odchozí|
 |DNS|TCP a UDP|53|Servery DNS|Odchozí|
-|NTLM přes RPC|TCP|135|Všechna zařízení v síti|Obojí|
-|NetBIOS|UDP|137|Všechna zařízení v síti|Obojí|
 |Syslog (volitelné)|TCP/UDP|514, v závislosti na konfiguraci|Server SIEM|Příchozí|
 |Protokol RADIUS|UDP|1813|Protokol RADIUS|Příchozí|
 |
@@ -237,5 +243,7 @@ Následující tabulka uvádí minimální porty, které vyžaduje samostatný s
 - [Nástroje pro změnu velikosti Azure ATP](http://aka.ms/aatpsizingtool)
 - [Architektura služby Azure ATP](atp-architecture.md)
 - [Instalace ATP Azure](install-atp-step1.md)
+- [Rozlišení názvu sítě (útoků)](atp-nnr-policy.md)
 - [Podívejte se na fórum služby Azure ATP.](https://aka.ms/azureatpcommunity)
+
 

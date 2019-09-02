@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 07/17/2019
+ms.date: 08/28/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 24eca4c6-c949-42ea-97b9-41ef0fb611f1
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 6fca63fb488aef6fb26f4f501c4f6af896e223bd
-ms.sourcegitcommit: 4662ad41addf92727367874d909937fa331fb866
+ms.openlocfilehash: d45d08cc2a059fa231194f7aa334d4f557996ba4
+ms.sourcegitcommit: f7c75bc5715c5bda0b3110364e2aebddddce8a13
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68485066"
+ms.lasthandoff: 09/01/2019
+ms.locfileid: "70209179"
 ---
 # <a name="azure-atp-switches-and-silent-installation"></a>Přepínače Azure ATP a bezobslužná instalace
 Tento článek poskytuje pokyny a pokyny pro přepínače Azure ATP a tichou instalaci.
@@ -33,7 +33,7 @@ Při instalaci služby Azure ATP se rozhraní .NET Framework 4,7 automaticky nai
 
 > [!NOTE] 
 > Instalace rozhraní .NET Framework 4,7 může vyžadovat restartování serveru. Při instalaci senzoru ATP Azure na řadiče domény zvažte plánování časového období údržby pro řadiče domény.
-Při použití bezobslužné instalace Azure ATP je Instalační služba nakonfigurovaná tak, aby na konci instalace automaticky restartovala server (v případě potřeby). Nezapomeňte spustit bezobslužnou instalaci pouze během časového období údržby. Kvůli chybě Instalační služba systému Windows nelze spolehlivě použít  příznak nerestartu, aby bylo zajištěno, že se server nerestartuje.
+Při použití bezobslužné instalace Azure ATP je Instalační služba nakonfigurovaná tak, aby na konci instalace automaticky restartovala server (v případě potřeby). Nezapomeňte spustit bezobslužnou instalaci pouze během časového období údržby. Kvůli chybě Instalační služba systému Windows nelze spolehlivě použít příznak nerestartu, aby bylo zajištěno, že se server nerestartuje.
 
 Pokud chcete sledovat průběh nasazení, Sledujte protokoly instalačního programu Azure ATP, které se nacházejí v **složce%AppData%\local\temp**.
 
@@ -46,10 +46,16 @@ Pokud chcete sledovat průběh nasazení, Sledujte protokoly instalačního prog
 
 Pomocí následujícího příkazu proveďte plně tichou instalaci senzoru ATP Azure:
 
-
-**Syntaxe**:
+**syntaxe cmd. exe**:
 
     "Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKey="<Access Key>"
+
+**Syntaxe PowerShellu**:
+
+    ./"Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKey="<Access Key>"
+
+> [!NOTE]
+> Při použití syntaxe PowerShellu vynechání příkazu **./** předvyplnění dojde k chybě, která brání bezobslužné instalaci.
 
 > [!NOTE]
 > Zkopírujte přístupový klíč z **konfiguračního** oddílu portálu Azure ATP na stránce **senzoru** .
