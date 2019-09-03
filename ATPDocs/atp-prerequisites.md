@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0ccb4339e1190bc1bc92684cd939b58c88394354
-ms.sourcegitcommit: f7c75bc5715c5bda0b3110364e2aebddddce8a13
+ms.openlocfilehash: d4b54dfc9f64f296925889147c72db6c23819c20
+ms.sourcegitcommit: 298a0ce02c2f22faa5b03acf909aa0dd73f38993
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/01/2019
-ms.locfileid: "70209218"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70210928"
 ---
 # <a name="azure-atp-prerequisites"></a>Požadavky služby Azure ATP
 
@@ -75,14 +75,13 @@ Přístup k portálu Azure ATP je prostřednictvím prohlížeče, který podpor
 
  ![Diagram architektury Azure ATP](media/azure-atp-architecture.png)
 
-
 > [!NOTE]
-> Ve výchozím nastavení podporuje Azure ATP až 200 senzorů. Pokud chcete nainstalovat víc, obraťte se na podporu ATP Azure.
+> Ve výchozím nastavení podporuje Azure ATP až 200 senzorů. Pokud chcete nainstalovat další senzory, obraťte se na podporu ATP Azure.
 
 
 ## <a name="azure-atp-network-name-resolution-nnr-requirements"></a>Požadavky na překlad síťových adres pro Azure ATP (útoků)
 Překlad síťových adres (útoků) je hlavní součástí funkcí služby Azure ATP. Aby služba Azure ATP pracovala správně, musí být pro senzory ATP v Azure dostupná aspoň jedna z následujících metod útoků:
-1. **TLM přes RPC** (Port TCP 135)
+1. **Protokol NTLM přes RPC** (Port TCP 135)
 2. **Rozhraní NetBIOS** (Port UDP 137)
 3. Protokol **RDP** (Port TCP 3389) – pouze první paket klienta Hello
 4. **Dotazy serveru DNS pomocí zpětného vyhledávání DNS IP adresy** (UDP 53)
@@ -154,10 +153,6 @@ Zjišťování ATP Azure spoléhá na konkrétní protokoly událostí Windows, 
 
 > [!NOTE]
 > - Pomocí uživatelského účtu adresářové služby se senzor dotazuje ve vaší organizaci pro místní správce pomocí SAM-R (přihlášení k síti), aby bylo možné vytvořit [graf cesty bočního pohybu](use-case-lateral-movement-path.md). Další informace najdete v tématu [Konfigurace požadovaných oprávnění Sam-R](install-atp-step8-samr.md).
-> - Na zařízeních v síti musí být otevřený vstup z senzorů Azure ATP:
->   -   Protokol NTLM přes RPC (TCP port 135) pro účely řešení
->   -   NetBIOS (port UDP 137) pro účely překladu
-<br> Neprovádí se žádné ověřování na žádném z těchto portů.
 
 ## <a name="azure-atp-standalone-sensor-requirements"></a>Požadavky na samostatné senzory Azure ATP
 V této části jsou uvedené požadavky na samostatný senzor Azure ATP.
@@ -232,11 +227,6 @@ Následující tabulka uvádí minimální porty, které vyžaduje samostatný s
 
 > [!NOTE]
 > - Pomocí uživatelského účtu adresářové služby se senzor dotazuje ve vaší organizaci pro místní správce pomocí SAM-R (přihlášení k síti), aby bylo možné vytvořit [graf cesty bočního pohybu](use-case-lateral-movement-path.md). Další informace najdete v tématu [Konfigurace požadovaných oprávnění Sam-R](install-atp-step8-samr.md).
-> - Na zařízeních v síti z jednotlivých senzorů Azure ATP musí být otevřený vstup z následujících portů:
->   -   Protokol NTLM přes RPC (TCP port 135) pro účely řešení
->   -   NetBIOS (port UDP 137) pro účely překladu
-<br> Neprovádí se žádné ověřování na žádném z těchto portů.
-
 
 
 ## <a name="see-also"></a>Viz také
