@@ -12,20 +12,20 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: a2d29c9c-7ecb-4804-b74b-fde899b28648
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d87950cae8918338468258df77e14a503d7db8df
-ms.sourcegitcommit: b7b3d4a401faaa3edb4bd669a1a003a6d21a4322
+ms.openlocfilehash: 0d2befa95ca0bc8fd87cb5fa2dc6563646892945
+ms.sourcegitcommit: e4f108aec3cbfd88562217e36195b5d1250a1bbd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68298792"
+ms.lasthandoff: 09/08/2019
+ms.locfileid: "70803212"
 ---
 # <a name="integrate-with-syslog"></a>Integrace se Syslogem
 
-Azure ATP vás může informovat, když detekuje podezřelé aktivity a vystavuje výstrahy zabezpečení a také výstrahy týkající se stavu odesláním oznámení na server syslog. Pokud povolíte oznámení syslog, můžete nastavit následující:
+Služba Azure ATP vás upozorní, když detekuje podezřelé aktivity a vystavuje výstrahy zabezpečení, a také výstrahy týkající se stavu odesláním oznámení z vybraného snímače na váš server syslog. Pokud povolíte oznámení syslog, můžete nastavit následující:
 
    |Pole|Popis|
    |---------|---------------|
-   |Elektrické|Vyberte určený senzor, který bude zodpovědný za agregaci všech událostí syslog a jejich předání na server SIEM.|
+   |elektrické|Vyberte určený senzor, který bude zodpovědný za agregaci všech událostí syslog a jejich předání na server SIEM.|
    |Koncový bod služby|Plně kvalifikovaný název domény serveru Syslog a volitelně změňte číslo portu (výchozí hodnota 514)|
    |Přenos|Může být UDP, TCP nebo TLS (zabezpečený syslog)|
    |Formát|Jedná se o formát, který Azure ATP používá k posílání událostí na server SIEM – RFC 5424 nebo RFC 3164.|

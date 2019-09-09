@@ -5,23 +5,23 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 8/26/2018
+ms.date: 09/08/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: 892b16d2-58a6-49f9-8693-1e5f69d8299c
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: e774ad3775fa01ae79c2eb1a82e3111cd2cb214f
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
+ms.openlocfilehash: 9579108bd0bb2fa91e2e196ab90284f396025db1
+ms.sourcegitcommit: e4f108aec3cbfd88562217e36195b5d1250a1bbd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65196597"
+ms.lasthandoff: 09/08/2019
+ms.locfileid: "70803105"
 ---
 # <a name="ata-architecture"></a>Architektura ATA
 
-*Platí pro: Advanced Threat Analytics verze 1.9*
+*Platí pro: Advanced Threat Analytics verze 1,9*
 
 Architektura Microsoft Advanced Threat Analytics je znázorněna v tomto obrázku:
 
@@ -50,15 +50,13 @@ Nasazení ATA se může skládat z jediné komponenty ATA Center připojené ke 
 ATA můžete nasadit s využitím následující kombinace bran:
 
 -   **Jenom komponenty ATA Gateway** <br>
-Nasazení ATA může obsahovat jen komponenty ATA Gateway, bez jakékoli komponenty ATA Lightweight Gateway: Všechny řadiče domény musí být nakonfigurované tak, aby povolovaly zrcadlení portů na ATA Gateway nebo síťové odposlouchávání musí být splněné.
+Nasazení ATA může obsahovat jenom komponenty ATA Gateway bez komponent ATA Lightweight Gateway: Všechny řadiče domény musí být nakonfigurované tak, aby umožňovaly zrcadlení portů na ATA Gateway, nebo musí být nastavené síťové kohouty.
 -   **Jenom komponenty ATA Lightweight Gateway**<br>
-Nasazení ATA může obsahovat jen komponenty ATA Lightweight Gateway: ATA Lightweight Gateway jsou nasazené na každém řadiči domény a žádné další servery nebo je nutné konfiguraci zrcadlení portů.
+Nasazení ATA může obsahovat jenom komponenty ATA Lightweight Gateway: Komponenty ATA Lightweight Gateway jsou nasazené na každém řadiči domény a nejsou potřeba žádné další servery ani konfigurace zrcadlení portů.
 -   **Komponenty ATA Gateway i ATA Lightweight**<br>
 Nasazení ATA obsahuje jak komponenty ATA Gateway, tak ATA Lightweight Gateway. Komponenty ATA Lightweight Gateway jsou nainstalované na některých řadičích domény (například na všech řadičích domény v pobočkách). Jiné řadiče domény jsou zároveň monitorované komponentami ATA Gateway (například větší řadiče domény v hlavních datových centrech).
 
 Ve všech těchto scénářích odesílají všechny brány data do ATA Center.
-
-
 
 
 ## <a name="ata-center"></a>ATA Center
@@ -76,7 +74,7 @@ Ve všech těchto scénářích odesílají všechny brány data do ATA Center.
 
 -   Spouští konzolu ATA.
 
--   Volitelné: Komponenty ATA Center můžete nakonfigurovat na odesílání e-mailů a událostí, když zjistí podezřelou aktivitu.
+-   Volitelné: ATA Center se dá nakonfigurovat tak, aby odesílala e-maily a události při zjištění podezřelé aktivity.
 
 ATA Center přijímá parsovaný provoz z komponent ATA Gateway a ATA Lightweight Gateway. Pomocí profilace, deterministické detekce, strojového učení a behaviorálních algoritmů pak poznává vaši síť, umožňuje detekovat anomálie a upozorňuje vás na podezřelé aktivity.
 
@@ -94,7 +92,7 @@ Při úvahách o tom, kolik komponent ATA Center nasadit ve vaší síti, zvažt
 
 -   Jedna komponenta ATA Center může monitorovat jednu doménovou strukturu služby Active Directory. Pokud máte více než jednu doménovou strukturu služby Active Directory, potřebujete minimálně jednu komponentu ATA Center na každou doménovou strukturu.
 
--    V rozsáhlých nasazeních služby Active Directory nemusí být jedna komponenta ATA Center schopná zpracovat veškerý síťový provoz na řadičích domény. V takovém případě se vyžaduje několik komponent ATA Center. Počet komponent ATA Center závisí na [plánování kapacity ATA](ata-capacity-planning.md).
+-    V rozsáhlých nasazeních služby Active Directory nemusí být jedna komponenta ATA Center schopná zpracovat veškerý provoz všech řadičů domény. V takovém případě se vyžaduje několik komponent ATA Center. Počet komponent ATA Center závisí na [plánování kapacity ATA](ata-capacity-planning.md).
 
 ## <a name="ata-gateway-and-ata-lightweight-gateway"></a>ATA Gateway a ATA Lightweight Gateway
 
@@ -132,16 +130,16 @@ Následující funkce pracují různě v závislosti na tom, jestli používáte
 
 -   **Kandidát na synchronizátora domény**<br>
 Brána synchronizátora domény zodpovídá za proaktivní synchronizaci všech entity z konkrétní domény služby Active Directory (je obdobou mechanismu, který samotné domény využívají k replikaci). Ze seznamu kandidátů se náhodně vybere jedna brána, která bude sloužit jako synchronizátor domény. <br><br>
-Pokud je synchronizátor více než 30 minut offline, vybere se jiný kandidát. Pokud není k dispozici pro konkrétní doménu žádný synchronizátor domény, je ATA nemůže proaktivně synchronizovat entity a jejich změny, ale ATA bude reaktivně načítat nové entity, jako jsou zjištěna v monitorovaném provozu. 
-<br>Pokud není dostupný žádný synchronizátor domény a hledáte entitu, která nemá žádný provoz s ní spojené, se nezobrazí žádné výsledky hledání.<br><br>
-Ve výchozím nastavení jsou kandidátem na synchronizátora všechny komponenty ATA Gateway.<br><br>
-Protože komponenty ATA Lightweight Gateway se nejčastěji nasazují na pobočkách a malých řadičích domén, nejsou ve výchozím nastavení mezi kandidáty na synchronizátora zařazené.
+Pokud je synchronizátor více než 30 minut offline, vybere se jiný kandidát. Pokud není k dispozici žádný kandidát na synchronizátor domény pro konkrétní doménu, ATA proaktivně synchronizuje entity a jejich změny, ale ATA znovu aktivuje nové entity, když se zjistí v monitorovaném provozu. 
+<br>Pokud není k dispozici žádný synchronizátor domény, bude hledání entity bez provozu, který je s ním spojený, zobrazovat žádné výsledky.<br><br>
+Ve výchozím nastavení jsou všechny komponenty ATA Gateway kandidáty na synchronizátory domén.<br><br>
+Protože komponenty ATA Lightweight Gateway se nejčastěji nasazují na pobočkách a malých řadičích domén, nejsou ve výchozím nastavení mezi kandidáty na synchronizátora zařazené. <br><br>V prostředí jenom s odlehčenými branami se doporučuje přiřadit dvě brány jako kandidáti na synchronizátor, kde jedna odlehčená brána je výchozím kandidátem pro synchronizátor a druhá je záloha pro případ, že výchozí hodnota je offline déle než 30. minuty. 
 
 
 -   **Omezení prostředků**<br>
-ATA Lightweight Gateway zahrnuje monitorovací komponentu, která vyhodnotí dostupnou kapacitu výpočetní a paměťové prostředky na řadiči domény, na kterém je spuštěný. Tento monitorovací proces se spouští každých 10 sekund a dynamicky aktualizuje kvóty využití procesoru a paměti v procesu ATA Lightweight Gateway. Cílem je zajistit, aby v libovolném časovém okamžiku měl řadič domény alespoň 15 % volných výpočetních a paměťových prostředků.<br><br>
+ATA Lightweight Gateway obsahuje monitorovací součást, která vyhodnocuje dostupnou výpočetní a paměťovou kapacitu na řadiči domény, na kterém běží. Tento monitorovací proces se spouští každých 10 sekund a dynamicky aktualizuje kvóty využití procesoru a paměti v procesu ATA Lightweight Gateway. Cílem je zajistit, aby v libovolném časovém okamžiku měl řadič domény alespoň 15 % volných výpočetních a paměťových prostředků.<br><br>
 Tento proces vždycky uvolní prostředky bez ohledu na to, co se na řadiči domény děje, aby se zajistilo jeho základní fungování.<br><br>
-Pokud to způsobí, že ATA Lightweight Gateway dojdou prostředky, se monitoruje provoz jenom částečně a monitorování výstrahy "zrušenou provoz prostřednictvím zrcadlení portů sítě" se zobrazí na stránce stavu.
+Pokud to způsobí, že ATA Lightweight Gateway vyčerpá prostředky, monitoruje se jenom částečný provoz a na stránce stav se zobrazí výstraha monitorování "vynechané síťové přenosy se zrcadlením portů".
 
 V následující tabulce je uvedený příklad řadiče domény s dostatečným objemem dostupných výpočetních prostředků pro povolení vyšší kvóty, než je aktuálně potřeba, takže se monitoruje veškerý provoz:
 
@@ -159,30 +157,30 @@ Pokud Active Directory potřebuje víc výpočetních prostředků, kvóta vyža
 
 
 ## <a name="your-network-components"></a>Komponenty vaší sítě
-Aby bylo možné pracovat se službou ATA, ujistěte se, že chcete zkontrolovat, že následující komponenty jsou nastaveny.
+Aby bylo možné pracovat s ATA, zkontrolujte, zda jsou nastaveny následující komponenty.
 
 ### <a name="port-mirroring"></a>Zrcadlení portů
-Pokud používáte komponenty ATA Gateway, musíte nastavit zrcadlení portů pro řadiče domény, které se monitorují a jako cíl pomocí fyzických nebo virtuálních přepínačů nastavit ATA Gateway. Další možností je použít síťové odposlouchávání. ATA funguje v případě některých, ale ne všechny řadiče domény jsou monitorované, ale detekce budou méně účinné.
+Pokud používáte komponenty ATA Gateway, musíte nastavit zrcadlení portů pro řadiče domény, které jsou monitorované, a nastavit ATA Gateway jako cíl pomocí fyzických nebo virtuálních přepínačů. Další možností je použít síťové odposlouchávání. ATA funguje, pokud se monitorují některé, ale ne všechny řadiče domény, ale detekce jsou méně efektivní.
 
-Při zrcadlení portů zrcadlí veškerý síťový provoz řadičů domény do komponenty ATA Gateway, jenom malá část tohoto objemu je pak odešlou, v komprimovaném tvaru komponentě ATA Center k analýze.
+Přestože zrcadlení portů odráží všechny síťové přenosy řadiče domény do komponenty ATA Gateway, pošle se do komponenty ATA Center za účelem analýzy jenom malé procento tohoto přenosu dat, které se pak komprimuje.
 
 Řadiče domény a komponenty ATA Gateway můžou být fyzické i virtuální. Další informace najdete v tématu [Konfigurace zrcadlení portů](configure-port-mirroring.md).
 
 
-### <a name="events"></a>Události
-K vylepšení detekce útoků typu Pass-the-Hash, útoky hrubou silou, úpravy citlivých skupin a Honeytokenů potřebuje ATA následující události Windows: 4776, 4732, 4733, 4728, 4729, 4756, 4757. Tyto události buď může automaticky číst ATA Lightweight Gateway, nebo mohou být jedním ze dvou způsobů předávány komponentě ATA Gateway (v případě, že komponenta ATA Lightweight Gateway není nasazená), a to konfigurací komponenty ATA Gateway pro naslouchání událostem SIEM, nebo [konfigurací předávání událostí Windows](configure-event-collection.md).
+### <a name="events"></a>Duration
+K vylepšení detekce ATA-the-hash, hrubou silou, úpravám citlivých skupin a tokenů medu potřebuje ATA následující události systému Windows: 4776, 4732, 4733, 4728, 4729, 4756, 4757. Tyto události buď může automaticky číst ATA Lightweight Gateway, nebo mohou být jedním ze dvou způsobů předávány komponentě ATA Gateway (v případě, že komponenta ATA Lightweight Gateway není nasazená), a to konfigurací komponenty ATA Gateway pro naslouchání událostem SIEM, nebo [konfigurací předávání událostí Windows](configure-event-collection.md).
 
 -   Konfigurace komponenty ATA Gateway pro naslouchání událostem SIEM <br>Nakonfigurujte SIEM pro předávání určitých událostí systému Windows bráně ATA Gateway. ATA podporuje několik poskytovatelů SIEM. Další informace najdete v tématu [Konfigurace sběru událostí](configure-event-collection.md).
 
--   Konfigurace předávání událostí systému Windows<br>Jiným způsobem, jak může ATA získávat události, je konfigurace řadičů domén tak, aby předával události Windows 4776, 4732, 4733, 4728, 4729, 4756 a 4757 komponentě ATA Gateway. To je obzvláště užitečné, pokud nemáte server SIEM nebo pokud ATA váš server SIEM v současnosti nepodporuje. K dokončení vaší konfigurace předávání událostí Windows v ATA najdete v článku [předávání událostí Windows konfigurace](configure-event-collection.md). Platí jen pro fyzické komponenty ATA Gateway, nikoli pro ATA Lightweight Gateway.
+-   Konfigurace předávání událostí systému Windows<br>Další způsob, jakým může ATA získat vaše události, je konfigurace řadičů domény pro přeposílání událostí Windows 4776, 4732, 4733, 4728, 4729, 4756 a 4757 do komponenty ATA Gateway. To je obzvláště užitečné, pokud nemáte server SIEM nebo pokud ATA váš server SIEM v současnosti nepodporuje. Postup dokončení konfigurace předávání událostí systému Windows v ATA najdete v tématu [konfigurace předávání událostí systému Windows](configure-event-collection.md). To platí jenom pro fyzické komponenty ATA Gateway – ne pro ATA Lightweight Gateway.
 
 ## <a name="related-videos"></a>Související videa
-- [Volba správného typu komponenty ATA Gateway](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
+- [Výběr správného typu ATA Gateway](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
 
 ## <a name="see-also"></a>Viz také
 - [Požadavky ATA](ata-prerequisites.md)
-- [Nástroje pro změnu velikosti ATA](http://aka.ms/atasizingtool)
+- [Nástroj pro změnu velikosti ATA](http://aka.ms/atasizingtool)
 - [Plánování kapacity ATA](ata-capacity-planning.md)
 - [Konfigurace shromažďování událostí](configure-event-collection.md)
 - [Konfigurace předávání událostí systému Windows](configure-event-collection.md)

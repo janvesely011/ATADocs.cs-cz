@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 08/08/2019
+ms.date: 09/08/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: 7597ed25-87f5-472c-a496-d5f205c9c391
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: bd47ebbe059014015b180ad568e4c519ba1b95b7
-ms.sourcegitcommit: db35bae8354fa35644e9334bfc37b9ffbafdaacc
+ms.openlocfilehash: 5d266de0344a699ed3c3934246311f21b1b00c09
+ms.sourcegitcommit: e4f108aec3cbfd88562217e36195b5d1250a1bbd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68862586"
+ms.lasthandoff: 09/08/2019
+ms.locfileid: "70803197"
 ---
 # <a name="install-ata---step-9"></a>Instalace ATA – krok 9
 
@@ -33,7 +33,7 @@ ms.locfileid: "68862586"
 
 Detekce [cesty bočního pohybu](use-case-lateral-movement-path.md) spoléhá na dotazy, které identifikují místní správce na určitých počítačích. Tyto dotazy se provádějí pomocí protokolu Sam-R prostřednictvím účtu služby ATA vytvořeného v [kroku 2. Připojte se ke](install-ata-step2.md)službě AD.
  
-Aby bylo zajištěno, že klienti a servery systému Windows umožňují účtu služby ATA provádět tuto operaci SAM-R, je nutné provést úpravy **zásad skupiny** , které kromě nakonfigurovaných účtů uvedených v síti přidávají účet služby ATA.  **zásady přístupu** .
+Aby bylo zajištěno, že klienti a servery systému Windows umožňují účtu služby ATA provádět tuto operaci SAM-R, je nutné provést úpravy **zásad skupiny** , které kromě nakonfigurovaných účtů uvedených v síti přidávají účet služby ATA.  **zásady přístupu** . Tyto zásady skupiny by se měly použít pro každé zařízení ve vaší organizaci. 
 
 1. Vyhledejte zásadu:
 

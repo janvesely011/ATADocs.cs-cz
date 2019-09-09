@@ -2,26 +2,26 @@
 title: Instalace Advanced Threat Analytics – krok 6 | Dokumentace Microsoftu
 description: V tomto kroku instalace ATA nakonfigurujete zdroje dat.
 keywords: ''
-author: rkarlin
-ms.author: rkarlin
+author: mlottner
+ms.author: mlottner
 manager: rkarlin
-ms.date: 3/21/2018
+ms.date: 09/08/2019
 ms.topic: conceptual
 ms.prod: advanced-threat-analytics
 ms.technology: ''
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 ms.reviewer: bennyl
 ms.suite: ems
-ms.openlocfilehash: bd6cc7021a024755a931fd9a56db27c0825d10a4
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
+ms.openlocfilehash: ccea2b41e99e4d3ab19efc703f337115740c2e0d
+ms.sourcegitcommit: e4f108aec3cbfd88562217e36195b5d1250a1bbd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65195938"
+ms.lasthandoff: 09/08/2019
+ms.locfileid: "70803184"
 ---
 # <a name="install-ata---step-6"></a>Instalace ATA – krok 6
 
-*Platí pro: Advanced Threat Analytics verze 1.9*
+*Platí pro: Advanced Threat Analytics verze 1,9*
 
 > [!div class="step-by-step"]
 > [« Krok 5](install-ata-step5.md)
@@ -30,15 +30,15 @@ ms.locfileid: "65195938"
 ## <a name="step-6-configure-event-collection"></a>Krok 6. Konfigurace shromažďování událostí
 ### <a name="configure-event-collection"></a>Konfigurace shromažďování událostí
 
-Kvůli vylepšení detekčních schopností potřebuje ATA následující události Windows: 4776, 4732, 4733, 4728, 4729, 4756, 4757 a 7045. Tyto události buď může automaticky číst ATA Lightweight Gateway, nebo mohou být jedním ze dvou způsobů předávány komponentě ATA Gateway (v případě, že komponenta ATA Lightweight Gateway není nasazená), a to konfigurací komponenty ATA Gateway pro naslouchání událostem SIEM, nebo [konfigurací předávání událostí Windows](configure-event-collection.md). 
+Pro vylepšení možností detekce potřebuje ATA následující události systému Windows: 4776, 4732, 4733, 4728, 4729, 4756, 4757 a 7045. Tyto události Windows jsou buď automaticky čteny pomocí ATA Lightweight Gateway, nebo v případě, že ATA Lightweight Gateway není nasazená, dají se do komponenty ATA Gateway přesměrovat jedním ze dvou způsobů, a to buď konfigurací komponenty ATA Gateway pro naslouchání událostem SIEM, nebo nástrojem [. Konfigurace předávání událostí systému Windows](configure-event-collection.md).  
 
 > [!NOTE]
-> U ATA verze 1.8 a vyšších se u komponent ATA Lightweight Gateway shromažďování událostí už nemusí konfigurovat. ATA Lightweight Gateway teď dokáže číst události místně bez nutnosti konfigurace předávání událostí.
+> Pro ATA verze 1,8 a vyšší už konfigurace shromažďování událostí Windows není potřebná pro ATA Lightweight Gateway. ATA Lightweight Gateway teď čte události místně bez nutnosti konfigurace předávání událostí.
 
-Kromě shromažďování a analýzy síťového provozu na řadičích domény dokáže ATA dál vylepšit detekce pomocí událostí Windows. Využívá událost 4776 protokolu NTLM, která vylepšuje různé detekce a události 4732, 4733, 4728, 4729, 4756 a 4757, které vylepšují detekci úprav citlivých skupin. Tyto události může přijímat buď od svého systému SIEM, nebo tak, že si nastavíte předávání událostí systému Windows ze svého řadiče domény. Shromážděné události poskytují řešení ATA další informace, které není možné zjistit z monitorování provozu na řadiči domény.
+Kromě shromažďování a analýzy síťového provozu na řadičích domény dokáže ATA dál vylepšit detekce pomocí událostí Windows. Používá událost 4776 pro protokol NTLM, která vylepšuje různé detekce a události 4732, 4733, 4728, 4729, 4756 a 4757 pro zlepšení detekce citlivých změn skupiny. Tyto události může přijímat buď od svého systému SIEM, nebo tak, že si nastavíte předávání událostí systému Windows ze svého řadiče domény. Shromážděné události poskytují řešení ATA další informace, které není možné zjistit z monitorování provozu na řadiči domény.
 
 #### <a name="siemsyslog"></a>SIEM/Syslog
-Řešení ATA mohlo využívat data ze serveru Syslog je třeba provést následující kroky:
+Aby ATA mohl využívat data ze serveru syslog, je nutné provést následující kroky:
 
 -   Nakonfigurujte servery ATA Gateway, aby naslouchaly událostem, které jsou předávány ze serveru SIEM/Syslog, a přijímaly je.
 
@@ -61,7 +61,7 @@ Informace o konfiguraci předávání určitých událostí na jiný server najd
 
     ![Obrázek povolení UDP naslouchacího procesu Syslog](media/ATA-enable-siem-forward-events.png)
 
-2.  Nakonfigurujte server Syslog nebo SIEM, aby předával události systému Windows s ID 4776 na IP adresu jedné ze součástí ATA Gateway. Další informace o konfiguraci vašeho systému SIEM najdete v online nápovědě SIEM nebo možnosti technické podpory pro speciální požadavky formátování pro každý server SIEM.
+2.  Nakonfigurujte server Syslog nebo SIEM, aby předával události systému Windows s ID 4776 na IP adresu jedné ze součástí ATA Gateway. Další informace o konfiguraci SIEM najdete v online nápovědě k SIEM nebo v možnostech technické podpory pro konkrétní požadavky na formátování pro každý server SIEM.
 
 ATA podporuje události SIEM v následujících formátech:  
 
@@ -76,7 +76,7 @@ ATA podporuje události SIEM v následujících formátech:
 
     1.  Konstanta RsaSA (musí být uvedena).
 
-    2.  Časové razítko skutečné události (ujistěte se, že to není časové razítko přijetí do systému SIEM nebo odeslání do ATA). Pokud možno na milisekundy, to je důležité.
+    2.  Časové razítko skutečné události (ujistěte se, že to není časové razítko přijetí do systému SIEM nebo odeslání do ATA). V případě přesnosti v milisekundách je to důležité.
 
     3.  ID události Windows
 
@@ -107,7 +107,7 @@ CEF:0|Microsoft|Microsoft Windows||Microsoft-Windows-Security-Auditing:4776|Řad
 
     -   externalId = ID události Windows
 
-    -   RT = časové razítko skutečné události (ujistěte se, že to není časové razítko přijetí do systému SIEM nebo odeslání do ATA). Pokud možno na milisekundy, to je důležité.
+    -   RT = časové razítko skutečné události (Ujistěte se, že se nejedná o časové razítko doručení do SIEM nebo při odeslání do ATA). V případě přesnosti v milisekundách je to důležité.
 
     -   cat = Název protokolu událostí Windows
 
@@ -134,7 +134,7 @@ Ověřovací balíček:              MICROSOFT_AUTHENTICATION_PACKAGE_V1_0
 
 Přihlašovací účet: Správce
 
-Zdrojový pracovní stanice:       SIEM
+Zdrojová pracovní stanice:       SIEM
 
 Kód chyby:         0x0
 
@@ -152,7 +152,7 @@ Kód chyby:         0x0
 
     -   SourceName = Název zprostředkovatele událostí Windows
 
-    -   TimeGenerated = Časové razítko skutečné události (ujistěte se, že to není časové razítko přijetí do systému SIEM nebo odeslání do ATA). Formát by měl odpovídat yyyyMMddHHmmss.FFFFFF, pokud možno na milisekundy, to je důležité.
+    -   TimeGenerated = Časové razítko skutečné události (ujistěte se, že to není časové razítko přijetí do systému SIEM nebo odeslání do ATA). Formát by měl odpovídat RRRRMMDDHHMMSS. FFFFFF, pokud možno s přesností na milisekundy, to je důležité.
 
     -   ComputerName = Název hostitele zdroje
 
@@ -163,7 +163,7 @@ Kód chyby:         0x0
 -   Pořadí není pro dvojice klíč=hodnota důležité.
 
 #### <a name="qradar"></a>QRadar
-QRadar umožňuje shromažďování událostí prostřednictvím agenta. Pokud se data shromažďují pomocí agenta, formát času se shromažďuje bez údajů o milisekundách. Protože ale ATA údaje o milisekundách vyžaduje, je nutné v QRadaru nastavit shromažďování událostí Windows bez agenta. Další informace najdete v tématu [ http://www-01.ibm.com/support/docview.wss?uid=swg21700170 ] (http://www-01.ibm.com/support/docview.wss?uid=swg21700170 "QRadar: Bez agentů shromažďování událostí Windows pomocí protokolu MSRPC").
+QRadar umožňuje shromažďování událostí prostřednictvím agenta. Pokud se data shromažďují pomocí agenta, formát času se shromažďuje bez údajů o milisekundách. Protože ale ATA údaje o milisekundách vyžaduje, je nutné v QRadaru nastavit shromažďování událostí Windows bez agenta. Další informace najdete v tématu [http://www-01.ibm.com/support/docview.wss?uid=swg21700170] (http://www-01.ibm.com/support/docview.wss?uid=swg21700170 "QRadar: Shromažďování událostí systému Windows bez agentů pomocí protokolu")MSRPC.
 
     <13>Feb 11 00:00:00 %IPADDRESS% AgentDevice=WindowsLog AgentLogFile=Security Source=Microsoft-Windows-Security-Auditing Computer=%FQDN% User= Domain= EventID=4776 EventIDCode=4776 EventType=8 EventCategory=14336 RecordNumber=1961417 TimeGenerated=1456144380009 TimeWritten=1456144380009 Message=The computer attempted to validate the credentials for an account. Authentication Package: MICROSOFT_AUTHENTICATION_PACKAGE_V1_0 Logon Account: Administrator Source Workstation: HOSTNAME Error Code: 0x0
 
@@ -175,7 +175,7 @@ Potřebná pole:
 - Plně kvalifikovaný název domény pro řadič domény
 - ID události Windows
 
-TimeGenerated je časové razítko skutečné události (ujistěte se, že to není časové razítko přijetí do systému SIEM nebo odeslání do ATA). Formát by měl odpovídat yyyyMMddHHmmss.FFFFFF, pokud možno na milisekundy, to je důležité.
+TimeGenerated je časové razítko skutečné události (ujistěte se, že to není časové razítko přijetí do systému SIEM nebo odeslání do ATA). Formát by měl odpovídat RRRRMMDDHHMMSS. FFFFFF, pokud možno s přesností na milisekundy, to je důležité.
 
 Message je původní text události z události Windows.
 
@@ -194,12 +194,12 @@ Nezapomeňte použít oddělit páry klíč=hodnota pomocí \t.
 
 ## <a name="related-videos"></a>Související videa
 - [Přehled nasazení ATA](https://channel9.msdn.com/Shows/Microsoft-Security/Overview-of-ATA-Deployment-in-10-Minutes)
-- [Volba správného typu komponenty ATA Gateway](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
+- [Výběr správného typu ATA Gateway](https://channel9.msdn.com/Shows/Microsoft-Security/ATA-Deployment-Choose-the-Right-Gateway-Type)
 
 
 ## <a name="see-also"></a>Viz také
-- [Průvodce nasazením ATA POC](http://aka.ms/atapoc)
-- [Nástroje pro změnu velikosti ATA](http://aka.ms/atasizingtool)
+- [Průvodce nasazením pro ATA podle ověření](http://aka.ms/atapoc)
+- [Nástroj pro změnu velikosti ATA](http://aka.ms/atasizingtool)
 - [Podívejte se na fórum ATA!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
 - [Konfigurace shromažďování událostí](configure-event-collection.md)
 - [Požadavky ATA](ata-prerequisites.md)
