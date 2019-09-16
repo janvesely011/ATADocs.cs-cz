@@ -1,113 +1,116 @@
 ---
-title: Principy rozšířené ochrany před internetovými útoky pro Azure portal | Dokumentace Microsoftu
-description: Popisuje, jak se přihlásit na portál ochrany ATP v programu Azure a její komponenty. na portálu
+title: Seznámení s portálem rozšířené ochrany před internetovými útoky Azure | Microsoft Docs
+description: Popisuje, jak se přihlásit k portálu Azure ATP a k součástem portálu.
 keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 12/02/2018
+ms.date: 09/15/2018
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 4ba46d60-3a74-480e-8f0f-9a082d62f343
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 130d60b31e97a16fbd1ff372d124d0411ce7b25a
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
+ms.openlocfilehash: 08bab9d934b38859221f7f89df1580b21a8b22a2
+ms.sourcegitcommit: 939c098dd02a1f4191c528d10d69d059a62042b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65196532"
+ms.lasthandoff: 09/15/2019
+ms.locfileid: "71004894"
 ---
 # <a name="working-with-the-azure-atp-portal"></a>Práce s portálem Azure ATP
 
-Pomocí ochrany ATP v programu Azure portal k monitorování a reakce na podezřelé aktivity detekovaných službou ochrany ATP v programu.
+> [!NOTE]
+> Funkce ATP Azure, které jsou na této stránce popsané, jsou dostupné taky pomocí nového [portálu](https://portal.cloudappsecurity.com).
 
-Psát `?` klíč poskytuje klávesové zkratky pro přístupnost portálu ochrany ATP v programu Azure. 
+Pomocí portálu Azure ATP můžete monitorovat podezřelé aktivity zjištěné ATP a reagovat na ně.
 
-Ochrana ATP v programu Azure portal poskytuje rychlý přehled o všech podezřelých aktivit v chronologickém pořadí. Umožňuje přejít k podrobnostem libovolné aktivity a provádět akce založené na těchto aktivitách. Na portálu ochrany ATP v programu Azure také zobrazuje výstrahy a oznámení, abyste měli na očích problémů zjištěných ochrany ATP v programu Azure nebo nové aktivity, které se považují za podezřelé.
+`?` Zadání klíče poskytuje klávesové zkratky pro přístupnost portálu Azure atp. 
 
-Tento článek popisuje, jak pracovat s klíčové prvky ochrany ATP v programu Azure portal.
+Portál Azure ATP poskytuje rychlý přehled o všech podezřelých aktivitách v chronologickém pořadí. Umožňuje přejít k podrobnostem libovolné aktivity a provádět akce založené na těchto aktivitách. Portál Azure ATP také zobrazuje výstrahy a oznámení k zdůraznění problémů zjištěných službou Azure ATP nebo novými aktivitami, které se považují za podezřelé.
 
-
-## <a name="enabling-access-to-the-azure-atp-portal"></a>Povolení přístupu k portálu služby Azure ATP
-Chcete-li úspěšně přihlásit na portál ochrany ATP v programu Azure, budete muset přihlásit jako uživatel, kterým je přiřazená do skupiny zabezpečení služby Azure Active Directory přístup k portálu ochrany ATP v programu Azure. Další informace o řízení přístupu na základě role (RBAC) v ochrany ATP v programu Azure najdete v tématu [práce se skupinami rolí služby Azure ATP](atp-role-groups.md).
-
-## <a name="logging-into-the-azure-atp-portal"></a>Přihlášení k portálu služby Azure ATP
-
-1. Ochrana ATP v programu Azure portal můžete zadat buď po přihlášení k portálu [ https://portal.atp.azure.com ](https://portal.atp.azure.com) a výběr vašeho instance nebo přechodu na adresu URL instance: [https://*instancename*. ATP.Azure.com](https://*instancename*.atp.azure.com).
+Tento článek popisuje, jak pracovat s klíčovými prvky portálu Azure ATP.
 
 
-2. Azure ATP podporuje jednotné přihlašování integrované s ověřováním Windows – Pokud jste již přihlášení k počítači, ochrana ATP v programu Azure používá tento token pro přihlášení na portál ochrany ATP v programu Azure. K přihlášení můžete použít také čipovou kartu. Vaše oprávnění v Azure ATP odpovídají vaše [role správce](atp-role-groups.md).
+## <a name="enabling-access-to-the-azure-atp-portal"></a>Povolení přístupu k portálu Azure ATP
+Abyste se úspěšně přihlásili k portálu Azure ATP, musíte se přihlásit pomocí uživatele přiřazeného ke skupině zabezpečení Azure Active Directory s přístupem k portálu Azure ATP. Další informace o řízení přístupu na základě role (RBAC) v ochrany ATP v programu Azure najdete v tématu [práce se skupinami rolí služby Azure ATP](atp-role-groups.md).
+
+## <a name="logging-into-the-azure-atp-portal"></a>Přihlášení k portálu Azure ATP
+
+1. Portál Azure ATP můžete zadat buď tak, že se přihlásíte k [https://portal.atp.azure.com](https://portal.atp.azure.com) portálu, vyberete svoji instanci nebo přejdete na adresu URL instance: [https://*InstanceName*. atp.Azure.com](https://*instancename*.atp.azure.com).
+
+
+2. Azure ATP podporuje jednotné přihlašování integrované s ověřováním Windows – Pokud jste už přihlášení k počítači, Azure ATP pomocí tohoto tokenu přihlašuje k portálu Azure ATP. K přihlášení můžete použít také čipovou kartu. Vaše oprávnění v Azure ATP odpovídají vaší [roli správce](atp-role-groups.md).
 
    > [!NOTE]
-   > Ujistěte se, že pro přihlášení k počítači, ze kterého chcete získat přístup k portálu ochrany ATP v programu Azure pomocí služby Azure ATP uživatelské jméno správce a hesla. Alternativně můžete spustit prohlížeč jako jiný uživatel nebo se odhlásit z Windows a protokolu se uživatel s rolí správce vaší služby Azure ATP. 
+   > Ujistěte se, že se přihlašujete k počítači, ze kterého chcete získat přístup k portálu Azure ATP pomocí uživatelského jména a hesla správce ATP Azure. Případně můžete spustit prohlížeč jako jiný uživatel nebo se odhlásit z Windows a přihlásit se pomocí svého uživatele správce ATP Azure. 
 
 
 ### <a name="attack-time-line"></a>Časová osa útoků
 
-Na časové ose útoku, toto je výchozí cílová stránka, kterou budete přesměrováni na přihlášení k portálu ochrany ATP v programu Azure. Ve výchozím nastavení jsou všechny otevřené podezřelé aktivity zobrazené na časové ose útoků. Můžete filtrovat na časové ose útoku a zobrazit všechny, otevřít, zamítnuté nebo Suppressed podezřelých aktivit. Můžete také zjistit závažnost, která se jednotlivým aktivitám přiřadila.
+Časová osa útoku je výchozí cílovou stránkou, na kterou jste se přihlásili, když se přihlašujete k portálu Azure ATP. Ve výchozím nastavení jsou všechny otevřené podezřelé aktivity zobrazené na časové ose útoků. Časovou čáru útoku můžete filtrovat a zobrazit tak všechny, otevřené, neúspěšné nebo potlačené podezřelé aktivity. Můžete také zjistit závažnost, která se jednotlivým aktivitám přiřadila.
 
 ![Obrázek časové osy útoku Azure ATP](media/atp-sa-timeline.png)
 
-Další informace najdete v tématu [Práce s podezřelými aktivitami](working-with-suspicious-activities.md).
+Další informace najdete v tématu [práce s výstrahami zabezpečení](working-with-suspicious-activities.md).
 
 ### <a name="whats-new"></a>Co je nového
 
-Po vydání nové verze služby Azure ATP **novinky** okno se zobrazí v horní pravé dali vám vědět, co bylo přidáno v nejnovější verzi. Také poskytuje vám s odkazem na stažení verze.
+Po vydání nové verze služby Azure ATP se v pravém horním rohu zobrazí okno **co je nového** , které vám umožní zjistit, co se přidalo v nejnovější verzi. Poskytuje taky odkaz na stažení verze.
 
 ### <a name="filtering-panel"></a>Panel filtrování
 
 Na základě stavu a závažnosti umožňuje filtrovat, které podezřelé aktivity se zobrazí na časové ose útoků nebo na kartě podezřelých aktivit profilu entity.
 
-### Panel hledání <a name="search-bar"></a>
+### Panel hledání<a name="search-bar"></a>
 
-V horní nabídce můžete najít panelu hledání. Můžete vyhledat konkrétního uživatele, počítače nebo skupiny v Azure ATP. Pokud si ho chcete vyzkoušet, stačí začít psát. V dolní části panelu hledání je označeno počet nalezených výsledků hledání. 
+V horní nabídce můžete najít panel hledání. V Azure ATP můžete vyhledat konkrétního uživatele, počítač nebo skupiny. Pokud si ho chcete vyzkoušet, stačí začít psát. V dolní části panelu hledání je uveden počet nalezených výsledků hledání. 
 
-![Vyhledávání v portálu imagí Azure ATP](media/atp-workspace-portal-search.png)
+![Obrázek vyhledávání na portálu Azure ATP](media/atp-workspace-portal-search.png)
 
-Pokud kliknete číslo, dostanete stránka výsledků hledání, ve kterém můžete filtrovat výsledky podle typu entity pro další zkoumání.
+Pokud kliknete na číslo, dostanete se na stránku výsledků hledání, ve které můžete filtrovat výsledky podle typu entity pro další šetření.
 
 ![Výsledky hledání](media/search-results.png)
 
-### <a name="health-center"></a>Health center
+### <a name="health-center"></a>Centrum stavů
 
-Health center zobrazuje výstrahy, pokud něco nefunguje správně ve vaší instanci služby Azure ATP.
+V centru stavů se zobrazí upozornění, pokud něco v instanci ATP Azure nefunguje správně.
 
-![Obrázek health center Azure ATP](media/atp-health-issue.png)
+![Obrázek centra stavu ATP Azure ATP](media/atp-health-issue.png)
 
-Kdykoli váš systém narazí na problém, jako je například Chyba připojení nebo odpojených ochrany ATP v programu Azure samostatný senzor, ikona Health Center vám umožní upozorní zobrazením červené tečky. 
+V případě, že dojde k potížím s vaším systémem, jako je chyba připojení nebo odpojený samostatný senzor Azure ATP, vám ikona stavového centra informuje o zobrazení červené tečky. 
 
-![Azure obrázek červené tečky health center ochrany ATP v programu](media/atp-health-bar.png)
+![Obrázek červené tečky v centru stavu ATP Azure ATP](media/atp-health-bar.png)
 
 ### <a name="sensitive-groups"></a>Citlivé skupiny
 
-Informace o citlivých skupin v Azure ATP, naleznete v tématu [práce s citlivých skupin](sensitive-accounts.md).
+Informace o citlivých skupinách v Azure ATP najdete v tématu [práce s citlivými skupinami](sensitive-accounts.md).
 
 ### <a name="mini-profile"></a>Miniprofil
 
-Pokud myší najetí myší na entitu, kdekoli na portálu ochrany ATP v programu Azure níž se nachází jedna entita uvedené, například uživatele nebo počítač, mini profil automaticky spustí se zobrazí následující informace, pokud je dostupná a relevantní:
+Pokud najedete myší na entitu kdekoli na portálu Azure ATP, kde je k dispozici jedna entita, jako je například uživatel nebo počítač, malý profil se automaticky otevře a zobrazí se následující informace, pokud jsou k dispozici a relevantní:
 
-![Obrázek miniprofilu Azure ATP](media/atp-mini-profile.png)
+![Obrázek zkráceného profilu Azure ATP](media/atp-mini-profile.png)
 
+- Name
 - Název
-- Titul
 - Oddělení
-- Značky AD
+- Značky reklamy
 - Email
 - Office
 - Telefonní číslo
 - Doména
 - Název SAM
-- Vytvořit na – kdy byla vytvořena entita ve službě Active Directory. Pokud byl vytvořen před spuštěním ochrany ATP v programu Azure monitoring, se nebudou zobrazovat.
-- Poprvé zaznamenáno – první služby Azure ATP, během kterých se zjistí aktivita z této entity.
-- Čas posledního kontaktu s – poslední Azure ATP, během kterých se zjistí aktivita z této entity.
-- Pokud jsou spojeny s touto entitou podezřelé aktivity, zobrazí se oznámení "BADGE" SA.
-- Ochrana ATP v programu WD oznámení "BADGE" se zobrazit, pokud existují podezřelých aktivit v programu Windows Defender ATP spojené s touto entitou.
-- Taktiky Lateral Movement, které cesty Odznáček – se zobrazí, pokud byly cesty taktiky Lateral Movement zjištění pro tuto entitu v rámci poslední dva dny.
+- Vytvořeno – při vytvoření entity ve službě Active Directory. Pokud byl vytvořen před spuštěním monitorování Azure ATP, nezobrazí se.
+- Poprvé zobrazeno – při prvním výskytu služby Azure ATP byla aktivita z této entity získaná.
+- Poslední zjištěná – čas posledního výskytu služby Azure ATP z této entity
+- Znak SA-se zobrazí, pokud jsou k této entitě přidruženy podezřelé aktivity.
+- Příznakem z nenáročného ATP – zobrazí se v případě, že jsou v programu Windows Defender ATP spojené s touto entitou podezřelé aktivity.
+- Označení bočních cest k pohybu – zobrazí se, pokud byly pro tuto entitu v posledních dvou dnech zjištěny cesty bočního pohybu.
 
 
 ## <a name="see-also"></a>Viz také
 
-- [Vytváření instancí služby Azure ATP](install-atp-step1.md)
+- [Vytváření instancí Azure ATP](install-atp-step1.md)
 - [Podívejte se na fórum služby Azure ATP.](https://aka.ms/azureatpcommunity)

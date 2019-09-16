@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: 946cfdeafd6f2ef0cba5c16d290ac922ccf68f4b
-ms.sourcegitcommit: e4f108aec3cbfd88562217e36195b5d1250a1bbd
+ms.openlocfilehash: 56c517930f4001e9a6e8f4476210fe89b380aa3f
+ms.sourcegitcommit: 939c098dd02a1f4191c528d10d69d059a62042b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/08/2019
-ms.locfileid: "70803163"
+ms.lasthandoff: 09/15/2019
+ms.locfileid: "71004692"
 ---
 # <a name="whats-new-in-azure-advanced-threat-protection-azure-atp"></a>Co je nového v Azure Advanced Threat Protection (ATP Azure)
 
@@ -25,9 +25,15 @@ Tento článek se často aktualizuje, aby vám věděl, co je nového v nejnově
 
 Informační kanál RSS: Po aktualizaci této stránky se zobrazí oznámení zkopírováním a vložením následující adresy URL do čtečky informačních kanálů:`https://docs.microsoft.com/api/search/rss?search=%22This+article+is+updated+frequently+to+let+you+know+what%27s+new+in+the+latest+release+of+Azure+ATP%22&locale=en-us`
 
+Vydáno 15. září 2019
+## <a name="azure-atp-release-295"></a>Azure ATP verze 2,95
+
+- Verze zahrnuje vylepšení a opravy chyb pro infrastrukturu interního senzoru.
+
+
 Vydáno 8. září 2019
 
-# <a name="azure-atp-release-294"></a>Azure ATP verze 2,94
+## <a name="azure-atp-release-294"></a>Azure ATP verze 2,94
 
 - Verze zahrnuje vylepšení a opravy chyb pro infrastrukturu interního senzoru.
 
@@ -228,7 +234,7 @@ Vydáno 31. března 2019
 - **Vylepšení funkcí: LMP (cesta k okraji) – Hloubka rozsahu**<br>
 Cesty na boku (LMPs) jsou klíčovou metodou pro zjišťování hrozeb a rizik ve službě Azure ATP. Aby bylo možné se soustředit na kritická rizika pro uživatele s nejcitlivější, tato aktualizace usnadňuje a urychluje analýzu a nápravu rizik u citlivých uživatelů na jednotlivých LMP, a to tak, že omezuje rozsah a hloubku každého zobrazeného grafu.   
 
-    Další informace o tom, jak Azure ATP používá LMPs k přístupu ke všem entitám ve vašem prostředí, najdete v části [dráhy přesunu](use-case-lateral-movement-path.md) .   
+    Další [](use-case-lateral-movement-path.md) informace o tom, jak Azure ATP používá LMPs k přístupu ke všem entitám ve vašem prostředí, najdete v části dráhy přesunu.   
 
 - Tato verze také zahrnuje vylepšení a opravy chyb pro interní senzor infrastruktury.
 
@@ -281,7 +287,7 @@ Vydáno 10. března 2019
 Vydáno 3. března 2019
 
 - **Vylepšení funkcí: Výstraha s podezřelým útokem hrubou silou (LDAP)**<br>
-V této výstraze zabezpečení byla provedena významná vylepšení použitelnosti, včetně revidovaného popisu, zřízení dalších zdrojových informací a podrobností o pokusůch o rychlejší nápravu. Přečtěte si další informace o výstrahách zabezpečení pro [podezřelé útoky hrubou silou (LDAP)](atp-compromised-credentials-alerts.md#suspected-brute-force-attack-ldap-external-id-2004) . 
+V této výstraze zabezpečení byla provedena významná vylepšení použitelnosti, včetně revidovaného popisu, zřízení dalších zdrojových informací a podrobností o pokusůch o rychlejší nápravu. Přečtěte si další informace o výstrahách zabezpečení pro podezřelé útoky hrubou silou [(LDAP)](atp-compromised-credentials-alerts.md#suspected-brute-force-attack-ldap-external-id-2004) . 
 
 - **Nová funkce dokumentace: Testovací prostředí pro výstrahy zabezpečení**<br>
 
@@ -320,7 +326,7 @@ V této výstraze zabezpečení se provedla vylepšení použitelnosti, včetně
 Vydáno 10. února 2019
 
 - **Nové upozornění zabezpečení: Podezření na útok pomocí protokolu NTLM (účet Exchange) – (Preview)**<br>
-[Podezřelý útok protokolu NTLM pro útoky Azure ATP (účet Exchange) –](atp-lateral-movement-alerts.md#suspected-ntlm-relay-attack-exchange-account-external-id-2037) výstraha zabezpečení ve verzi Preview je teď ve verzi Public Preview. <br> V tomto zjišťování se aktivuje výstraha zabezpečení ATP Azure ATP, když se identifikuje použití přihlašovacích údajů účtu Exchange z podezřelého zdroje. Tyto typy útoků se pokoušejí využít techniky předávání protokolu NTLM k získání oprávnění pro výměnu řadičů domény a jsou známy jako **ExchangePriv**. Přečtěte si další informace o technikě **ExchangePriv** od Poradce pro [ADV190007](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV190007) , který je nejdřív publikovaný 31. ledna 2019 a [odpověď na výstrahu Azure ATP](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/How-to-win-the-latest-security-race-over-NTLM-relay/ba-p/334511).  
+[Podezřelý útok protokolu NTLM pro útoky Azure ATP (účet Exchange) –](atp-lateral-movement-alerts.md#suspected-ntlm-relay-attack-exchange-account-external-id-2037) výstraha zabezpečení ve verzi Preview je teď ve verzi Public Preview. <br> V tomto zjišťování se aktivuje výstraha zabezpečení ATP Azure ATP, když se identifikuje použití přihlašovacích údajů účtu Exchange z podezřelého zdroje. Tyto typy útoků se pokoušejí využít techniky předávání protokolu NTLM k získání oprávnění pro výměnu řadičů domény a jsou známy jako **ExchangePriv**. Přečtěte si další informace o technikě **ExchangePriv** od Poradce pro [ADV190007](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV190007) , který je nejdřív publikovaný 31. ledna 2019 a odpověď na [výstrahu Azure ATP](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/How-to-win-the-latest-security-race-over-NTLM-relay/ba-p/334511).  
 
 - **Obecná dostupnost: Vzdálené spuštění kódu přes DNS**<br>
 Tato výstraha je teď v GA (obecně dostupná). Další informace a funkce výstrah najdete na stránce s [popisem výstrahy vzdálené spuštění kódu přes DNS](atp-lateral-movement-alerts.md#remote-code-execution-over-dns-external-id-2036). 
@@ -361,7 +367,7 @@ Podpora Azure ATP pro senzory v nedůvěryhodných doménových strukturách je 
 
 - **Nová funkce: Pokrytí řadiče domény**<br>
 Azure ATP teď poskytuje informace o pokrytí pro řadiče domény monitorovaných v Azure ATP.  
-Na stránce **senzory** na portálu Azure ATP Zobrazte Počet monitorovaných a nemonitorovaných řadičů domény zjištěných ATP Azure ve vašem prostředí. Stáhněte si seznam monitorovaných řadičů domény pro další analýzu a sestavte plán akcí. Další informace najdete v průvodci [monitorováním řadičů domény](atp-sensor-monitoring.md) . 
+Na stránce senzory na portálu Azure ATP Zobrazte Počet monitorovaných a nemonitorovaných řadičů domény zjištěných ATP Azure ve vašem prostředí. Stáhněte si seznam monitorovaných řadičů domény pro další analýzu a sestavte plán akcí. Další informace najdete v průvodci [monitorováním řadičů domény](atp-sensor-monitoring.md) . 
 
 - **Vylepšení funkcí: Rekognoskace výčtu účtů**<br>
 Detekce výčtu účtů Azure ATP rekognoskace nyní detekuje a vydává výstrahy pro pokusy o výčet pomocí protokolu Kerberos a NTLM. Dříve byla detekce pracovala pouze pro pokusy pomocí protokolu Kerberos. Další informace najdete v tématu [výstrahy Azure ATP rekognoskace](atp-reconnaissance-alerts.md#account-enumeration-reconnaissance-external-id-2003) . 
@@ -372,7 +378,7 @@ Detekce výčtu účtů Azure ATP rekognoskace nyní detekuje a vydává výstra
     - Další informace najdete v tématu [o spuštění vzdáleného kódu](atp-domain-dominance-alerts.md#remote-code-execution-attempt-external-id-2019) .  
 
 - **Problémy s Windows serverem 2019 LSASS a Azure ATP**<br>
-V reakci na zpětnou vazbu od zákazníků týkající se využití ATP Azure s řadiči domény s Windows serverem 2019 obsahuje tato aktualizace další logiku, která neumožňuje aktivovat nahlášené chování na počítačích s Windows serverem 2019. Na Windows serveru 2019 se plánuje plná podpora snímače ATP pro Azure ATP, ale instalace a provozování Azure ATP na Windows serverech 2019 **se momentálně nepodporuje** . Další informace najdete v tématu [požadavky na senzor ATP Azure](atp-prerequisites.md#azure-atp-sensor-requirements) . 
+V reakci na zpětnou vazbu od zákazníků týkající se využití ATP Azure s řadiči domény s Windows serverem 2019 obsahuje tato aktualizace další logiku, která neumožňuje aktivovat nahlášené chování na počítačích s Windows serverem 2019. Na Windows serveru 2019 se plánuje plná podpora snímače ATP pro Azure ATP, ale instalace a provozování Azure ATP na Windows serverech 2019 se momentálně nepodporuje. Další informace najdete v tématu [požadavky na senzor ATP Azure](atp-prerequisites.md#azure-atp-sensor-requirements) . 
 
 - Tato verze také zahrnuje vylepšení a opravy chyb pro interní senzor infrastruktury.
 

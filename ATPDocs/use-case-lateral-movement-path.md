@@ -1,87 +1,90 @@
 ---
-title: Principy a použití cesty taktiky Lateral Movement pomocí služby Azure ATP | Dokumentace Microsoftu
-description: Tento článek popisuje potenciální Laterálním Průnikovým trasám (LMPs) z Azure Advanced Threat Protection (ATP).
+title: Pochopení a používání cest po přesunu s využitím Azure ATP | Microsoft Docs
+description: Tento článek popisuje možné cesty k okraji (LMPs) Azure Advanced Threat Protection (ATP).
 keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 05/22/2019
+ms.date: 09/15/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: de15c920-8904-4124-8bdc-03abd9f667cf
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ad82a095d62de0c1d48abfa9d36fcf909dd68cd9
-ms.sourcegitcommit: 07abbd941d91299475df2af469ee5a9a99e07e0f
+ms.openlocfilehash: f7823fee5828df51b336428d810905e2672cc5a4
+ms.sourcegitcommit: 939c098dd02a1f4191c528d10d69d059a62042b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66264984"
+ms.lasthandoff: 09/15/2019
+ms.locfileid: "71004917"
 ---
-# <a name="azure-atp-lateral-movement-paths-lmps"></a>Azure ATP laterální pohyb cesty (LMPs) 
+# <a name="azure-atp-lateral-movement-paths-lmps"></a>Cesty k příčnému pohybu Azure ATP (LMPs) 
 
-Laterální pohyb je, když útočník pomocí tohoto počtu účtů pro přístup k citlivým účtům v celé síti. Laterální pohyb útočníci slouží k identifikaci a získat přístup k citlivým účtům a počítačů v síti, které sdílejí přihlašovací údaje uložené v účtů, skupin a počítačů. Jakmile útočník Díky úspěšné laterální přibližování klíčových cílů, útočník můžete také využít a získat přístup k vašim řadičům domény. Laterální pohyb útoky provádějí pomocí řady metod popsaných v [Průvodce prošetřováním podezřelých aktivit](suspicious-activity-guide.md).
+> [!NOTE]
+> Funkce ATP Azure, které jsou na této stránce popsané, jsou dostupné taky pomocí nového [portálu](https://portal.cloudappsecurity.com).
 
-Klíčovou součástí služby Azure ATP přehledy o zabezpečení jsou cesty taktiky Lateral Movement nebo LMPs. Azure LMPs ochrany ATP v programu je vizuální vodítko, které pomáhají rychle zjistit a identifikovat program přesně jak přesunout útočníci následně k laterálnímu uvnitř vaší sítě. Účelem taktiky Lateral Movement v řetězu událostí internetového útoku jsou útočníkům získat a ohrožení vašich citlivých účtů pomocí tohoto počtu účtů. Ohrožení citlivých účtů je získá další krok blíž k jejich konečným cílem dominance v doméně. Pokud chcete zastavit tyto útoky nebudou úspěšné, LMPs ochrany ATP v programu Azure poskytují snadno interpretuje s přímým přístupem visual doprovodné materiály k nejohroženější, citlivé účty. LMPs pomoct pomáhá zmírnit a v budoucnosti zabránilo těchto rizik a zavřete útočník mohl získat přístup před jejich dosažení dominance v doméně.
+Příčný pohyb je v případě, že útočník používá necitlivé účty k získání přístupu k citlivým účtům v rámci vaší sítě. Boční pohyb používají útočníci k identifikaci a získání přístupu k citlivým účtům a počítačům ve vaší síti, které sdílejí uložené přihlašovací údaje pro přihlášení v účtech, skupinách a počítačích. Jakmile by útočník úspěšně provedl pohyb směrem k vašim klíčovým cílům, mohl by také využít výhod a získat přístup k řadičům domény. Útoky na boční pohyb se provádějí pomocí mnoha metod popsaných v [Průvodci podezřelými aktivitami](suspicious-activity-guide.md).
 
-![Azure ATP laterální pohyb cestu (LMP)](./media/atp-lmp.png)
+Klíčovou součástí přehledů zabezpečení služby Azure ATP jsou přepravní cesty nebo LMPs. Azure ATP LMPs jsou vizuální příručky, které vám pomůžou rychle pochopit a identifikovat přesně způsob, jakým se můžou útočníci později přesunout do vaší sítě. Účelem příčného přesunu v rámci přenosného řetězu útoku můžou útočníci získat a ohrozit vaše citlivé účty pomocí necitlivých účtů. Porušení citlivých účtů získá další krok přiblíž k jejich konečnému cíli a dominantnímu postavení v doméně. Pro zajištění úspěchu těchto útoků vám Azure ATP LMPs umožňuje snadno interpretovat, přímé vizuální pokyny na vaše nejohroženější a citlivé účty. LMPs vám pomůže pomoct omezit a zabránit těmto rizikům v budoucnu a před tím, než dostanou dominantní postavení v doméně, zavřít přístup k útočníkovi.
 
-Laterální pohyb útoky jsou obvykle provedeno pomocí řadu různých technik. Některé z nejoblíbenějších metod používaných útočníky jsou krádeže přihlašovacích údajů a předat-the-Ticket. V obou metod méně citlivé účty používají útočníci pro laterální přesuny využívajícím počítačů nejsou citliví, které sdílejí uložená pověření přihlášení v účtů, skupin a počítačů s citlivými účty.
+![Cesta k postrannímu pohybu Azure ATP (LMP)](./media/atp-lmp.png)
 
-## <a name="where-can-i-find-azure-atp-lmps"></a>Kde najdu LMPs ochrany ATP v programu Azure?
+Útoky na boční pohyb se obvykle dosahují pomocí řady různých technik. Některé z nejoblíbenějších metod používaných útočníky jsou odcizení přihlašovacích údajů a předání lístku. V obou metodách útočníci používají necitlivé účty k bočním pohybům, a zneužívá necitlivých počítačů, které sdílejí uložené přihlašovací údaje pro přihlášení v účtech, skupinách a počítačích s citlivými účty.
 
-Každý počítač nebo konkrétního uživatele profil zjištěných ochrany ATP v programu Azure v LMP **laterální pohyb cesty** kartu. Počítače a profily bez kartou nikdy byly zjištěny za potenciální LMP. 
+## <a name="where-can-i-find-azure-atp-lmps"></a>Kde můžu najít Azure ATP LMPs?
 
-![Azure kartu ochrany ATP v programu cesty laterální pohyb (LMP)](./media/lateral-movement-path-tab.png)
+Všechny počítače nebo profily uživatelů zjištěné službou Azure ATP, aby byly na LMP, na kartu **cest pohybu** . Počítače a profily bez karty nebyly nikdy zjištěny v rámci potenciálního LMP. 
+
+![Karta pro cestu k bočnímu pohybu Azure ATP (LMP)](./media/lateral-movement-path-tab.png)
 
 LMP pro každou entitu poskytuje různé informace v závislosti na citlivosti entity: 
-- Citliví uživatelé – jsou uvedeny potenciální LMP(s), což vede k tomuto uživateli.
-- Uživatelé a počítače – jsou uvedeny potenciální LMP(s) entitou souvisí. <br>
+- Citliví uživatelé – zobrazí se potenciální LMPy, které by to vedlo k tomuto uživateli.
+- Necitliví uživatelé a počítače – potenciální LMPy, se kterými se entita týká, se zobrazuje. <br>
 
-Pokaždé, když dojde ke kliknutí na kartě, zobrazí ochrany ATP v programu Azure nedávno zjištěné LMP. Každý potenciální LMP uložena po dobu 48 hodin po zjišťování. Není k dispozici historie LMP. Zobrazit starší LMPs, které byly zjištěny v minulosti po kliknutí na **zobrazit jiné datum**. 
+Pokaždé, když se klikne na kartu, Azure ATP zobrazí naposledy zjištěné LMP. Každý potenciální LMP je uložený po dobu 48 hodin po zjištění. Historie LMP je k dispozici. Kliknutím na **Zobrazit jiné datum**Zobrazte starší LMPs zjištěné v minulosti. 
 
-![Zobrazení Azure ochrany ATP v programu cesty laterální pohyb (LMP)](./media/atp-lmp-complete.png)
+![LMP (zobrazení) – cesta k bočnímu pohybu Azure ATP](./media/atp-lmp-complete.png)
 
-Zjistíte, kdy byly zjištěny možné LMPs a potenciálně souvisejících entit, které souvisejí. 
+Objevte se, kdy byly zjištěny potenciální LMPs a které související entity jsou potenciálně zapojeny. 
 
-## <a name="lmp-discovery"></a>LMP zjišťování
+## <a name="lmp-discovery"></a>Zjišťování LMP
 
-Na kartě aktivit je přiřazena jako ukazatel toho, když se identifikovat nové potenciální LMP:
-- Citliví uživatelé – když se zjistí novou cestu, citlivé uživatele
+Na kartě aktivity se uvede indikace, když se identifikoval nový potenciální LMP:
+- Citliví uživatelé – při identifikaci nové cesty pro citlivého uživatele
 
-![Azure identifikovat citlivé na ochrany ATP v programu cesty laterální pohyb (LMP)](./media/atp-lmp-activities.png)
+![Zjistila se LMP citlivá cesta k pohybu Azure ATP.](./media/atp-lmp-activities.png)
 
-- Uživatelé a počítače – když tato entita je identifikován v potenciální LMP, což vede k citlivé uživatele.
+- Necitliví uživatelé a počítače – Pokud je tato entita identifikována potenciálním LMP, která vede k citlivým uživatelům.
 
-![Azure ochrany ATP v programu cesty laterální pohyb (LMP) nejsou citliví identifikovat](./media/atp-lateral-non-sensitive.png)
+![Necitlivá cesta k příčnému pohybu Azure ATP (LMP)](./media/atp-lateral-non-sensitive.png)
 
-## <a name="lmp-related-entities"></a>LMP souvisejících entit
-LMP můžete nyní přímo pomáhá při procesu šetření. Azure seznamy výstrah legitimace zabezpečení ochrany ATP v programu poskytují související entity, které jsou součástí každé potenciální cesty laterální pohyb. Seznamy důkazy přímo pomohou vaše odpověď zabezpečení týmu zvýšení nebo snížení závažnost výstrahy zabezpečení a/nebo šetření souvisejících entit. Například při průchodu, je vydána výstraha lístek, zdrojový počítač, dojde k ohrožení bezpečnosti uživatele a cílový počítač odcizených lístků použila, jsou všechny části potenciální cesty laterální pohyb vede na citlivého uživatele. Díky existenci zjištěné LMP vyšetřování upozornění a sledování podezřelého uživatele ještě více důležité, abyste zabránili vaše nežádoucí osoba z dalších laterální přesouvá. Organizovaným důkazy je součástí LMPs umožňují snadněji a rychleji bránící útočníkům v budoucnu ve vaší síti. 
+## <a name="lmp-related-entities"></a>Entity související s LMP
+LMP může nyní přímo pomoct s procesem šetření. Seznamy legitimace výstrah zabezpečení Azure ATP poskytují související entity, které se podílejí na každé možné cestě k pohybu. Seznam legitimace přímo pomůže vašemu týmu vaší reakce na zabezpečení zvýšit nebo snížit důležitost výstrahy zabezpečení nebo šetření souvisejících entit. Například když je oznámení o lístku vystaveno, zdrojový počítač, ohrožený uživatel a cílový počítač, ze kterého byl ukradený lístek použit, jsou všechny části potenciálního bočního umístění, které vede na citlivého uživatele. Existence zjištěného LMPu provede šetření výstrahy a ještě důležitějšího sledování podezřelého uživatele, aby se zabránilo tomu, aby se nežádoucí osoba z dalších bočních míst. LMPselné legitimace jsou k dispozici v nástroji, aby bylo snazší a rychlejší, abyste útočníkům zabránili v přesunu vpřed ve vaší síti. 
 
-## <a name="lateral-movement-paths-to-sensitive-accounts-report"></a>Laterálním průnikovým trasám sestavy citlivých účtů 
-LMP data jsou také k dispozici v [Laterálním Průnikovým trasám sestavy citlivých účtů](investigate-lateral-movement-path.md). Tato sestava uvádí citlivé účty, které jsou zveřejňovány prostřednictvím cesty taktiky Lateral Movement a zahrnuje cesty, které byly ručně vybraných pro určité časové období, nebo součástí časové období pro plánované sestavy.  Upravte rozsah zahrnutých dat pomocí výběru kalendáře. 
+## <a name="lateral-movement-paths-to-sensitive-accounts-report"></a>Sestava bočních cest k citlivým účtům 
+Data LMP jsou také k dispozici v rámci [cest přesunu na citlivé účty](investigate-lateral-movement-path.md). Tato sestava obsahuje seznam citlivých účtů, které jsou zpřístupněny prostřednictvím cest po pohybu, a zahrnuje cesty, které byly vybrány ručně pro konkrétní časové období, nebo zahrnuté do časového období pro plánované sestavy.  Přizpůsobte rozsah dat zahrnutí pomocí výběru kalendáře. 
 
 ## <a name="preventative-best-practices"></a>Preventivní osvědčené postupy
-Přehledy o zabezpečení jsou nikdy příliš pozdě. aby se předešlo další útoku a nápravě škod. Z tohoto důvodu vyšetřování útoku i během fáze dominance domény poskytuje příklad jiné, ale důležité. Obvykle při prošetřování výstrahy zabezpečení, jako je vzdálené spuštění kódu, pokud je výstraha o pravdivě pozitivní upozornění řadiči domény může již být ohrožena. Pokud útočník získal oprávnění a co LMPs informuje, ale cesta používají do vaší sítě. Takto použije, může LMPs také nabízejí klíče podrobné informace o způsobu řešení.  
+Přehledy zabezpečení nejsou nikdy zpožděné, aby se zabránilo dalšímu útoku a napravily škody. Z tohoto důvodu může prozkoumat útok i během fáze dominantního postavení v doméně jiný, ale důležitý příklad. Při zkoumání výstrahy zabezpečení, jako je vzdálené spuštění kódu, se obvykle používá, pokud je výstraha falešně pozitivní, váš řadič domény už může být ohrožen. Ale LMPs informovat, kde útočník získal oprávnění a jaká cesta se k vaší síti použila. Tímto způsobem může LMPs také nabízet klíčové poznatky k nápravě.  
 
-- Abyste měli jistotu, že citlivé uživatele pouze pomocí přihlašovacích údajů správce při přihlašování posílené počítače je nejlepším způsobem, aby se zabránilo ohrožení laterální pohyb v rámci vaší organizace. V příkladu zaškrtněte, pokud správce v cestě ve skutečnosti potřebuje přístup ke sdílené počítače. Pokud potřebují přístup, ujistěte se, že přihlášení pro sdílené počítače pomocí uživatelského jména a hesla, než je jejich přihlašovacích údajů správce.
+- Nejlepším způsobem, jak zabránit expozici bočního pohybu v rámci vaší organizace, je zajistit, aby citlivé uživatelé používali přihlašovací údaje správce jenom při přihlašování do zesílených počítačů. V příkladu ověřte, zda správce v cestě skutečně potřebuje přístup ke sdílenému počítači. Pokud potřebují přístup, ujistěte se, že se přihlásíte ke sdílenému počítači pomocí uživatelského jména a hesla, které je jiné než přihlašovací údaje správce.
 
-- Ověřte, že uživatelé nemají nepotřebná oprávnění správce. V příkladu zaškrtněte, pokud všem uživatelům ve skupině sdílené ve skutečnosti vyžaduje oprávnění správce na počítači vystavené.
+- Ověřte, že uživatelé nemají potřebná oprávnění ke správě. V tomto příkladu zjistíte, jestli všichni ve sdílené skupině skutečně vyžaduje práva správce na vystaveném počítači.
 
-- Ujistěte se, že lidé mít přístup jenom k potřebné prostředky. V tomto příkladu Ron Harper výrazně rozšiřuje Nick Cowley vystavení. Je nezbytné, Ron Harper být součástí skupiny? Existují podskupiny, které by bylo možné vytvořit, chcete-li minimalizovat vystavení laterální pohyb?
+- Ujistěte se, že lidé mají přístup jenom k potřebným prostředkům. V tomto příkladu Ron Harper významně rozšiřuje expozici vážně Cowley. Je nutné, aby do skupiny zahrnoval Ron Harper? Existují podskupiny, které by bylo možné vytvořit pro minimalizaci ozáření bočního pohybu?
 
-**Tip** – Pokud se rozhodnete žádné potenciál pro entitu za posledních 48 hodin se zjistí aktivita cesty taktiky Lateral Movement **zobrazit jiné datum** a vyhledat předcházející potenciál laterální pohyb cesty. **LMP citlivé uživatele sestavy** je vždy k dispozici, pokud byly zjištěny LMPs a poskytne vám informace o potenciální cesty taktiky Lateral Movement zjistí citlivé uživatele. 
+**Tip** – Pokud pro entitu v posledních 48 hodinách není zjištěna žádná potenciální aktivita pohybu v cestě k okraji, vyberte, **že chcete zobrazit jiné datum** a vyhledat předchozí možné cesty bočního pohybu. **Sestava LMP to citliví uživatelé** je vždy dostupná, pokud se zjistilo LMPs a poskytuje informace o potenciálních cestách při přesunu citlivých uživatelů. 
 
-**Tip** – pokyny o tom, jak nastavit vaši klienti a servery pro povolení ochrany ATP v programu Azure k provádění operací SAM-R, které jsou potřebné ke zjišťování cesty laterální pohyb, naleznete v části [konfigurace SAM-R](install-atp-step8-samr.md).
+**Tip** – pokyny, jak nastavit klienty a servery tak, aby umožňovaly službě Azure ATP provádět operace Sam-R, které jsou potřeba pro detekci cest k příčnému přesunu, najdete v tématu [Konfigurace Sam-r](install-atp-step8-samr.md).
 
 
-## <a name="investigating-lmps"></a>Zkoumání LMPs
-Pokyny o tom, jak identifikovat a prozkoumat pomocí cesty taktiky Lateral Movement ochrany ATP v programu Azure najdete v tématu [prozkoumat cesty taktiky Lateral Movement](investigate-lateral-movement-path.md).
+## <a name="investigating-lmps"></a>Prošetření LMPs
+Pokyny, jak identifikovat a prozkoumat používání služby Azure ATP po cestách, najdete v tématu [prozkoumání cest po pohybu](investigate-lateral-movement-path.md).
 
 
 ## <a name="see-also"></a>Viz také
-- [Zkoumání LMPs ochrany ATP v programu Azure](investigate-lateral-movement-path.md)
+- [Zkoumání Azure ATP LMPs](investigate-lateral-movement-path.md)
 - [Konfigurace služby Azure ATP pro vzdálená volání do SAM](install-atp-step8-samr.md)
 - [Práce s výstrahami zabezpečení](working-with-suspicious-activities.md)
 - [Podívejte se na fórum služby Azure ATP.](https://aka.ms/azureatpcommunity)

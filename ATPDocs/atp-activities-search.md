@@ -1,42 +1,45 @@
 ---
-title: Rozšířená ochrana před internetovými útoky monitorované aktivity filtrovat a hledat | Dokumentace Microsoftu
-description: Tento článek poskytuje přehled o tom, jak filtrovat a aktivit vyhledávání, které jsou monitorovány pomocí služby Azure ATP.
+title: Filtr a hledání sledovaných aktivit Azure Advanced Threat Protection | Microsoft Docs
+description: Tento článek poskytuje přehled o tom, jak filtrovat a prohledávat monitorované aktivity pomocí Azure ATP.
 keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 10/28/2018
+ms.date: 09/15/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: a546703b-d5a9-404d-9e87-125523bb8421
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 3dd62357e9d86422facd8423654dfaf915214bba
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
+ms.openlocfilehash: 975aa8562b1ae7e8a830d31da7905c428f08f31e
+ms.sourcegitcommit: 939c098dd02a1f4191c528d10d69d059a62042b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65197162"
+ms.lasthandoff: 09/15/2019
+ms.locfileid: "71004715"
 ---
-# <a name="azure-atp-monitored-activities-search-and-filter"></a>Ochrana ATP v programu Azure monitorovat aktivity vyhledávání a filtrování 
+# <a name="azure-atp-monitored-activities-search-and-filter"></a>Hledání a filtrování aktivit monitorovaných aktivit Azure ATP 
 
-Aktivity ve vaší síti zjištěno službou ochrany ATP v programu Azure můžete prohledávat a filtrují pro snadné procházení podrobností a organizaci při výzkumu a vyšetřování výstrah zabezpečení.  
+> [!NOTE]
+> Funkce ATP Azure, které jsou na této stránce popsané, jsou dostupné taky pomocí nového [portálu](https://portal.cloudappsecurity.com).
 
-Na časové ose ochrany ATP v programu Azure vyberte entitu v síti (řadič domény, počítače nebo uživatele) jako filtr přístupový bod. V dalším kroku vyberte můžete filtrovat podle **výstraha zabezpečení**, **aktivity** typu nebo libovolnou kombinaci. Jakmile se filtr použije, hrozeb časová osa entity se aktualizuje filtrované informacemi. Filtrované upozornění a aktivity si také stáhnout pokračovat šetření nebo sledování v jiných nástrojích. 
+Aktivity zjištěné v Azure ATP ve vaší síti je možné prohledávat a filtrovat, aby se při výzkumu a vyšetřování zobrazovaly výstrahy zabezpečení.  
 
-![Filtr upozornění a aktivity](./media/activities-filter.png)
+V časové ose Azure ATP vyberte libovolnou entitu v síti (řadič domény, počítač nebo uživatel) jako přístupový bod filtru. Potom vyberte, že chcete filtrovat podle **výstrahy zabezpečení**, typu **aktivity** nebo jakékoli kombinace. Po použití filtru se časová osa této entity aktualizuje pomocí filtrovaných informací. Vaše vyfiltrované výstrahy a aktivity je také možné stáhnout, aby bylo možné pokračovat v šetření nebo sledování v jiných nástrojích. 
 
-Chcete-li filtrovat výstrahy a aktivity:
- 1. Vyberte entitu, abychom z časové osy ochrany ATP v programu Azure. 
- 2. Klikněte na tlačítko **filtrovat podle**, pak vyberte výstrahy a/nebo aktivity k filtrování. 
- 3. Klikněte na tlačítko **Použít**. Časová osa entity se aktualizují podle filtry, které jste vybrali. 
- 4. Stáhnout filtrované aktivity, klikněte na tlačítko **aktivit stahování** a vyberte rozsah dat pro sestavy ke stažení. 
- 5. Pokud chcete resetovat časová osa entity, chcete-li zobrazit všechny výstrahy a aktivity, klikněte na tlačítko **resetování** nebo zavřít filtru. 
+![Filtrovat výstrahy a aktivity](./media/activities-filter.png)
+
+Filtrování výstrah a aktivit:
+ 1. Vyberte entitu, kterou chcete prozkoumat z časové osy Azure ATP. 
+ 2. Klikněte na **filtrovat podle**a pak vyberte výstrahy a aktivity, které chcete filtrovat. 
+ 3. Klikněte na tlačítko **Použít**. Časová osa entity se aktualizuje podle vybraných filtrů. 
+ 4. Chcete-li stáhnout filtrované aktivity, klikněte na tlačítko **Stáhnout aktivity** a vyberte rozsah dat pro sestavu ke stažení. 
+ 5. Chcete-li obnovit časovou osu entit pro zobrazení všech výstrah a aktivit, klikněte na tlačítko **obnovit** nebo zavřít filtr. 
 
 
 ## <a name="see-also"></a>Viz také
-- [Prošetřování entit](investigate-entity.md)
+- [Zkoumání entit](investigate-entity.md)
 - [Monitorování výstrah](monitoring-alerts.md)
 - [Práce s výstrahami zabezpečení](working-with-suspicious-activities.md)
-- [Podívejte se na fórum ochrany ATP v programu.](https://aka.ms/azureatpcommunity)
+- [Podívejte se na fórum ATP!](https://aka.ms/azureatpcommunity)

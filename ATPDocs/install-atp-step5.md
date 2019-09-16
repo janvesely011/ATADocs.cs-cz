@@ -1,24 +1,24 @@
 ---
-title: Konfigurace rychlého startu nastavení senzorů Azure ATP | Microsoft Docs
+title: Konfigurace nastavení senzoru ATP Azure – konceptuální | Microsoft Docs
 description: Krok pět pro instalaci Azure ATP vám pomůže nakonfigurovat nastavení pro samostatný senzor Azure ATP.
 author: mlottner
 ms.author: mlottner
-ms.date: 07/17/2019
-ms.topic: quickstart
+ms.date: 09/15/2019
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 1c9f8d0928e7439afe9eb0745c07fad2c515169a
-ms.sourcegitcommit: b7b3d4a401faaa3edb4bd669a1a003a6d21a4322
+ms.openlocfilehash: 8e39e37aa42aea40de024f53dd892da398984f5b
+ms.sourcegitcommit: 939c098dd02a1f4191c528d10d69d059a62042b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68298913"
+ms.lasthandoff: 09/15/2019
+ms.locfileid: "71004840"
 ---
-# <a name="quickstart-configure-azure-atp-sensor-settings"></a>Rychlý Start Konfigurace nastavení snímače ATP Azure
+# <a name="configure-azure-atp-sensor-settings"></a>Konfigurace nastavení snímače ATP Azure
 
-V tomto rychlém startu nakonfigurujete nastavení senzoru ATP Azure a začnete zobrazovat data. Abyste mohli využívat možnosti služby Azure ATP, budete muset provést další konfiguraci a integraci.  
+V tomto článku se dozvíte, jak správně nakonfigurovat nastavení senzoru ATP v Azure a začít zobrazovat data. Budete muset provést další konfiguraci a integraci, abyste mohli využít výhod všech možností Azure ATP.  
 
 ## <a name="prerequisites"></a>Požadavky
 

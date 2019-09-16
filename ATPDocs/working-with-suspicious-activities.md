@@ -1,57 +1,60 @@
 ---
-title: Práce s výstrahami zabezpečení v rozšířené ochrany před internetovými útoky pro Azure | Dokumentace Microsoftu
-description: Popisuje, jak kontrolovat výstrahy zabezpečení vydané služby Azure ATP
+title: Práce s výstrahami zabezpečení v Rozšířené ochraně před internetovými útoky Azure | Microsoft Docs
+description: Popisuje, jak zkontrolovat výstrahy zabezpečení vydané službou Azure ATP.
 keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/10/2019
+ms.date: 09/15/2019
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: a06004bd-9f77-4e8e-a0e5-4727d6651a0f
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: b9313f0a44916895948ed4896b2cb3896ded68fc
-ms.sourcegitcommit: ae9db212f268f067b217d33b0c3f991b6531c975
+ms.openlocfilehash: d8070102bf5136ef8918f6fca2e7571e969148a5
+ms.sourcegitcommit: 939c098dd02a1f4191c528d10d69d059a62042b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65196298"
+ms.lasthandoff: 09/15/2019
+ms.locfileid: "71004857"
 ---
 # <a name="working-with-security-alerts"></a>Práce s výstrahami zabezpečení
 
-Tento článek vysvětluje základní informace o tom, jak pracovat s výstrahami zabezpečení služby Azure ATP.
+> [!NOTE]
+> Funkce ATP Azure, které jsou na této stránce popsané, jsou dostupné taky pomocí nového [portálu](https://portal.cloudappsecurity.com).
 
-## Kontrola upozornění zabezpečení na časové ose útoku <a name="review-suspicious-activities-on-the-attack-time-line"></a>
+Tento článek vysvětluje základní informace o tom, jak pracovat s výstrahami zabezpečení Azure ATP.
 
-Po přihlášení na portál ochrany ATP v programu Azure, můžete automaticky přejdete tak otevřít **časová osa výstrahy zabezpečení**. Výstrahy zabezpečení jsou uvedené v chronologickém pořadí, přičemž nejnovější oznámení v horní části na časové ose.
+## Kontrola výstrah zabezpečení na časové ose útoků<a name="review-suspicious-activities-on-the-attack-time-line"></a>
 
-Každá výstraha zabezpečení obsahuje následující informace:
+Po přihlášení k portálu Azure ATP automaticky přejdete na otevřenou **časovou osu výstrah zabezpečení**. Výstrahy zabezpečení jsou uvedeny v chronologickém pořadí s nejnovější výstrahou v horní části časové osy.
+
+Každé upozornění zabezpečení má následující informace:
 
 - Účastnící se entity, včetně uživatelů, počítačů, serverů, řadičů domény a prostředků.
 
-- Časy a časový rámec podezřelých aktivit, které iniciovala dané výstraze zabezpečení.
+- Časy a časové rámce podezřelých aktivit, které výstrahu zabezpečení iniciovaly.
 
-- Závažnost výstrahy: Vysoká, střední nebo Nízká.
+- Závažnost výstrahy: Vysoká, střední nebo nízká.
 
-- Stav: Otevření, ukončení nebo potlačení.
+- Stav: Otevřené, uzavřené nebo potlačené.
 
 - Možnost:
 
-    - Výstraha zabezpečení sdílejte s ostatními lidmi ve vaší organizaci prostřednictvím e-mailu.
+    - Pomocí e-mailu sdílejte upozornění zabezpečení s ostatními lidmi ve vaší organizaci.
 
-    - Stáhněte si výstrahy zabezpečení ve formátu aplikace Excel.
+    - Stáhněte si výstrahu zabezpečení ve formátu aplikace Excel.
 
 > [!NOTE]
-> - Když myší najedete myší uživatele nebo počítač, zobrazí se profil mini entity. Zkrácený profil obsahuje další informace o entitě a počet výstrah zabezpečení, které je entita propojená.
-> - Kliknutím na entitu, přejdete na profil entity pro uživatele nebo počítače.
+> - Když najedete myší na uživatele nebo počítač, zobrazí se malý profil entity. Tento mini profil obsahuje další informace o entitě a obsahuje počet výstrah zabezpečení, se kterými je entita propojena.
+> - Kliknutím na entitu přejdete do profilu entity uživatele nebo počítače.
 
-![Obrázek časové osy výstrahy zabezpečení sady Azure ochrany ATP v programu](media/atp-sa-timeline.png)
+![Obrázek časové osy výstrah zabezpečení Azure ATP](media/atp-sa-timeline.png)
 
-## <a name="security-alert-categories"></a>Kategorie výstrahy zabezpečení
+## <a name="security-alert-categories"></a>Kategorie výstrah zabezpečení
 
-Upozornění zabezpečení v Azure ochrany ATP v programu jsou rozdělené do následujících kategorií nebo fází, jako je fáze v řetězu událostí typické internetového útoku. 
+Výstrahy zabezpečení Azure ATP jsou rozdělené do následujících kategorií nebo fází, jako jsou například fáze zobrazené v typickém dezaktivačním řetězu internetového útoku. 
 
 - [Výstrahy před hrozbami „osahávání“ (reconnaissance)](atp-reconnaissance-alerts.md)
 - [Výstrahy před ohrožením zabezpečení přihlašovacích údajů](atp-compromised-credentials-alerts.md)
@@ -59,71 +62,71 @@ Upozornění zabezpečení v Azure ochrany ATP v programu jsou rozdělené do n�
 - [Výstrahy před dominancí v doméně](atp-domain-dominance-alerts.md)
 - [Výstrahy před exfiltrací](atp-exfiltration-alerts.md)
 
-## Detekce ve verzi Preview <a name="preview-detections"></a>
+## Zjišťování verze Preview<a name="preview-detections"></a>
 
-Výzkumným týmem služby Azure ATP neustále pracuje na implementaci nové detekce pro nově zjištěné útoky. Protože ochrany ATP v programu Azure je Cloudová služba, nové detekce, jsou vydávány rychle tak, aby zákazníci služby Azure ATP těžit z nové detekce co nejdříve.
+Výzkumný tým Azure ATP neustále funguje na implementaci nových detekcí nově zjištěných útoků. Vzhledem k tomu, že Azure ATP je cloudová služba, jsou nové detekce vydávány rychle, aby zákazníci Azure ATP mohli využívat nové zjišťování co nejdříve.
 
-Tyto detekce jsou označené náhled odznáčku, které vám pomohou identifikovat nové detekce a vědět, že jsou v produktu novinkami. Pokud vypnete detekce ve verzi preview, se nezobrazí v konzole služby Azure ATP – není na časové ose nebo profily entit – a nové výstrahy se neotevře.
+Tyto detekce jsou označeny příznakem verze Preview, který vám usnadní identifikaci nových zjišťování a víte, že jsou pro produkt nové. Pokud zjistíte, že se rozpoznávání ve verzi Preview vypne, nezobrazí se v konzole Azure ATP – ne v časové ose ani v profilech entit – a nové výstrahy se neotevřou.
 
-![Zobrazit náhled zjišťování sítě vpn](./media/preview-detection-vpn.png)
+![síť VPN pro zjišťování verze Preview](./media/preview-detection-vpn.png)
 
-Ve výchozím nastavení jsou povoleny ve verzi preview detekce v ochrany ATP v programu Azure. 
+Ve výchozím nastavení jsou detekce ve verzi Preview zapnutá v Azure ATP. 
 
-Chcete-li zakázat detekce ve verzi preview:
+Zakázání zjišťování ve verzi Preview:
 
-1. V konzole služby Azure ATP klikněte na ikonu.
-2. V nabídce vlevo v verzi Preview, klikněte na tlačítko **detekce**.
-3. Pomocí posuvníku zapnutí a vypnutí detekce ve verzi preview.
+1. V konzole Azure ATP klikněte na nastavení ozubeného kola.
+2. V nabídce vlevo v části Náhled klikněte na **detekce**.
+3. Pomocí posuvníku zapněte nebo vypněte zjišťování verze Preview.
  
-![Detekce ve verzi Preview](./media/preview-detections.png) 
+![zjišťování verze Preview](./media/preview-detections.png) 
 
 
-## <a name="filter-security-alerts-list"></a>Filtrování seznamu výstrah zabezpečení
-Chcete-li filtrovat seznam výstrah zabezpečení:
+## <a name="filter-security-alerts-list"></a>Filtrovat seznam výstrah zabezpečení
+Filtrování seznamu výstrah zabezpečení:
 
-1. V **filtrovat podle** podokna na levé straně obrazovky vyberte jednu z následujících možností: **Všechny**, **otevřít**, **uzavřeno**, nebo **Potlačené**.
+1. V podokně **filtrovat podle** na levé straně obrazovky vyberte jednu z následujících možností: **Všechna**, **otevřená**, **uzavřená**nebo **potlačení**.
 
-2. Chcete-li dál filtrovat seznam, vyberte **vysokou**, **střední**, nebo **nízká**.
+2. Chcete-li dále filtrovat seznam, vyberte **Vysoká**, **střední**nebo **Nízká**.
 
 **Závažnost podezřelé aktivity**
 
 - **Nízká**
 
-    Označuje aktivity, které může vést k útokům, které jsou navržené pro kyberzločincům nebo škodlivému softwaru získat přístup k datům organizace.
+    Označuje aktivity, které mohou vést k útokům, které jsou určeny pro uživatele se zlými úmysly nebo softwaru k získání přístupu k datům organizace.
 
 - **Střední**
 
-    Označuje aktivity, které můžou pro konkrétní identity hrozí nebezpečí závažnějších útoků, které by mohly způsobit odcizení identity nebo zvýšení úrovně oprávnění.
+    Označuje aktivity, které můžou ohrozit konkrétní identity v případě závažnějších útoků, které by mohly způsobit odcizení identity nebo zvýšení úrovně oprávnění.
 
 - **Vysoká**
 
-    Označuje aktivity, které mohou vést ke krádeži identity, zvýšení úrovně oprávnění nebo jiným vysoce závažným útokům
+    Označuje aktivity, které můžou vést k krádeži identity, eskalaci oprávnění nebo jiným útokům s vysokým dopadem.
 
 
 ## <a name="managing-security-alerts"></a>Správa výstrah zabezpečení
 
-Klepnutím na aktuální stav výstrahy zabezpečení a výběrem jedné z následujících akcí můžete změnit stav výstrahy zabezpečení **otevřít**, **Potlačená**, **uzavřeno**, nebo **Odstranit**.
-Chcete-li to provést, klikněte na tlačítko tří teček v pravém horním rohu konkrétní výstrahu zobrazíte seznam dostupných akcí.
+Stav výstrahy zabezpečení můžete změnit tak, že kliknete na aktuální stav výstrahy zabezpečení a vyberete jednu z následujících možností **otevřít**, **potlačit**, **Uzavřeno**nebo **odstraněno**.
+Chcete-li zobrazit seznam dostupných akcí, klikněte na tři tečky v pravém horním rohu konkrétní výstrahy.
 
-![Azure akce ochrany ATP v programu pro výstrahy zabezpečení](./media/atp-sa-actions.png)
+![Akce ATP Azure pro výstrahy zabezpečení](./media/atp-sa-actions.png)
 
 **Stav výstrahy zabezpečení**
 
-- **Otevřít**: V tomto seznamu se zobrazí všechny nové výstrahy zabezpečení.
+- **Otevřete**: V tomto seznamu se zobrazí všechny nové výstrahy zabezpečení.
 
-- **Zavřít**: Slouží ke sledování výstrah zabezpečení, které identifikovali, prozkoumali a opravili zmírnit.
+- **Zavřít**: Se používá ke sledování výstrah zabezpečení, které jste identifikovali, prohledali a opravili pro zmírnění.
 
     > [!NOTE]
-    > Pokud se stejná aktivita zjistí během krátké doby znovu, ochrana ATP v programu Azure může znovu otevřít zavřenou výstrahu.
+    > Pokud se stejná aktivita zjistí znovu v krátké době, může Azure ATP znovu otevřít zavřenou výstrahu.
 
-- **Potlačit**: Potlačení upozornění znamená, že chcete prozatím ignorovat a pouze znovu upozorněni při novou instanci. To znamená, že, pokud je podobná upozornění Azure ATP nebude ho znovu otevřít. Ale pokud výstrahy po dobu sedmi dní zastaví a pak se znovu objeví, budete upozorněni znovu.
+- **Potlačit**: Potlačení výstrahy znamená, že ji chcete nyní ignorovat a pouze v případě, že je k dispozici nová instance. To znamená, že pokud existuje podobná výstraha Azure ATP, neotevře se. Pokud se ale upozornění zastaví na sedm dní a pak se znovu zobrazí, budete upozorněni.
 
-- **Odstranit**: Pokud výstrahu odstraníte, odstraní se ze systému, z databáze a nebudete moci obnovit. Po kliknutí na odstranit, budete moct odstranit všechny výstrahy zabezpečení stejného typu.
+- **Odstranit**: Odstraníte-li výstrahu, bude odstraněna ze systému z databáze a nebude možné ji obnovit. Po kliknutí na Odstranit budete moct odstranit všechny výstrahy zabezpečení stejného typu.
 
-- **Vyloučit**: Možnost vyloučit entitu nevyvolávaly další určité typy výstrah. Můžete například nastavit ochrana ATP v programu Azure k vyloučila určitou entitu (uživatele nebo počítače) neupozorňovala znovu na určitý typ aktivity, jako je například určitý správce, který spouští vzdálený kód nebo kontrola zabezpečení provádějící rekognoskaci DNS. Kromě toho, že možnost přidávat výjimky přímo na dané výstraze zabezpečení při jejich zjištění na časové ose, můžete také přejít na stránku konfigurace, abyste **vyloučení**a pro jednotlivé výstrahy zabezpečení můžete ručně přidat a odebrat vyloučené entity nebo podsítě (například pro Pass-the-Ticket).
+- **Vyloučit**: Možnost vyloučit entitu z vyvolávání většího množství určitých typů výstrah. Můžete například nastavit ATP Azure tak, aby pro určitý typ aktivity vyloučila konkrétní entitu (uživatele nebo počítač), třeba konkrétního správce, který spouští vzdálený kód nebo bezpečnostní skener, který provádí DNS rekognoskace. Kromě toho, že je možné přidat vyloučení přímo na výstrahu zabezpečení, jak je detekována v časovém intervalu, můžete také přejít na konfigurační stránku a **vyloučit**z každé výstrahy zabezpečení, které můžete ručně přidat a odebrat vyloučené entity nebo podsítě (pro Příklad pro Pass-The-Ticket).
 
 > [!NOTE]
-> Konfigurační stránky můžou upravovat jenom správci služby Azure ATP.
+> Konfigurační stránky můžou upravovat jenom správci ATP Azure.
 
 
 ## <a name="see-also"></a>Viz také
