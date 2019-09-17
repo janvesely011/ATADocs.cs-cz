@@ -5,26 +5,29 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 07/17/2019
+ms.date: 09/16/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: a2d29c9c-7ecb-4804-b74b-fde899b28648
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 9264d0a94fbe30f138865b9d0b1396ae0a0320ea
-ms.sourcegitcommit: 939c098dd02a1f4191c528d10d69d059a62042b2
+ms.openlocfilehash: e36388fadd11df8a1e4b138481cb40c18b8990a5
+ms.sourcegitcommit: 475df3e87d8476ff13e48ebc7a722f46f29dab70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/15/2019
-ms.locfileid: "71004983"
+ms.lasthandoff: 09/16/2019
+ms.locfileid: "71007582"
 ---
 # <a name="integrate-with-syslog"></a>Integrace se Syslogem
 
 > [!NOTE]
 > Funkce ATP Azure, které jsou na této stránce popsané, jsou dostupné taky pomocí nového [portálu](https://portal.cloudappsecurity.com).
 
-Služba Azure ATP vás upozorní, když detekuje podezřelé aktivity a vystavuje výstrahy zabezpečení, a také výstrahy týkající se stavu odesláním oznámení z vybraného snímače na váš server syslog. Pokud povolíte oznámení syslog, můžete nastavit následující:
+Azure ATP vás může informovat, když detekuje podezřelé aktivity a vystavuje výstrahy zabezpečení a upozornění na stav odesláním oznámení na váš server syslog. Výstrahy jsou odesílány ze senzoru, který zjistil aktivitu přímo na serveru syslog. 
+
+
+Po povolení oznámení syslog můžete nastavit následující:
 
    |Pole|Popis|
    |---------|---------------|

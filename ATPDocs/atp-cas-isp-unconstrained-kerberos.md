@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 7eea354b-7a50-40d9-bfa7-dcccaef23179
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 422b6c564e122ae6ba087d7b932ddb1862c31670
-ms.sourcegitcommit: 939c098dd02a1f4191c528d10d69d059a62042b2
+ms.openlocfilehash: 1343d0359750744890fdb3e15b5f49adfd2459d1
+ms.sourcegitcommit: 475df3e87d8476ff13e48ebc7a722f46f29dab70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/15/2019
-ms.locfileid: "71005323"
+ms.lasthandoff: 09/16/2019
+ms.locfileid: "71007445"
 ---
 # <a name="security-assessment-unsecure-kerberos-delegation---preview"></a>Posouzení zabezpečení: Nezabezpečené delegování protokolu Kerberos – Preview
 
@@ -43,6 +43,6 @@ Hlavní problém s delegováním protokolu Kerberos je, že je potřeba, abyste 
 
 Další informace o Oprava těchto typů účtů najdete v tématu [Odebrání účtů využívajících neomezená delegování protokolu Kerberos](https://blogs.technet.microsoft.com/389thoughts/2017/04/18/get-rid-of-accounts-that-use-kerberos-unconstrained-delegation/).
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 - [Filtrování aktivit v Azure ATP v Cloud App Security](atp-activities-filtering-mcas.md)
 - [Podívejte se na fórum služby Azure ATP.](https://aka.ms/azureatpcommunity)

@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 07/08/2019
+ms.date: 09/16/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 71b15bd9-3183-4e24-b18a-705023ccc313
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: b36095568d0e48d34c3b904b59e6d10c8ebf244e
-ms.sourcegitcommit: 939c098dd02a1f4191c528d10d69d059a62042b2
+ms.openlocfilehash: cb562e8d9dc21d8fa5fcce70ea2020be22796621
+ms.sourcegitcommit: 475df3e87d8476ff13e48ebc7a722f46f29dab70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/15/2019
-ms.locfileid: "71005232"
+ms.lasthandoff: 09/16/2019
+ms.locfileid: "71007516"
 ---
 # <a name="azure-atps-identity-security-posture-assessments"></a>Posouzení stav zabezpečení identity v Azure ATP
  
@@ -49,10 +49,10 @@ V [Cloud App Security rychlém startu](https://docs.microsoft.com/cloud-app-secu
 Azure ATP nabízí následující posouzení stav zabezpečení identity. Každé posouzení je sestava ke stažení s pokyny pro použití a nástroje pro sestavení akčního plánu, který chcete opravit nebo vyřešit. 
 
 **Sestavy posouzení**
-- Zabránit úniku [údajů](atp-cas-isp-clear-text.md) o nešifrovaných textech
-- Zabránit [komunikaci starších protokolů](atp-cas-isp-legacy-protocols.md)
+- Zabránit [entitám, aby vystavily přihlašovací údaje v nešifrovaný text](atp-cas-isp-clear-text.md)
+- Zakázat [použití starších protokolů](atp-cas-isp-legacy-protocols.md)
 - Zabránit [slabému použití šifry](atp-cas-isp-weak-cipher.md)
-- Zabránit [neomezením delegování protokolu Kerberos](atp-cas-isp-unconstrained-kerberos.md)
+- Zabránit [nezabezpečeným delegováním protokolu Kerberos](atp-cas-isp-unconstrained-kerberos.md)
 - Zakázat [službu zařazování tisku na řadičích domény](atp-cas-isp-print-spooler.md)
 - Odebrat [entity neaktivní z citlivých skupin](atp-cas-isp-dormant-entities.md)
 
@@ -63,7 +63,7 @@ Přístup k vyhodnocování stav identity Security:
 1. Klikněte na vyhodnocování stav identity Security, které chcete zkontrolovat, ze seznamu **sestavy posouzení zabezpečení** , které se otevře.  
 
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 - [Další informace o použití Cloud App Security s využitím Azure ATP](atp-activities-filtering-mcas.md)
 - [Podívejte se na fórum služby Azure ATP.](https://aka.ms/azureatpcommunity)
 

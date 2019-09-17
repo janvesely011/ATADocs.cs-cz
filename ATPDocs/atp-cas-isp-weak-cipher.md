@@ -12,14 +12,14 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: cc82212b-7d25-4ec7-828d-2475ff40d685
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: a7f62d8244205d191c10a01f62d3830714d02bbd
-ms.sourcegitcommit: 939c098dd02a1f4191c528d10d69d059a62042b2
+ms.openlocfilehash: 784f381ef8209bef885bb2e8944a60a23d21ec8c
+ms.sourcegitcommit: 475df3e87d8476ff13e48ebc7a722f46f29dab70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/15/2019
-ms.locfileid: "71005344"
+ms.lasthandoff: 09/16/2019
+ms.locfileid: "71007418"
 ---
-# <a name="security-assessment-weak-cipher-usage"></a>Posouzení zabezpečení: Slabé použití šifry 
+# <a name="security-assessment-weak-cipher-usage---preview"></a>Posouzení zabezpečení: Slabé použití šifry – Preview
 
 
 ## <a name="what-are-weak-ciphers"></a>Co jsou slabé šifry? 
@@ -47,6 +47,6 @@ Nastavením následujících klíčů registru Zakažte klientům a serverům, k
 Další informace o stahování a aktualizaci úprav registru najdete v [informačním zpravodaji zabezpečení společnosti Microsoft](https://docs.microsoft.com/security-updates/SecurityAdvisories/2013/2868725).
 
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 - [Filtrování aktivit v Azure ATP v Cloud App Security](atp-activities-filtering-mcas.md)
 - [Podívejte se na fórum služby Azure ATP.](https://aka.ms/azureatpcommunity)

@@ -12,14 +12,14 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 124957bb-5882-4fcf-bab2-b74b0c69571d
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 68d96d8cea3e15498c890fa11fd7d2bd7c5e5ba0
-ms.sourcegitcommit: 939c098dd02a1f4191c528d10d69d059a62042b2
+ms.openlocfilehash: 8e99ab22e65538aba6f645d6bb7929330244cafc
+ms.sourcegitcommit: 475df3e87d8476ff13e48ebc7a722f46f29dab70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/15/2019
-ms.locfileid: "71005211"
+ms.lasthandoff: 09/16/2019
+ms.locfileid: "71007558"
 ---
-# <a name="security-assessment-prevent-clear-text-credentials-exposure"></a>Posouzení zabezpečení: Zabránit úniku informací o nešifrovaných textech 
+# <a name="security-assessment-entities-exposing-credentials-in-clear-text-----preview"></a>Posouzení zabezpečení: Entity, které zpřístupňují přihlašovací údaje ve formátu prostého textu – Preview
 
 ![Zabránit úniku přihlašovacích údajů nezašifrovaných textů v Cloud App Security](media/atp-cas-isp-clear-text-1.png)
 

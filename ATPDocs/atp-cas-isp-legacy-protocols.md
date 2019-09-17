@@ -12,14 +12,14 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 6597b8c7-f83e-43c6-8149-fb4a914a845b
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 67e034c30c5ccf5768a992cd0778d74c3f713cfe
-ms.sourcegitcommit: 939c098dd02a1f4191c528d10d69d059a62042b2
+ms.openlocfilehash: 55783934a609577bf34fe1034903f2d5e6f97fc5
+ms.sourcegitcommit: 475df3e87d8476ff13e48ebc7a722f46f29dab70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/15/2019
-ms.locfileid: "71005330"
+ms.lasthandoff: 09/16/2019
+ms.locfileid: "71007471"
 ---
-# <a name="security-assessment-prevent-legacy-protocol-implementation---preview"></a>Posouzení zabezpečení: Zakázat implementaci starších protokolů – Preview
+# <a name="security-assessment-legacy-protocols-usage---preview"></a>Posouzení zabezpečení: Použití starších protokolů – Preview
  
 ## <a name="what-are-legacy-protocols"></a>Co jsou starší protokoly?
 
@@ -46,6 +46,6 @@ Aby bylo možné vyřadit starší protokoly, musí vaše organizace nejdřív z
     <br>![Zabránit použití starších protokolů](media/atp-cas-isp-legacy-protocols-2.png)
 1. Proveďte příslušné akce s těmito entitami, abyste zjistili závislosti, zastavili použití staršího protokolu a nakonec zakázali [protokoly zcela](https://blogs.technet.microsoft.com/miriamxyra/2017/11/07/stop-using-lan-manager-and-ntlmv1/). 
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 - [Filtrování aktivit v Azure ATP v Cloud App Security](atp-activities-filtering-mcas.md)
 - [Podívejte se na fórum služby Azure ATP.](https://aka.ms/azureatpcommunity)

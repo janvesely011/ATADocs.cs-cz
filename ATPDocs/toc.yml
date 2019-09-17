@@ -13,8 +13,6 @@
 - name: Rychlý start
   expanded: true
   items:
-    - name: Plánování kapacity služby Azure ATP
-      href: atp-capacity-planning.md
     - name: Vytvoření instance služby Azure ATP
       href: install-atp-step1.md
     - name: Připojení ke službě Active Directory
@@ -23,8 +21,6 @@
       href: install-atp-step3.md
     - name: Instalace senzoru služby Azure ATP
       href: install-atp-step4.md
-    - name: Konfigurace senzoru služby Azure ATP
-      href: install-atp-step5.md
 - name: Kurzy
   items:
     - name: Výstrahy před průzkumnými hrozbami
@@ -87,7 +83,7 @@
               href: atp-cas-isp-print-spooler.md
             - name: Vyhodnocení zabránění používání slabého šifrování
               href: atp-cas-isp-weak-cipher.md
-            - name: Vyhodnocení zabránění používání neomezeného delegování Kerberos
+            - name: Vyhodnocení zabránění používání nezabezpečeného delegování Kerberos
               href: atp-cas-isp-unconstrained-kerberos.md
     - name: Testovací prostředí výstrah zabezpečení
       items:
@@ -103,6 +99,8 @@
           href: atp-playbook-domain-dominance.md
     - name: Porozumění výstrahám zabezpečení
       href: understanding-security-alerts.md
+    - name: Plánování kapacity služby Azure ATP
+      href: atp-capacity-planning.md
     - name: Správa výstrah zabezpečení
       href: working-with-suspicious-activities.md
     - name: Vyloučení entit z detekce
@@ -141,6 +139,8 @@
       href: ATP-silent-installation.md
     - name: Konfigurace senzoru služby Azure ATP
       items:
+        - name: Konfigurace senzoru služby Azure ATP
+          href: install-atp-step5.md
         - name: Konfigurace proxy serveru
           href: configure-proxy.md
         - name: Kontrola pokročilých zásad auditu
