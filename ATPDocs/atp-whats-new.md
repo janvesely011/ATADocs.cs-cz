@@ -5,25 +5,37 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 09/08/2019
+ms.date: 09/22/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 7d0f33db-2513-4146-a395-290e001f4199
 ms.reviewer: ort
 ms.suite: ems
-ms.openlocfilehash: 56c517930f4001e9a6e8f4476210fe89b380aa3f
-ms.sourcegitcommit: 939c098dd02a1f4191c528d10d69d059a62042b2
+ms.openlocfilehash: 77d33b429cc728ef24341b53bb20974368a35235
+ms.sourcegitcommit: 15f882cf45776877fdaca8367a7a0fe7f06a7917
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/15/2019
-ms.locfileid: "71004692"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71185576"
 ---
 # <a name="whats-new-in-azure-advanced-threat-protection-azure-atp"></a>Co je nového v Azure Advanced Threat Protection (ATP Azure)
 
 Tento článek se často aktualizuje, aby vám věděl, co je nového v nejnovější verzi služby Azure ATP.
 
 Informační kanál RSS: Po aktualizaci této stránky se zobrazí oznámení zkopírováním a vložením následující adresy URL do čtečky informačních kanálů:`https://docs.microsoft.com/api/search/rss?search=%22This+article+is+updated+frequently+to+let+you+know+what%27s+new+in+the+latest+release+of+Azure+ATP%22&locale=en-us`
+
+Vydáno 22. září 2019
+## <a name="azure-atp-release-296"></a>Azure ATP verze 2,96
+
+- **Obohacená data ověřování NTLM pomocí Windows Event 8004**<br>
+
+Senzory Azure ATP teď můžou automaticky číst a rozšiřovat aktivity ověřování NTLM s použitými daty serveru, když je povolené auditování NTLM a událost Windows 8004 je zapnutá. Azure ATP analyzuje událost Windows 8004 pro ověřování NTLM, aby bylo možné vylepšit data ověřování NTLM používaná pro analýzu a výstrahy ochrany před hrozbami v Azure ATP. Tato rozšířená funkce poskytuje aktivitu přístupu k prostředkům přes data protokolu NTLM a také obohacené neúspěšné přihlašovací aktivity včetně cílového počítače, ke kterému se uživatel pokusil získat přístup.
+
+Přečtěte si další informace o aktivitách ověřování NTLM [pomocí Windows Event 8004](configure-event-collection.md##ntlm-authentication-using-windows-event-8004).
+
+- Verze zahrnuje také vylepšení a opravy chyb pro infrastrukturu interního senzoru.
+
 
 Vydáno 15. září 2019
 ## <a name="azure-atp-release-295"></a>Azure ATP verze 2,95

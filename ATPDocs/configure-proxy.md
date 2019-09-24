@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 08/20/2019
+ms.date: 09/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 9c173d28-a944-491a-92c1-9690eb06b151
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: ba1c8ac59dcf762103cd4d0e7a5a54c2b02e1e9a
-ms.sourcegitcommit: 2aab3c4244db694616ec02a9b8ae2e266d6fdddc
+ms.openlocfilehash: 27630e93db4e103454e6d0fec7756824988ec4a2
+ms.sourcegitcommit: 15f882cf45776877fdaca8367a7a0fe7f06a7917
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69629304"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71185507"
 ---
 # <a name="configure-endpoint-proxy-and-internet-connectivity-settings-for-your-azure-atp-sensor"></a>Konfigurace nastavení proxy serveru Endpoint a připojení k Internetu pro senzor ATP Azure
 
@@ -31,6 +31,21 @@ Při konfiguraci proxy serveru musíte mít jistotu, že vložená služba senzo
 ## <a name="configure-the-proxy"></a>Konfigurace proxy serveru 
 
 Nastavení proxy serveru můžete nakonfigurovat během instalace senzoru pomocí parametrů definovaných v [tiché instalaci, nastavení ověřování proxy serveru](https://docs.microsoft.com/azure-advanced-threat-protection/atp-silent-installation#proxy-authentication).
+
+### <a name="proxy-authentication"></a>Ověřování proxy
+
+K dokončení ověřování proxy použijte následující příkazy:
+
+**Syntaxe**:
+
+
+> [!div class="mx-tableFixed"]
+> 
+> |Name|Syntaxe|Povinné pro bezobslužnou instalaci?|Popis|
+> |-------------|----------|---------|---------|
+> |ProxyUrl|ProxyUrl = "https\://proxy.contoso.com:8080"|Ne|Určuje ProxyUrl a číslo portu snímače ATP Azure.|
+> |ProxyUserName|ProxyUserName = "Contoso\ProxyUser"|Ne|Pokud vaše proxy služba vyžaduje ověření, zadejte uživatelské jméno ve formátu doména \ uživatel.|
+> |ProxyUserPassword|ProxyUserPassword = "P@ssw0rd"|Ne|Určuje heslo pro uživatelské jméno proxy serveru. \* Přihlašovací údaje jsou šifrované a ukládají se místně pomocí snímače ATP Azure.|
 
 Proxy server můžete také nakonfigurovat ručně pomocí statického proxy serveru založeného na registru, aby senzor ATP v Azure mohl nahlásit diagnostická data a komunikovat s cloudovou službou Azure ATP, když počítač nemá oprávnění k připojení k Internetu.
 

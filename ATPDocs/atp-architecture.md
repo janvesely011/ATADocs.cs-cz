@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 07/17/2019
+ms.date: 09/23/2019
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 90f68f2c-d421-4339-8e49-1888b84416e6
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 38a1790194d739ac31c66df60cf0d9c2911344c7
-ms.sourcegitcommit: b7b3d4a401faaa3edb4bd669a1a003a6d21a4322
+ms.openlocfilehash: d1b0d9a5db7fe94170cedf274a36ec036c4910c4
+ms.sourcegitcommit: 15f882cf45776877fdaca8367a7a0fe7f06a7917
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68298896"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71185676"
 ---
 # <a name="azure-atp-architecture"></a>Architektura ATP Azure
 
@@ -84,7 +84,7 @@ Pokud proces monitorování způsobí, že senzor služby Azure ATP vyčerpá pr
 
 ### <a name="windows-events"></a>Události systému Windows
 
-Aby bylo možné vylepšit detekci ATP v Azure, je nutné, aby se při podezřelých chybách ověřování, změnách citlivých skupin, vytváření podezřelých služeb a Honeytokenu typů útoků provádělo podezření na neúspěšnou autentizaci. protokoly následujících událostí systému Windows: 4776, 4732, 4733, 4728, 4729, 4756, 4757 a 7045. Tyto události jsou automaticky čteny senzory Azure ATP se správnými [nastaveními zásad auditu](atp-advanced-audit-policy.md). 
+K vylepšení pokrytí zjišťování Azure ATP v souvislosti s ověřováním NTLM, úpravami citlivých skupin a vytvářením podezřelých služeb potřebuje Azure ATP analyzovat protokoly následujících událostí Windows: 4776, 4732, 4733, 4728, 4729, 4756, 4757, 7045 a 8004. Tyto události jsou automaticky čteny senzory Azure ATP se správnými [nastaveními zásad auditu](atp-advanced-audit-policy.md). Pokud chcete zajistit, aby [byla služba Windows Event 8004 auditována](configure-event-collection.md##ntlm-authentication-using-windows-event-8004) podle potřeby službou, zkontrolujte [nastavení auditu NTLM](https://blogs.technet.microsoft.com/askds/2009/10/08/ntlm-blocking-and-you-application-analysis-and-auditing-methodologies-in-windows-7/).
 
 ## <a name="next-steps"></a>Další kroky
 

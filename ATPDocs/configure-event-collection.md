@@ -5,28 +5,39 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 07/25/2019
+ms.date: 09/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 88692d1a-45a3-4d54-a549-4b5bba6c037b
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 3ac34f82800b2d09243169d99812b27eef41b2b5
-ms.sourcegitcommit: dd8c94db68e85752c20bba3446b678cd1edcd932
+ms.openlocfilehash: 8416c2d6e3b12d15f52a0f27381d845fdb268cdd
+ms.sourcegitcommit: 15f882cf45776877fdaca8367a7a0fe7f06a7917
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68604406"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71185530"
 ---
 # <a name="configure-event-collection"></a>Konfigurace shromažďování událostí
 
-Za účelem vylepšení možností detekce potřebuje Azure ATP následující události systému Windows: 4776, 4732, 4733, 4728, 4729, 4756, 4757 a 7045. Je možné je buď automaticky přečíst pomocí snímače ATP v Azure, nebo v případě, že senzor ATP Azure není nasazený, dá se jednomu ze dvou způsobů přesměrovat na samostatný senzor Azure ATP, a to tak, že pomocí konfigurace samostatného senzoru Azure ATP naslouchat událostem SIEM nebo prostřednictvím [conf. guring předávání událostí systému Windows](configure-event-forwarding.md).
+Za účelem vylepšení možností detekce potřebuje Azure ATP následující události systému Windows: 4776, 4732, 4733, 4728, 4729, 4756, 4757, 7045 a 8004. Tyto události mohou být buď automaticky čteny pomocí snímače ATP v Azure, nebo pokud není senzor Azure ATP nasazený, dá se jednomu ze dvou způsobů přesměrovat na samostatný senzor Azure ATP. nakonfigurujeme tak samostatný senzor Azure ATP, aby naslouchal pro události SIEM nebo < c. 0 > konfiguraci předávání událostí systému Windows.
 
 > [!NOTE]
 > Před konfigurací shromažďování událostí je důležité spustit skript auditování ATP Azure ATP, aby bylo zajištěno, že řadiče domény budou správně nakonfigurovány pro zaznamenávání potřebných událostí. 
 
-Kromě shromažďování a analýzy síťového provozu do a z řadičů domény může Azure ATP využít události systému Windows k dalšímu vylepšení detekce. Používá událost 4776 pro protokol NTLM, která vylepšuje různé detekce a události 4732, 4733, 4728, 4729, 4756, 4757 a 7045 pro zlepšení detekce citlivých změn skupiny a vytváření služeb. Tyto události může přijímat buď od svého systému SIEM, nebo tak, že si nastavíte předávání událostí systému Windows ze svého řadiče domény. Shromážděné události poskytují Azure ATP dalšími informacemi, které nejsou k dispozici prostřednictvím síťového provozu řadiče domény.
+Kromě shromažďování a analýzy síťového provozu do a z řadičů domény může Azure ATP využít události systému Windows k dalšímu vylepšení detekce. Azure ATP používá pro protokol NTLM událost 4776 a 8004, což vylepšuje různé detekce a události 4732, 4733, 4728, 4729, 4756, 4757 a 7045, aby se zlepšila detekce citlivých změn skupin a vytváření služeb. Tyto události mohou být přijímány ze služby SIEM nebo nastavením předávání událostí Windows z řadiče domény. Shromážděné události poskytují Azure ATP dalšími informacemi, které nejsou k dispozici prostřednictvím síťového provozu řadiče domény.
+
+## <a name="ntlm-authentication-using-windows-event-8004"></a>Ověřování NTLM pomocí události systému Windows 8004
+
+Konfigurace kolekce Event 8004 pro Windows:
+1. Přejít na: Cestě konfigurace možnosti počítače \ \ pro Policies\Security
+2. Nastavte **Zásady skupiny domény** následujícím způsobem:
+   - Zabezpečení sítě: Omezit protokol NTLM: Odchozí přenosy protokolu NTLM na vzdálené servery = **Auditovat vše**
+   - Zabezpečení sítě: Omezit protokol NTLM: Auditovat ověřování NTLM v této doméně = **Povolit vše**
+   - Zabezpečení sítě: Omezit protokol NTLM: Auditovat příchozí přenosy protokolu NTLM = **Povolit auditování pro všechny účty**
+
+Když je událost 8004 systému Windows analyzována pomocí senzoru ATP Azure ATP, aktivity ověřování pomocí protokolu NTLM pro Azure ATP se rozšiřují pomocí dat pro přístup k serveru.
 
 ## <a name="siemsyslog"></a>SIEM/Syslog
 Aby mohl Azure ATP využívat data ze serveru syslog, je nutné provést následující kroky:

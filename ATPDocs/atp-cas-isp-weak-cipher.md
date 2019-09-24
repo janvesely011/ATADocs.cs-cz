@@ -12,19 +12,19 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: cc82212b-7d25-4ec7-828d-2475ff40d685
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 784f381ef8209bef885bb2e8944a60a23d21ec8c
-ms.sourcegitcommit: 475df3e87d8476ff13e48ebc7a722f46f29dab70
+ms.openlocfilehash: 97ea6d080d2aae84bcf0675da853f503fd10b314
+ms.sourcegitcommit: 15f882cf45776877fdaca8367a7a0fe7f06a7917
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71007418"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71185514"
 ---
 # <a name="security-assessment-weak-cipher-usage---preview"></a>Posouzení zabezpečení: Slabé použití šifry – Preview
 
 
 ## <a name="what-are-weak-ciphers"></a>Co jsou slabé šifry? 
 
-Kryptografie spoléhá na šifry k šifrování našich dat. Například RC4 (Rivest cipher 4 také označované jako ARC4 nebo ARCFOUR, což znamená údajné RC4) je jeden.   I když je RC4 jedinečnou nezapomenutelnou pro jednoduchost a rychlost, zjistilo se od původní verze ŠIFRy několik chyb zabezpečení, takže je vygenerování nezabezpečené. Šifra RC4 je obzvláště zranitelná, když se neodstraní začátek datového proudu výstupního klíče, nebo když se použijí nenáhodné nebo související klíče. 
+Kryptografie spoléhá na šifry k šifrování našich dat. Například RC4 (Rivest cipher 4 také označované jako ARC4 nebo ARCFOUR, což znamená údajné RC4) je jeden. I když je RC4 jedinečnou nezapomenutelnou pro jednoduchost a rychlost, zjistilo se od původní verze ŠIFRy několik chyb zabezpečení, takže je vygenerování nezabezpečené. Šifra RC4 je obzvláště zranitelná, když se neodstraní začátek datového proudu výstupního klíče, nebo když se použijí nenáhodné nebo související klíče. 
 
 ## <a name="how-do-i-use-this-security-assessment-to-improve-my-organizational-security-posture"></a>Návody pomocí tohoto posouzení zabezpečení zlepšit stav podnikového zabezpečení? 
 

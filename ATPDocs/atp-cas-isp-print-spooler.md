@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 1a7d9525-8923-4dae-af51-02a68aa61644
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: fd2b795d7bb7973e24a5457237ff98a4bd1315f5
-ms.sourcegitcommit: 939c098dd02a1f4191c528d10d69d059a62042b2
+ms.openlocfilehash: da5a9429e802f3597942abc5e21e6c5ae6fed0fb
+ms.sourcegitcommit: 15f882cf45776877fdaca8367a7a0fe7f06a7917
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/15/2019
-ms.locfileid: "71005225"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71185545"
 ---
 # <a name="security-assessment-domain-controllers-with-print-spooler-service-available---preview"></a>Posouzení zabezpečení: Řadiče domény se službou zařazování tisku, která je k dispozici – Preview
 
@@ -25,7 +25,7 @@ ms.locfileid: "71005225"
  
 ## <a name="what-is-the-print-spooler-service"></a>Co je služba **zařazování tisku** ? 
 
-Služba zařazování tisku je softwarová služba, která spravuje procesy tisku. Zařazovací služba přijímá tiskové úlohy z počítačů a zajišťuje, že jsou k dispozici prostředky tiskárny. Zařazovací služba také naplánuje pořadí, ve kterém jsou tiskové úlohy odesílány do tiskové fronty pro tisk. V prvních dnech osobních počítačů museli uživatelé před provedením dalších akcí počkat na vytištění souborů. Díky modernímu zařazování tisku má teď tisk minimální dopad na produktivitu uživatelů.
+Služba zařazování tisku je softwarová služba, která spravuje procesy tisku. Zařazovací služba přijímá tiskové úlohy z počítačů a zajišťuje, že jsou k dispozici prostředky tiskárny. Zařazovací služba také naplánuje pořadí, ve kterém jsou tiskové úlohy odesílány do tiskové fronty pro tisk. V prvních dnech osobních počítačů museli uživatelé před provedením dalších akcí počkat na vytištění souborů. Díky modernímu zařazování tisku má teď tisk minimální dopad na celkovou produktivitu uživatelů.
 
 ## <a name="what-risks-does-the-print-spooler-service-on-domain-controllers-introduce"></a>Jaká rizika služba **zařazování tisku** v řadičích domény zavádí? 
 
@@ -35,6 +35,9 @@ Z důvodu možnosti vystavení musí mít řadiče domény a systémy správy sl
 
 I když se toto posouzení zabezpečení zaměřuje na řadiče domény, může na tento typ útoku potenciálně ohrozit kterýkoli server.
 
+   > [!NOTE]
+   > Než zakážete tuto službu a zabráníte aktivním pracovním postupům tisku, ujistěte se, že jste prozkoumali nastavení **služby zařazování tisku** , konfigurace a závislosti
+
 ## <a name="how-do-i-use-this-security-assessment"></a>Návody použít toto posouzení zabezpečení? 
 1. V tabulce sestav můžete zjistit, které řadiče domény mají povolenou službu **zařazování tisku** .   
     <br>![Zakázat posouzení zabezpečení služby zařazování tisku](media/atp-cas-isp-print-spooler-2.png)
@@ -42,9 +45,9 @@ I když se toto posouzení zabezpečení zaměřuje na řadiče domény, může 
 
 ## <a name="remediation"></a>Náprava
 
-Tento problém vyřešte tak, že zakážete službu zařazování tisku na všech serverech, které ji nevyžadují, a zajistěte, aby nedocházelo k žádným účtům s nakonfigurovaným neomezeným delegováním.
+Opravte tento konkrétní problém tím, že zakážete službu zařazování tisku na všech serverech, které to nevyžadují.
   
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 - [Filtrování aktivit v Azure ATP v Cloud App Security](atp-activities-filtering-mcas.md)
 - [Podívejte se na fórum služby Azure ATP.](https://aka.ms/azureatpcommunity)

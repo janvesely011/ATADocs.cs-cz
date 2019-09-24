@@ -12,16 +12,16 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 1ac873fc-b763-41d7-878e-7c08da421cb5
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: 0161c0f63e652bd62ee8ccf4a6677f2ec0d90f4d
-ms.sourcegitcommit: b7b3d4a401faaa3edb4bd669a1a003a6d21a4322
+ms.openlocfilehash: 9cef9a1eb7035f1db61ab6c3c0b90d4e73278d36
+ms.sourcegitcommit: 15f882cf45776877fdaca8367a7a0fe7f06a7917
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68298948"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71185655"
 ---
 # <a name="what-is-network-name-resolution"></a>Co je překlad síťových názvů?
 
-Překlad názvu sítě nebo (útoků) je hlavní součástí funkcí Azure ATP. Azure ATP zachycuje aktivity na základě síťového provozu, událostí Windows a ETW – tyto aktivity obvykle obsahují data IP.  
+Překlad názvu sítě nebo (útoků) je hlavní součástí funkcí Azure ATP. Azure ATP zachycuje aktivity na základě síťového provozu, událostí Windows a ETW – tyto aktivity obvykle obsahují data IP. 
 
 Pomocí útoků může Azure ATP korelovat mezi nezpracovanými aktivitami (obsahujícími IP adresami) a souvisejícími počítači, které se podílejí na jednotlivých činnostech. Na základě nezpracovaných aktivit, entit profilů ATP Azure, včetně počítačů, a vygeneruje výstrahy zabezpečení pro podezřelé aktivity.
 
@@ -70,7 +70,7 @@ Legitimace obsahuje čas, IP adresu a název počítače, na které byla IP adre
 |
 
 Když je na zařízeních v prostředí otevřený port 3389, senzor služby Azure ATP, který ho používá pro účely překladu síťových názvů.
-Otevření portu 3389 není požadavkem, jedná se pouze o další metodu, která může zadat název počítače, pokud je již port otevřen pro jiné účely.
+Otevření portu 3389není požadavkem, jedná se pouze o další metodu, která může zadat název počítače, pokud je již port otevřen pro jiné účely.
 
 Abyste se ujistili, že služba Azure ATP je v ideálním prostředí a že je prostředí správně nakonfigurované, Azure ATP kontroluje stav řešení každého senzoru a vydává výstrahu monitorování na jednotlivé metody. poskytuje seznam senzorů ATP Azure s nízkou mírou úspěšnosti aktivního názvu. rozlišení pomocí jednotlivých metod.
 

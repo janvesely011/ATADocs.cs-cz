@@ -5,19 +5,19 @@ keywords: ''
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 09/01/2019
+ms.date: 09/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: azure-advanced-threat-protection
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: d4b54dfc9f64f296925889147c72db6c23819c20
-ms.sourcegitcommit: 298a0ce02c2f22faa5b03acf909aa0dd73f38993
+ms.openlocfilehash: edc59ab0d8ec813b4f957e6391e37da18ba4dbb0
+ms.sourcegitcommit: 15f882cf45776877fdaca8367a7a0fe7f06a7917
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "70210928"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71185635"
 ---
 # <a name="azure-atp-prerequisites"></a>Požadavky služby Azure ATP
 
@@ -59,11 +59,11 @@ V této části jsou uvedené informace, které byste měli shromažďovat a tak
 
 - Pokud se pokusíte nainstalovat senzor Azure ATP na počítač nakonfigurovaný s adaptérem pro seskupování síťových adaptérů, dojde k chybě instalace. Pokud chcete senzor Azure ATP nainstalovat na počítač nakonfigurovaný se seskupováním síťových adaptérů, přečtěte si [problém seskupování síťových adaptérů senzorů Azure ATP](troubleshooting-atp-known-issues.md#nic-teaming).
 
-- Doporučení kontejneru odstraněných **objektů** : Uživatel by měl mít oprávnění jen pro čtení pro kontejner odstraněných objektů. Oprávnění jen pro čtení tohoto kontejneru umožňují službě Azure ATP detekovat odstranění uživatelů ze služby Active Directory. Informace o konfiguraci oprávnění jen pro čtení u kontejneru odstraněných objektů najdete v části **Změna oprávnění v kontejneru odstraněného objektu** v tématu [zobrazení nebo nastavení oprávnění pro objekt adresáře](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) .
+- Doporučení kontejneru **odstraněných objektů** : Uživatel by měl mít oprávnění jen pro čtení pro kontejner odstraněných objektů. Oprávnění jen pro čtení tohoto kontejneru umožňují službě Azure ATP detekovat odstranění uživatelů ze služby Active Directory. Informace o konfiguraci oprávnění jen pro čtení u kontejneru odstraněných objektů najdete v části **Změna oprávnění v kontejneru odstraněného objektu** v tématu [zobrazení nebo nastavení oprávnění pro objekt adresáře](https://technet.microsoft.com/library/cc816824%28v=ws.10%29.aspx) .
 
 - Volitelné **honeytokenu**: Uživatelský účet uživatele, který nemá žádné síťové aktivity. Tento účet je nakonfigurovaný jako Honeytokenu uživatel Azure ATP. Další informace o použití Honeytokens najdete v tématu [konfigurace vyloučení a uživatel honeytokenu](install-atp-step7.md).
 
-- Volitelné: Při nasazování samostatného senzoru je nutné předávat události systému Windows 4776, 4732, 4733, 4728, 4729, 4756, 4757 a 7045 do služby Azure ATP, aby bylo možné dále vylepšit Azure ATP pass-the-hash, hrubou silou, úpravu citlivých skupin, Honeytokens detekci a Vytvoření škodlivé služby. Senzor ATP Azure tyto události přijímá automaticky. V rámci samostatného senzoru Azure ATP můžete tyto události přijímat z SIEM nebo nastavením předávání událostí systému Windows z řadiče domény. Shromážděné události poskytují Azure ATP dalšími informacemi, které nejsou k dispozici prostřednictvím síťového provozu řadiče domény.
+- Volitelné: Při nasazování samostatného senzoru je nutné přeslat události systému Windows 4776, 4732, 4733, 4728, 4729, 4756, 4757 a 7045 a 8004 do služby Azure ATP, aby bylo možné dále zvyšovat ověřování na základě ověřování ATP Azure ATP, přidání citlivých skupin a podezřelých. detekce vytváření služby.  Senzor ATP Azure tyto události přijímá automaticky. V rámci samostatného senzoru Azure ATP můžete tyto události přijímat z SIEM nebo nastavením předávání událostí systému Windows z řadiče domény. Shromážděné události poskytují Azure ATP dalšími informacemi, které nejsou k dispozici prostřednictvím síťového provozu řadiče domény.
 
 ## <a name="azure-atp-portal-requirements"></a>Požadavky na portál Azure ATP
 Přístup k portálu Azure ATP je prostřednictvím prohlížeče, který podporuje následující prohlížeče a nastavení:
@@ -148,7 +148,7 @@ Následující tabulka uvádí minimální porty, které vyžaduje senzor Azure 
 |
 
 ### <a name="windows-event-logs"></a>Protokoly událostí Windows
-Zjišťování ATP Azure spoléhá na konkrétní protokoly událostí Windows, které senzor dokáže analyzovat z řadiče domény. Aby byly správné auditované události auditovány a součástí události Windows og, vyžadují řadiče domény přesné rozšířené nastavení zásad auditu. Další informace najdete v tématu [Kontrola rozšířených zásad auditu](atp-advanced-audit-policy.md).
+Detekce ATP v Azure využívá následující konkrétní protokoly událostí Windows, které senzor analyzuje z vašich řadičů domény: 4776, 4732, 4733, 4728, 4729, 4756, 4757, 7045 a 8004. Chcete-li auditovat správné události a zahrnout je do protokolu událostí systému Windows, vyžadují řadiče domény přesné rozšířené nastavení zásad auditu. Další informace o nastavení správných zásad najdete v tématu [Kontrola pokročilých zásad auditu](atp-advanced-audit-policy.md). Pokud chcete zajistit, aby [byla služba Windows Event 8004 auditována](configure-event-collection.md##ntlm-authentication-using-windows-event-8004) podle potřeby službou, zkontrolujte [nastavení auditu NTLM](https://blogs.technet.microsoft.com/askds/2009/10/08/ntlm-blocking-and-you-application-analysis-and-auditing-methodologies-in-windows-7/).  
 
 
 > [!NOTE]
@@ -199,7 +199,7 @@ Samostatný senzor Azure ATP vyžaduje aspoň jeden adaptér pro správu a aspo�
         > [!NOTE]
         > Pokud je samostatný senzor Azure ATP členem domény, dá se konfigurovat automaticky.
 
--   **Adaptér** pro zachytávání – používá se k zaznamenání provozu do a z řadičů domény.
+-   **Adaptér pro zachytávání** – používá se k zaznamenání provozu do a z řadičů domény.
 
     > [!IMPORTANT]
     > -   Nakonfigurujte zrcadlení portů pro adaptér pro zachytávání jako cíl síťového provozu řadiče domény. Další informace najdete v tématu [Konfigurace zrcadlení portů](configure-port-mirroring.md). K nakonfigurování zrcadlení portů obvykle potřebujete pracovat s týmem sítě nebo s virtualizačním týmem.
