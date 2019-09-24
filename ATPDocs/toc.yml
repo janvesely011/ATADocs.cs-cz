@@ -73,17 +73,17 @@
           items:
             - name: Porozumění stavu zabezpečení identit
               href: atp-isp-overview.md
-            - name: Vyhodnocení zabránění nezabezpečenému sdílení přihlašovacích údajů v prostém textu
+            - name: Vyhodnocení entit vystavujících přihlašovací údaje v nešifrovaném textu
               href: atp-cas-isp-clear-text.md
-            - name: Vyhodnocení odebrání neaktivních entit z citlivých skupin
+            - name: Vyhodnocení neaktivních entit v citlivých skupinách
               href: atp-cas-isp-dormant-entities.md
-            - name: Vyhodnocení zabránění komunikaci prostřednictvím starších protokolů
+            - name: Vyhodnocení používání starších verzí protokolů
               href: atp-cas-isp-legacy-protocols.md
-            - name: Vyhodnocení zakázání služby zařazování tisku na řadičích domény
+            - name: Vyhodnocení řadičů domény s dostupnou službou zařazování tisku
               href: atp-cas-isp-print-spooler.md
-            - name: Vyhodnocení zabránění používání slabého šifrování
+            - name: Vyhodnocení používání slabého šifrování
               href: atp-cas-isp-weak-cipher.md
-            - name: Vyhodnocení zabránění používání nezabezpečeného delegování Kerberos
+            - name: Vyhodnocení používání nezabezpečeného delegování Kerberos
               href: atp-cas-isp-unconstrained-kerberos.md
     - name: Testovací prostředí výstrah zabezpečení
       items:
