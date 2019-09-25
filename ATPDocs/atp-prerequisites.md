@@ -12,12 +12,12 @@ ms.service: azure-advanced-threat-protection
 ms.assetid: 62c99622-2fe9-4035-9839-38fec0a353da
 ms.reviewer: itargoet
 ms.suite: ems
-ms.openlocfilehash: edc59ab0d8ec813b4f957e6391e37da18ba4dbb0
-ms.sourcegitcommit: 15f882cf45776877fdaca8367a7a0fe7f06a7917
+ms.openlocfilehash: 763f27e9fb3e134f97b716306c747ecce7edf411
+ms.sourcegitcommit: 0a98c0c151be2a81a3bb9ff1301d35a3091079ea
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71185635"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71217664"
 ---
 # <a name="azure-atp-prerequisites"></a>Požadavky služby Azure ATP
 
@@ -148,7 +148,7 @@ Následující tabulka uvádí minimální porty, které vyžaduje senzor Azure 
 |
 
 ### <a name="windows-event-logs"></a>Protokoly událostí Windows
-Detekce ATP v Azure využívá následující konkrétní protokoly událostí Windows, které senzor analyzuje z vašich řadičů domény: 4776, 4732, 4733, 4728, 4729, 4756, 4757, 7045 a 8004. Chcete-li auditovat správné události a zahrnout je do protokolu událostí systému Windows, vyžadují řadiče domény přesné rozšířené nastavení zásad auditu. Další informace o nastavení správných zásad najdete v tématu [Kontrola pokročilých zásad auditu](atp-advanced-audit-policy.md). Pokud chcete zajistit, aby [byla služba Windows Event 8004 auditována](configure-event-collection.md##ntlm-authentication-using-windows-event-8004) podle potřeby službou, zkontrolujte [nastavení auditu NTLM](https://blogs.technet.microsoft.com/askds/2009/10/08/ntlm-blocking-and-you-application-analysis-and-auditing-methodologies-in-windows-7/).  
+Detekce ATP v Azure využívá následující konkrétní protokoly událostí Windows, které senzor analyzuje z vašich řadičů domény: 4776, 4732, 4733, 4728, 4729, 4756, 4757, 7045 a 8004. Chcete-li auditovat správné události a zahrnout je do protokolu událostí systému Windows, vyžadují řadiče domény přesné rozšířené nastavení zásad auditu. Další informace o nastavení správných zásad najdete v tématu [Kontrola pokročilých zásad auditu](atp-advanced-audit-policy.md). Pokud chcete zajistit, aby [byla služba Windows Event 8004 auditována](configure-windows-event-collection.md##ntlm-authentication-using-windows-event-8004) podle potřeby službou, zkontrolujte [nastavení auditu NTLM](https://blogs.technet.microsoft.com/askds/2009/10/08/ntlm-blocking-and-you-application-analysis-and-auditing-methodologies-in-windows-7/).  
 
 
 > [!NOTE]
