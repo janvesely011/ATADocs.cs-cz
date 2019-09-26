@@ -141,10 +141,12 @@
       items:
         - name: Konfigurace senzoru služby Azure ATP
           href: install-atp-step5.md
-        - name: Konfigurace proxy serveru
-          href: configure-proxy.md
         - name: Kontrola pokročilých zásad auditu
           href: atp-advanced-audit-policy.md
+        - name: Konfigurace shromažďování událostí Windows
+          href: configure-windows-event-collection.md
+        - name: Konfigurace proxy serveru
+          href: configure-proxy.md
         - name: Konfigurace služby Azure ATP pro vzdálená volání do SAM
           href: install-atp-step8-samr.md
     - name: Nastavení samostatného senzoru služby Azure ATP
